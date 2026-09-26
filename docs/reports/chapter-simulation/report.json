@@ -1,0 +1,3745 @@
+{
+  "generatedAt": "2026-09-08T02:52:09.615Z",
+  "fresh": {
+    "seed": 731,
+    "description": "Fresh save: five permanent 2-skill / 76-aptitude / 1.00-growth turtles; one enters first, one per interval; save only real service-generated skill upgrades; no ads or injected stats.",
+    "initial": {
+      "gold": 300,
+      "stamina": 30,
+      "roster": [
+        {
+          "role": "stone",
+          "skills": [
+            "strong",
+            "armor"
+          ],
+          "innate": {
+            "attack": 76,
+            "health": 76,
+            "defense": 76,
+            "growth": 100
+          }
+        },
+        {
+          "role": "spike",
+          "skills": [
+            "swift",
+            "critical"
+          ],
+          "innate": {
+            "attack": 76,
+            "health": 76,
+            "defense": 76,
+            "growth": 100
+          }
+        },
+        {
+          "role": "crystal",
+          "skills": [
+            "resist",
+            "bounce"
+          ],
+          "innate": {
+            "attack": 76,
+            "health": 76,
+            "defense": 76,
+            "growth": 100
+          }
+        },
+        {
+          "role": "leaf",
+          "skills": [
+            "reach",
+            "doubleHeal"
+          ],
+          "innate": {
+            "attack": 76,
+            "health": 76,
+            "defense": 76,
+            "growth": 100
+          }
+        },
+        {
+          "role": "bubble",
+          "skills": [
+            "steady",
+            "shredArmor"
+          ],
+          "innate": {
+            "attack": 76,
+            "health": 76,
+            "defense": 76,
+            "growth": 100
+          }
+        }
+      ]
+    },
+    "levels": [
+      {
+        "levelId": 0,
+        "name": "初到龟岛",
+        "runId": "run-6",
+        "startingGold": 300,
+        "startingStamina": 30,
+        "waves": [
+          {
+            "wave": 1,
+            "units": [
+              {
+                "role": "spike",
+                "level": 1,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical"
+                ]
+              }
+            ],
+            "seconds": 19.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 3,
+            "leaked": 0
+          },
+          {
+            "wave": 2,
+            "units": [
+              {
+                "role": "spike",
+                "level": 2,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 1,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 19,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 4,
+            "leaked": 0
+          },
+          {
+            "wave": 3,
+            "units": [
+              {
+                "role": "spike",
+                "level": 3,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 2,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 1,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce"
+                ]
+              }
+            ],
+            "seconds": 19.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 5,
+            "leaked": 0
+          },
+          {
+            "wave": 4,
+            "units": [
+              {
+                "role": "spike",
+                "level": 4,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 3,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 2,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 1,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal"
+                ]
+              }
+            ],
+            "seconds": 19.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          },
+          {
+            "wave": 5,
+            "units": [
+              {
+                "role": "spike",
+                "level": 5,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 4,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 3,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 2,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 1,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor"
+                ]
+              }
+            ],
+            "seconds": 19.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          }
+        ],
+        "collected": [
+          {
+            "role": "spike",
+            "id": "t-12",
+            "skills": [
+              "swift",
+              "critical",
+              "combo",
+              "armor"
+            ]
+          },
+          {
+            "role": "stone",
+            "id": "t-17",
+            "skills": [
+              "strong",
+              "armor",
+              "openingShield",
+              "regen"
+            ]
+          },
+          {
+            "role": "crystal",
+            "id": "t-22",
+            "skills": [
+              "resist",
+              "bounce",
+              "openingShield"
+            ]
+          },
+          {
+            "role": "leaf",
+            "id": "t-27",
+            "skills": [
+              "reach",
+              "doubleHeal",
+              "armor"
+            ]
+          }
+        ],
+        "checkpointRestores": 5,
+        "victory": true,
+        "completedWaves": 5,
+        "coreHealth": 20,
+        "combatSeconds": 98.4,
+        "withPreparationSeconds": 122.4,
+        "targetSeconds": [
+          120,
+          180
+        ],
+        "durationMeetsTarget": true,
+        "reward": {
+          "baseGold": 60,
+          "firstClearGold": 100,
+          "total": 160
+        },
+        "endingGold": 460,
+        "endingStamina": 30,
+        "collectionCount": 5,
+        "historyCount": 4
+      },
+      {
+        "levelId": 1,
+        "name": "潮汐小径",
+        "runId": "run-28",
+        "startingGold": 460,
+        "startingStamina": 30,
+        "waves": [
+          {
+            "wave": 1,
+            "units": [
+              {
+                "role": "spike",
+                "level": 1,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 22.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 4,
+            "leaked": 0
+          },
+          {
+            "wave": 2,
+            "units": [
+              {
+                "role": "spike",
+                "level": 2,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 1,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              }
+            ],
+            "seconds": 22.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 5,
+            "leaked": 0
+          },
+          {
+            "wave": 3,
+            "units": [
+              {
+                "role": "spike",
+                "level": 3,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 2,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 1,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 22,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          },
+          {
+            "wave": 4,
+            "units": [
+              {
+                "role": "spike",
+                "level": 4,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 3,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 2,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 1,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 22.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 7,
+            "leaked": 0
+          },
+          {
+            "wave": 5,
+            "units": [
+              {
+                "role": "spike",
+                "level": 5,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 4,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 3,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 2,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 1,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor"
+                ]
+              }
+            ],
+            "seconds": 25.95,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 6,
+            "units": [
+              {
+                "role": "spike",
+                "level": 6,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 5,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 4,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 3,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 2,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor"
+                ]
+              }
+            ],
+            "seconds": 25.4,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 7,
+            "units": [
+              {
+                "role": "spike",
+                "level": 7,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 6,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 5,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 4,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 3,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift"
+                ]
+              }
+            ],
+            "seconds": 24.15,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 9,
+            "leaked": 0
+          },
+          {
+            "wave": 8,
+            "units": [
+              {
+                "role": "spike",
+                "level": 8,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 7,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 6,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 5,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 4,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift"
+                ]
+              }
+            ],
+            "seconds": 22.45,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 9,
+            "units": [
+              {
+                "role": "spike",
+                "level": 9,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 8,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 7,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 6,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 5,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 26.25,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 10,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 9,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 8,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 7,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 6,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 35.75,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 12,
+            "leaked": 0
+          }
+        ],
+        "collected": [
+          {
+            "role": "crystal",
+            "id": "t-42",
+            "skills": [
+              "resist",
+              "bounce",
+              "openingShield",
+              "lastShield"
+            ]
+          },
+          {
+            "role": "leaf",
+            "id": "t-47",
+            "skills": [
+              "reach",
+              "doubleHeal",
+              "armor",
+              "resist"
+            ]
+          },
+          {
+            "role": "bubble",
+            "id": "t-51",
+            "skills": [
+              "steady",
+              "shredArmor",
+              "swift",
+              "openingShield"
+            ]
+          }
+        ],
+        "checkpointRestores": 10,
+        "victory": true,
+        "completedWaves": 10,
+        "coreHealth": 20,
+        "combatSeconds": 250.5,
+        "withPreparationSeconds": 304.5,
+        "targetSeconds": [
+          240,
+          360
+        ],
+        "durationMeetsTarget": true,
+        "reward": {
+          "baseGold": 100,
+          "firstClearGold": 100,
+          "total": 200
+        },
+        "endingGold": 660,
+        "endingStamina": 25,
+        "collectionCount": 5,
+        "historyCount": 7
+      },
+      {
+        "levelId": 2,
+        "name": "珊瑚转角",
+        "runId": "run-64",
+        "startingGold": 660,
+        "startingStamina": 25,
+        "waves": [
+          {
+            "wave": 1,
+            "units": [
+              {
+                "role": "spike",
+                "level": 1,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 24.55,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 4,
+            "leaked": 0
+          },
+          {
+            "wave": 2,
+            "units": [
+              {
+                "role": "spike",
+                "level": 2,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 1,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              }
+            ],
+            "seconds": 23.7,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 5,
+            "leaked": 0
+          },
+          {
+            "wave": 3,
+            "units": [
+              {
+                "role": "spike",
+                "level": 3,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 2,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 1,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              }
+            ],
+            "seconds": 27.1,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          },
+          {
+            "wave": 4,
+            "units": [
+              {
+                "role": "spike",
+                "level": 4,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 3,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 2,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 1,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              }
+            ],
+            "seconds": 23.2,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 7,
+            "leaked": 0
+          },
+          {
+            "wave": 5,
+            "units": [
+              {
+                "role": "spike",
+                "level": 5,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 4,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 3,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 2,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 1,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 31.4,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 6,
+            "units": [
+              {
+                "role": "spike",
+                "level": 6,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 5,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 4,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 3,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 2,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 27.1,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 7,
+            "units": [
+              {
+                "role": "spike",
+                "level": 7,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 6,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 5,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 4,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 3,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 28.25,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 9,
+            "leaked": 0
+          },
+          {
+            "wave": 8,
+            "units": [
+              {
+                "role": "spike",
+                "level": 8,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 7,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 6,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 5,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 4,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 27.25,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 9,
+            "units": [
+              {
+                "role": "spike",
+                "level": 9,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 8,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 7,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 6,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 5,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 29.35,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 10,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 9,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 8,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 7,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 6,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 39.2,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 12,
+            "leaked": 0
+          }
+        ],
+        "collected": [],
+        "checkpointRestores": 10,
+        "victory": true,
+        "completedWaves": 10,
+        "coreHealth": 20,
+        "combatSeconds": 281.1,
+        "withPreparationSeconds": 335.1,
+        "targetSeconds": [
+          240,
+          360
+        ],
+        "durationMeetsTarget": true,
+        "reward": {
+          "baseGold": 100,
+          "firstClearGold": 100,
+          "total": 200
+        },
+        "endingGold": 860,
+        "endingStamina": 21,
+        "collectionCount": 5,
+        "historyCount": 7
+      },
+      {
+        "levelId": 3,
+        "name": "薄暮海湾",
+        "runId": "run-97",
+        "startingGold": 860,
+        "startingStamina": 21,
+        "waves": [
+          {
+            "wave": 1,
+            "units": [
+              {
+                "role": "spike",
+                "level": 1,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 23.7,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 4,
+            "leaked": 0
+          },
+          {
+            "wave": 2,
+            "units": [
+              {
+                "role": "spike",
+                "level": 2,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 1,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              }
+            ],
+            "seconds": 23.7,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 5,
+            "leaked": 0
+          },
+          {
+            "wave": 3,
+            "units": [
+              {
+                "role": "spike",
+                "level": 3,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 2,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 1,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              }
+            ],
+            "seconds": 22.85,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          },
+          {
+            "wave": 4,
+            "units": [
+              {
+                "role": "spike",
+                "level": 4,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 3,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 2,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 1,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              }
+            ],
+            "seconds": 27.7,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 7,
+            "leaked": 0
+          },
+          {
+            "wave": 5,
+            "units": [
+              {
+                "role": "spike",
+                "level": 5,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 4,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 3,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 2,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 1,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 35.25,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 6,
+            "units": [
+              {
+                "role": "spike",
+                "level": 6,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 5,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 4,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 3,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 2,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 26.45,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 7,
+            "units": [
+              {
+                "role": "spike",
+                "level": 7,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 6,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 5,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 4,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 3,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 29.3,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 9,
+            "leaked": 0
+          },
+          {
+            "wave": 8,
+            "units": [
+              {
+                "role": "spike",
+                "level": 8,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 7,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 6,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 5,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 4,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 32.3,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 9,
+            "units": [
+              {
+                "role": "spike",
+                "level": 9,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 8,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 7,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 6,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 5,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 31.35,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 10,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 9,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 8,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 7,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 6,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 47.65,
+            "status": "won",
+            "coreHealth": 17,
+            "kills": 11,
+            "leaked": 1
+          }
+        ],
+        "collected": [],
+        "checkpointRestores": 10,
+        "victory": true,
+        "completedWaves": 10,
+        "coreHealth": 17,
+        "combatSeconds": 300.25,
+        "withPreparationSeconds": 354.25,
+        "targetSeconds": [
+          240,
+          360
+        ],
+        "durationMeetsTarget": true,
+        "reward": {
+          "baseGold": 100,
+          "firstClearGold": 100,
+          "total": 200
+        },
+        "endingGold": 1060,
+        "endingStamina": 16,
+        "collectionCount": 5,
+        "historyCount": 7
+      },
+      {
+        "levelId": 4,
+        "name": "巨钳来袭",
+        "runId": "run-130",
+        "startingGold": 1060,
+        "startingStamina": 16,
+        "waves": [
+          {
+            "wave": 1,
+            "units": [
+              {
+                "role": "spike",
+                "level": 1,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              }
+            ],
+            "seconds": 21.35,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 4,
+            "leaked": 0
+          },
+          {
+            "wave": 2,
+            "units": [
+              {
+                "role": "spike",
+                "level": 2,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 1,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              }
+            ],
+            "seconds": 19.7,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 5,
+            "leaked": 0
+          },
+          {
+            "wave": 3,
+            "units": [
+              {
+                "role": "spike",
+                "level": 3,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 2,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 1,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              }
+            ],
+            "seconds": 18,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 6,
+            "leaked": 0
+          },
+          {
+            "wave": 4,
+            "units": [
+              {
+                "role": "spike",
+                "level": 4,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 3,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 2,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 1,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              }
+            ],
+            "seconds": 23.5,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 7,
+            "leaked": 0
+          },
+          {
+            "wave": 5,
+            "units": [
+              {
+                "role": "spike",
+                "level": 5,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 4,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 3,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 2,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 1,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 30.35,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 6,
+            "units": [
+              {
+                "role": "spike",
+                "level": 6,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 5,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 4,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 3,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 2,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 23.05,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 8,
+            "leaked": 0
+          },
+          {
+            "wave": 7,
+            "units": [
+              {
+                "role": "spike",
+                "level": 7,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 6,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 5,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 4,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 3,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 27.45,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 9,
+            "leaked": 0
+          },
+          {
+            "wave": 8,
+            "units": [
+              {
+                "role": "spike",
+                "level": 8,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 7,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 6,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 5,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 4,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 29.2,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 9,
+            "units": [
+              {
+                "role": "spike",
+                "level": 9,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 8,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 7,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 6,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 5,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 29.35,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 10,
+            "leaked": 0
+          },
+          {
+            "wave": 10,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 9,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 8,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 7,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 6,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 46.9,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 12,
+            "leaked": 0
+          },
+          {
+            "wave": 11,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 10,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 9,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 8,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 7,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 33.2,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 12,
+            "leaked": 0
+          },
+          {
+            "wave": 12,
+            "units": [
+              {
+                "role": "spike",
+                "level": 10,
+                "slot": 0,
+                "skills": [
+                  "swift",
+                  "critical",
+                  "combo",
+                  "armor"
+                ]
+              },
+              {
+                "role": "stone",
+                "level": 10,
+                "slot": 1,
+                "skills": [
+                  "strong",
+                  "armor",
+                  "openingShield",
+                  "regen"
+                ]
+              },
+              {
+                "role": "crystal",
+                "level": 10,
+                "slot": 2,
+                "skills": [
+                  "resist",
+                  "bounce",
+                  "openingShield",
+                  "lastShield"
+                ]
+              },
+              {
+                "role": "leaf",
+                "level": 9,
+                "slot": 3,
+                "skills": [
+                  "reach",
+                  "doubleHeal",
+                  "armor",
+                  "resist"
+                ]
+              },
+              {
+                "role": "bubble",
+                "level": 8,
+                "slot": 4,
+                "skills": [
+                  "steady",
+                  "shredArmor",
+                  "swift",
+                  "openingShield"
+                ]
+              }
+            ],
+            "seconds": 76.05,
+            "status": "won",
+            "coreHealth": 20,
+            "kills": 16,
+            "leaked": 0,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2400,
+              "attackCount": 31,
+              "allyHpDamage": 1675.323946382327,
+              "downedAllies": [
+                "spike",
+                "stone"
+              ]
+            }
+          }
+        ],
+        "collected": [],
+        "checkpointRestores": 12,
+        "victory": true,
+        "completedWaves": 12,
+        "coreHealth": 20,
+        "combatSeconds": 378.1,
+        "withPreparationSeconds": 433.1,
+        "targetSeconds": [
+          360,
+          480
+        ],
+        "durationMeetsTarget": true,
+        "reward": {
+          "baseGold": 116,
+          "firstClearGold": 100,
+          "total": 216
+        },
+        "endingGold": 1276,
+        "endingStamina": 12,
+        "collectionCount": 5,
+        "historyCount": 7
+      }
+    ],
+    "archives": [
+      {
+        "levelId": 0,
+        "path": "fresh-after-level-0.save.json"
+      },
+      {
+        "levelId": 1,
+        "path": "fresh-after-level-1.save.json"
+      },
+      {
+        "levelId": 2,
+        "path": "fresh-after-level-2.save.json"
+      },
+      {
+        "levelId": 3,
+        "path": "fresh-after-level-3.save.json"
+      },
+      {
+        "levelId": 4,
+        "path": "fresh-after-level-4.save.json"
+      }
+    ]
+  },
+  "mature": {
+    "seed": 1731,
+    "description": "Separate explicit 4–6-skill archive fixture representing later fusion progress; no claim these skills were earned in the first run. Same 76 innate aptitudes; training paid through GameService using only previously earned gold/materials; first wave still one turtle.",
+    "training": [
+      {
+        "role": "spike",
+        "material": "attack",
+        "cost": 100
+      },
+      {
+        "role": "crystal",
+        "material": "attack",
+        "cost": 100
+      },
+      {
+        "role": "spike",
+        "material": "attack",
+        "cost": 100
+      },
+      {
+        "role": "crystal",
+        "material": "attack",
+        "cost": 100
+      },
+      {
+        "role": "spike",
+        "material": "attack",
+        "cost": 100
+      },
+      {
+        "role": "stone",
+        "material": "health",
+        "cost": 100
+      },
+      {
+        "role": "stone",
+        "material": "health",
+        "cost": 100
+      },
+      {
+        "role": "stone",
+        "material": "defense",
+        "cost": 100
+      },
+      {
+        "role": "spike",
+        "material": "growth",
+        "cost": 300
+      }
+    ],
+    "startingGold": 176,
+    "roster": [
+      {
+        "role": "spike",
+        "skills": [
+          "swift",
+          "critical",
+          "combo",
+          "lifesteal",
+          "piercingShot",
+          "reach"
+        ],
+        "innate": {
+          "attack": 76,
+          "health": 76,
+          "defense": 76,
+          "growth": 100
+        },
+        "training": {
+          "attack": 3,
+          "health": 0,
+          "defense": 0,
+          "growth": 1
+        }
+      },
+      {
+        "role": "stone",
+        "skills": [
+          "strong",
+          "armor",
+          "block",
+          "reflect",
+          "share",
+          "hold"
+        ],
+        "innate": {
+          "attack": 76,
+          "health": 76,
+          "defense": 76,
+          "growth": 100
+        },
+        "training": {
+          "attack": 0,
+          "health": 2,
+          "defense": 1,
+          "growth": 0
+        }
+      },
+      {
+        "role": "crystal",
+        "skills": [
+          "bounce",
+          "shredResist",
+          "spellDrain",
+          "crystalCannon",
+          "reach"
+        ],
+        "innate": {
+          "attack": 76,
+          "health": 76,
+          "defense": 76,
+          "growth": 100
+        },
+        "training": {
+          "attack": 2,
+          "health": 0,
+          "defense": 0,
+          "growth": 0
+        }
+      },
+      {
+        "role": "leaf",
+        "skills": [
+          "reach",
+          "doubleHeal",
+          "healShield",
+          "cleanse",
+          "greatHeal"
+        ],
+        "innate": {
+          "attack": 76,
+          "health": 76,
+          "defense": 76,
+          "growth": 100
+        },
+        "training": {
+          "attack": 0,
+          "health": 0,
+          "defense": 0,
+          "growth": 0
+        }
+      },
+      {
+        "role": "bubble",
+        "skills": [
+          "shredArmor",
+          "root",
+          "weaken",
+          "bubbleRing"
+        ],
+        "innate": {
+          "attack": 76,
+          "health": 76,
+          "defense": 76,
+          "growth": 100
+        },
+        "training": {
+          "attack": 0,
+          "health": 0,
+          "defense": 0,
+          "growth": 0
+        }
+      }
+    ],
+    "level": {
+      "levelId": 4,
+      "name": "巨钳来袭",
+      "runId": "run-169",
+      "startingGold": 176,
+      "startingStamina": 12,
+      "waves": [
+        {
+          "wave": 1,
+          "units": [
+            {
+              "role": "spike",
+              "level": 1,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            }
+          ],
+          "seconds": 20.55,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 4,
+          "leaked": 0
+        },
+        {
+          "wave": 2,
+          "units": [
+            {
+              "role": "spike",
+              "level": 2,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 1,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            }
+          ],
+          "seconds": 18.85,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 5,
+          "leaked": 0
+        },
+        {
+          "wave": 3,
+          "units": [
+            {
+              "role": "spike",
+              "level": 3,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 2,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 1,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            }
+          ],
+          "seconds": 18.85,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 6,
+          "leaked": 0
+        },
+        {
+          "wave": 4,
+          "units": [
+            {
+              "role": "spike",
+              "level": 4,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 3,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 2,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 1,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            }
+          ],
+          "seconds": 22.65,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 7,
+          "leaked": 0
+        },
+        {
+          "wave": 5,
+          "units": [
+            {
+              "role": "spike",
+              "level": 5,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 4,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 3,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 2,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 1,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 28.65,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 8,
+          "leaked": 0
+        },
+        {
+          "wave": 6,
+          "units": [
+            {
+              "role": "spike",
+              "level": 6,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 5,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 4,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 3,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 2,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 22.45,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 8,
+          "leaked": 0
+        },
+        {
+          "wave": 7,
+          "units": [
+            {
+              "role": "spike",
+              "level": 7,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 6,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 5,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 4,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 3,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 24.15,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 9,
+          "leaked": 0
+        },
+        {
+          "wave": 8,
+          "units": [
+            {
+              "role": "spike",
+              "level": 8,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 7,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 6,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 5,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 4,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 28.4,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 10,
+          "leaked": 0
+        },
+        {
+          "wave": 9,
+          "units": [
+            {
+              "role": "spike",
+              "level": 9,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 8,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 7,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 6,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 5,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 28.5,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 10,
+          "leaked": 0
+        },
+        {
+          "wave": 10,
+          "units": [
+            {
+              "role": "spike",
+              "level": 10,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 9,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 8,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 7,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 6,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 33.35,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 12,
+          "leaked": 0
+        },
+        {
+          "wave": 11,
+          "units": [
+            {
+              "role": "spike",
+              "level": 10,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 10,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 9,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 8,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 7,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 30.95,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 12,
+          "leaked": 0
+        },
+        {
+          "wave": 12,
+          "units": [
+            {
+              "role": "spike",
+              "level": 10,
+              "slot": 0,
+              "skills": [
+                "swift",
+                "critical",
+                "combo",
+                "lifesteal",
+                "piercingShot",
+                "reach"
+              ]
+            },
+            {
+              "role": "stone",
+              "level": 10,
+              "slot": 1,
+              "skills": [
+                "strong",
+                "armor",
+                "block",
+                "reflect",
+                "share",
+                "hold"
+              ]
+            },
+            {
+              "role": "crystal",
+              "level": 10,
+              "slot": 2,
+              "skills": [
+                "bounce",
+                "shredResist",
+                "spellDrain",
+                "crystalCannon",
+                "reach"
+              ]
+            },
+            {
+              "role": "leaf",
+              "level": 9,
+              "slot": 3,
+              "skills": [
+                "reach",
+                "doubleHeal",
+                "healShield",
+                "cleanse",
+                "greatHeal"
+              ]
+            },
+            {
+              "role": "bubble",
+              "level": 8,
+              "slot": 4,
+              "skills": [
+                "shredArmor",
+                "root",
+                "weaken",
+                "bubbleRing"
+              ]
+            }
+          ],
+          "seconds": 50.8,
+          "status": "won",
+          "coreHealth": 20,
+          "kills": 16,
+          "leaked": 0,
+          "boss": {
+            "defeated": true,
+            "leaked": false,
+            "remainingHp": 0,
+            "maxHp": 2400,
+            "attackCount": 17,
+            "allyHpDamage": 835.0489781397563,
+            "downedAllies": []
+          }
+        }
+      ],
+      "collected": [],
+      "checkpointRestores": 12,
+      "victory": true,
+      "completedWaves": 12,
+      "coreHealth": 20,
+      "combatSeconds": 328.15,
+      "withPreparationSeconds": 383.15,
+      "targetSeconds": [
+        360,
+        480
+      ],
+      "durationMeetsTarget": true,
+      "reward": {
+        "baseGold": 116,
+        "firstClearGold": 0,
+        "total": 116
+      },
+      "endingGold": 292,
+      "endingStamina": 8,
+      "collectionCount": 5,
+      "historyCount": 7
+    }
+  }
+}

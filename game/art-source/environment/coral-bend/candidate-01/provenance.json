@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-09-08T07:46:22.319338+00:00",
+  "project": "哥喂龟",
+  "asset": "珊瑚转角 · level2",
+  "version": "coral-bend-candidate-01",
+  "status": "source-candidate-with-explicit-layout-proposal-pending-root-and-runtime-review",
+  "authorship": {
+    "method": "Project-authored procedural geometry, planar road polygon triangulation, low coral cups/branches, layered coast; no downloaded models/textures. Diagram rendered from original SVG built from measured coordinates.",
+    "externalModels": [],
+    "externalTextures": [],
+    "existingRasterPixelsEdited": false,
+    "runtimeOrViewFilesModified": false
+  },
+  "sources": [
+    {
+      "path": "game/art-source/environment/build_tidal_island.py",
+      "role": "Project original v04 procedural geometry and materials",
+      "sha256": "54f28c4f29c4e4152b9e4727f4834f494e710200701b9215f8b68a48e4c16146"
+    },
+    {
+      "path": "game/art-source/environment/tutorial-island/candidate-01/build_tutorial_island.py",
+      "role": "Original tutorial module and export/preview pipeline",
+      "sha256": "8e4ff7516bdfc9d7e9c7dde515e36db14d4d4652b20fb7ae8ec3a30c62588d06"
+    },
+    {
+      "path": "game/assets/scripts/core/data.ts",
+      "role": "Unchanged current level2 navigation and source station positions",
+      "sha256": "b9d6e111d3a3787eb8a2237447eff988a46e2ce417e63951b1b5be16d897d8b5"
+    },
+    {
+      "path": "game/art-source/stone-turtle/candidate-11/stone-turtle.blend",
+      "role": "Current runtime-matching stone turtle editable geometry; read-only sole measurement",
+      "sha256": "66a4776dea6881c776707096d38b96de67feb5d8f71e4d711ca5349a506f1138"
+    },
+    {
+      "path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "role": "Current runtime turtle hash only; not modified",
+      "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c"
+    }
+  ],
+  "files": [
+    {
+      "path": "coral-bend.fbx",
+      "bytes": 4527004,
+      "sha256": "298f3326a6b46ac36259226762e711f2603183b01d30f84ca86239c9f17fff40"
+    },
+    {
+      "path": "coral-bend.blend",
+      "bytes": 13946811,
+      "sha256": "31cb32054587efba52846ac9eac808c3118f29db9be0a028ec01eb036f9a05e7"
+    },
+    {
+      "path": "coral-bend-review-scene.blend",
+      "bytes": 6769691,
+      "sha256": "5698ceadb987756b326b832001636b7edd655702a7d58b714e846ef63712f577"
+    },
+    {
+      "path": "island-colour.png",
+      "bytes": 2719387,
+      "sha256": "f7b85a470c42c58a29bb778d8dc73408f06e4f323074faf7d3507b3f1e5e4881"
+    },
+    {
+      "path": "island-roughness.png",
+      "bytes": 39919,
+      "sha256": "2447da099d262a3afdbf84673ea4d3b66101d31071d00fa7b27abcd75116a480"
+    },
+    {
+      "path": "render-battle-overview.png",
+      "bytes": 977913,
+      "sha256": "8d121e297bc6d82d946006261df68931d7b4f88c2b5b27107ca15d78dc700064"
+    },
+    {
+      "path": "render-top-down.png",
+      "bytes": 969779,
+      "sha256": "255066999dde688ecf2efe7f17e81f71036323cd7b1df572bf0bd90bd02a3e6a"
+    },
+    {
+      "path": "render-coral-inlet-detail.png",
+      "bytes": 976134,
+      "sha256": "3227895d0ead014b30a78fe60f7bcfd2b20c536abbdba56e719bba3fb5114fc9"
+    },
+    {
+      "path": "layout-comparison.png",
+      "bytes": 182859,
+      "sha256": "c87d3b6347643dfb11587940f23d77a2a918f3c001c40416e858c87be1f79a34"
+    },
+    {
+      "path": "layout-comparison.svg",
+      "bytes": 65544,
+      "sha256": "2b493726d4858a323cd53768724c12630a48a6a9a620029ded6ec0d8f9525da5"
+    },
+    {
+      "path": "build_coral_bend.py",
+      "bytes": 36018,
+      "sha256": "3494f790d2f32f58cdf83ae763c55836f0e790f2613a72cf0fea5f2d740b09b2"
+    },
+    {
+      "path": "verify_coral_bend.py",
+      "bytes": 6158,
+      "sha256": "41c5fad47887f2d85c4955cc67a5440b9cc45837be188b2623181707aa8412e6"
+    },
+    {
+      "path": "measure_stone_footprint.py",
+      "bytes": 2433,
+      "sha256": "221e213169e3ce52330cb644ccffed2abbdd630a5e482478e0b4a91004396728"
+    },
+    {
+      "path": "verify_foot_support.py",
+      "bytes": 4496,
+      "sha256": "bf0d25efc28f8814452acf7c9a0e1a54461de7b4fc9a775e06fa800775412798"
+    },
+    {
+      "path": "render_layout_comparison.cjs",
+      "bytes": 5431,
+      "sha256": "34ef2fb628cdceef33dbb61c0d8e0bbf21698a07ab3e9d8ee4dba1c13d7f5826"
+    },
+    {
+      "path": "proposal.json",
+      "bytes": 1394,
+      "sha256": "ed4761c77905da0519f7557f0feec1f57ba4465e820d9bc1571014a5dacd15da"
+    }
+  ],
+  "tools": {
+    "blender": "4.5.13 LTS",
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      1000,
+      700
+    ],
+    "engine": "CYCLES",
+    "device": "CPU",
+    "pythonExitCode": 1,
+    "newSoftwareInstalled": false
+  },
+  "verification": {
+    "fbxRoundTrip": "environment-round-trip.json",
+    "sourcePacking": "source-check.json",
+    "soleSupport": "foot-support-check.json",
+    "renderReport": "render-report.json",
+    "actualViewImageReviewed": [
+      "render-battle-overview.png",
+      "render-top-down.png",
+      "render-coral-inlet-detail.png",
+      "layout-comparison.png"
+    ],
+    "triangles": 63866,
+    "meshes": 3,
+    "materials": 2,
+    "routeSamples": 121,
+    "routeHeightProblems": 0,
+    "routeCenterObstacles": 0,
+    "soleRays": 372240,
+    "soleUnsupported": 0,
+    "runtimeImportPerformed": false
+  },
+  "layout": {
+    "proposal": "proposal.json",
+    "liveDataModified": false,
+    "routeMatchesLive": true,
+    "changedSlotIndices": [
+      2,
+      4
+    ],
+    "approvalRequiredBeforeIntegration": true
+  },
+  "geometryBoundsCocos": {
+    "min": [
+      -12.428242683410645,
+      -1.869998574256897,
+      -6.119803428649902
+    ],
+    "max": [
+      12.484183311462402,
+      2.498575448989868,
+      5.856790065765381
+    ]
+  },
+  "limits": [
+    "Slots2/4 differ from current gameplay data, so source candidate cannot be promoted as-is without root coordinated layout/save handling.",
+    "Unchanged slot3 (1,-3) is2.236 from route: stone melee blocking1.2 does not reach; root must assess ranged/support placement.",
+    "Source sole support audit uses REST-pose geometry at all-yaw envelope; action animation and defender/enemy contact require runtime checks.",
+    "Roadside sand can extend under platform edges; exact live route centers are clear.",
+    "Thin leaves and cups need Cocos culling/lighting/shadow review.",
+    "Preview ocean is excluded from FBX and is not proof of completed game ocean or mobile performance."
+  ],
+  "revisionNotes": [
+    "Initial ribbon had black overlap seams at acute bends. Those failed previews and model are archived in iterations/before-road-union. Final path is one explicitly triangulated non-overlapping polygon with sparse corner-border stones."
+  ],
+  "rightsRecord": "Original project provenance record; not an absolute guarantee against all copyright or legal disputes."
+}

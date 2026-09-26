@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-09-08",
+  "project": "哥喂龟",
+  "status": "authored_svg_and_render_complete_pending_root_runtime_review",
+  "authoring": {
+    "method": "Original hand-authored SVG paths, gradients, layers and manufacturing JavaScript written by Codex under project direction",
+    "imageGenerationUsedForTheseFiles": false,
+    "rasterInputUsed": false,
+    "tracingUsed": false,
+    "externalAssetDownloads": [],
+    "runtimeFilesChanged": false
+  },
+  "references": [
+    {
+      "path": "output/art/A-潮汐玩具岛.png",
+      "role": "Project visual tone and warm toy-island palette; no pixel sampling or tracing"
+    },
+    {
+      "path": "output/art/A4-五龟三男两女角色参考.png",
+      "role": "Project round toy-material direction; no character geometry or pixels reproduced"
+    }
+  ],
+  "manufacturingScript": "make-icons.cjs",
+  "authoritativeEditableSources": "8 individual SVG files; render-icons.cjs renders these current sources",
+  "rendering": {
+    "script": "render-icons.cjs",
+    "library": "sharp 0.35.4",
+    "backend": "librsvg 2.62.91",
+    "newSoftwareInstalled": false,
+    "systemServicesInstalled": false,
+    "atlas": {
+      "file": "icons-atlas.png",
+      "width": 1024,
+      "height": 512,
+      "channels": 4,
+      "sha256": "422cc6b40f689fcaebbb4a2fe2fd315ab9dfb27b7a15d485561b9102e34dd129",
+      "bytes": 185233
+    }
+  },
+  "verification": {
+    "pixelReport": "inspection.json",
+    "actualViewImageReviewed": [
+      "icons-atlas.png",
+      "review-64-48.png"
+    ],
+    "sizesReviewed": [
+      64,
+      48
+    ],
+    "backgroundsReviewed": [
+      "#173f43",
+      "#f1e3c8"
+    ],
+    "allOuter24pxMarginsFullyTransparent": true,
+    "runtimeReviewCompleted": false
+  },
+  "notes": [
+    "Previous raster candidates were not read by either new source or render script.",
+    "No red cross, brands, visible words or extra currency introduced.",
+    "The editable source and history are preserved; this record is provenance, not an absolute rights guarantee."
+  ]
+}

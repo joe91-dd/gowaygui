@@ -1,0 +1,58 @@
+{
+  "fbx_round_trip": "pass",
+  "fbx_sha256": "91f0a61c689d1e227d227559f57d22b7c9673563a3262bbf8f60182c1e4f9599",
+  "source_version": "stone-sample-09",
+  "weighted_vertex_count": 11532,
+  "bone_count": 10,
+  "uv_layers": 1,
+  "clips": {
+    "attack": {
+      "first": 1.0,
+      "last": 27.0,
+      "seconds": 0.8666666666666667,
+      "max_vertex_motion_m": 0.123268,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 0.0
+    },
+    "fusion": {
+      "first": 1.0,
+      "last": 60.0,
+      "seconds": 1.9666666666666666,
+      "max_vertex_motion_m": 0.236236,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 0.0
+    },
+    "hit": {
+      "first": 1.0,
+      "last": 18.0,
+      "seconds": 0.5666666666666667,
+      "max_vertex_motion_m": 0.05979,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 0.0
+    },
+    "idle": {
+      "first": 1.0,
+      "last": 72.0,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.027161,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 0.0
+    },
+    "rest": {
+      "first": 1.0,
+      "last": 72.0,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.015122,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -7.8e-05
+    },
+    "skill": {
+      "first": 1.0,
+      "last": 42.0,
+      "seconds": 1.3666666666666667,
+      "max_vertex_motion_m": 0.319895,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 0.0
+    }
+  }
+}

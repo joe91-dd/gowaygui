@@ -1,0 +1,43 @@
+{
+  "key": "fauna-00",
+  "name": "虚空来客",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Alien",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\alien-bb257d\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/c6a959567fc45ded23f28a33f72d4ea7025502eb7c3a66e542b9d77df102b21a_Alien.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "3e7f8a53d422c450faf57550a65507284c4ebfd4386960f912b800cd0ac3badd",
+  "bytes": 154696,
+  "animations": 8,
+  "displayName": "虚空来客",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 17380,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-00",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.0
+}

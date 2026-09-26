@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "method": "Actual c01/c02 FBX binary geometry and per-face vertex/UV/normal comparison; no Blender process",
+  "sourceFbxSha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+  "correctedFbxSha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+  "checks": [
+    {
+      "mesh": "Continuous_grass_island_geometry",
+      "verticesUnchanged": 5201,
+      "polygons": 4556,
+      "grassFacesReversed": 2304,
+      "uvPerVertexUnchanged": true
+    },
+    {
+      "mesh": "Coast_chamfer_rock_00_geometry",
+      "verticesUnchanged": 26489,
+      "polygons": 20612,
+      "grassFacesReversed": 0,
+      "uvPerVertexUnchanged": true
+    },
+    {
+      "mesh": "Sanctuary_luminous_pearl_geometry",
+      "verticesUnchanged": 1248,
+      "polygons": 1152,
+      "grassFacesReversed": 0,
+      "uvPerVertexUnchanged": true
+    }
+  ],
+  "grassPolygonsReversed": 2304,
+  "otherPolygonsUnchanged": 24016,
+  "maximumUnrelatedNormalDelta": 0,
+  "grassNormalAudit": {
+    "polygons": 2304,
+    "nondegenerate": 2304,
+    "up": 2304,
+    "down": 0,
+    "side": 0,
+    "degenerate": 0,
+    "geometricZMin": 0.9718504272181611,
+    "geometricZMax": 1.0,
+    "storedNormalZMin": 0.9785884022712708,
+    "storedNormalZMax": 1.0
+  },
+  "transformsAxesUnchanged": true,
+  "atlasesOriginalBytes": true,
+  "fullFirstRoundFreezePass": true,
+  "cocosImportedStatus": "pending-root-import; original imported evidence in ../normal-review/surface-normal-audit.json"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "green-8",
+  "name": "荆刺鱼人卫",
+  "tier": 0,
+  "index": 13,
+  "base": 41,
+  "key": "boss-13",
+  "ability": "frost",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 53992,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-41",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e4bae9f2a7b60ca5f6493da221dc60e8cd5967d7bf35b37e91df97852f723baf_Fish.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24691,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.4
+}

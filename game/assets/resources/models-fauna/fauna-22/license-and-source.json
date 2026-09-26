@@ -1,0 +1,43 @@
+{
+  "key": "fauna-22",
+  "name": "酸液幼兽",
+  "kind": "snail",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Glub",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\glub-973875\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/46f7b9ed9f1aca38fede4642e0de0bbbc1de8fb9e014bf18d94c18c30ed3d658_Glub.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d9483762027412e42ebbf7d6ded8973245de9c8594765dd839af80852afb0de2",
+  "bytes": 278864,
+  "animations": 8,
+  "displayName": "酸液幼兽",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 18264,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-22",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 3.7
+}

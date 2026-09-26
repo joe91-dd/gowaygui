@@ -1,0 +1,13 @@
+{
+  "role": "bubble",
+  "title": "泡泡龟",
+  "runtime_candidate_frozen": true,
+  "directory": "game/art-source/bubble-turtle/candidate-02/runtime-candidate",
+  "blend": "bubble-turtle-runtime.blend",
+  "blend_sha256": "a4ae0721539349a1d2277e17480f5fe6b1975e64758c5232597f57a68efe2ec0",
+  "fbx": "bubble-turtle.fbx",
+  "fbx_sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+  "texture_prefix": "bubble",
+  "rig": "BubbleTurtle_Rig",
+  "triangles": 29604
+}

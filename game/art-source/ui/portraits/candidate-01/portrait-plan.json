@@ -1,0 +1,259 @@
+{
+  "status": "all-five-bound-awaiting-render-slot",
+  "sources": [
+    {
+      "role": "stone",
+      "title": "石头龟",
+      "directory": "game/art-source/stone-turtle/candidate-12/c12b",
+      "blend": "stone-turtle-review-scene.blend",
+      "blend_sha256": "526bb397ef710d4d7bd25c131bfcd7a15756425864ad98628866ec8122159811",
+      "fbx": "stone-turtle.fbx",
+      "fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+      "texture_prefix": "stone",
+      "rig": "StoneTurtle_Rig",
+      "triangles": 28572,
+      "source_blend": "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend",
+      "source_fbx": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-turtle.fbx",
+      "images": [
+        {
+          "path": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-colour.png",
+          "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+          "role": "colour"
+        },
+        {
+          "path": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-roughness.png",
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+          "role": "roughness"
+        }
+      ]
+    },
+    {
+      "role": "spike",
+      "title": "刺刺龟",
+      "directory": "game/art-source/spike-turtle/candidate-02",
+      "blend": "spike-turtle-review-scene.blend",
+      "blend_sha256": "7dc1af162cfab7e7dafa2102bec31d4a6e75189c37c13f7d0fc57a4d87d1ffa5",
+      "fbx": "spike-turtle.fbx",
+      "fbx_sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+      "texture_prefix": "spike",
+      "rig": "SpikeTurtle_Rig",
+      "triangles": 28900,
+      "source_blend": "game/art-source/spike-turtle/candidate-02/spike-turtle-review-scene.blend",
+      "source_fbx": "game/art-source/spike-turtle/candidate-02/export/spike-turtle.fbx",
+      "images": [
+        {
+          "path": "game/art-source/spike-turtle/candidate-02/export/spike-colour.png",
+          "sha256": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+          "role": "colour"
+        },
+        {
+          "path": "game/art-source/spike-turtle/candidate-02/export/spike-roughness.png",
+          "sha256": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+          "role": "roughness"
+        }
+      ]
+    },
+    {
+      "role": "crystal",
+      "title": "水晶龟",
+      "directory": "game/art-source/crystal-turtle/candidate-02",
+      "blend": "crystal-turtle-review-scene.blend",
+      "blend_sha256": "34f5c40e57bd5fbbba4d25c1cc61200c3727a7d2812b7cd677b5652b62e7fc08",
+      "fbx": "crystal-turtle.fbx",
+      "fbx_sha256": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+      "texture_prefix": "crystal",
+      "rig": "CrystalTurtle_Rig",
+      "triangles": 28899,
+      "source_blend": "game/art-source/crystal-turtle/candidate-02/crystal-turtle-review-scene.blend",
+      "source_fbx": "game/art-source/crystal-turtle/candidate-02/export/crystal-turtle.fbx",
+      "images": [
+        {
+          "path": "game/art-source/crystal-turtle/candidate-02/export/crystal-colour.png",
+          "sha256": "8762633b9608f096b592f29db3d3d8cc12cda0ef247a53b2697e385f74f981e2",
+          "role": "colour"
+        },
+        {
+          "path": "game/art-source/crystal-turtle/candidate-02/export/crystal-roughness.png",
+          "sha256": "f84cf3281104c0baa61c5f03658db6c1ff1f1c9cfdcacef8943bccf1c20e10e5",
+          "role": "roughness"
+        }
+      ]
+    },
+    {
+      "role": "leaf",
+      "title": "叶子龟",
+      "directory": "game/art-source/leaf-turtle/candidate-04/runtime-candidate",
+      "blend": "leaf-turtle-runtime.blend",
+      "blend_sha256": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce",
+      "fbx": "leaf-turtle.fbx",
+      "fbx_sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+      "texture_prefix": "leaf",
+      "rig": "LeafTurtle_Rig",
+      "triangles": 29560,
+      "source_blend": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/leaf-turtle-runtime.blend",
+      "source_fbx": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-turtle.fbx",
+      "images": [
+        {
+          "path": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-colour.png",
+          "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+          "role": "colour"
+        },
+        {
+          "path": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-roughness.png",
+          "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+          "role": "roughness"
+        }
+      ]
+    },
+    {
+      "role": "bubble",
+      "title": "泡泡龟",
+      "runtime_candidate_frozen": true,
+      "directory": "game/art-source/bubble-turtle/candidate-02/runtime-candidate",
+      "blend": "bubble-turtle-runtime.blend",
+      "blend_sha256": "a4ae0721539349a1d2277e17480f5fe6b1975e64758c5232597f57a68efe2ec0",
+      "fbx": "bubble-turtle.fbx",
+      "fbx_sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+      "texture_prefix": "bubble",
+      "rig": "BubbleTurtle_Rig",
+      "triangles": 29604,
+      "source_blend": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-runtime.blend",
+      "source_fbx": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+      "images": [
+        {
+          "path": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+          "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+          "role": "colour"
+        },
+        {
+          "path": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+          "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+          "role": "roughness"
+        }
+      ]
+    }
+  ],
+  "protected_sha256": {
+    "game/art-source/stone-turtle/candidate-12/c12b/export/stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game/assets/resources/models/stone-turtle/stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game/art-source/stone-turtle/candidate-12/c12b/export/stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game/assets/resources/models/stone-turtle/stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend": "526bb397ef710d4d7bd25c131bfcd7a15756425864ad98628866ec8122159811",
+    "game/art-source/stone-turtle/candidate-12/c12b/export/stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game/assets/resources/models/stone-turtle/stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game/art-source/spike-turtle/candidate-02/export/spike-colour.png": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+    "game/assets/resources/models/spike-turtle/spike-colour.png": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+    "game/art-source/spike-turtle/candidate-02/export/spike-roughness.png": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+    "game/assets/resources/models/spike-turtle/spike-roughness.png": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+    "game/art-source/spike-turtle/candidate-02/spike-turtle-review-scene.blend": "7dc1af162cfab7e7dafa2102bec31d4a6e75189c37c13f7d0fc57a4d87d1ffa5",
+    "game/art-source/spike-turtle/candidate-02/export/spike-turtle.fbx": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+    "game/assets/resources/models/spike-turtle/spike-turtle.fbx": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+    "game/art-source/crystal-turtle/candidate-02/export/crystal-colour.png": "8762633b9608f096b592f29db3d3d8cc12cda0ef247a53b2697e385f74f981e2",
+    "game/assets/resources/models/crystal-turtle/crystal-colour.png": "8762633b9608f096b592f29db3d3d8cc12cda0ef247a53b2697e385f74f981e2",
+    "game/art-source/crystal-turtle/candidate-02/export/crystal-roughness.png": "f84cf3281104c0baa61c5f03658db6c1ff1f1c9cfdcacef8943bccf1c20e10e5",
+    "game/assets/resources/models/crystal-turtle/crystal-roughness.png": "f84cf3281104c0baa61c5f03658db6c1ff1f1c9cfdcacef8943bccf1c20e10e5",
+    "game/art-source/crystal-turtle/candidate-02/crystal-turtle-review-scene.blend": "34f5c40e57bd5fbbba4d25c1cc61200c3727a7d2812b7cd677b5652b62e7fc08",
+    "game/art-source/crystal-turtle/candidate-02/export/crystal-turtle.fbx": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+    "game/assets/resources/models/crystal-turtle/crystal-turtle.fbx": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+    "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "game/assets/resources/models/leaf-turtle/leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "game/assets/resources/models/leaf-turtle/leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "game/art-source/leaf-turtle/candidate-04/runtime-candidate/leaf-turtle-runtime.blend": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce",
+    "game/art-source/leaf-turtle/candidate-04/runtime-candidate/export/leaf-turtle.fbx": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+    "game/assets/resources/models/leaf-turtle/leaf-turtle.fbx": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+    "game/assets/resources/models/bubble-turtle/bubble-colour.png": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+    "game/assets/resources/models/bubble-turtle/bubble-roughness.png": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-runtime.blend": "a4ae0721539349a1d2277e17480f5fe6b1975e64758c5232597f57a68efe2ec0",
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+    "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398"
+  },
+  "render_settings": {
+    "transparent": true,
+    "size": 384,
+    "small_preview_size": 64,
+    "samples": 24,
+    "threads": 2,
+    "frame": 1,
+    "action": "idle",
+    "camera": {
+      "projection": "ORTHO",
+      "azimuth_degrees": 12,
+      "elevation_degrees": 18,
+      "distance": 7,
+      "target": [
+        0,
+        -0.38,
+        0.96
+      ],
+      "framing": "One shared orthographic scale fitted to the union of all five head/shell/neck weighted vertices, with 6% margin. No per-role zoom or head reshaping.",
+      "minimum_scale": 2.4,
+      "maximum_scale_without_review": 3.2
+    },
+    "colour_management": {
+      "view_transform": "AgX",
+      "exposure": 0,
+      "gamma": 1
+    },
+    "world": {
+      "colour": [
+        0.58,
+        0.67,
+        0.75,
+        1
+      ],
+      "strength": 0.38
+    },
+    "lights": [
+      {
+        "name": "Key",
+        "location": [
+          -3,
+          -4,
+          6
+        ],
+        "energy": 500,
+        "size": 4.5,
+        "colour": [
+          1,
+          0.94,
+          0.84
+        ]
+      },
+      {
+        "name": "Fill",
+        "location": [
+          4,
+          -2,
+          3
+        ],
+        "energy": 270,
+        "size": 4,
+        "colour": [
+          0.82,
+          0.92,
+          1
+        ]
+      },
+      {
+        "name": "Rim",
+        "location": [
+          0,
+          3,
+          4
+        ],
+        "energy": 460,
+        "size": 3,
+        "colour": [
+          0.92,
+          0.98,
+          1
+        ]
+      }
+    ]
+  },
+  "source_changes": false,
+  "render_started": false
+}

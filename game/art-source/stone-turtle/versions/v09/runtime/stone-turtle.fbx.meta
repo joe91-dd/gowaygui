@@ -1,0 +1,444 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin",
+    "__original-animation-5.bin"
+  ],
+  "subMetas": {
+    "ef53e": {
+      "importer": "gltf-mesh",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@ef53e",
+      "displayName": "",
+      "id": "ef53e",
+      "name": "Torso_mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 20964
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c9011": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@c9011",
+      "displayName": "",
+      "id": "c9011",
+      "name": "StoneTurtle_Rig|attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "94d93": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@94d93",
+      "displayName": "",
+      "id": "94d93",
+      "name": "StoneTurtle_Rig|fusion.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.9666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "4f7c6": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@4f7c6",
+      "displayName": "",
+      "id": "4f7c6",
+      "name": "StoneTurtle_Rig|hit.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "bfc4d": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@bfc4d",
+      "displayName": "",
+      "id": "bfc4d",
+      "name": "StoneTurtle_Rig|idle.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "60f82": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@60f82",
+      "displayName": "",
+      "id": "60f82",
+      "name": "StoneTurtle_Rig|rest.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "4627b": {
+      "importer": "gltf-animation",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@4627b",
+      "displayName": "",
+      "id": "4627b",
+      "name": "StoneTurtle_Rig|skill.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.3666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 10
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b02": {
+      "importer": "gltf-embeded-image",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@48b02",
+      "displayName": "",
+      "id": "48b02",
+      "name": "base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "cf2e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@cf2e8",
+      "displayName": "",
+      "id": "cf2e8",
+      "name": "roughness_texture.image",
+      "userData": {
+        "gltfIndex": 1,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@48b02"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75fa1": {
+      "importer": "texture",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@75fa1",
+      "displayName": "",
+      "id": "75fa1",
+      "name": "roughness_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@cf2e8"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "81e94": {
+      "importer": "gltf-material",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@81e94",
+      "displayName": "",
+      "id": "81e94",
+      "name": "StoneAtlas_01.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "abd82": {
+      "importer": "gltf-scene",
+      "uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@abd82",
+      "displayName": "",
+      "id": "abd82",
+      "name": "stone-turtle.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@48b02"
+      },
+      {
+        "name": "roughness_texture",
+        "uri": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@cf2e8"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "StoneTurtle_Rig|attack",
+        "duration": 0.8666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|attack",
+            "from": 0,
+            "to": 0.8666666746139526,
+            "wrapMode": 2,
+            "previousId": "c9011"
+          }
+        ]
+      },
+      {
+        "name": "StoneTurtle_Rig|fusion",
+        "duration": 1.9666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|fusion",
+            "from": 0,
+            "to": 1.9666666984558105,
+            "wrapMode": 2,
+            "previousId": "94d93"
+          }
+        ]
+      },
+      {
+        "name": "StoneTurtle_Rig|hit",
+        "duration": 0.5666666626930237,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|hit",
+            "from": 0,
+            "to": 0.5666666626930237,
+            "wrapMode": 2,
+            "previousId": "4f7c6"
+          }
+        ]
+      },
+      {
+        "name": "StoneTurtle_Rig|idle",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|idle",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "bfc4d"
+          }
+        ]
+      },
+      {
+        "name": "StoneTurtle_Rig|rest",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|rest",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "60f82"
+          }
+        ]
+      },
+      {
+        "name": "StoneTurtle_Rig|skill",
+        "duration": 1.3666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneTurtle_Rig|skill",
+            "from": 0,
+            "to": 1.3666666746139526,
+            "wrapMode": 2,
+            "previousId": "4627b"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@ef53e"
+      ],
+      "skeletons": [
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@438fe"
+      ],
+      "textures": [
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@7d6ab",
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@75fa1"
+      ],
+      "materials": [
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@81e94"
+      ],
+      "scenes": [
+        "5d7d68a1-9672-41e8-a0ad-05d7a87185f7@abd82"
+      ]
+    }
+  }
+}

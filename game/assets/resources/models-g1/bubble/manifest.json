@@ -1,0 +1,63 @@
+{
+  "asset": "chaoxing",
+  "role": "bubble",
+  "source": "AHOLO G1 / PRO generation",
+  "originalTriangles": 189888,
+  "runtimeTriangles": 87766,
+  "bones": 18,
+  "maxInfluences": 4,
+  "height": 2.32,
+  "weapon": "tide-staff",
+  "clips": {
+    "idle": 4,
+    "walk": 1.067,
+    "attack": 1.067,
+    "attack2": 1.067,
+    "skill": 2.167,
+    "hit": 0.767,
+    "greeting": 2,
+    "rest": 2.167,
+    "exit": 1.6
+  },
+  "sockets": [
+    {
+      "name": "FX_Weapon_Core",
+      "bone": "hand.L",
+      "position": [
+        0.925000011920929,
+        -0.19500000774860382,
+        1.9200000762939453
+      ]
+    },
+    {
+      "name": "FX_Weapon_Grip",
+      "bone": "hand.L",
+      "position": [
+        0.8899999856948853,
+        -0.18000000715255737,
+        0.8899999856948853
+      ]
+    },
+    {
+      "name": "FX_Chest",
+      "bone": "chest",
+      "position": [
+        0,
+        -0.29,
+        1.15
+      ]
+    }
+  ],
+  "faceGeometryReplaced": false,
+  "texturesRepainted": false,
+  "knownLimitations": [
+    "Generated triangulated topology; weights require extreme-pose visual review.",
+    "Facial expressions are the source sculpt, not a full facial blendshape rig."
+  ],
+  "coincidentWeightGroups": 45890,
+  "uvSeamWeightsUnified": true,
+  "neutralEquipmentUpright": true,
+  "gripSculpt": "curled weapon hand; warrior fists",
+  "runtimeGeometry": "Connected surface; original per-corner UV atlas retained",
+  "runtimePath": "runtime-v2/chaoxing"
+}

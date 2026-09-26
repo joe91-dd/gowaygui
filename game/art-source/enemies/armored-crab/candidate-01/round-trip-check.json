@@ -1,0 +1,103 @@
+{
+  "status": "pass",
+  "fbx_sha256": "837caade510dd003847a05a4dfe7ee4551235b75026354338defc0523e409474",
+  "triangles": 13340,
+  "vertices": 6746,
+  "materials": [
+    "ArmoredCrab_Toy_Atlas"
+  ],
+  "bones": [
+    "root",
+    "body",
+    "claw_L",
+    "jaw_L",
+    "claw_R",
+    "jaw_R",
+    "eye_L",
+    "eye_R",
+    "leg_L1",
+    "leg_L2",
+    "leg_L3",
+    "leg_L4",
+    "leg_R1",
+    "leg_R2",
+    "leg_R3",
+    "leg_R4"
+  ],
+  "clips": {
+    "idle": {
+      "imported_action_name": "ArmoredCrab_Rig|ArmoredCrab_Rig|idle",
+      "first": 1.0,
+      "last": 73.0,
+      "seconds": 2.4,
+      "samples": 145,
+      "maximum_vertex_motion_m": 0.005786185639075876,
+      "minimum_z_m": 3.397463999021966e-08,
+      "maximum_z_m": 0.6978965997695923,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "walk": {
+      "imported_action_name": "ArmoredCrab_Rig|ArmoredCrab_Rig|walk",
+      "first": 1.0,
+      "last": 25.0,
+      "seconds": 0.8,
+      "samples": 49,
+      "maximum_vertex_motion_m": 0.07753243588100067,
+      "minimum_z_m": -5.706299816665705e-06,
+      "maximum_z_m": 0.7028965950012207,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "attack": {
+      "imported_action_name": "ArmoredCrab_Rig|ArmoredCrab_Rig|attack",
+      "first": 1.0,
+      "last": 34.0,
+      "seconds": 1.1,
+      "samples": 67,
+      "maximum_vertex_motion_m": 0.1513436467377361,
+      "minimum_z_m": 3.397463999021966e-08,
+      "maximum_z_m": 0.6938965916633606,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "hit": {
+      "imported_action_name": "ArmoredCrab_Rig|ArmoredCrab_Rig|hit",
+      "first": 1.0,
+      "last": 16.0,
+      "seconds": 0.5,
+      "samples": 31,
+      "maximum_vertex_motion_m": 0.048731697056049884,
+      "minimum_z_m": 3.397463999021966e-08,
+      "maximum_z_m": 0.6978965997695923,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "exit": {
+      "imported_action_name": "ArmoredCrab_Rig|ArmoredCrab_Rig|exit",
+      "first": 1.0,
+      "last": 28.0,
+      "seconds": 0.9,
+      "samples": 55,
+      "maximum_vertex_motion_m": 0.861119164964141,
+      "minimum_z_m": -6.546851238908857e-08,
+      "maximum_z_m": 0.7118965983390808,
+      "first_last_seam_m": 0.861119164964141,
+      "loop": false
+    }
+  },
+  "warnings": [],
+  "method": "Imported FBX, explicitly selected Blender 4.5 action slots, evaluated every half frame. Technical evidence does not imply art acceptance.",
+  "bounds_world_xyz": {
+    "min": [
+      -0.6794758439064026,
+      -0.40700000524520874,
+      3.397463999021966e-08
+    ],
+    "max": [
+      0.6794758439064026,
+      0.4097151756286621,
+      0.6938965916633606
+    ]
+  }
+}

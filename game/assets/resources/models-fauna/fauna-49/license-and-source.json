@@ -1,0 +1,43 @@
+{
+  "key": "fauna-49",
+  "name": "霜牙巨兽 · 战斗形态",
+  "kind": "armored",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Yeti",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\yeti-a3db39\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/7eb05db681c175397362b118197f70ad7c654ef87a689efea29c1f32d8c488a0_Yeti.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "ca56502f9725adf5f0973902cf17d25192624e6d74ee87b9117f39c5d0270732",
+  "bytes": 1358320,
+  "animations": 14,
+  "displayName": "霜牙巨兽 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 46624,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-49",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.1
+}

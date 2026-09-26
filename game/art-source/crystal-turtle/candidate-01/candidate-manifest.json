@@ -1,0 +1,244 @@
+{
+  "status": "Crystal candidate-01: three preview views, no runtime promotion",
+  "species": "crystal",
+  "display_name": "水晶龟",
+  "character": "Attentive female blue-crystal turtle",
+  "source_foundation": "game\\art-source\\crystal-turtle\\candidate-01\\inputs\\authored-c12b-foundation.blend",
+  "foundation_sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+  "protected_inputs": {
+    "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game\\art-source\\build_stone_turtle_candidate12b.py": "fbb4bd93d952fe560e1fee48b95dbfc37e15f589405ee7e5a12764511482a7cc",
+    "game\\art-source\\stone_turtle_atlas.py": "33d84bcec6dc394ff63c0c1986b6837e41d03c26c68338838a0a386c87215f85",
+    "game\\art-source\\build_spike_turtle_candidate02.py": "7df15065785f9a38e94431b50a11a818217c44ac5fb1b441ec259bb2354975df",
+    "game\\art-source\\spike-turtle\\candidate-02\\spike-turtle.blend": "9193078d649856f18c8ef3244c731480e00b86bc9ae000847cabb46fa38109ca",
+    "game\\art-source\\spike-turtle\\candidate-02\\export\\spike-turtle.fbx": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-colour.png": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-roughness.png": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-turtle.fbx": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e"
+  },
+  "proportions": {
+    "head": {
+      "min": [
+        -0.6048617959022522,
+        -1.7167847156524658,
+        0.2567983567714691
+      ],
+      "max": [
+        0.6048617959022522,
+        -0.9013653993606567,
+        1.0318305492401123
+      ],
+      "dimensions": [
+        1.2097235918045044,
+        0.8154193162918091,
+        0.7750321924686432
+      ]
+    },
+    "shell_main": {
+      "min": [
+        -1.0149999856948853,
+        -1.1746420860290527,
+        0.4247410297393799
+      ],
+      "max": [
+        1.0149999856948853,
+        1.1674195528030396,
+        1.8825709819793701
+      ],
+      "dimensions": [
+        2.0299999713897705,
+        2.3420616388320923,
+        1.4578299522399902
+      ]
+    },
+    "whole": {
+      "min": [
+        -1.1237202882766724,
+        -1.7167847156524658,
+        0.0005976539687253535
+      ],
+      "max": [
+        1.1237202882766724,
+        1.273627758026123,
+        1.8825709819793701
+      ],
+      "dimensions": [
+        2.2474405765533447,
+        2.990412473678589,
+        1.8819733280106448
+      ]
+    },
+    "head_to_main_shell": 0.5959229600265995
+  },
+  "source_parts": 97,
+  "main_crystals": 18,
+  "rim_gems": 14,
+  "opaque_material": true,
+  "crystal_seed": 73161,
+  "triangles": 28900,
+  "vertices": 15032,
+  "bones": 10,
+  "materials": 1,
+  "clips": {
+    "idle": {
+      "last_frame": 72,
+      "seconds": 2.3666666666666667
+    },
+    "attack": {
+      "last_frame": 27,
+      "seconds": 0.8666666666666667
+    },
+    "skill": {
+      "last_frame": 42,
+      "seconds": 1.3666666666666667
+    },
+    "hit": {
+      "last_frame": 18,
+      "seconds": 0.5666666666666667
+    },
+    "rest": {
+      "last_frame": 72,
+      "seconds": 2.3666666666666667
+    },
+    "fusion": {
+      "last_frame": 60,
+      "seconds": 1.9666666666666666
+    }
+  },
+  "atlas_parameters": {
+    "size": 1024,
+    "tile_grid": [
+      4,
+      4
+    ],
+    "noise_seed": 73161,
+    "palette": [
+      [
+        0.024,
+        0.31,
+        0.53
+      ],
+      [
+        0.028,
+        0.505,
+        0.735
+      ],
+      [
+        0.07,
+        0.655,
+        0.845
+      ],
+      [
+        0.35,
+        0.835,
+        0.95
+      ],
+      [
+        0.205,
+        0.375,
+        0.215
+      ],
+      [
+        0.39,
+        0.57,
+        0.325
+      ],
+      [
+        0.77,
+        0.704,
+        0.315
+      ],
+      [
+        0.44,
+        0.59,
+        0.35
+      ],
+      [
+        0.026,
+        0.117,
+        0.079
+      ],
+      [
+        0.923,
+        0.97,
+        0.911
+      ],
+      [
+        0.075,
+        0.24,
+        0.195
+      ],
+      [
+        0.017,
+        0.033,
+        0.026
+      ],
+      [
+        0.67,
+        0.785,
+        0.555
+      ],
+      [
+        0.265,
+        0.438,
+        0.305
+      ],
+      [
+        0.885,
+        0.98,
+        0.95
+      ],
+      [
+        0.046,
+        0.268,
+        0.367
+      ]
+    ],
+    "iris_colour": [
+      0.072,
+      0.237,
+      0.188
+    ],
+    "iris_uv_center": [
+      0.5,
+      0.49
+    ],
+    "iris_uv_radii": [
+      0.415,
+      0.411
+    ],
+    "pupil_uv_radii": [
+      0.302,
+      0.314
+    ],
+    "raster_inputs": [],
+    "provenance": "Local numeric pigment/grain generator; eye UV equations reused from self-authored stone_turtle_atlas.py."
+  },
+  "fbx_sha256": "289c45dc67169f9186f0dd615bed28d06d8e8deca0eb59f76126223481e530ea",
+  "source_blend_sha256": "51587172e019a03ba8e7ec383e6a1bb8dd2135f958b6654334dacad408083d2f",
+  "atlas_sha256": {
+    "crystal-colour.png": "606b937345bb23baf4dc217039e7e954f45b71e93751b61a9b808d38167c9359",
+    "crystal-roughness.png": "dce9d1aa7ace79cf809d0f3f084f4691fe83ab6682b88afe1695f4e44134a25e"
+  },
+  "threads": 2,
+  "render_size": [
+    800,
+    680
+  ],
+  "samples": 32,
+  "forward_blender": "-Y",
+  "up_blender": "+Z",
+  "fbx_export_forward": "-Z",
+  "fbx_export_up": "+Y",
+  "cocos_expected_forward": "+Z",
+  "battle_scale": 0.65,
+  "ground_y_cocos": 0,
+  "notes": [
+    "Opaque mobile crystal impression from real bevels, pigmented facets and roughness; no transmission or transparent sort dependency.",
+    "Source rig name changes but all ten deform bone names are retained.",
+    "No runtime or view files written."
+  ]
+}

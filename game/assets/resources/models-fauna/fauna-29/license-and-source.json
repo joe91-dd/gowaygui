@@ -1,0 +1,43 @@
+{
+  "key": "fauna-29",
+  "name": "幽潮游魂",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Ghost",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\ghost-716f8a\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/5cb86101acffa30cba519208ced259216841e47f4bba6597ea047f32fede0ba0_Ghost.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "9375b68763342f487f4a48367ed80aba3b9989077d79ebf9a9fb2d82757a8bf9",
+  "bytes": 683016,
+  "animations": 8,
+  "displayName": "幽潮游魂",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 21008,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-29",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.2
+}

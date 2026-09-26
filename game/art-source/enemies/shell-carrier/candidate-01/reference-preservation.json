@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "files": {
+    "game/art-source/enemies/build_armored_crab.py": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24"
+  },
+  "writes_to_other_assets": false
+}

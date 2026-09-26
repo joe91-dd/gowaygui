@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "files": {
+    "ink-snail.blend": {
+      "sha256": "c41eefd9eabca08b0dcce70ddb0d7e945f839701884abd15f3aa87a794d5c75c",
+      "packed_images": [
+        "InkSnail_Colour_512",
+        "InkSnail_Roughness_512"
+      ],
+      "skinned_meshes": 15,
+      "editable_parts": 15,
+      "shell_thickness_x": 0.5099999904632568,
+      "geometric_spirals": 2,
+      "recessed_spout": true,
+      "eye_vertices": {
+        "Spherical_painted_eye_L": 422,
+        "Spherical_painted_eye_R": 422
+      }
+    },
+    "ink-snail-review-scene.blend": {
+      "sha256": "e83bb4c671277400f24c44fc9d5fdf0562d03d27e5566f4a4fed8fb9c3656717",
+      "packed_images": [
+        "InkSnail_Colour_512",
+        "InkSnail_Roughness_512"
+      ],
+      "skinned_meshes": 1
+    }
+  }
+}

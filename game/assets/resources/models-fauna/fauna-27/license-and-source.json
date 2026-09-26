@@ -1,0 +1,40 @@
+{
+  "key": "fauna-27",
+  "name": "深海触腕",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Tentacle",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\tentacle-4f3194\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Animal/Tentacle/c501093aa0d4db8c5f74ed83a10d93c908a0e5d3fcb5783109558ec3b74d20f4_Tentacle.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "8f5196055d2295ccd6f6f01183dd1d213a674632fb2bdb966c42fb23a77d3103",
+  "bytes": 415644,
+  "animations": 4,
+  "displayName": "深海触腕",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 23244,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-27",
+  "triangles": 13998,
+  "drawMaterials": 1,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "exit"
+  ],
+  "seconds": 4.7
+}

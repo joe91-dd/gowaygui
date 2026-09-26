@@ -1,0 +1,43 @@
+{
+  "key": "fauna-21",
+  "name": "深渊吐息者",
+  "kind": "snail",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Glub Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\glub-evolved-611029\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/e1dc87abd11873bf496baa25e33904853fa236e011aed1530f1d156493319b9a_Glub Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "c14e1fd87177aca40e5df013113c076dcbbb8a18409e16d3aa45ef2955cfec7c",
+  "bytes": 337856,
+  "animations": 8,
+  "displayName": "深渊吐息者",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 32288,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-21",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.3
+}

@@ -1,0 +1,20 @@
+﻿{
+    "timestamp":  "2026-09-10T04:31:17.3184089+08:00",
+    "buildStartedUtc":  "2026-09-09T20:26:59.6293620Z",
+    "status":  "passed",
+    "creator":  "C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe",
+    "project":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game",
+    "exitCode":  36,
+    "indexExists":  true,
+    "criticalErrors":  [
+
+                       ],
+    "log":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260910-042659.creator.log",
+    "stdout":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260910-042659.stdout.log",
+    "stderr":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260910-042659.stderr.log",
+    "builtCorePassed":  true,
+    "bundleWrittenUtc":  "2026-09-09T20:30:36.1058526Z",
+    "bundleSha256":  "6edc8a841c810b3b72505ae9e8aa6eae4b7413121acbe5b188ff2a5c656fce08",
+    "builtCoreReport":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260910-042659.built-core.json",
+    "builtCoreExitCode":  0
+}

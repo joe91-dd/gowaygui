@@ -1,0 +1,43 @@
+{
+  "key": "fauna-30",
+  "name": "深海龙王",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Dragon Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\dragon-evolved-b2f68a\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/bce94ce6169957acf211bd02b94e11134cc4d21e5a788daecddb9a8cb647c66e_Dragon Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "0c61683e5f9bc4ba7f13d2742e5f88e84d57b2aea05f3007452f7224eea24aba",
+  "bytes": 1040124,
+  "animations": 8,
+  "displayName": "深海龙王",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 46496,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-30",
+  "triangles": 14166,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.5
+}

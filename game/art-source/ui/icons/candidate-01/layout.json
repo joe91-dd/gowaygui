@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate_pending_root_visual_review",
+  "image": "icons-atlas-padded-transparent.png",
+  "imageWidth": 1774,
+  "imageHeight": 887,
+  "coordinateOrigin": "top-left in source PNG pixels",
+  "logicalGrid": {
+    "columns": 4,
+    "rows": 2,
+    "nominalCellWidth": 443.5,
+    "nominalCellHeight": 443.5
+  },
+  "spriteFrameSize": {
+    "width": 320,
+    "height": 320
+  },
+  "note": "Use the eight equal 320x320 spriteRect values for centered Cocos SpriteFrames; do not assume source-grid dimensions are integers or equal. Original PNG is not cropped or rescaled. Faint alpha fringe remains; runtime and 48px legibility need visual review.",
+  "cells": [
+    {
+      "id": "gold",
+      "label": "金币",
+      "meaning": "唯一货币；金币与龟壳图案",
+      "column": 0,
+      "row": 0,
+      "sourceGridRect": {
+        "x": 0,
+        "y": 0,
+        "width": 444,
+        "height": 444
+      },
+      "spriteRect": {
+        "x": 107,
+        "y": 92,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 167,
+        "y": 151,
+        "width": 200,
+        "height": 201
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 60,
+        "top": 59,
+        "right": 60,
+        "bottom": 60
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "stamina",
+      "label": "体力",
+      "meaning": "青色闪电；资源而非货币",
+      "column": 1,
+      "row": 0,
+      "sourceGridRect": {
+        "x": 444,
+        "y": 0,
+        "width": 443,
+        "height": 444
+      },
+      "spriteRect": {
+        "x": 506,
+        "y": 92,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 596,
+        "y": 152,
+        "width": 140,
+        "height": 201
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 90,
+        "top": 60,
+        "right": 90,
+        "bottom": 59
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "attack-medicine",
+      "label": "攻击药",
+      "meaning": "橙色药瓶与剑",
+      "column": 2,
+      "row": 0,
+      "sourceGridRect": {
+        "x": 887,
+        "y": 0,
+        "width": 443,
+        "height": 444
+      },
+      "spriteRect": {
+        "x": 914,
+        "y": 92,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 999,
+        "y": 149,
+        "width": 151,
+        "height": 206
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 85,
+        "top": 57,
+        "right": 84,
+        "bottom": 57
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "health-medicine",
+      "label": "生命药",
+      "meaning": "珊瑚色药瓶与心",
+      "column": 3,
+      "row": 0,
+      "sourceGridRect": {
+        "x": 1330,
+        "y": 0,
+        "width": 444,
+        "height": 444
+      },
+      "spriteRect": {
+        "x": 1334,
+        "y": 92,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 1419,
+        "y": 149,
+        "width": 149,
+        "height": 206
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 85,
+        "top": 57,
+        "right": 86,
+        "bottom": 57
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "defense-medicine",
+      "label": "防御药",
+      "meaning": "蓝色药瓶与盾",
+      "column": 0,
+      "row": 1,
+      "sourceGridRect": {
+        "x": 0,
+        "y": 444,
+        "width": 444,
+        "height": 443
+      },
+      "spriteRect": {
+        "x": 94,
+        "y": 446,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 179,
+        "y": 503,
+        "width": 150,
+        "height": 205
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 85,
+        "top": 57,
+        "right": 85,
+        "bottom": 58
+      },
+      "outer8PixelMaxAlpha": 0
+    },
+    {
+      "id": "growth-medicine",
+      "label": "成长药",
+      "meaning": "绿色药瓶与嫩芽",
+      "column": 1,
+      "row": 1,
+      "sourceGridRect": {
+        "x": 444,
+        "y": 444,
+        "width": 443,
+        "height": 443
+      },
+      "spriteRect": {
+        "x": 502,
+        "y": 446,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 589,
+        "y": 504,
+        "width": 147,
+        "height": 203
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 87,
+        "top": 58,
+        "right": 86,
+        "bottom": 59
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "collection-lock",
+      "label": "收藏锁定",
+      "meaning": "闭合青色挂锁",
+      "column": 2,
+      "row": 1,
+      "sourceGridRect": {
+        "x": 887,
+        "y": 444,
+        "width": 443,
+        "height": 443
+      },
+      "spriteRect": {
+        "x": 915,
+        "y": 442,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 1003,
+        "y": 505,
+        "width": 144,
+        "height": 193
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 88,
+        "top": 63,
+        "right": 88,
+        "bottom": 64
+      },
+      "outer8PixelMaxAlpha": 1
+    },
+    {
+      "id": "growth-history",
+      "label": "成长历史",
+      "meaning": "青色历史册与回转箭头",
+      "column": 3,
+      "row": 1,
+      "sourceGridRect": {
+        "x": 1330,
+        "y": 444,
+        "width": 444,
+        "height": 443
+      },
+      "spriteRect": {
+        "x": 1328,
+        "y": 450,
+        "width": 320,
+        "height": 320
+      },
+      "originalSize": {
+        "width": 320,
+        "height": 320
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false,
+      "alpha16SubjectBounds": {
+        "x": 1392,
+        "y": 522,
+        "width": 193,
+        "height": 175
+      },
+      "alpha16PaddingInSpriteRect": {
+        "left": 64,
+        "top": 72,
+        "right": 63,
+        "bottom": 73
+      },
+      "outer8PixelMaxAlpha": 1
+    }
+  ]
+}

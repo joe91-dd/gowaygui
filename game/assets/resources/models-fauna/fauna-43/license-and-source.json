@@ -1,0 +1,43 @@
+{
+  "key": "fauna-43",
+  "name": "暴齿龙兽",
+  "kind": "armored",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Dino",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\dino-5f2b12\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/42cdfc83c6be2793dca946e451e3fa32456c67f0a9fd66239ad24e540c3995ba_Dino.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "024efee0fd907b8a4311cfbc7f6bbb7fcb48e0ff9ac2d5f76bc7a68c262828f3",
+  "bytes": 1340444,
+  "animations": 14,
+  "displayName": "暴齿龙兽",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 42544,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-43",
+  "triangles": 14166,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.8
+}

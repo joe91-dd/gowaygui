@@ -1,0 +1,22 @@
+{
+  "asset": "game/assets/resources/art-v2/skill-icons.png",
+  "generator": "built-in image_gen",
+  "sha256": "f1d8cd67e7d9c141c329e973da5991c9b97200cc290f41f51c2fc6e275feeeec3",
+  "references": ["C:/Users/Administrator/Desktop/龟/03_UI按钮面板组件规范.png.png", "C:/Users/Administrator/Desktop/龟/05_战斗场景与技能特效.png.png"],
+  "referenceRole": "User-approved active skill row visual style, inspected before generation. No reference label or value treated as game data.",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a086f7-e260-77a3-94db-453b9de0c3cc/exec-e0832f83-8c67-42d8-bf65-ac42cc9c0ca3.png",
+  "requestedDimensions": [1920,640],
+  "actualDimensions": [2172,724],
+  "mode": "RGBA",
+  "alphaRange": [0,255],
+  "fullyTransparentPixelCount": 838158,
+  "coordinateConvention": "Top-left image origin; rectangles [x,y,width,height]. Use native square rects directly without stretching the atlas.",
+  "notes": ["Five evenly spaced icons in one horizontal row, same navy tile and silver bevel.", "Healing icon uses a golden lantern, with no red cross.", "Tool returned 2172x724 rather than 1920x640. Native pixels were copied unchanged.", "Measured square 400x400 frames include transparent padding; no PNG cropping or resampling performed."],
+  "frames": {
+    "leafArrows": {"rect": [47,149,400,400], "visibleAlpha8Bounds": [57,156,379,386], "role": "archer", "speciesId": "spike"},
+    "rockShield": {"rect": [467,149,400,400], "visibleAlpha8Bounds": [479,156,379,386], "role": "tank", "speciesId": "stone"},
+    "waterVortex": {"rect": [887,149,400,400], "visibleAlpha8Bounds": [899,156,378,386], "role": "mage", "speciesId": "crystal"},
+    "healingLantern": {"rect": [1307,149,400,400], "visibleAlpha8Bounds": [1319,156,377,386], "role": "healer", "speciesId": "leaf"},
+    "anchorWave": {"rect": [1727,149,400,400], "visibleAlpha8Bounds": [1739,156,379,386], "role": "control", "speciesId": "bubble"}
+  }
+}

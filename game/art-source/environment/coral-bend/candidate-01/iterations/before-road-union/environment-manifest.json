@@ -1,0 +1,162 @@
+{
+  "version": "coral-bend-candidate-01",
+  "levelId": 2,
+  "levelName": "珊瑚转角",
+  "dataSource": "assets/scripts/core/data.ts",
+  "dataSourceSha256": "b9d6e111d3a3787eb8a2237447eff988a46e2ce417e63951b1b5be16d897d8b5",
+  "coordinateConvention": "Cocos world x/y-up/z; Blender source x/-z/y",
+  "route": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": -2.0,
+      "z": 2.0
+    },
+    {
+      "x": 2.0,
+      "z": 2.0
+    },
+    {
+      "x": 3.0,
+      "z": -2.0
+    },
+    {
+      "x": 6.0,
+      "z": -2.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "routeSurfaceY": 0.064,
+  "waterY": -1.06,
+  "sourceSlots": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "z": -1.0
+    }
+  ],
+  "slotLayoutSource": "proposal.json candidateSlots; intentional offline layout proposal, core data not modified",
+  "layoutProposalStatus": "offline-layout-proposal-not-approved-for-runtime",
+  "slots": [
+    {
+      "x": -5,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": 3.395,
+      "y": 0.292,
+      "z": 1.099
+    },
+    {
+      "x": 1,
+      "y": 0.292,
+      "z": -3
+    },
+    {
+      "x": 5.832,
+      "y": 0.292,
+      "z": -0.748
+    }
+  ],
+  "gameplayBase": {
+    "x": 9.0,
+    "y": 0.064,
+    "z": 0.0
+  },
+  "pearl": {
+    "x": 9.0,
+    "y": 1.1,
+    "z": 0.0
+  },
+  "boundsXZ": [
+    -11.60808277130127,
+    11.718100547790527,
+    -5.550738334655762,
+    5.208436965942383
+  ],
+  "nominalFootprintXZ": [
+    22,
+    12
+  ],
+  "cameraSuggestion": {
+    "position": {
+      "x": 0,
+      "y": 15,
+      "z": 18
+    },
+    "target": {
+      "x": 0,
+      "y": 0.2,
+      "z": 0
+    },
+    "baseVerticalFovDegrees": 42,
+    "responsiveRule": "same as GameEntry.resizeViewport: preserve 1280/720 horizontal framing"
+  },
+  "sourceObjects": 1520,
+  "authorship": "Original procedural geometry, UV, colours, and composition; no downloaded game or stock assets.",
+  "sourceModule": "Project original tidal-island v04 and tutorial candidate geometry/material builders, adapted to level 2 with newly generated route-dependent terrain, road, and sculpted inlet coast",
+  "status": "First coral-bend environment candidate; runtime integration and visual acceptance pending.",
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 4798,
+      "triangles": 8468
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 35224,
+      "triangles": 56344
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 888,
+      "triangles": 1664
+    }
+  ],
+  "totalTriangles": 66476,
+  "opaqueDrawCalls": 3,
+  "materials": 2,
+  "fbxSha256": "383f0d64b7ab645dead003f563bf110619362e933283925f540070ae4eac0acf",
+  "geometryBoundsCocos": {
+    "min": [
+      -12.428242683410645,
+      -1.869998574256897,
+      -6.119803428649902
+    ],
+    "max": [
+      12.484183311462402,
+      2.4985744953155518,
+      5.856790065765381
+    ]
+  }
+}

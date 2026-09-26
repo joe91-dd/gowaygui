@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>石龟 candidate-11 独立审查</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#ede6d7;color:#243e38;font:16px/1.65 system-ui,sans-serif}main{max-width:1500px;margin:auto;padding:32px}h1{margin:0;font-size:32px}h2{margin:36px 0 12px}p{max-width:980px}table{border-collapse:collapse;background:#fffaf0;width:100%;max-width:920px}th,td{text-align:left;padding:8px 14px;border-bottom:1px solid #d6d1c3}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}.animations{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}figure{margin:0;background:#fffaf0;border-radius:12px;overflow:hidden}img{width:100%;display:block}figcaption{padding:10px 14px;font-weight:600}a{color:#2a6353}.status{padding:14px 20px;background:#fff4d3;border-left:4px solid #d4aa4d}.links{display:flex;gap:20px;flex-wrap:wrap}@media(max-width:700px){main{padding:18px}.pair{grid-template-columns:1fr}.animations{grid-template-columns:1fr 1fr}h1{font-size:26px}}
+</style>
+<main>
+<h1>石龟 candidate-11 · 造型对照</h1>
+<p class="status">这是独立候选，尚未替换 v10 运行资源。图像来自真实 Blender 渲染，正面对照和其他视角使用相同灯光、摄影机、地面与色彩管理。A4 是美术参考，并非精确正交蓝图。</p>
+<table><tr><th>静止几何测量</th><th>v10</th><th>candidate-11</th></tr><tr><td>头宽 / 主壳宽</td><td>0.3252</td><td>0.5994</td></tr><tr><td>头宽 / 含脚总宽</td><td>0.2961</td><td>0.5383</td></tr><tr><td>头宽 × 深 × 高</td><td>0.6655 × 0.7208 × 0.5574</td><td>1.2097 × 0.6007 × 0.7750</td></tr><tr><td>主壳片 / 下摆片</td><td>32 / 18</td><td>48 / 18</td></tr><tr><td>运行三角 / 材质 / 骨骼</td><td>22,436 / 1 / 10</td><td>22,986 / 1 / 10</td></tr></table>
+<h2>正面</h2><div class="pair"><figure><a href="v10-control-front.png"><img src="v10-control-front.png" alt="v10同灯光正面"></a><figcaption>v10 · 同灯光控制组</figcaption></figure><figure><a href="render-front.png"><img src="render-front.png" alt="候选11正面"></a><figcaption>candidate-11 · 宽头、较高面盘、球面 UV 眼睛</figcaption></figure></div>
+<h2>三分之四</h2><div class="pair"><figure><a href="v10-control-three-quarter.png"><img src="v10-control-three-quarter.png" alt="v10三分之四"></a><figcaption>v10</figcaption></figure><figure><a href="render-three-quarter.png"><img src="render-three-quarter.png" alt="候选11三分之四"></a><figcaption>candidate-11</figcaption></figure></div>
+<h2>战斗俯视角</h2><div class="pair"><figure><a href="v10-control-battle.png"><img src="v10-control-battle.png" alt="v10战斗视角"></a><figcaption>v10</figcaption></figure><figure><a href="render-battle.png"><img src="render-battle.png" alt="候选11战斗视角"></a><figcaption>candidate-11</figcaption></figure></div>
+<h2>攻击与受击关键帧</h2><p>以下为诊断分辨率，点击打开原图。数值检查只覆盖声明的前脸区域与采样时刻，不能代替查看实际运动，也不是最终 Cocos 验收。</p>
+<div class="animations">
+<figure><a href="animation-attack-07-three-quarter.png"><img src="animation-attack-07-three-quarter.png" alt="攻击第7帧"></a><figcaption>攻击 · 第7帧</figcaption></figure>
+<figure><a href="animation-attack-11-three-quarter.png"><img src="animation-attack-11-three-quarter.png" alt="攻击第11帧"></a><figcaption>攻击 · 第11帧</figcaption></figure>
+<figure><a href="animation-attack-17-three-quarter.png"><img src="animation-attack-17-three-quarter.png" alt="攻击第17帧"></a><figcaption>攻击 · 第17帧</figcaption></figure>
+<figure><a href="animation-hit-04-three-quarter.png"><img src="animation-hit-04-three-quarter.png" alt="受击第4帧"></a><figcaption>受击 · 第4帧</figcaption></figure>
+<figure><a href="animation-hit-10-three-quarter.png"><img src="animation-hit-10-three-quarter.png" alt="受击第10帧"></a><figcaption>受击 · 第10帧</figcaption></figure>
+<figure><a href="animation-attack-07-side.png"><img src="animation-attack-07-side.png" alt="攻击第7帧侧面"></a><figcaption>攻击 · 第7帧侧面</figcaption></figure>
+<figure><a href="animation-hit-04-side.png"><img src="animation-hit-04-side.png" alt="受击第4帧侧面"></a><figcaption>受击 · 第4帧侧面</figcaption></figure>
+</div>
+<h2>审查边界</h2><p>头壳比例与深色眼区已明显改变；三分之四视角的鼻吻体积仍较 A 简化，应由根代理继续判断风格接近程度。没有通过提高整场亮度掩盖造型差异。眼睛使用单一椭球网格与原 UV 纹理，六动作和原骨骼约定保留。</p>
+<p class="links"><a href="README.md">说明与重建方式</a><a href="measured-comparison.json">几何测量</a><a href="matched-lighting.json">相同灯光参数</a><a href="animation-clearance.json">动画间隙检查</a><a href="round-trip-check.json">FBX重导入检查</a><a href="review-complete.json">技术检查状态</a></p>
+</main></html>

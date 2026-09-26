@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "files": {
+    "game/art-source/enemies/shell-carrier/candidate-01/asset-manifest.json": "028168233c02d4587ef127824e1f6a91756b0ce2b05e12103b718caf3d7c8873",
+    "game/art-source/enemies/shell-carrier/candidate-01/build-initial-budget.log": "55d4653fd67a1c9fd1fbaaa7d57b3c6aed40768b58b9753ace20c617b3216676",
+    "game/art-source/enemies/shell-carrier/candidate-01/build.log": "3e38c7b95383633543a602b5ab5914a9c010f590419dfb0e2ad76b3275eca3d1",
+    "game/art-source/enemies/shell-carrier/candidate-01/model-stats.json": "825f8b86e45e23f0e01a3763b24268337711dfa957e896b33383dfabe98d4d9d",
+    "game/art-source/enemies/shell-carrier/candidate-01/package_candidate.py": "5f398bb79d4500a581f6cdefac350fbd20ecebe642839c7c6669ade44a6dd526",
+    "game/art-source/enemies/shell-carrier/candidate-01/README.md": "4f475d3aa6d97dd20c46362448fdfccc31ae5ba4a79779dda69bed11b92a0f7d",
+    "game/art-source/enemies/shell-carrier/candidate-01/reference-preservation.json": "9b89c9c664576bde25cd64c8699eb17fb0d6e0f00146b408fc993200b8f66d3f",
+    "game/art-source/enemies/shell-carrier/candidate-01/render-battle-angle.png": "9b4ce22ca3a7a64d04d195105cd08cbd892d0b7ffa248f96e8a6c047e7183068",
+    "game/art-source/enemies/shell-carrier/candidate-01/render-three-quarter.png": "cb64a22f4ac4b7cc488efcc9044c8aff6454885c61ef1fa8054b0ccf42c335bf",
+    "game/art-source/enemies/shell-carrier/candidate-01/review.html": "40047a7c71ba30f8608fd4fe7f60d3662b6a87c79513009db1ee307d7a2a1209",
+    "game/art-source/enemies/shell-carrier/candidate-01/REVIEW.md": "c52816ec1132fb395289fed11f9b4b06b85bd7b884f7fb86b69acd0ff42305b2",
+    "game/art-source/enemies/shell-carrier/candidate-01/round-trip-check.json": "5b8ef31795e1841df5ae2fa82d03004a5a48fba3b638505bb6fa628c77b1c168",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier-review-scene.blend": "33bbd25f209d41663cbbfae9f115e638ae277009b4ad66286cb24f97b27b3f99",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier.blend": "ac5703ed0fad4626566ed307522ab580d8d7dbabbb0cb9815fbf8829a0b413d3",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier.glb": "035164085da717478076ddad51999d456ba3158b4bece2842d29e52d312484fd",
+    "game/art-source/enemies/shell-carrier/candidate-01/source-check.json": "2539f83b93318c5f444dc7824e3be5f6ecc8401a4fa634e66359e9c0a483a971",
+    "game/art-source/enemies/shell-carrier/candidate-01/verification.log": "2d18082761f3a91bbeb6838d4031ff17ab304749ffbcfc08288732824807ce27",
+    "game/art-source/enemies/shell-carrier/candidate-01/verify_candidate.py": "b261e6cc4e6cd8c987ba73bf0ab237c072f918f7d1ecee1419c232218e3df6ea",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/shell-carrier.fbx": "f8bb7798a3b0ae5d9adb8255afe89dd316411722c138ef9c3bae75d7361cd8be",
+    "game/art-source/enemies/build_shell_carrier.py": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f"
+  },
+  "writes_to_other_assets": false
+}

@@ -1,0 +1,1039 @@
+{
+  "date": "2026-09-16",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "effectsAuthor": "Kenney",
+  "effectsPages": [
+    "https://kenney.nl/assets/rpg-audio",
+    "https://kenney.nl/assets/interface-sounds",
+    "https://kenney.nl/assets/impact-sounds",
+    "https://kenney.nl/assets/music-jingles"
+  ],
+  "processing": "44100Hz stereo; music -20 LUFS with peak ceiling; SFX peak -12dBFS, trimmed quiet edges, 5ms fades; layer offsets/rates/gains recorded below. Originals preserved.",
+  "assets": [
+    {
+      "key": "bgm_home",
+      "runtime": "game/assets/resources/audio/bgm_home.ogg",
+      "license": "CC0-1.0",
+      "sha256": "98affc19ea94086556c810010113cce578ee7ca28a0f488a84070c296a24f29c",
+      "bytes": 1361457,
+      "duration": 97.45401360544217,
+      "peakDb": -7.06956939833983,
+      "sources": [
+        {
+          "file": "music-a/a-home.mp3",
+          "title": "Town Theme RPG",
+          "author": "cynicmusic",
+          "page": "https://opengameart.org/content/town-theme-rpg",
+          "licensePage": "music-a/town-theme-rpg.source.html",
+          "sha256": "2657861d5107d4a3c01ef81cb6a4d61ddd5e7a054b6da57e658373d79d0c3466"
+        }
+      ],
+      "integratedLUFS": -19.98661564575181
+    },
+    {
+      "key": "bgm_battle",
+      "runtime": "game/assets/resources/audio/bgm_battle.ogg",
+      "license": "CC0-1.0",
+      "sha256": "571ef33a90696365b12065b426b0892207c1bc100238247ca7412cf469bbcb19",
+      "bytes": 1491098,
+      "duration": 95.85183673469388,
+      "peakDb": -10.214489072010753,
+      "sources": [
+        {
+          "file": "music-a/a-battle.mp3",
+          "title": "Battle Theme A",
+          "author": "cynicmusic",
+          "page": "https://opengameart.org/content/battle-theme-a",
+          "licensePage": "music-a/battle-theme-a.source.html",
+          "sha256": "6042399782e581d753d616bc703e66483d5eccb5fb687a20c9a552d68c49e620"
+        }
+      ],
+      "integratedLUFS": -20.067012371426827
+    },
+    {
+      "key": "bgm_boss",
+      "runtime": "game/assets/resources/audio/bgm_boss.ogg",
+      "license": "CC0-1.0",
+      "sha256": "3bf86f056ef083551c1f5b418000100c789185bb6620fab51e09eddc8acc599a",
+      "bytes": 1919231,
+      "duration": 123.42859410430839,
+      "peakDb": -10.987629545111513,
+      "sources": [
+        {
+          "file": "music-a/a-boss.wav",
+          "title": "Epic Boss Battle",
+          "author": "Juhani Junkala / SubspaceAudio",
+          "page": "https://opengameart.org/content/boss-battle-music",
+          "licensePage": "music-a/boss-battle-music.source.html",
+          "sha256": "35f75b4381dfbb053992876f7dfc567d9fd959d61b73954d5b1cd519753e7df1"
+        }
+      ],
+      "integratedLUFS": -20.095459306686937
+    },
+    {
+      "key": "sfx_panel_slide",
+      "runtime": "game/assets/resources/audio/sfx_panel_slide.wav",
+      "license": "CC0-1.0",
+      "sha256": "da2ef1727cffe7391d135cb20c66a95e62248225d7eb26c302ebdfacf6607b50",
+      "bytes": 110296,
+      "duration": 0.6250113378684807,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/switch_003.ogg",
+          "sha256": "ca12dd32103f401481d5aff56d5e9831174e99bb577139c09b07d046eb8b837e",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.8
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0.05,
+          "gain": 0.35,
+          "rate": 1.2
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_draw_tick",
+      "runtime": "game/assets/resources/audio/sfx_draw_tick.wav",
+      "license": "CC0-1.0",
+      "sha256": "90649ae142e641dc50739655513624de6412fa2f7b7879099a24c4f9a3eb61d7",
+      "bytes": 13324,
+      "duration": 0.07528344671201814,
+      "peakDb": -7.0005506829029605,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/click_003.ogg",
+          "sha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "offset": 0,
+          "gain": 0.65,
+          "rate": 1.55
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0.015,
+          "gain": 0.35,
+          "rate": 1.7
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_wish_start",
+      "runtime": "game/assets/resources/audio/sfx_wish_start.wav",
+      "license": "CC0-1.0",
+      "sha256": "2434af64bc9d3a56e88212e18b5f6d6fc5a179a217adc328395b30c0067b9bb4",
+      "bytes": 188068,
+      "duration": 1.0658956916099773,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/maximize_004.ogg",
+          "sha256": "59c7a24b204be24d2a44a86d1e4d18c2cf51fa0446967a14b2590e8fb3afaf34",
+          "offset": 0,
+          "gain": 0.8,
+          "rate": 0.65
+        },
+        {
+          "file": "interface-sounds/Audio/glass_004.ogg",
+          "sha256": "2379b58f953e3d86982aa8cddcae763022c6258e9820171bf905ce58b4e97766",
+          "offset": 0.22,
+          "gain": 0.6,
+          "rate": 0.8
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_wish_gather",
+      "runtime": "game/assets/resources/audio/sfx_wish_gather.wav",
+      "license": "CC0-1.0",
+      "sha256": "1fea9ca18418a5cd9215811ea81b7a950c329cb83e23fb666cbce467a61f53b2",
+      "bytes": 82820,
+      "duration": 0.4692517006802721,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/glass_002.ogg",
+          "sha256": "08e972c73e53c91d6d310e107e80db60edce78ae47225889a028e628a6f3da49",
+          "offset": 0,
+          "gain": 0.6,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/glass_002.ogg",
+          "sha256": "08e972c73e53c91d6d310e107e80db60edce78ae47225889a028e628a6f3da49",
+          "offset": 0.15,
+          "gain": 0.7,
+          "rate": 1.25
+        },
+        {
+          "file": "interface-sounds/Audio/glass_002.ogg",
+          "sha256": "08e972c73e53c91d6d310e107e80db60edce78ae47225889a028e628a6f3da49",
+          "offset": 0.3,
+          "gain": 0.8,
+          "rate": 1.5
+        },
+        {
+          "file": "interface-sounds/Audio/maximize_003.ogg",
+          "sha256": "df16f25d45189f5d44d6a482ab20d5067350ca8525a9affa1f8ce599e31a20a5",
+          "offset": 0.22,
+          "gain": 0.7,
+          "rate": 0.85
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_wish_burst",
+      "runtime": "game/assets/resources/audio/sfx_wish_burst.wav",
+      "license": "CC0-1.0",
+      "sha256": "6ebc324f06e79908044dd5bb7054543ebc50f156fb00412fd64f4f34219c68a7",
+      "bytes": 137168,
+      "duration": 0.7773469387755102,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL00.ogg",
+          "sha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.2
+        },
+        {
+          "file": "interface-sounds/Audio/glass_003.ogg",
+          "sha256": "9a6f16e3c2eff6fe5d017a4755a28306b14555728831cd00d70308e8f9689566",
+          "offset": 0.05,
+          "gain": 0.6,
+          "rate": 0.7
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_boss_skill",
+      "runtime": "game/assets/resources/audio/sfx_boss_skill.wav",
+      "license": "CC0-1.0",
+      "sha256": "dc377d5f27333b3dfd6b1a51f7979d3899c9c6d27add63cf62719f2459a218ed",
+      "bytes": 319576,
+      "duration": 1.81140589569161,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactMining_000.ogg",
+          "sha256": "36b4ea107222d073c67ca64dde26944975609202d5090b2f2021213c1a7e35cd",
+          "offset": 0,
+          "gain": 0.8,
+          "rate": 0.6
+        },
+        {
+          "file": "impact-sounds/Audio/impactBell_heavy_000.ogg",
+          "sha256": "94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f",
+          "offset": 0.07,
+          "gain": 0.6,
+          "rate": 0.85
+        },
+        {
+          "file": "impact-sounds/Audio/impactPunch_heavy_000.ogg",
+          "sha256": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8",
+          "offset": 0.12,
+          "gain": 1,
+          "rate": 0.7
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_ui_confirm",
+      "runtime": "game/assets/resources/audio/sfx_ui_confirm.wav",
+      "license": "CC0-1.0",
+      "sha256": "a961967841742cf1c8372788c65500609e3983ea5c5471f740fecafea5f2e991",
+      "bytes": 14740,
+      "duration": 0.08331065759637188,
+      "peakDb": -7.0005506829029605,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/click_003.ogg",
+          "sha256": "2fa929138bc3a0f432696588f66eac94b8f6d463905ec8808c6461ce4b054292",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0.015,
+          "gain": 0.3,
+          "rate": 1.5
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_ui_back",
+      "runtime": "game/assets/resources/audio/sfx_ui_back.wav",
+      "license": "CC0-1.0",
+      "sha256": "368a5f79dfc8cfe2a4eba85874d483b7e033344c401c6b1c34f3ee8bccdd4020",
+      "bytes": 11312,
+      "duration": 0.06387755102040817,
+      "peakDb": -6.9999572425557846,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/back_001.ogg",
+          "sha256": "07db973f79f6ae0f2edc34561e7592e24d0577455919fb602cb8ecc0da991dcf",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_ui_error",
+      "runtime": "game/assets/resources/audio/sfx_ui_error.wav",
+      "license": "CC0-1.0",
+      "sha256": "89e9fbffa91920d542586f97e58f6fdbbcba4f21652f9415bd337e23038b78b5",
+      "bytes": 18160,
+      "duration": 0.10269841269841269,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/error_004.ogg",
+          "sha256": "0b574cea597d96507e782ae9764f88482ce49f46e931e57054bf7150047f2d69",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_upgrade",
+      "runtime": "game/assets/resources/audio/sfx_upgrade.wav",
+      "license": "CC0-1.0",
+      "sha256": "d59334e0e15453241ba68325055aca51e1de3d59f2c37698e5067122a9e1a026",
+      "bytes": 178012,
+      "duration": 1.008888888888889,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/maximize_003.ogg",
+          "sha256": "df16f25d45189f5d44d6a482ab20d5067350ca8525a9affa1f8ce599e31a20a5",
+          "offset": 0,
+          "gain": 0.6,
+          "rate": 1
+        },
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL04.ogg",
+          "sha256": "65be5fe4af66574f4725602e454b7ea8d2613ab536a4a719fcb3810a240fdecf",
+          "offset": 0.1,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_equip",
+      "runtime": "game/assets/resources/audio/sfx_equip.wav",
+      "license": "CC0-1.0",
+      "sha256": "06d113db988d1360caaa919a40c300c458b4fd1780f542451f01d12dfab843e6",
+      "bytes": 88244,
+      "duration": 0.5,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/switch_003.ogg",
+          "sha256": "ca12dd32103f401481d5aff56d5e9831174e99bb577139c09b07d046eb8b837e",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        },
+        {
+          "file": "rpg-audio/Audio/metalClick.ogg",
+          "sha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3",
+          "offset": 0.035,
+          "gain": 0.3,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_chest",
+      "runtime": "game/assets/resources/audio/sfx_chest.wav",
+      "license": "CC0-1.0",
+      "sha256": "c3c695707f5fd2fe28df601bcc669f0b6c1aa95e57dc85c7dba4b4fe149917c1",
+      "bytes": 219924,
+      "duration": 1.246485260770975,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/maximize_003.ogg",
+          "sha256": "df16f25d45189f5d44d6a482ab20d5067350ca8525a9affa1f8ce599e31a20a5",
+          "offset": 0,
+          "gain": 0.65,
+          "rate": 0.85
+        },
+        {
+          "file": "interface-sounds/Audio/glass_001.ogg",
+          "sha256": "183eebee20eb0a532b0b85104d139cbf2673eb66d95c3cc733ac9ea98362e7e8",
+          "offset": 0.12,
+          "gain": 0.8,
+          "rate": 1.25
+        },
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL03.ogg",
+          "sha256": "21233e95b5e2c167293484c9906264c632a5f1fe45744d1d5b52ba1dfb0a18fb",
+          "offset": 0.18,
+          "gain": 0.6,
+          "rate": 1.3
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_learn_complete",
+      "runtime": "game/assets/resources/audio/sfx_learn_complete.wav",
+      "license": "CC0-1.0",
+      "sha256": "afeba86ed1c0d00f0387d9a5971fdba401eb01c020c8a2967681e7fd16e423db",
+      "bytes": 255340,
+      "duration": 1.4472562358276644,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/glass_001.ogg",
+          "sha256": "183eebee20eb0a532b0b85104d139cbf2673eb66d95c3cc733ac9ea98362e7e8",
+          "offset": 0,
+          "gain": 0.5,
+          "rate": 1
+        },
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL03.ogg",
+          "sha256": "21233e95b5e2c167293484c9906264c632a5f1fe45744d1d5b52ba1dfb0a18fb",
+          "offset": 0.06,
+          "gain": 0.8,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_bubble_pop",
+      "runtime": "game/assets/resources/audio/sfx_bubble_pop.wav",
+      "license": "CC0-1.0",
+      "sha256": "dbe1a2ba5f08c2ed0e7b0fb55da1d376e1a048fa013eca215b9831611dc38622",
+      "bytes": 14500,
+      "duration": 0.08195011337868481,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.25
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_bubble_rub",
+      "runtime": "game/assets/resources/audio/sfx_bubble_rub.wav",
+      "license": "CC0-1.0",
+      "sha256": "24fd7f5a2d6cddea892645ab1fc90307962439c74898bff09531b66f7d1701fc",
+      "bytes": 23744,
+      "duration": 0.13435374149659865,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/scratch_001.ogg",
+          "sha256": "5c294d2e1a6b6d07ee2d75b17105a55ad3527e5482dd60652dc49c2ea4c70096",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_collect",
+      "runtime": "game/assets/resources/audio/sfx_collect.wav",
+      "license": "CC0-1.0",
+      "sha256": "da4fedc01a0408c4243d8fbe4c88588c44c8d38968d5f2c7b83e830d00d8809b",
+      "bytes": 109236,
+      "duration": 0.6190022675736961,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "rpg-audio/Audio/handleCoins2.ogg",
+          "sha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+          "offset": 0,
+          "gain": 0.5,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/confirmation_002.ogg",
+          "sha256": "33b17a9a9a2397c62b285c52c33a907fdffb476909c99e42dde603f6a7a8b12c",
+          "offset": 0.08,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_rare_reveal",
+      "runtime": "game/assets/resources/audio/sfx_rare_reveal.wav",
+      "license": "CC0-1.0",
+      "sha256": "9c2c312efe9ca65ddad2256210a4f3b735f351cda6c4f7f613ab4821ba0920db",
+      "bytes": 164592,
+      "duration": 0.9328117913832199,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL00.ogg",
+          "sha256": "8799eb726d784ae0aa1a9df80648a873ac60015bc00aea12c8e2dd1431a2bd7d",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_victory",
+      "runtime": "game/assets/resources/audio/sfx_victory.wav",
+      "license": "CC0-1.0",
+      "sha256": "79411e855f1e14081395570fb02a9e3d5ca519c80404d2261a7db019d10405eb",
+      "bytes": 242648,
+      "duration": 1.3753061224489795,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL01.ogg",
+          "sha256": "099b192f120f7eb7c24613be277428628b9ec9c81e1f8420254abce336fbe7e5",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_defeat",
+      "runtime": "game/assets/resources/audio/sfx_defeat.wav",
+      "license": "CC0-1.0",
+      "sha256": "ada5bdbe535ceadb3a87677d242dd148fd13f36c15d5d4fb2bc517ed138bb2d2",
+      "bytes": 105372,
+      "duration": 0.5970975056689343,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/minimize_004.ogg",
+          "sha256": "fcfe6fbb03a728e90b907f34d2ec7bf3ea1857397c3e47ee01990c1be059e4f6",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.7
+        },
+        {
+          "file": "interface-sounds/Audio/back_002.ogg",
+          "sha256": "61581c58194e3f19f531072edabbc344204c7e0a2887b8ededce4357bcf09195",
+          "offset": 0.22,
+          "gain": 0.5,
+          "rate": 0.8
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_attack_melee",
+      "runtime": "game/assets/resources/audio/sfx_attack_melee.wav",
+      "license": "CC0-1.0",
+      "sha256": "7c28ebffc76996913667c76b658e7eaac4c42549977198e6e8b65bede8b8e5f8",
+      "bytes": 66900,
+      "duration": 0.37900226757369615,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactPunch_medium_000.ogg",
+          "sha256": "486988aa2d6440ffc4c62a0e8ccf3c23673ba84424bd4723378d451b7255eb5c",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_attack_projectile",
+      "runtime": "game/assets/resources/audio/sfx_attack_projectile.wav",
+      "license": "CC0-1.0",
+      "sha256": "2f6c786a365134ca94c2f14b26eb9a7c6821956eb69d636a35aa9c1b7a0541a1",
+      "bytes": 88180,
+      "duration": 0.4996371882086168,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "rpg-audio/Audio/knifeSlice.ogg",
+          "sha256": "4cd96dc630bed9840c15f1dd2306da2cc56a4da26a5d3f1a03c5a7265ac5e54f",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.2
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_attack_magic",
+      "runtime": "game/assets/resources/audio/sfx_attack_magic.wav",
+      "license": "CC0-1.0",
+      "sha256": "8054f59bb04c13ab9b8a539c1f98c275d2b9ed5db8907149f058839500d472c0",
+      "bytes": 19268,
+      "duration": 0.1089795918367347,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/glass_002.ogg",
+          "sha256": "08e972c73e53c91d6d310e107e80db60edce78ae47225889a028e628a6f3da49",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.15
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_hit_soft",
+      "runtime": "game/assets/resources/audio/sfx_hit_soft.wav",
+      "license": "CC0-1.0",
+      "sha256": "d1b5c3e63c529f3cc11465b0802081cd3e1b15a3e4a04a35514cf4cdad6b34ae",
+      "bytes": 32376,
+      "duration": 0.18328798185941042,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactSoft_medium_001.ogg",
+          "sha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_heal",
+      "runtime": "game/assets/resources/audio/sfx_heal.wav",
+      "license": "CC0-1.0",
+      "sha256": "374705e78922cb32badff7bdeeca2c2c52e0cb97b4d44d41170884c9642e20b3",
+      "bytes": 40908,
+      "duration": 0.23165532879818593,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0.1,
+          "gain": 0.5,
+          "rate": 1.25
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_core_hit",
+      "runtime": "game/assets/resources/audio/sfx_core_hit.wav",
+      "license": "CC0-1.0",
+      "sha256": "3a7c48b44933485c0fe6010bc368c71f84ada3cfa61afc9345e0b75388400495",
+      "bytes": 89144,
+      "duration": 0.5051020408163265,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactMetal_heavy_000.ogg",
+          "sha256": "e07045693e4a2b3d165c424e3dab4c781d9ff8880a386880ac89a51315d7f831",
+          "offset": 0,
+          "gain": 0.7,
+          "rate": 0.8
+        },
+        {
+          "file": "impact-sounds/Audio/impactSoft_heavy_000.ogg",
+          "sha256": "49e7ca88743fca974bb8676ea138b751cfd8f9033b5e7af8736c2a215d6edbc1",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_skill_stone",
+      "runtime": "game/assets/resources/audio/sfx_skill_stone.wav",
+      "license": "CC0-1.0",
+      "sha256": "10652d904bf55b3e800f6d1b96cd12ca14db11b62b349cf36b77845792da0822",
+      "bytes": 206752,
+      "duration": 1.1718140589569161,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactMining_000.ogg",
+          "sha256": "36b4ea107222d073c67ca64dde26944975609202d5090b2f2021213c1a7e35cd",
+          "offset": 0,
+          "gain": 0.7,
+          "rate": 0.8
+        },
+        {
+          "file": "impact-sounds/Audio/impactPunch_heavy_000.ogg",
+          "sha256": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8",
+          "offset": 0.09,
+          "gain": 1,
+          "rate": 0.7
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_skill_spike",
+      "runtime": "game/assets/resources/audio/sfx_skill_spike.wav",
+      "license": "CC0-1.0",
+      "sha256": "5be6181b0b49d00ca7c60f780e3fb4b5c883d33e347c9d5da73633bf6a445d41",
+      "bytes": 96756,
+      "duration": 0.5482539682539682,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "rpg-audio/Audio/knifeSlice2.ogg",
+          "sha256": "6c2064d0ef988d1ec3d56868e823ea8823a5cac00f2742560052633529407def",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.1
+        },
+        {
+          "file": "rpg-audio/Audio/knifeSlice.ogg",
+          "sha256": "4cd96dc630bed9840c15f1dd2306da2cc56a4da26a5d3f1a03c5a7265ac5e54f",
+          "offset": 0.12,
+          "gain": 0.7,
+          "rate": 1.4
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_skill_crystal",
+      "runtime": "game/assets/resources/audio/sfx_skill_crystal.wav",
+      "license": "CC0-1.0",
+      "sha256": "e9f43b451f2a758557c4cdc07d6e564fd1bc2fad48620577b4e4b61929ed62df",
+      "bytes": 152692,
+      "duration": 0.8653514739229025,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/glass_004.ogg",
+          "sha256": "2379b58f953e3d86982aa8cddcae763022c6258e9820171bf905ce58b4e97766",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.8
+        },
+        {
+          "file": "impact-sounds/Audio/impactGlass_light_000.ogg",
+          "sha256": "d750cf88097d0c3e69920e6e14496e1444e1a9da01aa4cca8f5ec8cb44c57b4f",
+          "offset": 0.12,
+          "gain": 0.6,
+          "rate": 1.3
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_skill_leaf",
+      "runtime": "game/assets/resources/audio/sfx_skill_leaf.wav",
+      "license": "CC0-1.0",
+      "sha256": "546ac28343244ca9dab4857e673d0fcc27a1ee49ebfc57d639f87f28b6bc94f5",
+      "bytes": 65260,
+      "duration": 0.36970521541950113,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0.13,
+          "gain": 0.8,
+          "rate": 1.25
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_002.ogg",
+          "sha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+          "offset": 0.26,
+          "gain": 0.7,
+          "rate": 1.5
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_skill_bubble",
+      "runtime": "game/assets/resources/audio/sfx_skill_bubble.wav",
+      "license": "CC0-1.0",
+      "sha256": "f324edd63d52b0184976590ba5f6930a8215516af5ecfe8d161cda7a1b073432",
+      "bytes": 49224,
+      "duration": 0.2787981859410431,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.8
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0.1,
+          "gain": 0.7,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/pluck_001.ogg",
+          "sha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+          "offset": 0.2,
+          "gain": 0.5,
+          "rate": 1.3
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_fusion_start",
+      "runtime": "game/assets/resources/audio/sfx_fusion_start.wav",
+      "license": "CC0-1.0",
+      "sha256": "459ad6f03544b74d6e06df6130941fe5cad54372d042196c01fc263e4884596a",
+      "bytes": 89580,
+      "duration": 0.5075736961451247,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/maximize_004.ogg",
+          "sha256": "59c7a24b204be24d2a44a86d1e4d18c2cf51fa0446967a14b2590e8fb3afaf34",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.8
+        },
+        {
+          "file": "interface-sounds/Audio/glass_001.ogg",
+          "sha256": "183eebee20eb0a532b0b85104d139cbf2673eb66d95c3cc733ac9ea98362e7e8",
+          "offset": 0.16,
+          "gain": 0.65,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_fusion_complete",
+      "runtime": "game/assets/resources/audio/sfx_fusion_complete.wav",
+      "license": "CC0-1.0",
+      "sha256": "b815e7c5da926933fefee328ad21f4e531024d2caa53b92621b07890861ff7a7",
+      "bytes": 244756,
+      "duration": 1.3872562358276643,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL02.ogg",
+          "sha256": "891c2b48d3586744b38be18b8c5a35f46ac30fe06efb48f70f3f5528a0cec0c3",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_purchase",
+      "runtime": "game/assets/resources/audio/sfx_purchase.wav",
+      "license": "CC0-1.0",
+      "sha256": "ca8510a96c867e13a128fdeb723775238f0f104f1915b551efa46e148b4ceee1",
+      "bytes": 149196,
+      "duration": 0.8455328798185942,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "rpg-audio/Audio/handleCoins.ogg",
+          "sha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+          "offset": 0,
+          "gain": 0.6,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/confirmation_001.ogg",
+          "sha256": "063564703b6094d70718a3e787a55cc9141611e4ecd6b6637f8828f79b4a8c3a",
+          "offset": 0.18,
+          "gain": 1,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_learn",
+      "runtime": "game/assets/resources/audio/sfx_learn.wav",
+      "license": "CC0-1.0",
+      "sha256": "f74ad05f90983e3751095b522ed29830633b191833f89a7d68083d2a1b2e36c0",
+      "bytes": 81672,
+      "duration": 0.4627437641723356,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "rpg-audio/Audio/bookFlip2.ogg",
+          "sha256": "3409042acbfaebc24c1a6327dc073e36f9250841712e96c5040da566a97df73c",
+          "offset": 0,
+          "gain": 0.6,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/confirmation_003.ogg",
+          "sha256": "3091bf0be0497f825769ee0733ca7bdc3bcd59bd6c6e8f2ba8f93d580ff38022",
+          "offset": 0.17,
+          "gain": 1,
+          "rate": 1.1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_wave_start",
+      "runtime": "game/assets/resources/audio/sfx_wave_start.wav",
+      "license": "CC0-1.0",
+      "sha256": "964a9ebe9dfcc8704e4ac03bd0298fcac28c4faa5d8a60622df255fea381d547",
+      "bytes": 108180,
+      "duration": 0.613015873015873,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/confirmation_004.ogg",
+          "sha256": "568967a3d9f8a8f6af54ea01729c4882284308f2a27d78c07ffd7ee0d6951661",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.8
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_boss_arrive",
+      "runtime": "game/assets/resources/audio/sfx_boss_arrive.wav",
+      "license": "CC0-1.0",
+      "sha256": "c7269ac3495613d7c01190e047ea2a96d2160525b07f7204d1d66407baceca6d",
+      "bytes": 401744,
+      "duration": 2.2772108843537415,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactBell_heavy_000.ogg",
+          "sha256": "94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f",
+          "offset": 0,
+          "gain": 1,
+          "rate": 0.65
+        },
+        {
+          "file": "impact-sounds/Audio/impactSoft_heavy_000.ogg",
+          "sha256": "49e7ca88743fca974bb8676ea138b751cfd8f9033b5e7af8736c2a215d6edbc1",
+          "offset": 0.18,
+          "gain": 0.6,
+          "rate": 0.7
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_shield",
+      "runtime": "game/assets/resources/audio/sfx_shield.wav",
+      "license": "CC0-1.0",
+      "sha256": "b20931ab1e2782cc9fa716e4f685bb5dcb238e70b6fe4a63eb96dfdcc9af5416",
+      "bytes": 62044,
+      "duration": 0.35147392290249435,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactMetal_light_000.ogg",
+          "sha256": "33b5e6e37c6e9d54e07bf5a89b12c76e879f40c1ea83cdd82714df1d6f9fec6d",
+          "offset": 0,
+          "gain": 0.6,
+          "rate": 1
+        },
+        {
+          "file": "interface-sounds/Audio/glass_003.ogg",
+          "sha256": "9a6f16e3c2eff6fe5d017a4755a28306b14555728831cd00d70308e8f9689566",
+          "offset": 0.06,
+          "gain": 0.6,
+          "rate": 0.9
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_revive",
+      "runtime": "game/assets/resources/audio/sfx_revive.wav",
+      "license": "CC0-1.0",
+      "sha256": "22fa1084e7b4554efc8d1147d33fd11e204c45df2ef6408892de535c9ae5139a",
+      "bytes": 262396,
+      "duration": 1.4872562358276644,
+      "peakDb": -9.99928873610526,
+      "sources": [
+        {
+          "file": "interface-sounds/Audio/maximize_003.ogg",
+          "sha256": "df16f25d45189f5d44d6a482ab20d5067350ca8525a9affa1f8ce599e31a20a5",
+          "offset": 0,
+          "gain": 0.5,
+          "rate": 1
+        },
+        {
+          "file": "music-jingles/Audio/Steel jingles/jingles_STEEL03.ogg",
+          "sha256": "21233e95b5e2c167293484c9906264c632a5f1fe45744d1d5b52ba1dfb0a18fb",
+          "offset": 0.1,
+          "gain": 0.7,
+          "rate": 1
+        }
+      ],
+      "integratedLUFS": null
+    },
+    {
+      "key": "sfx_critical",
+      "runtime": "game/assets/resources/audio/sfx_critical.wav",
+      "license": "CC0-1.0",
+      "sha256": "3c4bb984ab7785a613036e0cd31f39ba07f0597ae15d1ae78024268904d4d7d2",
+      "bytes": 82256,
+      "duration": 0.4660544217687075,
+      "peakDb": -10.000126940172311,
+      "sources": [
+        {
+          "file": "impact-sounds/Audio/impactPunch_heavy_001.ogg",
+          "sha256": "f92f5cb6ba4ff2766497292ffd90865654317eeca976f5652e0708dbdcdc0dd9",
+          "offset": 0,
+          "gain": 1,
+          "rate": 1.15
+        }
+      ],
+      "integratedLUFS": null
+    }
+  ]
+}

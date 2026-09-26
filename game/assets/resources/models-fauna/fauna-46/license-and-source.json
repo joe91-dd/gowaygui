@@ -1,0 +1,43 @@
+{
+  "key": "fauna-46",
+  "name": "王冠菌主",
+  "kind": "snail",
+  "height": 2,
+  "flying": false,
+  "sourceName": "MushroomKing",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\mushroomking-adc4ce\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/b29009c953188ade7869c74e10771342a627ca96456218904d2f8eab47688e3f_MushroomKing.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "02b3832923850f2a8463753bfd2700d348585342a9121f1ba2441f61fe6c3159",
+  "bytes": 1358292,
+  "animations": 14,
+  "displayName": "王冠菌主",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 46324,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-46",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.5
+}

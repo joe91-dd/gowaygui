@@ -1,0 +1,11 @@
+{
+  "protected_files_unchanged": true,
+  "sha256": {
+    "game\\art-source\\stone-turtle\\stone-turtle.blend": "9977543bc23f3193932c8fd7eca8e884f7489a95a700a602dc35eea7dc331792",
+    "game\\art-source\\stone-turtle\\stone-turtle-review-scene.blend": "eaea079144079768275997a9730468ccac1c13617c5b7e3790ec7fb791013291",
+    "game\\art-source\\build_stone_turtle.py": "69bb143d04ab3be83d6b6e71950b4d622ebc5d84952b3ee6fb28e30767399433",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "8b8f0c56b2be36e8fa1fb082a253cc34271cf53d6983001f78f61ce4eb38260d"
+  },
+  "render_threads": 2,
+  "status": "Technical checks and candidate images generated; manual visual review still required."
+}

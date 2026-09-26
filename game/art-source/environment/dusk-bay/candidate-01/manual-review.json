@@ -1,0 +1,31 @@
+{
+  "status": "source-candidate-review-complete-runtime-pending",
+  "actuallyViewed": true,
+  "reviewedAtUtc": "2026-09-08T09:16:51.347015+00:00",
+  "method": "Agent opened the exact final PNG files with view_image after final geometry checks and render completion; layout diagram also actually viewed.",
+  "images": [
+    "render-battle-overview.png",
+    "render-top-down.png",
+    "render-dusk-beacon-detail.png",
+    "layout-review.png"
+  ],
+  "imageSha256": {
+    "render-battle-overview.png": "2ea39acc34c98d5396179f8d73d6c33b6bccd780537fe9d60c068a183e0acbe3",
+    "render-top-down.png": "2b9bf591f20e08bfdd173c2b973e89b89a657322e5746bb3278e92083e0d47f4",
+    "render-dusk-beacon-detail.png": "c186f88477ca3ec820a5c00a3c4e7c2866e9ac72ae450bded22a0cef6773de95",
+    "layout-review.png": "75f33ef87f6f2eef91f13f472e46b91cc57903e547b71f6e18f77a1475dabe63"
+  },
+  "observations": [
+    "最终战斗全景五站台、入口与贝壳终点清楚，道路中央没有高装饰；植被都在真实岸内。",
+    "俯视显示完整原始弯折路线，原第2和第3站位的远程/辅助位置保持不变。",
+    "最终近景原右侧海面悬空草已经消失；灯台、灯笼与贝壳材质延续暖石和青绿玩具风。",
+    "布局图中文、全脚包络、1.2阻挡圆和精确距离表可读。"
+  ],
+  "remainingArtIssues": [
+    "黄昏感目前较柔和，属于暖色傍晚候选；正式环境光和天空需在 Cocos 里一起确定。",
+    "沙路与草地交界仍偏规整，近景石台和灯台保留低多边形分面；可在后续美术打磨中统一边缘细节。",
+    "海岸石块仍有模块重复感，灯笼和草团的散布属于首版构图。",
+    "三视是无战斗角色的离线舞台预览，尚未验证实际手机 UI、角色动作、技能效果和战斗遮挡。"
+  ],
+  "correction": "First detail review revealed coastline-external scatter; bounded bush/grass generation and relocated two reed roots. Re-exported and reran FBX/source/sole/root checks, then rerendered and viewed all final three PNGs. Failed iteration archived separately."
+}

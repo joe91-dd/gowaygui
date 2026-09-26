@@ -1,0 +1,43 @@
+{
+  "key": "fauna-36",
+  "name": "羽冠掠食者 · 战斗形态",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Birb",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\birb-b9d952\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/42d0caa56666991da629128270c11ca59b57c049a04d725c0eb3248532feab16_Birb.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "79e5a155724f542bc72ae0d3dad540dc16baaa04a9f2ab3e23b8dfc6a6a29f8a",
+  "bytes": 1349720,
+  "animations": 14,
+  "displayName": "羽冠掠食者 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 44284,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-36",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.9
+}

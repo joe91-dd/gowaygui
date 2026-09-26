@@ -1,0 +1,1 @@
+const fs=require('node:fs');const c=JSON.parse(fs.readFileSync('game/build/flow-motion/assets/resources/config.json','utf8'));for(const name of ['art-modern/companion-surface','art-modern/companion-world']){const row=Object.values(c.paths).find(r=>r[0]===name);if(!row)throw Error('Missing required effect: '+name);console.log(name+' included, type '+row[1]);}

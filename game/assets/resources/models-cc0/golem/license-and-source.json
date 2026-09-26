@@ -1,0 +1,36 @@
+{
+  "name": "Orc Skull",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\orc-skull-599362\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/5291a463be60a9245de5227fdfe020cfdb084269b451f71d2fa109ff281752c1_Orc Skull.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "83d3ff0a1f5311d3a95e63a2d1686c9b18d3afd05170d186a0f1c68e39609a46",
+  "bytes": 1422340,
+  "animations": 14,
+  "runtimeKey": "golem",
+  "height": 2.4,
+  "runtimeAnimations": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "bones": 43,
+  "triangles": 7363,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Removed importer bone custom-shape meshes before export",
+    "Ground and height recalibrated using evaluated idle skinning",
+    "Rough coastal materials; source colours retained",
+    "Portable blue-grey stone palette preserves each source material light/dark value"
+  ]
+}

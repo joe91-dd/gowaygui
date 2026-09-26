@@ -1,0 +1,64 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 32,
+  "width": 1000,
+  "height": 700,
+  "views": [
+    {
+      "name": "battle-overview",
+      "positionCocos": [
+        0,
+        15,
+        18
+      ],
+      "targetCocos": [
+        0,
+        0.2,
+        0
+      ],
+      "projection": "PERSP",
+      "verticalFovDegrees": 51.067375845914185,
+      "orthoScale": null,
+      "seconds": 156.30110219999915,
+      "sha256": "95d718830f0b989c912c2f18000c83259475a5ff3c63c5b1db28fe3945085404"
+    },
+    {
+      "name": "top-down",
+      "positionCocos": [
+        0,
+        28,
+        0
+      ],
+      "targetCocos": [
+        0,
+        0,
+        0
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 26.0,
+      "seconds": 151.1344570000001,
+      "sha256": "d465ac08ff61d48f705a0a6c29e104a21c56ec299eb65297d905cc98ac4505a5"
+    },
+    {
+      "name": "sanctuary-detail",
+      "positionCocos": [
+        14,
+        6,
+        7
+      ],
+      "targetCocos": [
+        9,
+        0.8,
+        0
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 6.0,
+      "seconds": 323.89799010000206,
+      "sha256": "9fd256a207d52a02a844adf5f6898867ac480306e6503cf5833595976bcd9142"
+    }
+  ]
+}

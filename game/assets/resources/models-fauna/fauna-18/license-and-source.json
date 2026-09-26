@@ -1,0 +1,43 @@
+{
+  "key": "fauna-18",
+  "name": "毒针蜂后",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Armabee Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\armabee-evolved-5378d5\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/a4d0d409e2c5789e9b4c59b7772e1b4d18c366a8a45856b30f0e05654c92dea7_Armabee Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "419fd71fe623ba0f3f6e192bc047544d3743116a5656883baf831caeda36ec9a",
+  "bytes": 311128,
+  "animations": 8,
+  "displayName": "毒针蜂后",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 19816,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-18",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 3.7
+}

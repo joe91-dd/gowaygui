@@ -1,0 +1,68 @@
+{
+  "source_check": "pass",
+  "files": {
+    "ink-blob.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-01\\ink-blob.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "f1414536834b950cb64b4a0de4f5af7f519db0200a883b16d25ebf58fc032c61",
+      "texture_count": 2,
+      "sha256_after": "f1414536834b950cb64b4a0de4f5af7f519db0200a883b16d25ebf58fc032c61",
+      "source_unchanged": true
+    },
+    "ink-blob-review-scene.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-01\\ink-blob-review-scene.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "238c9dd602ce38b6be6b0586db222f3e7d92494162d4dbe8aa421644973b5fce",
+      "texture_count": 2,
+      "sha256_after": "238c9dd602ce38b6be6b0586db222f3e7d92494162d4dbe8aa421644973b5fce",
+      "source_unchanged": true
+    }
+  },
+  "errors": []
+}

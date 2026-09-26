@@ -1,0 +1,46 @@
+{
+  "status": "adapter-and-optional-injection-interface-complete-awaiting-root-runtime-gate",
+  "ownedProductionFiles": [
+    "game/assets/scripts/view/IslandPanels.ts",
+    "game/assets/scripts/view/IslandUI.ts"
+  ],
+  "resourcePath": "ui/panels/panels-atlas",
+  "runtimeAtlasSha256": "728a09f0e7b1f12d6e6ea6b8c5467dfb372735334ac865c56d34298ea849686a",
+  "frozenSourceFilesVerified": 52,
+  "focusedTests": {
+    "file": "game/tests/island-panels.test.cjs",
+    "passed": 10,
+    "failed": 0,
+    "exitCode": 0,
+    "durationMs": 1189.3169
+  },
+  "typeCheck": {
+    "compiler": "Cocos Creator 3.8.8 bundled TypeScript",
+    "command": "tsc --noEmit -p game/tsconfig.json",
+    "exitCode": 0
+  },
+  "manualCodeReview": {
+    "fourDecorativeLayersDetachBeforeSharedAssetRelease": true,
+    "pendingDestroySpritesDoNotRetainFrames": true,
+    "oneTextureAndEighteenFramesSharedByAllPanels": true,
+    "noPerPanelMaterialOrTexture": true,
+    "exactRadiusAndMinimumDimensionSupport": true,
+    "originalParentLayoutAndEventCodePreserved": true
+  },
+  "handoff": {
+    "IslandUIEditingStopped": true,
+    "rootMayApplyPortraitChanges": true,
+    "gateContractSentDirectlyToTurtleArt": true
+  },
+  "fullSuiteRun": false,
+  "cocosStarted": false,
+  "blenderStarted": false,
+  "gameEntryCoreOrModelsModifiedByThisSubtask": false,
+  "metaAuthored": false,
+  "gitCommitted": false,
+  "remaining": [
+    "Root GameEntry/HomeWorld startup gate and owner validity handling",
+    "Actual Cocos sliced seams, click boundaries and resource destruction",
+    "Real Buffer/draw/frame-rate measurement"
+  ]
+}

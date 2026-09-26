@@ -1,0 +1,36 @@
+{
+  "id": "red-5",
+  "name": "焚潮海龙刽子手",
+  "tier": 4,
+  "index": 42,
+  "base": 24,
+  "key": "boss-42",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 34196,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-24",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/356ad6a400d222e4b893f79525b93a9e20f4642449460e9d37d76cbb9d137f6d_Dragon.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.9
+}

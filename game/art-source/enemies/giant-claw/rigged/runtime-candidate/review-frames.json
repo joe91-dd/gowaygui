@@ -1,0 +1,142 @@
+{
+  "review_scene_sha256": "b1cdc83e58f58f72c57553c8ae2ffc56ac68b5ab1f2327c8fc3cb89369458399",
+  "fbx_sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+  "threads": 2,
+  "samples": 24,
+  "frames": [
+    {
+      "file": "render-idle.png",
+      "action": "idle",
+      "frame": 22,
+      "action_seconds": 0.7,
+      "camera": [
+        3.35,
+        -5.5,
+        3.2
+      ],
+      "target": [
+        0.06,
+        0,
+        0.6
+      ],
+      "orthographic_scale": 3.14,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-walk.png",
+      "action": "walk",
+      "frame": 10,
+      "action_seconds": 0.3,
+      "camera": [
+        3.35,
+        -5.5,
+        3.2
+      ],
+      "target": [
+        0.06,
+        0,
+        0.6
+      ],
+      "orthographic_scale": 3.14,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-attack.png",
+      "action": "attack",
+      "frame": 6,
+      "action_seconds": 0.16666666666666666,
+      "camera": [
+        3.35,
+        -5.5,
+        3.2
+      ],
+      "target": [
+        0.06,
+        0,
+        0.6
+      ],
+      "orthographic_scale": 3.14,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-hit.png",
+      "action": "hit",
+      "frame": 4,
+      "action_seconds": 0.1,
+      "camera": [
+        3.35,
+        -5.5,
+        3.2
+      ],
+      "target": [
+        0.06,
+        0,
+        0.6
+      ],
+      "orthographic_scale": 3.14,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-exit.png",
+      "action": "exit",
+      "frame": 16,
+      "action_seconds": 0.5,
+      "camera": [
+        3.35,
+        -5.5,
+        3.2
+      ],
+      "target": [
+        0.06,
+        0,
+        0.5
+      ],
+      "orthographic_scale": 3.14,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-attack-front.png",
+      "action": "attack",
+      "frame": 6,
+      "action_seconds": 0.16666666666666666,
+      "camera": [
+        0.06,
+        -6.4,
+        1.65
+      ],
+      "target": [
+        0.06,
+        0,
+        0.64
+      ],
+      "orthographic_scale": 3.15,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    },
+    {
+      "file": "render-hit-side.png",
+      "action": "hit",
+      "frame": 4,
+      "action_seconds": 0.1,
+      "camera": [
+        5.5,
+        -0.35,
+        2.05
+      ],
+      "target": [
+        0,
+        -0.05,
+        0.62
+      ],
+      "orthographic_scale": 2.7,
+      "note": "Actual evaluated skeleton/skin, rendered from saved merged review scene; not a Cocos screenshot."
+    }
+  ],
+  "animations_present": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit"
+  ],
+  "human_visual_review": "pending actual image opening"
+}

@@ -1,0 +1,99 @@
+Building C:\Users\Administrator\Documents\ChatGPT\gowaygui\game
+Log: C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\temp\build-logs\20260909-172602.creator.log
+{
+  "buildDir": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile",
+  "generatedAt": "2026-09-09T09:29:27.760Z",
+  "scope": "Validates the identified built JavaScript artifact. Source edits require a fresh Cocos build.",
+  "status": "passed",
+  "stage": "complete",
+  "checks": [
+    "real two-wave combat, malformed-skill validation and deterministic checkpoint recovery",
+    "nonempty role-filtered union, normalized odds and 32 valid offspring",
+    "uncollected parents persist; confirmed collection retires both sources once; restart and duplicate commands preserve result"
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "e62d4d59564222055b1d55b2bf7fa34c9575e5d3d7a3e0871eb5c17be0747618",
+      "bytes": 23034,
+      "builtAt": "2026-09-09T09:28:09.427Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "c07734466cd875825a2ef341107c9134311f52f9481c9c87a672545f40142603",
+      "bytes": 735564,
+      "builtAt": "2026-09-09T09:28:08.954Z"
+    }
+  ],
+  "parents": [
+    {
+      "role": "spike",
+      "skills": [
+        "critical",
+        "extraTarget",
+        "doubleHeal"
+      ],
+      "level": 3
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "sleep",
+        "lastShield"
+      ],
+      "level": 2
+    }
+  ],
+  "pools": [
+    {
+      "role": "spike",
+      "skills": [
+        "critical",
+        "extraTarget",
+        "doubleHeal",
+        "sleep",
+        "lastShield"
+      ]
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "critical",
+        "extraTarget",
+        "doubleHeal",
+        "sleep",
+        "lastShield"
+      ]
+    }
+  ],
+  "output": {
+    "role": "spike",
+    "skills": [
+      "lastShield",
+      "critical",
+      "extraTarget"
+    ],
+    "sourceCount": 2,
+    "historyCount": 2
+  },
+  "executedModules": [
+    "chunks:///_virtual/game.ts",
+    "chunks:///_virtual/rollupPluginModLoBabelHelpers.js",
+    "chunks:///_virtual/data.ts",
+    "chunks:///_virtual/random.ts",
+    "chunks:///_virtual/fusion.ts",
+    "chunks:///_virtual/talents.ts",
+    "chunks:///_virtual/save.ts",
+    "chunks:///_virtual/communityValidation.ts",
+    "chunks:///_virtual/battleValidation.ts",
+    "chunks:///_virtual/storage.ts",
+    "chunks:///_virtual/skillBooks.ts",
+    "chunks:///_virtual/prototype.ts",
+    "chunks:///_virtual/prototypeConfig.ts",
+    "chunks:///_virtual/battle.ts",
+    "chunks:///_virtual/community.ts",
+    "chunks:///_virtual/arena.ts",
+    "chunks:///_virtual/raids.ts"
+  ]
+}
+BUILD_SUCCESS: C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\build\web-mobile\index.html

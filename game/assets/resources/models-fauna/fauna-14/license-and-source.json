@@ -1,0 +1,43 @@
+{
+  "key": "fauna-14",
+  "name": "风翼斥候",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Pigeon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\pigeon-ffdb18\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/8956d29f6c2f9095ab1e4217a3a7693bbfa183981c11d734f581df02667d4a87_Pigeon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "7567ffcbe594f18c2b2d7e59d41e17df233b7455fc424e34edb85be533fcb208",
+  "bytes": 141548,
+  "animations": 8,
+  "displayName": "风翼斥候",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 15408,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-14",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.9
+}

@@ -1,0 +1,218 @@
+{
+  "fps": 30,
+  "pose_keys": {
+    "idle": [
+      [
+        1,
+        {}
+      ],
+      [
+        24,
+        {
+          "body_z": 0.011,
+          "head_pitch": -0.015,
+          "head_yaw": 0.012,
+          "tail": 0.065
+        }
+      ],
+      [
+        48,
+        {
+          "head_pitch": 0.008,
+          "head_yaw": -0.01,
+          "tail": -0.04
+        }
+      ],
+      [
+        72,
+        {}
+      ]
+    ],
+    "attack": [
+      [
+        1,
+        {}
+      ],
+      [
+        8,
+        {
+          "body_z": 0.01,
+          "neck_back": 0.013,
+          "head_pitch": -0.046,
+          "shell_pulse": 0.02
+        }
+      ],
+      [
+        13,
+        {
+          "body_z": 0.019,
+          "body_y": -0.02,
+          "head_pitch": 0.021,
+          "shell_pulse": 0.006
+        }
+      ],
+      [
+        20,
+        {
+          "body_z": 0.004,
+          "head_pitch": -0.012,
+          "tail": 0.025
+        }
+      ],
+      [
+        27,
+        {}
+      ]
+    ],
+    "skill": [
+      [
+        1,
+        {}
+      ],
+      [
+        10,
+        {
+          "body_z": -0.014,
+          "neck_back": 0.018,
+          "head_pitch": -0.032,
+          "legs": 0.025,
+          "shell_pulse": 0.02
+        }
+      ],
+      [
+        16,
+        {
+          "body_z": 0.016,
+          "head_pitch": -0.055,
+          "shell_pulse": 0.037,
+          "tail": 0.055
+        }
+      ],
+      [
+        22,
+        {
+          "body_z": 0.03,
+          "body_y": -0.025,
+          "head_pitch": 0.023,
+          "shell_pulse": 0.009,
+          "tail": -0.04
+        }
+      ],
+      [
+        31,
+        {
+          "body_z": 0.008,
+          "head_pitch": -0.01,
+          "shell_pulse": 0.014
+        }
+      ],
+      [
+        42,
+        {}
+      ]
+    ],
+    "hit": [
+      [
+        1,
+        {}
+      ],
+      [
+        4,
+        {
+          "body_y": 0.035,
+          "body_pitch": -0.03,
+          "head_pitch": 0.105,
+          "neck_back": 0.03
+        }
+      ],
+      [
+        10,
+        {
+          "body_y": 0.009,
+          "head_pitch": 0.025
+        }
+      ],
+      [
+        18,
+        {}
+      ]
+    ],
+    "rest": [
+      [
+        1,
+        {
+          "body_z": -0.023,
+          "neck_back": 0.052,
+          "head_pitch": 0.105,
+          "legs": 0.042
+        }
+      ],
+      [
+        36,
+        {
+          "body_z": -0.028,
+          "neck_back": 0.052,
+          "head_pitch": 0.12,
+          "legs": 0.042,
+          "tail": 0.012
+        }
+      ],
+      [
+        72,
+        {
+          "body_z": -0.023,
+          "neck_back": 0.052,
+          "head_pitch": 0.105,
+          "legs": 0.042
+        }
+      ]
+    ],
+    "fusion": [
+      [
+        1,
+        {}
+      ],
+      [
+        12,
+        {
+          "body_z": -0.035,
+          "head_pitch": 0.072,
+          "legs": 0.061,
+          "shell_pulse": 0.018
+        }
+      ],
+      [
+        23,
+        {
+          "body_z": 0.105,
+          "head_pitch": -0.105,
+          "head_yaw": 0.025,
+          "legs": -0.09,
+          "tail": 0.15,
+          "shell_pulse": 0.03
+        }
+      ],
+      [
+        31,
+        {
+          "body_z": -0.023,
+          "head_pitch": 0.051,
+          "legs": 0.065
+        }
+      ],
+      [
+        43,
+        {
+          "body_z": 0.047,
+          "head_pitch": -0.052,
+          "head_yaw": -0.02
+        }
+      ],
+      [
+        60,
+        {}
+      ]
+    ]
+  },
+  "description": "Original bubble breath/forward exhale for attack, larger breath for skill; shared ten-bone language, blend-friendly endpoints. Projectile/bubble ring belongs to game view."
+}

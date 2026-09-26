@@ -1,0 +1,95 @@
+{
+  "status": "pass",
+  "fbx_sha256": "710640df2e2aba443b164dd51c3237ed77c7d830099e8f052d03910e1964c060",
+  "triangles": 12396,
+  "vertices": 6228,
+  "materials": [
+    "InkSnail_Toy_Atlas"
+  ],
+  "bones": [
+    "root",
+    "body",
+    "head",
+    "eye_L",
+    "eye_R",
+    "spout",
+    "shell",
+    "sole_front",
+    "sole_rear"
+  ],
+  "clips": {
+    "idle": {
+      "imported_action_name": "InkSnail_Rig|InkSnail_Rig|idle",
+      "first": 1.0,
+      "last": 85.0,
+      "seconds": 2.8,
+      "samples": 169,
+      "maximum_vertex_motion_m": 0.005319794471257853,
+      "minimum_z_m": -4.7683896831074435e-09,
+      "maximum_z_m": 0.9240000247955322,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "walk": {
+      "imported_action_name": "InkSnail_Rig|InkSnail_Rig|walk",
+      "first": 1.0,
+      "last": 37.0,
+      "seconds": 1.2,
+      "samples": 73,
+      "maximum_vertex_motion_m": 0.009567159974633766,
+      "minimum_z_m": -4.7683896831074435e-09,
+      "maximum_z_m": 0.9240000247955322,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "attack": {
+      "imported_action_name": "InkSnail_Rig|InkSnail_Rig|attack",
+      "first": 1.0,
+      "last": 37.0,
+      "seconds": 1.2,
+      "samples": 73,
+      "maximum_vertex_motion_m": 0.057200685772204655,
+      "minimum_z_m": -4.7683896831074435e-09,
+      "maximum_z_m": 0.9200000762939453,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "hit": {
+      "imported_action_name": "InkSnail_Rig|InkSnail_Rig|hit",
+      "first": 1.0,
+      "last": 19.0,
+      "seconds": 0.6,
+      "samples": 37,
+      "maximum_vertex_motion_m": 0.05873845889966185,
+      "minimum_z_m": -4.7683896831074435e-09,
+      "maximum_z_m": 0.9200000762939453,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "exit": {
+      "imported_action_name": "InkSnail_Rig|InkSnail_Rig|exit",
+      "first": 1.0,
+      "last": 34.0,
+      "seconds": 1.1,
+      "samples": 67,
+      "maximum_vertex_motion_m": 0.9073467965417308,
+      "minimum_z_m": -1.3190839354138006e-07,
+      "maximum_z_m": 0.9200000166893005,
+      "first_last_seam_m": 0.9073467965417308,
+      "loop": false
+    }
+  },
+  "method": "Imported FBX, selected actual Blender action slots, evaluated every half frame; not a Cocos acceptance test.",
+  "bounds_world_xyz": {
+    "min": [
+      -0.2760000228881836,
+      -0.5580001473426819,
+      -4.7683896831074435e-09
+    ],
+    "max": [
+      0.2759946286678314,
+      0.5980000495910645,
+      0.9200000166893005
+    ]
+  }
+}

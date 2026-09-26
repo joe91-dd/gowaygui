@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "cf544b813771c7a9334f885c52703c43acb949db",
+  "purpose": "Frozen pre-range-change rules for real old-versus-new checkpoint continuation, not a current implementation mirror",
+  "files": [
+    {
+      "source": "game/assets/scripts/core/battle.ts",
+      "fixture": "battle.ts.txt",
+      "sha256": "23bc51ac333575e3872f1733e9b0a1d9145102cdacfe376e6d1f0a931897ffe1"
+    },
+    {
+      "source": "game/assets/scripts/core/data.ts",
+      "fixture": "data.ts.txt",
+      "sha256": "aaeaf0026cb3e27ef2c63ce558b14df9229ed455f9a4f4718d27b3e00eb90e73"
+    },
+    {
+      "source": "game/assets/scripts/core/random.ts",
+      "fixture": "random.ts.txt",
+      "sha256": "e408d544536f95d947e047f531cfbf49911eb51cbca3ac9d989fd13cff3a77c0"
+    }
+  ]
+}

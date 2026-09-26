@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "stage": "static shape prototype only",
+  "files": {
+    "giant-claw-prototype.blend": {
+      "sha256": "cd579fb4c56cf276d9a02dec9267a354e0442e4875683d0a7ae48de3704924e0",
+      "editable_meshes": 36,
+      "materials": [
+        "GiantClaw_Toy_Atlas"
+      ],
+      "bounds": {
+        "min": [
+          -1.0748372077941895,
+          -0.7677403092384338,
+          0.0
+        ],
+        "max": [
+          1.3688597679138184,
+          0.5897020101547241,
+          1.2760032415390015
+        ]
+      },
+      "packed_images": {
+        "giant-colour.png": {
+          "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+          "packed_exactly": true
+        },
+        "giant-roughness.png": {
+          "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+          "packed_exactly": true
+        }
+      }
+    },
+    "giant-claw-review-scene.blend": {
+      "sha256": "29b9bb5161257f501dd249d8b3bfb965333716d2d668d79e9f7fbc481b4ce17c",
+      "editable_meshes": 36,
+      "materials": [
+        "GiantClaw_Toy_Atlas"
+      ],
+      "bounds": {
+        "min": [
+          -1.0748372077941895,
+          -0.7677403092384338,
+          0.0
+        ],
+        "max": [
+          1.3688597679138184,
+          0.5897020101547241,
+          1.2760032415390015
+        ]
+      },
+      "packed_images": {
+        "giant-colour.png": {
+          "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+          "packed_exactly": true
+        },
+        "giant-roughness.png": {
+          "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+          "packed_exactly": true
+        }
+      }
+    }
+  },
+  "protected_reference_hashes": {
+    "game/art-source/enemies/build_shell_carrier.py": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f",
+    "game/art-source/enemies/build_armored_crab.py": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24",
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier.blend": "044110abc79a22f6d0922de0a5f70a7cd9cac8052c7cd2e0b59bb968941a5292",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+  },
+  "rig_and_actions_deferred": true,
+  "no_fbx_or_glb_export": true,
+  "initial_preview_comparison": {
+    "changed_meshes": [
+      "Dominant_fixed_round_finger",
+      "Dominant_moving_round_finger"
+    ],
+    "other_34_parts_exactly_unchanged": true,
+    "packed_atlas_bytes_exactly_unchanged": true,
+    "initial_source_sha256": "561b1ba3dfcdb608ad8619550b0b09979767bae16aeca33849c52633c7a47e78",
+    "comparison": "Exact vertex/face/UV/planned-joint/transform data; original shape preview archived before two-finger smoothing and front-camera adjustment."
+  },
+  "method": "Opened actual saved blend files without resaving; checked editable parts, closed positive-volume topology, UV, finite geometry, bounds and packed PNG exact bytes. No animation or runtime validation claimed."
+}

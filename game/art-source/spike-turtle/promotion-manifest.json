@@ -1,0 +1,205 @@
+{
+  "version": "spike-sample-02",
+  "status": "runtime-candidate-pending-actual-Cocos-review-not-final-art",
+  "promoted_at_utc": "2026-09-08T08:20:37.325612+00:00",
+  "runtime_directory": "game/assets/resources/models/spike-turtle",
+  "expected_runtime_prefab_path": "models/spike-turtle/spike-turtle/spike-turtle",
+  "prefab_path_confirmed_in_cocos": false,
+  "runtime_asset_uuid": null,
+  "meta_created_by_promotion": false,
+  "metadata_present_after_copy": [],
+  "uuid_note": "New species directory; Cocos creates folder/file/subasset UUIDs on first import. No hand-authored metadata.",
+  "runtime_files": [
+    {
+      "name": "spike-colour.png",
+      "source_path": "game/art-source/spike-turtle/candidate-02/export/spike-colour.png",
+      "runtime_path": "game/assets/resources/models/spike-turtle/spike-colour.png",
+      "sha256": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+      "bytes": 948848
+    },
+    {
+      "name": "spike-roughness.png",
+      "source_path": "game/art-source/spike-turtle/candidate-02/export/spike-roughness.png",
+      "runtime_path": "game/assets/resources/models/spike-turtle/spike-roughness.png",
+      "sha256": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+      "bytes": 22192
+    },
+    {
+      "name": "spike-turtle.fbx",
+      "source_path": "game/art-source/spike-turtle/candidate-02/export/spike-turtle.fbx",
+      "runtime_path": "game/assets/resources/models/spike-turtle/spike-turtle.fbx",
+      "sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+      "bytes": 2410284
+    }
+  ],
+  "runtime_fbx_sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+  "current_editable_source": "game/art-source/spike-turtle/candidate-02/spike-turtle.blend",
+  "current_generation_script": "game/art-source/build_spike_turtle_candidate02.py",
+  "frozen_source_hashes": {
+    "game/art-source/spike-turtle/candidate-02/spike-turtle.blend": "9193078d649856f18c8ef3244c731480e00b86bc9ae000847cabb46fa38109ca",
+    "game/art-source/spike-turtle/candidate-02/spike-turtle-review-scene.blend": "7dc1af162cfab7e7dafa2102bec31d4a6e75189c37c13f7d0fc57a4d87d1ffa5",
+    "game/art-source/spike-turtle/candidate-02/spike-turtle-keypose-review.blend": "fc71b656664bc31130dd09289d7427597ac20e1257026a516ffc9ce3e99443b6",
+    "game/art-source/spike-turtle/candidate-02/spike-turtle.glb": "4bef25794a6c1cda164946bdb059eae6bdc383f374a3f74bc9359eb231a83b25",
+    "game/art-source/spike-turtle/candidate-02/inputs/authored-c12b-foundation.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game/art-source/spike-turtle/candidate-02/inputs/provenance.json": "1697db90018bea346fee7f5d302512f8aab83064667494f801f0b6c70e57a6e2",
+    "game/art-source/spike-turtle/candidate-02/atlas-parameters.json": "609da466231ef2919af34f4b0c9e61b71a73ef2330dfb0bd8e80d13fd910c3ce",
+    "game/art-source/spike-turtle/candidate-02/candidate-manifest.json": "da8a28ed71f19e24d79316e90e2089f2b23bb0814435f05dccc91185acaac840",
+    "game/art-source/spike-turtle/candidate-02/round-trip-check.json": "feb9db66d3e120cf7a59285f178875418737db812841586895a37be2f9646a90",
+    "game/art-source/spike-turtle/candidate-02/animation-clearance.json": "ddf38a557d9115f1e082da3255f2eb76fafe8c6e973d5bea15882bbc661365ce",
+    "game/art-source/spike-turtle/candidate-02/review-complete.json": "107ae6c6081ca8b4be487cfe0d2514a6384ed1ef966f7959abaf57eb0641f028",
+    "game/art-source/spike-turtle/candidate-02/technical-manual-review.json": "91994fa0c7d88da4059216f60e84ef585c698022bb38bf2cc4bc7bde4c3ab23b",
+    "game/art-source/spike-turtle/candidate-02/review_candidate02.py": "55a42f250c2a4c8f6b6e28aa402af1489c72a8593f3af15d8d8d81c921007ec1",
+    "game/art-source/spike-turtle/candidate-02/render-front.png": "82b6f0fd36404051d90a7f8583b4f38fbe711bcda6b3044ea90cfb02d05ecf53",
+    "game/art-source/spike-turtle/candidate-02/render-three-quarter.png": "42066df97318fe998b271924be9fc5be106b2902a252b2edd214067c0b2c4a6d",
+    "game/art-source/build_spike_turtle_candidate02.py": "7df15065785f9a38e94431b50a11a818217c44ac5fb1b441ec259bb2354975df"
+  },
+  "protected_source_and_runtime_hashes": {
+    "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game\\art-source\\build_stone_turtle_candidate12b.py": "fbb4bd93d952fe560e1fee48b95dbfc37e15f589405ee7e5a12764511482a7cc",
+    "game\\art-source\\stone_turtle_atlas.py": "33d84bcec6dc394ff63c0c1986b6837e41d03c26c68338838a0a386c87215f85",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png.meta": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png.meta": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx.meta": "68169c8b0e7a6b62e353e8c89f6fe09aafe8a04ac6302aed74185d84dfc6c54a",
+    "game\\art-source\\build_spike_turtle_candidate01.py": "8b7b9c79f06d22b4e3b6598474e8e9cbe0862d6ed163bf15dec6a197e598967b",
+    "game\\art-source\\spike-turtle\\candidate-01\\spike-turtle.blend": "290c8c31241fd7061f27aa531f2888fb9fb2e47c6734e008d7872164e69ceb5e",
+    "game\\art-source\\spike-turtle\\candidate-01\\export\\spike-turtle.fbx": "f26c593116b59d251732596431c45f16285b369b602b2e4084c86ac363ba9a56",
+    "game\\art-source\\spike-turtle\\candidate-01\\export\\spike-colour.png": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+    "game\\art-source\\spike-turtle\\candidate-01\\export\\spike-roughness.png": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0"
+  },
+  "triangles": 28900,
+  "weighted_vertices": 15086,
+  "bones": 10,
+  "materials": 1,
+  "uv_layers": 1,
+  "material_name_expected": "SpikeAtlas_01",
+  "material_prefix": "SpikeAtlas_",
+  "texture_mapping_expected": {
+    "mainTexture": {
+      "file": "spike-colour.png",
+      "native_standard_property": "mainTexture"
+    },
+    "shininessExponentMap": {
+      "file": "spike-roughness.png",
+      "native_standard_property": "pbrMap"
+    }
+  },
+  "material_mapping_confirmed_in_cocos": false,
+  "blender_coordinates": {
+    "up": "+Z",
+    "forward": "-Y"
+  },
+  "fbx_export_coordinates": {
+    "up": "+Y",
+    "forward": "-Z"
+  },
+  "expected_cocos_forward": "+Z",
+  "battle_scale": 0.65,
+  "foot_origin_y": 0,
+  "rest_bounds_blender_xyz": {
+    "min": [
+      -1.123720407485962,
+      -1.7167848348617554,
+      2.4166195711217142e-09
+    ],
+    "max": [
+      1.148958683013916,
+      1.2736276388168335,
+      1.714023470878601
+    ],
+    "dimensions": [
+      2.272679090499878,
+      2.990412473678589,
+      1.7140234684619815
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_unscaled": {
+    "min": [
+      -1.123720407485962,
+      2.4166195711217142e-09,
+      -1.2736276388168335
+    ],
+    "max": [
+      1.148958683013916,
+      1.714023470878601,
+      1.7167848348617554
+    ],
+    "dimensions": [
+      2.272679090499878,
+      1.7140234684619815,
+      2.990412473678589
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_at_scale_065": {
+    "min": [
+      -0.7304182648658752,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7468231439590455,
+      1.1141152560710907,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4772414088249206,
+      1.114115254500288,
+      1.943768107891083
+    ]
+  },
+  "animation_name_prefix_expected": "SpikeTurtle_Rig|",
+  "clips": {
+    "idle": {
+      "first_frame": 1,
+      "last_frame": 72,
+      "fps": 30,
+      "seconds": 2.3666666666666667,
+      "loop_recommended": true
+    },
+    "attack": {
+      "first_frame": 1,
+      "last_frame": 27,
+      "fps": 30,
+      "seconds": 0.8666666666666667,
+      "loop_recommended": false
+    },
+    "skill": {
+      "first_frame": 1,
+      "last_frame": 42,
+      "fps": 30,
+      "seconds": 1.3666666666666667,
+      "loop_recommended": false
+    },
+    "hit": {
+      "first_frame": 1,
+      "last_frame": 18,
+      "fps": 30,
+      "seconds": 0.5666666666666667,
+      "loop_recommended": false
+    },
+    "rest": {
+      "first_frame": 1,
+      "last_frame": 72,
+      "fps": 30,
+      "seconds": 2.3666666666666667,
+      "loop_recommended": true
+    },
+    "fusion": {
+      "first_frame": 1,
+      "last_frame": 60,
+      "fps": 30,
+      "seconds": 1.9666666666666666,
+      "loop_recommended": false
+    }
+  },
+  "front_face_half_frame_samples": 171,
+  "atlas_source": "Original numeric palette, deterministic noise seed 54123 and analytic UV equations in the independent generation script.",
+  "atlas_raster_inputs": [],
+  "approved_views_re_rendered": false,
+  "geometry_changed_since_parent_review": false,
+  "blender_processes_exited_before_promotion": true,
+  "cocos_started": false,
+  "remaining_review": "Root must inspect actual Cocos import, native material bridge, size/orientation and six clips. User final art acceptance is not implied."
+}

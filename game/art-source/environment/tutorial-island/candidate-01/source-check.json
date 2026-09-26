@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "sourceBlendSha256": "2902d225137d6512c63f60b98d3c35658be41a32968171c3af6465e4b7db622a",
+  "editableMeshes": 1638,
+  "anchors": [
+    "Slot_0",
+    "Slot_1",
+    "Slot_2",
+    "Slot_3",
+    "Slot_4",
+    "Enemy_entrance",
+    "Pearl_center",
+    "Player_exit",
+    "Island_origin"
+  ],
+  "materials": 2,
+  "packedImages": [
+    {
+      "name": "Island_original_colour",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Island_original_roughness",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "renderSettings": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      1000,
+      700
+    ]
+  },
+  "notes": [
+    "Actual source blend reopened read-only; full editable part structure and packed textures verified.",
+    "Preview water/camera/lights are separate in tutorial-island-review-scene.blend."
+  ]
+}

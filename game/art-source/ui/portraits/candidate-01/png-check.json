@@ -1,0 +1,137 @@
+{
+  "status": "five RGBA portraits and five true 64px previews passed metadata/alpha/source checks",
+  "files": [
+    {
+      "file": "portrait-stone.png",
+      "size": 384,
+      "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4",
+      "alpha_bounds": [
+        27,
+        99,
+        367,
+        355
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "preview-stone-64.png",
+      "size": 64,
+      "sha256": "3eb265d555ac6969a9b739fd8fc58e08d24fa0caa2e983f88d21b9b1b7afa8bb",
+      "alpha_bounds": [
+        4,
+        16,
+        62,
+        60
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "portrait-spike.png",
+      "size": 384,
+      "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792",
+      "alpha_bounds": [
+        27,
+        61,
+        367,
+        355
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "preview-spike-64.png",
+      "size": 64,
+      "sha256": "f34b538a4311c2c38075d041363a1742a04f94a7579e3a1544c2e69fb3a36ecf",
+      "alpha_bounds": [
+        4,
+        10,
+        62,
+        60
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "portrait-crystal.png",
+      "size": 384,
+      "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b",
+      "alpha_bounds": [
+        27,
+        51,
+        367,
+        355
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "preview-crystal-64.png",
+      "size": 64,
+      "sha256": "602384852114cf9b5ffac1979c2f01e8258ab5adb1a64208dd976449443b75eb",
+      "alpha_bounds": [
+        4,
+        8,
+        62,
+        60
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "portrait-leaf.png",
+      "size": 384,
+      "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e",
+      "alpha_bounds": [
+        27,
+        91,
+        367,
+        355
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "preview-leaf-64.png",
+      "size": 64,
+      "sha256": "84ffd03a1fbe5bed71898213627999609af5510c7a26e97171a9dfd672c26083",
+      "alpha_bounds": [
+        4,
+        14,
+        62,
+        60
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "portrait-bubble.png",
+      "size": 384,
+      "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411",
+      "alpha_bounds": [
+        27,
+        89,
+        367,
+        355
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    },
+    {
+      "file": "preview-bubble-64.png",
+      "size": 64,
+      "sha256": "94f0f32a82031d8af635c5077f079dc99309a0d4347cd732808d76fa64ebe7a3",
+      "alpha_bounds": [
+        4,
+        14,
+        62,
+        60
+      ],
+      "rgba": true,
+      "transparent_corners": true
+    }
+  ],
+  "character_sources_unchanged": true,
+  "subjective_review": "Actual image opening still required; these checks do not certify face readability or final art."
+}

@@ -1,0 +1,64 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 32,
+  "width": 1000,
+  "height": 700,
+  "views": [
+    {
+      "name": "battle-overview",
+      "positionCocos": [
+        0,
+        15,
+        18
+      ],
+      "targetCocos": [
+        0,
+        0.2,
+        0
+      ],
+      "projection": "PERSP",
+      "verticalFovDegrees": 51.067375845914185,
+      "orthoScale": null,
+      "seconds": 53.65863940000054,
+      "sha256": "8d121e297bc6d82d946006261df68931d7b4f88c2b5b27107ca15d78dc700064"
+    },
+    {
+      "name": "top-down",
+      "positionCocos": [
+        0,
+        28,
+        0
+      ],
+      "targetCocos": [
+        0,
+        0,
+        0
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 26.0,
+      "seconds": 93.08779449999929,
+      "sha256": "255066999dde688ecf2efe7f17e81f71036323cd7b1df572bf0bd90bd02a3e6a"
+    },
+    {
+      "name": "coral-inlet-detail",
+      "positionCocos": [
+        4,
+        5,
+        10
+      ],
+      "targetCocos": [
+        1,
+        0.1,
+        3.5
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 8.0,
+      "seconds": 89.40042510000058,
+      "sha256": "3227895d0ead014b30a78fe60f7bcfd2b20c536abbdba56e719bba3fb5114fc9"
+    }
+  ]
+}

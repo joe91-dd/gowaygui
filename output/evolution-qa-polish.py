@@ -1,0 +1,11 @@
+from pathlib import Path
+root=Path('game/assets/scripts')
+p=root/'core/raids.ts';s=p.read_text('utf8');s=s.replace("length:300", "length:240").replace("time:i*.58,hpScale:(1.8+Math.floor(i/50)*.55)*(i%60===59?.5:1),attackScale:1.3+Math.floor(i/50)*.14", "time:i*(.58/.82),hpScale:(.63+Math.floor(i/50)*.1925)*(i%60===59?.5:1),attackScale:.26+Math.floor(i/50)*.028");s=s.replace('互相补位守住珍珠','互相补位守住潮汐灯塔');p.write_text(s,'utf8')
+p=root/'view/AchievementMenus.ts';s=p.read_text('utf8').replace("import {Node}","import {Node,Graphics,Color}")
+s=s.replace("this.ui.art?.attach(icon,('boss-'+i) as any,116,151);", "const border=icon.addComponent(Graphics);border.strokeColor=new Color(boss.color);border.lineWidth=3;border.roundRect(-65,-76,130,152,14);border.stroke();this.ui.art?.attach(icon,('boss-'+i) as any,116,151);")
+p.write_text(s,'utf8')
+p=root/'view/GameEntry.ts';s=p.read_text('utf8').replace("{_decorator,UIOpacity,Color", "{_decorator,UIOpacity,Sprite,Color");s=s.replace("mark.addComponent(UIOpacity).opacity=85;", "mark.getComponentsInChildren(Sprite).forEach(sprite=>sprite.grayscale=true);mark.addComponent(UIOpacity).opacity=155;");p.write_text(s,'utf8')
+p=root/'view/ArtV2Assets.ts';s=p.read_text('utf8');s=s.replace("const props=this.images.get('enemy-guard-props')!;for(let i=0;i<6;i++)this.frames.set(('enemy-prop-'+i) as ArtV2Slice,frame(props.texture!,i%3*418+2,Math.floor(i/3)*627,414,615));", "const props=this.images.get('enemy-guard-props')!;const propRects=[[25,45,405,544],[437,32,400,558],[840,82,410,527],[26,592,407,612],[443,665,414,515],[914,612,320,595]];propRects.forEach(([x,y,w,h],i)=>this.frames.set(('enemy-prop-'+i) as ArtV2Slice,frame(props.texture!,x,y,w,h)));")
+p.write_text(s,'utf8')
+p=root/'core/progression.ts';s=p.read_text('utf8').replace("if(lastCut>a.lastDaily){if(a.games>0)","const eligibleCut=Math.min(lastCut,a.week+6);\n if(eligibleCut>a.lastDaily){if(a.games>0)").replace("'arena-day:'+lastCut", "'arena-day:'+eligibleCut").replace("}],lastCut*DAY-OFFSET+22*3600000)","}],eligibleCut*DAY-OFFSET+22*3600000)");p.write_text(s,'utf8')
+p=Path('game/tests/progression-evolution.test.cjs');s=p.read_text('utf8').replace("b.spawns.length,300","b.spawns.length,240").replace("b.spawns[299].time,299*.58","b.spawns[239].time,239*(.58/.82)");p.write_text(s,'utf8')

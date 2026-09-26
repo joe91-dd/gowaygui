@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "status": "runtime-c02-fbx-promoted-pending-cocos-reimport-and-acceptance",
+  "recordedAtUtc": "2026-09-08T12:51:34.208958+00:00",
+  "levelId": 4,
+  "levelName": "巨钳来袭",
+  "change": "Only grass surface winding and normals; route/slots unchanged from c01.",
+  "authorization": "Root actually reviewed c02 overview, approved corrected FBX promotion and explicitly authorized copying only FBX; unchanged atlases remain in the manifest.",
+  "sourceProvenanceSha256": "1ffabd80abb8fc6a730bd180b42ac405a546e3f9b2a58e08a4fc146bdaf99720",
+  "expectedResourcesPrefabPath": "environment/boss-bay/boss-bay/boss-bay",
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "route": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 5.0,
+      "z": -2.0
+    },
+    {
+      "x": 6.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "stationCoordinates": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "z": -1.31
+    }
+  ],
+  "files": [
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-02/boss-bay.fbx",
+      "destination": "game/assets/resources/environment/boss-bay/boss-bay.fbx",
+      "sha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+      "bytes": 4274172
+    },
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-02/island-colour.png",
+      "destination": "game/assets/resources/environment/boss-bay/island-colour.png",
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+      "bytes": 2727591
+    },
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-02/island-roughness.png",
+      "destination": "game/assets/resources/environment/boss-bay/island-roughness.png",
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+      "bytes": 40385
+    }
+  ],
+  "runtimeFilesCopiedByThisSubtask": true,
+  "metasOrUuidsAuthored": false,
+  "cocosLaunched": false,
+  "importCheckScript": "game/art-source/environment/boss-bay/normal-review/check_cocos_surface.py",
+  "pending": [
+    "Root promotion and actual Cocos reimport",
+    "New timestamped imported-triangle report",
+    "Actual browser grass visibility and shared material/shadow review"
+  ],
+  "promotedAtUtc": "2026-09-08T12:52:20.705566+00:00",
+  "copiedFiles": [
+    "game/assets/resources/environment/boss-bay/boss-bay.fbx"
+  ],
+  "atlasesRewritten": false,
+  "previousRuntimeFbxSha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+  "existingMetaSha256Unchanged": "04c22b4d33c7198bcae47d1f7f07ed5b32a3c899bc100ddf81a9032563e551ed",
+  "sourceProvenanceCreatedBeforePromotion": true
+}

@@ -1,0 +1,130 @@
+{
+  "version": "tutorial-island-candidate-01",
+  "levelId": 0,
+  "levelName": "初到龟岛",
+  "dataSource": "assets/scripts/core/data.ts",
+  "dataSourceSha256": "b9d6e111d3a3787eb8a2237447eff988a46e2ce417e63951b1b5be16d897d8b5",
+  "coordinateConvention": "Cocos world x/y-up/z; Blender source x/-z/y",
+  "route": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 4.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "routeSurfaceY": 0.064,
+  "waterY": -1.06,
+  "slots": [
+    {
+      "x": -5.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "y": 0.292,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "y": 0.292,
+      "z": -1.0
+    }
+  ],
+  "gameplayBase": {
+    "x": 9.0,
+    "y": 0.064,
+    "z": 0.0
+  },
+  "pearl": {
+    "x": 9.0,
+    "y": 1.1,
+    "z": 0.0
+  },
+  "boundsXZ": [
+    -11.683124542236328,
+    11.913569450378418,
+    -5.820446968078613,
+    5.621428966522217
+  ],
+  "nominalFootprintXZ": [
+    22,
+    12
+  ],
+  "cameraSuggestion": {
+    "position": {
+      "x": 0,
+      "y": 15,
+      "z": 18
+    },
+    "target": {
+      "x": 0,
+      "y": 0.2,
+      "z": 0
+    },
+    "baseVerticalFovDegrees": 42,
+    "responsiveRule": "same as GameEntry.resizeViewport: preserve 1280/720 horizontal framing"
+  },
+  "sourceObjects": 1638,
+  "authorship": "Original procedural geometry, UV, colours, and composition; no downloaded game or stock assets.",
+  "sourceModule": "Project original tidal-island v04 geometry/material builders, adapted to level 0 with newly generated route-dependent terrain and road",
+  "status": "First tutorial environment candidate; runtime integration and visual acceptance pending.",
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 4699,
+      "triangles": 8336
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 36204,
+      "triangles": 56670
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 888,
+      "triangles": 1664
+    }
+  ],
+  "totalTriangles": 66670,
+  "opaqueDrawCalls": 3,
+  "materials": 2,
+  "fbxSha256": "82220891750c69f8c00a88f99ca27efcb45b136fb8dbcfd02066591b994ce843",
+  "geometryBoundsCocos": {
+    "min": [
+      -12.68873119354248,
+      -1.869998574256897,
+      -6.562605381011963
+    ],
+    "max": [
+      12.817967414855957,
+      2.4480278491973877,
+      6.163201332092285
+    ]
+  }
+}

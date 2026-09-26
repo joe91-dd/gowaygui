@@ -1,0 +1,43 @@
+{
+  "key": "fauna-28",
+  "name": "骷影咒灵",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Ghost Skull",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\ghost-skull-4167f2\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/f588a28f51e5bb9ab5ab869a05f465c9e84284b2f3f3bb83fa13b29d3a5b41ab_Ghost Skull.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "5c3eaeae575cba55103b7674a20457567b2b5cb013014e24068473633dae6177",
+  "bytes": 709844,
+  "animations": 8,
+  "displayName": "骷影咒灵",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 19492,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-28",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.1
+}

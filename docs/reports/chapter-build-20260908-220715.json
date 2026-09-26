@@ -1,0 +1,1318 @@
+{
+  "generatedAt": "2026-09-08T14:11:49.154Z",
+  "status": "passed",
+  "scope": "Actual built fifth-level coordinates and one-unit primary/backup legacy-layout recovery, approved model bytes and Cocos FBX metadata. Home c02 additionally checks the real library prefab, its mesh/material references, native geometry, five anchors and exact resources pack entries; home textures and six UI PNGs check actual image/texture imports and approved native bytes in this build. Full compatibility is separately tested.",
+  "evidenceBoundary": {
+    "approvedBytes": true,
+    "cocosImport": true,
+    "currentBundlePackaging": true,
+    "browserLoaded": "not tested by this offline verifier",
+    "browserVisible": "requires separate actual browser review",
+    "performance": "not tested",
+    "audio": "not tested",
+    "chapterCompletion": "not tested",
+    "note": "No asset success is inferred from compiled source strings. Home/PNG packaging proof reads UUID registration plus the specific import payload and native files; it does not instantiate or display them."
+  },
+  "verifierFiles": [
+    {
+      "path": "docs/reports/verify-chapter-build.cjs",
+      "bytes": 9287,
+      "sha256": "2c76c7d681a9bec03ffa8a2132c579d2f8067ec202b1c17947944ea8da99bdd6"
+    },
+    {
+      "path": "game/tools/chapter-asset-proof.cjs",
+      "bytes": 14476,
+      "sha256": "db366fa46e2d30280af02dfdbcf516f06b2d62b19417e83c6729b85c02276af4"
+    }
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "75fc23cbb9ecc78efeaf5c912e2bd20fd019e44f85255c9eba2a3f61ddfa973f",
+      "bytes": 22559,
+      "builtAt": "2026-09-08T14:08:42.973Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "237d96e86f88cba5a6dde3053e4a1ae5a8ffd100ba1d09240450b3b5993e50b5",
+      "bytes": 386380,
+      "builtAt": "2026-09-08T14:08:42.853Z"
+    }
+  ],
+  "resourcesBundleConfig": {
+    "path": "game/build/web-mobile/assets/resources/config.json",
+    "bytes": 94149,
+    "sha256": "2560f9478982713fe68c170d0ce23bfb365e8f8b69f8358a6e9739b9ba873265"
+  },
+  "bossSlots": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "z": -1.31
+    }
+  ],
+  "recovery": {
+    "tick": 7,
+    "balanceVersion": 2,
+    "primary": true,
+    "backup": true,
+    "readWrites": 0
+  },
+  "assets": [
+    {
+      "id": "leaf",
+      "manifest": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/promotion.json",
+      "manifestEvidence": {
+        "path": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/promotion.json",
+        "bytes": 4980,
+        "sha256": "0660863631958c1aa65613f0a42a5f06a1cbb976dcd59b32662b2efaf099ef39"
+      },
+      "files": [
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-turtle.fbx",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-turtle.fbx",
+          "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+          "bytes": 2538348
+        },
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-colour.png",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-colour.png",
+          "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+          "bytes": 970021
+        },
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-roughness.png",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-roughness.png",
+          "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+          "bytes": 22192
+        }
+      ],
+      "uuid": "f9a1a3ca-8b07-4a33-ab2b-8c33c636cb74",
+      "meshes": [
+        {
+          "name": "Torso_mesh.mesh",
+          "triangles": 29560
+        }
+      ],
+      "materials": [
+        "LeafAtlas_01"
+      ],
+      "prefabs": [
+        {
+          "name": "leaf-turtle.prefab",
+          "uuid": "f9a1a3ca-8b07-4a33-ab2b-8c33c636cb74@46e2a"
+        }
+      ],
+      "clips": [
+        {
+          "name": "LeafTurtle_Rig|fusion.animation",
+          "duration": 1.9666666984558105
+        },
+        {
+          "name": "LeafTurtle_Rig|attack.animation",
+          "duration": 0.8666666746139526
+        },
+        {
+          "name": "LeafTurtle_Rig|hit.animation",
+          "duration": 0.5666666626930237
+        },
+        {
+          "name": "LeafTurtle_Rig|idle.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "LeafTurtle_Rig|rest.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "LeafTurtle_Rig|skill.animation",
+          "duration": 1.3666666746139526
+        }
+      ]
+    },
+    {
+      "id": "bubble",
+      "manifest": "game/art-source/bubble-turtle/runtime-promotion.json",
+      "manifestEvidence": {
+        "path": "game/art-source/bubble-turtle/runtime-promotion.json",
+        "bytes": 2849,
+        "sha256": "2c4be25efb64288a83bb9ae1b0302eb701a5b7be1484c5a7cf01b25092bec3bb"
+      },
+      "files": [
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx",
+          "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+          "bytes": 2573804
+        },
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-colour.png",
+          "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+          "bytes": 972370
+        },
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-roughness.png",
+          "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+          "bytes": 22011
+        }
+      ],
+      "uuid": "1e8d7baf-bb51-4bc9-9eac-49b1d045976d",
+      "meshes": [
+        {
+          "name": "Torso_mesh.mesh",
+          "triangles": 29604
+        }
+      ],
+      "materials": [
+        "BubbleAtlas_01"
+      ],
+      "prefabs": [
+        {
+          "name": "bubble-turtle.prefab",
+          "uuid": "1e8d7baf-bb51-4bc9-9eac-49b1d045976d@7ae0f"
+        }
+      ],
+      "clips": [
+        {
+          "name": "BubbleTurtle_Rig|attack.animation",
+          "duration": 0.8666666746139526
+        },
+        {
+          "name": "BubbleTurtle_Rig|fusion.animation",
+          "duration": 1.9666666984558105
+        },
+        {
+          "name": "BubbleTurtle_Rig|hit.animation",
+          "duration": 0.5666666626930237
+        },
+        {
+          "name": "BubbleTurtle_Rig|idle.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "BubbleTurtle_Rig|rest.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "BubbleTurtle_Rig|skill.animation",
+          "duration": 1.3666666746139526
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "manifest": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/promotion-manifest.json",
+      "manifestEvidence": {
+        "path": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/promotion-manifest.json",
+        "bytes": 3484,
+        "sha256": "ed5ea892de1f2cfed53e1e4f7b2b5f8292543c6143c751a9f72f183ee68abb81"
+      },
+      "files": [
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-claw.fbx",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-claw.fbx",
+          "sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+          "bytes": 1187980
+        },
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-colour.png",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-colour.png",
+          "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+          "bytes": 68454
+        },
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-roughness.png",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-roughness.png",
+          "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+          "bytes": 6039
+        }
+      ],
+      "uuid": "9224e9ea-247e-4073-8823-334aa2108fac",
+      "meshes": [
+        {
+          "name": "Wide_sturdy_boss_body_mesh.mesh",
+          "triangles": 21208
+        }
+      ],
+      "materials": [
+        "GiantClaw_Toy_Atlas"
+      ],
+      "prefabs": [
+        {
+          "name": "giant-claw.prefab",
+          "uuid": "9224e9ea-247e-4073-8823-334aa2108fac@6bf80"
+        }
+      ],
+      "clips": [
+        {
+          "name": "GiantClaw_Rig|exit.animation",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "GiantClaw_Rig|attack.animation",
+          "duration": 0.5
+        },
+        {
+          "name": "GiantClaw_Rig|hit.animation",
+          "duration": 0.5
+        },
+        {
+          "name": "GiantClaw_Rig|idle.animation",
+          "duration": 2.799999952316284
+        },
+        {
+          "name": "GiantClaw_Rig|walk.animation",
+          "duration": 1.2000000476837158
+        }
+      ]
+    },
+    {
+      "id": "bossBay",
+      "manifest": "game/art-source/environment/boss-bay/candidate-02/promotion-manifest.json",
+      "manifestEvidence": {
+        "path": "game/art-source/environment/boss-bay/candidate-02/promotion-manifest.json",
+        "bytes": 3077,
+        "sha256": "04de3789b08bcbfefb2167931e1dfdfdb6ac780befda5cfd45937e8bbb7c0c5c"
+      },
+      "files": [
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/boss-bay.fbx",
+          "target": "game/assets/resources/environment/boss-bay/boss-bay.fbx",
+          "sha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+          "bytes": 4274172
+        },
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/island-colour.png",
+          "target": "game/assets/resources/environment/boss-bay/island-colour.png",
+          "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+          "bytes": 2727591
+        },
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/island-roughness.png",
+          "target": "game/assets/resources/environment/boss-bay/island-roughness.png",
+          "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+          "bytes": 40385
+        }
+      ],
+      "uuid": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18",
+      "meshes": [
+        {
+          "name": "Sanctuary_luminous_pearl_geometry.mesh",
+          "triangles": 2304
+        },
+        {
+          "name": "Continuous_grass_island_geometry.mesh",
+          "triangles": 9340
+        },
+        {
+          "name": "Coast_chamfer_rock_00_geometry.mesh",
+          "triangles": 43484
+        }
+      ],
+      "materials": [
+        "Island_atlas",
+        "Warm_pearl_and_lamps"
+      ],
+      "prefabs": [
+        {
+          "name": "boss-bay.prefab",
+          "uuid": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@5d37f"
+        }
+      ],
+      "clips": []
+    },
+    {
+      "id": "homeIsland",
+      "manifest": "game/art-source/environment/home-island/candidate-02/promotion-manifest.json",
+      "manifestEvidence": {
+        "path": "game/art-source/environment/home-island/candidate-02/promotion-manifest.json",
+        "bytes": 5918,
+        "sha256": "3151b261891754403d239ef88f6356baf0c134302c7d48f8743d219290046487"
+      },
+      "files": [
+        {
+          "source": "game/art-source/environment/home-island/candidate-02/home-island.fbx",
+          "target": "game/assets/resources/environment/home-island/home-island.fbx",
+          "sha256": "e15033c9068ed6e5ccdfe424be6d4a11490712a576ab8fccd05e3b392c300f14",
+          "bytes": 3846012
+        },
+        {
+          "source": "game/art-source/environment/home-island/candidate-02/island-colour.png",
+          "target": "game/assets/resources/environment/home-island/island-colour.png",
+          "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+          "bytes": 2727591
+        },
+        {
+          "source": "game/art-source/environment/home-island/candidate-02/island-roughness.png",
+          "target": "game/assets/resources/environment/home-island/island-roughness.png",
+          "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+          "bytes": 40385
+        }
+      ],
+      "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508",
+      "meshes": [
+        {
+          "name": "Home_coast_block_00_geometry.mesh",
+          "triangles": 33230
+        },
+        {
+          "name": "Home_warm_pearl_geometry.mesh",
+          "triangles": 1008
+        },
+        {
+          "name": "Home_continuous_grass_geometry.mesh",
+          "triangles": 4750
+        }
+      ],
+      "materials": [
+        "Island_atlas",
+        "Warm_pearl_and_lamps"
+      ],
+      "prefabs": [
+        {
+          "name": "home-island.prefab",
+          "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f"
+        }
+      ],
+      "clips": [],
+      "importAndBundleProof": {
+        "metadata": {
+          "path": "game/assets/resources/environment/home-island/home-island.fbx.meta",
+          "bytes": 8534,
+          "sha256": "c8ded3a57115152aedb7bd7402bb4725368753c227525acc6064f806a46d3c8e"
+        },
+        "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f",
+        "library": {
+          "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f.json",
+          "bytes": 18462,
+          "sha256": "6b9ba95f7b41cd8bfbab31c9a532f4a6761e68e97ac658ddf833b37f9d596676"
+        },
+        "bundle": {
+          "registration": {
+            "resourcePath": "environment/home-island/home-island/home-island",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f",
+            "type": "cc.Prefab",
+            "configKey": "ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f"
+          },
+          "import": {
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@2183f",
+            "type": "cc.Prefab",
+            "artifact": {
+              "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+              "bytes": 7025,
+              "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+            },
+            "pack": {
+              "id": "0d36c26da",
+              "index": 2,
+              "members": 6
+            }
+          }
+        },
+        "meshes": [
+          {
+            "name": "Home_coast_block_00_geometry.mesh",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@18650",
+            "triangles": 33230,
+            "library": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@18650.json",
+              "bytes": 1432,
+              "sha256": "bb92b9694067224c0aeb53164d6a09950431758b78797e7672ac6de9031de926"
+            },
+            "libraryNative": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@18650.bin",
+              "bytes": 1675284,
+              "sha256": "4448c5ffb08b088a23dee7ee4a0b644eb92ae5df99305eb0360a688be9ba85f2"
+            },
+            "bundle": {
+              "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@18650",
+              "type": "cc.Mesh",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+                "bytes": 7025,
+                "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+              },
+              "pack": {
+                "id": "0d36c26da",
+                "index": 1,
+                "members": 6
+              }
+            },
+            "bundleNative": {
+              "path": "game/build/web-mobile/assets/resources/native/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@18650.bin",
+              "bytes": 1675284,
+              "sha256": "4448c5ffb08b088a23dee7ee4a0b644eb92ae5df99305eb0360a688be9ba85f2"
+            }
+          },
+          {
+            "name": "Home_warm_pearl_geometry.mesh",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@74503",
+            "triangles": 1008,
+            "library": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@74503.json",
+              "bytes": 1424,
+              "sha256": "a0a77e46e5585055dcbf3204a42f6b668f75c45965e9df0a374f7c827711c5fb"
+            },
+            "libraryNative": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@74503.bin",
+              "bytes": 36000,
+              "sha256": "de3b01196bc8c44f76504e89d6cf11598195d5a165e95af023f61232a55aa79f"
+            },
+            "bundle": {
+              "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@74503",
+              "type": "cc.Mesh",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+                "bytes": 7025,
+                "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+              },
+              "pack": {
+                "id": "0d36c26da",
+                "index": 4,
+                "members": 6
+              }
+            },
+            "bundleNative": {
+              "path": "game/build/web-mobile/assets/resources/native/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@74503.bin",
+              "bytes": 36000,
+              "sha256": "de3b01196bc8c44f76504e89d6cf11598195d5a165e95af023f61232a55aa79f"
+            }
+          },
+          {
+            "name": "Home_continuous_grass_geometry.mesh",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@e1f28",
+            "triangles": 4750,
+            "library": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@e1f28.json",
+              "bytes": 1430,
+              "sha256": "bb517b8cbea31c64353c322d42b18990b6d8c641304acdca95e5a5a24123dcd4"
+            },
+            "libraryNative": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@e1f28.bin",
+              "bytes": 218772,
+              "sha256": "63767635e92af7607d780184f284d585a2155d23f7e353197b47d49a1b0d2026"
+            },
+            "bundle": {
+              "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@e1f28",
+              "type": "cc.Mesh",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+                "bytes": 7025,
+                "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+              },
+              "pack": {
+                "id": "0d36c26da",
+                "index": 5,
+                "members": 6
+              }
+            },
+            "bundleNative": {
+              "path": "game/build/web-mobile/assets/resources/native/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@e1f28.bin",
+              "bytes": 218772,
+              "sha256": "63767635e92af7607d780184f284d585a2155d23f7e353197b47d49a1b0d2026"
+            }
+          }
+        ],
+        "materials": [
+          {
+            "name": "Island_atlas.material",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@0ba3a",
+            "library": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@0ba3a.json",
+              "bytes": 1321,
+              "sha256": "22ac59cdff00053b26b80982b079a722bef77415485c6c99e85fb85799fdd1e6"
+            },
+            "bundle": {
+              "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@0ba3a",
+              "type": "cc.Material",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+                "bytes": 7025,
+                "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+              },
+              "pack": {
+                "id": "0d36c26da",
+                "index": 0,
+                "members": 6
+              }
+            }
+          },
+          {
+            "name": "Warm_pearl_and_lamps.material",
+            "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@39f21",
+            "library": {
+              "path": "game/library/ec/ec0eb942-8df7-4d6a-9a65-e248f440d508@39f21.json",
+              "bytes": 1346,
+              "sha256": "2b90dc9a3ae1ea8414dfc568decb130c297422a7a42fd3df3d203c24157ddc89"
+            },
+            "bundle": {
+              "uuid": "ec0eb942-8df7-4d6a-9a65-e248f440d508@39f21",
+              "type": "cc.Material",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/0d/0d36c26da.json",
+                "bytes": 7025,
+                "sha256": "cce6eef7145e6555f1362481178110b43b8cf1ebcdc553e9bbada8eaa64a434f"
+              },
+              "pack": {
+                "id": "0d36c26da",
+                "index": 3,
+                "members": 6
+              }
+            }
+          }
+        ],
+        "anchors": [
+          {
+            "name": "Display_stone",
+            "position": {
+              "__type__": "cc.Vec3",
+              "x": -0.800000011920929,
+              "y": 0.1599999964237213,
+              "z": 2.700000047683716
+            }
+          },
+          {
+            "name": "Display_spike",
+            "position": {
+              "__type__": "cc.Vec3",
+              "x": -2.4000000953674316,
+              "y": 0.1599999964237213,
+              "z": -0.25
+            }
+          },
+          {
+            "name": "Display_crystal",
+            "position": {
+              "__type__": "cc.Vec3",
+              "x": -3.1500000953674316,
+              "y": 0.1599999964237213,
+              "z": 2.1500000953674316
+            }
+          },
+          {
+            "name": "Display_leaf",
+            "position": {
+              "__type__": "cc.Vec3",
+              "x": 1.5499999523162842,
+              "y": 0.1599999964237213,
+              "z": 2.299999952316284
+            }
+          },
+          {
+            "name": "Display_bubble",
+            "position": {
+              "__type__": "cc.Vec3",
+              "x": 2.049999952316284,
+              "y": 0.1599999964237213,
+              "z": -0.30000001192092896
+            }
+          }
+        ]
+      },
+      "textureProofs": [
+        {
+          "source": "game/art-source/environment/home-island/candidate-02/island-colour.png",
+          "target": "game/assets/resources/environment/home-island/island-colour.png",
+          "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+          "bytes": 2727591,
+          "dimensions": {
+            "width": 2048,
+            "height": 1024,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/environment/home-island/island-colour.png.meta",
+            "bytes": 983,
+            "sha256": "7b6bdb4ee5424aa1d11a7011f57336629844d42a8e4b083ba9907b26eba78dc9"
+          },
+          "uuid": "f92b28c1-1df1-405d-aec4-df856dd505ea",
+          "library": {
+            "image": {
+              "path": "game/library/f9/f92b28c1-1df1-405d-aec4-df856dd505ea.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/f9/f92b28c1-1df1-405d-aec4-df856dd505ea.png",
+              "bytes": 2727591,
+              "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f"
+            },
+            "texture": {
+              "path": "game/library/f9/f92b28c1-1df1-405d-aec4-df856dd505ea@6c48a.json",
+              "bytes": 147,
+              "sha256": "5d72334c89056e108cbac40e8d21f312402339ab6d7aa77aa7efcbb547fc0822"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "environment/home-island/island-colour",
+              "uuid": "f92b28c1-1df1-405d-aec4-df856dd505ea",
+              "type": "cc.ImageAsset",
+              "configKey": "f92b28c1-1df1-405d-aec4-df856dd505ea"
+            },
+            "image": {
+              "uuid": "f92b28c1-1df1-405d-aec4-df856dd505ea",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/f9/f92b28c1-1df1-405d-aec4-df856dd505ea.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/f9/f92b28c1-1df1-405d-aec4-df856dd505ea.png",
+              "bytes": 2727591,
+              "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "environment/home-island/island-colour/texture",
+                "uuid": "f92b28c1-1df1-405d-aec4-df856dd505ea@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "f92b28c1-1df1-405d-aec4-df856dd505ea@6c48a"
+              },
+              "import": {
+                "uuid": "f92b28c1-1df1-405d-aec4-df856dd505ea@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 87,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "f92b28c1-1df1-405d-aec4-df856dd505ea"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "source": "game/art-source/environment/home-island/candidate-02/island-roughness.png",
+          "target": "game/assets/resources/environment/home-island/island-roughness.png",
+          "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+          "bytes": 40385,
+          "dimensions": {
+            "width": 2048,
+            "height": 1024,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/environment/home-island/island-roughness.png.meta",
+            "bytes": 986,
+            "sha256": "f8d58bd1e83687686b1517d5eb58053ee6ba5a8303183212f485835d1b75e23a"
+          },
+          "uuid": "264ae64f-0a51-4281-a46c-5aba6154989a",
+          "library": {
+            "image": {
+              "path": "game/library/26/264ae64f-0a51-4281-a46c-5aba6154989a.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/26/264ae64f-0a51-4281-a46c-5aba6154989a.png",
+              "bytes": 40385,
+              "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16"
+            },
+            "texture": {
+              "path": "game/library/26/264ae64f-0a51-4281-a46c-5aba6154989a@6c48a.json",
+              "bytes": 147,
+              "sha256": "1dc410d63faa8146d7a9f06326b7bc44050fcf73e31f6f7c0e87791494c4ae9a"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "environment/home-island/island-roughness",
+              "uuid": "264ae64f-0a51-4281-a46c-5aba6154989a",
+              "type": "cc.ImageAsset",
+              "configKey": "264ae64f-0a51-4281-a46c-5aba6154989a"
+            },
+            "image": {
+              "uuid": "264ae64f-0a51-4281-a46c-5aba6154989a",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/26/264ae64f-0a51-4281-a46c-5aba6154989a.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/26/264ae64f-0a51-4281-a46c-5aba6154989a.png",
+              "bytes": 40385,
+              "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "environment/home-island/island-roughness/texture",
+                "uuid": "264ae64f-0a51-4281-a46c-5aba6154989a@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "264ae64f-0a51-4281-a46c-5aba6154989a@6c48a"
+              },
+              "import": {
+                "uuid": "264ae64f-0a51-4281-a46c-5aba6154989a@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 39,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "264ae64f-0a51-4281-a46c-5aba6154989a"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "uiAssets": [
+    {
+      "id": "panels",
+      "manifest": "game/art-source/ui/panels/runtime-promotion.json",
+      "manifestEvidence": {
+        "path": "game/art-source/ui/panels/runtime-promotion.json",
+        "bytes": 1348,
+        "sha256": "70529d81155bad1d4f20b904e72f3c00db537f2967d8cfdbe1dd4ee8c9a57c71"
+      },
+      "images": [
+        {
+          "source": "game/art-source/ui/panels/candidate-02/panels-atlas.png",
+          "target": "game/assets/resources/ui/panels/panels-atlas.png",
+          "sha256": "79fe5dd948b2cfb703d94efe8239183c27ac895ede1db9206600adf88ca2c1e7",
+          "bytes": 49349,
+          "dimensions": {
+            "width": 512,
+            "height": 1536,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/panels/panels-atlas.png.meta",
+            "bytes": 982,
+            "sha256": "d76795ed83399a6c1b596a9fa4964cb223703809d854174acd94870caf61893c"
+          },
+          "uuid": "91b61144-bbdc-45d8-b0c1-e7fc0893137a",
+          "library": {
+            "image": {
+              "path": "game/library/91/91b61144-bbdc-45d8-b0c1-e7fc0893137a.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/91/91b61144-bbdc-45d8-b0c1-e7fc0893137a.png",
+              "bytes": 49349,
+              "sha256": "79fe5dd948b2cfb703d94efe8239183c27ac895ede1db9206600adf88ca2c1e7"
+            },
+            "texture": {
+              "path": "game/library/91/91b61144-bbdc-45d8-b0c1-e7fc0893137a@6c48a.json",
+              "bytes": 147,
+              "sha256": "a9631b8e5fb9f62ff1f923452e0ef478f420908e3591635d03d4078dbe97455b"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/panels/panels-atlas",
+              "uuid": "91b61144-bbdc-45d8-b0c1-e7fc0893137a",
+              "type": "cc.ImageAsset",
+              "configKey": "91b61144-bbdc-45d8-b0c1-e7fc0893137a"
+            },
+            "image": {
+              "uuid": "91b61144-bbdc-45d8-b0c1-e7fc0893137a",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/91/91b61144-bbdc-45d8-b0c1-e7fc0893137a.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/91/91b61144-bbdc-45d8-b0c1-e7fc0893137a.png",
+              "bytes": 49349,
+              "sha256": "79fe5dd948b2cfb703d94efe8239183c27ac895ede1db9206600adf88ca2c1e7"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/panels/panels-atlas/texture",
+                "uuid": "91b61144-bbdc-45d8-b0c1-e7fc0893137a@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "91b61144-bbdc-45d8-b0c1-e7fc0893137a@6c48a"
+              },
+              "import": {
+                "uuid": "91b61144-bbdc-45d8-b0c1-e7fc0893137a@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 38,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "91b61144-bbdc-45d8-b0c1-e7fc0893137a"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "portraits",
+      "manifest": "game/art-source/ui/portraits/runtime-promotion.json",
+      "manifestEvidence": {
+        "path": "game/art-source/ui/portraits/runtime-promotion.json",
+        "bytes": 3221,
+        "sha256": "59cfc1bff6ef96e6c4afce239f13d4f4b81cda3e7548af6be497489955704e9d"
+      },
+      "images": [
+        {
+          "source": "game/art-source/ui/portraits/candidate-01/portrait-stone.png",
+          "target": "game/assets/resources/ui/portraits/portrait-stone.png",
+          "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4",
+          "bytes": 136544,
+          "resourcePath": "ui/portraits/portrait-stone",
+          "dimensions": {
+            "width": 384,
+            "height": 384,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/portraits/portrait-stone.png.meta",
+            "bytes": 984,
+            "sha256": "a77949e48438a81a854cd0fdc802b27630e08163692319302a0fca06d42ab5f7"
+          },
+          "uuid": "80af5940-e0ef-4ecf-9a98-6c268f00a96a",
+          "library": {
+            "image": {
+              "path": "game/library/80/80af5940-e0ef-4ecf-9a98-6c268f00a96a.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/80/80af5940-e0ef-4ecf-9a98-6c268f00a96a.png",
+              "bytes": 136544,
+              "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4"
+            },
+            "texture": {
+              "path": "game/library/80/80af5940-e0ef-4ecf-9a98-6c268f00a96a@6c48a.json",
+              "bytes": 147,
+              "sha256": "722209f32725bb59be510746066755411153286e1350557bbe185508b0d03d57"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/portraits/portrait-stone",
+              "uuid": "80af5940-e0ef-4ecf-9a98-6c268f00a96a",
+              "type": "cc.ImageAsset",
+              "configKey": "80af5940-e0ef-4ecf-9a98-6c268f00a96a"
+            },
+            "image": {
+              "uuid": "80af5940-e0ef-4ecf-9a98-6c268f00a96a",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/80/80af5940-e0ef-4ecf-9a98-6c268f00a96a.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/80/80af5940-e0ef-4ecf-9a98-6c268f00a96a.png",
+              "bytes": 136544,
+              "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/portraits/portrait-stone/texture",
+                "uuid": "80af5940-e0ef-4ecf-9a98-6c268f00a96a@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "80af5940-e0ef-4ecf-9a98-6c268f00a96a@6c48a"
+              },
+              "import": {
+                "uuid": "80af5940-e0ef-4ecf-9a98-6c268f00a96a@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 37,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "80af5940-e0ef-4ecf-9a98-6c268f00a96a"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "source": "game/art-source/ui/portraits/candidate-01/portrait-spike.png",
+          "target": "game/assets/resources/ui/portraits/portrait-spike.png",
+          "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792",
+          "bytes": 160876,
+          "resourcePath": "ui/portraits/portrait-spike",
+          "dimensions": {
+            "width": 384,
+            "height": 384,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/portraits/portrait-spike.png.meta",
+            "bytes": 984,
+            "sha256": "a406a93df00e1afffdc566cf75ac8ed85123c2e2aaedef0f3f498bcf2f5ad9f8"
+          },
+          "uuid": "939ac311-fa1b-41ae-adf9-8d5edce0fc67",
+          "library": {
+            "image": {
+              "path": "game/library/93/939ac311-fa1b-41ae-adf9-8d5edce0fc67.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/93/939ac311-fa1b-41ae-adf9-8d5edce0fc67.png",
+              "bytes": 160876,
+              "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792"
+            },
+            "texture": {
+              "path": "game/library/93/939ac311-fa1b-41ae-adf9-8d5edce0fc67@6c48a.json",
+              "bytes": 147,
+              "sha256": "03ce6ba0c7fdd3020c8d12b3d720dcda335cbebdb8fe6aa4f6c1792d13d9a0cb"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/portraits/portrait-spike",
+              "uuid": "939ac311-fa1b-41ae-adf9-8d5edce0fc67",
+              "type": "cc.ImageAsset",
+              "configKey": "939ac311-fa1b-41ae-adf9-8d5edce0fc67"
+            },
+            "image": {
+              "uuid": "939ac311-fa1b-41ae-adf9-8d5edce0fc67",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/93/939ac311-fa1b-41ae-adf9-8d5edce0fc67.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/93/939ac311-fa1b-41ae-adf9-8d5edce0fc67.png",
+              "bytes": 160876,
+              "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/portraits/portrait-spike/texture",
+                "uuid": "939ac311-fa1b-41ae-adf9-8d5edce0fc67@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "939ac311-fa1b-41ae-adf9-8d5edce0fc67@6c48a"
+              },
+              "import": {
+                "uuid": "939ac311-fa1b-41ae-adf9-8d5edce0fc67@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 47,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "939ac311-fa1b-41ae-adf9-8d5edce0fc67"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "source": "game/art-source/ui/portraits/candidate-01/portrait-crystal.png",
+          "target": "game/assets/resources/ui/portraits/portrait-crystal.png",
+          "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b",
+          "bytes": 152627,
+          "resourcePath": "ui/portraits/portrait-crystal",
+          "dimensions": {
+            "width": 384,
+            "height": 384,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/portraits/portrait-crystal.png.meta",
+            "bytes": 986,
+            "sha256": "6790160e0f3460b3955c139efbd1cfad5e381a91ba80cd13ed4b99012095532e"
+          },
+          "uuid": "03604575-663e-4cff-a736-cc7a33ec3559",
+          "library": {
+            "image": {
+              "path": "game/library/03/03604575-663e-4cff-a736-cc7a33ec3559.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/03/03604575-663e-4cff-a736-cc7a33ec3559.png",
+              "bytes": 152627,
+              "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b"
+            },
+            "texture": {
+              "path": "game/library/03/03604575-663e-4cff-a736-cc7a33ec3559@6c48a.json",
+              "bytes": 147,
+              "sha256": "9fa60a0b21afb88b2d16d2543159e9160999e5030b697dd66e58d8f43650de2b"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/portraits/portrait-crystal",
+              "uuid": "03604575-663e-4cff-a736-cc7a33ec3559",
+              "type": "cc.ImageAsset",
+              "configKey": "03604575-663e-4cff-a736-cc7a33ec3559"
+            },
+            "image": {
+              "uuid": "03604575-663e-4cff-a736-cc7a33ec3559",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/03/03604575-663e-4cff-a736-cc7a33ec3559.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/03/03604575-663e-4cff-a736-cc7a33ec3559.png",
+              "bytes": 152627,
+              "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/portraits/portrait-crystal/texture",
+                "uuid": "03604575-663e-4cff-a736-cc7a33ec3559@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "03604575-663e-4cff-a736-cc7a33ec3559@6c48a"
+              },
+              "import": {
+                "uuid": "03604575-663e-4cff-a736-cc7a33ec3559@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 55,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "03604575-663e-4cff-a736-cc7a33ec3559"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "source": "game/art-source/ui/portraits/candidate-01/portrait-leaf.png",
+          "target": "game/assets/resources/ui/portraits/portrait-leaf.png",
+          "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e",
+          "bytes": 147421,
+          "resourcePath": "ui/portraits/portrait-leaf",
+          "dimensions": {
+            "width": 384,
+            "height": 384,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/portraits/portrait-leaf.png.meta",
+            "bytes": 983,
+            "sha256": "d167f350ae0ee847009a8ff56054f4864fb004aa596bef51c392a840790ce87e"
+          },
+          "uuid": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc",
+          "library": {
+            "image": {
+              "path": "game/library/02/02d8802e-f01f-4ed8-970b-dc4edbba9cbc.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/02/02d8802e-f01f-4ed8-970b-dc4edbba9cbc.png",
+              "bytes": 147421,
+              "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e"
+            },
+            "texture": {
+              "path": "game/library/02/02d8802e-f01f-4ed8-970b-dc4edbba9cbc@6c48a.json",
+              "bytes": 147,
+              "sha256": "cee1b843744733b207497d98a64197eea89ff4331cc4f2abde934164f049a7d8"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/portraits/portrait-leaf",
+              "uuid": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc",
+              "type": "cc.ImageAsset",
+              "configKey": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc"
+            },
+            "image": {
+              "uuid": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/02/02d8802e-f01f-4ed8-970b-dc4edbba9cbc.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/02/02d8802e-f01f-4ed8-970b-dc4edbba9cbc.png",
+              "bytes": 147421,
+              "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/portraits/portrait-leaf/texture",
+                "uuid": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc@6c48a"
+              },
+              "import": {
+                "uuid": "02d8802e-f01f-4ed8-970b-dc4edbba9cbc@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 4,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "02d8802e-f01f-4ed8-970b-dc4edbba9cbc"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "source": "game/art-source/ui/portraits/candidate-01/portrait-bubble.png",
+          "target": "game/assets/resources/ui/portraits/portrait-bubble.png",
+          "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411",
+          "bytes": 133637,
+          "resourcePath": "ui/portraits/portrait-bubble",
+          "dimensions": {
+            "width": 384,
+            "height": 384,
+            "bitDepth": 8,
+            "colorType": 6
+          },
+          "metadata": {
+            "path": "game/assets/resources/ui/portraits/portrait-bubble.png.meta",
+            "bytes": 985,
+            "sha256": "4cc0dfcc32707c0410aafbae006edb58d5c30bfbbe11b70bc71fe82ae49ce018"
+          },
+          "uuid": "d690756c-523f-4edf-80e3-95c59e4516ea",
+          "library": {
+            "image": {
+              "path": "game/library/d6/d690756c-523f-4edf-80e3-95c59e4516ea.json",
+              "bytes": 92,
+              "sha256": "e8d0b3e69929e9e76a78cb8d57b785dca71a254d1cfe432a4d0c546b8b49c4b0"
+            },
+            "native": {
+              "path": "game/library/d6/d690756c-523f-4edf-80e3-95c59e4516ea.png",
+              "bytes": 133637,
+              "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411"
+            },
+            "texture": {
+              "path": "game/library/d6/d690756c-523f-4edf-80e3-95c59e4516ea@6c48a.json",
+              "bytes": 147,
+              "sha256": "86172cdc54c54d7bb8cbff31c5974e50bca598da99406f671c896e25583a6bc8"
+            }
+          },
+          "bundle": {
+            "registration": {
+              "resourcePath": "ui/portraits/portrait-bubble",
+              "uuid": "d690756c-523f-4edf-80e3-95c59e4516ea",
+              "type": "cc.ImageAsset",
+              "configKey": "d690756c-523f-4edf-80e3-95c59e4516ea"
+            },
+            "image": {
+              "uuid": "d690756c-523f-4edf-80e3-95c59e4516ea",
+              "type": "cc.ImageAsset",
+              "artifact": {
+                "path": "game/build/web-mobile/assets/resources/import/d6/d690756c-523f-4edf-80e3-95c59e4516ea.json",
+                "bytes": 72,
+                "sha256": "60928632edcd22b5694a8c22de01de0d2cbb6f374103242a99a4394cc767f44d"
+              }
+            },
+            "native": {
+              "path": "game/build/web-mobile/assets/resources/native/d6/d690756c-523f-4edf-80e3-95c59e4516ea.png",
+              "bytes": 133637,
+              "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411"
+            },
+            "texture": {
+              "registration": {
+                "resourcePath": "ui/portraits/portrait-bubble/texture",
+                "uuid": "d690756c-523f-4edf-80e3-95c59e4516ea@6c48a",
+                "type": "cc.Texture2D",
+                "configKey": "d690756c-523f-4edf-80e3-95c59e4516ea@6c48a"
+              },
+              "import": {
+                "uuid": "d690756c-523f-4edf-80e3-95c59e4516ea@6c48a",
+                "type": "cc.Texture2D",
+                "artifact": {
+                  "path": "game/build/web-mobile/assets/resources/import/0c/0c9c9c2a0.json",
+                  "bytes": 5394,
+                  "sha256": "c0c1aa6540ae1ddc433686143bf94fc4288beb5610f7f17ff03416cb0fa3b242"
+                },
+                "pack": {
+                  "id": "0c9c9c2a0",
+                  "index": 71,
+                  "members": 89
+                },
+                "imageUuids": [
+                  "d690756c-523f-4edf-80e3-95c59e4516ea"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

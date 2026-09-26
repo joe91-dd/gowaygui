@@ -1,0 +1,29 @@
+✔ 收藏每页六张整卡，13只可完整翻页；大头像和标题可读，查看返回不改收藏或磁盘 (758.1221ms)
+✔ 选队六卡跨页保留选择顺序和五只上限，取消只返回选关而不修改存档 (19.3139ms)
+✔ 选队出发提交一次真实入场，连续派发旧出发事件不重复扣体力或改出战名单 (14.6293ms)
+✔ 12个真实技能都在技能页可见且可点说明，关闭说明保留技能页，浏览全程不改技能或存档 (15.1763ms)
+✔ 历史详情仅供查看且返回历史；当前收藏培养仍提交一次真实训练，不更换任何技能 (17.1547ms)
+✔ 选关、设置与体力的主要操作使用视口内大命中区，设置和返回不改变收藏 (16.2891ms)
+✔ 返回首页加载期间旧卡片/翻页/出发/奖励事件既不改状态也不覆盖页面，失效节点不响确认音 (21.6677ms)
+✔ 技能书入口仅属永久收藏；空库存不补发，历史详情及迟到入口均不能打开学习页 (11.02ms)
+✔ 真实技能书库存按六张分页，第七本可访问且书卡完整可点击，翻页不会增加库存 (21.9787ms)
+✔ 已经拥有或职业不兼容的书不可点，进行中的冒险禁用入口与所有学习书卡 (14.7496ms)
+✔ 查看学习风险与取消不预抽或提交，取消面板的旧确认回调不会学习 (11.0495ms)
+✔ 确认学习使用真实事务只消耗一本，结果及十二技能页来自提交后快照，旧确认不重复消费 (16.7686ms)
+✔ 提交已落盘但回执丢失时，原确认面板重试复用命令，仅一次随机覆盖与库存消耗 (14.772ms)
+✔ 技能书确认在后台、隐藏祖先或待销毁节点时不可学习，正常恢复后才接受一次确认 (13.8978ms)
+✔ V0.6 outside fusion UI resumes fixed C and consumes exactly two after explicit keep confirmation; old controls are inert (72.6035ms)
+✔ V07 book learning keeps all twelve current skills visible with the persisted replacement on the same page (19.6447ms)
+✔ V0.6 rename input changes only the selected permanent name after explicit save (17.7612ms)
+✔ V0.6 default team covers the five available roles despite duplicate individuals, but manual duplicates remain allowed (16.6403ms)
+✔ V07 actual community pages expose AI, three assists, borrowing and a persistent local chat reply (73.9916ms)
+✔ V07 actual market buys one finite AI book and stale purchase callback cannot buy it twice; hiding also removes public arena row (107.7722ms)
+✔ V07 actual challenge controller pauses, resumes and parks a changed raid turtle without reviving or accepting destroyed callbacks (227.5646ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1840.2011

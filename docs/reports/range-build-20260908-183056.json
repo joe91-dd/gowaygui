@@ -1,0 +1,144 @@
+{
+  "generatedAt": "2026-09-08T10:53:08.953Z",
+  "status": "passed",
+  "scope": "Actual built JavaScript opening-contact check and actual Cocos elite import. Does not verify browser visuals, audio, full chapter or performance.",
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "75fc23cbb9ecc78efeaf5c912e2bd20fd019e44f85255c9eba2a3f61ddfa973f",
+      "bytes": 22559,
+      "builtAt": "2026-09-08T10:38:48.530Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "fc469035ede281e76bb1e85e1ef0d72ebe54611b8ff0176edad41eec88cb4864",
+      "bytes": 339156,
+      "builtAt": "2026-09-08T10:38:48.132Z"
+    }
+  ],
+  "ranges": {
+    "stone": 1.2,
+    "spike": 4.8,
+    "crystal": 4.6,
+    "leaf": 4.5,
+    "bubble": 4.6
+  },
+  "supportRanges": {
+    "encourage": 4.5,
+    "share": 4.5
+  },
+  "opening": {
+    "balanceVersion": 2,
+    "tick": 47,
+    "blocked": {
+      "id": "enemy-2-1",
+      "kind": "runner",
+      "x": -5.429875599465175,
+      "z": -0.10746889986629393,
+      "distance": 3.680000000000003,
+      "hp": 30.18400000000001,
+      "maxHp": 95.87200000000001,
+      "attack": 10.947145746723209,
+      "armor": 0,
+      "resist": 0,
+      "speed": 1.6,
+      "range": 0.8,
+      "interval": 1,
+      "leak": 1,
+      "alive": true,
+      "statuses": [],
+      "nextAttackTick": 67,
+      "actionUntilTick": 0,
+      "attackCount": 1,
+      "controlWindowUntilTick": 0,
+      "controlCount": 0,
+      "summoned": false,
+      "blockedBy": "stone"
+    },
+    "crystalDirectDamage": {
+      "id": 5,
+      "tick": 46,
+      "type": "damage",
+      "sourceId": "crystal",
+      "targetId": "enemy-2-1",
+      "amount": 42.84,
+      "critical": false,
+      "secondary": false,
+      "x": -5.429875599465175,
+      "z": -0.10746889986629393
+    }
+  },
+  "elite": {
+    "manifest": "game/art-source/enemies/shell-carrier/candidate-02/promotion-manifest.json",
+    "files": [
+      {
+        "path": "game/assets/resources/models/enemies/shell-carrier/carrier-colour.png",
+        "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+        "bytes": 70350
+      },
+      {
+        "path": "game/assets/resources/models/enemies/shell-carrier/carrier-roughness.png",
+        "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+        "bytes": 6039
+      },
+      {
+        "path": "game/assets/resources/models/enemies/shell-carrier/shell-carrier.fbx",
+        "sha256": "876bdf8f22583ea8e9f14fff0e07ce906a9cffbbb72ef11b2b01157685983aea",
+        "bytes": 1105180
+      }
+    ],
+    "uuid": "2f3f2664-cf67-432a-8ea8-50d238ebf5f2",
+    "meshes": [
+      {
+        "name": "Rounded_carrier_body_mesh.mesh",
+        "triangles": 15088
+      }
+    ],
+    "clips": [
+      {
+        "name": "ShellCarrier_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 1.2999999523162842
+        }
+      },
+      {
+        "name": "ShellCarrier_Rig|exit.animation",
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        }
+      },
+      {
+        "name": "ShellCarrier_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.6000000238418579
+        }
+      },
+      {
+        "name": "ShellCarrier_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.799999952316284
+        }
+      },
+      {
+        "name": "ShellCarrier_Rig|walk.animation",
+        "span": {
+          "from": 0,
+          "to": 1.0666667222976685
+        }
+      }
+    ],
+    "materials": [
+      "ShellCarrier_Toy_Atlas.material"
+    ],
+    "prefabs": [
+      {
+        "uuid": "2f3f2664-cf67-432a-8ea8-50d238ebf5f2@92831",
+        "name": "shell-carrier.prefab"
+      }
+    ]
+  }
+}

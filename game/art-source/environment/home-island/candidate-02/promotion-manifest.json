@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "status": "runtime-home-c02-candidate-promoted-pending-cocos-import-and-acceptance",
+  "promotedAtUtc": "2026-09-08T13:17:09.366566+00:00",
+  "authorization": "Root actually reviewed both c02 five-turtle views, approved this version without c03, and explicitly authorized exactly three runtime environment files.",
+  "sourceFreezeSha256": "75bb4636ed746c7655413d0e93311cdbd5e6c936e3389acc2a3215d693c1c60a",
+  "sourceProvenanceSha256": "46afad95b6aca2e4bca7df24f5584be7f0fbfea4e616cf2f3544ca3eed728ca8",
+  "expectedResourcesPrefabPath": "environment/home-island/home-island/home-island",
+  "resourcesTexturePaths": [
+    "environment/home-island/island-colour/texture",
+    "environment/home-island/island-roughness/texture"
+  ],
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 3140,
+      "triangles": 4750
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 19200,
+      "triangles": 33230
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 532,
+      "triangles": 1008
+    }
+  ],
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "totalTriangles": 38988,
+  "waterY": -0.72,
+  "displaySurfaceY": 0.16,
+  "displayAnchors": [
+    {
+      "name": "Display_stone",
+      "role": "stone",
+      "x": -0.8,
+      "y": 0.16,
+      "z": 2.7,
+      "yawDegrees": 8
+    },
+    {
+      "name": "Display_spike",
+      "role": "spike",
+      "x": -2.4,
+      "y": 0.16,
+      "z": -0.25,
+      "yawDegrees": 12
+    },
+    {
+      "name": "Display_crystal",
+      "role": "crystal",
+      "x": -3.15,
+      "y": 0.16,
+      "z": 2.15,
+      "yawDegrees": 15
+    },
+    {
+      "name": "Display_leaf",
+      "role": "leaf",
+      "x": 1.55,
+      "y": 0.16,
+      "z": 2.3,
+      "yawDegrees": -8
+    },
+    {
+      "name": "Display_bubble",
+      "role": "bubble",
+      "x": 2.05,
+      "y": 0.16,
+      "z": -0.3,
+      "yawDegrees": -12
+    }
+  ],
+  "cameraCandidate": {
+    "position": [
+      1.8,
+      8.2,
+      12.8
+    ],
+    "target": [
+      -0.45,
+      0.9,
+      0
+    ],
+    "baseVerticalFovDegrees": 38
+  },
+  "houseDoor": [
+    0.05,
+    0.24,
+    -1.18
+  ],
+  "pearl": [
+    0.05,
+    3.11,
+    -2.37
+  ],
+  "nominalFootprintXZ": [
+    12,
+    8
+  ],
+  "actualBoundsCocos": {
+    "min": [
+      -7.505000114440918,
+      -1.0649992227554321,
+      -4.322445392608643
+    ],
+    "max": [
+      6.586040019989014,
+      4.285477161407471,
+      4.419971466064453
+    ]
+  },
+  "fiveTurtleReferences": [
+    {
+      "role": "stone",
+      "path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+      "scale": 0.65,
+      "anchor": [
+        -0.8,
+        0.16,
+        2.7
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "spike",
+      "path": "game/assets/resources/models/spike-turtle/spike-turtle.fbx",
+      "sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+      "scale": 0.65,
+      "anchor": [
+        -2.4,
+        0.16,
+        -0.25
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "crystal",
+      "path": "game/assets/resources/models/crystal-turtle/crystal-turtle.fbx",
+      "sha256": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+      "scale": 0.65,
+      "anchor": [
+        -3.15,
+        0.16,
+        2.15
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "leaf",
+      "path": "game/assets/resources/models/leaf-turtle/leaf-turtle.fbx",
+      "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+      "scale": 0.65,
+      "anchor": [
+        1.55,
+        0.16,
+        2.3
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "bubble",
+      "path": "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx",
+      "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+      "scale": 0.65,
+      "anchor": [
+        2.05,
+        0.16,
+        -0.3
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    }
+  ],
+  "referenceScope": "Only offline instances; no characters or armatures are in the environment FBX.",
+  "files": [
+    {
+      "source": "game/art-source/environment/home-island/candidate-02/home-island.fbx",
+      "destination": "game/assets/resources/environment/home-island/home-island.fbx",
+      "sha256": "e15033c9068ed6e5ccdfe424be6d4a11490712a576ab8fccd05e3b392c300f14",
+      "bytes": 3846012
+    },
+    {
+      "source": "game/art-source/environment/home-island/candidate-02/island-colour.png",
+      "destination": "game/assets/resources/environment/home-island/island-colour.png",
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+      "bytes": 2727591
+    },
+    {
+      "source": "game/art-source/environment/home-island/candidate-02/island-roughness.png",
+      "destination": "game/assets/resources/environment/home-island/island-roughness.png",
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+      "bytes": 40385
+    }
+  ],
+  "metasOrUuidsAuthored": false,
+  "cocosLaunched": false,
+  "gameEntryWorldLightingCoreModified": false,
+  "pending": [
+    "Root HomeWorld/GameEntry wiring and Cocos import/build",
+    "Actual UI framing, animation/contact, materials/culling and resource lifecycle",
+    "Actual frame-rate/device performance acceptance"
+  ]
+}

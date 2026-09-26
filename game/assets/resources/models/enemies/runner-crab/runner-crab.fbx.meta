@@ -1,0 +1,406 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin"
+  ],
+  "subMetas": {
+    "29144": {
+      "importer": "gltf-mesh",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@29144",
+      "displayName": "",
+      "id": "29144",
+      "name": "Rounded_coral_carapace_mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 10828
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "93099": {
+      "importer": "gltf-material",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@93099",
+      "displayName": "",
+      "id": "93099",
+      "name": "RunnerCrab_Toy_Atlas.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b1131": {
+      "importer": "gltf-animation",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@b1131",
+      "displayName": "",
+      "id": "b1131",
+      "name": "RunnerCrab_Rig|attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "6fd81": {
+      "importer": "gltf-animation",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@6fd81",
+      "displayName": "",
+      "id": "6fd81",
+      "name": "RunnerCrab_Rig|exit.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.800000011920929
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "bc8f8": {
+      "importer": "gltf-animation",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@bc8f8",
+      "displayName": "",
+      "id": "bc8f8",
+      "name": "RunnerCrab_Rig|hit.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "99deb": {
+      "importer": "gltf-animation",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@99deb",
+      "displayName": "",
+      "id": "99deb",
+      "name": "RunnerCrab_Rig|idle.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "686aa": {
+      "importer": "gltf-animation",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@686aa",
+      "displayName": "",
+      "id": "686aa",
+      "name": "RunnerCrab_Rig|walk.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4000000059604645
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 16
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b02": {
+      "importer": "gltf-embeded-image",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@48b02",
+      "displayName": "",
+      "id": "48b02",
+      "name": "base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "cf2e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@cf2e8",
+      "displayName": "",
+      "id": "cf2e8",
+      "name": "roughness_texture.image",
+      "userData": {
+        "gltfIndex": 1,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "38befba4-4bff-4a0e-8f87-195941b7306a@48b02"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75fa1": {
+      "importer": "texture",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@75fa1",
+      "displayName": "",
+      "id": "75fa1",
+      "name": "roughness_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "38befba4-4bff-4a0e-8f87-195941b7306a@cf2e8"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "382aa": {
+      "importer": "gltf-scene",
+      "uuid": "38befba4-4bff-4a0e-8f87-195941b7306a@382aa",
+      "displayName": "",
+      "id": "382aa",
+      "name": "runner-crab.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "38befba4-4bff-4a0e-8f87-195941b7306a@48b02"
+      },
+      {
+        "name": "roughness_texture",
+        "uri": "38befba4-4bff-4a0e-8f87-195941b7306a@cf2e8"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "RunnerCrab_Rig|attack",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RunnerCrab_Rig|attack",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2,
+            "previousId": "b1131"
+          }
+        ]
+      },
+      {
+        "name": "RunnerCrab_Rig|exit",
+        "duration": 0.800000011920929,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RunnerCrab_Rig|exit",
+            "from": 0,
+            "to": 0.800000011920929,
+            "wrapMode": 2,
+            "previousId": "6fd81"
+          }
+        ]
+      },
+      {
+        "name": "RunnerCrab_Rig|hit",
+        "duration": 0.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RunnerCrab_Rig|hit",
+            "from": 0,
+            "to": 0.5,
+            "wrapMode": 2,
+            "previousId": "bc8f8"
+          }
+        ]
+      },
+      {
+        "name": "RunnerCrab_Rig|idle",
+        "duration": 2,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RunnerCrab_Rig|idle",
+            "from": 0,
+            "to": 2,
+            "wrapMode": 2,
+            "previousId": "99deb"
+          }
+        ]
+      },
+      {
+        "name": "RunnerCrab_Rig|walk",
+        "duration": 0.4000000059604645,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "RunnerCrab_Rig|walk",
+            "from": 0,
+            "to": 0.4000000059604645,
+            "wrapMode": 2,
+            "previousId": "686aa"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "38befba4-4bff-4a0e-8f87-195941b7306a@29144"
+      ],
+      "skeletons": [
+        "38befba4-4bff-4a0e-8f87-195941b7306a@438fe"
+      ],
+      "textures": [
+        "38befba4-4bff-4a0e-8f87-195941b7306a@7d6ab",
+        "38befba4-4bff-4a0e-8f87-195941b7306a@75fa1"
+      ],
+      "materials": [
+        "38befba4-4bff-4a0e-8f87-195941b7306a@93099"
+      ],
+      "scenes": [
+        "38befba4-4bff-4a0e-8f87-195941b7306a@382aa"
+      ]
+    }
+  }
+}

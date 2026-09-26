@@ -1,0 +1,80 @@
+{
+  "status": "Technical offline review complete; runtime candidate authorized by parent, not final user art acceptance",
+  "approved_shape_frozen": true,
+  "parent_runtime_candidate_authorization": true,
+  "authorization": "Parent actually viewed c02 front/three-quarter and approved this frozen c02 as a runtime candidate; authorized promotion after technical QA.",
+  "technical_review_complete": true,
+  "all_ten_images_viewed": true,
+  "approved_views_rerendered": false,
+  "reviewed_files": [
+    {
+      "file": "render-front.png",
+      "observed": "Blue crystal contour and attentive green eyes preserved; high-contrast white wireframe removed."
+    },
+    {
+      "file": "render-three-quarter.png",
+      "observed": "Wider embedded crystal roots; clear blue facets and deliberate opaque reflective surface."
+    },
+    {
+      "file": "render-side.png",
+      "observed": "Face stays clear of front crystal roots; all grounded limbs present; some side roots remain stout column shapes."
+    },
+    {
+      "file": "render-battle.png",
+      "observed": "Central high crystal and blue perimeter readable from battle angle; exposed deep-blue shell areas remain."
+    },
+    {
+      "file": "animation-attack-08-side.png",
+      "observed": "Small focus/head raise, grounded short limbs, no visible forward-face intersection."
+    },
+    {
+      "file": "animation-attack-13-three-quarter.png",
+      "observed": "Release posture and shell pulse visible; mesh/UV continuity retained."
+    },
+    {
+      "file": "animation-skill-20-three-quarter.png",
+      "observed": "Raised focus and larger shell pulse; no detached crystals or visible face/leg intersection."
+    },
+    {
+      "file": "animation-rest-36-three-quarter.png",
+      "observed": "Resting neck/crouch subtly different, eyes still readable, feet grounded."
+    },
+    {
+      "file": "animation-hit-04-three-quarter.png",
+      "observed": "Recoil remains coherent; face, limbs and shell visibly stay together."
+    },
+    {
+      "file": "animation-fusion-23-three-quarter.png",
+      "observed": "Small jump with raised feet and ground gap intentional; coherent pose with no missing texture."
+    }
+  ],
+  "numerical_checks": {
+    "six_fbx_clips": true,
+    "normalized_weights": true,
+    "source_two_packed_textures": true,
+    "atlas_rebuild_byte_identical": true,
+    "c01_non_shell_mesh_uv_weights_unchanged": true,
+    "c01_action_source_ast_unchanged": true,
+    "opaque_glb_and_source_material": true,
+    "front_face_half_frame_samples": 171,
+    "max_front_face_shell_or_front_leg_intersections": 0,
+    "minimum_ground_z_m": -7.315370709193303e-8
+  },
+  "remaining_aesthetic_limits": [
+    "Facet planes and some broad highlights remain; actual Cocos lighting and Standard roughness require review.",
+    "Crystal count and placements intentionally frozen; deep-blue smooth shell remains exposed between clusters.",
+    "Some side roots read as stout columns; no additional form iteration during technical QA.",
+    "Attack/skill movement is restrained; actual battle effects and timing should be judged together in Cocos."
+  ],
+  "limitations": "Offline Blender views and discrete half-frame checks do not substitute for actual Cocos, continuous-time proof, mobile performance or final user acceptance.",
+  "blender_threads": 2,
+  "render_resolution": [
+    800,
+    680
+  ],
+  "samples": 32,
+  "blender_exit_code": 0,
+  "blender_render_process_finished": true,
+  "cocos_started": false,
+  "runtime_meta_written": false
+}

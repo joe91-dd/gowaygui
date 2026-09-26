@@ -1,0 +1,35 @@
+{
+  "name": "Skeleton",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\skeleton-448b41\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/b192606d75be9ddf82ccf29086578d69333f9effb44c19715764fb2a7ded39c0_Skeleton.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "ef635637483ad899c0faf1296448976c179c183c079d2df1cae6bbbdd3424889",
+  "bytes": 1758144,
+  "animations": 14,
+  "runtimeKey": "skeleton",
+  "height": 1.8,
+  "runtimeAnimations": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "bones": 43,
+  "triangles": 14260,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Removed importer bone custom-shape meshes before export",
+    "Ground and height recalibrated using evaluated idle skinning",
+    "Rough coastal materials; source colours retained"
+  ]
+}

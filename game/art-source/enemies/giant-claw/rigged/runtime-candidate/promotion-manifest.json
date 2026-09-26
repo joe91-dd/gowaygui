@@ -1,0 +1,90 @@
+{
+  "version": "giant-claw-rigged-runtime-candidate-01",
+  "enemy_kind": "boss",
+  "display_name": "巨钳蟹",
+  "promoted_at_utc": "2026-09-08T12:00:54.758214+00:00",
+  "authorization": "Root actually viewed walk and attack-front keyframes and explicitly authorized exactly FBX/colour/roughness promotion.",
+  "status": "frozen approved runtime candidate; actual Cocos import/motion/lighting/performance acceptance pending",
+  "runtime_directory": "game/assets/resources/models/enemies/giant-claw",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/giant-claw/giant-claw.fbx",
+      "source_path": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-claw.fbx",
+      "sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+      "bytes": 1187980,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/giant-claw/giant-colour.png",
+      "source_path": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-colour.png",
+      "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+      "bytes": 68454,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/giant-claw/giant-roughness.png",
+      "source_path": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-roughness.png",
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039,
+      "created_by_this_run": true
+    }
+  ],
+  "expected_prefab_path": "models/enemies/giant-claw/giant-claw/giant-claw",
+  "actual_cocos_import_verified": false,
+  "source_freeze_sha256": "e1efe0154220d6f5d8b180154de36c46e37df5ffed46e5b7a696de97d1cafbe3",
+  "fbx_sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+  "material": "GiantClaw_Toy_Atlas",
+  "atlas_prefixes": [
+    "GiantClaw_Colour_",
+    "GiantClaw_Roughness_"
+  ],
+  "actual_fbx_takes": [
+    {
+      "name": "GiantClaw_Rig|attack",
+      "seconds": 0.5,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 23093079000
+    },
+    {
+      "name": "GiantClaw_Rig|exit",
+      "seconds": 1.2,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 55423389600
+    },
+    {
+      "name": "GiantClaw_Rig|hit",
+      "seconds": 0.5,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 23093079000
+    },
+    {
+      "name": "GiantClaw_Rig|idle",
+      "seconds": 2.7999999999783487,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 129321242399
+    },
+    {
+      "name": "GiantClaw_Rig|walk",
+      "seconds": 1.2,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 55423389600
+    }
+  ],
+  "scale": 1,
+  "bounds_scale_1_width_height_depth": [
+    2.443696975708008,
+    1.2760032415390015,
+    1.357442319393158
+  ],
+  "maximum_animated_height": 1.3317025899887085,
+  "suggested_bar_height": 1.52,
+  "suggested_control_height": 1.43,
+  "suggested_bar_width": 1.05,
+  "half_frame_samples": 377,
+  "original_prototype_preserved": true,
+  "meta_authored": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started_for_promotion": false,
+  "rollback": "Only three new files were added in this previously absent enemy folder. Preserve source and use this file list if root authorizes removal/replacement; no existing asset was overwritten."
+}

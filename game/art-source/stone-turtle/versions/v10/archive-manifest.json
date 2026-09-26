@@ -1,0 +1,57 @@
+{
+  "version": "stone-sample-10",
+  "archived_at_utc": "2026-09-08T05:57:42.093152+00:00",
+  "asset_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "runtime_files": [
+    {
+      "name": "stone-colour.png",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-colour.png",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-colour.png",
+      "bytes": 1333560,
+      "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+    },
+    {
+      "name": "stone-colour.png.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-colour.png.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-colour.png.meta",
+      "bytes": 982,
+      "sha256": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b"
+    },
+    {
+      "name": "stone-roughness.png",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-roughness.png",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-roughness.png",
+      "bytes": 22192,
+      "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+    },
+    {
+      "name": "stone-roughness.png.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-roughness.png.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-roughness.png.meta",
+      "bytes": 985,
+      "sha256": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801"
+    },
+    {
+      "name": "stone-turtle.fbx",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-turtle.fbx",
+      "bytes": 2627980,
+      "sha256": "8b8f0c56b2be36e8fa1fb082a253cc34271cf53d6983001f78f61ce4eb38260d"
+    },
+    {
+      "name": "stone-turtle.fbx.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/v10/runtime/stone-turtle.fbx.meta",
+      "bytes": 10454,
+      "sha256": "e4f8ad4c516eb77fe365a0cc6ccabd65bb8dec2b3e87531e5a82939e87b0d62f"
+    }
+  ],
+  "previous_manifest_sha256": "7407017ffa3b9648267a0add3c6e44adde120375bafc61cb268d8ae975a4931b",
+  "canonical_source_hashes": {
+    "game/art-source/build_stone_turtle.py": "69bb143d04ab3be83d6b6e71950b4d622ebc5d84952b3ee6fb28e30767399433",
+    "game/art-source/stone-turtle/stone-turtle.blend": "9977543bc23f3193932c8fd7eca8e884f7489a95a700a602dc35eea7dc331792",
+    "game/art-source/stone-turtle/stone-turtle-review-scene.blend": "eaea079144079768275997a9730468ccac1c13617c5b7e3790ec7fb791013291",
+    "game/art-source/stone-turtle/stone-turtle.glb": "70eb7fabb3d62cce9518a91cf21d606a5fb4a9040f290c2c9c9d4c732e82d1da"
+  },
+  "note": "All six live v10 FBX/PNG/meta files preserved byte-for-byte before c11 promotion. Canonical v10 sources remain in their original locations."
+}

@@ -1,0 +1,1312 @@
+{
+  "schemaVersion": 1,
+  "status": "offline-options-await-root-layout-decision",
+  "levelId": 4,
+  "levelName": "巨钳来袭",
+  "sourceDataSha256": "0fa0d219e0134a2c3ed18cd1878da66d42398141e59c0630faff58cc922dffe3",
+  "route": [
+    {
+      "x": -9,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "z": 0
+    },
+    {
+      "x": 2,
+      "z": -2
+    },
+    {
+      "x": 5,
+      "z": -2
+    },
+    {
+      "x": 6,
+      "z": 0
+    },
+    {
+      "x": 9,
+      "z": 0
+    }
+  ],
+  "originalSlots": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6,
+      "z": -1
+    }
+  ],
+  "currentFootAuditSha256": "351d80eddca85f25131953423a955ff13b6c585c10516ecfd9c061f1e6192506",
+  "currentStoneFbxSha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "footRadius": 0.9746471943161487,
+  "platformRadius": 0.995,
+  "routeLength": 20.064495102245978,
+  "originalSlotReview": [
+    {
+      "slot": 1,
+      "point": {
+        "x": -5,
+        "z": 1
+      },
+      "nearest": {
+        "segment": 0,
+        "point": {
+          "x": -5,
+          "z": 0
+        },
+        "distance": 1
+      },
+      "fullFootGap": 0.025352805683851343,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            3.33667504192892,
+            4.66332495807108
+          ]
+        ],
+        "length": 1.3266499161421597
+      }
+    },
+    {
+      "slot": 2,
+      "point": {
+        "x": -1,
+        "z": 1
+      },
+      "nearest": {
+        "segment": 1,
+        "point": {
+          "x": -1,
+          "z": 0
+        },
+        "distance": 1
+      },
+      "fullFootGap": 0.025352805683851343,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            7.33667504192892,
+            8.66332495807108
+          ]
+        ],
+        "length": 1.3266499161421592
+      }
+    },
+    {
+      "slot": 3,
+      "point": {
+        "x": 3,
+        "z": 1
+      },
+      "nearest": {
+        "segment": 2,
+        "point": {
+          "x": 0.9999999999999998,
+          "z": -0.9999999999999998
+        },
+        "distance": 2.82842712474619
+      },
+      "fullFootGap": 1.8537799304300413,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [],
+        "length": 0
+      }
+    },
+    {
+      "slot": 4,
+      "point": {
+        "x": 1,
+        "z": -3
+      },
+      "nearest": {
+        "segment": 2,
+        "point": {
+          "x": 1.9999999999999996,
+          "z": -1.9999999999999996
+        },
+        "distance": 1.4142135623730951
+      },
+      "fullFootGap": 0.4395663680569465,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [],
+        "length": 0
+      }
+    },
+    {
+      "slot": 5,
+      "point": {
+        "x": 6,
+        "z": -1
+      },
+      "nearest": {
+        "segment": 4,
+        "point": {
+          "x": 5.6,
+          "z": -0.8
+        },
+        "distance": 0.44721359549995826
+      },
+      "fullFootGap": -0.5274335988161905,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.05651503868006,
+            17.727820060317057
+          ]
+        ],
+        "length": 2.6713050216369982
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "original",
+      "point": {
+        "x": 6,
+        "z": -1
+      },
+      "move": 0,
+      "nearestRoute": {
+        "segment": 4,
+        "point": {
+          "x": 5.6,
+          "z": -0.8
+        },
+        "distance": 0.44721359549995826
+      },
+      "footCenterClearance": -0.5274335988161905,
+      "platformCenterClearance": -0.5477864045000418,
+      "blockingMargin": 0.7527864045000416,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.05651503868006,
+            17.727820060317057
+          ]
+        ],
+        "length": 2.6713050216369982
+      },
+      "bubble": {
+        "radius": 4.6,
+        "intervals": [
+          [
+            11.006959674393402,
+            20.064495102245978
+          ]
+        ],
+        "length": 9.057535427852576
+      },
+      "bubbleReach": {
+        "radius": 4.9,
+        "intervals": [
+          [
+            10.557108377568358,
+            20.064495102245978
+          ]
+        ],
+        "length": 9.50738672467762
+      },
+      "distanceToSlot3": 3.6055512754639896,
+      "baseSurfaceGap": 0.8572776601683794,
+      "pairDistances": [
+        11.180339887498947,
+        7.280109889280519,
+        3.6055512754639896,
+        5.385164807134505,
+        0
+      ],
+      "leafBaseGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "leafStarterGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "auraShareGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "oldLeafBaseCanSupportFrom3": true,
+      "oldLeafReachCanSupportFrom3": true
+    },
+    {
+      "id": "minimum-thin-margin",
+      "point": {
+        "x": 6.5,
+        "z": -1.25
+      },
+      "move": 0.5590169943749475,
+      "nearestRoute": {
+        "segment": 4,
+        "point": {
+          "x": 5.6,
+          "z": -0.8
+        },
+        "distance": 1.0062305898749055
+      },
+      "footCenterClearance": 0.03158339555875689,
+      "platformCenterClearance": 0.01123058987490555,
+      "blockingMargin": 0.1937694101250944,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.516233069714962,
+            16.823902752777165
+          ]
+        ],
+        "length": 1.307669683062203
+      },
+      "bubble": {
+        "radius": 4.6,
+        "intervals": [
+          [
+            11.763692088176608,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.30080301406937
+      },
+      "bubbleReach": {
+        "radius": 4.9,
+        "intervals": [
+          [
+            11.281835849758757,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.782659252487221
+      },
+      "distanceToSlot3": 4.16082924427331,
+      "baseSurfaceGap": 0.4900849718747371,
+      "pairDistances": [
+        11.718041645257966,
+        7.830229881682913,
+        4.16082924427331,
+        5.771698190307598,
+        0
+      ],
+      "leafBaseGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "leafStarterGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "auraShareGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "oldLeafBaseCanSupportFrom3": false,
+      "oldLeafReachCanSupportFrom3": true
+    },
+    {
+      "id": "root-comparison",
+      "point": {
+        "x": 6.65,
+        "z": -1.15
+      },
+      "move": 0.667083203206317,
+      "nearestRoute": {
+        "segment": 4,
+        "point": {
+          "x": 5.67,
+          "z": -0.6599999999999999
+        },
+        "distance": 1.0956733089748973
+      },
+      "footCenterClearance": 0.12102611465874868,
+      "platformCenterClearance": 0.10067330897489735,
+      "blockingMargin": 0.10432669102510261,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.837205297541363,
+            16.815980041800735
+          ],
+          [
+            17.371712372225925,
+            18.05727783226603
+          ]
+        ],
+        "length": 1.664340204299478
+      },
+      "bubble": {
+        "radius": 4.6,
+        "intervals": [
+          [
+            11.95764179473991,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.106853307506068
+      },
+      "bubbleReach": {
+        "radius": 4.9,
+        "intervals": [
+          [
+            11.534661181097295,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.529833921148683
+      },
+      "distanceToSlot3": 4.236153915995027,
+      "baseSurfaceGap": 0.31129509039022496,
+      "pairDistances": [
+        11.8467295064925,
+        7.94638282490845,
+        4.236153915995027,
+        5.945166103650932,
+        0
+      ],
+      "leafBaseGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "leafStarterGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "auraShareGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "oldLeafBaseCanSupportFrom3": false,
+      "oldLeafReachCanSupportFrom3": true
+    },
+    {
+      "id": "shorter-same-clearance",
+      "point": {
+        "x": 6.58,
+        "z": -1.29
+      },
+      "move": 0.6484597134749391,
+      "nearestRoute": {
+        "segment": 4,
+        "point": {
+          "x": 5.6,
+          "z": -0.8
+        },
+        "distance": 1.0956733089748973
+      },
+      "footCenterClearance": 0.12102611465874868,
+      "platformCenterClearance": 0.10067330897489735,
+      "blockingMargin": 0.10432669102510261,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.680680539116379,
+            16.65945528337575
+          ]
+        ],
+        "length": 0.9787747442593702
+      },
+      "bubble": {
+        "radius": 4.6,
+        "intervals": [
+          [
+            11.863550888807527,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.20094421343845
+      },
+      "bubbleReach": {
+        "radius": 4.9,
+        "intervals": [
+          [
+            11.399815836045166,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.664679266200812
+      },
+      "distanceToSlot3": 4.249764699368661,
+      "baseSurfaceGap": 0.437353004264768,
+      "pairDistances": [
+        11.804257706437962,
+        7.918364730169986,
+        4.249764699368661,
+        5.836137421274451,
+        0
+      ],
+      "leafBaseGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "leafStarterGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "auraShareGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "oldLeafBaseCanSupportFrom3": false,
+      "oldLeafReachCanSupportFrom3": true
+    },
+    {
+      "id": "safe-foot-margin",
+      "point": {
+        "x": 6.62,
+        "z": -1.31
+      },
+      "move": 0.6931810730249349,
+      "nearestRoute": {
+        "segment": 4,
+        "point": {
+          "x": 5.6,
+          "z": -0.8000000000000003
+        },
+        "distance": 1.1403946685248931
+      },
+      "footCenterClearance": 0.16574747420874447,
+      "platformCenterClearance": 0.14539466852489313,
+      "blockingMargin": 0.059605331475106826,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.796570923306403,
+            16.543564899185725
+          ]
+        ],
+        "length": 0.746993975879322
+      },
+      "bubble": {
+        "radius": 4.6,
+        "intervals": [
+          [
+            11.900471540090596,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.164023562155382
+      },
+      "bubbleReach": {
+        "radius": 4.9,
+        "intervals": [
+          [
+            11.459031823347036,
+            20.064495102245978
+          ]
+        ],
+        "length": 8.605463278898942
+      },
+      "distanceToSlot3": 4.294240328626241,
+      "baseSurfaceGap": 0.41170756615429616,
+      "pairDistances": [
+        11.847383677420092,
+        7.962443092418306,
+        4.294240328626241,
+        5.868602900179906,
+        0
+      ],
+      "leafBaseGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "leafStarterGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "auraShareGraph": [
+        {
+          "slot": 1,
+          "reachable": [
+            2
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "reachable": [
+            1,
+            3,
+            4
+          ],
+          "nearestTieSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "reachable": [
+            2,
+            4,
+            5
+          ],
+          "nearestTieSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 4,
+          "reachable": [
+            2,
+            3
+          ],
+          "nearestTieSlots": [
+            2,
+            3
+          ]
+        },
+        {
+          "slot": 5,
+          "reachable": [
+            3
+          ],
+          "nearestTieSlots": [
+            3
+          ]
+        }
+      ],
+      "oldLeafBaseCanSupportFrom3": false,
+      "oldLeafReachCanSupportFrom3": true
+    }
+  ],
+  "recommendedOption": "safe-foot-margin",
+  "recommendation": "Preserve route. Candidate (6.62,-1.31) trades .04472 extra movement against (6.58,-1.29) for full-foot centerline clearance .16575 and platform clearance .14540; retains stone blocking and v2 support from slot3. No coordinate has been adopted or written to production.",
+  "notes": [
+    "Original slot5 overlaps the route center; cannot claim clear navigation with a full supporting .995 platform.",
+    "All suggested coordinates are analysis only. Root owns final data change and old-save coordinate migration.",
+    "Slot3 nearest friend changes from slot5 to slot2 after a foot-safe move; the slot3-slot5 edge remains reachable at v2 4.5. Encourage/share target choice therefore changes even though connectivity remains.",
+    "An old leaf with range4 (without reach) loses the 3-to-5 healing edge after a foot-safe move; old range4.3 retains this edge for the .58/.29 and .62/.31 candidates. Legacy combat coordinate migration is not trajectory-neutral.",
+    "Platform/base gap uses conservative .995 and 1.31 circles; actual exported FBX support and decoration clearance are still required.",
+    "No Blender process was started by this script."
+  ]
+}

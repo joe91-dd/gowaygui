@@ -1,0 +1,30 @@
+{
+  "version": "ink-blob-sample-02",
+  "enemy_kind": "ink",
+  "display_name": "小墨团",
+  "vertices": 3967,
+  "triangles": 7870,
+  "mesh_count": 1,
+  "material_count": 1,
+  "bone_count": 9,
+  "texture_size": [
+    512,
+    512
+  ],
+  "clips": {
+    "idle": 2.0,
+    "walk": 0.533333,
+    "attack": 0.766667,
+    "hit": 0.5,
+    "exit": 0.833333
+  },
+  "loops": [
+    "idle",
+    "walk"
+  ],
+  "forward": "Blender -Y; expected Cocos +Z, to verify during real import",
+  "origin": "Z=0 floor in Blender; Y=0 floor in Cocos; no root motion",
+  "fbx_sha256": "3fadf087fdd359486b9cd23b1f9d415f826481d5743c71d95fcbcb7dcc1d08d3",
+  "source": "Original authored mesh/UV atlas/rig/keyframes. Project A image is concept reference only.",
+  "status": "Isolated import candidate; not connected to gameplay; not final aesthetic acceptance."
+}

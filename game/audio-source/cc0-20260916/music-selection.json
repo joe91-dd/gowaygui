@@ -1,0 +1,34 @@
+{
+  "selection": "A · 奇幻管弦",
+  "approvedByUser": true,
+  "license": "CC0-1.0",
+  "tracks": [
+    {
+      "key": "bgm_home",
+      "file": "music-a/a-home.mp3",
+      "title": "Town Theme RPG",
+      "author": "cynicmusic",
+      "page": "https://opengameart.org/content/town-theme-rpg",
+      "licensePage": "music-a/town-theme-rpg.source.html",
+      "sha256": "2657861d5107d4a3c01ef81cb6a4d61ddd5e7a054b6da57e658373d79d0c3466"
+    },
+    {
+      "key": "bgm_battle",
+      "file": "music-a/a-battle.mp3",
+      "title": "Battle Theme A",
+      "author": "cynicmusic",
+      "page": "https://opengameart.org/content/battle-theme-a",
+      "licensePage": "music-a/battle-theme-a.source.html",
+      "sha256": "6042399782e581d753d616bc703e66483d5eccb5fb687a20c9a552d68c49e620"
+    },
+    {
+      "key": "bgm_boss",
+      "file": "music-a/a-boss.wav",
+      "title": "Epic Boss Battle",
+      "author": "Juhani Junkala / SubspaceAudio",
+      "page": "https://opengameart.org/content/boss-battle-music",
+      "licensePage": "music-a/boss-battle-music.source.html",
+      "sha256": "35f75b4381dfbb053992876f7dfc567d9fd959d61b73954d5b1cd519753e7df1"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "Parent approved c02 shape for isolated runtime-candidate; not final Cocos/user approval",
+  "reviewed_files": {
+    "bubble-turtle-review-scene.blend": "ce0924e429d537069c99f8b4c28cd42596c8956779034d3be4e0b932c123716d",
+    "bubble-turtle.blend": "e1e84485d53e76a04de7d6995655f78f845e3b1044b443da55f9a277383a5414",
+    "render-front.png": "ee7f4fbb83f6150fb8c576cbba1853c1b5a8dea9e6b628fa58482bef76b0a9f1",
+    "render-three-quarter.png": "bd8c3d2c4da7ec069f427c771937cd800814775ac2edd734951abc099ca9c12b"
+  },
+  "actual_images_opened": [
+    "render-front.png",
+    "render-three-quarter.png",
+    "../candidate-01/render-three-quarter.png"
+  ],
+  "observations": [
+    "Lower ivory shell and broad shallow blue spiral are clearer than c01; head, eyes and limbs remain consistent.",
+    "Blue/ivory rim now reads as a connected segmented shell edge rather than floating oval stickers.",
+    "Inner spiral terminal is blunt and rounded; it remains intentionally curled as a spiral.",
+    "Brow height and smile asymmetry are modest; original large embedded eyes remain unchanged."
+  ],
+  "remaining_scope": [
+    "Prepare isolated runtime LOD while preserving rounded band/rim and eyes.",
+    "Re-author and independently validate bubble idle/attack/skill/hit/rest/fusion before export handoff.",
+    "Actual Cocos camera/material appearance remains unverified."
+  ],
+  "static_checks": {
+    "source_triangles": 48026,
+    "source_meshes": 78,
+    "shared_meshes_exact": 59,
+    "closed_shell_meshes": true,
+    "normalized_weights": true,
+    "bones": 10,
+    "atlas_byte_identical_to_c01": true,
+    "protected_files_unchanged": 147
+  },
+  "renderer": {
+    "session": 83267,
+    "exit_code": 0,
+    "threads": 2,
+    "samples": 32,
+    "process_check": "NO_BLENDER_PROCESS after exit; root/ui_icons notified"
+  },
+  "runtime_promoted": false
+}

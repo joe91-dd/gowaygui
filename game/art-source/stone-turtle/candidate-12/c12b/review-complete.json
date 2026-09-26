@@ -1,0 +1,8 @@
+{
+  "protected_inputs_unchanged": true,
+  "threads": 2,
+  "round_trip_clips": 6,
+  "source_clearance_samples": 88,
+  "rendered_poses": true,
+  "status": "One candidate only. Manual review required; no runtime promotion."
+}

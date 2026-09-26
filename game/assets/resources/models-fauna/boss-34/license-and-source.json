@@ -1,0 +1,36 @@
+{
+  "id": "yellow-4",
+  "name": "金拳礁卫",
+  "tier": 3,
+  "index": 34,
+  "base": 50,
+  "key": "boss-34",
+  "ability": "frost",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 57500,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-50",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e99324137bf573e5320c51610bdb87ee898231208bf04b3d937ce138603a05f3_Orc.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24811,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.4
+}

@@ -1,0 +1,192 @@
+{
+  "version": "runner-crab-candidate-01",
+  "promoted_at_utc": "2026-09-08T07:09:58.727215+00:00",
+  "status": "approved-runtime-candidate-not-final-art; first Cocos import/build/runtime review pending",
+  "enemy_kind": "runner",
+  "display_name": "快跑蟹",
+  "authorization": "Parent reviewed three-quarter, battle angle, five-pose and real-island context renders; approved c01 as runtime candidate without further eye-stalk/leg-shape edits.",
+  "runtime_directory": "game/assets/resources/models/enemies/runner-crab",
+  "runtime_directory_created_by_this_run": true,
+  "runtime_file": "game/assets/resources/models/enemies/runner-crab/runner-crab.fbx",
+  "runtime_sha256": "9a881e9afd4f168f9af8348b4da47e95faa2bc46ed9c8705a479f69e99e55e14",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/runner-crab/runner-colour.png",
+      "source_path": "game/art-source/enemies/runner-crab/candidate-01/export/runner-colour.png",
+      "sha256": "18c46e33630712ce34b94add1703e880799d279b4a1f35e10cc03bd2b5b9a72d",
+      "bytes": 68984,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/runner-crab/runner-roughness.png",
+      "source_path": "game/art-source/enemies/runner-crab/candidate-01/export/runner-roughness.png",
+      "sha256": "c2ca32a47a37f2ec0c42a3c3548cbe30208d0fccf91d48a93cd40a1e67fff48c",
+      "bytes": 5842,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/runner-crab/runner-crab.fbx",
+      "source_path": "game/art-source/enemies/runner-crab/candidate-01/export/runner-crab.fbx",
+      "sha256": "9a881e9afd4f168f9af8348b4da47e95faa2bc46ed9c8705a479f69e99e55e14",
+      "bytes": 919052,
+      "created_by_this_run": true
+    }
+  ],
+  "copied_frozen_bytes": true,
+  "meta_created_by_this_script": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started": false,
+  "embedded_pngs": {
+    "runner-colour.png": {
+      "sha256": "18c46e33630712ce34b94add1703e880799d279b4a1f35e10cc03bd2b5b9a72d",
+      "bytes": 68984,
+      "exact_png_byte_offset": 256779
+    },
+    "runner-roughness.png": {
+      "sha256": "c2ca32a47a37f2ec0c42a3c3548cbe30208d0fccf91d48a93cd40a1e67fff48c",
+      "bytes": 5842,
+      "exact_png_byte_offset": 326397
+    }
+  },
+  "external_png_copies": "Explicitly requested alongside the FBX; embedded PNG bytes remain identical. Prefer imported material texture bindings during adaptation.",
+  "source_hashes": {
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab-review-scene.blend": "48ce0292ccd786dc0807090ef3fada35d9a293e3cb9204a7da6f4e4a4f74f9f9",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.glb": "e232360c312c40f95b88ef9beafc6122993986148344dd775c40e99dc1981a23",
+    "game/art-source/enemies/runner-crab/candidate-01/model-stats.json": "75fdaed769665e01d8ccf7439602755bd0445016606cb8fd5cd11e06bef0dca9",
+    "game/art-source/enemies/runner-crab/candidate-01/round-trip-check.json": "371248ac2554fa0aee84cf67e7f8650d7195ae76ca0be8a36856bd71efe9748e",
+    "game/art-source/enemies/runner-crab/candidate-01/source-check.json": "d41f89aa40ce3378fbc58033460f9407b9e0b62c1bf3204c21e1673b0665b5b4"
+  },
+  "geometry": {
+    "triangles": 10828,
+    "vertices": 5490,
+    "meshes": 1,
+    "materials": 1,
+    "bones": 16
+  },
+  "clips": {
+    "idle": {
+      "expected_cocos_take": "RunnerCrab_Rig|idle",
+      "seconds": 2.0,
+      "frames": [
+        1,
+        61
+      ],
+      "loop": true
+    },
+    "walk": {
+      "expected_cocos_take": "RunnerCrab_Rig|walk",
+      "seconds": 0.4,
+      "frames": [
+        1,
+        13
+      ],
+      "loop": true
+    },
+    "attack": {
+      "expected_cocos_take": "RunnerCrab_Rig|attack",
+      "seconds": 0.7,
+      "frames": [
+        1,
+        22
+      ],
+      "loop": false
+    },
+    "hit": {
+      "expected_cocos_take": "RunnerCrab_Rig|hit",
+      "seconds": 0.5,
+      "frames": [
+        1,
+        16
+      ],
+      "loop": false
+    },
+    "exit": {
+      "expected_cocos_take": "RunnerCrab_Rig|exit",
+      "seconds": 0.8,
+      "frames": [
+        1,
+        25
+      ],
+      "loop": false
+    }
+  },
+  "coordinate_handoff": {
+    "source_axes": "Blender Z up / -Y forward",
+    "export_axes": "FBX axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z; confirm first actual import",
+    "foot_origin_cocos_y": 0,
+    "recommended_model_uniform_scale": 0.83,
+    "rest_dimensions_at_scale": [
+      0.8864400649070739,
+      0.675024664402008,
+      0.7753315716981888
+    ],
+    "rest_bounds_blender_xyz": {
+      "min": [
+        -0.534000039100647,
+        -0.4063136577606201,
+        0.0
+      ],
+      "max": [
+        0.534000039100647,
+        0.4069690704345703,
+        0.9341344237327576
+      ]
+    },
+    "standing_action_peak_height_at_scale": 0.785759298801422,
+    "recommended_health_bar_y_on_unscaled_actor": 0.95,
+    "road_root_y": 0.064,
+    "root_motion": false
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/runner-crab/runner-crab/runner-crab",
+    "path_status": "Expected from existing ink folder/FBX importer structure; generated metadata still requires first build confirmation",
+    "material_name_prefix": "RunnerCrab_Toy_Atlas",
+    "source_material_name": "RunnerCrab_Toy_Atlas",
+    "source_colour_image_prefix": "RunnerCrab_Colour_",
+    "source_roughness_image_prefix": "RunnerCrab_Roughness_",
+    "colour": {
+      "png": "runner-colour.png",
+      "expected_import_property": "mainTexture",
+      "native_standard_property": "mainTexture",
+      "sampling": "sRGB colour"
+    },
+    "roughness": {
+      "png": "runner-roughness.png",
+      "expected_import_property": "shininessExponentMap",
+      "native_standard_property": "pbrMap",
+      "sampling": "linear data; G=roughness",
+      "gray_u8": [
+        87,
+        107
+      ],
+      "alpha_u8": 255
+    },
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "integration_notes": [
+    "Keep the actor alive for the authored exit duration of 0.8s; avoid applying the procedural placeholder shrink on top of it.",
+    "Expected action prefix is RunnerCrab_Rig|; Blender round-trip names may include an additional object prefix.",
+    "Allow RunnerCrab_Toy_Atlas explicitly in the existing native Standard material adapter; do not alter other models.",
+    "No importer UUIDs or meta were manually generated. No Cocos rendering/animation acceptance is claimed.",
+    "Original isolated delivery asset-manifest.json and REVIEW.md are historical evidence from before this authorized promotion."
+  ]
+}

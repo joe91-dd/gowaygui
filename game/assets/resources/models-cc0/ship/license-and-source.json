@@ -1,0 +1,23 @@
+{
+  "name": "Ship Small",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\ship-small-657197\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Vehicle/86b23bceb8e01f5293bd0e10d04d60f3c74e9f6ce040619f854588481e943d59_Ship Small.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "5dca780738b66e7273dc264aaaa59ae66a83f80c7822c9db018c1a48169197f1",
+  "bytes": 236956,
+  "animations": 0,
+  "runtimeKey": "ship",
+  "height": 2.8,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 5578,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

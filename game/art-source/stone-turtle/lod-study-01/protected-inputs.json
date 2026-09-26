@@ -1,0 +1,142 @@
+{
+  "game/art-source/stone-turtle/candidate-12/c12b/animation-attack-07-side.png": {
+    "sha256": "534bc346ffe8c90a831a398c4afbf3fe87b5844bfb4e28ed57366d2e74e2aa05",
+    "bytes": 631805
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/animation-attack-11-three-quarter.png": {
+    "sha256": "234f8ab330d4ee1d5b60b8e2c414df7b1028fc8fa30a7759b1edbd657c6ce55a",
+    "bytes": 637783
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/animation-clearance.json": {
+    "sha256": "69d46977fec7d04303a2d73eb0ce87ced7c389d7192fd052f8cb4876eb3123f7",
+    "bytes": 9077
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/animation-hit-04-side.png": {
+    "sha256": "cbcf487934fcbbcc1475dfc4cd54b0d659eacb6e9b2e696c3a1e7ce12a12039b",
+    "bytes": 631577
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/animation-hit-04-three-quarter.png": {
+    "sha256": "0ec488c342b3cfa73eb17ba1991d1fabdd808d8237d4b0febb6b18a2952f2557",
+    "bytes": 634871
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/atlas-parameters.json": {
+    "sha256": "5aeb6d72b0b5721477668f8037706c35cc2fdf8796cf1026289a602a39313a44",
+    "bytes": 1377
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/candidate-manifest.json": {
+    "sha256": "730a46241a293a6b75e6017e6e62648534331df023053a0b0380ff4461c72f3a",
+    "bytes": 17184
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/manual-review.json": {
+    "sha256": "15d4faacdb9daeb7956073e65cf7ab16d4f6690e2fb12c4e0e76883589c99447",
+    "bytes": 1485
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/promotion-manifest.json": {
+    "sha256": "2d8231cadae768b413efd949a28566f66c8fba2519faa2c275680cf4c728f5de",
+    "bytes": 8266
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/promotion-verification.json": {
+    "sha256": "f88a0b93bc3178a76c9cdfac60eba5f20004eb3d5705c8336030b2a19823894b",
+    "bytes": 375
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/render-front.png": {
+    "sha256": "0458ff01a6dd491d067ecfdc404c53fdb7c8948b00e4eca19f17b6d34504759f",
+    "bytes": 636739
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/render-side.png": {
+    "sha256": "ae53244820fd05702e605886451a848154e7f3222c937a98f652463bc4a36b16",
+    "bytes": 631604
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/render-three-quarter.png": {
+    "sha256": "dd6ee7dd1806df6019088e0780b54271f14c3e8bf729a8928c108d4b6db70202",
+    "bytes": 636083
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/review-complete.json": {
+    "sha256": "b753c21ce3e7c5b57ecab17931665e2ef9142601464698d78e430f588d51bb01",
+    "bytes": 229
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/REVIEW.md": {
+    "sha256": "54cd1ef3805e98f51ed8d013b696b83ff0d2bdfb759d10996337a71cfda895fe",
+    "bytes": 5409
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/review_candidate12b.py": {
+    "sha256": "b83cc5792ccda4d8ee37055f087abed27f5cd130a62795d174b42b165b24138c",
+    "bytes": 9439
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/round-trip-check.json": {
+    "sha256": "8b9677e13d2635f83e1997b561961397059f7c2a3f5fd3ce07e64cb39b60e0d8",
+    "bytes": 1738
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/runtime_promotion.py": {
+    "sha256": "288f1e61366a79dea67bfe4e11c7ed0177e0a4a97c3004244ef7dd3b12d51ce6",
+    "bytes": 10373
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-keypose-review.blend": {
+    "sha256": "6502bbce6734488cc63d607393901ad6eb96af115f54a8cbf27fa3b2e64faee3",
+    "bytes": 4890370
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend": {
+    "sha256": "526bb397ef710d4d7bd25c131bfcd7a15756425864ad98628866ec8122159811",
+    "bytes": 5249026
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend1": {
+    "sha256": "037bf5544109ad93ff355f939183b2f258fa21ef5daca4599d5ddd56c2d343ef",
+    "bytes": 5248579
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend": {
+    "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "bytes": 7042585
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend1": {
+    "sha256": "7ea24ae98d7d1443c2654960641f98036101a9e7584f7882906b10eb68265e8b",
+    "bytes": 7041017
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.glb": {
+    "sha256": "2f1f2e98038982a60273cb5835b956dcced9428584387be83681a00056fb7140",
+    "bytes": 2700416
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/export/stone-colour.png": {
+    "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "bytes": 1326566
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/export/stone-roughness.png": {
+    "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "bytes": 22192
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/export/stone-turtle.fbx": {
+    "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "bytes": 2802364
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/verification/atlas-rebuild/stone-colour.png": {
+    "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "bytes": 1326566
+  },
+  "game/art-source/stone-turtle/candidate-12/c12b/verification/atlas-rebuild/stone-roughness.png": {
+    "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "bytes": 22192
+  },
+  "game/assets/resources/models/stone-turtle/stone-colour.png": {
+    "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "bytes": 1326566
+  },
+  "game/assets/resources/models/stone-turtle/stone-colour.png.meta": {
+    "sha256": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "bytes": 982
+  },
+  "game/assets/resources/models/stone-turtle/stone-roughness.png": {
+    "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "bytes": 22192
+  },
+  "game/assets/resources/models/stone-turtle/stone-roughness.png.meta": {
+    "sha256": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "bytes": 985
+  },
+  "game/assets/resources/models/stone-turtle/stone-turtle.fbx": {
+    "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "bytes": 2802364
+  },
+  "game/assets/resources/models/stone-turtle/stone-turtle.fbx.meta": {
+    "sha256": "68169c8b0e7a6b62e353e8c89f6fe09aafe8a04ac6302aed74185d84dfc6c54a",
+    "bytes": 10454
+  }
+}

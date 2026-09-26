@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="collection-lock-title collection-lock-desc">
+<title id="collection-lock-title">收藏锁</title><desc id="collection-lock-desc">带龟壳分片装饰的闭合锁；从零绘制的哥喂龟原创矢量图标，左上柔光。</desc>
+<defs><linearGradient id="collection-lock-ivory" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#fff3d7"/><stop offset=".52" stop-color="#e8cda0"/><stop offset="1" stop-color="#b79667"/></linearGradient><linearGradient id="collection-lock-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffe291"/><stop offset=".52" stop-color="#efb348"/><stop offset="1" stop-color="#b9742e"/></linearGradient><linearGradient id="collection-lock-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#91d5c4"/><stop offset=".52" stop-color="#3d9d99"/><stop offset="1" stop-color="#255e62"/></linearGradient><linearGradient id="collection-lock-attack" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffd086"/><stop offset=".52" stop-color="#e5a24b"/><stop offset="1" stop-color="#ad6d34"/></linearGradient><linearGradient id="collection-lock-health" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#f7b6a9"/><stop offset=".52" stop-color="#df7d73"/><stop offset="1" stop-color="#a95753"/></linearGradient><linearGradient id="collection-lock-defense" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#a1d9e3"/><stop offset=".52" stop-color="#58afc4"/><stop offset="1" stop-color="#397887"/></linearGradient><linearGradient id="collection-lock-growth" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d4df97"/><stop offset=".52" stop-color="#92b65e"/><stop offset="1" stop-color="#587c43"/></linearGradient><linearGradient id="collection-lock-dark-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d9a356"/><stop offset=".52" stop-color="#b9772b"/><stop offset="1" stop-color="#815327"/></linearGradient><linearGradient id="collection-lock-deep-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#438f89"/><stop offset=".52" stop-color="#2b726f"/><stop offset="1" stop-color="#204f56"/></linearGradient><radialGradient id="collection-lock-soft-glow" cx="28%" cy="20%" r="75%"><stop stop-color="#fff9e9" stop-opacity=".65"/><stop offset=".65" stop-color="#fff9e9" stop-opacity="0"/></radialGradient></defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M77 121V86c0-34 19-57 51-57s51 23 51 57v35h-24V85c0-20-9-33-27-33s-27 13-27 33v36z" fill="url(#collection-lock-ivory)" stroke="#887958" stroke-width="6"/>
+    <path d="M87 103V85c0-27 15-46 38-47" fill="none" stroke="#fff7df" stroke-width="5"/>
+    <path d="M157 79v34" fill="none" stroke="#b69a6a" stroke-width="4"/>
+    <path d="M70 114q58-17 116 0 13 4 13 19v63q0 21-20 26-48 11-96 0-21-4-21-26v-62q0-14 8-20z" fill="url(#collection-lock-deep-teal)" stroke="#365e5a" stroke-width="6"/>
+    <path d="M66 121q59-20 114-1 9 4 9 16v59q0 15-14 20-49 12-96-1-14-4-14-19v-63q0-6 1-11z" fill="url(#collection-lock-teal)" stroke="#48776a" stroke-width="4"/>
+    <path d="M81 125l18 21m-24 31 20 3m11 35 7-17m49-72-15 20m38 28-24 6m-13 33-9-16" fill="none" stroke="#4c8f7d" stroke-width="4"/>
+    <path d="M79 138v49" fill="none" stroke="#cae6c6" stroke-opacity=".8" stroke-width="5"/>
+    <path d="M130 140c-14 0-23 10-23 21 0 8 4 13 10 17l-6 20h37l-7-20c7-4 11-9 11-17 0-11-9-21-22-21z" fill="url(#collection-lock-ivory)" stroke="#9c8150" stroke-width="4"/>
+    <path d="M130 151c-7 0-12 5-12 11 0 6 4 10 9 12l-5 15h15l-5-15c6-2 10-6 10-12 0-6-5-11-12-11z" fill="#345e59"/>
+    <path d="M113 150q6-10 16-10" fill="none" stroke="#fff6d7" stroke-width="3"/>
+  </g>
+</svg>

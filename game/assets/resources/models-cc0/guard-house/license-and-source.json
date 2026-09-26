@@ -1,0 +1,23 @@
+{
+  "name": "House 1",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\house-1-97c872\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Building/fef71f81e4e967927447aed849e6125756c45c8991fe45fd86b299db62f8f273_House 1.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "3d82606d650c48eac2d13b15a102cfe86bbedfc3a586acb18c13bf9a692babaa",
+  "bytes": 683776,
+  "animations": 0,
+  "runtimeKey": "guard-house",
+  "height": 1.9,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 11878,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "origin": "Original project-specific composition and procedural instruments; no imported audio",
+  "seed": 20260908,
+  "home": {
+    "sample_rate": 44100,
+    "channels": 2,
+    "frames": 3528000,
+    "duration_seconds": 80.0,
+    "sample_peak_dbfs": -6.57,
+    "true_peak_4x_dbtp": -6.565,
+    "rms_dbfs": -21.123,
+    "integrated_lufs": -19.000000229640534,
+    "crest_factor_db": 14.553,
+    "dc_offset": [
+      6.658555373739716e-10,
+      -3.297694339821078e-10
+    ],
+    "clipped_samples": 0,
+    "finite": true,
+    "listening_review": "not yet completed; numerical checks are not an auditory approval",
+    "loop_boundary_delta_dbfs": -51.913,
+    "boundary_to_local_derivative_ratio": 0.322,
+    "loop_method": "circular event tails and circular room convolution; exact 128-beat PCM loop"
+  },
+  "master_gain": 1.3882179623610786,
+  "encodings": {
+    "ogg": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 3528000,
+      "duration_seconds": 80.0,
+      "sample_peak_dbfs": -6.54,
+      "true_peak_4x_dbtp": -6.535,
+      "rms_dbfs": -21.095,
+      "integrated_lufs": -18.972239432881302,
+      "crest_factor_db": 14.554,
+      "dc_offset": [
+        1.1048236956412438e-05,
+        2.903911536122905e-06
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval",
+      "loop_boundary_delta_dbfs": -52.178,
+      "boundary_to_local_derivative_ratio": 0.324,
+      "loop_method": "circular event tails and circular room convolution; exact 128-beat PCM loop",
+      "bytes": 979557,
+      "round_trip_frames_equal": true,
+      "decoded_rate": 44100
+    }
+  },
+  "effects": {
+    "sfx_ui_confirm": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 11025,
+      "duration_seconds": 0.25,
+      "sample_peak_dbfs": -14.861,
+      "true_peak_4x_dbtp": -14.798,
+      "rms_dbfs": -27.014,
+      "integrated_lufs": null,
+      "crest_factor_db": 12.153,
+      "dc_offset": [
+        1.2457874618121423e-05,
+        1.2457874618121423e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_bubble_pop": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 16758,
+      "duration_seconds": 0.38,
+      "sample_peak_dbfs": -15.495,
+      "true_peak_4x_dbtp": -15.468,
+      "rms_dbfs": -29.146,
+      "integrated_lufs": null,
+      "crest_factor_db": 13.651,
+      "dc_offset": [
+        -2.069874199150945e-06,
+        -2.069874199150945e-06
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_bubble_rub": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 22932,
+      "duration_seconds": 0.52,
+      "sample_peak_dbfs": -18.494,
+      "true_peak_4x_dbtp": -18.083,
+      "rms_dbfs": -33.97,
+      "integrated_lufs": -29.8057319228137,
+      "crest_factor_db": 15.476,
+      "dc_offset": [
+        -7.063982820909587e-07,
+        -7.063982820909587e-07
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_collect": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 77175,
+      "duration_seconds": 1.75,
+      "sample_peak_dbfs": -12.63,
+      "true_peak_4x_dbtp": -12.624,
+      "rms_dbfs": -26.727,
+      "integrated_lufs": -21.461677724065343,
+      "crest_factor_db": 14.097,
+      "dc_offset": [
+        -4.0339746192330495e-06,
+        -3.927173565898556e-06
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_rare_reveal": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 132300,
+      "duration_seconds": 3.0,
+      "sample_peak_dbfs": -11.178,
+      "true_peak_4x_dbtp": -11.143,
+      "rms_dbfs": -28.615,
+      "integrated_lufs": -21.70233866523999,
+      "crest_factor_db": 17.438,
+      "dc_offset": [
+        -8.275268896795751e-07,
+        -2.3840041762923647e-07
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_victory": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 114660,
+      "duration_seconds": 2.6,
+      "sample_peak_dbfs": -12.113,
+      "true_peak_4x_dbtp": -12.096,
+      "rms_dbfs": -27.385,
+      "integrated_lufs": -22.798849158471064,
+      "crest_factor_db": 15.272,
+      "dc_offset": [
+        -5.00854321217048e-06,
+        -4.407663254824001e-06
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    }
+  },
+  "asset_sha256": {
+    "bgm_home.ogg": "3b324065a3b8de7fffc683205879a5b7986c538d9da636943ba8fcc3e1b47bfd",
+    "sfx_bubble_pop.wav": "8c83203e3545c206e43f7c2bf43b79b3e117ef96e04b02e81a2ef3605a70933c",
+    "sfx_bubble_rub.wav": "ba7a3cbea06dc8037cf626885636da7b6a17b627c85619ce722a1e94550ae4cd",
+    "sfx_collect.wav": "4cab401eb572f80933de8ba8c24777206d81f4a1790695c62b4178379c3ecdac",
+    "sfx_rare_reveal.wav": "5d2ec12326c96e56a72eeea0f9315d44e6fe19a2bc4e276b80d439bc9ff11791",
+    "sfx_ui_confirm.wav": "946c23318d59d345e13420694ee9d51ad8411981158a887d4257bf06f3813634",
+    "sfx_victory.wav": "e11ab3d54e42d636f2512357d6dd0004e2737b768e64a62c7c1ae1395caaa979"
+  }
+}

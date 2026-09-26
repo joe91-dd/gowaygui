@@ -1,0 +1,25 @@
+{
+  "reviewer": "turtle_art subagent; actual rendered images opened with view_image",
+  "all_seven_images_viewed": true,
+  "images": [
+    "render-front.png",
+    "render-three-quarter.png",
+    "render-side.png",
+    "animation-attack-07-side.png",
+    "animation-attack-11-three-quarter.png",
+    "animation-hit-04-side.png",
+    "animation-hit-04-three-quarter.png"
+  ],
+  "render_settings": {"width": 800, "height": 680, "samples": 32, "cpu_threads": 2},
+  "fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "findings": [
+    "The final lower-eye opening has a curved boundary instead of the previous flat cut.",
+    "Amber iris, black pupil, cream sclera and short curved brows remain readable in the frontal and three-quarter renders.",
+    "No visible detached eyes, forward face through shell, or obvious ground penetration in the four attack/hit keyframes.",
+    "The eyelid-to-eye junction remains relatively firm and the cheek/mouthpad anatomy is simpler than the A4 concept. Geometry is frozen per parent review."
+  ],
+  "parent_authorization": "Parent actually viewed the final frontal and three-quarter renders and authorized c12b runtime-candidate promotion after technical checks.",
+  "review_limit": "Offline Blender evidence only; actual Cocos appearance and final user aesthetic acceptance remain pending.",
+  "blender_generation_and_verification_processes_exited": true,
+  "ready_for_authorized_runtime_candidate_promotion": true
+}

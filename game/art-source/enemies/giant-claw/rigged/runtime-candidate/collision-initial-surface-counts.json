@@ -1,0 +1,178 @@
+{
+  "status": "pass",
+  "method": "Evaluated skinned source, BVH triangle surface overlap on six claw/face safety pairs and six neighboring leg pairs, every half-frame. Joined parts intentionally overlap at palm/shoulder/body roots and are excluded. This is not an exhaustive physics or containment solver.",
+  "baseline_surface_pairs": {
+    "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+    "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+    "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+    "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+    "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 25,
+    "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+    "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 8,
+    "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 25,
+    "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+    "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 8
+  },
+  "clips": {
+    "idle": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 25,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 8,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 25,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 8
+      },
+      "first_increased_frame": {}
+    },
+    "walk": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 37,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 20,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 28,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 39,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 20,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 30
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 1.0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 1.0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 1.0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 9.0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 14.0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 18.0
+      }
+    },
+    "attack": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 25,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "first_increased_frame": {
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 3.0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 5.5,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 5.5
+      }
+    },
+    "hit": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 27,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 8,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 8
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 2.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 2.5
+      }
+    },
+    "exit": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 27,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 8,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 8
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 14.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 14.5
+      }
+    }
+  },
+  "warnings": [
+    {
+      "clip": "walk",
+      "neighbor_leg_overlap_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 37,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 20,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 28,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 39,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 20,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 30
+      },
+      "first_new_frames": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 1.0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 1.0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 14.0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 18.0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 9.0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 1.0
+      }
+    },
+    {
+      "clip": "attack",
+      "neighbor_leg_overlap_above_rest": {
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "first_new_frames": {
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 5.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 3.0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 5.5
+      }
+    },
+    {
+      "clip": "hit",
+      "neighbor_leg_overlap_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 27,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27
+      },
+      "first_new_frames": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 2.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 2.5
+      }
+    },
+    {
+      "clip": "exit",
+      "neighbor_leg_overlap_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 27,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 27
+      },
+      "first_new_frames": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 14.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 14.5
+      }
+    }
+  ]
+}

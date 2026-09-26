@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "promotedAtUtc": "2026-09-08T11:47:28.545257+00:00",
+  "status": "runtime-candidate-pending-cocos-import-and-acceptance",
+  "levelId": 4,
+  "levelName": "巨钳来袭",
+  "authorization": "Root approved final battle/top images and subsequently explicitly authorized exactly three runtime files alongside the approved layout migration.",
+  "sourceFreezeSha256": "299f2748558db31454bdfdbbefab0b3fa28bc47f30ff1745b401e68afb7b973f",
+  "sourceProvenanceSha256": "3a9974b9ef68df8a5f3a3c2211888fef9ccc328c6cab1a079db1b48bc983a62c",
+  "expectedResourcesPrefabPath": "environment/boss-bay/boss-bay/boss-bay",
+  "resourcesTexturePaths": [
+    "environment/boss-bay/island-colour/texture",
+    "environment/boss-bay/island-roughness/texture"
+  ],
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "route": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 5.0,
+      "z": -2.0
+    },
+    {
+      "x": 6.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "stationCoordinates": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.62,
+      "z": -1.31
+    }
+  ],
+  "changedSlotIndices": [
+    4
+  ],
+  "previousSlot5": {
+    "x": 6,
+    "z": -1
+  },
+  "files": [
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-01/boss-bay.fbx",
+      "destination": "game/assets/resources/environment/boss-bay/boss-bay.fbx",
+      "bytes": 4271740,
+      "sha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397"
+    },
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-01/island-colour.png",
+      "destination": "game/assets/resources/environment/boss-bay/island-colour.png",
+      "bytes": 2727591,
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f"
+    },
+    {
+      "source": "game/art-source/environment/boss-bay/candidate-01/island-roughness.png",
+      "destination": "game/assets/resources/environment/boss-bay/island-roughness.png",
+      "bytes": 40385,
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16"
+    }
+  ],
+  "metasOrUuidsAuthored": false,
+  "cocosLaunched": false,
+  "viewsModifiedByThisTask": false,
+  "pending": [
+    "Root Cocos import, loader wiring and build",
+    "Old combat load/pause/background/next-wave actual model placement",
+    "Actual character contact, material culling and mobile performance"
+  ]
+}

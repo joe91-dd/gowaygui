@@ -1,0 +1,305 @@
+{
+  "status": "passed",
+  "assets": 42,
+  "music": 3,
+  "effects": 39,
+  "bytes": 9458146,
+  "checks": [
+    {
+      "key": "bgm_home",
+      "frames": 4297722,
+      "duration": 97.45401360544217,
+      "peak": 0.44312018156051636,
+      "sha256": "98affc19ea94086556c810010113cce578ee7ca28a0f488a84070c296a24f29c"
+    },
+    {
+      "key": "bgm_battle",
+      "frames": 4227066,
+      "duration": 95.85183673469388,
+      "peak": 0.30851447582244873,
+      "sha256": "571ef33a90696365b12065b426b0892207c1bc100238247ca7412cf469bbcb19"
+    },
+    {
+      "key": "bgm_boss",
+      "frames": 5443201,
+      "duration": 123.42859410430839,
+      "peak": 0.28223997354507446,
+      "sha256": "3bf86f056ef083551c1f5b418000100c789185bb6620fab51e09eddc8acc599a"
+    },
+    {
+      "key": "sfx_panel_slide",
+      "frames": 27563,
+      "duration": 0.6250113378684807,
+      "peak": 0.31622314453125,
+      "sha256": "da2ef1727cffe7391d135cb20c66a95e62248225d7eb26c302ebdfacf6607b50"
+    },
+    {
+      "key": "sfx_draw_tick",
+      "frames": 3320,
+      "duration": 0.07528344671201814,
+      "peak": 0.4466552734375,
+      "sha256": "90649ae142e641dc50739655513624de6412fa2f7b7879099a24c4f9a3eb61d7"
+    },
+    {
+      "key": "sfx_wish_start",
+      "frames": 47006,
+      "duration": 1.0658956916099773,
+      "peak": 0.31622314453125,
+      "sha256": "2434af64bc9d3a56e88212e18b5f6d6fc5a179a217adc328395b30c0067b9bb4"
+    },
+    {
+      "key": "sfx_wish_gather",
+      "frames": 20694,
+      "duration": 0.4692517006802721,
+      "peak": 0.316253662109375,
+      "sha256": "1fea9ca18418a5cd9215811ea81b7a950c329cb83e23fb666cbce467a61f53b2"
+    },
+    {
+      "key": "sfx_wish_burst",
+      "frames": 34281,
+      "duration": 0.7773469387755102,
+      "peak": 0.31622314453125,
+      "sha256": "6ebc324f06e79908044dd5bb7054543ebc50f156fb00412fd64f4f34219c68a7"
+    },
+    {
+      "key": "sfx_boss_skill",
+      "frames": 79883,
+      "duration": 1.81140589569161,
+      "peak": 0.31622314453125,
+      "sha256": "dc377d5f27333b3dfd6b1a51f7979d3899c9c6d27add63cf62719f2459a218ed"
+    },
+    {
+      "key": "sfx_ui_confirm",
+      "frames": 3674,
+      "duration": 0.08331065759637188,
+      "peak": 0.4466552734375,
+      "sha256": "a961967841742cf1c8372788c65500609e3983ea5c5471f740fecafea5f2e991"
+    },
+    {
+      "key": "sfx_ui_back",
+      "frames": 2817,
+      "duration": 0.06387755102040817,
+      "peak": 0.446685791015625,
+      "sha256": "368a5f79dfc8cfe2a4eba85874d483b7e033344c401c6b1c34f3ee8bccdd4020"
+    },
+    {
+      "key": "sfx_ui_error",
+      "frames": 4529,
+      "duration": 0.10269841269841269,
+      "peak": 0.31622314453125,
+      "sha256": "89e9fbffa91920d542586f97e58f6fdbbcba4f21652f9415bd337e23038b78b5"
+    },
+    {
+      "key": "sfx_upgrade",
+      "frames": 44492,
+      "duration": 1.008888888888889,
+      "peak": 0.316253662109375,
+      "sha256": "d59334e0e15453241ba68325055aca51e1de3d59f2c37698e5067122a9e1a026"
+    },
+    {
+      "key": "sfx_equip",
+      "frames": 22050,
+      "duration": 0.5,
+      "peak": 0.31622314453125,
+      "sha256": "06d113db988d1360caaa919a40c300c458b4fd1780f542451f01d12dfab843e6"
+    },
+    {
+      "key": "sfx_chest",
+      "frames": 54970,
+      "duration": 1.246485260770975,
+      "peak": 0.316253662109375,
+      "sha256": "c3c695707f5fd2fe28df601bcc669f0b6c1aa95e57dc85c7dba4b4fe149917c1"
+    },
+    {
+      "key": "sfx_learn_complete",
+      "frames": 63824,
+      "duration": 1.4472562358276644,
+      "peak": 0.316253662109375,
+      "sha256": "afeba86ed1c0d00f0387d9a5971fdba401eb01c020c8a2967681e7fd16e423db"
+    },
+    {
+      "key": "sfx_bubble_pop",
+      "frames": 3614,
+      "duration": 0.08195011337868481,
+      "peak": 0.31622314453125,
+      "sha256": "dbe1a2ba5f08c2ed0e7b0fb55da1d376e1a048fa013eca215b9831611dc38622"
+    },
+    {
+      "key": "sfx_bubble_rub",
+      "frames": 5925,
+      "duration": 0.13435374149659865,
+      "peak": 0.31622314453125,
+      "sha256": "24fd7f5a2d6cddea892645ab1fc90307962439c74898bff09531b66f7d1701fc"
+    },
+    {
+      "key": "sfx_collect",
+      "frames": 27298,
+      "duration": 0.6190022675736961,
+      "peak": 0.31622314453125,
+      "sha256": "da4fedc01a0408c4243d8fbe4c88588c44c8d38968d5f2c7b83e830d00d8809b"
+    },
+    {
+      "key": "sfx_rare_reveal",
+      "frames": 41137,
+      "duration": 0.9328117913832199,
+      "peak": 0.316253662109375,
+      "sha256": "9c2c312efe9ca65ddad2256210a4f3b735f351cda6c4f7f613ab4821ba0920db"
+    },
+    {
+      "key": "sfx_victory",
+      "frames": 60651,
+      "duration": 1.3753061224489795,
+      "peak": 0.316253662109375,
+      "sha256": "79411e855f1e14081395570fb02a9e3d5ca519c80404d2261a7db019d10405eb"
+    },
+    {
+      "key": "sfx_defeat",
+      "frames": 26332,
+      "duration": 0.5970975056689343,
+      "peak": 0.31622314453125,
+      "sha256": "ada5bdbe535ceadb3a87677d242dd148fd13f36c15d5d4fb2bc517ed138bb2d2"
+    },
+    {
+      "key": "sfx_attack_melee",
+      "frames": 16714,
+      "duration": 0.37900226757369615,
+      "peak": 0.316253662109375,
+      "sha256": "7c28ebffc76996913667c76b658e7eaac4c42549977198e6e8b65bede8b8e5f8"
+    },
+    {
+      "key": "sfx_attack_projectile",
+      "frames": 22034,
+      "duration": 0.4996371882086168,
+      "peak": 0.31622314453125,
+      "sha256": "2f6c786a365134ca94c2f14b26eb9a7c6821956eb69d636a35aa9c1b7a0541a1"
+    },
+    {
+      "key": "sfx_attack_magic",
+      "frames": 4806,
+      "duration": 0.1089795918367347,
+      "peak": 0.316253662109375,
+      "sha256": "8054f59bb04c13ab9b8a539c1f98c275d2b9ed5db8907149f058839500d472c0"
+    },
+    {
+      "key": "sfx_hit_soft",
+      "frames": 8083,
+      "duration": 0.18328798185941042,
+      "peak": 0.31622314453125,
+      "sha256": "d1b5c3e63c529f3cc11465b0802081cd3e1b15a3e4a04a35514cf4cdad6b34ae"
+    },
+    {
+      "key": "sfx_heal",
+      "frames": 10216,
+      "duration": 0.23165532879818593,
+      "peak": 0.31622314453125,
+      "sha256": "374705e78922cb32badff7bdeeca2c2c52e0cb97b4d44d41170884c9642e20b3"
+    },
+    {
+      "key": "sfx_core_hit",
+      "frames": 22275,
+      "duration": 0.5051020408163265,
+      "peak": 0.31622314453125,
+      "sha256": "3a7c48b44933485c0fe6010bc368c71f84ada3cfa61afc9345e0b75388400495"
+    },
+    {
+      "key": "sfx_skill_stone",
+      "frames": 51677,
+      "duration": 1.1718140589569161,
+      "peak": 0.31622314453125,
+      "sha256": "10652d904bf55b3e800f6d1b96cd12ca14db11b62b349cf36b77845792da0822"
+    },
+    {
+      "key": "sfx_skill_spike",
+      "frames": 24178,
+      "duration": 0.5482539682539682,
+      "peak": 0.31622314453125,
+      "sha256": "5be6181b0b49d00ca7c60f780e3fb4b5c883d33e347c9d5da73633bf6a445d41"
+    },
+    {
+      "key": "sfx_skill_crystal",
+      "frames": 38162,
+      "duration": 0.8653514739229025,
+      "peak": 0.316253662109375,
+      "sha256": "e9f43b451f2a758557c4cdc07d6e564fd1bc2fad48620577b4e4b61929ed62df"
+    },
+    {
+      "key": "sfx_skill_leaf",
+      "frames": 16304,
+      "duration": 0.36970521541950113,
+      "peak": 0.31622314453125,
+      "sha256": "546ac28343244ca9dab4857e673d0fcc27a1ee49ebfc57d639f87f28b6bc94f5"
+    },
+    {
+      "key": "sfx_skill_bubble",
+      "frames": 12295,
+      "duration": 0.2787981859410431,
+      "peak": 0.31622314453125,
+      "sha256": "f324edd63d52b0184976590ba5f6930a8215516af5ecfe8d161cda7a1b073432"
+    },
+    {
+      "key": "sfx_fusion_start",
+      "frames": 22384,
+      "duration": 0.5075736961451247,
+      "peak": 0.31622314453125,
+      "sha256": "459ad6f03544b74d6e06df6130941fe5cad54372d042196c01fc263e4884596a"
+    },
+    {
+      "key": "sfx_fusion_complete",
+      "frames": 61178,
+      "duration": 1.3872562358276643,
+      "peak": 0.316253662109375,
+      "sha256": "b815e7c5da926933fefee328ad21f4e531024d2caa53b92621b07890861ff7a7"
+    },
+    {
+      "key": "sfx_purchase",
+      "frames": 37288,
+      "duration": 0.8455328798185942,
+      "peak": 0.31622314453125,
+      "sha256": "ca8510a96c867e13a128fdeb723775238f0f104f1915b551efa46e148b4ceee1"
+    },
+    {
+      "key": "sfx_learn",
+      "frames": 20407,
+      "duration": 0.4627437641723356,
+      "peak": 0.316253662109375,
+      "sha256": "f74ad05f90983e3751095b522ed29830633b191833f89a7d68083d2a1b2e36c0"
+    },
+    {
+      "key": "sfx_wave_start",
+      "frames": 27034,
+      "duration": 0.613015873015873,
+      "peak": 0.31622314453125,
+      "sha256": "964a9ebe9dfcc8704e4ac03bd0298fcac28c4faa5d8a60622df255fea381d547"
+    },
+    {
+      "key": "sfx_boss_arrive",
+      "frames": 100425,
+      "duration": 2.2772108843537415,
+      "peak": 0.31622314453125,
+      "sha256": "c7269ac3495613d7c01190e047ea2a96d2160525b07f7204d1d66407baceca6d"
+    },
+    {
+      "key": "sfx_shield",
+      "frames": 15500,
+      "duration": 0.35147392290249435,
+      "peak": 0.31622314453125,
+      "sha256": "b20931ab1e2782cc9fa716e4f685bb5dcb238e70b6fe4a63eb96dfdcc9af5416"
+    },
+    {
+      "key": "sfx_revive",
+      "frames": 65588,
+      "duration": 1.4872562358276644,
+      "peak": 0.316253662109375,
+      "sha256": "22fa1084e7b4554efc8d1147d33fd11e204c45df2ef6408892de535c9ae5139a"
+    },
+    {
+      "key": "sfx_critical",
+      "frames": 20553,
+      "duration": 0.4660544217687075,
+      "peak": 0.31622314453125,
+      "sha256": "3c4bb984ab7785a613036e0cd31f39ba07f0597ae15d1ae78024268904d4d7d2"
+    }
+  ],
+  "builtAudioPassed": true,
+  "build": "F:\\Codex\\Projects\\gowaygui\\game\\build\\integrated-20260917"
+}

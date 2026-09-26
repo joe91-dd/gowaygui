@@ -1,0 +1,23 @@
+{
+  "name": "Rock 2",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\rock-2-6b809a\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Rock/eb8f6ce070abea6112aa1f96a756a32682ad3a20377a1923d73eb27fffccf401_Rock 2.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "672c39ed2f51145aa05b8b94a7c36000b0a25d9dc7e179444662d0877189ea1b",
+  "bytes": 72264,
+  "animations": 0,
+  "runtimeKey": "rock",
+  "height": 0.9,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 3072,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-51",
+  "name": "赤帆海盗王",
+  "kind": "elite",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Captain Barbarossa",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\captain-barbarossa-d51a3d\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/d3bf37a4467deeccda6952a0c748d546fbae6f6f9e84fa2cf0282b8701b0d36e_Captain Barbarossa.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "18a7f2e482235a69eeca39b2782b61e8fa227b0235f4d2db2d658e5d380ebfc4",
+  "bytes": 1214740,
+  "animations": 14,
+  "displayName": "赤帆海盗王",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 71740,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-51",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.1
+}

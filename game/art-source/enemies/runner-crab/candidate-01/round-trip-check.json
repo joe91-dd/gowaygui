@@ -1,0 +1,103 @@
+{
+  "status": "pass",
+  "fbx_sha256": "9a881e9afd4f168f9af8348b4da47e95faa2bc46ed9c8705a479f69e99e55e14",
+  "triangles": 10828,
+  "vertices": 5490,
+  "materials": [
+    "RunnerCrab_Toy_Atlas"
+  ],
+  "bones": [
+    "root",
+    "body",
+    "claw_L",
+    "jaw_L",
+    "claw_R",
+    "jaw_R",
+    "eye_L",
+    "eye_R",
+    "leg_L1",
+    "leg_L2",
+    "leg_L3",
+    "leg_L4",
+    "leg_R1",
+    "leg_R2",
+    "leg_R3",
+    "leg_R4"
+  ],
+  "clips": {
+    "idle": {
+      "imported_action_name": "RunnerCrab_Rig|RunnerCrab_Rig|idle",
+      "first": 1.0,
+      "last": 61.0,
+      "seconds": 2.0,
+      "samples": 121,
+      "maximum_vertex_motion_m": 0.01475710065776183,
+      "minimum_z_m": -8.385157457269088e-09,
+      "maximum_z_m": 0.941033124923706,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "walk": {
+      "imported_action_name": "RunnerCrab_Rig|RunnerCrab_Rig|walk",
+      "first": 1.0,
+      "last": 13.0,
+      "seconds": 0.4,
+      "samples": 25,
+      "maximum_vertex_motion_m": 0.15737362762345505,
+      "minimum_z_m": -3.262813334004022e-05,
+      "maximum_z_m": 0.9466979503631592,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "attack": {
+      "imported_action_name": "RunnerCrab_Rig|RunnerCrab_Rig|attack",
+      "first": 1.0,
+      "last": 22.0,
+      "seconds": 0.7,
+      "samples": 43,
+      "maximum_vertex_motion_m": 0.16596254664290452,
+      "minimum_z_m": -8.385157457269088e-09,
+      "maximum_z_m": 0.9384133815765381,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "hit": {
+      "imported_action_name": "RunnerCrab_Rig|RunnerCrab_Rig|hit",
+      "first": 1.0,
+      "last": 16.0,
+      "seconds": 0.5,
+      "samples": 31,
+      "maximum_vertex_motion_m": 0.11388572802173634,
+      "minimum_z_m": -8.385157457269088e-09,
+      "maximum_z_m": 0.9427976608276367,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "exit": {
+      "imported_action_name": "RunnerCrab_Rig|RunnerCrab_Rig|exit",
+      "first": 1.0,
+      "last": 25.0,
+      "seconds": 0.8,
+      "samples": 49,
+      "maximum_vertex_motion_m": 0.9251216971479926,
+      "minimum_z_m": -5.6027285921800285e-08,
+      "maximum_z_m": 0.962829053401947,
+      "first_last_seam_m": 0.9251216971479926,
+      "loop": false
+    }
+  },
+  "warnings": [],
+  "method": "Imported FBX, explicitly selected Blender 4.5 action slots, evaluated every half frame. Technical evidence does not imply art acceptance.",
+  "bounds_world_xyz": {
+    "min": [
+      -0.534000039100647,
+      -0.4063136577606201,
+      -8.385157457269088e-09
+    ],
+    "max": [
+      0.534000039100647,
+      0.4069690704345703,
+      0.9341344237327576
+    ]
+  }
+}

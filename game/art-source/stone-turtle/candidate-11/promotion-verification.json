@@ -1,0 +1,15 @@
+{
+  "status": "verified-runtime-candidate-11-not-final-art",
+  "runtime_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "runtime_hashes": {
+    "stone-colour.png": "331db30651c09e8930435b91bf78b7e714b13d6852e488c82a67233bad66ea57",
+    "stone-colour.png.meta": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "stone-roughness.png.meta": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "stone-turtle.fbx": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+    "stone-turtle.fbx.meta": "e4f8ad4c516eb77fe365a0cc6ccabd65bb8dec2b3e87531e5a82939e87b0d62f"
+  },
+  "v10_archive_verified": true,
+  "canonical_v10_sources_unchanged": true,
+  "meta_byte_changes_since_promotion": []
+}

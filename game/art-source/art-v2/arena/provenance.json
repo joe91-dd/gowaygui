@@ -1,0 +1,18 @@
+{
+  "asset": "arena-background.png",
+  "status": "production lobby background",
+  "createdDate": "2026-09-10",
+  "tool": "built-in image_gen.imagegen",
+  "reference": "C:/Users/Administrator/Desktop/龟/13_竞技场页面参考.png",
+  "generatedOriginal": "C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-17297a9d-6611-4fcb-a17d-571900883d5f.png",
+  "productionPath": "game/assets/resources/art-v2/arena-background.png",
+  "width": 1672,
+  "height": 940,
+  "mode": "RGB",
+  "bytes": 2970434,
+  "sha256": "2454cee016a372e9bc2bda0c436b96e2b265293394adae28ab71bfd5705dcb59",
+  "prompt": "prompt.txt",
+  "requestedDimensions": "2048x1152",
+  "postProcessing": "None. Original generated PNG copied unchanged.",
+  "visualReview": "Bright warm stone arena with central turtle-statue arch, blue/gold banners, circular plaza and layered ocean cliffs/waterfalls. No written text, UI or game characters. Left/right stone terraces are detailed, so UI panels should have opaque parchment or dark fills. Actual generated resolution1672x940 is approximately16:9."
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-12",
+  "name": "绯潮软泥",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "PinkBlob",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\pinkblob-2107c6\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/40be46f6c73fa05248c391af5c8d3c80c010a4c1078716b6ee8bc41d72127d04_PinkBlob.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "752597f0f8c68503d302d634519ea59fdd70d029d88e52d0354b1d1e1bb47696",
+  "bytes": 95692,
+  "animations": 8,
+  "displayName": "绯潮软泥",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 8484,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-12",
+  "triangles": 8484,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.3
+}

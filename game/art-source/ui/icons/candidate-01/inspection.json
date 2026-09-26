@@ -1,0 +1,110 @@
+{
+  "method": "Pillow read-only pixel inspection; no output image processing",
+  "files": [
+    {
+      "file": "icons-atlas.png",
+      "status": "original; insufficient padding",
+      "sha256": "87a94837a7de2a2c37d3f537346129f7441995121d1a3447fd58f876253a30b2",
+      "bytes": 1471580,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "transparentPixels": 872354,
+      "alpha1To15Pixels": 37131,
+      "alpha16To254Pixels": 662832,
+      "opaquePixels": 1221,
+      "transparentFraction": 0.5543901704312193,
+      "mostCommonAlpha": [
+        [
+          0,
+          872354
+        ],
+        [
+          253,
+          416534
+        ],
+        [
+          252,
+          175666
+        ],
+        [
+          251,
+          24333
+        ],
+        [
+          1,
+          20091
+        ],
+        [
+          250,
+          10667
+        ],
+        [
+          2,
+          5958
+        ],
+        [
+          249,
+          5726
+        ]
+      ]
+    },
+    {
+      "file": "icons-atlas-padding-edit.png",
+      "status": "rejected; RGB painted checkerboard",
+      "sha256": "cf7bc9f0bd9cd89e755ff18adaabd7d92543e1a7b957fe968cf1dc9b9e2e136f",
+      "bytes": 1074749,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGB"
+    },
+    {
+      "file": "icons-atlas-padded-transparent.png",
+      "status": "review candidate; alpha fringe remains",
+      "sha256": "d35d2e6987389797694028c38a32331e8cdb87c98fb5e778141f37ca65548a38",
+      "bytes": 515105,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "transparentPixels": 1372034,
+      "alpha1To15Pixels": 19012,
+      "alpha16To254Pixels": 181006,
+      "opaquePixels": 1486,
+      "transparentFraction": 0.8719420821105052,
+      "mostCommonAlpha": [
+        [
+          0,
+          1372034
+        ],
+        [
+          253,
+          119734
+        ],
+        [
+          254,
+          32195
+        ],
+        [
+          252,
+          12256
+        ],
+        [
+          1,
+          11217
+        ],
+        [
+          251,
+          3353
+        ],
+        [
+          2,
+          2407
+        ],
+        [
+          250,
+          1693
+        ]
+      ]
+    }
+  ]
+}

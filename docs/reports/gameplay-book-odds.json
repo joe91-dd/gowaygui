@@ -1,0 +1,274 @@
+{
+  "packages": [
+    {
+      "id": "turtleBasic",
+      "name": "1～4技能龟龟包",
+      "price": 72000,
+      "description": "获得一只随机造型的龟。1/2/3/4技能概率：54% / 30% / 13% / 3%。天赋和搭配随机。"
+    },
+    {
+      "id": "turtleAdvanced",
+      "name": "4～5技能龟龟包",
+      "price": 600000,
+      "description": "获得一只随机造型的龟。4技能90%，5技能10%。天赋和搭配随机，不保证极品。"
+    },
+    {
+      "id": "bookRandom",
+      "name": "随机技能书包",
+      "price": 32000,
+      "description": "获得一本随机技能书，使用普通招募的技能权重；包含低概率职业主动书。"
+    },
+    {
+      "id": "bookAttack",
+      "name": "攻击技能书包",
+      "price": 120000,
+      "description": "获得一本攻击类书。98%为攻击被动，按普通权重分配；1%穿甲弹、1%水晶炮。"
+    },
+    {
+      "id": "materialRandom",
+      "name": "随机培养材料包",
+      "price": 600000,
+      "description": "获得20份材料，每份独立抽取：蟹肉30%、蚌肉30%、鱼肉25%、海参15%。"
+    },
+    {
+      "id": "materialFixed",
+      "name": "培养材料组合包",
+      "price": 1200000,
+      "description": "固定获得蟹肉、蚌肉、鱼肉、海参各8份，共32份。"
+    }
+  ],
+  "bookRandom": [
+    {
+      "skillId": "rebirth",
+      "chance": 0.010775862068965516,
+      "name": "重生"
+    },
+    {
+      "skillId": "sleep",
+      "chance": 0.016163793103448273,
+      "name": "沉睡"
+    },
+    {
+      "skillId": "extraTarget",
+      "chance": 0.010775862068965516,
+      "name": "多重攻击"
+    },
+    {
+      "skillId": "strong",
+      "chance": 0.0646551724137931,
+      "name": "强壮"
+    },
+    {
+      "skillId": "armor",
+      "chance": 0.0646551724137931,
+      "name": "硬壳"
+    },
+    {
+      "skillId": "resist",
+      "chance": 0.0646551724137931,
+      "name": "抗魔"
+    },
+    {
+      "skillId": "swift",
+      "chance": 0.0377155172413793,
+      "name": "快手"
+    },
+    {
+      "skillId": "reach",
+      "chance": 0.05387931034482758,
+      "name": "远望"
+    },
+    {
+      "skillId": "steady",
+      "chance": 0.0646551724137931,
+      "name": "稳定"
+    },
+    {
+      "skillId": "regen",
+      "chance": 0.043103448275862065,
+      "name": "自愈"
+    },
+    {
+      "skillId": "openingShield",
+      "chance": 0.04849137931034482,
+      "name": "开场盾"
+    },
+    {
+      "skillId": "lastShield",
+      "chance": 0.0377155172413793,
+      "name": "自保"
+    },
+    {
+      "skillId": "encourage",
+      "chance": 0.02693965517241379,
+      "name": "鼓劲"
+    },
+    {
+      "skillId": "block",
+      "chance": 0.0377155172413793,
+      "name": "格挡"
+    },
+    {
+      "skillId": "reflect",
+      "chance": 0.03232758620689655,
+      "name": "反伤"
+    },
+    {
+      "skillId": "share",
+      "chance": 0.021551724137931032,
+      "name": "分担"
+    },
+    {
+      "skillId": "hold",
+      "chance": 0.005387931034482758,
+      "name": "守住"
+    },
+    {
+      "skillId": "critical",
+      "chance": 0.0377155172413793,
+      "name": "暴击"
+    },
+    {
+      "skillId": "lifesteal",
+      "chance": 0.02693965517241379,
+      "name": "吸血"
+    },
+    {
+      "skillId": "combo",
+      "chance": 0.016163793103448273,
+      "name": "连击"
+    },
+    {
+      "skillId": "piercingShot",
+      "chance": 0.0016163793103448273,
+      "name": "穿甲弹"
+    },
+    {
+      "skillId": "bounce",
+      "chance": 0.03232758620689655,
+      "name": "弹射"
+    },
+    {
+      "skillId": "spellDrain",
+      "chance": 0.03232758620689655,
+      "name": "吸魔"
+    },
+    {
+      "skillId": "shredResist",
+      "chance": 0.021551724137931032,
+      "name": "破魔"
+    },
+    {
+      "skillId": "crystalCannon",
+      "chance": 0.0016163793103448273,
+      "name": "水晶炮"
+    },
+    {
+      "skillId": "doubleHeal",
+      "chance": 0.03232758620689655,
+      "name": "双重治疗"
+    },
+    {
+      "skillId": "healShield",
+      "chance": 0.016163793103448273,
+      "name": "治疗盾"
+    },
+    {
+      "skillId": "cleanse",
+      "chance": 0.021551724137931032,
+      "name": "净化"
+    },
+    {
+      "skillId": "greatHeal",
+      "chance": 0.008081896551724137,
+      "name": "大治疗"
+    },
+    {
+      "skillId": "shredArmor",
+      "chance": 0.03232758620689655,
+      "name": "破甲"
+    },
+    {
+      "skillId": "root",
+      "chance": 0.021551724137931032,
+      "name": "定身"
+    },
+    {
+      "skillId": "weaken",
+      "chance": 0.02693965517241379,
+      "name": "虚弱"
+    },
+    {
+      "skillId": "bubbleRing",
+      "chance": 0.008081896551724137,
+      "name": "泡泡圈"
+    },
+    {
+      "skillId": "taunt",
+      "chance": 0.021551724137931032,
+      "name": "挑衅"
+    }
+  ],
+  "bookAttack": [
+    {
+      "skillId": "extraTarget",
+      "chance": 0.034999999999999996,
+      "name": "多重攻击"
+    },
+    {
+      "skillId": "swift",
+      "chance": 0.1225,
+      "name": "快手"
+    },
+    {
+      "skillId": "reach",
+      "chance": 0.175,
+      "name": "远望"
+    },
+    {
+      "skillId": "critical",
+      "chance": 0.1225,
+      "name": "暴击"
+    },
+    {
+      "skillId": "lifesteal",
+      "chance": 0.0875,
+      "name": "吸血"
+    },
+    {
+      "skillId": "combo",
+      "chance": 0.0525,
+      "name": "连击"
+    },
+    {
+      "skillId": "piercingShot",
+      "chance": 0.01,
+      "name": "穿甲弹"
+    },
+    {
+      "skillId": "bounce",
+      "chance": 0.105,
+      "name": "弹射"
+    },
+    {
+      "skillId": "spellDrain",
+      "chance": 0.105,
+      "name": "吸魔"
+    },
+    {
+      "skillId": "shredResist",
+      "chance": 0.06999999999999999,
+      "name": "破魔"
+    },
+    {
+      "skillId": "crystalCannon",
+      "chance": 0.01,
+      "name": "水晶炮"
+    },
+    {
+      "skillId": "shredArmor",
+      "chance": 0.105,
+      "name": "破甲"
+    }
+  ]
+}

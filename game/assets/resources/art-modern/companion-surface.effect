@@ -1,0 +1,309 @@
+CCEffect %{
+ techniques:
+ - passes:
+   - vert: companion-surface-vs:vert
+     frag: companion-surface-fs:frag
+     rasterizerState: { cullMode: none }
+     depthStencilState: { depthTest: false, depthWrite: false }
+     blendState:
+       targets:
+       - blend: true
+         blendSrc: src_alpha
+         blendDst: one_minus_src_alpha
+         blendDstAlpha: one_minus_src_alpha
+     properties:
+       rigRect: { value: [0, 0, 0, 0] }
+       rigShape: { value: [0, 0, 0, 0] }
+       rigParams: { value: [0, 0, 0, 0] }
+       rigBody: { value: [0, 0, 0, 0] }
+       rigAngles: { value: [0, 0, 0, 0] }
+       rigHead: { value: [0, 0, 0, 0] }
+       rigArmA: { value: [0, 0, 0, 0] }
+       rigArmB: { value: [0, 0, 0, 0] }
+       rigPivots: { value: [0, 0, 0, 0] }
+       rigGear: { value: [0, 0, 0, 0] }
+       rigGear2: { value: [0, 0, 0, 0] }
+       rigGear3: { value: [0, 0, 0, 0] }
+       rigEyes: { value: [0, 0, 0, 0] }
+       rigGear4: { value: [0, 0, 0, 0] }
+       rigGear5: { value: [0, 0, 0, 0] }
+       rigGear6: { value: [0, 0, 0, 0] }
+       rigGear7: { value: [0, 0, 0, 0] }
+       rigWeapon: { value: [0, 0, 0, 0] }
+       rigHandle: { value: [0, 0, 0, 0] }
+       rigEyeSize: { value: [0, 0, 0, 0] }
+}%
+CCProgram companion-surface-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+CCProgram companion-surface-fs %{
+precision highp float;
+in vec2 uv0;
+
+#pragma builtin(local)
+layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+in vec4 color;
+#define SOURCE(p) texture(cc_spriteTexture,p)
+// Shared by UI and world. Positions stay in the source painting, including the rigid weapon layer.
+#include <builtin/uniforms/cc-global>
+uniform RigParams {
+  vec4 rigRect; vec4 rigShape; vec4 rigParams; vec4 rigBody; vec4 rigAngles;
+  vec4 rigHead; vec4 rigArmA; vec4 rigArmB; vec4 rigPivots;
+  vec4 rigGear; vec4 rigGear2; vec4 rigGear3; vec4 rigEyes; vec4 rigEyeSize;
+  vec4 rigGear4; vec4 rigGear5; vec4 rigGear6; vec4 rigGear7; vec4 rigWeapon; vec4 rigHandle;
+};
+float zone(vec2 p,vec4 r) {return 1.0-smoothstep(.45,1.0,length((p-r.xy)/r.zw));}
+vec2 turn(vec2 p,vec2 pivot,float angle) {
+  vec2 q=(p-pivot)*vec2(rigShape.x,1.0);float c=cos(angle),s=sin(angle);
+  return pivot+vec2(c*q.x-s*q.y,s*q.x+c*q.y)/vec2(rigShape.x,1.0);
+}
+vec2 rigSamplePoint(vec2 p) {
+  float planted=1.0-smoothstep(.76,.93,p.y);
+  p=mix(p,turn(p,rigBody.xy,rigBody.z),planted);
+  p.x-=rigBody.w*(p.x-.50)*zone(p,vec4(.50,.65,.43,.29));
+  p.y+=rigBody.w*(.90-p.y)*zone(p,vec4(.50,.64,.42,.30));
+  float a=zone(p,rigArmA)*(1.0-smoothstep(.83,.93,p.y));
+  float b=zone(p,rigArmB)*(1.0-smoothstep(.83,.93,p.y));
+  p=mix(p,turn(p,rigPivots.xy,rigAngles.x),a);
+  p=mix(p,turn(p,rigPivots.zw,rigAngles.y),b);
+  return mix(p,turn(p,rigHead.xy+vec2(0.0,.13),rigAngles.z),zone(p,rigHead));
+}
+vec2 weaponPoint(vec2 p) {
+  // One affine transform over the complete equipment: no elastic bending along the shaft.
+  vec2 grip=rigHandle.xy,delta=rigSamplePoint(grip)-grip;
+  float angle=mix(rigAngles.x,rigAngles.y,rigHandle.z)*rigHandle.w+rigBody.z;
+  return turn(p+delta,grip,angle);
+}
+float weaponMask(vec2 p) {
+  if(rigParams.y<1.5)return 0.0;
+  vec2 d=abs(p-rigWeapon.xy)/rigWeapon.zw;
+  return (1.0-smoothstep(1.0,1.42,d.x))*(1.0-smoothstep(1.0,1.32,d.y));
+}
+vec4 keyPaint(vec4 c) {
+  float magenta=min(c.r,c.b)-c.g;
+  c.a*=1.0-smoothstep(.25,.48,magenta)*smoothstep(.50,.73,min(c.r,c.b));
+  float spill=max(0.0,min(c.r,c.b)-c.g-.20);c.r-=spill*.65;c.b-=spill*.40;
+  return c;
+}
+vec4 painted(vec2 p) {
+  vec4 c=keyPaint(SOURCE(rigRect.xy+clamp(p,vec2(.001),vec2(.999))*rigRect.zw));
+  if(rigParams.y>1.5&&rigParams.y<2.5&&p.x>.66&&p.y>.28&&p.y<.95){
+    // Remove the keyed purple fringe of the original bow string, without touching brown wood or green leaves.
+    float purple=smoothstep(.045,.12,min(c.r,c.b)-c.g)*smoothstep(.12,.28,c.b);
+    c.a*=1.0-purple;
+  }
+  if(p.x<.001||p.x>.999||p.y<.001||p.y>.999)c.a=0.0;
+  return c;
+}
+float softPoint(vec2 p,vec2 center,vec2 radius) {vec2 q=(p-center)/radius;return exp(-dot(q,q)*3.0);}
+void pigment(inout vec4 c,vec3 tint,float a) {
+  float outA=a+c.a*(1.0-a);
+  c.rgb=(tint*a+c.rgb*c.a*(1.0-a))/max(outA,.001);c.a=outA;
+}
+void light(inout vec3 rgb,inout float alpha,vec3 tint,float amount) {
+  amount=clamp(amount*rigShape.z,0.0,.92);rgb+=tint*amount;alpha=max(alpha,amount*.72);
+}
+float star(vec2 p,vec2 center,float radius) {
+  vec2 d=abs(p-center)/radius;
+  return exp(-length(d)*2.0)*(exp(-d.x*d.x*100.0)+exp(-d.y*d.y*100.0));
+}
+void eyelids(inout vec4 c,vec2 p) {
+  float cycle=4.7+rigParams.y*.19,phase=mod(cc_time.x+rigParams.y*.71,cycle)-(cycle-.26);
+  float blink=phase<0.0?0.0:phase<.085?smoothstep(0.0,.085,phase):phase<.115?1.0:1.0-smoothstep(.115,.26,phase);
+  if(blink<.001)return;
+  for(int i=0;i<2;i++){
+    vec2 center=i==0?rigEyes.xy:rigEyes.zw,size=i==0?rigEyeSize.xy:rigEyeSize.zw;
+    vec2 d=(p-center)/size;float ellipse=1.0-smoothstep(.90,1.04,dot(d,d));
+    float edge=sqrt(max(0.0,1.0-d.x*d.x)),upper=mix(-edge-.08,edge+.14,blink);
+    // A single upper lid closes completely. Two half-opacity meeting masks left a dark iris stripe.
+    float cover=(1.0-smoothstep(upper-.04,upper+.04,d.y))*ellipse;
+    vec3 skinA=painted(center+vec2(d.x*size.x*.30,size.y*1.42)).rgb;
+    vec3 skinB=painted(center+vec2(0.0,size.y*1.65)).rgb;
+    vec3 lid=mix(skinA,skinB,.35)*(.98+.04*d.y);
+    c.rgb=mix(c.rgb,lid,cover*c.a);
+  }
+}
+vec4 paintCompanion(vec2 uv) {
+  // Ambient emission uses the engine clock, so switching UI panels does not reset its cycle.
+  float t=cc_time.x,role=rigParams.y,enabled=rigParams.w;
+  // Extra transparent draw area allows emission past the source crop without enlarging the turtle.
+  vec2 original=((uv-rigRect.xy)/rigRect.zw-.5)*rigShape.y+.5;
+  // Finished advanced home art stays rigid. The authored full-body silhouette
+  // must not shear while the calibrated eyelids and role light passes animate.
+  vec2 p=rigShape.w>.5?original:rigSamplePoint(original);
+  vec2 q=rigShape.w>.5?original:(role<1.5?p:weaponPoint(original));
+  // One continuous source sample: the complete bow/string/grip use the same rigid transform.
+  // Blend displacement outside the equipment, never cut the painting into overlapping alpha layers.
+  if(rigShape.w<.5)p=mix(p,q,weaponMask(original));
+  vec4 c=painted(p);if(enabled>.5)eyelids(c,p);
+  vec4 equipment=painted(q);
+  vec3 emission=vec3(0.0);float glowAlpha=0.0;
+  // Advanced homepage paintings use CPU ornament nodes for their visible
+  // accents; suppress legacy atlas gear emission, which lands on the wrong
+  // prop for the finished full-body art (notably 阳光's lamp).
+  if(enabled>.5&&rigShape.w<.5){
+    if(role<1.5){
+      // All painted blue crystal facets participate, including forearms, claws and toes.
+      float blue=smoothstep(.035,.22,min(c.b,c.g)-c.r)*c.a;
+      float stream=pow(.5+.5*sin(p.y*42.0-p.x*15.0-t*3.1),9.0);
+      c.rgb+=vec3(.17,.57,.80)*blue*(.28+stream*.95);
+      for(int i=0;i<7;i++){
+        vec4 g=i==0?rigGear:i==1?rigGear2:i==2?rigGear3:i==3?rigGear4:i==4?rigGear5:i==5?rigGear6:rigGear7;
+        float pulse=.3+.7*pow(.5+.5*sin(t*2.2-float(i)*1.3),3.0);
+        light(emission,glowAlpha,vec3(.19,.65,1.0),softPoint(p,g.xy,g.zw*1.8)*pulse*(i<3?.24:.19));
+        light(emission,glowAlpha,vec3(.65,.90,1.0),star(p,g.xy+vec2(.006,-g.w*.24),.055)*pow(pulse,3.0)*.62);
+        if(i<3){
+          float u=fract(t*.30+float(i)*.333);
+          vec2 tip=g.xy+vec2(-.07*u+sin(u*7.0+float(i))*.018,-.24*u);
+          light(emission,glowAlpha,vec3(.16,.67,1.0),softPoint(p,tip,vec2(.021,.055))*sin(u*3.14159)*.55);
+          light(emission,glowAlpha,vec3(.65,.92,1.0),star(p,tip,.028)*sin(u*3.14159)*.55);
+          vec2 d=p-g.xy;float along=clamp(-d.y/.23,0.0,1.0);
+          float beam=exp(-pow((d.x+.07*along-sin(along*7.0-t*2.0)*.010)/.012,2.0));
+          light(emission,glowAlpha,vec3(.11,.49,.95),beam*sin(along*3.14159)*pulse*.21);
+        }
+      }
+    }else if(role<2.5){
+      float breath=.5-.5*cos(t*1.55),season=mod(t,9.0);
+      float growth=smoothstep(.2,3.7,season)*(1.0-smoothstep(7.0,9.0,season));
+      vec2 stringTop=rigGear2.xy+vec2(-.018,.022),stringBottom=rigGear3.xy+vec2(-.031,-.023),stringAxis=stringBottom-stringTop;
+      float stringU=clamp(dot(q-stringTop,stringAxis)/dot(stringAxis,stringAxis),0.0,1.0);
+      float stringLine=(1.0-smoothstep(.0012,.0027,length(q-stringTop-stringAxis*stringU)))*(1.0-c.a);
+      pigment(c,vec3(.64,.70,.59),stringLine);
+      // Sculpted jade ivy: opaque emerald leaves, fine pearl veins and a travelling growth bud.
+      for(int strand=0;strand<2;strand++){
+        vec2 bottom=strand==0?rigGear3.xy:rigGear5.xy,top=strand==0?rigGear2.xy:rigGear4.xy;
+        vec2 at=strand==0?q:p,axis=top-bottom;float len=max(length(axis),.001);
+        vec2 dir=axis/len,normal=vec2(-dir.y,dir.x);float u=dot(at-bottom,dir)/len;
+        float curve=strand==0?sin(u*3.14159)*.027:0.0;
+        float coil=sin(u*22.0-t*.22)*.010,visibility=smoothstep(0.0,.06,u)*(1.0-smoothstep(.99,1.06,u));
+        vec2 stem=bottom+axis*u+normal*(curve+coil);float d=abs(dot(at-stem,normal));
+        float reveal=(1.0-smoothstep(growth,growth+.045,u))*smoothstep(.01,.12,growth),vine=(1.0-smoothstep(.003,.0057,d))*visibility*reveal;
+        pigment(c,vec3(.07,.28,.22),vine);
+        float vein=exp(-pow(d/.0018,2.0))*visibility*reveal;
+        light(emission,glowAlpha,vec3(.51,.84,.65),vein*(.33+.33*breath));
+        float energy=exp(-pow((u-fract(t*.38+float(strand)*.36))/.065,2.0))*visibility*reveal;
+        light(emission,glowAlpha,vec3(.63,.88,.71),exp(-pow(d/.0065,2.0))*energy*.65);
+        for(int i=0;i<6;i++){
+          float v=.10+float(i)*.16,side=mod(float(i),2.0)*2.0-1.0;
+          vec2 anchor=bottom+axis*v+normal*((strand==0?sin(v*3.14159)*.027:0.0)+sin(v*22.0-t*.22)*.010);
+          vec2 leafAxis=normalize(normal*side+dir*.70),leafNormal=vec2(-leafAxis.y,leafAxis.x),delta=at-anchor;
+          float lengthLeaf=.064,along=dot(delta,leafAxis)/lengthLeaf,bend=sin(along*3.14159)*(.004+.002*sin(t*.9+v*8.0));
+          float crosswise=dot(delta,leafNormal)-bend,width=.018*pow(max(0.0,sin(clamp(along,0.0,1.0)*3.14159)),.85);
+          float leaf=(1.0-smoothstep(width-.002,width+.0015,abs(crosswise)))*smoothstep(0.0,.07,along)*(1.0-smoothstep(.93,1.0,along))*smoothstep(v-.1,v+.04,growth);
+          pigment(c,mix(vec3(.055,.25,.19),vec3(.26,.56,.36),clamp(along+crosswise*17.0,0.0,1.0)),leaf);
+          float spine=exp(-pow(crosswise/.0015,2.0))*leaf;
+          float ribs=pow(.5+.5*cos(along*41.0-abs(crosswise)*420.0),18.0)*leaf*.28;
+          light(emission,glowAlpha,vec3(.68,.84,.59),(spine*.65+ribs)*(.45+breath*.40));
+          float edge=exp(-pow((abs(crosswise)-width)/.0018,2.0))*leaf;
+          light(emission,glowAlpha,vec3(.25,.62,.47),edge*(.35+breath*.22));
+          vec2 tip=anchor+leafAxis*lengthLeaf;float sparkle=softPoint(at,tip,vec2(.0035,.005))*pow(.5+.5*sin(t*1.7+v*11.0),7.0)*smoothstep(v,v+.1,growth);
+          light(emission,glowAlpha,vec3(.91,.92,.68),sparkle*.86);
+          float wave=fract(t*.40-v*.65),flare=sin(wave*3.14159)*smoothstep(v,v+.12,growth);
+          vec2 aura=tip+leafAxis*wave*.075;
+          light(emission,glowAlpha,vec3(.32,.88,.64),softPoint(at,aura,vec2(.010+.018*wave,.006+.011*wave))*flare*(1.0-wave)*.44);
+          float ribPulse=exp(-pow((along-fract(t*.65-v))/.16,2.0))*leaf;
+          light(emission,glowAlpha,vec3(.69,1.0,.78),ribPulse*(spine*.55+edge*.36));
+        }
+        vec2 bud=bottom+axis*growth+normal*((strand==0?sin(growth*3.14159)*.027:0.0)+sin(growth*22.0-t*.22)*.010);
+        light(emission,glowAlpha,vec3(.55,.87,.70),star(at,bud,.024)*(.36+breath*.33));
+      }
+    }else if(role<3.5){
+      // Keep the authored staff and wave silhouette intact; animated water grows out from it.
+      vec2 d=(q-rigGear.xy)/rigGear.zw;float r=length(d),theta=atan(d.y,d.x);
+      float blue=smoothstep(.04,.20,min(equipment.g,equipment.b)-equipment.r)*zone(q,rigGear)*equipment.a;
+      vec2 inside=turn(q,rigGear.xy,-t*.72);
+      vec3 rotating=painted(inside).rgb;
+      c.rgb=mix(c.rgb,rotating,blue*(1.0-smoothstep(.42,.82,r))*.76);
+      float flow=.5+.5*sin(theta*2.0-r*5.8+t*2.5);
+      c.rgb+=vec3(.11,.48,.65)*blue*(.18+flow*.42);
+      float grow=.5-.5*cos(t*1.25),end=1.02+grow*1.15;
+      float fall=smoothstep(.25,.65,r)*(1.0-smoothstep(end-.45,end,r));
+      float wave=.5+.5*cos(theta*2.0-r*6.2+t*2.1);
+      light(emission,glowAlpha,vec3(.10,.55,.96),pow(wave,18.0)*fall*.36);
+      light(emission,glowAlpha,vec3(.45,.91,1.0),pow(wave,52.0)*fall*.57);
+      for(int i=0;i<5;i++){
+        float v=fract(t*.24+float(i)*.20),ang=t*1.6+float(i)*1.256,dist=.70+v*1.75;
+        vec2 drop=rigGear.xy+vec2(cos(ang),sin(ang))*rigGear.zw*dist;
+        light(emission,glowAlpha,vec3(.50,.94,1.0),softPoint(q,drop,vec2(.009,.014))*sin(v*3.14159)*grow*.85);
+      }
+      light(emission,glowAlpha,vec3(.07,.45,.83),softPoint(q,rigGear.xy,rigGear.zw*1.3)*.12);
+    }else if(role<4.5){
+      float pulse=.14+.86*pow(.5-.5*cos(t*1.65),1.25),glass=zone(q,rigGear);
+      float warm=smoothstep(.06,.30,equipment.r-equipment.b)*smoothstep(.25,.7,equipment.r)*glass*equipment.a;
+      c.rgb+=vec3(.58,.29,.025)*warm*pulse;
+      vec2 fire=(q-rigGear.xy)/rigGear.zw;
+      float up=clamp((.65-fire.y)/1.25,0.0,1.0),width=.30*(1.0-up)+.025;
+      float flicker=sin(up*7.0-t*5.2)*.11*up+sin(t*9.0)*.025;
+      float flame=exp(-pow((fire.x-flicker)/width,2.0))*smoothstep(-.78,-.5,fire.y)*(1.0-smoothstep(.48,.78,fire.y))*glass;
+      c.rgb+=vec3(1.0,.47,.05)*flame*(.7+pulse*.35)*equipment.a;
+      light(emission,glowAlpha,vec3(1.0,.88,.36),flame*.44);
+      light(emission,glowAlpha,vec3(1.0,.61,.15),softPoint(q,rigGear.xy,rigGear.zw*(1.8+pulse*1.35))*.46*pulse);
+      light(emission,glowAlpha,vec3(1.0,.90,.56),star(q,rigGear.xy,.105)*pulse*.57);
+      for(int i=0;i<5;i++){
+        float v=fract(t*.20+float(i)*.2);vec2 center=rigGear.xy+vec2(sin(float(i)*2.4+v*4.0)*(.025+v*.065),-v*.25);
+        light(emission,glowAlpha,vec3(1.0,.80,.35),softPoint(q,center,vec2(.006,.011))*sin(v*3.14159)*.75);
+      }
+    }else{
+      float phase=mod(t,4.5),charge=smoothstep(.3,2.65,phase)*(1.0-smoothstep(2.92,3.25,phase));
+      float burst=exp(-pow((phase-2.98)/.33,2.0));
+      vec2 d=(q-rigGear.xy)/rigGear.zw;float r=length(d),theta=atan(d.y,d.x);
+      float jewel=zone(q,rigGear)*smoothstep(.03,.19,equipment.b-equipment.r*.72)*equipment.a;
+      vec2 spun=rigGear.xy+vec2(cos(t*.7)*d.x-sin(t*.7)*d.y,sin(t*.7)*d.x+cos(t*.7)*d.y)*rigGear.zw;
+      c.rgb=mix(c.rgb,painted(spun).rgb,jewel*(1.0-smoothstep(.55,.88,r))*.93);
+      c.rgb+=vec3(.23,.53,.80)*jewel*(.28+charge*.83+burst);
+      float rays=pow(.5+.5*cos(theta*6.0-t*.7),38.0)*exp(-r*.76)*smoothstep(.40,.7,r);
+      light(emission,glowAlpha,vec3(.44,.66,1.0),rays*(.10+charge*.15+burst*.90));
+      float radius=.9+max(0.0,phase-2.75)*5.4;
+      float shock=exp(-pow((r-radius)/.17,2.0))*burst;
+      light(emission,glowAlpha,vec3(.23,.78,1.0),shock*.32);
+      light(emission,glowAlpha,vec3(.56,.77,1.0),star(q,rigGear.xy,.11)*(.25+.45*charge+burst*.55));
+      light(emission,glowAlpha,vec3(.19,.46,.97),exp(-r*r*.70)*(.17+.22*charge));
+      for(int i=0;i<5;i++){
+        float v=fract(t*.18+float(i)*.2),ang=float(i)*1.257+t*.46;
+        vec2 spark=rigGear.xy+vec2(cos(ang),sin(ang))*rigGear.zw*(1.5+v*2.2);
+        light(emission,glowAlpha,vec3(.68,.78,1.0),star(q,spark,.022)*sin(v*3.14159)*(.30+burst*.5));
+      }
+    }
+  }
+  float alpha=max(c.a,glowAlpha);vec3 rgb=c.rgb*c.a+emission;
+  return vec4(rgb/max(alpha,.001),alpha);
+}
+vec4 frag(){vec4 c=paintCompanion(uv0);c*=color;if(c.a<.008)discard;return c;}
+}%

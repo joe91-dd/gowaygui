@@ -1,0 +1,36 @@
+{
+  "id": "yellow-1",
+  "name": "珊角大祭司",
+  "tier": 3,
+  "index": 31,
+  "base": 23,
+  "key": "boss-31",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 42008,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-23",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/8fdc56697eed6009c6dd27069e1096f56860fea3888d95fd7343bd571fb70b2d_Goleling Evolved.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24788,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.3
+}

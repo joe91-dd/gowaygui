@@ -1,0 +1,66 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: g1-particle-vs:vert
+      frag: g1-particle-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        mainTexture: { value: white }
+        tint: { value: [1, 1, 1, 1], editor: { type: color } }
+        motion: { value: [0, 1, 0, 0] }
+}%
+CCProgram g1-particle-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <builtin/uniforms/cc-local>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  out vec2 uv;
+  vec4 vert () { uv=a_texCoord; return cc_matProj*cc_matView*cc_matWorld*vec4(a_position,1.0); }
+}%
+CCProgram g1-particle-fs %{
+  precision highp float;
+  in vec2 uv;
+  uniform sampler2D mainTexture;
+  uniform Particle { vec4 tint; vec4 motion; };
+  vec4 frag () {
+    vec4 tex;
+    if(motion.z < -.5){
+      float cell=-motion.z-1.0;
+      // The generated spell atlas has artwork close to the cell borders.
+      // Inset the sample and feather the billboard so the quad never reads as
+      // a hard vertical card when a spell is scaled up in the arena.
+      vec2 localUV=clamp(uv,.035,.965);
+      tex=texture(mainTexture,(localUV+vec2(mod(cell,4.0),floor(cell/4.0)))/vec2(4.0,3.0));
+      // Preserve the atlas colour; its black gutters contribute no additive light.
+      float value=max(tex.r,max(tex.g,tex.b));
+      float sideFade=smoothstep(0.0,.16,uv.x)*(1.0-smoothstep(.84,1.0,uv.x));
+      float capFade=smoothstep(0.0,.08,uv.y)*(1.0-smoothstep(.92,1.0,uv.y));
+      float roundFade=1.0-smoothstep(.72,1.02,length(vec2((uv.x-.5)/.5,(uv.y-.5)/.5)));
+      float edge=sideFade*capFade*mix(1.0,roundFade,.65);
+      // Keep the painted core solid enough to read over bright islands while
+      // retaining the softened perimeter that removes the old card edge.
+      float bodyAlpha=pow(clamp(motion.y,0.0,1.0),.88);
+      return vec4(tex.rgb*tint.rgb,tex.a*smoothstep(.025,.18,value)*edge*bodyAlpha*tint.a);
+    }
+    if(motion.z>.5){
+      float row=motion.z-1.0,frames=row<1.5?5.0:7.0,frame=clamp(motion.w,0.0,.999)*(frames-1.0),a=floor(frame),b=min(frames-1.0,a+1.0);
+      vec2 localUV=clamp(uv,.025,.975);
+      tex=mix(texture(mainTexture,(localUV+vec2(a,row))/vec2(8.0,4.0)),texture(mainTexture,(localUV+vec2(b,row))/vec2(8.0,4.0)),fract(frame));
+      float sideFade=smoothstep(0.0,.14,uv.x)*(1.0-smoothstep(.86,1.0,uv.x));
+      float capFade=smoothstep(0.0,.06,uv.y)*(1.0-smoothstep(.94,1.0,uv.y));
+      return vec4(tex.rgb*tint.rgb,clamp(tex.a*pow(clamp(motion.y,0.0,1.0),.90)*sideFade*capFade,0.0,.96));
+    }
+    tex=texture(mainTexture,uv);
+    float value=max(tex.r,max(tex.g,tex.b))*tex.a;
+    return vec4(tint.rgb,clamp(value*motion.y*tint.a,0.0,1.0));
+  }
+}%

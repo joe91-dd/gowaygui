@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "approved_prototype_exact_geometry_uv_material": true,
+  "editable_parts": 36,
+  "files": {
+    "giant-claw.blend": {
+      "sha256": "967393f97e27ee6dbdc3b0a12f7860a902cd712d462069f7263404a8f24f60af",
+      "skinned_meshes": 36,
+      "packed_pngs": {
+        "giant-colour.png": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+        "giant-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+      },
+      "bones": 16,
+      "actions": 5
+    },
+    "giant-claw-review-scene.blend": {
+      "sha256": "b1cdc83e58f58f72c57553c8ae2ffc56ac68b5ab1f2327c8fc3cb89369458399",
+      "skinned_meshes": 1,
+      "packed_pngs": {
+        "giant-colour.png": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+        "giant-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+      },
+      "bones": 16,
+      "actions": 5
+    }
+  }
+}

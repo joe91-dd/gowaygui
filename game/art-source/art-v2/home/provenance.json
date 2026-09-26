@@ -1,0 +1,19 @@
+{
+  "asset": "home-background.png",
+  "generatedAtDate": "2026-09-10",
+  "generator": "OpenAI built-in image_gen",
+  "mode": "reference edit",
+  "reference": "C:/Users/Administrator/Desktop/龟/02_主界面最终布局参考.png.png",
+  "originalGeneratedFile": "C:/Users/Administrator/.codex/generated_images/01a086f7-59cf-74f0-bb28-c163e75eb53d/exec-47050514-6af6-4ae1-8287-8b361c2e0b8b.png",
+  "sourceCopy": "game/art-source/art-v2/home/home-background-source.png",
+  "runtimeCopy": "game/assets/resources/art-v2/home-background.png",
+  "prompt": "prompt.txt",
+  "width": 1672,
+  "height": 941,
+  "bytes": 3167876,
+  "sha256": "93c9d363aa23f6b43c52eb562a8ee2901de800863573e28cee3eb0b5da5db4cd",
+  "postProcessing": "none; byte-identical copies",
+  "visualQA": "Viewed generated output. Sunny stylized 3D island with central portal, clear foreground stone plaza and five empty runtime-character station areas. Blue workshop, striped market, collection hut, straw rental hut, striped shop and trophy plinth retained in requested left/right hierarchy. No living characters, text, HUD, buttons, red dots or watermark. Blank architectural signboards remain available for runtime labels. Far-right stone turtle monument and small environmental turtle statues are intentional scenery. Bottom peripheral rope posts do not occlude the central staging region.",
+  "implementationNote": "Approximately 16:9 native raster output (1672x941), not requested ideal 2048x1152. Keep source at native resolution; avoid upscaling claims. User-supplied original untouched. A static environmental plate, not a 3D scene or baked UI.",
+  "rightsNote": "Generated from user-supplied approved reference; provenance records generation and source, not an independent legal clearance."
+}

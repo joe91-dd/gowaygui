@@ -1,0 +1,153 @@
+{
+  "version": "shell-carrier-candidate-02",
+  "status": "isolated-single-source-candidate-not-promoted-not-final-art",
+  "recorded_at_utc": "2026-09-08T10:06:40.623610+00:00",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_threads": 2,
+  "max_samples": 24,
+  "images_actually_viewed": [
+    "render-three-quarter.png",
+    "render-battle-angle.png"
+  ],
+  "render_processes_exited": true,
+  "triangles": 15088,
+  "vertices": 7606,
+  "bones": 17,
+  "material_count": 1,
+  "half_frame_samples": 417,
+  "enemy_kind": "elite",
+  "display_name": "搬壳大蟹",
+  "recommended_scale": 1.0,
+  "dimensions_blender_xyz": [
+    1.3589516878128052,
+    0.8353595733642578,
+    1.157202124595642
+  ],
+  "embedded_pngs": {
+    "carrier-colour.png": {
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+      "bytes": 70350,
+      "exact_png_byte_offset": 356566
+    },
+    "carrier-roughness.png": {
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039,
+      "exact_png_byte_offset": 427565
+    }
+  },
+  "generator": "game/art-source/enemies/build_shell_carrier_candidate02.py",
+  "generator_sha256": "6a46287a58287264206fe88ce6e7cac3234e50ffc76ed5dd2c22fda4e3292589",
+  "original_source": "Project-original c02 rounded fan surface/elliptical rim from frozen c01. Remaining 30 source meshes, rig/action keyframes, material, lighting and PNG bytes verified unchanged. Internal original crab lineage; no external stock material or model.",
+  "protected_sources_unchanged": {
+    "game/art-source/enemies/shell-carrier/candidate-01/asset-manifest.json": "028168233c02d4587ef127824e1f6a91756b0ce2b05e12103b718caf3d7c8873",
+    "game/art-source/enemies/shell-carrier/candidate-01/build-initial-budget.log": "55d4653fd67a1c9fd1fbaaa7d57b3c6aed40768b58b9753ace20c617b3216676",
+    "game/art-source/enemies/shell-carrier/candidate-01/build.log": "3e38c7b95383633543a602b5ab5914a9c010f590419dfb0e2ad76b3275eca3d1",
+    "game/art-source/enemies/shell-carrier/candidate-01/model-stats.json": "825f8b86e45e23f0e01a3763b24268337711dfa957e896b33383dfabe98d4d9d",
+    "game/art-source/enemies/shell-carrier/candidate-01/package_candidate.py": "5f398bb79d4500a581f6cdefac350fbd20ecebe642839c7c6669ade44a6dd526",
+    "game/art-source/enemies/shell-carrier/candidate-01/README.md": "4f475d3aa6d97dd20c46362448fdfccc31ae5ba4a79779dda69bed11b92a0f7d",
+    "game/art-source/enemies/shell-carrier/candidate-01/reference-preservation.json": "9b89c9c664576bde25cd64c8699eb17fb0d6e0f00146b408fc993200b8f66d3f",
+    "game/art-source/enemies/shell-carrier/candidate-01/render-battle-angle.png": "9b4ce22ca3a7a64d04d195105cd08cbd892d0b7ffa248f96e8a6c047e7183068",
+    "game/art-source/enemies/shell-carrier/candidate-01/render-three-quarter.png": "cb64a22f4ac4b7cc488efcc9044c8aff6454885c61ef1fa8054b0ccf42c335bf",
+    "game/art-source/enemies/shell-carrier/candidate-01/review.html": "40047a7c71ba30f8608fd4fe7f60d3662b6a87c79513009db1ee307d7a2a1209",
+    "game/art-source/enemies/shell-carrier/candidate-01/REVIEW.md": "c52816ec1132fb395289fed11f9b4b06b85bd7b884f7fb86b69acd0ff42305b2",
+    "game/art-source/enemies/shell-carrier/candidate-01/round-trip-check.json": "5b8ef31795e1841df5ae2fa82d03004a5a48fba3b638505bb6fa628c77b1c168",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier-review-scene.blend": "33bbd25f209d41663cbbfae9f115e638ae277009b4ad66286cb24f97b27b3f99",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier.blend": "ac5703ed0fad4626566ed307522ab580d8d7dbabbb0cb9815fbf8829a0b413d3",
+    "game/art-source/enemies/shell-carrier/candidate-01/shell-carrier.glb": "035164085da717478076ddad51999d456ba3158b4bece2842d29e52d312484fd",
+    "game/art-source/enemies/shell-carrier/candidate-01/source-check.json": "2539f83b93318c5f444dc7824e3be5f6ecc8401a4fa634e66359e9c0a483a971",
+    "game/art-source/enemies/shell-carrier/candidate-01/verification.log": "2d18082761f3a91bbeb6838d4031ff17ab304749ffbcfc08288732824807ce27",
+    "game/art-source/enemies/shell-carrier/candidate-01/verify_candidate.py": "b261e6cc4e6cd8c987ba73bf0ab237c072f918f7d1ecee1419c232218e3df6ea",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+    "game/art-source/enemies/shell-carrier/candidate-01/export/shell-carrier.fbx": "f8bb7798a3b0ae5d9adb8255afe89dd316411722c138ef9c3bae75d7361cd8be",
+    "game/art-source/enemies/build_shell_carrier.py": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f"
+  },
+  "files": [
+    {
+      "path": "c01-comparison-check.json",
+      "bytes": 2095,
+      "sha256": "1f39274f42e38dfbc7ae3eaa84e454a42022f0b2a5f319fb1376daa4ad482bdb"
+    },
+    {
+      "path": "export/carrier-colour.png",
+      "bytes": 70350,
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f"
+    },
+    {
+      "path": "export/carrier-roughness.png",
+      "bytes": 6039,
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+    },
+    {
+      "path": "export/shell-carrier.fbx",
+      "bytes": 1105180,
+      "sha256": "876bdf8f22583ea8e9f14fff0e07ce906a9cffbbb72ef11b2b01157685983aea"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 6658,
+      "sha256": "964c80f00b59139349eaf325e09639fd55f17da6811099d2a120268bd729ddf4"
+    },
+    {
+      "path": "package_candidate.py",
+      "bytes": 4916,
+      "sha256": "131fc71fbde1c7bb91f1a3981640fc6fc3a6ff6bb136f78149566e1b1acdc56c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4081,
+      "sha256": "c838662b6228470dede0b52bc73d1e262593781ff532cdee71c4c3eff5a5a18b"
+    },
+    {
+      "path": "reference-preservation.json",
+      "bytes": 3301,
+      "sha256": "6d8998cf9e6afda42ab1d9a842a2b90dd7a41a714dec6e955f5e827e9a6967cf"
+    },
+    {
+      "path": "render-battle-angle.png",
+      "bytes": 855024,
+      "sha256": "ddc2cd5981546b564968a5a9d14f1e1d3e0a04178f5e72d66951b102403db87b"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 865530,
+      "sha256": "32e6f888127bfe470368d1830c2a350608a9a14721c890ba155e5f82251389fc"
+    },
+    {
+      "path": "review.html",
+      "bytes": 1878,
+      "sha256": "64b192cecfba4519de6c9e026fa78e262abbf755539991bd9086feb5db2155a9"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2846,
+      "sha256": "cbfb06ace8d652d9d01b86c3552ed627522990704185f495657a6cae41078d8a"
+    },
+    {
+      "path": "shell-carrier-review-scene.blend",
+      "bytes": 2204820,
+      "sha256": "e7ae32e5506dcf20848b9a684da786040fdd326cb03f2f5b8fd5e3335a873c22"
+    },
+    {
+      "path": "shell-carrier.blend",
+      "bytes": 2301101,
+      "sha256": "044110abc79a22f6d0922de0a5f70a7cd9cac8052c7cd2e0b59bb968941a5292"
+    },
+    {
+      "path": "shell-carrier.glb",
+      "bytes": 656132,
+      "sha256": "407d9abc81c8be863ab358182dbf16bf0c18395b32f07e28b14aeb030c2a8eb8"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 882,
+      "sha256": "94ce9165baf11544568f05c0f0acf6b589d394f44ef019e953e889f87584db1c"
+    },
+    {
+      "path": "verify_candidate.py",
+      "bytes": 13444,
+      "sha256": "3d97427e507bbc5abe4bf27d1905e7632eb6cafad610c274a786feeb04039d9a"
+    }
+  ]
+}

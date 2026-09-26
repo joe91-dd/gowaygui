@@ -1,0 +1,36 @@
+{
+  "id": "gold-3",
+  "name": "星海毒翼王",
+  "tier": 5,
+  "index": 45,
+  "base": 9,
+  "key": "boss-45",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 25704,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-09",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/591eb2e707a6f06a575989a57d6e183f39b0731b981820793db4dd1c17a696ad_Mushnub Evolved.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 5.6
+}

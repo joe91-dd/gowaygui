@@ -1,0 +1,33 @@
+{
+  "status": "Two static images actually viewed by asset subagent; pending parent art review, no runtime approval claimed.",
+  "images_actually_viewed": {
+    "render-front.png": "2e4c9d717aca4fe4bf19b4ad7cc1a7ad7170dbedc4f2dcfe93ef67894876946c",
+    "render-three-quarter.png": "67324c9790386292900b4cb7d00e5b4b271731d3df1ed22b502b4888d3d49245"
+  },
+  "source_sha256": "bc13de6672948d0cae50499e759f2c287c67a941aa56946ecb7aa7cc82974fe0",
+  "observations": [
+    "The blue spiral follows a real curved carapace and is readable from both preview views.",
+    "The approved head, eye opening and short-limb family proportions remain intact."
+  ],
+  "remaining_aesthetic_issues": [
+    "Large uninterrupted ivory areas read more like a smooth egg or helmet than A4's compact segmented blue/ivory shell.",
+    "The blue relief is rounded like a soft raised cord; A4 reads more like integrated shell bands, and the inner tip here is slightly hook-like.",
+    "Raised brow and asymmetric smile remain gentle; playful male identity is not yet strong enough."
+  ],
+  "source_triangles": 47886,
+  "source_mesh_parts": 78,
+  "shared_geometry_uv_weights_unchanged_parts": 59,
+  "bones": 10,
+  "new_shell_components_closed": true,
+  "source_weights_normalized": true,
+  "two_generated_atlases_packed": true,
+  "raster_inputs": [],
+  "four_frozen_turtle_sources_and_runtime_payloads_preserved": true,
+  "blender_process_exit_code": 0,
+  "blender_process_exited": true,
+  "threads": 2,
+  "samples": 32,
+  "runtime_lod_fbx_or_promotion": false,
+  "bubble_specific_six_animation_qa": false,
+  "cocos_started": false
+}

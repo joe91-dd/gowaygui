@@ -1,0 +1,239 @@
+[
+  {
+    "seed": 731,
+    "fresh": {
+      "victory": true,
+      "seconds": 369.2,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 24,
+        "allyHpDamage": 1364.7943241110527,
+        "downedAllies": [
+          "spike"
+        ]
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 375.15,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 14,
+        "allyHpDamage": 682.2471917315072,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 913,
+    "fresh": {
+      "victory": true,
+      "seconds": 416.65,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 20,
+        "allyHpDamage": 1203.7648752934906,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 371.2,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 15,
+        "allyHpDamage": 714.8541831259073,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 2027,
+    "fresh": {
+      "victory": true,
+      "seconds": 343.4,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 15,
+        "allyHpDamage": 720.3807437341826,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 367.9,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 14,
+        "allyHpDamage": 697.70197505935,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 4093,
+    "fresh": {
+      "victory": true,
+      "seconds": 408.2,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 19,
+        "allyHpDamage": 1068.8212951095384,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 372.65,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 14,
+        "allyHpDamage": 704.9371126660825,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 6553,
+    "fresh": {
+      "victory": true,
+      "seconds": 417.45,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 20,
+        "allyHpDamage": 1042.5753851155337,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 368.35,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 14,
+        "allyHpDamage": 684.5362576212517,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 9173,
+    "fresh": {
+      "victory": true,
+      "seconds": 427.25,
+      "boss": {
+        "defeated": false,
+        "leaked": true,
+        "remainingHp": 76.75691099999867,
+        "maxHp": 2400,
+        "attackCount": 28,
+        "allyHpDamage": 1673.796444438214,
+        "downedAllies": [
+          "spike",
+          "bubble"
+        ]
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 372.3,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 13,
+        "allyHpDamage": 655.6074157866701,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 12037,
+    "fresh": {
+      "victory": true,
+      "seconds": 418.95,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 22,
+        "allyHpDamage": 1205.903980386217,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 365.7,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 13,
+        "allyHpDamage": 671.3619559775823,
+        "downedAllies": []
+      }
+    }
+  },
+  {
+    "seed": 19391,
+    "fresh": {
+      "victory": true,
+      "seconds": 411.2,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 19,
+        "allyHpDamage": 1110.548255932837,
+        "downedAllies": []
+      }
+    },
+    "mature": {
+      "victory": true,
+      "seconds": 369.75,
+      "boss": {
+        "defeated": true,
+        "leaked": false,
+        "remainingHp": 0,
+        "maxHp": 2400,
+        "attackCount": 13,
+        "allyHpDamage": 657.2510188991213,
+        "downedAllies": []
+      }
+    }
+  }
+]

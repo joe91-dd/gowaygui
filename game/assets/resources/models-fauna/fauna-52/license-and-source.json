@@ -1,0 +1,43 @@
+{
+  "key": "fauna-52",
+  "name": "独眼海盗",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Henry",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\henry-5e5b2d\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/a11d36077b57a96d3a993f6a603562517eb44ade5e8b478c3d9a4e68b80b55c8_Henry.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "0c2c1bd7e32f251f6704d2941e366386089b0077aeed23e1f603a993898d6642",
+  "bytes": 1564336,
+  "animations": 14,
+  "displayName": "独眼海盗",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 74656,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-52",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 9.1
+}

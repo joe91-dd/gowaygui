@@ -1,0 +1,16 @@
+{
+  "asset": "login-background.png",
+  "createdDate": "2026-09-10",
+  "tool": "built-in image_gen.imagegen",
+  "reference": "C:/Users/Administrator/Desktop/龟/01_登录界面参考.png.png",
+  "generatedOriginal": "C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-b25be675-fd79-4596-ac92-8a9cc14d9a57.png",
+  "productionPath": "game/assets/resources/art-v2/login-background.png",
+  "width": 1672,
+  "height": 941,
+  "bytes": 2819092,
+  "sha256": "c91b807b02752bdffd9f008ec2c4b677d41a518e5c69231d13856c0cbe5ac629",
+  "prompt": "prompt.txt",
+  "requestedDimensions": "2048x1152",
+  "postProcessing": "None. Original generated PNG copied unchanged.",
+  "visualReview": "Approved-direction bright stylized 3D ocean archipelago; three reference turtle heroes retained; right-side turtle monument and portal; no baked title, typography or UI. Upper-center sky provides title room. Bottom-center foliage is detailed, so use an opaque or strongly filled action button. Generated resolution is 1672x941, approximately 16:9, below requested 2048x1152."
+}

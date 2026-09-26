@@ -1,0 +1,34 @@
+{
+  "key": "world-1",
+  "base": 50,
+  "name": "熔礁魔君",
+  "tier": 6,
+  "ability": "shock",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 62200,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-50",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e99324137bf573e5320c51610bdb87ee898231208bf04b3d937ce138603a05f3_Orc.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 38867,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 10.3
+}

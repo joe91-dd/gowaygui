@@ -1,0 +1,43 @@
+{
+  "key": "fauna-34",
+  "name": "深渊魔裔",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Demon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\demon-b959cd\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/2087b492277e562fa53acd948b9f702589803bebb29bfa343cef9ef8190d42a8_Demon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "a951a537f210d30c5c9dd55e1680654fec5e629f1b59d8915693eaa6242d3f75",
+  "bytes": 846276,
+  "animations": 8,
+  "displayName": "深渊魔裔",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 30560,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-34",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.0
+}

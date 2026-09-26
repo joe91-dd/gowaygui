@@ -1,0 +1,57 @@
+{
+  "status": "agent viewed all seven rendered keyframes",
+  "reviewer": "authoring agent /root/audio_sample",
+  "not_a_human_or_cocos_acceptance": true,
+  "images": [
+    {
+      "file": "render-idle.png",
+      "title": "待机",
+      "sha256": "af67d91d9f93c7b47acce4c749008015c4cfafc4a9bcfa9dad2259ea74dd60f5",
+      "observation": "整体保持已审宽壳、大钳和奶油脸；眼脸清楚，近侧站立脚接地。"
+    },
+    {
+      "file": "render-walk.png",
+      "title": "走路",
+      "sha256": "e2574dce94c52780f314ee76a3fc3d3429de2e7777fceb4e17c48ead9a719c07",
+      "observation": "远侧足小幅抬起，近侧站立足接地；足端和中間腿没有可见交叉，原根部接合仍较紧密。"
+    },
+    {
+      "file": "render-attack.png",
+      "title": "攻击",
+      "sha256": "b06cf8483eab8d82363925487249b19f268f5b762162d2ccb35b3c7a906946da",
+      "observation": "大钳前送、钳指有收拢，正向面部和双眼仍清楚；未看到钳指穿脸。"
+    },
+    {
+      "file": "render-hit.png",
+      "title": "受击",
+      "sha256": "43305169ac51dd59b90fc2c11d27fcdaf72309b64f5b2bd04cfc6c242e9a55e1",
+      "observation": "身体轻微后缩，腿根连接连续；没有明显拉裂或脚底离地。"
+    },
+    {
+      "file": "render-exit.png",
+      "title": "退场中段",
+      "sha256": "aedc4908c6d1ae49bed2557e1d85e10cf553a0675a32aeed53b2e82cf7fec2b8",
+      "observation": "以 80% 体积继续收缩，角色轮廓保持，足底接地；该帧不是退场末帧。"
+    },
+    {
+      "file": "render-attack-front.png",
+      "title": "攻击正面",
+      "sha256": "edc4e35027078f2f6f75085c4ef56d4be6791e675a0347b6d71f75710acb693a",
+      "observation": "大钳与脸/眼保持间距，两侧前足接地；不对称钳轮廓明确。"
+    },
+    {
+      "file": "render-hit-side.png",
+      "title": "受击侧面",
+      "sha256": "c97c9a4be1d713a51151b4eae1a1bd0b322822a6e5f11b5af892e0538f4035a2",
+      "observation": "四个近侧足端可区分且接地；壳下腿根存在原样板接合，未读成足端互穿。纯侧视自然被大钳挡住部分脸，不等同于几何穿插。"
+    }
+  ],
+  "boundary": "Original rendered images opened using view_image. This is a static keyframe review, not continuous runtime motion or final user art acceptance. Existing neighboring leg-root surface contacts remain documented in collision-check.json.",
+  "render_settings": {
+    "threads": 2,
+    "samples": 24,
+    "width": 900,
+    "height": 760
+  },
+  "review_scene_sha256": "b1cdc83e58f58f72c57553c8ae2ffc56ac68b5ab1f2327c8fc3cb89369458399"
+}

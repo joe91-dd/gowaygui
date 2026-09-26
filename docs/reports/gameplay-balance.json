@@ -1,0 +1,46 @@
+{
+  "scope": "Synthetic fixed five turtles; automatic actives. No reroll or fusion. Raids switch owner reserves below 30% health; AI uses normal support logic.",
+  "endless": [
+    {
+      "profile": "two",
+      "waves": 17,
+      "seconds": 581
+    },
+    {
+      "profile": "six",
+      "waves": 24,
+      "seconds": 796
+    },
+    {
+      "profile": "twelve",
+      "waves": 27,
+      "seconds": 865
+    }
+  ],
+  "raids": [
+    {
+      "tier": 0,
+      "ownerRoster": "five different roles",
+      "healthMultiplier": 0.9,
+      "won": true,
+      "waves": 6,
+      "seconds": 195
+    },
+    {
+      "tier": 1,
+      "ownerRoster": "five different roles",
+      "healthMultiplier": 1.15,
+      "won": true,
+      "waves": 8,
+      "seconds": 321
+    },
+    {
+      "tier": 2,
+      "ownerRoster": "five different roles",
+      "healthMultiplier": 1.3,
+      "won": false,
+      "waves": 7,
+      "seconds": 286
+    }
+  ]
+}

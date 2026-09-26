@@ -1,0 +1,61 @@
+{
+  "status": "author-opened-all-10-PNGs-candidate-ready-for-parent-review",
+  "images_opened": [
+    {
+      "file": "portrait-stone.png",
+      "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4"
+    },
+    {
+      "file": "preview-stone-64.png",
+      "sha256": "3eb265d555ac6969a9b739fd8fc58e08d24fa0caa2e983f88d21b9b1b7afa8bb"
+    },
+    {
+      "file": "portrait-spike.png",
+      "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792"
+    },
+    {
+      "file": "preview-spike-64.png",
+      "sha256": "f34b538a4311c2c38075d041363a1742a04f94a7579e3a1544c2e69fb3a36ecf"
+    },
+    {
+      "file": "portrait-crystal.png",
+      "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b"
+    },
+    {
+      "file": "preview-crystal-64.png",
+      "sha256": "602384852114cf9b5ffac1979c2f01e8258ab5adb1a64208dd976449443b75eb"
+    },
+    {
+      "file": "portrait-leaf.png",
+      "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e"
+    },
+    {
+      "file": "preview-leaf-64.png",
+      "sha256": "84ffd03a1fbe5bed71898213627999609af5510c7a26e97171a9dfd672c26083"
+    },
+    {
+      "file": "portrait-bubble.png",
+      "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411"
+    },
+    {
+      "file": "preview-bubble-64.png",
+      "sha256": "94f0f32a82031d8af635c5077f079dc99309a0d4347cd732808d76fa64ebe7a3"
+    }
+  ],
+  "method": "view_image opened each 384px portrait and each original-size 64px render individually after Blender exited 0.",
+  "observations": [
+    "Five characters remain visibly distinct by stone plates, orange spikes, blue crystals, green leaves and cream-blue bubble spiral.",
+    "Eyes and mouth are visible in 384px portraits; eyes and shell family cues remain identifiable in true 64px images.",
+    "One camera, one framing and one lighting setup preserve the shared head placement; shorter shells have more transparent space above, not independently enlarged.",
+    "No visible head, shell tip or foot is clipped; all four canvas corners are transparent. The same model feet/face geometry is intentionally retained from frozen runtime assets.",
+    "No flattening onto a coloured background, per-character retouch, geometry change or resource promotion was performed."
+  ],
+  "limitations": [
+    "48px/96px light/dark review.html has been authored but not operated in a browser during this task.",
+    "Blender lighting is a controlled portrait setup, not a claim of exact Cocos lighting equivalence.",
+    "Parent review and actual UI placement/phone readability are still pending; this is not final user art approval."
+  ],
+  "blender_exit_code": 0,
+  "frozen_character_files_unchanged": 35,
+  "runtime_assets_written": false
+}

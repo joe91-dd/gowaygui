@@ -1,0 +1,19 @@
+{
+  "asset": "game/assets/resources/art-v2/game-logo.png",
+  "generator": "built-in image_gen",
+  "sha256": "635e9f1c84dd7dceba7017aeba8d02e37fea17a3cda63eb92bf001939484bcf7",
+  "reference": "C:/Users/Administrator/Desktop/龟/01_登录界面参考.png.png",
+  "referenceRole": "User-approved sunny limestone wordmark visual style, inspected before generation",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a086f7-e260-77a3-94db-453b9de0c3cc/exec-9292f800-4fbb-49a9-9421-cc5c6994269a.png",
+  "text": "哥喂龟",
+  "textCodepoints": ["U+54E5","U+5582","U+9F9F"],
+  "visualTextVerification": "Read as exactly simplified Chinese 哥喂龟; three characters in order, no English or tagline. Mouth radical retained at left of 喂, simplified 龟 with hooked bottom stroke retained.",
+  "requestedDimensions": [1600,640],
+  "actualDimensions": [1983,793],
+  "mode": "RGBA",
+  "alphaRange": [0,255],
+  "fullyTransparentPixelCount": 663292,
+  "exteriorAlphaSamples": 0,
+  "alpha8BoundsXYWH": [54,59,1890,650],
+  "notes": ["Standalone warm limestone and gold-edged wordmark with green leaves and blue ocean underline.", "Tool dimensions differed from requested dimensions. Source copied unchanged, no image pixel editing or resampling.", "No game data, source code or existing logo asset was overwritten by this asset task."]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "promotedAtUtc": "2026-09-08T07:10:04.4368483Z",
+  "status": "runtime-candidate-pending-cocos-review",
+  "levelId": 0,
+  "levelName": "初到龟岛",
+  "authorization": "Root agent reviewed battle, top-down, and sanctuary renders and approved this candidate for the next Cocos runtime review.",
+  "resourceDirectory": "game/assets/resources/environment/tutorial-island",
+  "resourcesFbxAssetPath": "environment/tutorial-island/tutorial-island",
+  "expectedResourcesPrefabPath": "environment/tutorial-island/tutorial-island/tutorial-island",
+  "prefabPathStatus": "Expected from existing tidal-island FBX naming convention; actual Cocos importer result has not yet been inspected.",
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "resourcesTexturePaths": [
+    "environment/tutorial-island/island-colour",
+    "environment/tutorial-island/island-roughness"
+  ],
+  "files": [
+    {
+      "name": "tutorial-island.fbx",
+      "source": "game/art-source/environment/tutorial-island/candidate-01/tutorial-island.fbx",
+      "destination": "game/assets/resources/environment/tutorial-island/tutorial-island.fbx",
+      "sourceAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\environment\\tutorial-island\\candidate-01\\tutorial-island.fbx",
+      "destinationAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\assets\\resources\\environment\\tutorial-island\\tutorial-island.fbx",
+      "bytes": 4644652,
+      "sha256": "82220891750c69f8c00a88f99ca27efcb45b136fb8dbcfd02066591b994ce843",
+      "exactCopy": true
+    },
+    {
+      "name": "island-colour.png",
+      "source": "game/art-source/environment/tutorial-island/candidate-01/island-colour.png",
+      "destination": "game/assets/resources/environment/tutorial-island/island-colour.png",
+      "sourceAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\environment\\tutorial-island\\candidate-01\\island-colour.png",
+      "destinationAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\assets\\resources\\environment\\tutorial-island\\island-colour.png",
+      "bytes": 2719387,
+      "sha256": "f7b85a470c42c58a29bb778d8dc73408f06e4f323074faf7d3507b3f1e5e4881",
+      "exactCopy": true
+    },
+    {
+      "name": "island-roughness.png",
+      "source": "game/art-source/environment/tutorial-island/candidate-01/island-roughness.png",
+      "destination": "game/assets/resources/environment/tutorial-island/island-roughness.png",
+      "sourceAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\environment\\tutorial-island\\candidate-01\\island-roughness.png",
+      "destinationAbsolute": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\assets\\resources\\environment\\tutorial-island\\island-roughness.png",
+      "bytes": 39919,
+      "sha256": "2447da099d262a3afdbf84673ea4d3b66101d31071d00fa7b27abcd75116a480",
+      "exactCopy": true
+    }
+  ],
+  "verification": {
+    "sourceDestinationHashesMatch": true,
+    "sourceDestinationLengthsMatch": true,
+    "level1ResourcesUnchanged": true,
+    "cocosLaunched": false,
+    "runtimeCodeChanged": false,
+    "metasOrUuidsAuthored": false
+  },
+  "pending": [
+    "Normal Cocos import and exact Prefab subasset path verification",
+    "Material/texture binding and runtime lighting, backface culling, shadows",
+    "Actual tutorial route and five platforms in gameplay",
+    "Mobile performance and final visual acceptance"
+  ]
+}

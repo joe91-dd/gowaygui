@@ -1,0 +1,21 @@
+{
+  "status": "actual-cocos-imported-triangles-pass-browser-acceptance-owned-by-root",
+  "recordedAtUtc": "2026-09-08T13:05:35.055238+00:00",
+  "buildReportedByRoot": "210046",
+  "runtimeFbxSha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+  "grassTriangles": {
+    "upwardNondegenerate": 4480,
+    "retainedCenterDegenerate": 128,
+    "upwardStoredNormals": 4608
+  },
+  "evidence": {
+    "path": "game/art-source/environment/boss-bay/candidate-02/cocos-imported-check.json",
+    "sha256": "62cb40cdf468c25327b34b6a3c918bfba0e1f0859bc3892ff1526efbdd6c4487",
+    "bytes": 4664
+  },
+  "existingSourceProvenanceSha256Unchanged": "1ffabd80abb8fc6a730bd180b42ac405a546e3f9b2a58e08a4fc146bdaf99720",
+  "existingPromotionManifestSha256Unchanged": "04de3789b08bcbfefb2167931e1dfdfdb6ac780befda5cfd45937e8bbb7c0c5c",
+  "earlierManifestStage": "Earlier pending status records source freeze and promotion time; this new document appends the subsequent successful import.",
+  "previousManifestsOrOldBuildReportsRewritten": false,
+  "remainingAcceptance": "Root actual browser visibility, materials/shadows and idle frame-rate checks"
+}

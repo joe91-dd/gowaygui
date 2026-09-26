@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "files": {
+    "runner-crab.blend": {
+      "sha256": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24",
+      "packed_images": [
+        "RunnerCrab_Colour_512",
+        "RunnerCrab_Roughness_512"
+      ],
+      "skinned_meshes": 38,
+      "walking_legs": 8,
+      "editable_parts": 38,
+      "eye_vertices": {
+        "Spherical_painted_eye_L": 482,
+        "Spherical_painted_eye_R": 482
+      }
+    },
+    "runner-crab-review-scene.blend": {
+      "sha256": "48ce0292ccd786dc0807090ef3fada35d9a293e3cb9204a7da6f4e4a4f74f9f9",
+      "packed_images": [
+        "RunnerCrab_Colour_512",
+        "RunnerCrab_Roughness_512"
+      ],
+      "skinned_meshes": 1
+    }
+  }
+}

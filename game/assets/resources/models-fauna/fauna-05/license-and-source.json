@@ -1,0 +1,43 @@
+{
+  "key": "fauna-05",
+  "name": "赤冠狂禽",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Chicken",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\chicken-6c11ec\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/aa3e17476f7e30d24aa2ac8d119964106c96cbf2cc2c84f688e6d2f5948abe6a_Chicken.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "2c580f6e42bfd24253bbb939238ca055bf90ead73cb51e51ca12812d25c69f01",
+  "bytes": 169116,
+  "animations": 8,
+  "displayName": "赤冠狂禽",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 19728,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-05",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.2
+}

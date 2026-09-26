@@ -1,0 +1,25 @@
+{
+  "role": "stone",
+  "vertices": 13084,
+  "triangles": 25724,
+  "bones": [
+    "root",
+    "body",
+    "shell",
+    "head",
+    "front_L",
+    "front_R",
+    "rear_L",
+    "rear_R"
+  ],
+  "clips": [
+    "idle",
+    "attack",
+    "skill",
+    "hit",
+    "rest",
+    "fusion",
+    "walk"
+  ],
+  "source": "Original standing modern cast, reuses V2 editable geometry; runtime review required"
+}

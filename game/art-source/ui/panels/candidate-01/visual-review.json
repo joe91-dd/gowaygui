@@ -1,0 +1,30 @@
+{
+  "status": "author-reviewed-independent-source-candidate-awaiting-parent-and-Cocos-A-B",
+  "opened": [
+    {
+      "path": "review-original-size.png",
+      "sha256": "d376919a2fc0cc2908f290a899be112c237000883bd047404e8c23330b841367"
+    },
+    {
+      "path": "review-small.png",
+      "sha256": "d42de7ed7d60292ef31fd466979bd4f50cb0f95c515a859efb1b56a77e5f2941"
+    },
+    {
+      "path": "review-comparison.png",
+      "sha256": "7790e7db9d97d868412dab46ba82d6ac795ce80b36d44c7aebdae249a7b66b2b"
+    }
+  ],
+  "observations": [
+    "Original-size preview preserves rounded fill, offset shadow, opaque gold outer line and low-alpha cream inner line.",
+    "Comparison preview retains the existing geometry at radii 10,18,21,22,24, including zero-height centre strip on short capsule buttons.",
+    "The final small-size preview was reopened after removing nested-SVG clip antialias artefacts using equivalent continuous contours; this is explicitly labelled and is not a Cocos screenshot.",
+    "Chinese preview labels are readable. Fontconfig could not write its user cache, but existing fonts rendered and both scripts exited 0.",
+    "All tint masks are alpha-transparent with white RGB; three mask layers are required to preserve separate outer-gold and inner-cream colours."
+  ],
+  "limitations": [
+    "No resources, meta, UI layout, text or interaction changed.",
+    "Cocos actual sliced texture seams, adjacent batching, Buffer reduction, close/reopen release and phone input remain untested.",
+    "This candidate preserves the existing panel style; it does not claim the full UI has reached final art quality."
+  ],
+  "runtimeFilesWritten": false
+}

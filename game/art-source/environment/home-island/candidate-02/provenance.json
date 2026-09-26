@@ -1,0 +1,149 @@
+{
+  "status": "bounded-second-offline-candidate-awaiting-root-image-review",
+  "recordedAtUtc": "2026-09-08T13:14:30.766760+00:00",
+  "runtimePromoted": false,
+  "coreViewsResourcesModified": false,
+  "firstRoundOriginalFilesIntact": 31,
+  "geometry": {
+    "triangles": 38988,
+    "meshes": 3,
+    "materials": 2,
+    "editableMeshes": 845,
+    "boundsCocos": {
+      "min": [
+        -7.505000114440918,
+        -1.0649992227554321,
+        -4.322445392608643
+      ],
+      "max": [
+        6.586040019989014,
+        4.285477161407471,
+        4.419971466064453
+      ]
+    },
+    "displaySurfaceY": 0.16
+  },
+  "checks": {
+    "fbxReimport": "pass",
+    "actualFootRays": 372240,
+    "editablePackedSource": "pass",
+    "noCharactersInEnvironmentFbx": true,
+    "renderCount": 2,
+    "renderReferences": [
+      "stone",
+      "spike",
+      "crystal",
+      "leaf",
+      "bubble"
+    ],
+    "upperSurfaces": {
+      "faces": 1408,
+      "minimumUpwardNormal": 0.8633792996406555,
+      "allUpward": true
+    },
+    "cameraAndFiveAnchors": "c01 bytes retained"
+  },
+  "changes": [
+    "Irregular embedded courtyard perimeter with raised grass contact",
+    "Shallow lower clam and central collar support unchanged pearl",
+    "Few varied-height low edge/house-side grass tufts"
+  ],
+  "limitations": [
+    "Five static character references are present only in review scene, never baked into environment FBX.",
+    "No Cocos import, animation, mobile performance, UI-layout or resource-lifecycle acceptance in this subtask."
+  ],
+  "files": {
+    "author_home_candidate.py": {
+      "sha256": "2cfe9de2184c87719b6d8a7ead7d3c0be724d68c3f9f5448d5490be09460e3b3",
+      "bytes": 2675
+    },
+    "build_home_island.py": {
+      "sha256": "79f87a7413dc37e1dbf5f2651c6db44f45660b9934717e9896e86a03308deb82",
+      "bytes": 32131
+    },
+    "home_composition.py": {
+      "sha256": "9661bcbaf0c55489a26f6f267d92b1c14772ba8e2c94b850c79300c79aaf5a5e",
+      "bytes": 21284
+    },
+    "prepare_home_layout.py": {
+      "sha256": "2fbb64c7f783b45572258db43b17122a1a11115949f4a96e98eaa76a5b4a18d2",
+      "bytes": 7790
+    },
+    "layout-proposal.json": {
+      "sha256": "b1a5a369186b48a4ce1129bd86dd5ce18c2017e185cb7589eb76d04c2c80a473",
+      "bytes": 10232
+    },
+    "layout-proposal.svg": {
+      "sha256": "df9978ead87acc489e1e3d35c6b4c3adf9f248dbcd678307cad321e36eca1bb9",
+      "bytes": 3653
+    },
+    "layout-proposal.png": {
+      "sha256": "bc52f1852c7aab53f194c1f569cae4b62b3ce77bf47493257c2d986606b5636f",
+      "bytes": 104439
+    },
+    "module-authorship.json": {
+      "sha256": "99877016262035b9b40fcca87de048b70566274aa40507e32d594706134edcf2",
+      "bytes": 830
+    },
+    "home-island.blend": {
+      "sha256": "1853c9cb32649f82d7435ea1d380a2420c2d77d18b5249e8a0009f7b3818fe5d",
+      "bytes": 9539043
+    },
+    "home-island.fbx": {
+      "sha256": "e15033c9068ed6e5ccdfe424be6d4a11490712a576ab8fccd05e3b392c300f14",
+      "bytes": 3846012
+    },
+    "home-island-review-scene.blend": {
+      "sha256": "10358e9fd54f1754097932a14ac216b3d89d2f42881ff08252c31a050c581bd4",
+      "bytes": 5403843
+    },
+    "home-island-scale-review.blend": {
+      "sha256": "91b797f4dfec6a41af0d67bb6c8ecd8cdb37a574b701ee34c5a9dc67517238a4",
+      "bytes": 31212280
+    },
+    "island-colour.png": {
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+      "bytes": 2727591
+    },
+    "island-roughness.png": {
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+      "bytes": 40385
+    },
+    "environment-manifest.json": {
+      "sha256": "bda848545a3c789a6f93b86d646f12eb343de8a58c526ac67c24d308788bdb7b",
+      "bytes": 17758
+    },
+    "round-trip-and-support.json": {
+      "sha256": "7997b69cd501b3ea6b09fe92dfd3ec15aa4654ae8ac4a62453b033369f06bbb1",
+      "bytes": 2989
+    },
+    "verify_home_island.py": {
+      "sha256": "a2b22593a35898fb4398e748238c4bbd2096f3d643b4731c13c2063522c176ad",
+      "bytes": 4732
+    },
+    "render_home_views.py": {
+      "sha256": "26b8abf055ade4950daaa152c24a5e6a7c51dcae2a342ac092eb6982cdb60406",
+      "bytes": 4834
+    },
+    "render-report.json": {
+      "sha256": "5c9def1d61572f5529c5195bb996f523cf7f3d5e8394e044f0c246be3a81b149",
+      "bytes": 3012
+    },
+    "render-home-overview.png": {
+      "sha256": "fa9f7b453eb295ba0ce138bccb9683a98653e6955f1a680a8007e560c5e9050b",
+      "bytes": 926557
+    },
+    "render-house-detail.png": {
+      "sha256": "373ab23f71122409130ae2ad7357086091d64bd6b4e5c987a6d9830c2672fd65",
+      "bytes": 1049739
+    },
+    "static-preparation.json": {
+      "sha256": "247f94748b3f4d456042fa8c7c581e77323f358dbd75c042dc93dc4f5826af10",
+      "bytes": 612
+    },
+    "check_static_preparation.py": {
+      "sha256": "fbbc63e2078df752a7cc27f5f98b845d09c85451b4858b37427058808b3d1b7b",
+      "bytes": 2502
+    }
+  }
+}

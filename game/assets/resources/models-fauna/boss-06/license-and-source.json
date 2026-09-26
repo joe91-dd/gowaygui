@@ -1,0 +1,36 @@
+{
+  "id": "green-1",
+  "name": "藤壳战祭",
+  "tier": 0,
+  "index": 6,
+  "base": 32,
+  "key": "boss-06",
+  "ability": "breakwater",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 37768,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-32",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/dfa647805de61ed19a985d4cf10cf7154f2351a99336264848ee400e7304cc26_Tribal.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24667,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.9
+}

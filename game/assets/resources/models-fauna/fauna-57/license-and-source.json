@@ -1,0 +1,43 @@
+{
+  "key": "fauna-57",
+  "name": "骷髅水手",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Skeleton",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\skeleton-448b41\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/b192606d75be9ddf82ccf29086578d69333f9effb44c19715764fb2a7ded39c0_Skeleton.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "ef635637483ad899c0faf1296448976c179c183c079d2df1cae6bbbdd3424889",
+  "bytes": 1758144,
+  "animations": 14,
+  "displayName": "骷髅水手",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 25014,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-57",
+  "triangles": 14166,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.6
+}

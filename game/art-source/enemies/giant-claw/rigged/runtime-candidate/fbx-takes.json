@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "fbx_sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+  "actual_animation_stacks": [
+    {
+      "name": "GiantClaw_Rig|attack",
+      "seconds": 0.5,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 23093079000
+    },
+    {
+      "name": "GiantClaw_Rig|exit",
+      "seconds": 1.2,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 55423389600
+    },
+    {
+      "name": "GiantClaw_Rig|hit",
+      "seconds": 0.5,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 23093079000
+    },
+    {
+      "name": "GiantClaw_Rig|idle",
+      "seconds": 2.7999999999783487,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 129321242399
+    },
+    {
+      "name": "GiantClaw_Rig|walk",
+      "seconds": 1.2,
+      "local_start_ticks": 0,
+      "local_stop_ticks": 55423389600
+    }
+  ]
+}

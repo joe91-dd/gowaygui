@@ -1,0 +1,11 @@
+const {loadBuiltCore}=require('./test-built-core.cjs'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const build=path.resolve(process.argv[2]),external={};
+for(const name of ['IslandUI','PetDetails','RewardMenus','VisualIdentity','HonorBoard','ShowcaseMenu','SeaChart'])external[`chunks:///_virtual/${name}.ts`]={};
+external['chunks:///_virtual/IslandUI.ts']={UI_COLORS:{}};
+const loader=loadBuiltCore(build,external),{makeInitialSave}=loader.load('game'),{enablePrototype}=loader.load('prototype'),{enableLiving}=loader.load('living'),{createWorldBossFight,stepWorldBoss}=loader.load('worldBoss');
+const save=makeInitialSave(1789444800000,731);enablePrototype(save);enableLiving(save);
+const {WorldBossMenus}=loader.load('WorldBossMenus'),client={worldSelection:[]},menu=new WorldBossMenus({}, {snapshot:save}, client,()=>'',()=>{},()=>{},()=>{});
+menu.page=()=>({});menu.ui={text(){},button(){}};menu.act=()=>{};menu.open();assert.equal(client.worldSelection.length,5,'real emitted build must preserve Set iteration when choosing five pets');assert.equal(new Set(client.worldSelection).size,5);
+const f=createWorldBossFight('built-test','2026-09-15',1,client.worldSelection.map(id=>save.collection[id]),1789444800000);stepWorldBoss(f,90);assert.equal(f.battle.tick,1800);assert.equal(f.phase,'result');assert.ok(f.damage>2000);
+const report={status:'passed',build,damage:Math.floor(f.damage),checks:['Compiled UI selects five unique owned pets','Compiled simulation ends after 1800 fixed ticks','Boss remains alive and actual damage is recorded'],files:loader.loadedFiles};
+if(process.argv[3])fs.writeFileSync(process.argv[3],JSON.stringify(report,null,2));console.log(JSON.stringify(report));

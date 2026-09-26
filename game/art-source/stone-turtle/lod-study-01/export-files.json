@@ -1,0 +1,17 @@
+[
+  {
+    "file": "export\\stone-colour.png",
+    "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "bytes": 1326566
+  },
+  {
+    "file": "export\\stone-roughness.png",
+    "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "bytes": 22192
+  },
+  {
+    "file": "export\\stone-turtle-lod.fbx",
+    "sha256": "6940c945b567387a7f54a5e4484c80b9165812e5009ae680e0bf9b165de22136",
+    "bytes": 2434268
+  }
+]

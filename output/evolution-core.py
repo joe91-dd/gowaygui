@@ -1,0 +1,30 @@
+from pathlib import Path
+root=Path('game/assets/scripts')
+def edit(f,a,b):
+ p=root/f;s=p.read_text(encoding='utf-8');assert a in s,(f,a[:60]);p.write_text(s.replace(a,b),encoding='utf-8')
+edit(Path('core/types.ts'),'export interface GameSave {','export interface GameSave {\n  progression?:import("./progression").ProgressionState;')
+edit(Path('core/types.ts'),'export interface RunResult {','export interface RunResult {\n  chestId?:string;')
+edit(Path('core/communityTypes.ts'),'export interface RaidSession {','export interface RaidSession {\n  timed?:boolean;chestId?:string;stars?:number;remaining?:number;')
+edit(Path('core/communityTypes.ts'),'export interface ArenaSession {','export interface ArenaSession {\n  seasonWeek?:number;ratingBefore?:number;ratingAfter?:number;')
+edit(Path('core/game.ts'),"import {startArena,validateArenaCheckpoint,finishArena} from './arena';", "import {startArena,validateArenaCheckpoint,finishArena,matchArena} from './arena';\nimport {syncProgression,claimCodex,claimChest,claimArenaTier,discoverBattle} from './progression';")
+edit(Path('core/game.ts'),'    const result=action(next,now);','    syncProgression(next,now);\n    const result=action(next,now);\n    syncProgression(next,now);')
+edit(Path('core/game.ts'),'  refreshClock(commandId:string):void{','  claimCodex(commandId:string,kind:"skill"|"boss",id:string):number{return this.transact(commandId,"codex",s=>claimCodex(s,kind,id));}\n  claimChest(commandId:string,id:string):void{this.transact(commandId,"chest",s=>claimChest(s,id));}\n  claimArenaTier(commandId:string,tier:number):void{this.transact(commandId,"tier",s=>claimArenaTier(s,tier));}\n  matchArena(commandId:string,ids:string[]):ArenaSession{return this.transact(commandId,"matchArena",(s,now)=>startArena(s,now,matchArena(s),ids));}\n  refreshClock(commandId:string):void{')
+edit(Path('core/game.ts'),'return this.transact(commandId,\'finishRaid\',s=>finishRaid(s,next,abandon));','return this.transact(commandId,\'finishRaid\',s=>{discoverBattle(s,next.battle);return finishRaid(s,next,abandon);});')
+edit(Path('core/game.ts'),'checkBattle(r,runId,battle);r.battle=copy(battle);','checkBattle(r,runId,battle);discoverBattle(s,battle);r.battle=copy(battle);')
+p=root/'core/save.ts';s=p.read_text(encoding='utf-8');s="import {validateProgression} from './progression';\n"+s
+# validate at public save validator
+import re
+print(re.findall(r'export function validate\w*[^\n]*',s))
+s=s.replace('validateCommunity(s,validateTurtle);','validateCommunity(s,validateTurtle);validateProgression(s);')
+p.write_text(s,encoding='utf-8')
+edit(Path('core/arena.ts'),"import type {GameSave,Point} from './types';", "import type {GameSave,Point} from './types';\nimport {arenaLocked,progression,recordArena} from './progression';\nexport function matchArena(s:GameSave):string{const c=communityOf(s),rank=c.arenaOrder.indexOf(LOCAL_PLAYER);const candidates=c.arenaOrder.filter(id=>id!==LOCAL_PLAYER&&c.aiPlayers[id]).sort((a,b)=>Math.abs(c.arenaOrder.indexOf(a)-rank)-Math.abs(c.arenaOrder.indexOf(b)-rank));if(!candidates.length)throw Error('暂时没有合适的对手');return candidates[progression(s).arena.games%Math.min(3,candidates.length)];}\n")
+edit(Path('core/arena.ts'),"  requireRule(practice||opponentRank>=0&&opponentRank<rank&&rank-opponentRank<=3,'只能挑战前面相邻三名岛主');", "  requireRule(practice||!arenaLocked(now),'本周赛季已结算，周一开启新赛季');\n  requireRule(practice||opponentRank>=0&&opponentId!==LOCAL_PLAYER&&Math.abs(rank-opponentRank)<=3,'匹配对手需在相近排名范围');")
+edit(Path('core/arena.ts'),"const arena:ArenaSession={", "const arena:ArenaSession={seasonWeek:progression(s).arena.week,ratingBefore:progression(s).arena.rating,")
+edit(Path('core/arena.ts'),"  if(a.victory&&!a.practice){", "  const sameSeason=a.seasonWeek===undefined||a.seasonWeek===progression(s).arena.week;\n  if(!a.practice&&sameSeason&&!progression(s).arena.weeklySettled){recordArena(s,!!a.victory,!!a.draw);a.ratingAfter=progression(s).arena.rating;}\n  if(a.victory&&!a.practice&&sameSeason&&!progression(s).arena.weeklySettled){")
+edit(Path('core/battle.ts'),"import type { EnemyKind", "import {bossFor} from './bossCatalog';\nimport type { EnemyKind")
+edit(Path('core/battle.ts'),'export interface BattleEnemy {','export interface BattleEnemy {\n  bossId?:string;')
+edit(Path('core/battle.ts'),'  state.enemies.push(enemy);', "  if(state.stationVersion===4&&spawn.kind==='boss'){const boss=bossFor(state.levelId,state.wave);enemy.bossId=boss.id;enemy.hp*=boss.hp;enemy.maxHp=enemy.hp;enemy.speed*=.64;enemy.trait=boss.trait;enemy.traitReadyTick=state.tick+tickTime(5);}\n  state.enemies.push(enemy);")
+edit(Path('core/prototype.ts'),"export function settlePrototype(s:GameSave", "export function settlePrototype(s:GameSave")
+p=root/'core/prototype.ts';s=p.read_text(encoding='utf-8');s="import {grantChest,discoverBattle} from './progression';\n"+s;s=s.replace('  const endless=r.mode===\'endless\',first=',"  discoverBattle(s,r.battle);\n  const endless=r.mode==='endless',first=")
+s=s.replace('  finishLoans(s,r.id);s.gold+=baseGold+result.firstClearGold;',"  if(endless&&r.wave>0){const floor=r.wave,stars=Math.min(3,1+Math.floor(floor/20));result.chestId=grantChest(s,'endless:'+r.id,'无尽 '+floor+' 层宝箱',stars,[{kind:'gold',amount:goldAmount(s,20*floor)},{kind:'material',material:'growth',amount:Math.max(1,Math.floor(floor/5))}],now).id;}\n  finishLoans(s,r.id);s.gold+=baseGold+result.firstClearGold;")
+p.write_text(s,encoding='utf-8')

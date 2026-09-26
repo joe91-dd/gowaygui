@@ -1,0 +1,1586 @@
+✔ 预载十八个音效；多次手势和同曲请求只播放一次，首帧静音淡入 (7.3002ms)
+✔ 资源乱序完成时只选择最新曲目，不让旧回调覆盖 (2.6009ms)
+✔ 暂停覆盖资源加载与底层播放器加载，恢复才播放并保留位置 (2.4997ms)
+✔ A→B→A撤销淡出不重启；慢C请求保留旧曲；切换始终不重叠 (3.4005ms)
+✔ 六路音效上限、优先级、节流、独立音量和静音取消底层未完成播放 (3.4098ms)
+✔ stop释放引用且拒绝旧世代回调；旧Promise不能删除新请求；destroy幂等 (2.9036ms)
+✔ 加载失败可重试；迟到的普通音效不补播；未知资源不会加载 (5.6342ms)
+✔ 音效自然结束释放声道；底层失败未发结束事件也不会永久占满 (2.5668ms)
+✔ 异步play完成前首手势和重复手势不重建声道；STARTED之后才淡入且不再启动超时 (3.4304ms)
+✔ 五秒未收到STARTED只清理一次；后续手势重试缓存曲目并隔离旧声道事件 (2.9557ms)
+✔ 超时同帧已有最新切曲请求时转到最新曲；之后主动切曲也能恢复 (4.6835ms)
+✔ 异步play期间暂停、stop与destroy撤销旧声道；仅显式恢复或手势才重新启动 (2.4184ms)
+✔ frozen and current core retain old range rules across all five levels after known layout normalization (395.445ms)
+✔ historical primary load preserves ranges/version without writes; next wave gets current parameters (89.6133ms)
+✔ historical backup load preserves ranges/version without writes; next wave gets current parameters (83.6879ms)
+✔ unsupported balance markers cannot be decoded or committed and cannot damage a valid save (49.8532ms)
+✔ 加载顺序 models 先到：两者就绪前不建控制器、不显示战场、不推进战斗 (18.6458ms)
+✔ 加载顺序 island 先到：两者就绪前不建控制器、不显示战场、不推进战斗 (1.2673ms)
+✔ 取消加载恢复海岛：迟到资源不挂载，下一次继续使用同一冒险 (1.6313ms)
+✔ 加载失败 model：展示返回/重试，重试不再扣体力且丢弃旧回调 (1.2968ms)
+✔ 加载失败 island：展示返回/重试，重试不再扣体力且丢弃旧回调 (1.2996ms)
+✔ 加载失败 attach：展示返回/重试，重试不再扣体力且丢弃旧回调 (1.2684ms)
+✔ 加载失败 layout：展示返回/重试，重试不再扣体力且丢弃旧回调 (3.0784ms)
+✔ 加载失败 controller：展示返回/重试，重试不再扣体力且丢弃旧回调 (1.2526ms)
+✔ 后台收到资源后仍不建控制器；回到前台才显示，后续 hide/show 传给控制器 (1.5651ms)
+✔ 组件销毁取消加载，迟到资源不能创建世界或恢复页面 (2.3243ms)
+✔ 进入成功后返回海岛仍先 checkpoint 再释放控制器拥有的世界 (2.2652ms)
+✔ 旧加载页返回与旧失败页重试不能在回首页后或下一轮战斗覆盖当前页面 (1.5568ms)
+✔ 同一海岛完成回调仅挂载一次，成功接管后迟到回调不再写世界 (1.3003ms)
+✔ 销毁后旧结算翻倍回调不提交、不发声、不覆盖新页面 (81.7897ms)
+✔ 销毁后旧招募刷新回调不提交、不发声、不覆盖新页面 (72.4652ms)
+✔ 销毁后旧直接揭晓回调不提交、不发声、不覆盖新页面 (53.3433ms)
+✔ 销毁后旧收录回调不提交、不发声、不覆盖新页面 (107.0803ms)
+✔ 销毁后旧来源解锁回调不提交、不发声、不覆盖新页面 (57.3603ms)
+✔ 未销毁的结算翻倍和招募刷新仍通过真实服务正常执行 (104.9793ms)
+✔ 未销毁的揭晓、收录和来源解锁仍保留真实事务与反馈 (151.7124ms)
+✔ 销毁后的擦泡泡触摸既不改泡泡/文字也不发声或揭晓；活页擦拭仍有效 (85.8821ms)
+✖ 销毁后手动施法与checkpoint不改旧战斗或磁盘，活页仍能排队一次真实技能 (0.7159ms)
+✖ 销毁后旧结算/暂停退出与继续按钮无效，旧返回不能触发新的首页 (27.0433ms)
+✔ 旧控制器回调不能修改已启动的新一局或给它叠加错误面板 (38.7262ms)
+✔ 真实IslandUI触摸结束事件在销毁后不播放通用确认音；活页只响一次且执行一次 (57.2268ms)
+✔ V0.6 drag swaps a field individual into a locked bench slot and ignores the old drag callback (27.3117ms)
+✔ V0.6 same-wave UI can fuse twice, and bubbles only erase locally before fixed-result reveal (114.1362ms)
+✔ V0.6 2X advances one shared clock and world speed; hidden touch/update and resumed pause remain safe (59.2456ms)
+✔ V0.6 bubble heap covers result edges in three irregular varied layers and a tap never clears all (114.2593ms)
+✔ 七位招募候选跨页可达；点卡不提交，确认一次且旧确认与旧刷新失效 (61.9036ms)
+✔ 十伙伴保留五个真实站位和五替补；两页队伍访问完整且不会改存档 (98.6295ms)
+✔ 十伙伴合成两页保留选择顺序与真实预览；旧页卡片/重复合成不再提交 (68.4902ms)
+✖ 完整十二技能详情与比较同步两页可达；查看说明/天生培养不写存档 (101.8139ms)
+✔ 比较能逐份查看全部真实来源；最终一次收录归档两份来源 (47.4866ms)
+✔ 十二技能揭晓使用已存结果；擦拭转换考虑 UI 根缩放和平移，直接揭晓不重抽 (63.582ms)
+✔ 布阵五张非重叠大卡调用真实交换，满替补与仅一位上场保持限制 (143.1035ms)
+✖ 技能按钮遵守冷却/死亡/已排队边界，暂停/结算全入口满足大目标 (0.526ms)
+✔ 新版五站位可直接拖动交换；开始后出战栏收起，波间重新出现 (119.0133ms)
+✔ 备战互拖先确认；涉及收藏时警告、取消不消耗，确认才永久消耗本体 (49.4912ms)
+✔ 普通备战互拖合成不能因轻点、取消或失效页误消耗 (47.3417ms)
+✖ 无尽五张奖励卡无手选操作，换位动画自动发一份；隐藏、跳过与旧回调不重抽 (407.9505ms)
+✖ real createBattle/stepBattle states throughout all five levels pass before and after JSON restoration (2.8428ms)
+✔ zero-unit waves, leaks retaining positive HP, lost states and drained event queues are valid (30.012ms)
+✖ validation has no mutation and serialized continuation remains identical (0.6374ms)
+✖ every required top-level field rejects deletion (0.3273ms)
+✖ every required unit and enemy field rejects deletion (0.3197ms)
+✖ non-finite numbers, unsupported JSON values, sparse arrays and circular structures are rejected (0.2692ms)
+✖ version, level, wave, tick consistency, remainder, core health and phase constraints are checked (0.2393ms)
+✖ routes, unique entity IDs, archive IDs, slots and legal compatible skill pools are checked (0.2135ms)
+✖ health bounds, interval, shields, statuses, source references and per-skill numeric maps are checked (0.2403ms)
+✖ spawn cursors, queued commands, event structure, counters and references reject inconsistent state (0.2873ms)
+✔ 所有模型就绪才可显示：隐藏期间骨骼不推进，最后资源完成后一次性进入 (17.1419ms)
+✔ 任意模型失败阻止准备完成，其余迟到成功仍可安全回收 (4.0797ms)
+✔ 叶子龟治疗和技能播放自身动作，休整跨暂停保持独立图集与引用 (5.7941ms)
+✔ 泡泡龟迟到加载独立图集，控制技能与护盾可见，暂停休整后单独回收 (30.2543ms)
+✔ 加载中销毁后即使所有资源到齐也不变为就绪、持有引用或创建模型 (7.8726ms)
+✔ 吐墨螺独立材质与原地步态，暂停期间不缩短1.1秒真实退场 (16.1734ms)
+✔ 搬壳大蟹真实模型不叠加临时缩放，独立图集与慢动作跨暂停后完整退场 (5.8689ms)
+✔ 首领短钳击驱动普通和特殊攻击，特效保留且五动作跨暂停完整退场 (6.476ms)
+✔ Prefab先完成：首次敌人创建替换临时节点，嵌套骨骼与显式Ink材质适配生效 (10.1729ms)
+✔ Prefab后完成：只替换仍活着的墨团，后续新敌人复用已持有Prefab (7.6715ms)
+✔ 加载失败保留临时表现；destroy后的迟到成功不持有资产也不重建节点 (3.2907ms)
+✔ 两个Prefab均在destroy后完成：没有本地引用、实例或已销毁renderer写入 (4.8275ms)
+✔ 新模拟tick中只有实际移动且未眩晕/定身的墨团进入walk，减速仍可行走 (4.6862ms)
+✔ 同一固定模拟tick的多次渲染保留walk，不在坐标未推进的间隙重启idle (9.2285ms)
+✔ attack和hit播单次，结束后按当前移动状态恢复walk或idle (21.6094ms)
+✔ 真实exit自实际开始起完整播放0.833秒，不叠加临时缩小/下沉，最后释放材质 (4.9042ms)
+✔ 恢复含已死敌人的快照不实例化旧敌人，也不重放旧退场 (5.5916ms)
+✔ 切波时延迟销毁旧节点：共享材质保持到最后一个用户退出，destroy归还Prefab引用 (5.4221ms)
+✔ setPaused立即冻结所有嵌套骨骼与退场计时，恢复不重播；销毁后无效 (6.3694ms)
+✔ 暂停期间迟到的石龟/墨团Prefab以及重新play的模型保持暂停，新状态恢复后才运行 (4.0896ms)
+✔ 资源回调遵守到达时的暂停状态，早先暂停后已经恢复不会冻结迟到模型 (5.3282ms)
+✔ 真实模型单次动作和退场使用完整引擎dt，长帧不会被0.1秒插值上限拖慢 (6.5485ms)
+✖ 实际BattleScreen恢复快照先冻结模型；继续按钮当场恢复，暂停期间规则tick不推进 (16.6227ms)
+✖ 实际BattleScreen手动暂停与hide/show冻结骨骼，继续保持动作相位；回首页销毁 (8.3129ms)
+✖ 实际BattleScreen伙伴/合成/比较弹窗立即冻结，关闭弹窗不覆盖手动暂停 (9.8186ms)
+✖ 实际BattleScreen揭晓、结算及放弃流程同步模型暂停，错误检查点不会误恢复 (12.6743ms)
+✖ 实际BattleScreen推进异常当场暂停；恢复后波间待机可运行而规则不多推进 (7.7564ms)
+✔ 波间保留最后敌人的退场，暂停冻结且完整退场后归还材质引用 (8.6394ms)
+✔ 新波同名敌人与上波退场互不混淆，重设关卡清理全部退场 (5.5306ms)
+✖ 末波奖励立即提交，结算面板等退场结束；暂停与恢复不重复结算 (9.938ms)
+✔ 快跑蟹迟到加载继承暂停，独立材质与五动作适配且退出完整播放 (5.8787ms)
+✔ 退出战斗后迟到的快跑蟹资源不会创建模型或持有引用 (3.7573ms)
+✔ 双龟异步加载独立：休整刺龟保留暂停，同ID换职业后回收原模型与材质 (5.7213ms)
+✔ V0.6 speed changes skeleton states including late models, while an in-wave replacement preserves enemy identity (6.2438ms)
+✔ 铁壳蟹独立使用较慢动作，波末保留真实退场时长并释放资源 (5.6284ms)
+✖ skill catalogue contains exactly thirty unique reachable skills (4.8123ms)
+✔ aptitude and growth formulas affect base stats; five passive modifiers remain additive to that base (1.8393ms)
+✖ invalid duplicates, more than twelve skills, incompatible skills and duplicate slots cannot enter battle (0.6657ms)
+✔ openingShield absorbs damage and expires at six seconds; lastShield is once per wave (9.7651ms)
+✔ regen starts after five undamaged seconds and is interrupted by another hit (2.0177ms)
+✔ encourage adds eight percent to nearby ally and multiple sources never stack (1.0142ms)
+✔ block probabilistically reduces direct damage and its actual mitigation matches events (5.3799ms)
+✔ share and reflect form a bounded two-sink damage transaction without triggering each other (1.5147ms)
+✔ hold adds sixty armor for six seconds and consumes an action window (2.4228ms)
+✔ critical raises expected actual direct-hit frequency above the same seed baseline (50.7642ms)
+✔ lifesteal and spellDrain use actual lost HP, respect a rolling one-second cap and ignore secondary damage (5.3811ms)
+✔ combo produces one sixty-percent secondary hit on the fifth basic attack without incrementing attackCount (0.4193ms)
+✔ piercingShot uses 240 percent and ignores seventy percent armor after armor reduction (0.3317ms)
+✔ crystal base splash hits at most two neighbors, bounce has one distinct target and no recursive splash (0.52ms)
+✔ shredResist refreshes five resistance reduction without stacking; crystalCannon deals 320 percent (0.8572ms)
+✔ leaf basic prioritizes lowest HP ratio and doubleHeal restores a different ally at thirty-five percent (0.3782ms)
+✔ healShield converts only effective healing, caps total shields, and expires after four seconds (0.4133ms)
+✔ cleanse removes one control before weakness and cannot repeat within eight seconds (0.8982ms)
+✔ greatHeal heals every living ally by 220 percent only once someone falls below sixty percent (0.3058ms)
+✔ bubble basic slow and sixth-shot root, armor reduction and weaken all have actual effects (0.527ms)
+✔ bubbleRing controls at most five, control duration diminishes, and bosses get one-quarter duration (1.5673ms)
+✔ steady reduces actual boss stun time; bosses summon once at half health (0.4844ms)
+✔ twelve valid skills are all active in one battle with no hidden six-slot equipment limit (15.8948ms)
+✔ fixed ticks and serialized RNG restore exactly the same trajectory after interruption (15.5049ms)
+✔ a defeated unit leaves this wave and recovers at the next createBattle; leaks deduct configured core damage (5.9156ms)
+✖ stone blocks at most two; a third mobile enemy can move past (0.6556ms)
+✔ event consumption and manual cast requests do not duplicate simulation actions (0.4217ms)
+✔ ranged enemies resume route movement after their firing animation and cannot camp forever outside tower reach (0.9534ms)
+✔ scheduled elite spawns at its own timestamp instead of waiting behind a later ordinary enemy (2.5512ms)
+✔ a four-skill ordinary team completes tutorial and three ordinary levels within their total duration targets (252.7407ms)
+✖ eight real-service seeds keep boss challenge within timing budget and reward ordinary 4–6-skill growth (5759.7552ms)
+✔ boss has independent exact stations and route; every other level keeps its established coordinates (16.9726ms)
+✔ all five save phases preserve archives, reveal RNG and receipts; only combat coordinates change (29.0665ms)
+✔ rich old combat migrates dead and living turtles without losing any other simulation field (19.9532ms)
+✔ known old/new pairs, partial occupancy and repeated old archive imports are idempotent (24.3519ms)
+✔ checksum, full structure, route and exact coordinate pairs are checked before migration (25.4647ms)
+✔ opening an old primary is read-only, keeps revision/raw CAS and then commits normally (17.8204ms)
+✔ old combat backup recovers without clearing either raw value on open; two bad saves stay preserved (9.27ms)
+✔ backup/primary write failures and lost acknowledgement keep migration and atomic commit semantics (41.3497ms)
+✔ new callbacks and direct repository commits cannot put old or arbitrary coordinates back (15.1223ms)
+✔ normalized mid-wave restoration continues identically to the same state with only coordinates updated (39.8811ms)
+✔ won and lost old combat snapshots await normal settlement without replaying or repeating rewards (90.1277ms)
+✔ optimistic concurrency survives read-only migration and rejects another page stale state (18.9175ms)
+✔ an old combat envelope remains supported after the level has already been cleared (14.8852ms)
+✔ range-v1/v2 and original/current boss layout are independent on primary, backup, continuation and next wave (1119.787ms)
+✔ boss migration keeps live fifth-unit state and real boss summon state, while layout histories cannot cross levels (37.8416ms)
+✔ actual Cocos web bundle can preview, generate, reveal and collect the first 3+2-skill fusion (172.6428ms)
+ℹ Built artifact 2026-09-09T04:11:51.870Z; SHA256 230fe7ba5c5a8ebcd09d618c267f66bc8e1ee17995e6244a480c9dfeafd7e8ea. Rebuild after source edits.
+✔ approved source, actual image/texture imports and bundled native PNG all form separate evidence (43.9305ms)
+✔ missing metadata and pre-import metadata cannot pass (30.8252ms)
+✔ metadata success cannot replace actual library payload or texture linkage (63.9483ms)
+✔ an unchanged library cannot hide a stale current-build PNG (27.4906ms)
+✔ an unchanged current build cannot hide a stale library PNG (48.7657ms)
+✔ resource name with a different UUID is not package proof (29.4001ms)
+✔ matching registration without a real import payload fails (21.5731ms)
+✔ promoted files accept portrait target key but reject changed source bytes (37.3635ms)
+✔ packed proof resolves the specific member root, not any class name in the pack (40.4408ms)
+✔ homogeneous texture pack proves this member image reference and rejects a wrong neighbor (38.9211ms)
+✔ home prefab proof checks real renderer mesh references and native geometry (78.7841ms)
+✔ root decoding supports Creator normal/custom roots and refuses malformed payloads (0.5162ms)
+✔ report creation refuses previous results even if a file appears after the early check (28.4526ms)
+✔ coral retains its independent stations; boss has its own layout and the other three remain unchanged (50.9676ms)
+✔ all five save phases preserve archives, reveal RNG and receipts; only combat coordinates change (58.068ms)
+✔ rich old combat migrates dead and living turtles without losing any other simulation field (7.6668ms)
+✔ known old/new pairs, partial occupancy and repeated old archive imports are idempotent (56.0115ms)
+✔ checksum, full structure, route and exact coordinate pairs are checked before migration (50.9927ms)
+✔ opening an old primary is read-only, keeps revision/raw CAS and then commits normally (9.245ms)
+✔ old combat backup recovers without clearing either raw value on open; two bad saves stay preserved (8.2328ms)
+✔ backup/primary write failures and lost acknowledgement keep migration and atomic commit semantics (71.7754ms)
+✔ new callbacks and direct repository commits cannot put old or arbitrary coordinates back (11.1021ms)
+✔ normalized mid-wave restoration continues identically to the same state with only coordinates updated (55.5611ms)
+✔ won and lost old combat snapshots await normal settlement without replaying or repeating rewards (22.0928ms)
+✔ optimistic concurrency survives read-only migration and rejects another page stale state (9.6149ms)
+✔ an old combat envelope remains supported after the level has already been cleared (9.0587ms)
+✔ 不收录：随机结果先持久化；退出重进不重抽，永久 A/B 留在收藏 (44.1909ms)
+✔ 收录：同时退役真实来源；重复确认与重启不重复生成档案 (26.8615ms)
+✔ 多代未收录 C + D：最终确认准确退役 A/B/D (29.9609ms)
+✔ 已收录 C + D：后代确认只退役 C/D，不再次消费 A/B (39.7654ms)
+✔ 不可再次部署已消耗的来源；不可用同一只龟自合或重复占用合成波次 (11.0407ms)
+✔ 永久 A + 新招募 B：只退役 A；培养值不遗传给新龟 (9.5563ms)
+✔ 锁定来源可以试合，但在解锁前不能确认收录 (35.4437ms)
+✔ 原子写入失败：内存与磁盘保持旧事务；恢复后可安全重试 (14.6101ms)
+✔ 写入成功但调用方未收到确认：重启后相同指令不会再次收录 (26.7689ms)
+✔ 损坏存档恢复上一完整备份；两个存档都损坏时不自动清空 (4.4312ms)
+✔ 另一个页面的陈旧存档不得覆盖已提交操作 (1.5272ms)
+✔ 同一存储提交重入被拒绝，不覆盖重入操作或暴露部分事务 (0.949ms)
+✔ 教学免体力仅首次进入，不能以反复失败无限免费领取金币 (5.8548ms)
+✔ 通关/首通/翻倍仅发一次；翻倍只包含基础金币 (17.7389ms)
+✔ 失败只发已完成波次金币；收录成功不因失败回滚 (13.8055ms)
+✔ 体力十分钟恢复、满体力不囤积、时间回拨不重置每日次数 (3.8877ms)
+✔ 广告模拟不能打断战斗或合成揭晓，刷新每局仅一次 (18.2143ms)
+✔ 局内学技能不覆盖永久档案；培养重复点击只扣一次 (5.4004ms)
+✔ 五在场五替补时不能移出第六只替补，但可以直接交换 (32.5815ms)
+✔ 旧局次或旧波次迟到回调不能替换当前战斗或再次发奖 (8.3725ms)
+✔ 缺损快照与倒退 tick 被拒绝，之前完整检查点仍可恢复 (7.621ms)
+✔ 日常时钟刷新不会永久膨胀命令日志 (128.9555ms)
+✔ 全部可发生数量分布归一；8+8 尾部与 0.05% 传说概率一致 (15.5776ms)
+✔ 大量固定种子抽样：12 技能仍为稀有尾部，非截断造成的堆积 (364.263ms)
+✔ adopted ranges retain exact fourth-level route/slots, stone blocking and reach increment (3.4226ms)
+✔ stone1 plus crystal2 directly damages the first naturally blocked runner at the opening contact (5.4988ms)
+✔ leaf4 doubleHeal heals fixed slots2/3 but excludes the more injured slot1 (0.8655ms)
+✔ leaf4 reach+doubleHeal heals fixed slots2/3 but excludes the more injured slot1 (0.3376ms)
+✔ leaf4 with starter reach cannot heal slot1 when that is the only injured unit (0.301ms)
+✔ encourage on fixed slot3 selects nearer slot5 and changes real healing by eight percent (0.639ms)
+✔ encourage uses stable IDs for equal-distance fixed slots and cannot reach a remote slot (0.5854ms)
+✔ share from fixed slot2 transfers ten percent of a real enemy hit on nearest slot4 (8.3714ms)
+✔ share respects nearest living friend: an in-range but non-nearest patient is not protected (6.1145ms)
+✔ share on fixed slot1 cannot transfer a hit from slot4 outside 4.5 (10.5164ms)
+✖ 初次实际加载前不开放空首页，玩家状态更新不重建UI，ready仅撤掉一次加载界面 (36.3442ms)
+✖ 会话仍在等待时进入后台，加载完成不会提前显示或计时，回前台后才开放首页 (1.5292ms)
+✖ 资源失败重试只重建显示资源，旧实例迟到不能结束新一轮等待或重复获取会话 (1.9574ms)
+✖ 首次完整场景激活仍处于暂停和旧加载门控内，成功才注入正式UI并撤掉arrival (13.275ms)
+✖ 首次激活动画失败不放行且保留重试，重建世界后复用健康UI批次与玩家进度 (1.3525ms)
+✖ 构造失败可重试，离开首页后的旧重试回调和迟到就绪都不能覆盖战斗页 (4.5238ms)
+✖ 非首页菜单不提交五龟3D，取消战斗加载可复用；后台恢复不重播招呼 (2.338ms)
+✖ 减少动态设置在点击当帧传给HomeWorld，回首页禁用招呼，关闭后立即可用 (1.9227ms)
+✖ 使用首页作者相机，窄窗扩大FOV并保留提示，返回首页恢复相机且不重新加载 (1.7854ms)
+✖ 销毁等待中的会话只关闭一次，销毁后迟到Home和旧UI事件不创建或显示任何页面 (1.7952ms)
+✖ 四道首页屏障：home 最后就绪前不注入正式面板与头像 (1.2467ms)
+✖ 四道首页屏障：panels 最后就绪前不注入正式面板与头像 (2.1099ms)
+✖ 四道首页屏障：portraits 最后就绪前不注入正式面板与头像 (1.8757ms)
+✖ 四道首页屏障：icons 最后就绪前不注入正式面板与头像 (1.122ms)
+✖ 界面 panels 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.3635ms)
+✖ 界面 portraits 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.1937ms)
+✖ 界面 icons 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.1046ms)
+✖ 面板/头像/图标在后台全部就绪仍等前台；销毁关闭三个所有者且迟到结果不注入UI (1.4078ms)
+✖ 等待会话时已经失败的三批界面不自动重试，玩家确认后才各开启下一次请求 (1.9962ms)
+✖ 菜单隐藏首页3D但保留资源；战斗控制器和世界均接管成功后才释放首页一次 (1.9348ms)
+✖ 战斗Controller交接失败仍能取消并复用原首页，不触发首页重载 (1.3527ms)
+✖ 战斗Activation交接失败仍能取消并复用原首页，不触发首页重载 (1.4489ms)
+✖ 战斗Checkpoint交接失败仍能取消并复用原首页，不触发首页重载 (1.8803ms)
+✖ 战斗返回重建首页时即使interfaceReady为true仍阻断旧菜单/出发/奖励/退出回调，后台就绪不能放行 (9.6427ms)
+✖ 返回首页load失败仍留在新arrival，重试不重做成功界面批次 (2.3544ms)
+✖ 返回首页activation失败仍留在新arrival，重试不重做成功界面批次 (5.3904ms)
+✖ 检查点失败保留战斗；三轮成功往返每次仅重建一个首页，旧控制器与资源回调均无效 (1.7095ms)
+✖ 回首页加载中销毁入口，迟到就绪/旧战斗退出/旧错误都不能复活页面或会话 (1.649ms)
+✔ 全部六份资源到齐才创建海岛与五个不同正式模型，显式显示后恢复待机 (11.3527ms)
+✔ 默认隐藏以及加载中暂停保持骨骼冻结，显示不能覆盖手动暂停 (6.9166ms)
+✔ 隐藏组装不预建或播放state，首次显示由引擎初始化；以后显示沿用原state与播放相位 (10.4058ms)
+✔ 父节点未激活时请求显示仍等待真实onLoad，激活后的首帧启动一次待机 (3.8122ms)
+✔ 单龟招呼不重入，暂停冻结剩余时间；完整长帧后只回一次idle (3.85ms)
+✔ 减少动态直接保持idle，不启动招呼或新增节点 (4.7525ms)
+✔ 减少动态设置立即结束正在播放的五龟招呼，保留后台暂停并支持重新开启 (3.6696ms)
+✔ 任一加载失败释放先到资源，晚回调和显示请求不能复活首页 (2.9855ms)
+✔ 中途组装失败回滚已适配模型、六Prefab和外海资源 (6.054ms)
+✔ 加载中销毁及父节点提前离开都不接收迟到资源，重复回调不重复持有 (4.121ms)
+✔ 就绪后父节点销毁自动释放全部引用，后续destroy和招呼安全幂等 (2.8476ms)
+✖ fresh GameService progression uses one initial turtle, legal recruitment, service levels and recoverable wave snapshots (1645.1322ms)
+✖ mature 4–6-skill fixture remains separate and training uses earned resources via GameService (1915.9484ms)
+✔ 一次图集加载，八帧整数切片，共享同一纹理与同名SpriteFrame (4.6683ms)
+✔ 切屏待销毁节点仍isValid时使用strict检查，迟到资源只绑定新页面 (1.302ms)
+✔ 已销毁节点立即解除等待记录；后续节点无需再次加载图集 (3.3366ms)
+✔ 所有者在资源完成前销毁，迟到回调不创建纹理/帧/引用或恢复图标 (1.0118ms)
+✔ 销毁先清理活跃Sprite再释放帧和纹理，不重复释放source ImageAsset (1.0594ms)
+✔ 资源失败记录明确失败状态，保持图标禁用，不把文字退化当通过或反复请求 (1.1596ms)
+✔ 尺寸不正确拒绝切片；分配中失败会释放所有已分配资源 (2.6753ms)
+✔ 同一节点改图标复用组件，只保留一份销毁监听 (1.6516ms)
+✔ 运行资源是已审查的1024x512 RGBA图集，未替换为伪棋盘候选 (3.3102ms)
+✔ 显式重试失败批次只发一次请求，旧成功/错误回调不覆盖新结果或多持有图集 (2.1809ms)
+✔ 同步抛错留下的旧回调被代号隔离，销毁后重试和迟到回调均不分配 (1.8158ms)
+✔ 无效图片或持有引用失败不切片，不释放从未获得的源引用，随后可正常重试 (1.4266ms)
+✔ Node刚请求销毁而Sprite仍有效时，同帧销毁图标owner先断开引用再释放共享帧 (1.2729ms)
+✔ 单独pending的Sprite仍须在共享帧释放前解除引用 (1.4431ms)
+✔ NODE_DESTROYED事件中仍活着的组件先清理，后续监听销毁owner也安全 (1.521ms)
+✔ 图集绑定中失败时，已经赋帧但刚进入pending的Sprite先清理再回滚资源 (1.8331ms)
+✔ 预载门控共用一次请求；30帧精确对应冻结rect/insets并共享一张atlas (8.7027ms)
+✔ 十种最小高度不挤压九宫格角；2x/.5外延保留原父点击尺寸与透明余量 (11.8402ms)
+✔ 两面板借用同帧；关一页不释放共享资源，所有者先解绑含pending节点再释放 (3.6559ms)
+✔ 所有者在加载中销毁立即结束gate；迟到资源不建立引用或节点 (1.8937ms)
+✔ 普通面板注入前必须完成gate；只有未注入或明确特殊圆角使用Graphics (4.1403ms)
+✔ 载入失败及坏尺寸拒收，显式retry重新加载；旧回调不能抢占新的attempt (3.8107ms)
+✔ 部分帧分配和同步加载异常完整释放；面板创建失败仅移除自己的装饰 (30.7986ms)
+✔ pending/destroyed父节点不接收面板，重复attach不残留旧decor或多份监听 (9.4739ms)
+✔ 按钮名字/尺寸/位置、文字和事件保持父节点；装饰不新增触控监听 (6.4572ms)
+✔ 实际运行PNG等于已审冻结源，布局/图集推广记录指向同一文件 (6.5584ms)
+✔ 同一UI内已移除、待销毁或隐藏页的旧触摸不播放确认音或执行动作 (3.2873ms)
+✔ 诊断默认关闭；远程来源、错误参数和非DEBUG构建没有DOM或监听副作用 (11.0537ms)
+✔ 帧平均与P95取真实performance间隔；引擎dt单列，首次markReady保持幂等 (2.5029ms)
+✔ 验收开关默认收起于左下安全边缘；展开收起不影响采样或触发导出 (4.1444ms)
+✔ 后台与恢复首帧不进入卡顿统计；堆不可用或异常为null而非零 (2.6904ms)
+✔ 点击截图在AFTER_DRAW同栈先复制WebGL像素，再异步编码；下载链接延后释放 (1.4495ms)
+✔ 销毁取消待绘制监听；编码迟到回调也不能触发下载 (1.9087ms)
+✔ 未绘制超时和截图失败可重试，均不下载；迟到绘制已解绑 (5.3946ms)
+✔ 性能导出包含独立报告快照，销毁撤销URL和计时器且不保留面板 (3.2828ms)
+✔ real five-stage progression records the exact first-clear materials actually added to inventory (1621.9062ms)
+✔ restart, duplicate final callback and gold doubling preserve material receipts without granting again (156.5353ms)
+✔ a failed settlement commit cannot add inventory without its receipt; retry grants once (11.0039ms)
+✔ legacy missing material receipts remain unknown across decode, a new transaction and restart (8.6649ms)
+✔ material receipt validation rejects malformed maps, unknown materials and invalid counts (7.6952ms)
+✔ abandoning records a known empty grant and replays the same receipt after restart (1.7006ms)
+✔ 收藏每页六张整卡，13只可完整翻页；大头像和标题可读，查看返回不改收藏或磁盘 (1333.997ms)
+✔ 选队六卡跨页保留选择顺序和五只上限，取消只返回选关而不修改存档 (51.6084ms)
+✔ 选队出发提交一次真实入场，连续派发旧出发事件不重复扣体力或改出战名单 (32.6824ms)
+✔ 12个真实技能都在技能页可见且可点说明，关闭说明保留技能页，浏览全程不改技能或存档 (35.5795ms)
+✖ 历史详情仅供查看且返回历史；当前收藏培养仍提交一次真实训练，不更换任何技能 (37.2872ms)
+✔ 选关、设置与体力的主要操作使用视口内大命中区，设置和返回不改变收藏 (41.7816ms)
+✔ 返回首页加载期间旧卡片/翻页/出发/奖励事件既不改状态也不覆盖页面，失效节点不响确认音 (65.1913ms)
+✔ 技能书入口仅属永久收藏；空库存不补发，历史详情及迟到入口均不能打开学习页 (61.1212ms)
+✔ 真实技能书库存按六张分页，第七本可访问且书卡完整可点击，翻页不会增加库存 (42.3166ms)
+✖ 已经拥有或职业不兼容的书不可点，进行中的冒险禁用入口与所有学习书卡 (53.6176ms)
+✔ 查看学习风险与取消不预抽或提交，取消面板的旧确认回调不会学习 (36.3255ms)
+✔ 确认学习使用真实事务只消耗一本，结果及十二技能页来自提交后快照，旧确认不重复消费 (60.9608ms)
+✔ 提交已落盘但回执丢失时，原确认面板重试复用命令，仅一次随机覆盖与库存消耗 (39.9984ms)
+✔ 技能书确认在后台、隐藏祖先或待销毁节点时不可学习，正常恢复后才接受一次确认 (33.6489ms)
+✖ V0.6 outside fusion UI resumes fixed C and consumes exactly two after explicit keep confirmation; old controls are inert (92.6558ms)
+✖ V0.6 learned book opens mandatory bubbles from the persisted outcome, then returns to owned turtle (30.6449ms)
+✔ V0.6 rename input changes only the selected permanent name after explicit save (46.0841ms)
+✔ V0.6 default team covers the five available roles despite duplicate individuals, but manual duplicates remain allowed (44.1547ms)
+✔ V0.6 starts five original individuals on field plus five independent bench slots, and old saves remain recoverable (12.1873ms)
+✔ empty original formation is allowed before chapter deployment, but an empty battlefield cannot start (4.4161ms)
+✔ one real completed wave retains locked bench individuals and refreshes only unlocked or empty slots (26.7722ms)
+✔ in-wave replacement parks the original; re-entry after save keeps its HP, cooldowns and one-shot skill state (15.1788ms)
+✔ bench fusion consumes A and B, leaves one empty slot and persists a fixed result across reveal and restart (5.8812ms)
+✔ fusion during a real wave restores that exact combat checkpoint after revelation (7.7182ms)
+✔ a full real chapter returns only final valid new turtles, never duplicates originals or brings back replaced/refreshed parents (71.4713ms)
+✔ abandoning preserves originals and wave gold but gives no chapter turtle carry reward (9.0012ms)
+✔ 50 capacity keeps surplus new turtles pending, supports explicit discard, and never erases existing assets (114.2789ms)
+✔ pre-existing collections over 50 are retained without permission to add more (5.1188ms)
+✔ outside fusion keeps exactly A, consumes the other choices, and cannot redraw after restart (4.2071ms)
+✔ outside fusion keeps exactly B, consumes the other choices, and cannot redraw after restart (3.9279ms)
+✔ outside fusion keeps exactly C, consumes the other choices, and cannot redraw after restart (2.8336ms)
+✔ skill-book outcome is fixed and saved before reveal; restart and skipped animation cannot reroll it (2.315ms)
+✔ quality is a configurable display reference; rename and quality evaluation never mutate skills or probabilities (2.3226ms)
+✖ a real starter-team endless run chooses fixed rewards, earns a stage book, dies, saves resources, learns and starts again (76.083ms)
+✔ outside fusion write failure preserves both parents and retries the same seed once (1.9671ms)
+✔ one simulation second at 2X equals two at 1X, without additional attacks or wave rewards (11.9826ms)
+✔ skill-count progression improves 1–8 results while all reachable 9–12 rates are exactly preserved (39.5429ms)
+✔ five field positions swap during combat without healing or resetting attacks, and full bench accepts an exchange (15.7707ms)
+✔ permanent parents require explicit consent; confirmed in-run fusion consumes originals atomically and survives restart (7.0848ms)
+✔ locked permanent parents cannot be consumed even after the warning is confirmed (2.2296ms)
+✖ legacy unchosen reward nodes migrate to one saved random outcome and cannot be redirected by an index (62.1526ms)
+✔ missing or zero book inventory rejects consumption without advancing RNG or changing the save (9.992ms)
+✖ owned, incompatible, nonexistent skills and a missing turtle are rejected before inventory or RNG changes (2.5577ms)
+✔ prep, between, combat and unrevealed merge phases reject outside-run books without touching run snapshots (27.9349ms)
+✖ success consumes one matching book, preserves all other permanent fields and the next run receives the learned skill (0.6535ms)
+✖ restart and repeated command replay return the original receipt without another book, RNG draw or revision (0.4775ms)
+✖ a primary write failure rolls back skill, book, RNG and in-memory receipt; retry after restart applies once (0.8348ms)
+✖ a write that persisted before throwing is recovered by its command receipt without duplicate consumption (1.9421ms)
+✖ a stale service cannot overwrite the committed book operation or consume a second inventory copy (0.6614ms)
+✖ in result, collecting an old savedId snapshot or replaying its older receipt cannot roll back a book (2.2775ms)
+✖ a fixed uncollected C remains unchanged after result-booking A, then collects the latest A into history without a refund (10.6763ms)
+✔ legacy saves missing book inventory reopen and survive an unrelated transaction without receiving books (1.2428ms)
+✔ malformed present book inventories are rejected by validation and decoding, while zero and empty maps are valid (2.3462ms)
+✔ a successful application returns a complete receipt and a new turtle, preserving identity, traits and origins (2.6733ms)
+✔ one-skill and twelve-skill turtles retain their exact skill count without duplicates (10.9601ms)
+✔ fixed state reproduces the same replacement and every existing position is reachable (2.1623ms)
+✔ already-owned, incompatible or nonexistent book requests leave both RNG and turtle unchanged (0.8051ms)
+✔ invalid existing skill lists are rejected before randomness and cannot create a thirteenth slot (0.4384ms)
+✔ a common shield book changes real battle protection and expires through the real battle clock (2.628ms)
+✔ an active heal book produces real healing and cooldowns, and replacing it removes casting permission (1.6874ms)
+✔ 原atlas映射到Standard正确PBR通道；保留色值、默认F0并不修改原材质 (4.868ms)
+✔ 多只龟复用一次材质和纹理引用；重复apply及单只释放不提前销毁共享资源 (1.8262ms)
+✔ 节点销毁自动释放且不访问将销毁的renderer；适配器destroy恢复存活节点且幂等 (2.1745ms)
+✔ 不改无关模型或缺失纹理；回退保留后续外部材质覆盖 (5.1237ms)
+✔ 默认白名单不适配Ink材质，不创建变体、不增加引用或替换材质 (1.9802ms)
+✔ 显式atlas白名单适配并共享Ink，排除其他名称和空前缀；释放与destroy恢复引用及原材质 (2.3773ms)
+✔ 编译和绑定失败均回滚资源引用，可重试；错误模板在持有引用前拒绝 (3.3717ms)
+✔ 光照仅明确四采样PCF；硬影可回退，1024分辨率和原照明强度保持 (1.9186ms)
+✔ 五图乱序加载只请求一次；全部就绪后绑定，保留384整帧与原白色RGBA (8.0552ms)
+✔ 切屏待销毁节点不会绑定迟到头像；同节点改职业只保留一个组件和监听 (1.9189ms)
+✔ 头像已就绪后Node请求销毁，同帧owner销毁先清仍有效Sprite引用，再释放共享帧 (1.6519ms)
+✔ 单独pending的Sprite及NODE_DESTROYED事件中仍有效的组件均先解除引用 (2.2629ms)
+✔ 已销毁卡片解除绑定，共享头像直到管理器结束才释放 (1.5455ms)
+✔ 部分加载失败释放已取得资源；显式重试隔离旧批次迟到回调 (2.3821ms)
+✔ 加载中销毁管理器，清理已有资源且所有迟到回调不创建对象或复活头像 (2.0136ms)
+✔ 错尺寸、分配失败与同步load异常有明确失败状态且不泄漏 (3.7301ms)
+✔ 运行五张PNG逐字节等于已批准384px真RGBA，推广未替换64px审查图 (24.2736ms)
+✔ V07 newborn roles favor their own talent and can roll a perfect focus and growth; initial skill roles remain themed (391.7314ms)
+✔ V07 trained panel inheritance reaches combined four maximum talents and the exact preview distribution sums to one (96.5391ms)
+✔ V07 main/sub parents give 60/40 appearance; all passive skills transfer but only matching active can transfer (436.7262ms)
+✔ V07 books can teach a foreign passive, cannot teach foreign active, and keep the learned result after reload (8.405ms)
+✔ V07 rebirth rolls once per wave; successful revival can later fall asleep and the sleep wave is fixed in saved state (8.6812ms)
+✔ V07 sleeping turtles stay unavailable through the exact wake wave when recreating battle (2.0439ms)
+✔ V07 stone blocks one enemy for three seconds rather than holding two indefinitely (1.923ms)
+✔ V07 reward board is exactly two gold, two distinct foods and one book; pause, continued draws and discounted all-open are atomic (10.3806ms)
+✔ V07 failed gold draw purchase and failed storage write leave the board, wallet and RNG unchanged (2.548ms)
+✔ V07 local friends, AI chat, three assists, expired loans and battle-use loans survive restart without making permanent duplicates (43.171ms)
+✔ V07 market escrow, transfers, taxes, cancellation and retries conserve coins and ownership (26.1788ms)
+✔ V07 rental daily five limits, same-body five limits and owner usage remain independent (78.4302ms)
+✔ V07 score ordering, hiding and fastest-progress ordering use saved arrivals and completed receipts (14.6434ms)
+✔ V07 five-person raid enforces owner priority, allows swaps with retained HP, checkpoints and settles once (41.8437ms)
+✔ V07 arena plays actual ordered turtles against defense, resumes deterministically, and persists rank or practice result once (133.1968ms)
+ℹ tests 383
+ℹ suites 0
+ℹ pass 315
+ℹ fail 68
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8700.6352
+
+✖ failing tests:
+
+test at tests\battle-screen-lifecycle.test.cjs:159:1
+✖ 销毁后手动施法与checkpoint不改旧战斗或磁盘，活页仍能排队一次真实技能 (0.7159ms)
+  Error [GameError]: 本地存档和备份均无法读取。资料已保留，请先导出修复，不会自动清空。
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at SaveRepository.open (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:315:13)
+      at new GameService (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:115:33)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:32:12)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:160:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12) {
+    code: 'SAVE_RECOVERY'
+  }
+
+test at tests\battle-screen-lifecycle.test.cjs:165:1
+✖ 销毁后旧结算/暂停退出与继续按钮无效，旧返回不能触发新的首页 (27.0433ms)
+  Error [GameError]: 本地存档和备份均无法读取。资料已保留，请先导出修复，不会自动清空。
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at SaveRepository.open (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:315:13)
+      at new GameService (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:115:33)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:32:12)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:167:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12) {
+    code: 'SAVE_RECOVERY'
+  }
+
+test at tests\battle-screen-lifecycle.test.cjs:269:1
+✖ 完整十二技能详情与比较同步两页可达；查看说明/天生培养不写存档 (101.8139ms)
+  AssertionError [ERR_ASSERTION]: actual button 资质
+      at Object.callback (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:120:80)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:281:5)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\battle-screen-lifecycle.test.cjs:313:1
+✖ 技能按钮遵守冷却/死亡/已排队边界，暂停/结算全入口满足大目标 (0.526ms)
+  Error [GameError]: 本地存档和备份均无法读取。资料已保留，请先导出修复，不会自动清空。
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at SaveRepository.open (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:315:13)
+      at new GameService (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:115:33)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:32:12)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:314:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12) {
+    code: 'SAVE_RECOVERY'
+  }
+
+test at tests\battle-screen-lifecycle.test.cjs:352:1
+✖ 无尽五张奖励卡无手选操作，换位动画自动发一份；隐藏、跳过与旧回调不重抽 (407.9505ms)
+  AssertionError [ERR_ASSERTION]: actual button 直接揭晓
+      at Object.callback (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:120:80)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-screen-lifecycle.test.cjs:358:87)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\battle-validation.test.cjs:26:1
+✖ real createBattle/stepBattle states throughout all five levels pass before and after JSON restoration (2.8428ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:30:19)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests\battle-validation.test.cjs:69:1
+✖ validation has no mutation and serialized continuation remains identical (0.6374ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:70:15)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+
+test at tests\battle-validation.test.cjs:76:1
+✖ every required top-level field rejects deletion (0.3273ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:77:15)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+
+test at tests\battle-validation.test.cjs:84:1
+✖ every required unit and enemy field rejects deletion (0.3197ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:85:15)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+
+test at tests\battle-validation.test.cjs:92:1
+✖ non-finite numbers, unsupported JSON values, sparse arrays and circular structures are rejected (0.2692ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at reject (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:21:34)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:94:140)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\battle-validation.test.cjs:103:1
+✖ version, level, wave, tick consistency, remainder, core health and phase constraints are checked (0.2393ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at reject (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:21:34)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:106:61)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\battle-validation.test.cjs:111:1
+✖ routes, unique entity IDs, archive IDs, slots and legal compatible skill pools are checked (0.2135ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at reject (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:21:34)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:119:84)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\battle-validation.test.cjs:122:1
+✖ health bounds, interval, shields, statuses, source references and per-skill numeric maps are checked (0.2403ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at reject (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:21:34)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:133:98)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\battle-validation.test.cjs:136:1
+✖ spawn cursors, queued commands, event structure, counters and references reject inconsistent state (0.2873ms)
+  Error: 技能组合不合法
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:62:19
+      at Array.map (<anonymous>)
+      at createBattle (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\battle.js:53:26)
+      at fresh (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:18:10)
+      at moving (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:20:33)
+      at reject (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:21:34)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-validation.test.cjs:146:85)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\battle-world-models.test.cjs:604:1
+✖ 实际BattleScreen恢复快照先冻结模型；继续按钮当场恢复，暂停期间规则tick不推进 (16.6227ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:605:31)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle-world-models.test.cjs:612:1
+✖ 实际BattleScreen手动暂停与hide/show冻结骨骼，继续保持动作相位；回首页销毁 (8.3129ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:613:31)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle-world-models.test.cjs:629:1
+✖ 实际BattleScreen伙伴/合成/比较弹窗立即冻结，关闭弹窗不覆盖手动暂停 (9.8186ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:631:33)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle-world-models.test.cjs:638:1
+✖ 实际BattleScreen揭晓、结算及放弃流程同步模型暂停，错误检查点不会误恢复 (12.6743ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:639:31)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle-world-models.test.cjs:650:1
+✖ 实际BattleScreen推进异常当场暂停；恢复后波间待机可运行而规则不多推进 (7.7564ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:651:31)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle-world-models.test.cjs:689:1
+✖ 末波奖励立即提交，结算面板等退场结束；暂停与恢复不重复结算 (9.938ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192
+        const coreRequire = name => { if (name === './data') return modules.data; if (name === './random') return modules.random; if(name==='./prototypeConfig')return require('../.test-build/core/prototypeConfig.js'); throw new Error(`Unexpected core dependency ${name}`); };
+                                                                                                                                                                                                                          ^
+
+  Error: Unexpected core dependency ./talents
+      at coreRequire (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:192:223)
+      at evalmachine.<anonymous>:10:19
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at load (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:136:70)
+      at Object.screen (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:193:76)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle-world-models.test.cjs:690:26)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+
+test at tests\battle.test.cjs:25:1
+✖ skill catalogue contains exactly thirty unique reachable skills (4.8123ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  33 !== 30
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle.test.cjs:26:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 33,
+    expected: 30,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\battle.test.cjs:39:1
+✖ invalid duplicates, more than twelve skills, incompatible skills and duplicate slots cannot enter battle (0.6657ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle.test.cjs:40:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\battle.test.cjs:233:1
+✖ stone blocks at most two; a third mobile enemy can move past (0.6556ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  1 !== 2
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\battle.test.cjs:236:32)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\boss-balance.test.cjs:6:1
+✖ eight real-service seeds keep boss challenge within timing budget and reward ordinary 4–6-skill growth (5759.7552ms)
+  AssertionError [ERR_ASSERTION]: seed 2027: fresh time leaves 30 seconds of operations before eight minutes
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\boss-balance.test.cjs:13:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\home-entry.test.cjs:167:1
+✖ 初次实际加载前不开放空首页，玩家状态更新不重建UI，ready仅撤掉一次加载界面 (36.3442ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:168:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+
+test at tests\home-entry.test.cjs:179:1
+✖ 会话仍在等待时进入后台，加载完成不会提前显示或计时，回前台后才开放首页 (1.5292ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:180:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:186:1
+✖ 资源失败重试只重建显示资源，旧实例迟到不能结束新一轮等待或重复获取会话 (1.9574ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:187:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:195:1
+✖ 首次完整场景激活仍处于暂停和旧加载门控内，成功才注入正式UI并撤掉arrival (13.275ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:196:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:205:1
+✖ 首次激活动画失败不放行且保留重试，重建世界后复用健康UI批次与玩家进度 (1.3525ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:206:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:223:1
+✖ 构造失败可重试，离开首页后的旧重试回调和迟到就绪都不能覆盖战斗页 (4.5238ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:224:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:233:1
+✖ 非首页菜单不提交五龟3D，取消战斗加载可复用；后台恢复不重播招呼 (2.338ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:234:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:243:1
+✖ 减少动态设置在点击当帧传给HomeWorld，回首页禁用招呼，关闭后立即可用 (1.9227ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:244:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:250:1
+✖ 使用首页作者相机，窄窗扩大FOV并保留提示，返回首页恢复相机且不重新加载 (1.7854ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:251:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:260:1
+✖ 销毁等待中的会话只关闭一次，销毁后迟到Home和旧UI事件不创建或显示任何页面 (1.7952ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:261:17)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:269:57
+✖ 四道首页屏障：home 最后就绪前不注入正式面板与头像 (1.2467ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:270:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:269:57
+✖ 四道首页屏障：panels 最后就绪前不注入正式面板与头像 (2.1099ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:270:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:269:57
+✖ 四道首页屏障：portraits 最后就绪前不注入正式面板与头像 (1.8757ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:270:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:269:57
+✖ 四道首页屏障：icons 最后就绪前不注入正式面板与头像 (1.122ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:270:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:285:52
+✖ 界面 panels 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.3635ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:286:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:285:52
+✖ 界面 portraits 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.1937ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:286:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:285:52
+✖ 界面 icons 失败重试保留已就绪世界和成功批次，不重复会话或页面 (1.1046ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:286:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:297:1
+✖ 面板/头像/图标在后台全部就绪仍等前台；销毁关闭三个所有者且迟到结果不注入UI (1.4078ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:298:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:309:1
+✖ 等待会话时已经失败的三批界面不自动重试，玩家确认后才各开启下一次请求 (1.9962ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:310:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:317:1
+✖ 菜单隐藏首页3D但保留资源；战斗控制器和世界均接管成功后才释放首页一次 (1.9348ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:318:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:331:63
+✖ 战斗Controller交接失败仍能取消并复用原首页，不触发首页重载 (1.3527ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:332:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:331:63
+✖ 战斗Activation交接失败仍能取消并复用原首页，不触发首页重载 (1.4489ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:332:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:331:63
+✖ 战斗Checkpoint交接失败仍能取消并复用原首页，不触发首页重载 (1.8803ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:332:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:343:1
+✖ 战斗返回重建首页时即使interfaceReady为true仍阻断旧菜单/出发/奖励/退出回调，后台就绪不能放行 (9.6427ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:344:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:366:44
+✖ 返回首页load失败仍留在新arrival，重试不重做成功界面批次 (2.3544ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:367:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:366:44
+✖ 返回首页activation失败仍留在新arrival，重试不重做成功界面批次 (5.3904ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:367:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:381:1
+✖ 检查点失败保留战斗；三轮成功往返每次仅重建一个首页，旧控制器与资源回调均无效 (1.7095ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:382:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\home-entry.test.cjs:401:1
+✖ 回首页加载中销毁入口，迟到就绪/旧战斗退出/旧错误都不能复活页面或会话 (1.649ms)
+  C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150
+      throw new Error('Unexpected entry dependency '+name);
+      ^
+
+  Error: Unexpected entry dependency ../core/community
+      at require (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:150:11)
+      at evalmachine.<anonymous>:21:21
+      at Script.runInContext (node:vm:149:12)
+      at Script.runInNewContext (node:vm:154:17)
+      at Object.runInNewContext (node:vm:310:38)
+      at fixture (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:130:6)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\home-entry.test.cjs:402:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\integration.test.cjs:6:1
+✖ fresh GameService progression uses one initial turtle, legal recruitment, service levels and recoverable wave snapshots (1645.1322ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(report.initial.roster.every(t=>t.skills.length===2&&t.innate.attack===76&&t.innate.health===76&&t.innate.defense===76&&t.innate.growth===100))
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\integration.test.cjs:9:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\integration.test.cjs:19:1
+✖ mature 4–6-skill fixture remains separate and training uses earned resources via GameService (1915.9484ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(mature.roster.every(t=>t.skills.length>=4&&t.skills.length<=6&&t.innate.attack===76))
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\integration.test.cjs:22:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\menu-readability.test.cjs:206:1
+✖ 历史详情仅供查看且返回历史；当前收藏培养仍提交一次真实训练，不更换任何技能 (37.2872ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(f.labels().some(label=>label.string===text))
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:212:56)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\menu-readability.test.cjs:278:1
+✖ 已经拥有或职业不兼容的书不可点，进行中的冒险禁用入口与所有学习书卡 (53.6176ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  true !== false
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:282:54)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\menu-readability.test.cjs:355:1
+✖ V0.6 outside fusion UI resumes fixed C and consumes exactly two after explicit keep confirmation; old controls are inert (92.6558ms)
+  TypeError: Cannot read properties of undefined (reading 'test')
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:199
+      at Array.some (<anonymous>)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:130
+      at Array.findLast (<anonymous>)
+      at targetFor (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:34)
+      at Object.click (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:134:97)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:358:108)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\menu-readability.test.cjs:365:1
+✖ V0.6 learned book opens mandatory bubbles from the persisted outcome, then returns to owned turtle (30.6449ms)
+  TypeError: Cannot read properties of undefined (reading 'test')
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:199
+      at Array.some (<anonymous>)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:130
+      at Array.findLast (<anonymous>)
+      at targetFor (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:127:34)
+      at Object.click (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:134:97)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\menu-readability.test.cjs:366:96)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+
+test at tests\prototype-domain.test.cjs:145:1
+✖ a real starter-team endless run chooses fixed rewards, earns a stage book, dies, saves resources, learns and starts again (76.083ms)
+  Error [GameError]: 请先揭晓本波随机奖励
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:294:36
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.beginWave (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:291:14)
+      at startWave (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\prototype-domain.test.cjs:24:191)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\prototype-domain.test.cjs:152:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\prototype-domain.test.cjs:258:1
+✖ legacy unchosen reward nodes migrate to one saved random outcome and cannot be redirected by an index (62.1526ms)
+  Error [GameError]: 没有待处理的奖励
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at rewardNode (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\prototype.js:221:28)
+      at Object.prepareEndlessReward (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\prototype.js:225:18)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:167:100
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.prepareEndlessReward (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:167:50)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\prototype-domain.test.cjs:261:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:54:1
+✖ owned, incompatible, nonexistent skills and a missing turtle are rejected before inventory or RNG changes (2.5577ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at rejectsWithoutMutation (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:41:10)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:62:42
+      at Array.forEach (<anonymous>)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:62:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\skill-books-service.test.cjs:80:1
+✖ success consumes one matching book, preserves all other permanent fields and the next run receives the learned skill (0.6535ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:82:24)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:101:1
+✖ restart and repeated command replay return the original receipt without another book, RNG draw or revision (0.4775ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:102:44)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:113:1
+✖ a primary write failure rolls back skill, book, RNG and in-memory receipt; retry after restart applies once (0.8348ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:115:33)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:125:1
+✖ a write that persisted before throwing is recovered by its command receipt without duplicate consumption (1.9421ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /acknowledgement lost/. Input:
+
+  'GameError: 这只龟已经拥有书上的技能'
+
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:128:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: GameError: 这只龟已经拥有书上的技能
+        at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+        at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+        at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+        at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+        at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+        at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:128:28
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:128:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14),
+    expected: /acknowledgement lost/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\skill-books-service.test.cjs:134:1
+✖ a stale service cannot overwrite the committed book operation or consume a second inventory copy (0.6614ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:136:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:142:1
+✖ in result, collecting an old savedId snapshot or replaying its older receipt cannot roll back a book (2.2775ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:146:24)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+
+test at tests\skill-books-service.test.cjs:155:1
+✖ a fixed uncollected C remains unchanged after result-booking A, then collects the latest A into history without a refund (10.6763ms)
+  Error [GameError]: 这只龟已经拥有书上的技能
+      at requireRule (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\save.js:26:15)
+      at applySkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\skillBooks.js:22:28)
+      at C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:217:65
+      at GameService.transact (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:126:24)
+      at GameService.learnSkillBook (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\.test-build\core\game.js:211:21)
+      at TestContext.<anonymous> (C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tests\skill-books-service.test.cjs:158:24)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19) {
+    code: 'RULE'
+  }
+Domain or integration tests failed
+At C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tools\test-all.ps1:11 char:27
++   if($LASTEXITCODE -ne 0){throw 'Domain or integration tests failed'}
++                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Domain or integration tests failed:String) [], RuntimeException
+    + FullyQualifiedErrorId : Domain or integration tests failed

@@ -1,0 +1,36 @@
+{
+  "id": "yellow-7",
+  "name": "深渊御潮师",
+  "tier": 3,
+  "index": 37,
+  "base": 15,
+  "key": "boss-37",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 20232,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-15",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/f04621c7ae1fbafef332c3023d99b7d46a2aa7f8a414918bb4b33bc2c9748359_Ninja.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 20232,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.6
+}

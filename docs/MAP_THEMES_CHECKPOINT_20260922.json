@@ -1,0 +1,63 @@
+[
+  {
+    "path": "game/assets/scripts/core/coastStageGeometry.ts",
+    "bytes": 7865,
+    "sha256": "68E3E8067FE7E0AF5D6510B128A2F709106DAE74D26166CE4A0886D22BBFF4C0",
+    "lastWrite": "2026-09-21T23:09:42.2005810+08:00"
+  },
+  {
+    "path": "game/assets/scripts/core/chapterStageGeometry.ts",
+    "bytes": 27033,
+    "sha256": "AF15C36A4641071B3FEF11B6EF1867B0E902E72BB4587EB4E32CC7710A05C5E9",
+    "lastWrite": "2026-09-21T22:41:30.1598144+08:00"
+  },
+  {
+    "path": "game/assets/scripts/core/bambooStageGeometry.ts",
+    "bytes": 3537,
+    "sha256": "F906C804B4A0AA74ACE4E31098479748A4D3CEC98CEB408E081AA401BB9B2C8B",
+    "lastWrite": "2026-09-21T19:45:41.0135152+08:00"
+  },
+  {
+    "path": "game/assets/scripts/core/paintedMaps.ts",
+    "bytes": 7875,
+    "sha256": "191352B57D0E17DB63DCB10139E339A1051EB1AAF72A1E1722CE3CD2762B94F6",
+    "lastWrite": "2026-09-21T21:00:26.3809420+08:00"
+  },
+  {
+    "path": "game/assets/scripts/view/ArtV2Assets.ts",
+    "bytes": 27110,
+    "sha256": "381C9AA85CECD2313DC93CDCD11167004E7EDFAE30C9E00E634C0DB81738EB80",
+    "lastWrite": "2026-09-21T20:58:35.1303663+08:00"
+  },
+  {
+    "path": "game/tools/test-coast-registration.cjs",
+    "bytes": 3126,
+    "sha256": "2CB5575E17110F76D44465ACCD3D9457294914B466223AAF7917899BFB5E3CA8",
+    "lastWrite": "2026-09-21T21:51:28.8827778+08:00"
+  },
+  {
+    "path": "game/build/map-themes-20260920/index.html",
+    "bytes": 2167,
+    "sha256": "FE93C0A0C72410ABA6EFBEEA7B1AE53C7EAFBD49BFCD22ADD66B33C63B2F0737",
+    "lastWrite": "2026-09-21T23:15:00.4086852+08:00"
+  },
+  {
+    "path": "game/build/vfx-integrated-20260920/index.html",
+    "bytes": 2167,
+    "sha256": "FE93C0A0C72410ABA6EFBEEA7B1AE53C7EAFBD49BFCD22ADD66B33C63B2F0737",
+    "lastWrite": "2026-09-21T23:15:00.4086852+08:00"
+  },
+  {
+    "path": "docs/MAP_THEMES_CHECKPOINT_20260922.md",
+    "bytes": 1301,
+    "sha256": "966007A06A3CD891BFCF1A7AD8F134B0B5A997A76D3B9B5699C582D3238F114A",
+    "lastWrite": "2026-09-22T00:10:42.2988610+08:00"
+  },
+  {
+    "path": "game/assets/resources/art-modern/map-coast-stage-1.png..50.png",
+    "count": 50,
+    "bytes": 160076210.0,
+    "sha256": "per-file hashes omitted; source files and build hashes above",
+    "lastWrite": "2026-09-21T21:20:07.3451470+08:00"
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "role": "leaf",
+  "name": "阳光",
+  "reference": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\character-turnarounds-20260915\\04-yangguang-turnaround-v2.png",
+  "triangles": 82028,
+  "vertices": 42268,
+  "weightedVertices": 42268,
+  "bones": [
+    "root",
+    "hips",
+    "spine",
+    "chest",
+    "shell",
+    "neck",
+    "head",
+    "jaw",
+    "brow_L",
+    "lid_L",
+    "brow_R",
+    "lid_R",
+    "clavicle_L",
+    "upper_L",
+    "fore_L",
+    "hand_L",
+    "finger_L0",
+    "finger_L0_tip",
+    "finger_L1",
+    "finger_L1_tip",
+    "finger_L2",
+    "finger_L2_tip",
+    "thumb_L",
+    "thumb_L_tip",
+    "weapon",
+    "lantern",
+    "weapon_tip",
+    "clavicle_R",
+    "upper_R",
+    "fore_R",
+    "hand_R",
+    "finger_R0",
+    "finger_R0_tip",
+    "finger_R1",
+    "finger_R1_tip",
+    "finger_R2",
+    "finger_R2_tip",
+    "thumb_R",
+    "thumb_R_tip",
+    "cape",
+    "thigh_L",
+    "shin_L",
+    "foot_L",
+    "thigh_R",
+    "shin_R",
+    "foot_R",
+    "foot_ik_L",
+    "knee_pole_L",
+    "foot_ik_R",
+    "knee_pole_R"
+  ],
+  "materials": [
+    "skin",
+    "muzzle",
+    "belly",
+    "bellyEdge",
+    "mouth",
+    "white",
+    "iris",
+    "irisDark",
+    "pupil",
+    "rock",
+    "rockLight",
+    "edge",
+    "aqua",
+    "aquaLight",
+    "aquaDeep",
+    "gold",
+    "leather",
+    "wood",
+    "woodLight",
+    "jade",
+    "pine",
+    "newLeaf",
+    "leafMid",
+    "navy",
+    "robe",
+    "blue",
+    "orange",
+    "orangeLight",
+    "berry",
+    "straw",
+    "strawLight",
+    "bronze",
+    "fire",
+    "indigo",
+    "violet",
+    "rockCool",
+    "rockWarm",
+    "skinShade",
+    "leafVein",
+    "linen",
+    "blueDeep",
+    "goldLight",
+    "amber"
+  ],
+  "clips": {
+    "idle": 121,
+    "walk": 33,
+    "attack": 31,
+    "attack_alt": 35,
+    "attack_heavy": 43,
+    "skill": 91,
+    "skill_start": 19,
+    "skill_loop": 49,
+    "skill_end": 25,
+    "hit": 22,
+    "death": 49,
+    "arrive": 61,
+    "turn_left": 37,
+    "turn_right": 37
+  },
+  "events": {
+    "attack": [
+      {
+        "frame": 13,
+        "type": "release",
+        "socket": "weapon_tip"
+      }
+    ],
+    "attack_alt": [
+      {
+        "frame": 15,
+        "type": "release",
+        "socket": "weapon_tip"
+      }
+    ],
+    "attack_heavy": [
+      {
+        "frame": 18,
+        "type": "release",
+        "socket": "weapon_tip"
+      }
+    ],
+    "skill": [
+      {
+        "frame": 29,
+        "type": "cast",
+        "socket": "weapon_tip"
+      }
+    ],
+    "skill_start": [
+      {
+        "frame": 6,
+        "type": "cast",
+        "socket": "weapon_tip"
+      }
+    ],
+    "skill_loop": [
+      {
+        "frame": 16,
+        "type": "cast",
+        "socket": "weapon_tip"
+      }
+    ],
+    "skill_end": [
+      {
+        "frame": 8,
+        "type": "cast",
+        "socket": "weapon_tip"
+      }
+    ]
+  },
+  "status": "Restored pre-experiment candidate; not approved as commercial-final"
+}

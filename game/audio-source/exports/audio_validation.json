@@ -1,0 +1,60 @@
+{
+  "checks": [
+    "Standard MIDI parses with 7 instrument tracks, 1125 paired notes, and no hanging notes",
+    "24-bit stereo master decodes to exactly 80 seconds, has no clipping and targets -19 LUFS",
+    "Seven audible aligned 24-bit stems reconstruct the master within -105 dBFS residual",
+    "Ogg round-trip preserves exact duration, true-peak headroom, loudness and a smooth numerical loop seam",
+    "All four 20-second sections contain signal without accidental silent sections",
+    "Six stereo effect files decode, contain non-silent finite signal, have no clipping and end at silence",
+    "SHA-256 matches the actual current runtime assets; no duplicate home music resource basename"
+  ],
+  "pending": [
+    "human listening",
+    "Cocos playback integration",
+    "mobile speaker/headphone review"
+  ],
+  "midi": {
+    "tracks": 8,
+    "ticks_per_beat": 480,
+    "note_ons": 1125,
+    "all_tracks_end_at_128_beats": true
+  },
+  "stems": {
+    "01_wood_melody.wav": {
+      "rms_dbfs": -23.8285191630518,
+      "sample_frames": 3528000
+    },
+    "02_nylon_chords.wav": {
+      "rms_dbfs": -32.73146388055992,
+      "sample_frames": 3528000
+    },
+    "03_string_answers.wav": {
+      "rms_dbfs": -44.91349684240188,
+      "sample_frames": 3528000
+    },
+    "04_round_bass.wav": {
+      "rms_dbfs": -26.207806532102094,
+      "sample_frames": 3528000
+    },
+    "05_air_response.wav": {
+      "rms_dbfs": -32.97669134625891,
+      "sample_frames": 3528000
+    },
+    "06_shell_sparkles.wav": {
+      "rms_dbfs": -49.90584341173732,
+      "sample_frames": 3528000
+    },
+    "07_soft_percussion.wav": {
+      "rms_dbfs": -42.608057520721374,
+      "sample_frames": 3528000
+    }
+  },
+  "stem_sum_residual_dbfs": -130.63689652649887,
+  "section_rms_dbfs": [
+    -20.756947844505362,
+    -21.322963886217888,
+    -21.639511226042917,
+    -20.831064152130576
+  ],
+  "status": "offline checks passed; listening and in-engine acceptance still pending"
+}

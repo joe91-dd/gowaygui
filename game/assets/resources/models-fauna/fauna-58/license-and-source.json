@@ -1,0 +1,43 @@
+{
+  "key": "fauna-58",
+  "name": "无首刽子手",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Skeleton Headless",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\skeleton-headless-6f4cb4\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/89f1f2fe6467c76c8f4bd758d941d0f8d095a463d736a59576eda2790a92675d_Skeleton Headless.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "c129d4dc299c5ba5703524324977e0424e1137072a7b1ffbafd80c045b874ec2",
+  "bytes": 1637688,
+  "animations": 14,
+  "displayName": "无首刽子手",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 80452,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-58",
+  "triangles": 14504,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 9.3
+}

@@ -1,0 +1,147 @@
+{
+  "version": "armored-crab-candidate-01",
+  "promoted_at_utc": "2026-09-08T07:58:27.600902+00:00",
+  "status": "approved-runtime-candidate-not-final-art; first Cocos import/build/runtime review pending",
+  "authorization": "Parent actually reviewed front, three-quarter, battle overview and runner scale comparison; approved frozen c01 with no further shape changes.",
+  "enemy_kind": "armored",
+  "display_name": "铁壳蟹",
+  "runtime_directory": "game/assets/resources/models/enemies/armored-crab",
+  "runtime_directory_created_by_this_run": true,
+  "runtime_sha256": "837caade510dd003847a05a4dfe7ee4551235b75026354338defc0523e409474",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/armored-crab/armored-colour.png",
+      "source_path": "game/art-source/enemies/armored-crab/candidate-01/export/armored-colour.png",
+      "bytes": 64886,
+      "sha256": "36faabdfab94e6e227f5ba8038ee7c51d85f59c9663c66c9c83758359191538d",
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/armored-crab/armored-roughness.png",
+      "source_path": "game/art-source/enemies/armored-crab/candidate-01/export/armored-roughness.png",
+      "bytes": 6039,
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/armored-crab/armored-crab.fbx",
+      "source_path": "game/art-source/enemies/armored-crab/candidate-01/export/armored-crab.fbx",
+      "bytes": 1013164,
+      "sha256": "837caade510dd003847a05a4dfe7ee4551235b75026354338defc0523e409474",
+      "created_by_this_run": true
+    }
+  ],
+  "copied_frozen_bytes": true,
+  "meta_created_by_this_script": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started": false,
+  "embedded_pngs": {
+    "armored-colour.png": {
+      "sha256": "36faabdfab94e6e227f5ba8038ee7c51d85f59c9663c66c9c83758359191538d",
+      "exact_png_byte_offset": 318488,
+      "bytes": 64886
+    },
+    "armored-roughness.png": {
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "exact_png_byte_offset": 384017,
+      "bytes": 6039
+    }
+  },
+  "source_hashes": {
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab-review-scene.blend": "ff4ca1a3d7edd6da69ae9c32e802a5166c5926fa3e80adfc559c744f09b7776d",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.glb": "ab6b5d64e817bec6e585b2cb240e58d5a3a6fc01e4573b67ff0ad812ce2f42fd",
+    "game/art-source/enemies/armored-crab/candidate-01/model-stats.json": "d3e38ab4f03d429703dd9d86361cb482109d70aa3a97905dd384f44e40caab1c",
+    "game/art-source/enemies/armored-crab/candidate-01/round-trip-check.json": "ee53dfdfa7e79a4c7b365ae49db02f6b7c2fcb37f4b94b27d6680fa1e98f1db4",
+    "game/art-source/enemies/armored-crab/candidate-01/source-check.json": "f049e8c9fdda70917b6533d2e228d7983c1578a3b10610a81e41a73245539437"
+  },
+  "geometry": {
+    "triangles": 13340,
+    "vertices": 6746,
+    "meshes": 1,
+    "materials": 1,
+    "bones": 16
+  },
+  "clips": {
+    "idle": {
+      "expected_cocos_take": "ArmoredCrab_Rig|idle",
+      "seconds": 2.4,
+      "loop": true
+    },
+    "walk": {
+      "expected_cocos_take": "ArmoredCrab_Rig|walk",
+      "seconds": 0.8,
+      "loop": true
+    },
+    "attack": {
+      "expected_cocos_take": "ArmoredCrab_Rig|attack",
+      "seconds": 1.1,
+      "loop": false
+    },
+    "hit": {
+      "expected_cocos_take": "ArmoredCrab_Rig|hit",
+      "seconds": 0.5,
+      "loop": false
+    },
+    "exit": {
+      "expected_cocos_take": "ArmoredCrab_Rig|exit",
+      "seconds": 0.9,
+      "loop": false
+    }
+  },
+  "coordinate_handoff": {
+    "source": "Blender Z up / -Y forward",
+    "fbx_export": "axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z; confirm first actual import",
+    "foot_origin_y": 0,
+    "road_root_y": 0.064,
+    "recommended_model_uniform_scale": 0.9,
+    "dimensions_at_scale": [
+      1.2230565190315248,
+      0.7350436627864838,
+      0.6245069324970246
+    ],
+    "standing_action_peak_height_at_scale": 0.6326069355010987,
+    "recommended_health_bar_y_on_unscaled_actor": 0.79,
+    "root_motion": false
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/armored-crab/armored-crab/armored-crab",
+    "path_status": "Expected from existing enemy FBX importer structure; confirm generated metadata during first build",
+    "material_name_prefix": "ArmoredCrab_Toy_Atlas",
+    "colour_image_prefix": "ArmoredCrab_Colour_",
+    "roughness_image_prefix": "ArmoredCrab_Roughness_",
+    "colour": "sRGB mainTexture; preserve original atlas",
+    "roughness": "linear gray; imported shininessExponentMap -> native Standard pbrMap G",
+    "roughness_gray_u8": [
+      97,
+      115
+    ],
+    "roughness_alpha_u8": 255,
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "integration_notes": [
+    "Authored exit lasts .9 seconds; retain actor until it ends and do not compound placeholder shrink.",
+    "Material adapter needs explicit ArmoredCrab_Toy_Atlas acceptance; no view files changed here.",
+    "No manual meta or importer UUID; actual Cocos animation, light and performance review remains pending.",
+    "Original asset-manifest/REVIEW describe the historical isolated candidate before this authorized promotion."
+  ],
+  "rollback": "Remove only the three runtime_files after verifying their hashes still match this manifest; source candidate and editable files remain intact. Do not delete later importer metadata without inspecting it."
+}

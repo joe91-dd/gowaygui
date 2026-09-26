@@ -1,0 +1,240 @@
+{
+  "status": "Isolated candidate, not runtime or final aesthetic acceptance",
+  "species": "spike",
+  "display_name": "刺刺龟",
+  "character": "Boyish confident amber-shell turtle",
+  "source_foundation": "game\\art-source\\spike-turtle\\candidate-01\\inputs\\authored-c12b-foundation.blend",
+  "foundation_sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+  "protected_inputs": {
+    "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game\\art-source\\build_stone_turtle_candidate12b.py": "fbb4bd93d952fe560e1fee48b95dbfc37e15f589405ee7e5a12764511482a7cc",
+    "game\\art-source\\stone_turtle_atlas.py": "33d84bcec6dc394ff63c0c1986b6837e41d03c26c68338838a0a386c87215f85",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png.meta": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png.meta": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx.meta": "68169c8b0e7a6b62e353e8c89f6fe09aafe8a04ac6302aed74185d84dfc6c54a"
+  },
+  "proportions": {
+    "head": {
+      "min": [
+        -0.6048617959022522,
+        -1.7167847156524658,
+        0.2567983567714691
+      ],
+      "max": [
+        0.6048617959022522,
+        -0.9013653993606567,
+        1.0318305492401123
+      ],
+      "dimensions": [
+        1.2097235918045044,
+        0.8154193162918091,
+        0.7750321924686432
+      ]
+    },
+    "shell_main": {
+      "min": [
+        -1.0770235061645508,
+        -1.1836804151535034,
+        0.4634611904621124
+      ],
+      "max": [
+        1.0770235061645508,
+        1.1836804151535034,
+        1.5311866998672485
+      ],
+      "dimensions": [
+        2.1540470123291016,
+        2.367360830307007,
+        1.067725509405136
+      ]
+    },
+    "whole": {
+      "min": [
+        -1.1950699090957642,
+        -1.7167847156524658,
+        0.0005976539687253535
+      ],
+      "max": [
+        1.220912218093872,
+        1.273627758026123,
+        1.7559043169021606
+      ],
+      "dimensions": [
+        2.4159821271896362,
+        2.990412473678589,
+        1.7553066629334353
+      ]
+    },
+    "head_to_main_shell": 0.5616050090273885
+  },
+  "source_parts": 108,
+  "large_spikes": 9,
+  "scutes": 19,
+  "perimeter_scutes": 15,
+  "triangles": 28206,
+  "vertices": 14707,
+  "bones": 10,
+  "materials": 1,
+  "clips": {
+    "idle": {
+      "last_frame": 72,
+      "seconds": 2.3666666666666667
+    },
+    "attack": {
+      "last_frame": 27,
+      "seconds": 0.8666666666666667
+    },
+    "skill": {
+      "last_frame": 42,
+      "seconds": 1.3666666666666667
+    },
+    "hit": {
+      "last_frame": 18,
+      "seconds": 0.5666666666666667
+    },
+    "rest": {
+      "last_frame": 72,
+      "seconds": 2.3666666666666667
+    },
+    "fusion": {
+      "last_frame": 60,
+      "seconds": 1.9666666666666666
+    }
+  },
+  "atlas_parameters": {
+    "size": 1024,
+    "tile_grid": [
+      4,
+      4
+    ],
+    "noise_seed": 54123,
+    "palette": [
+      [
+        0.59,
+        0.257,
+        0.043
+      ],
+      [
+        0.86,
+        0.443,
+        0.073
+      ],
+      [
+        0.72,
+        0.315,
+        0.045
+      ],
+      [
+        0.95,
+        0.602,
+        0.147
+      ],
+      [
+        0.37,
+        0.375,
+        0.117
+      ],
+      [
+        0.56,
+        0.55,
+        0.208
+      ],
+      [
+        0.85,
+        0.577,
+        0.182
+      ],
+      [
+        0.65,
+        0.442,
+        0.11
+      ],
+      [
+        0.215,
+        0.104,
+        0.02
+      ],
+      [
+        0.96,
+        0.918,
+        0.734
+      ],
+      [
+        0.22,
+        0.18,
+        0.055
+      ],
+      [
+        0.03,
+        0.023,
+        0.013
+      ],
+      [
+        0.91,
+        0.748,
+        0.303
+      ],
+      [
+        0.44,
+        0.445,
+        0.139
+      ],
+      [
+        0.96,
+        0.88,
+        0.557
+      ],
+      [
+        0.34,
+        0.133,
+        0.025
+      ]
+    ],
+    "iris_colour": [
+      0.38,
+      0.207,
+      0.05
+    ],
+    "iris_uv_center": [
+      0.5,
+      0.49
+    ],
+    "iris_uv_radii": [
+      0.415,
+      0.411
+    ],
+    "pupil_uv_radii": [
+      0.302,
+      0.314
+    ],
+    "raster_inputs": [],
+    "provenance": "Local numeric pigment/grain generator; eye UV equations reused from self-authored stone_turtle_atlas.py."
+  },
+  "fbx_sha256": "1c49efb9808b61afcc10a1e40608d17d3c01efbbbe5b2d2f8d35f8bffe4c841c",
+  "source_blend_sha256": "7e3e71d688c77af847fa82b8213818d8a31969d956072b0652127559e0b67c33",
+  "atlas_sha256": {
+    "spike-colour.png": "0d1383d6f86b7c960d52e5bb02a2356c18f397a937f8719ae426fe65d08df2a1",
+    "spike-roughness.png": "7a0e8e0ecd648146c9a7b47c02f665d08a65fe9461159c05f74a6253a8fc6ea1"
+  },
+  "threads": 2,
+  "render_size": [
+    800,
+    680
+  ],
+  "samples": 32,
+  "forward_blender": "-Y",
+  "up_blender": "+Z",
+  "fbx_export_forward": "-Z",
+  "fbx_export_up": "+Y",
+  "cocos_expected_forward": "+Z",
+  "battle_scale": 0.65,
+  "ground_y_cocos": 0,
+  "notes": [
+    "No projectile geometry; view code owns future spike projectiles.",
+    "Source rig name changes but all ten deform bone names are retained.",
+    "No runtime or view files written."
+  ]
+}

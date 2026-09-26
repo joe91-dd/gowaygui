@@ -1,0 +1,131 @@
+/** Original authored SVG geometry. No image input, tracing, or raster processing. */
+const fs = require('node:fs');
+const path = require('node:path');
+const out = __dirname;
+const force = process.argv.includes('--force');
+const palette = {
+  ivory: ['#fff3d7', '#e8cda0', '#b79667'],
+  gold: ['#ffe291', '#efb348', '#b9742e'],
+  teal: ['#91d5c4', '#3d9d99', '#255e62'],
+  attack: ['#ffd086', '#e5a24b', '#ad6d34'],
+  health: ['#f7b6a9', '#df7d73', '#a95753'],
+  defense: ['#a1d9e3', '#58afc4', '#397887'],
+  growth: ['#d4df97', '#92b65e', '#587c43'],
+  ink: '#625747',
+};
+const icons = [
+  ['gold', '金币', '唯一货币，原创龟壳浮雕金币'],
+  ['stamina', '体力', '青绿闪电形体力资源'],
+  ['attack-medicine', '攻击药', '带剑符号的橙色药瓶'],
+  ['health-medicine', '生命药', '带心形符号的珊瑚色药瓶'],
+  ['defense-medicine', '防御药', '带盾符号的蓝色药瓶'],
+  ['growth-medicine', '成长药', '带嫩芽符号的绿色药瓶'],
+  ['collection-lock', '收藏锁', '带龟壳分片装饰的闭合锁'],
+  ['growth-history', '成长历史', '带回转箭头与龟壳印记的历史册'],
+];
+function grad(id, colors, x2='80%', y2='100%') {
+  return `<linearGradient id="${id}" x1="15%" y1="0%" x2="${x2}" y2="${y2}"><stop stop-color="${colors[0]}"/><stop offset=".52" stop-color="${colors[1]}"/><stop offset="1" stop-color="${colors[2]}"/></linearGradient>`;
+}
+function defs(id) {
+  return `<defs>${Object.entries(palette).filter(([,v])=>Array.isArray(v)).map(([k,v])=>grad(id+'-'+k,v)).join('')}${grad(id+'-dark-gold',['#d9a356','#b9772b','#815327'])}${grad(id+'-deep-teal',['#438f89','#2b726f','#204f56'])}<radialGradient id="${id}-soft-glow" cx="28%" cy="20%" r="75%"><stop stop-color="#fff9e9" stop-opacity=".65"/><stop offset=".65" stop-color="#fff9e9" stop-opacity="0"/></radialGradient></defs>`;
+}
+function art(id) {
+  const f = k => `url(#${id}-${k})`;
+  const line = 'stroke-linejoin="round" stroke-linecap="round"';
+  if (id === 'gold') return `
+  <g ${line}>
+    <ellipse cx="138" cy="132" rx="87" ry="92" fill="${f('dark-gold')}" stroke="#866037" stroke-width="6"/>
+    <path d="M195 67l12 4m-4 16 13 4m-8 16 13 3m-10 18 13 2m-15 18 13 1m-17 18 12-1m-19 18 12-3m-23 18 11-4" fill="none" stroke="#edbe6a" stroke-width="4"/>
+    <ellipse cx="117" cy="119" rx="86" ry="91" fill="${f('gold')}" stroke="#956934" stroke-width="6"/>
+    <ellipse cx="117" cy="119" rx="75" ry="80" fill="none" stroke="#fff0b5" stroke-width="5"/>
+    <ellipse cx="117" cy="119" rx="68" ry="73" fill="#c58a37" fill-opacity=".35" stroke="#cf943c" stroke-width="3"/>
+    <path d="M58 86q15-35 49-43" fill="none" stroke="#fff7d0" stroke-width="6"/>
+    <g transform="rotate(-9 117 122)">
+      <path d="M107 83c-8-4-8-17-1-23 6-6 16-5 20 1 5 7 3 18-4 22" fill="${f('ivory')}" stroke="#a67637" stroke-width="4"/>
+      <path d="M83 103c-11-8-26-5-28 5-2 8 11 15 24 16m73-21c11-9 24-6 27 4 2 8-8 16-24 19M85 152c-11 0-25 7-23 16 2 9 16 9 28-1m58-14c13 0 24 7 22 16-2 9-15 8-24-1" fill="${f('ivory')}" stroke="#a67637" stroke-width="4"/>
+      <path d="M112 173l5 12 8-12" fill="${f('ivory')}" stroke="#a67637" stroke-width="3"/>
+      <path d="M116 78c-26 0-43 21-43 49s17 47 43 47 45-19 45-47-20-49-45-49z" fill="${f('ivory')}" stroke="#a67637" stroke-width="4"/>
+      <path d="M112 101l21 5 10 20-12 22-25 1-13-21z" fill="${f('gold')}" stroke="#ac803f" stroke-width="3"/>
+      <path d="M113 101l1-20m19 25 16-12m-6 32 15 3m-27 19 5 18m-30-17-13 16m0-37-17-3m36-24-16-14" fill="none" stroke="#ac803f" stroke-width="3"/>
+      <path d="M94 98q8-11 19-11" fill="none" stroke="#fff7d9" stroke-width="4"/>
+    </g>
+  </g>`;
+  if (id === 'stamina') return `
+  <g ${line}>
+    <path d="M156 34q5-4 10 0l12 8q3 3 0 8l-37 63h43q10 0 5 9l-78 99q-4 5-9 1l-11-8q-4-3-1-9l27-62H80q-6 0-9-5l-5-9q-2-5 2-10z" fill="${f('deep-teal')}" stroke="#335e5c" stroke-width="6"/>
+    <path d="M153 30q7-4 4 4l-43 74h57q8 0 2 7l-79 99q-5 6-3-3l30-79H76q-7 0-2-7z" fill="${f('ivory')}" stroke="#897953" stroke-width="6"/>
+    <path d="M139 55l-35 61h48l-45 58 18-48H92z" fill="${f('teal')}" stroke="#3f8582" stroke-width="4"/>
+    <path d="M139 55l-35 61h20" fill="none" stroke="#caf1d9" stroke-width="4"/>
+    <path d="M86 122l50-63" fill="none" stroke="#fff7df" stroke-width="3"/>
+    <path d="M115 137l-12 35" fill="none" stroke="#347975" stroke-width="3"/>
+  </g>`;
+  if (id.endsWith('-medicine')) {
+    const kind = id.split('-')[0];
+    const edge = palette[kind][2];
+    let symbol;
+    if (kind === 'attack') symbol = `<path d="M112 164l39-43 14-3-2 15-40 40z" fill="${f('ivory')}" stroke="#856740" stroke-width="4"/><path d="M111 157l22 22m-15-12-18 19m-5-5 10 10" fill="none" stroke="#856740" stroke-width="12"/><path d="M111 157l22 22m-15-12-18 19m-5-5 10 10" fill="none" stroke="#f3dfb6" stroke-width="6"/><path d="M123 157l28-29" fill="none" stroke="#fff8de" stroke-width="3"/>`;
+    if (kind === 'health') symbol = `<path d="M128 143c-13-24-45-15-43 8 1 20 25 35 43 49 18-14 42-29 43-49 2-23-30-32-43-8z" fill="${f('ivory')}" stroke="#9a6951" stroke-width="4"/><path d="M96 151c-1-10 7-15 16-12" fill="none" stroke="#fff8e3" stroke-width="4"/>`;
+    if (kind === 'defense') symbol = `<path d="M128 124c-12 9-26 14-42 17 1 32 10 48 42 61 32-13 41-29 42-61-16-3-30-8-42-17z" fill="${f('ivory')}" stroke="#807457" stroke-width="4"/><path d="M128 137c-9 6-19 10-29 12 1 20 8 34 29 44 21-10 28-24 29-44-10-2-20-6-29-12z" fill="#d2b880" stroke="#b19b68" stroke-width="3"/><path d="M128 139v49c-17-9-24-20-25-36 10-3 17-7 25-13z" fill="#f7e6bd"/>`;
+    if (kind === 'growth') symbol = `<path d="M127 194v-31" fill="none" stroke="#6d7446" stroke-width="12"/><path d="M127 194v-31" fill="none" stroke="#f1e5b5" stroke-width="6"/><path d="M127 174c-24 0-37-20-37-40 24 1 38 13 37 40z" fill="${f('ivory')}" stroke="#79804b" stroke-width="4"/><path d="M128 164c-1-23 14-38 40-41-1 25-15 42-40 41z" fill="${f('ivory')}" stroke="#79804b" stroke-width="4"/><path d="M102 147l19 21m13-12 21-20" fill="none" stroke="#d5c58d" stroke-width="3"/>`;
+    return `
+    <g ${line}>
+      <path d="M92 82c0 25-23 28-34 48-10 19-8 49-1 69 7 20 33 29 71 29s64-9 71-29c7-20 9-50-1-69-11-20-34-23-34-48z" fill="${f(kind)}" stroke="${edge}" stroke-width="6"/>
+      <path d="M63 192c4 18 31 28 65 28s61-10 65-28l-3 18c-14 13-39 18-62 18s-48-5-62-18z" fill="${f('ivory')}" stroke="${edge}" stroke-width="3"/>
+      <path d="M98 91c-1 20-21 26-31 41-6 10-9 30-6 41" fill="none" stroke="#fff6d8" stroke-opacity=".55" stroke-width="6"/>
+      <path d="M167 109c19 19 26 41 20 71" fill="none" stroke="${edge}" stroke-opacity=".3" stroke-width="5"/>
+      <path d="M100 122c17-7 40-8 58 0" fill="none" stroke="#fff8df" stroke-opacity=".25" stroke-width="5"/>
+      ${symbol}
+      <path d="M89 76h78v16c-19 8-59 8-78 0z" fill="${f('ivory')}" stroke="#987a52" stroke-width="5"/>
+      <path d="M88 88q40 15 80 0" fill="none" stroke="#a77e47" stroke-width="8"/>
+      <path d="M89 86q40 13 78 0" fill="none" stroke="#ead0a0" stroke-width="4"/>
+      <path d="M102 88l7 7m7-5 7 7m7-6 7 6m7-8 7 5" fill="none" stroke="#b38a51" stroke-width="3"/>
+      <path d="M88 59q40-12 80 0v16q-40 13-80 0z" fill="${f(kind)}" stroke="${edge}" stroke-width="5"/>
+      <path d="M90 62q38 11 76 0" fill="none" stroke="#f7edcf" stroke-opacity=".9" stroke-width="4"/>
+      <path d="M96 36q31-13 64 0l-3 21q-28 12-58 0z" fill="${f('ivory')}" stroke="#9b815b" stroke-width="5"/>
+      <path d="M98 36q29-11 60 0" fill="none" stroke="#fff7dd" stroke-width="5"/>
+      <path d="M108 58q21 7 42 0" fill="none" stroke="#bb9966" stroke-width="3"/>
+    </g>`;
+  }
+  if (id === 'collection-lock') return `
+  <g ${line}>
+    <path d="M77 121V86c0-34 19-57 51-57s51 23 51 57v35h-24V85c0-20-9-33-27-33s-27 13-27 33v36z" fill="${f('ivory')}" stroke="#887958" stroke-width="6"/>
+    <path d="M87 103V85c0-27 15-46 38-47" fill="none" stroke="#fff7df" stroke-width="5"/>
+    <path d="M157 79v34" fill="none" stroke="#b69a6a" stroke-width="4"/>
+    <path d="M70 114q58-17 116 0 13 4 13 19v63q0 21-20 26-48 11-96 0-21-4-21-26v-62q0-14 8-20z" fill="${f('deep-teal')}" stroke="#365e5a" stroke-width="6"/>
+    <path d="M66 121q59-20 114-1 9 4 9 16v59q0 15-14 20-49 12-96-1-14-4-14-19v-63q0-6 1-11z" fill="${f('teal')}" stroke="#48776a" stroke-width="4"/>
+    <path d="M81 125l18 21m-24 31 20 3m11 35 7-17m49-72-15 20m38 28-24 6m-13 33-9-16" fill="none" stroke="#4c8f7d" stroke-width="4"/>
+    <path d="M79 138v49" fill="none" stroke="#cae6c6" stroke-opacity=".8" stroke-width="5"/>
+    <path d="M130 140c-14 0-23 10-23 21 0 8 4 13 10 17l-6 20h37l-7-20c7-4 11-9 11-17 0-11-9-21-22-21z" fill="${f('ivory')}" stroke="#9c8150" stroke-width="4"/>
+    <path d="M130 151c-7 0-12 5-12 11 0 6 4 10 9 12l-5 15h15l-5-15c6-2 10-6 10-12 0-6-5-11-12-11z" fill="#345e59"/>
+    <path d="M113 150q6-10 16-10" fill="none" stroke="#fff6d7" stroke-width="3"/>
+  </g>`;
+  if (id === 'growth-history') return `
+  <g ${line}>
+    <path d="M63 44q-19 4-19 27v132q0 23 28 25h124q17 0 17-17V53q0-15-15-15z" fill="${f('deep-teal')}" stroke="#3c6158" stroke-width="6"/>
+    <path d="M61 197h135v25H72q-20-1-20-12 0-9 9-13z" fill="${f('ivory')}" stroke="#9d8964" stroke-width="4"/>
+    <path d="M69 207h123m-119 8h116" fill="none" stroke="#c8b590" stroke-width="3"/>
+    <path d="M67 29h127q15 0 15 16v142q0 16-16 16H65q-17 0-17-14V48q0-17 19-19z" fill="${f('teal')}" stroke="#46685a" stroke-width="6"/>
+    <path d="M66 34v163q-14 0-14-13V51q0-15 14-17z" fill="${f('deep-teal')}"/>
+    <path d="M78 43h112q6 0 6 9v132" fill="none" stroke="#c7e5c3" stroke-opacity=".8" stroke-width="4"/>
+    <path d="M90 56h81q13 0 13 12v104q0 13-13 13H89q-12 0-12-12V68q0-12 13-12z" fill="${f('ivory')}" stroke="#927b53" stroke-width="4"/>
+    <path d="M88 70v95" fill="none" stroke="#fff7dc" stroke-width="4"/>
+    <path d="M157 102c-5-16-25-22-38-12-16 11-14 34 4 42" fill="none" stroke="#a57638" stroke-width="12"/>
+    <path d="M157 100c-5-16-25-22-38-12-16 11-14 34 4 42" fill="none" stroke="#e4b564" stroke-width="7"/>
+    <path d="M144 102l15 13 12-17" fill="${f('gold')}" stroke="#a57638" stroke-width="4"/>
+    <path d="M121 154c-8-4-14-1-14 4s8 7 14 4m26-8c8-4 13-1 13 4s-7 7-13 4m-24 9-7 5m28-5 7 5" fill="none" stroke="#5f9381" stroke-width="5"/>
+    <path d="M134 138v-3" fill="none" stroke="#5f9381" stroke-width="8"/>
+    <ellipse cx="134" cy="158" rx="17" ry="20" fill="#79a78b" stroke="#547f6a" stroke-width="3"/>
+    <path d="M134 145l10 8-4 13h-13l-4-13z" fill="#e8d6a9" stroke="#547f6a" stroke-width="2"/>
+    <path d="M171 202v26l-11-8-11 8v-26" fill="#d3906f" stroke="#8e644d" stroke-width="4"/>
+    <path d="M58 70h10m-10 94h10" fill="none" stroke="#e5c887" stroke-width="7"/>
+  </g>`;
+  throw new Error(id);
+}
+for (const [id,title,description] of icons) {
+  const target = path.join(out,id+'.svg');
+  if (fs.existsSync(target) && !force) throw new Error(`${target} exists; pass --force only to intentionally regenerate authored sources.`);
+  fs.writeFileSync(target,`<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="${id}-title ${id}-desc">\n<title id="${id}-title">${title}</title><desc id="${id}-desc">${description}；从零绘制的哥喂龟原创矢量图标，左上柔光。</desc>\n${defs(id)}\n${art(id)}\n</svg>\n`);
+}
+fs.writeFileSync(path.join(out,'palette.json'),JSON.stringify(palette,null,2)+'\n');
+fs.writeFileSync(path.join(out,'icon-list.json'),JSON.stringify(icons.map(([id,label,description])=>({id,label,description})),null,2)+'\n');
+console.log(`Authored ${icons.length} SVG files in ${out}`);

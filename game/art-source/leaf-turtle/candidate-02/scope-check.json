@@ -1,0 +1,23 @@
+{
+  "scope_check_passed": true,
+  "non_leaf_mesh_uv_weights_identical_count": 68,
+  "four_white_blossom_mesh_parts_identical": true,
+  "face_construction_unchanged": true,
+  "body_and_eye_geometry_unchanged": true,
+  "six_action_source_unchanged": true,
+  "lighting_and_three_cameras_unchanged": true,
+  "non_leaf_palette_tiles_unchanged": true,
+  "source_normalized_weights": true,
+  "source_bones": 10,
+  "source_clips": 6,
+  "source_packed_textures": 2,
+  "protected_c01_and_frozen_runtime_payloads_unchanged": true,
+  "full_fbx_reimport_or_half_frame_qa_performed": false,
+  "runtime_written": false,
+  "cocos_started": false,
+  "review_image_sha256": {
+    "render-front.png": "4d2f451faf5c7d9aed92cbe9cfbb7f973bc393ca1656fcd5d305a7f13c9f9151",
+    "render-side.png": "3684cad9c44fc8e237469fddcb9ade040dd17291b0a7584fe9820905ca2e607b",
+    "render-three-quarter.png": "0c671330d80da9c144b33ce44f5336ad733520799d2a4d7d7ac785fd9672387d"
+  }
+}

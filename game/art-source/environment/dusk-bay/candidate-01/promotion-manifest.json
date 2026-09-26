@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "promotedAtUtc": "2026-09-08T09:20:33.065044+00:00",
+  "status": "runtime-candidate-frozen-pending-cocos-review",
+  "levelId": 3,
+  "levelName": "薄暮海湾",
+  "authorization": "Root actually reviewed final battle overview and approved the current layout/soft dusk palette for runtime candidacy; author reconfirmed final top-down/detail images and all post-fix provenance hashes before this promotion.",
+  "sourceProvenanceSha256": "e50c9b08a37e3ba871aca125c32feffc33a0f8007568952b1250e3251fdd653b",
+  "manualReviewSha256": "afc31b2dc5847a93e2db765a2ef8df51b014825625e10490dc4bbfb38e2e5574",
+  "finalRenderSha256": {
+    "render-battle-overview.png": "2ea39acc34c98d5396179f8d73d6c33b6bccd780537fe9d60c068a183e0acbe3",
+    "render-top-down.png": "2b9bf591f20e08bfdd173c2b973e89b89a657322e5746bb3278e92083e0d47f4",
+    "render-dusk-beacon-detail.png": "c186f88477ca3ec820a5c00a3c4e7c2866e9ac72ae450bded22a0cef6773de95",
+    "layout-review.png": "75f33ef87f6f2eef91f13f472e46b91cc57903e547b71f6e18f77a1475dabe63"
+  },
+  "provenanceRecordsVerified": 33,
+  "expectedResourcesPrefabPath": "environment/dusk-bay/dusk-bay/dusk-bay",
+  "resourcesTexturePaths": [
+    "environment/dusk-bay/island-colour/texture",
+    "environment/dusk-bay/island-roughness/texture"
+  ],
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "route": [
+    {
+      "x": -9.0,
+      "z": -1.0
+    },
+    {
+      "x": -5.0,
+      "z": 0.0
+    },
+    {
+      "x": -2.0,
+      "z": -2.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 4.0,
+      "z": 0.0
+    },
+    {
+      "x": 7.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 1.0
+    }
+  ],
+  "stationCoordinates": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "z": -1.0
+    }
+  ],
+  "routeChanged": false,
+  "stationCoordinatesChanged": false,
+  "files": [
+    {
+      "source": "game/art-source/environment/dusk-bay/candidate-01/dusk-bay.fbx",
+      "destination": "game/assets/resources/environment/dusk-bay/dusk-bay.fbx",
+      "bytes": 4565068,
+      "sha256": "55ffe57152c8de18146b1bcb94550ff515b6a4c720e5da2f77c9fa4e3e606675"
+    },
+    {
+      "source": "game/art-source/environment/dusk-bay/candidate-01/island-colour.png",
+      "destination": "game/assets/resources/environment/dusk-bay/island-colour.png",
+      "bytes": 2744112,
+      "sha256": "2c037afed3c8b55cda27d4eaa678772282f6327eeef555ad152e90672bda8e7a"
+    },
+    {
+      "source": "game/art-source/environment/dusk-bay/candidate-01/island-roughness.png",
+      "destination": "game/assets/resources/environment/dusk-bay/island-roughness.png",
+      "bytes": 39919,
+      "sha256": "2447da099d262a3afdbf84673ea4d3b66101d31071d00fa7b27abcd75116a480"
+    }
+  ],
+  "metasOrUuidsAuthored": false,
+  "cocosLaunched": false,
+  "coreOrViewModified": false,
+  "pending": [
+    "Root loader wiring and actual Cocos import",
+    "Real dusk lighting/material/culling and mobile viewport",
+    "Character contact/animation and performance acceptance"
+  ]
+}

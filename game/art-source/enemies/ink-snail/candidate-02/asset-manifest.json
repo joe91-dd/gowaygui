@@ -1,0 +1,149 @@
+{
+  "version": "ink-snail-candidate-02",
+  "status": "source-review-candidate-not-promoted-not-final-art",
+  "recorded_at_utc": "2026-09-08T09:19:29.085572+00:00",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_threads": 2,
+  "max_samples": 24,
+  "blender_processes_exited": true,
+  "images_actually_viewed": [
+    "render-side.png",
+    "render-three-quarter.png"
+  ],
+  "changed_meshes": [
+    "Raised_spiral_L",
+    "Raised_spiral_R",
+    "Thick_rolled_shell_lip_L",
+    "Thick_rolled_shell_lip_R"
+  ],
+  "unchanged_meshes": [
+    "Continuous_gliding_soft_foot",
+    "Round_snail_head",
+    "Short_eye_stem_L",
+    "Short_eye_stem_R",
+    "Short_recessed_ink_spout",
+    "Soft_cream_sole_edge",
+    "Soft_watchful_lid_L",
+    "Soft_watchful_lid_R",
+    "Spherical_painted_eye_L",
+    "Spherical_painted_eye_R",
+    "Thick_ochre_shell"
+  ],
+  "c01_preserved": true,
+  "bones_and_authored_actions_identical": true,
+  "texture_pngs_identical": true,
+  "triangles": 13956,
+  "vertices": 7004,
+  "mesh_count": 1,
+  "material_count": 1,
+  "bone_count": 9,
+  "half_frame_samples": 419,
+  "embedded_pngs": {
+    "snail-colour.png": {
+      "sha256": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019",
+      "exact_png_byte_offset": 328012,
+      "bytes": 94254
+    },
+    "snail-roughness.png": {
+      "sha256": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7",
+      "exact_png_byte_offset": 422885,
+      "bytes": 6031
+    }
+  },
+  "generator": "game/art-source/enemies/build_ink_snail_candidate02.py",
+  "generator_sha256": "3f5630a7accb239f6370a2bd5d2359f182f372aff302c2b2f06aca318b27635e",
+  "source": "Project-original geometry, UV artwork, rig and actions. c02 only changes the four shell curves; no external stock assets.",
+  "files": [
+    {
+      "path": "c01-comparison-check.json",
+      "bytes": 1673,
+      "sha256": "f28f2495e0e84964e95aa53412c9355cdc404be8e71bbb8b33c18d172dc8963e"
+    },
+    {
+      "path": "c01-preservation.json",
+      "bytes": 3291,
+      "sha256": "0d2320eb6b4f03dd00e8e2c7f58a842891c2da85549a00dd89168c5e212c908d"
+    },
+    {
+      "path": "export/ink-snail.fbx",
+      "bytes": 801788,
+      "sha256": "3ff3b91dab1e86e2c43ab2fe11d55810fb879e6b9f312c04dfc33e2822c59179"
+    },
+    {
+      "path": "export/snail-colour.png",
+      "bytes": 94254,
+      "sha256": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019"
+    },
+    {
+      "path": "export/snail-roughness.png",
+      "bytes": 6031,
+      "sha256": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7"
+    },
+    {
+      "path": "ink-snail-review-scene.blend",
+      "bytes": 1947236,
+      "sha256": "a828cbadd4afa4b7efb1c6920a18074ea1f7c999626a0c8d34a40f49b7726b44"
+    },
+    {
+      "path": "ink-snail.blend",
+      "bytes": 1958277,
+      "sha256": "58152a8145f2330a5099b4b56d4783801020b5a640d024695b5505dbc22d661f"
+    },
+    {
+      "path": "ink-snail.glb",
+      "bytes": 591912,
+      "sha256": "208c003daf170dd92125551d11d3e534697142dbcab763b83b319fc8205ae906"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 2807,
+      "sha256": "cb7b288426e9c7861979a7f1c5acc676fc54c5192da7dfaf1b23b71193b8a656"
+    },
+    {
+      "path": "package_candidate.py",
+      "bytes": 3967,
+      "sha256": "3a0b412abeb35c7c30a98a0c19d93f36b720b52d470b58b31614917562522e38"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4849,
+      "sha256": "137137ca4fd267f32d0694f488beaf8ac080f6066ba34bb9b49baa8bb521b132"
+    },
+    {
+      "path": "render-side.png",
+      "bytes": 877230,
+      "sha256": "e38d710bbb79e71f2c1805043c862821811129b56be0cc3c2d368554c10d311f"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 881654,
+      "sha256": "ed46545c86c41ed2d4e3dcdf34d22f41f0509094b975c3729f97fdac7de29461"
+    },
+    {
+      "path": "review.html",
+      "bytes": 2061,
+      "sha256": "8593c107215ed486f3af87cf2bac8866d44133bfc9afccfec51dd052f24b5801"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 1432,
+      "sha256": "acb991b9b2e0bab796f433dc4187f24fed185619d5c507287f85e988e5ca4a72"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2624,
+      "sha256": "420a89b0b289762f74ea23007bc6f2b27f92b6b695dbee5b6a380ca29b7cf3a2"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 810,
+      "sha256": "f75d98edb24ab0621f288ad3021485a69edbf363ac0f7117e43700e158ce96ff"
+    },
+    {
+      "path": "verify_candidate.py",
+      "bytes": 11682,
+      "sha256": "d50252c21a5e7b2171b80956d3b2c7f585718c7c8af45b199c66b7370c0d034c"
+    }
+  ]
+}

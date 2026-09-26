@@ -1,0 +1,43 @@
+{
+  "key": "fauna-17",
+  "name": "长角战领",
+  "kind": "armored",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Alpaking Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\alpaking-evolved-f3b776\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/90edf93810eb65874f6f5f882496486b60f848d0d167a82b977267d5adb20bd7_Alpaking Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "297b85bddabeae2c553930db9d6927d7410778748af5f89c68d81b159757baea",
+  "bytes": 371084,
+  "animations": 8,
+  "displayName": "长角战领",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 29960,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-17",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.2
+}

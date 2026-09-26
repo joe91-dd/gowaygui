@@ -1,0 +1,43 @@
+{
+  "key": "fauna-53",
+  "name": "月爪剑卫",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Bunny",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\bunny-7f724e\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/d3ede48f1b7b3c5c2a0aba8499f84117c72e1411f3069b94dd026db295587de5_Bunny.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "dd07d9c429f5aa66e74e4a2483fcbc2524a37bfe61bb155920a167db5af185d1",
+  "bytes": 1587344,
+  "animations": 14,
+  "displayName": "月爪剑卫",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 59752,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-53",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.1
+}

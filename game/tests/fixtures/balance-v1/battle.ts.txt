@@ -1,0 +1,446 @@
+import { ENEMIES, LEVELS, ROLES, SKILL_BY_ID, spawnsForWave } from './data';
+import { random } from './random';
+import { EnemyKind, Point, Role, SkillId, Spawn, Turtle } from './types';
+
+/** Public balance constants, deliberately independent of rendering and frame rate. */
+export const BATTLE_RULES = {
+  tickSeconds: .05, coreHealth: 20, critChance: .05, critMultiplier: 1.5,
+  critCap: .6, attackSpeedCap: .8, shieldCap: .4, slowCap: .6,
+  controlWindow: 8, controlScales: [1, .5, .25, 0], bossControlScale: .25,
+  skillActionSeconds: .4, splashRadius: 1.5, shareRange: 3,
+};
+
+export type BattleStatusKind = 'stun' | 'root' | 'slow' | 'weaken' | 'armorDown' | 'resistDown' | 'hold';
+export interface BattleStatus { kind: BattleStatusKind; amount: number; untilTick: number; sourceId: string }
+export interface BattleShield { amount: number; untilTick: number; sourceId: string; skillId: SkillId }
+export interface BattleEvent {
+  id: number; tick: number;
+  type: 'attack' | 'heal' | 'skill' | 'damage' | 'spawn' | 'defeat' | 'leak' | 'waveEnd' | 'shield' | 'control';
+  sourceId?: string; targetId?: string; skillId?: SkillId; amount?: number;
+  x?: number; z?: number; critical?: boolean; secondary?: boolean; effect?: string;
+}
+export interface BattleUnit {
+  id: string; turtleId: string; role: Role; slot: number; level: number; skills: SkillId[];
+  x: number; z: number; hp: number; maxHp: number; shield: number; shields: BattleShield[];
+  attack: number; armor: number; resist: number; range: number; interval: number; alive: boolean;
+  statuses: BattleStatus[]; nextAttackTick: number; actionUntilTick: number; attackCount: number;
+  cooldowns: Partial<Record<SkillId, number>>; skillActivations: Partial<Record<SkillId, number>>;
+  lastDamageTick: number; nextRegenTick: number; lastShieldUsed: boolean; cleanseReadyTick: number;
+  reflectTicks: Record<string, number>; drainHistory: { tick: number; amount: number }[];
+  encouragedBy?: string; auraTargetId?: string;
+}
+export interface BattleEnemy {
+  id: string; kind: EnemyKind; x: number; z: number; distance: number; hp: number; maxHp: number;
+  attack: number; armor: number; resist: number; speed: number; range: number; interval: number;
+  leak: number; alive: boolean; statuses: BattleStatus[]; nextAttackTick: number; actionUntilTick: number; attackCount: number;
+  blockedBy?: string; controlWindowUntilTick: number; controlCount: number; summoned: boolean;
+}
+export interface BattleCommand { type: 'cast'; unitId: string; skillId: SkillId }
+export interface BattleState {
+  version: 1; levelId: number; wave: number; status: 'fighting' | 'won' | 'lost';
+  tick: number; elapsed: number; pendingSeconds: number; rng: number; coreHealth: number;
+  route: Point[]; routeLength: number; units: BattleUnit[]; enemies: BattleEnemy[];
+  spawns: Spawn[]; spawnCursor: number; nextEnemyId: number; nextEventId: number;
+  events: BattleEvent[]; commands: BattleCommand[]; kills: number; leaked: number;
+}
+export interface BattleInput { id: string; turtle: Turtle; level: number; slot: number }
+
+const tickTime = (seconds: number): number => Math.max(1, Math.ceil(seconds / BATTLE_RULES.tickSeconds - 1e-9));
+const distance = (a: Point, b: Point): number => Math.hypot(a.x - b.x, a.z - b.z);
+const compareId = (a: { id: string }, b: { id: string }): number => a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+const has = (unit: BattleUnit, skill: SkillId): boolean => unit.skills.includes(skill);
+const statusAmount = (target: { statuses: BattleStatus[] }, kind: BattleStatusKind): number =>
+  target.statuses.filter(s => s.kind === kind).reduce((highest, s) => Math.max(highest, s.amount), 0);
+const activate = (unit: BattleUnit, skill: SkillId): void => { unit.skillActivations[skill] = (unit.skillActivations[skill] || 0) + 1; };
+const emit = (state: BattleState, event: Omit<BattleEvent, 'id' | 'tick'>): void => {
+  const defined = Object.fromEntries(Object.entries(event).filter(([, value]) => value !== undefined)) as Omit<BattleEvent, 'id' | 'tick'>;
+  state.events.push({ id: state.nextEventId++, tick: state.tick, ...defined });
+  // A suspended view must not grow an unbounded event log; simulation counters remain authoritative.
+  if (state.events.length > 4096) state.events.splice(0, state.events.length - 4096);
+};
+
+function seedFor(levelId: number, wave: number, units: BattleInput[]): number {
+  const source = `${levelId}/${wave}/${units.map(u => `${u.id}:${u.turtle.id}`).join('/')}`;
+  let seed = 2166136261;
+  for (let i = 0; i < source.length; i++) seed = Math.imul(seed ^ source.charCodeAt(i), 16777619);
+  return seed >>> 0;
+}
+
+export function createBattle(levelId: number, wave: number, inputs: BattleInput[], options: { seed?: number; coreHealth?: number } = {}): BattleState {
+  const definition = LEVELS.find(level => level.id === levelId);
+  if (!definition || !Number.isInteger(wave) || wave < 1 || wave > definition.waves) throw new Error('无效关卡或波次');
+  if (inputs.length > 5 || new Set(inputs.map(u => u.id)).size !== inputs.length || new Set(inputs.map(u => u.slot)).size !== inputs.length) throw new Error('最多五只上阵，个体和位置不可重复');
+  const coreHealth = options.coreHealth ?? BATTLE_RULES.coreHealth;
+  if (!Number.isFinite(coreHealth) || coreHealth <= 0 || coreHealth > BATTLE_RULES.coreHealth) throw new Error('核心耐久不合法');
+  const units = inputs.map(input => {
+    const turtle = input.turtle;
+    if (!Number.isInteger(input.slot) || !definition.slots[input.slot]) throw new Error('上阵位置不存在');
+    if (!Number.isInteger(input.level) || input.level < 1 || input.level > 10) throw new Error('局内等级应在一至十级');
+    const role = ROLES[turtle.role];
+    const skills = [...turtle.skills];
+    if (!role || skills.length > 12 || new Set(skills).size !== skills.length || skills.some(id => !SKILL_BY_ID[id] || (SKILL_BY_ID[id].role && SKILL_BY_ID[id].role !== turtle.role))) throw new Error('技能组合不合法');
+    const aptitude = (key: 'attack' | 'health' | 'defense'): number => {
+      const value = turtle.innate[key] + turtle.training[key];
+      if (!Number.isFinite(value) || value < 60 || value > 100) throw new Error('资质不合法');
+      return .8 + .2 * value / 100;
+    };
+    const growth = (turtle.innate.growth + turtle.training.growth) / 100;
+    if (!Number.isFinite(growth) || growth < .9 || growth > 1.1) throw new Error('成长不合法');
+    const progression = 1 + .1 * (input.level - 1) * growth;
+    const maxHp = role.health * aptitude('health') * progression * (skills.includes('strong') ? 1.12 : 1);
+    const unit: BattleUnit = {
+      id: input.id, turtleId: turtle.id, role: turtle.role, slot: input.slot, level: input.level, skills,
+      ...definition.slots[input.slot], hp: maxHp, maxHp, shield: 0, shields: [],
+      attack: role.attack * aptitude('attack') * progression,
+      armor: role.armor * aptitude('defense') + (skills.includes('armor') ? 15 : 0),
+      resist: role.resist * aptitude('defense') + (skills.includes('resist') ? 15 : 0),
+      range: role.range + (skills.includes('reach') ? .3 : 0),
+      interval: role.interval / (1 + Math.min(BATTLE_RULES.attackSpeedCap, skills.includes('swift') ? .12 : 0)),
+      alive: true, statuses: [], nextAttackTick: 1, actionUntilTick: 0, attackCount: 0,
+      cooldowns: {}, skillActivations: {}, lastDamageTick: 0, nextRegenTick: tickTime(5),
+      lastShieldUsed: false, cleanseReadyTick: 0, reflectTicks: {}, drainHistory: [],
+    };
+    for (const id of ['strong', 'armor', 'resist', 'swift', 'reach'] as SkillId[]) if (skills.includes(id)) activate(unit, id);
+    return unit;
+  });
+  const state: BattleState = {
+    version: 1, levelId, wave, status: 'fighting', tick: 0, elapsed: 0, pendingSeconds: 0,
+    rng: (options.seed ?? seedFor(levelId, wave, inputs)) >>> 0, coreHealth,
+    route: definition.route.map(p => ({ ...p })), routeLength: definition.route.slice(1).reduce((sum, p, i) => sum + distance(p, definition.route[i]), 0),
+    units, enemies: [], spawns: spawnsForWave(levelId, wave).sort((a, b) => a.time - b.time), spawnCursor: 0, nextEnemyId: 1, nextEventId: 1,
+    events: [], commands: [], kills: 0, leaked: 0,
+  };
+  for (const unit of units) if (has(unit, 'openingShield')) addShield(state, unit, unit.maxHp * .1, 6, unit.id, 'openingShield');
+  return state;
+}
+
+/** Consumes audiovisual events; never needed to advance or recover the simulation. */
+export function getBattleEvents(state: BattleState): BattleEvent[] { return state.events.splice(0); }
+
+/** A manual cast request is optional; invalid/cooling requests leave the battle unchanged. */
+export function commandBattle(state: BattleState, command: BattleCommand): boolean {
+  const unit = state.units.find(u => u.id === command.unitId && u.alive);
+  if (state.status !== 'fighting' || !unit || !has(unit, command.skillId) || !SKILL_BY_ID[command.skillId].active) return false;
+  if ((unit.cooldowns[command.skillId] || 0) > state.tick || unit.actionUntilTick > state.tick || statusAmount(unit, 'stun') > 0) return false;
+  if (state.commands.some(c => c.unitId === command.unitId)) return false;
+  state.commands.push({ ...command });
+  return true;
+}
+
+export function stepBattle(state: BattleState, dt: number): BattleState {
+  if (!Number.isFinite(dt) || dt < 0 || dt > 3600) throw new Error('战斗推进时间不合法');
+  if (state.status !== 'fighting') return state;
+  state.pendingSeconds = Math.round((state.pendingSeconds + dt) * 1e12) / 1e12;
+  while (state.pendingSeconds + 1e-9 >= BATTLE_RULES.tickSeconds && state.status === 'fighting') {
+    state.pendingSeconds = Math.max(0, Math.round((state.pendingSeconds - BATTLE_RULES.tickSeconds) * 1e12) / 1e12);
+    state.tick++;
+    state.elapsed = state.tick * BATTLE_RULES.tickSeconds;
+    stepTick(state);
+  }
+  if (state.status !== 'fighting') state.pendingSeconds = 0;
+  return state;
+}
+
+function stepTick(state: BattleState): void {
+  while (state.spawnCursor < state.spawns.length && state.spawns[state.spawnCursor].time <= state.elapsed + 1e-9) spawnEnemy(state, state.spawns[state.spawnCursor++]);
+  for (const target of [...state.units, ...state.enemies]) target.statuses = target.statuses.filter(s => s.untilTick > state.tick);
+  for (const unit of state.units) {
+    unit.shields = unit.shields.filter(s => s.untilTick > state.tick && s.amount > 1e-8);
+    unit.shield = unit.shields.reduce((sum, s) => sum + s.amount, 0);
+    if (unit.alive && has(unit, 'regen') && state.tick >= unit.nextRegenTick && state.tick - unit.lastDamageTick >= tickTime(5)) {
+      const recovered = healDirect(state, unit, unit, unit.maxHp * .01, 'regen', false);
+      if (recovered > 0) activate(unit, 'regen');
+      unit.nextRegenTick = state.tick + tickTime(1);
+    }
+  }
+  updateAuras(state);
+  updateMovement(state);
+  const commands = state.commands.splice(0);
+  for (const unit of state.units) {
+    if (!unit.alive || unit.actionUntilTick > state.tick || statusAmount(unit, 'stun') > 0) continue;
+    const command = commands.find(c => c.unitId === unit.id);
+    const active = command?.skillId ?? unit.skills.find(id => SKILL_BY_ID[id].active);
+    if (active && castSkill(state, unit, active)) continue;
+    if (state.tick >= unit.nextAttackTick) basicAttack(state, unit);
+  }
+  for (const enemy of state.enemies) {
+    if (!enemy.alive) continue;
+    if (enemy.kind === 'boss' && !enemy.summoned && enemy.hp <= enemy.maxHp * .5) {
+      enemy.summoned = true;
+      for (let i = 0; i < 2; i++) spawnEnemy(state, { kind: 'runner', time: state.elapsed, hpScale: 1.2, attackScale: 1 }, Math.max(0, enemy.distance - .5 - i * .4));
+      emit(state, { type: 'skill', sourceId: enemy.id, effect: 'crabSummon', x: enemy.x, z: enemy.z });
+    }
+    if (state.tick >= enemy.nextAttackTick && statusAmount(enemy, 'stun') <= 0) enemyAttack(state, enemy);
+  }
+  if (state.coreHealth <= 0) state.status = 'lost';
+  else if (state.spawnCursor >= state.spawns.length && state.enemies.every(e => !e.alive)) state.status = 'won';
+  if (state.status !== 'fighting') emit(state, { type: 'waveEnd', amount: state.coreHealth, effect: state.status });
+}
+
+function positionOnRoute(state: BattleState, progress: number): Point {
+  for (let i = 1; i < state.route.length; i++) {
+    const from = state.route[i - 1], to = state.route[i], length = distance(from, to);
+    if (progress <= length) return { x: from.x + (to.x - from.x) * progress / length, z: from.z + (to.z - from.z) * progress / length };
+    progress -= length;
+  }
+  return { ...state.route[state.route.length - 1] };
+}
+
+function spawnEnemy(state: BattleState, spawn: Spawn, progress = 0): BattleEnemy {
+  const definition = ENEMIES[spawn.kind];
+  const enemy: BattleEnemy = {
+    id: `enemy-${state.wave}-${state.nextEnemyId++}`, kind: spawn.kind, ...positionOnRoute(state, progress), distance: progress,
+    hp: definition.health * spawn.hpScale, maxHp: definition.health * spawn.hpScale,
+    attack: definition.attack * spawn.attackScale, armor: definition.armor, resist: definition.resist,
+    speed: definition.speed, range: definition.range, interval: definition.interval, leak: definition.leak,
+    alive: true, statuses: [], nextAttackTick: state.tick, actionUntilTick: 0, attackCount: 0,
+    controlWindowUntilTick: 0, controlCount: 0, summoned: false,
+  };
+  state.enemies.push(enemy);
+  emit(state, { type: 'spawn', sourceId: enemy.id, x: enemy.x, z: enemy.z, effect: enemy.kind });
+  return enemy;
+}
+
+function updateAuras(state: BattleState): void {
+  for (const unit of state.units) delete unit.encouragedBy;
+  for (const source of state.units.filter(u => u.alive && has(u, 'encourage')).sort(compareId)) {
+    const candidates = state.units.filter(u => u.alive && u !== source && distance(source, u) <= 3).sort((a, b) => distance(source, a) - distance(source, b) || compareId(a,b));
+    const target = candidates.find(u => !u.encouragedBy) ?? candidates[0];
+    if (target && !target.encouragedBy) {
+      target.encouragedBy = source.id;
+      if (source.auraTargetId !== target.id) activate(source, 'encourage');
+    }
+    if (target) source.auraTargetId = target.id;
+    else delete source.auraTargetId;
+  }
+}
+
+function updateMovement(state: BattleState): void {
+  const blocking: Record<string, number> = {};
+  for (const enemy of state.enemies.filter(e => e.alive).sort((a, b) => b.distance - a.distance || compareId(a,b))) {
+    delete enemy.blockedBy;
+    const blocker = state.units.filter(u => u.alive && u.role === 'stone' && (blocking[u.id] || 0) < 2 && distance(u, enemy) <= ROLES.stone.range).sort((a, b) => distance(enemy, a) - distance(enemy, b))[0];
+    if (blocker) { enemy.blockedBy = blocker.id; blocking[blocker.id] = (blocking[blocker.id] || 0) + 1; }
+    if (!blocker && enemy.actionUntilTick <= state.tick && statusAmount(enemy, 'root') <= 0 && statusAmount(enemy, 'stun') <= 0) {
+      enemy.distance += enemy.speed * (1 - Math.min(BATTLE_RULES.slowCap, statusAmount(enemy, 'slow'))) * BATTLE_RULES.tickSeconds;
+      Object.assign(enemy, positionOnRoute(state, enemy.distance));
+    }
+    if (enemy.distance >= state.routeLength) {
+      enemy.alive = false;
+      state.coreHealth = Math.max(0, state.coreHealth - enemy.leak);
+      state.leaked++;
+      emit(state, { type: 'leak', sourceId: enemy.id, amount: enemy.leak, x: enemy.x, z: enemy.z });
+    }
+  }
+}
+
+function targetEnemy(state: BattleState, unit: BattleUnit): BattleEnemy | undefined {
+  return state.enemies.filter(e => e.alive && distance(e, unit) <= unit.range).sort((a, b) => b.distance - a.distance || compareId(a,b))[0];
+}
+function targetPatient(state: BattleState, unit: BattleUnit, excludedId?: string): BattleUnit | undefined {
+  return state.units.filter(u => u.alive && u.id !== excludedId && distance(u, unit) <= unit.range && (u.hp < u.maxHp - 1e-8 || (has(unit, 'cleanse') && u.statuses.some(s => s.kind !== 'hold')))).sort((a, b) => a.hp / a.maxHp - b.hp / b.maxHp || compareId(a,b))[0];
+}
+function power(unit: BattleUnit): number { return unit.attack * (unit.encouragedBy ? 1.08 : 1) * (1 - statusAmount(unit, 'weaken')); }
+
+function basicAttack(state: BattleState, unit: BattleUnit): void {
+  const patient = unit.role === 'leaf' ? targetPatient(state, unit) : undefined;
+  const target = unit.role === 'leaf' ? undefined : targetEnemy(state, unit);
+  if (!patient && !target) return;
+  unit.attackCount++;
+  unit.nextAttackTick = state.tick + tickTime(unit.interval);
+  if (patient) {
+    emit(state, { type: 'attack', sourceId: unit.id, targetId: patient.id, effect: 'heal', x: patient.x, z: patient.z });
+    healDirect(state, unit, patient, power(unit), undefined, true);
+    if (has(unit, 'doubleHeal')) {
+      const second = targetPatient(state, unit, patient.id);
+      if (second) { activate(unit, 'doubleHeal'); healDirect(state, unit, second, power(unit) * .35, 'doubleHeal', true); }
+    }
+    return;
+  }
+  if (!target) return;
+  emit(state, { type: 'attack', sourceId: unit.id, targetId: target.id, x: target.x, z: target.z, effect: unit.role });
+  const magic = unit.role === 'crystal' || unit.role === 'bubble';
+  const amount = power(unit);
+  const impact = { x: target.x, z: target.z };
+  damageEnemy(state, unit, target, amount, magic, 'direct');
+  if (unit.role === 'crystal') {
+    const nearby = state.enemies.filter(e => e.alive && e.id !== target.id && distance(e, impact) <= BATTLE_RULES.splashRadius).sort((a, b) => distance(a, impact) - distance(b, impact));
+    for (const enemy of nearby.slice(0, 2)) damageEnemy(state, unit, enemy, amount * .4, true, 'secondary');
+    if (has(unit, 'bounce')) {
+      const bounce = state.enemies.filter(e => e.alive && e.id !== target.id && distance(e, impact) <= unit.range).sort((a, b) => distance(a, impact) - distance(b, impact))[0];
+      if (bounce) { activate(unit, 'bounce'); damageEnemy(state, unit, bounce, amount * .3, true, 'secondary', 'bounce'); }
+    }
+  }
+  if (unit.role === 'spike' && has(unit, 'combo') && unit.attackCount % 5 === 0 && target.alive) { activate(unit, 'combo'); damageEnemy(state, unit, target, amount * .6, false, 'secondary', 'combo'); }
+  if (unit.role === 'bubble' && target.alive) {
+    if (unit.attackCount % 3 === 0) setStatus(state, target, 'slow', .25, 2, unit.id);
+    if (has(unit, 'shredArmor')) { activate(unit, 'shredArmor'); setStatus(state, target, 'armorDown', 8, 3, unit.id); }
+    if (has(unit, 'weaken')) { activate(unit, 'weaken'); setStatus(state, target, 'weaken', .08, 3, unit.id); }
+    if (has(unit, 'root') && unit.attackCount % 6 === 0) { activate(unit, 'root'); controlEnemy(state, target, .6, unit.id, 'root'); }
+  }
+}
+
+function castSkill(state: BattleState, unit: BattleUnit, skill: SkillId): boolean {
+  if (!has(unit, skill) || !SKILL_BY_ID[skill].active || (unit.cooldowns[skill] || 0) > state.tick) return false;
+  const target = targetEnemy(state, unit);
+  if (skill === 'hold') {
+    if (!state.enemies.some(e => e.alive && e.blockedBy === unit.id)) return false;
+    setStatus(state, unit, 'hold', 60, 6, unit.id);
+  } else if (skill === 'greatHeal') {
+    if (!state.units.some(u => u.alive && u.hp / u.maxHp < .6)) return false;
+    for (const ally of state.units.filter(u => u.alive)) healDirect(state, unit, ally, power(unit) * 2.2, skill, true);
+  } else if (!target) return false;
+  else if (skill === 'piercingShot') damageEnemy(state, unit, target, power(unit) * 2.4, false, 'direct', skill, .7);
+  else if (skill === 'crystalCannon') damageEnemy(state, unit, target, power(unit) * 3.2, true, 'direct', skill);
+  else if (skill === 'bubbleRing') {
+    const impact = { x: target.x, z: target.z };
+    for (const enemy of state.enemies.filter(e => e.alive && distance(e, impact) <= 1.5).sort((a, b) => distance(a, impact) - distance(b, impact)).slice(0, 5)) controlEnemy(state, enemy, 1.8, unit.id, skill);
+  } else return false;
+  activate(unit, skill);
+  unit.cooldowns[skill] = state.tick + tickTime(SKILL_BY_ID[skill].cooldown!);
+  unit.actionUntilTick = state.tick + tickTime(BATTLE_RULES.skillActionSeconds);
+  unit.nextAttackTick = Math.max(unit.nextAttackTick, unit.actionUntilTick);
+  emit(state, { type: 'skill', sourceId: unit.id, targetId: target?.id, skillId: skill, x: target?.x ?? unit.x, z: target?.z ?? unit.z });
+  return true;
+}
+
+function damageEnemy(state: BattleState, source: BattleUnit, target: BattleEnemy, raw: number, magic: boolean, tag: 'direct' | 'secondary' | 'reflect', skillId?: SkillId, penetration = 0): number {
+  if (!target.alive || raw <= 0) return 0;
+  const resistance = Math.max(0, (magic ? target.resist - statusAmount(target, 'resistDown') : target.armor - statusAmount(target, 'armorDown'))) * (1 - penetration);
+  const critical = tag === 'direct' && random(state) < Math.min(BATTLE_RULES.critCap, BATTLE_RULES.critChance + (has(source, 'critical') ? .08 : 0));
+  if (critical && has(source, 'critical')) activate(source, 'critical');
+  // Reflection is already a fraction of mitigated HP loss; it is neither mitigated nor amplified again.
+  const damage = Math.min(target.hp, tag === 'reflect' ? raw : raw * 100 / (100 + resistance) * (critical ? BATTLE_RULES.critMultiplier : 1));
+  target.hp = Math.max(0, target.hp - damage);
+  emit(state, { type: 'damage', sourceId: source.id, targetId: target.id, skillId, amount: damage, critical, secondary: tag !== 'direct', x: target.x, z: target.z });
+  if (tag === 'direct') {
+    const drain = magic ? 'spellDrain' : 'lifesteal';
+    if (has(source, drain) && source.alive && damage > 0) {
+      source.drainHistory = source.drainHistory.filter(item => item.tick > state.tick - tickTime(1));
+      const used = source.drainHistory.reduce((sum, item) => sum + item.amount, 0);
+      const amount = Math.min(damage * (magic ? .03 : .05), Math.max(0, source.maxHp * .02 - used));
+      const recovered = healDirect(state, source, source, amount, drain, false);
+      if (recovered > 0) { source.drainHistory.push({ tick: state.tick, amount: recovered }); activate(source, drain); }
+    }
+    if (magic && has(source, 'shredResist')) { activate(source, 'shredResist'); setStatus(state, target, 'resistDown', 5, 3, source.id); }
+  }
+  if (target.hp <= 0) { target.alive = false; state.kills++; emit(state, { type: 'defeat', sourceId: source.id, targetId: target.id, x: target.x, z: target.z }); }
+  return damage;
+}
+
+function enemyAttack(state: BattleState, enemy: BattleEnemy): void {
+  const blocked = state.units.find(u => u.alive && u.id === enemy.blockedBy);
+  const target = blocked ?? state.units.filter(u => u.alive && distance(u, enemy) <= enemy.range).sort((a, b) => distance(enemy, a) - distance(enemy, b) || compareId(a,b))[0];
+  if (!target) return;
+  enemy.attackCount++;
+  enemy.nextAttackTick = state.tick + tickTime(enemy.interval);
+  if (enemy.range > 1.5) enemy.actionUntilTick = state.tick + tickTime(.3);
+  emit(state, { type: 'attack', sourceId: enemy.id, targetId: target.id, x: target.x, z: target.z, effect: enemy.kind });
+  damageUnit(state, enemy, target, enemy.attack * (1 - statusAmount(enemy, 'weaken')), enemy.kind === 'mist', enemy.range <= 1.5);
+  if (enemy.kind === 'snail' && target.alive && enemy.attackCount % 3 === 0) setStatus(state, target, 'weaken', .15, 3, enemy.id);
+  if (enemy.kind === 'boss' && enemy.attackCount % 3 === 0) {
+    emit(state, { type: 'skill', sourceId: enemy.id, targetId: target.id, effect: 'crabSlam', x: target.x, z: target.z });
+    for (const ally of state.units.filter(u => u.alive && distance(u, target) <= 2.5).slice(0, 3)) {
+      if (ally !== target) damageUnit(state, enemy, ally, enemy.attack * .5, false, false);
+      if (ally.alive) controlUnit(state, ally, .8, enemy.id);
+    }
+  }
+}
+
+function damageUnit(state: BattleState, attacker: BattleEnemy, target: BattleUnit, raw: number, magic: boolean, melee: boolean): number {
+  if (!target.alive || raw <= 0) return 0;
+  const defense = Math.max(0, magic ? target.resist : target.armor + statusAmount(target, 'hold'));
+  let amount = raw * 100 / (100 + defense);
+  if (has(target, 'block') && random(state) < .15) { amount *= .7; activate(target, 'block'); }
+  const sharer = state.units.filter(u => u.alive && u !== target && has(u, 'share') && distance(u, target) <= BATTLE_RULES.shareRange)
+    .filter(u => state.units.filter(a => a.alive && a !== u && distance(a, u) <= BATTLE_RULES.shareRange).sort((a, b) => distance(a, u) - distance(b, u) || compareId(a,b))[0]?.id === target.id)
+    .sort((a, b) => distance(a, target) - distance(b, target) || compareId(a,b))[0];
+  if (sharer) {
+    const shared = amount * .1;
+    amount -= shared;
+    activate(sharer, 'share');
+    // A separate HP/shield sink deliberately bypasses block, share and reflection.
+    loseUnitHealth(state, sharer, shared, attacker.id, 'share');
+  }
+  const actual = loseUnitHealth(state, target, amount, attacker.id);
+  if (actual > 0 && melee && has(target, 'reflect') && (target.reflectTicks[attacker.id] ?? -1000) <= state.tick - tickTime(.5)) {
+    target.reflectTicks[attacker.id] = state.tick;
+    activate(target, 'reflect');
+    damageEnemy(state, target, attacker, actual * .15, false, 'reflect', 'reflect');
+  }
+  return actual;
+}
+
+function loseUnitHealth(state: BattleState, target: BattleUnit, amount: number, sourceId: string, skillId?: SkillId): number {
+  if (amount <= 0 || !target.alive) return 0;
+  target.lastDamageTick = state.tick;
+  target.nextRegenTick = state.tick + tickTime(5);
+  for (const shield of target.shields) { const absorbed = Math.min(amount, shield.amount); shield.amount -= absorbed; amount -= absorbed; if (amount <= 0) break; }
+  target.shields = target.shields.filter(s => s.amount > 1e-8);
+  target.shield = target.shields.reduce((sum, s) => sum + s.amount, 0);
+  const actual = Math.min(target.hp, amount);
+  target.hp = Math.max(0, target.hp - actual);
+  emit(state, { type: 'damage', sourceId, targetId: target.id, skillId, amount: actual, secondary: skillId === 'share', x: target.x, z: target.z });
+  if (target.hp <= 0) {
+    target.alive = false;
+    emit(state, { type: 'defeat', sourceId, targetId: target.id, x: target.x, z: target.z });
+  } else if (has(target, 'lastShield') && !target.lastShieldUsed && target.hp / target.maxHp < .3) {
+    target.lastShieldUsed = true;
+    addShield(state, target, target.maxHp * .15, 4, target.id, 'lastShield');
+  }
+  return actual;
+}
+
+function healDirect(state: BattleState, source: BattleUnit, target: BattleUnit, requested: number, skillId?: SkillId, triggerHealSkills = false): number {
+  if (!target.alive || !source.alive) return 0;
+  if (triggerHealSkills && has(source, 'cleanse') && state.tick >= source.cleanseReadyTick) {
+    const priority: BattleStatusKind[] = ['stun', 'root', 'slow', 'weaken', 'armorDown', 'resistDown'];
+    const kind = priority.find(id => target.statuses.some(s => s.kind === id));
+    if (kind) {
+      const index = target.statuses.findIndex(s => s.kind === kind);
+      target.statuses.splice(index, 1);
+      source.cleanseReadyTick = state.tick + tickTime(8);
+      activate(source, 'cleanse');
+      emit(state, { type: 'skill', sourceId: source.id, targetId: target.id, skillId: 'cleanse' });
+    }
+  }
+  const amount = Math.max(0, Math.min(requested, target.maxHp - target.hp));
+  if (amount <= 0) return 0;
+  target.hp += amount;
+  emit(state, { type: 'heal', sourceId: source.id, targetId: target.id, amount, skillId, x: target.x, z: target.z });
+  if (triggerHealSkills && has(source, 'healShield')) addShield(state, target, amount * .15, 4, source.id, 'healShield');
+  return amount;
+}
+
+function addShield(state: BattleState, target: BattleUnit, requested: number, duration: number, sourceId: string, skillId: SkillId): number {
+  const amount = Math.max(0, Math.min(requested, target.maxHp * BATTLE_RULES.shieldCap - target.shield));
+  if (amount <= 0) return 0;
+  target.shields.push({ amount, untilTick: state.tick + tickTime(duration), sourceId, skillId });
+  target.shield += amount;
+  const source = state.units.find(u => u.id === sourceId);
+  if (source) activate(source, skillId);
+  emit(state, { type: 'shield', sourceId, targetId: target.id, skillId, amount, x: target.x, z: target.z });
+  return amount;
+}
+
+function setStatus(state: BattleState, target: BattleUnit | BattleEnemy, kind: BattleStatusKind, amount: number, seconds: number, sourceId: string): void {
+  const untilTick = state.tick + tickTime(seconds);
+  const existing = target.statuses.find(s => s.kind === kind);
+  if (existing) { existing.amount = Math.max(existing.amount, amount); existing.untilTick = Math.max(existing.untilTick, untilTick); existing.sourceId = sourceId; }
+  else target.statuses.push({ kind, amount, untilTick, sourceId });
+}
+
+function controlEnemy(state: BattleState, target: BattleEnemy, seconds: number, sourceId: string, skillId: SkillId): void {
+  if (state.tick >= target.controlWindowUntilTick) { target.controlCount = 0; target.controlWindowUntilTick = state.tick + tickTime(BATTLE_RULES.controlWindow); }
+  const scale = BATTLE_RULES.controlScales[Math.min(target.controlCount++, 3)] * (target.kind === 'boss' ? BATTLE_RULES.bossControlScale : 1);
+  if (scale <= 0) return;
+  setStatus(state, target, 'root', 1, seconds * scale, sourceId);
+  emit(state, { type: 'control', sourceId, targetId: target.id, skillId, amount: seconds * scale, x: target.x, z: target.z });
+}
+
+function controlUnit(state: BattleState, target: BattleUnit, seconds: number, sourceId: string): void {
+  const duration = seconds * (has(target, 'steady') ? .8 : 1);
+  if (has(target, 'steady')) activate(target, 'steady');
+  setStatus(state, target, 'stun', 1, duration, sourceId);
+  emit(state, { type: 'control', sourceId, targetId: target.id, amount: duration, x: target.x, z: target.z, effect: 'stun' });
+}

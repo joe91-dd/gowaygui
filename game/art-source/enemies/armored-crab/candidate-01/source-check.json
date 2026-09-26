@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "files": {
+    "armored-crab.blend": {
+      "sha256": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+      "packed_images": [
+        "ArmoredCrab_Colour_512",
+        "ArmoredCrab_Roughness_512"
+      ],
+      "skinned_meshes": 38,
+      "walking_legs": 8,
+      "editable_parts": 38,
+      "eye_vertices": {
+        "Spherical_painted_eye_L": 482,
+        "Spherical_painted_eye_R": 482
+      }
+    },
+    "armored-crab-review-scene.blend": {
+      "sha256": "ff4ca1a3d7edd6da69ae9c32e802a5166c5926fa3e80adfc559c744f09b7776d",
+      "packed_images": [
+        "ArmoredCrab_Colour_512",
+        "ArmoredCrab_Roughness_512"
+      ],
+      "skinned_meshes": 1
+    }
+  }
+}

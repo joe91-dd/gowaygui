@@ -1,0 +1,16 @@
+﻿{
+    "timestamp":  "2026-09-09T11:53:03.1261819+08:00",
+    "buildStartedUtc":  "2026-09-09T03:51:53.4375823Z",
+    "status":  "failed",
+    "creator":  "C:/ProgramData/cocos/editors/Creator/3.8.8/CocosCreator.exe",
+    "project":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game",
+    "exitCode":  36,
+    "indexExists":  true,
+    "criticalErrors":  [
+                           "SyntaxError: C:\\Users\\Administrator\\.CocosCreator\\editor\\window.json: Unexpected end of JSON input"
+                       ],
+    "log":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260909-115153.creator.log",
+    "stdout":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260909-115153.stdout.log",
+    "stderr":  "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\temp\\build-logs\\20260909-115153.stderr.log",
+    "builtCorePassed":  false
+}

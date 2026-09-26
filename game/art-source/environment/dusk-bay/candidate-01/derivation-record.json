@@ -1,0 +1,13 @@
+{
+  "method": "Project-owned source-module reuse with explicit new level3 geometry, palette, compositions and beacon; no downloaded geometry, textures or raster edits.",
+  "upstreamBuilder": "game\\art-source\\environment\\coral-bend\\candidate-01\\build_coral_bend.py",
+  "upstreamBuilderSha256": "3494f790d2f32f58cdf83ae763c55836f0e790f2613a72cf0fea5f2d740b09b2",
+  "standaloneBuilder": "build_dusk_bay.py",
+  "filesWritten": [
+    "build_dusk_bay.py",
+    "verify_dusk_bay.py",
+    "check_editable_source.py",
+    "render_dusk_views.py",
+    "verify_foot_support.py"
+  ]
+}

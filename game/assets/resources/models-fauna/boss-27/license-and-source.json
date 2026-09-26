@@ -1,0 +1,37 @@
+{
+  "id": "purple-4",
+  "name": "破浪武僧",
+  "tier": 2,
+  "index": 27,
+  "base": 55,
+  "key": "boss-27",
+  "ability": "shock",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 29608,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-55",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/dcecc189187b8b827a9507f1bf08d90a62b0b1dbbf70bec40fc800dca15dafc9_Sharky.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24740,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 16.7
+}

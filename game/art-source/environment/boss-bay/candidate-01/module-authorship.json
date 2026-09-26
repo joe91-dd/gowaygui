@@ -1,0 +1,9 @@
+{
+  "status": "offline-candidate-generated-and-checked",
+  "originalProjectModule": "game\\art-source\\environment\\dusk-bay\\candidate-01\\build_dusk_bay.py",
+  "sourceSha256": "111ba610c6bf20ec0776abd04491e61157e421ba895a7757957d6ca6b6924cd5",
+  "generatedScriptSha256": "026c916eb9be590a42a68a353a19fece0871f06a73b220be231aae113843f2ec",
+  "externalGameAssetsUsed": false,
+  "blenderStartedByAuthorStep": false,
+  "note": "The authoring step itself does not start Blender. The resulting generator has now run; actual export, round-trip, support, source and render reports are beside this file. No runtime promotion or production coordinate changes by this task."
+}

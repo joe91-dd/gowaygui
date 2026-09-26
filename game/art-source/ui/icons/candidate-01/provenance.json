@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-09-08",
+  "project": "哥喂龟",
+  "status": "candidate_pending_root_visual_review",
+  "generator": {
+    "tool": "image_gen__imagegen",
+    "mode": "built-in",
+    "apiOrCliUsed": false,
+    "externalPluginInstalled": false
+  },
+  "references": [
+    {
+      "path": "output/art/A-潮汐玩具岛.png",
+      "role": "visual style inspected with view_image; translated into original prompt, not directly passed as generation input",
+      "sha256": "e7dd9b3fe04fc2722a2b87fb70739e7fa6e9a366762c3644eeee2dedee99e80b"
+    },
+    {
+      "path": "output/art/A4-五龟三男两女角色参考.png",
+      "role": "toy materials and palette inspected with view_image; not directly passed as generation input",
+      "sha256": "433159678c6ef5f97dcf446039390969c039a9d2898415f5b68e8a1710917164"
+    }
+  ],
+  "generationChain": [
+    {
+      "step": 1,
+      "operation": "generate original sprite atlas",
+      "prompt": "prompt.txt",
+      "inputImages": [],
+      "output": "icons-atlas.png",
+      "originalToolOutput": "C:/Users/Administrator/.codex/generated_images/01a07f72-0e32-7f22-82a8-d4f612ed726e/exec-61e3f135-5a56-402b-a834-f7b17ed4f6f8.png",
+      "sha256": "87a94837a7de2a2c37d3f537346129f7441995121d1a3447fd58f876253a30b2",
+      "review": "rejected as runtime candidate: insufficient padding"
+    },
+    {
+      "step": 2,
+      "operation": "imagegen layout and padding edit",
+      "prompt": "prompt-padding-edit.txt",
+      "inputImages": [
+        "icons-atlas.png"
+      ],
+      "output": "icons-atlas-padding-edit.png",
+      "originalToolOutput": "C:/Users/Administrator/.codex/generated_images/01a07f72-0e32-7f22-82a8-d4f612ed726e/exec-7380de89-601d-4306-9eb7-21c38610be26.png",
+      "sha256": "cf7bc9f0bd9cd89e755ff18adaabd7d92543e1a7b957fe968cf1dc9b9e2e136f",
+      "review": "rejected: RGB output with painted checkerboard"
+    },
+    {
+      "step": 3,
+      "operation": "imagegen transparent background extraction",
+      "prompt": "prompt-alpha-edit.txt",
+      "inputImages": [
+        "icons-atlas-padding-edit.png"
+      ],
+      "output": "icons-atlas-padded-transparent.png",
+      "originalToolOutput": "C:/Users/Administrator/.codex/generated_images/01a07f72-0e32-7f22-82a8-d4f612ed726e/exec-7ac0d29a-f785-4e63-904f-618db7bc4c76.png",
+      "sha256": "d35d2e6987389797694028c38a32331e8cdb87c98fb5e778141f37ca65548a38",
+      "review": "pending root: actual RGBA transparency, faint fringe and imperfect source grid remain"
+    }
+  ],
+  "imageProcessingOutsideGenerator": "None. Original files copied byte-for-byte. Pillow only reads image pixels and emits inspection/layout JSON. No PNG was cropped, resized, recolored, recompressed or alpha-filtered by script.",
+  "contentConstraints": [
+    "single gold currency",
+    "stamina is a lightning-shaped resource",
+    "four medicines use sword/heart/shield/sprout",
+    "no red cross",
+    "no text/numbers/watermarks",
+    "no external game assets or brand references"
+  ],
+  "runtimeIntegration": "Not performed; no GameEntry or IslandUI changes.",
+  "rightsRecord": "Generated specifically for this project from the user's original brief. No third-party asset downloads used. This provenance record does not guarantee absence of rights disputes."
+}

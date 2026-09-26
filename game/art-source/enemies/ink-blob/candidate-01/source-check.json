@@ -1,0 +1,298 @@
+{
+  "source_check": "pass",
+  "files": {
+    "ink-blob.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-01\\ink-blob.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "8eec955ee79fbf930a7034fba3160533b345f2a5fb8dca5737f3edde51f5034e",
+      "texture_count": 2,
+      "surface_orientation": {
+        "status": "pass",
+        "errors": [],
+        "eye_rays": {
+          "L": {
+            "origin": [
+              -0.20499999821186066,
+              -3.0,
+              0.5849999785423279
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "body": {
+              "position": [
+                -0.20499999821186066,
+                -0.38435983657836914,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.3020489513874054,
+                -0.873638391494751,
+                0.38147398829460144
+              ],
+              "distance_m": 2.615640163421631
+            },
+            "iris": {
+              "position": [
+                -0.20499999821186066,
+                -0.42856621742248535,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.060603175312280655,
+                -0.9884173274040222,
+                0.13913434743881226
+              ],
+              "distance_m": 2.5714337825775146,
+              "clearance_in_front_of_body_m": 0.04420638084411621
+            },
+            "pupil": {
+              "position": [
+                -0.20499999821186066,
+                -0.4367802143096924,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.04951416701078415,
+                -0.9886479377746582,
+                0.14185814559459686
+              ],
+              "distance_m": 2.5632197856903076,
+              "clearance_in_front_of_body_m": 0.05242037773132324
+            }
+          },
+          "R": {
+            "origin": [
+              0.20499999821186066,
+              -3.0,
+              0.5849999785423279
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "body": {
+              "position": [
+                0.20499999821186066,
+                -0.3751230239868164,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.34554019570350647,
+                -0.8638162016868591,
+                0.3666381239891052
+              ],
+              "distance_m": 2.6248769760131836
+            },
+            "iris": {
+              "position": [
+                0.20499999821186066,
+                -0.41915392875671387,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.050526827573776245,
+                -0.9884029626846313,
+                0.14320158958435059
+              ],
+              "distance_m": 2.580846071243286,
+              "clearance_in_front_of_body_m": 0.04403090476989746
+            },
+            "pupil": {
+              "position": [
+                0.20499999821186066,
+                -0.4273831844329834,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.039432890713214874,
+                -0.9885103106498718,
+                0.14591887593269348
+              ],
+              "distance_m": 2.5726168155670166,
+              "clearance_in_front_of_body_m": 0.05226016044616699
+            }
+          }
+        },
+        "body_identification": "Continuous_ink_body: atlas tile 0",
+        "body_triangle_count": 2944,
+        "body_signed_volume_m3": 0.48574613362185726
+      },
+      "sha256_after": "8eec955ee79fbf930a7034fba3160533b345f2a5fb8dca5737f3edde51f5034e",
+      "source_unchanged": true
+    },
+    "ink-blob-review-scene.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-01\\ink-blob-review-scene.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "329c01650c2c83a30de892fbabcfec1eec9d951c7a9a2063ee3369ed4a79d621",
+      "texture_count": 2,
+      "surface_orientation": {
+        "status": "pass",
+        "errors": [],
+        "eye_rays": {
+          "L": {
+            "origin": [
+              -0.20499999821186066,
+              -3.0,
+              0.5849999785423279
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "body": {
+              "position": [
+                -0.20499999821186066,
+                -0.38365650177001953,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.2386723905801773,
+                -0.8938314318656921,
+                0.37960630655288696
+              ],
+              "distance_m": 2.6163434982299805
+            },
+            "iris": {
+              "position": [
+                -0.20499999821186066,
+                -0.4285550117492676,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.03815334290266037,
+                -0.9919143915176392,
+                0.12103775143623352
+              ],
+              "distance_m": 2.5714449882507324,
+              "clearance_in_front_of_body_m": 0.04489850997924805
+            },
+            "pupil": {
+              "position": [
+                -0.20499999821186066,
+                -0.4366147518157959,
+                0.5849999785423279
+              ],
+              "normal": [
+                -0.01798076555132866,
+                -0.9923976063728333,
+                0.12175239622592926
+              ],
+              "distance_m": 2.563385248184204,
+              "clearance_in_front_of_body_m": 0.05295825004577637
+            }
+          },
+          "R": {
+            "origin": [
+              0.20499999821186066,
+              -3.0,
+              0.5849999785423279
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "body": {
+              "position": [
+                0.20499999821186066,
+                -0.3751230239868164,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.34554019570350647,
+                -0.8638162016868591,
+                0.3666381239891052
+              ],
+              "distance_m": 2.6248769760131836
+            },
+            "iris": {
+              "position": [
+                0.20499999821186066,
+                -0.41915059089660645,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.028055816888809204,
+                -0.9917470812797546,
+                0.12510274350643158
+              ],
+              "distance_m": 2.5808494091033936,
+              "clearance_in_front_of_body_m": 0.04402756690979004
+            },
+            "pupil": {
+              "position": [
+                0.20499999821186066,
+                -0.427229642868042,
+                0.5849999785423279
+              ],
+              "normal": [
+                0.007876642048358917,
+                -0.9920240044593811,
+                0.12580306828022003
+              ],
+              "distance_m": 2.572770357131958,
+              "clearance_in_front_of_body_m": 0.052106618881225586
+            }
+          }
+        },
+        "body_identification": "Continuous_ink_body: atlas tile 0",
+        "body_triangle_count": 1798,
+        "body_signed_volume_m3": 0.48561776097053844
+      },
+      "sha256_after": "329c01650c2c83a30de892fbabcfec1eec9d951c7a9a2063ee3369ed4a79d621",
+      "source_unchanged": true
+    }
+  },
+  "errors": []
+}

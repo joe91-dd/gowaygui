@@ -1,0 +1,36 @@
+{
+  "id": "blue-9",
+  "name": "赤帆神枪手",
+  "tier": 1,
+  "index": 23,
+  "base": 51,
+  "key": "boss-23",
+  "ability": "breakwater",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 73748,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-51",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/d3bf37a4467deeccda6952a0c748d546fbae6f6f9e84fa2cf0282b8701b0d36e_Captain Barbarossa.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24668,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 15.6
+}

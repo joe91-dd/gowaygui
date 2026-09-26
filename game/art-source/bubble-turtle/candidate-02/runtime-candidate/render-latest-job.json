@@ -1,0 +1,20 @@
+{
+  "rendered": [
+    "render-front.png",
+    "render-three-quarter.png",
+    "render-side.png",
+    "render-battle.png",
+    "animation-attack-08-side.png",
+    "animation-attack-13-three-quarter.png",
+    "animation-skill-16-three-quarter.png",
+    "animation-skill-22-three-quarter.png",
+    "animation-rest-36-three-quarter.png",
+    "animation-hit-04-three-quarter.png",
+    "animation-fusion-23-three-quarter.png"
+  ],
+  "threads": 2,
+  "samples": 32,
+  "width": 800,
+  "height": 680,
+  "actual_image_review_pending": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": "blue-2",
+  "name": "珊冠拳师",
+  "tier": 1,
+  "index": 16,
+  "base": 44,
+  "key": "boss-16",
+  "ability": "shock",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 47012,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-44",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/c5b3bf1077891a5c370f04e0bb8020d25f091cb1a5baaaff41fc2d73e5d132d1_Monkroose.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24668,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.3
+}

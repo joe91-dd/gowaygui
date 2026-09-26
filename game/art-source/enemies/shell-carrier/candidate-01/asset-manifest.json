@@ -1,0 +1,134 @@
+{
+  "version": "shell-carrier-candidate-01",
+  "status": "isolated-single-source-candidate-not-promoted-not-final-art",
+  "recorded_at_utc": "2026-09-08T09:45:09.994248+00:00",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_threads": 2,
+  "max_samples": 24,
+  "images_actually_viewed": [
+    "render-three-quarter.png",
+    "render-battle-angle.png"
+  ],
+  "render_processes_exited": true,
+  "triangles": 15684,
+  "vertices": 7904,
+  "bones": 17,
+  "material_count": 1,
+  "half_frame_samples": 417,
+  "enemy_kind": "elite",
+  "display_name": "搬壳大蟹",
+  "recommended_scale": 1.0,
+  "dimensions_blender_xyz": [
+    1.3589516878128052,
+    0.8353595733642578,
+    1.157202124595642
+  ],
+  "embedded_pngs": {
+    "carrier-colour.png": {
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+      "bytes": 70350,
+      "exact_png_byte_offset": 386408
+    },
+    "carrier-roughness.png": {
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039,
+      "exact_png_byte_offset": 457407
+    }
+  },
+  "generator": "game/art-source/enemies/build_shell_carrier.py",
+  "generator_sha256": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f",
+  "original_source": "Internal original crab helpers and limb/eye rig lineage from approved runner/armored sources; original uncovered carrier body, closed ribbed fan-shell load, curve construction and carrying motion. No external stock material or model.",
+  "protected_sources_unchanged": {
+    "game/art-source/enemies/build_armored_crab.py": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24"
+  },
+  "files": [
+    {
+      "path": "export/carrier-colour.png",
+      "bytes": 70350,
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f"
+    },
+    {
+      "path": "export/carrier-roughness.png",
+      "bytes": 6039,
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+    },
+    {
+      "path": "export/shell-carrier.fbx",
+      "bytes": 1135036,
+      "sha256": "f8bb7798a3b0ae5d9adb8255afe89dd316411722c138ef9c3bae75d7361cd8be"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 3328,
+      "sha256": "825f8b86e45e23f0e01a3763b24268337711dfa957e896b33383dfabe98d4d9d"
+    },
+    {
+      "path": "package_candidate.py",
+      "bytes": 4271,
+      "sha256": "5f398bb79d4500a581f6cdefac350fbd20ecebe642839c7c6669ade44a6dd526"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4629,
+      "sha256": "4f475d3aa6d97dd20c46362448fdfccc31ae5ba4a79779dda69bed11b92a0f7d"
+    },
+    {
+      "path": "reference-preservation.json",
+      "bytes": 491,
+      "sha256": "9b89c9c664576bde25cd64c8699eb17fb0d6e0f00146b408fc993200b8f66d3f"
+    },
+    {
+      "path": "render-battle-angle.png",
+      "bytes": 853775,
+      "sha256": "9b4ce22ca3a7a64d04d195105cd08cbd892d0b7ffa248f96e8a6c047e7183068"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 865315,
+      "sha256": "cb64a22f4ac4b7cc488efcc9044c8aff6454885c61ef1fa8054b0ccf42c335bf"
+    },
+    {
+      "path": "review.html",
+      "bytes": 1584,
+      "sha256": "40047a7c71ba30f8608fd4fe7f60d3662b6a87c79513009db1ee307d7a2a1209"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 4173,
+      "sha256": "c52816ec1132fb395289fed11f9b4b06b85bd7b884f7fb86b69acd0ff42305b2"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2845,
+      "sha256": "5b8ef31795e1841df5ae2fa82d03004a5a48fba3b638505bb6fa628c77b1c168"
+    },
+    {
+      "path": "shell-carrier-review-scene.blend",
+      "bytes": 2278970,
+      "sha256": "33bbd25f209d41663cbbfae9f115e638ae277009b4ad66286cb24f97b27b3f99"
+    },
+    {
+      "path": "shell-carrier.blend",
+      "bytes": 2371705,
+      "sha256": "ac5703ed0fad4626566ed307522ab580d8d7dbabbb0cb9815fbf8829a0b413d3"
+    },
+    {
+      "path": "shell-carrier.glb",
+      "bytes": 684376,
+      "sha256": "035164085da717478076ddad51999d456ba3158b4bece2842d29e52d312484fd"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 882,
+      "sha256": "2539f83b93318c5f444dc7824e3be5f6ecc8401a4fa634e66359e9c0a483a971"
+    },
+    {
+      "path": "verify_candidate.py",
+      "bytes": 7879,
+      "sha256": "b261e6cc4e6cd8c987ba73bf0ab237c072f918f7d1ecee1419c232218e3df6ea"
+    }
+  ]
+}

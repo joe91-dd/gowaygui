@@ -1,0 +1,888 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-10.bin",
+    "__original-animation-11.bin",
+    "__original-animation-12.bin",
+    "__original-animation-13.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin",
+    "__original-animation-5.bin",
+    "__original-animation-6.bin",
+    "__original-animation-7.bin",
+    "__original-animation-8.bin",
+    "__original-animation-9.bin"
+  ],
+  "subMetas": {
+    "16772": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@16772",
+      "displayName": "",
+      "id": "16772",
+      "name": "edge.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "17644": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@17644",
+      "displayName": "",
+      "id": "17644",
+      "name": "aquaLight.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "52680": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@52680",
+      "displayName": "",
+      "id": "52680",
+      "name": "StoneApprovedRig|attack.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "99038": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@99038",
+      "displayName": "",
+      "id": "99038",
+      "name": "rock.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "825ed": {
+      "importer": "gltf-mesh",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@825ed",
+      "displayName": "",
+      "id": "825ed",
+      "name": "Sphere.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 57262
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d5b96": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@d5b96",
+      "displayName": "",
+      "id": "d5b96",
+      "name": "StoneApprovedRig|arrive.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "5d876": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@5d876",
+      "displayName": "",
+      "id": "5d876",
+      "name": "StoneApprovedRig|attack_alt.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.1333333253860474
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "c8844": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@c8844",
+      "displayName": "",
+      "id": "c8844",
+      "name": "StoneApprovedRig|attack_heavy.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.399999976158142
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "7ae38": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@7ae38",
+      "displayName": "",
+      "id": "7ae38",
+      "name": "StoneApprovedRig|death.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.600000023841858
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "81ab3": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@81ab3",
+      "displayName": "",
+      "id": "81ab3",
+      "name": "StoneApprovedRig|hit.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "dd56b": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@dd56b",
+      "displayName": "",
+      "id": "dd56b",
+      "name": "StoneApprovedRig|idle.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 4
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "c529d": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@c529d",
+      "displayName": "",
+      "id": "c529d",
+      "name": "StoneApprovedRig|skill.animation",
+      "userData": {
+        "gltfIndex": 7,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "0f799": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@0f799",
+      "displayName": "",
+      "id": "0f799",
+      "name": "StoneApprovedRig|skill_end.animation",
+      "userData": {
+        "gltfIndex": 8,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.800000011920929
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "3005f": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@3005f",
+      "displayName": "",
+      "id": "3005f",
+      "name": "StoneApprovedRig|skill_loop.animation",
+      "userData": {
+        "gltfIndex": 9,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.600000023841858
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "c4f69": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@c4f69",
+      "displayName": "",
+      "id": "c4f69",
+      "name": "StoneApprovedRig|skill_start.animation",
+      "userData": {
+        "gltfIndex": 10,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6000000238418579
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "37fdd": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@37fdd",
+      "displayName": "",
+      "id": "37fdd",
+      "name": "StoneApprovedRig|turn_left.animation",
+      "userData": {
+        "gltfIndex": 11,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "8e9a0": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@8e9a0",
+      "displayName": "",
+      "id": "8e9a0",
+      "name": "StoneApprovedRig|turn_right.animation",
+      "userData": {
+        "gltfIndex": 12,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "8b2d3": {
+      "importer": "gltf-animation",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@8b2d3",
+      "displayName": "",
+      "id": "8b2d3",
+      "name": "StoneApprovedRig|walk.animation",
+      "userData": {
+        "gltfIndex": 13,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.0666667222976685
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 48
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dc44b": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@dc44b",
+      "displayName": "",
+      "id": "dc44b",
+      "name": "skin.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3de99": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@3de99",
+      "displayName": "",
+      "id": "3de99",
+      "name": "rockLight.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fa87f": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@fa87f",
+      "displayName": "",
+      "id": "fa87f",
+      "name": "aqua.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "375e2": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@375e2",
+      "displayName": "",
+      "id": "375e2",
+      "name": "aquaDeep.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4bede": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@4bede",
+      "displayName": "",
+      "id": "4bede",
+      "name": "bellyEdge.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3c7e1": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@3c7e1",
+      "displayName": "",
+      "id": "3c7e1",
+      "name": "belly.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "596c1": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@596c1",
+      "displayName": "",
+      "id": "596c1",
+      "name": "muzzle.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b31f4": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@b31f4",
+      "displayName": "",
+      "id": "b31f4",
+      "name": "white.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "51bcd": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@51bcd",
+      "displayName": "",
+      "id": "51bcd",
+      "name": "irisDark.material",
+      "userData": {
+        "gltfIndex": 11
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "baf09": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@baf09",
+      "displayName": "",
+      "id": "baf09",
+      "name": "iris.material",
+      "userData": {
+        "gltfIndex": 12
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "35d4d": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@35d4d",
+      "displayName": "",
+      "id": "35d4d",
+      "name": "pupil.material",
+      "userData": {
+        "gltfIndex": 13
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0b4f3": {
+      "importer": "gltf-material",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@0b4f3",
+      "displayName": "",
+      "id": "0b4f3",
+      "name": "mouth.material",
+      "userData": {
+        "gltfIndex": 14
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "afe38": {
+      "importer": "gltf-scene",
+      "uuid": "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@afe38",
+      "displayName": "",
+      "id": "afe38",
+      "name": "stone.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "StoneApprovedRig|arrive",
+        "duration": 2,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|arrive",
+            "from": 0,
+            "to": 2,
+            "wrapMode": 2,
+            "previousId": "d5b96"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|attack",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|attack",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2,
+            "previousId": "52680"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|attack_alt",
+        "duration": 1.1333333253860474,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|attack_alt",
+            "from": 0,
+            "to": 1.1333333253860474,
+            "wrapMode": 2,
+            "previousId": "5d876"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|attack_heavy",
+        "duration": 1.399999976158142,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|attack_heavy",
+            "from": 0,
+            "to": 1.399999976158142,
+            "wrapMode": 2,
+            "previousId": "c8844"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|death",
+        "duration": 1.600000023841858,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|death",
+            "from": 0,
+            "to": 1.600000023841858,
+            "wrapMode": 2,
+            "previousId": "7ae38"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|hit",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|hit",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2,
+            "previousId": "81ab3"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|idle",
+        "duration": 4,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|idle",
+            "from": 0,
+            "to": 4,
+            "wrapMode": 2,
+            "previousId": "dd56b"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|skill",
+        "duration": 3,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|skill",
+            "from": 0,
+            "to": 3,
+            "wrapMode": 2,
+            "previousId": "c529d"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|skill_end",
+        "duration": 0.800000011920929,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|skill_end",
+            "from": 0,
+            "to": 0.800000011920929,
+            "wrapMode": 2,
+            "previousId": "0f799"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|skill_loop",
+        "duration": 1.600000023841858,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|skill_loop",
+            "from": 0,
+            "to": 1.600000023841858,
+            "wrapMode": 2,
+            "previousId": "3005f"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|skill_start",
+        "duration": 0.6000000238418579,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|skill_start",
+            "from": 0,
+            "to": 0.6000000238418579,
+            "wrapMode": 2,
+            "previousId": "c4f69"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|turn_left",
+        "duration": 1.2000000476837158,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|turn_left",
+            "from": 0,
+            "to": 1.2000000476837158,
+            "wrapMode": 2,
+            "previousId": "37fdd"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|turn_right",
+        "duration": 1.2000000476837158,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|turn_right",
+            "from": 0,
+            "to": 1.2000000476837158,
+            "wrapMode": 2,
+            "previousId": "8e9a0"
+          }
+        ]
+      },
+      {
+        "name": "StoneApprovedRig|walk",
+        "duration": 1.0666667222976685,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "StoneApprovedRig|walk",
+            "from": 0,
+            "to": 1.0666667222976685,
+            "wrapMode": 2,
+            "previousId": "8b2d3"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@825ed"
+      ],
+      "skeletons": [
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@dc44b",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@16772",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@99038",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@3de99",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@fa87f",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@17644",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@375e2",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@4bede",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@3c7e1",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@596c1",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@b31f4",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@51bcd",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@baf09",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@35d4d",
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@0b4f3"
+      ],
+      "scenes": [
+        "bcf7db82-9da4-44e8-86d3-a339ba60b2ff@afe38"
+      ]
+    }
+  }
+}

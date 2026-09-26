@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2020","module":"commonjs","strict":true,"skipLibCheck":true,"outDir":".server-build","rootDir":"assets/scripts"},"include":["assets/scripts/core/**/*.ts","assets/scripts/platform/storage.ts"]}

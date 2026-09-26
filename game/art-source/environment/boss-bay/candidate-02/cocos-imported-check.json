@@ -1,0 +1,168 @@
+{
+  "status": "pass",
+  "method": "Actual c01/c02 FBX binary geometry and per-face vertex/UV/normal comparison; no Blender process",
+  "sourceFbxSha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+  "correctedFbxSha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+  "checks": [
+    {
+      "mesh": "Continuous_grass_island_geometry",
+      "verticesUnchanged": 5201,
+      "polygons": 4556,
+      "grassFacesReversed": 2304,
+      "uvPerVertexUnchanged": true
+    },
+    {
+      "mesh": "Coast_chamfer_rock_00_geometry",
+      "verticesUnchanged": 26489,
+      "polygons": 20612,
+      "grassFacesReversed": 0,
+      "uvPerVertexUnchanged": true
+    },
+    {
+      "mesh": "Sanctuary_luminous_pearl_geometry",
+      "verticesUnchanged": 1248,
+      "polygons": 1152,
+      "grassFacesReversed": 0,
+      "uvPerVertexUnchanged": true
+    }
+  ],
+  "grassPolygonsReversed": 2304,
+  "otherPolygonsUnchanged": 24016,
+  "maximumUnrelatedNormalDelta": 0,
+  "grassNormalAudit": {
+    "polygons": 2304,
+    "nondegenerate": 2304,
+    "up": 2304,
+    "down": 0,
+    "side": 0,
+    "degenerate": 0,
+    "geometricZMin": 0.9718504272181611,
+    "geometricZMax": 1.0,
+    "storedNormalZMin": 0.9785884022712708,
+    "storedNormalZMax": 1.0
+  },
+  "transformsAxesUnchanged": true,
+  "atlasesOriginalBytes": true,
+  "fullFirstRoundFreezePass": true,
+  "cocosImportedStatus": "actual-imported-triangles-pass",
+  "cocosImportedEvidence": {
+    "path": "game/library/5b/5b5b1616-e6b8-4b3c-86ea-c733fe071d18@ae720.json",
+    "jsonSha256": "d30d35b15082474fc55176a401f4d238911cb7153910c03694eb381c8b5785be",
+    "binSha256": "cf2ee953dbbf577c65c49d86a9909dc8716c18764b87f75f927f8c21fb9fb5ca",
+    "groupsByImportedUvTile": {
+      "25": {
+        "triangles": 4608,
+        "degenerate": 128,
+        "storedZPositive": 4608,
+        "localZPositive": 4480
+      },
+      "27": {
+        "triangles": 556,
+        "localZPositive": 556,
+        "storedZPositive": 556
+      },
+      "4": {
+        "triangles": 224,
+        "localZPositive": 224,
+        "storedZPositive": 224
+      },
+      "28": {
+        "triangles": 768,
+        "side": 256,
+        "storedZNegative": 768,
+        "localZNegative": 512
+      },
+      "21": {
+        "triangles": 1120,
+        "localZNegative": 416,
+        "storedZNegative": 704,
+        "side": 288,
+        "localZPositive": 416,
+        "storedZPositive": 416
+      },
+      "6": {
+        "triangles": 2064,
+        "localZNegative": 768,
+        "storedZNegative": 1029,
+        "side": 528,
+        "storedZPositive": 1035,
+        "localZPositive": 768
+      }
+    },
+    "groundNodeRotation": {
+      "__type__": "cc.Quat",
+      "x": -0.7071068407911908,
+      "y": 0,
+      "z": 0,
+      "w": 0.7071067215818992
+    },
+    "groundNodeScale": {
+      "__type__": "cc.Vec3",
+      "x": 100,
+      "y": 100,
+      "z": 100
+    },
+    "material": {
+      "__type__": "cc.Material",
+      "_name": "Island_atlas",
+      "_objFlags": 0,
+      "__editorExtras__": {},
+      "_native": "",
+      "_effectAsset": {
+        "__uuid__": "f648964e-8d32-41fc-9ac9-7a1e714dd17b",
+        "__expectedType__": "cc.EffectAsset"
+      },
+      "_techIdx": 0,
+      "_defines": [
+        {
+          "DCC_APP_NAME": 2,
+          "HAS_EXPORTED_METALLIC": true,
+          "USE_ALBEDO_MAP": true,
+          "USE_SHININESS_MAP": true
+        }
+      ],
+      "_states": [
+        {
+          "rasterizerState": {},
+          "blendState": {
+            "targets": [
+              {}
+            ]
+          },
+          "depthStencilState": {}
+        }
+      ],
+      "_props": [
+        {
+          "mainColor": {
+            "__type__": "cc.Color",
+            "r": 231,
+            "g": 231,
+            "b": 231,
+            "a": 255
+          },
+          "mainTexture": {
+            "__uuid__": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@0a1ef",
+            "__expectedType__": "cc.Texture2D"
+          },
+          "shininessExponent": 25,
+          "shininessExponentMap": {
+            "__uuid__": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@947de",
+            "__expectedType__": "cc.Texture2D"
+          },
+          "emissiveScale": 0,
+          "emissive": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "metallic": 0,
+          "specularFactor": 0.11999999731779099,
+          "transparencyFactor": 0
+        }
+      ]
+    }
+  }
+}

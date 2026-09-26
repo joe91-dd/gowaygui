@@ -1,0 +1,69 @@
+{
+  "author": "Cethiel",
+  "license": "CC0 1.0",
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-09-16",
+  "sources": [
+    "https://opengameart.org/content/water-magic-effect",
+    "https://opengameart.org/content/earth-impact-magic-effect",
+    "https://opengameart.org/content/nature-magic-effect",
+    "https://opengameart.org/content/arcane-magic-effect"
+  ],
+  "changes": "Frame padding and atlas packing; runtime colour grading, interpolation, ground alignment and pooled playback. Original ZIP files retained.",
+  "sequences": [
+    {
+      "row": 0,
+      "frames": 5,
+      "files": [
+        "water\\03\\Water__01.png",
+        "water\\03\\Water__02.png",
+        "water\\03\\Water__03.png",
+        "water\\03\\Water__04.png",
+        "water\\03\\Water__05.png"
+      ]
+    },
+    {
+      "row": 1,
+      "frames": 5,
+      "files": [
+        "earth\\2\\Earth-Impact_06.png",
+        "earth\\2\\Earth-Impact_07.png",
+        "earth\\2\\Earth-Impact_08.png",
+        "earth\\2\\Earth-Impact_09.png",
+        "earth\\2\\Earth-Impact_10.png"
+      ]
+    },
+    {
+      "row": 2,
+      "frames": 7,
+      "files": [
+        "nature\\1-1.png",
+        "nature\\1-2.png",
+        "nature\\1-3.png",
+        "nature\\1-4.png",
+        "nature\\1-5.png",
+        "nature\\1-6.png",
+        "nature\\1-7.png"
+      ]
+    },
+    {
+      "row": 3,
+      "frames": 7,
+      "files": [
+        "arcane\\05\\Arcane_Effect_1.png",
+        "arcane\\05\\Arcane_Effect_2.png",
+        "arcane\\05\\Arcane_Effect_3.png",
+        "arcane\\05\\Arcane_Effect_4.png",
+        "arcane\\05\\Arcane_Effect_5.png",
+        "arcane\\05\\Arcane_Effect_6.png",
+        "arcane\\05\\Arcane_Effect_7.png"
+      ]
+    }
+  ],
+  "sha256": {
+    "arcane.zip": "e404dd03289e41c87e64a67a781d4c5dc2b91cb1a45eb54883314231f1fd7b8d",
+    "earth.zip": "242fe462db1a0f74c08f8bb6c52202aa846017b2d73059adbf2cb3d3e701a1b6",
+    "nature.zip": "46f44a30d38b65d55ed1101ce8dc8907e31043958abaf9e2b1894508438815f8",
+    "water.zip": "b069fde2ce7bcbad97f7d66537192fd5399cb03fa6f42a6503bbb3d672659583"
+  }
+}

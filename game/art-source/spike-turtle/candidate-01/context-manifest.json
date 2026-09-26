@@ -1,0 +1,24 @@
+{
+  "status": "Offline Blender composition of actual authored meshes; not Cocos gameplay screenshot",
+  "source_hashes": {
+    "game\\art-source\\environment\\tidal-island-review-scene.blend": "76f84ececca5a438a4bdf71a112ed6c2164141fa957512a255f555d09c532120",
+    "game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob-review-scene.blend": "c3e251adfea80191ca4019740d5ad90a6ee99d7f0cab44ef8b3f3818b12a9f7e",
+    "game\\art-source\\spike-turtle\\candidate-01\\spike-turtle-review-scene.blend": "2c7aa1235d6cc5afe45f94caa97c9037f10de2c5f3e0b856fc2779e942ec047a"
+  },
+  "levelId": 1,
+  "slot_cocos": {
+    "x": -5,
+    "y": 0.292,
+    "z": 1
+  },
+  "spike_scale": 0.65,
+  "spike_pose": "attack 7",
+  "enemy_scale": 0.75,
+  "route_surface_y": 0.064,
+  "threads": 2,
+  "samples": 32,
+  "render_size": [
+    800,
+    680
+  ]
+}

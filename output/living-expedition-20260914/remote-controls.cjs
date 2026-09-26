@@ -1,0 +1,10 @@
+const fs=require('fs'),file='game/assets/scripts/view/ActiveSkillControls.ts';let s=fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n');const r=(a,b)=>{if(!s.includes(a))throw Error(a);s=s.replace(a,b);};
+r("import {BattleState,BattleUnit,", "import {BattleCommand,BattleState,BattleUnit,");
+r('private available:()=>boolean){}','private available:()=>boolean,private remote?:{cast:(command:BattleCommand)=>boolean;changed:()=>void;key:(unit:BattleUnit)=>string}){}\n  private key(u:BattleUnit):string{return this.remote?.key(u)??u.turtleId;}\n  private cast(command:BattleCommand):boolean{return this.remote?this.remote.cast(command):this.context(b=>commandBattle(b,command));}');
+s=s.replaceAll('.includes(u.turtleId)','.includes(this.key(u))').replaceAll('ids.has(u.turtleId)','ids.has(this.key(u))').replaceAll('ids.delete(u.turtleId)','ids.delete(this.key(u))').replaceAll('ids.add(u.turtleId)','ids.add(this.key(u))').replaceAll('[],u.turtleId', '[],this.key(u)');
+r('b.manualSkillTurtles=[...(this.service.snapshot.settings.manualSkillTurtles??[])];','if(!this.remote)b.manualSkillTurtles=[...(this.service.snapshot.settings.manualSkillTurtles??[])];');
+r('this.context(b=>{b.manualSkillTurtles=value;});this.repaint();','this.context(b=>{if(!this.remote)b.manualSkillTurtles=value;});this.remote?.changed();this.repaint();');
+r('this.context(b=>{b.autoSkills=value;});this.repaint();','this.context(b=>{if(!this.remote)b.autoSkills=value;});this.remote?.changed();this.repaint();');
+r('this.context(b=>b.manualSkillTurtles=ids);this.repaint();','this.context(b=>{if(!this.remote)b.manualSkillTurtles=ids;});this.remote?.changed();this.repaint();');
+r("const accepted=aim.valid&&this.context(b=>commandBattle(b,{type:'cast',unitId:aim.unitId,skillId:aim.skill,...(mode==='area'?{point:aim.point}:mode==='enemy'?{targetId:aim.targetId}:{})}));", "const accepted=aim.valid&&this.cast({type:'cast',unitId:aim.unitId,skillId:aim.skill,...(mode==='area'?{point:aim.point}:mode==='enemy'?{targetId:aim.targetId}:{})});");
+fs.writeFileSync(file,s);

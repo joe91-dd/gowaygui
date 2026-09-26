@@ -1,0 +1,22 @@
+{
+  "asset": "game/assets/resources/art-v2/shop-icons.png",
+  "generator": "built-in image_gen",
+  "sha256": "012a3bee012b9f57bc6490fc371205c5f91cbe25eae7cab19ed612ac64c81f96",
+  "reference": "C:/Users/Administrator/Desktop/龟/11_商城页面与礼包概率参考.png",
+  "referenceRole": "Approved visual style only, inspected before generation. Pack contents follow existing game materials, not the mockup potions and diamonds.",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a086f7-e260-77a3-94db-453b9de0c3cc/exec-2bd08fa8-46b8-4456-8e46-bfca75f6e0f8.png",
+  "actualDimensions": [1536,1024],
+  "mode": "RGBA",
+  "alphaRange": [0,254],
+  "fullyTransparentPixelCount": 789876,
+  "coordinateConvention": "Top-left image origin; rectangles [x,y,width,height]. All six sprites use native 480x480 square frames. No cropping/resampling of PNG performed.",
+  "notes": ["Six distinct item illustrations in 3 columns by 2 rows.", "Four seafood types in each material gift are crab meat, clam meat, fish and sea cucumber; prepared stylized food with no gore.", "No currency, diamonds, potions, text or prices are embedded in this art.", "Raw RGB hidden behind alpha may show a colored background in previews that ignore alpha. Actual background alpha is zero."],
+  "frames": {
+    "turtleBasic": {"rect": [16,16,480,480], "visibleAlpha8Bounds": [39,54,427,410], "description": "Tan turtle surprise bag"},
+    "turtleAdvanced": {"rect": [528,16,480,480], "visibleAlpha8Bounds": [566,48,416,416], "description": "Purple and gold premium turtle bag"},
+    "bookRandom": {"rect": [1040,16,480,480], "visibleAlpha8Bounds": [1059,82,439,363], "description": "Blue skill books"},
+    "bookAttack": {"rect": [16,528,480,480], "visibleAlpha8Bounds": [41,576,443,362], "description": "Red attack skill books"},
+    "materialRandom": {"rect": [528,528,480,480], "visibleAlpha8Bounds": [536,577,464,349], "description": "Four seafood training foods on a wood tray"},
+    "materialFixed": {"rect": [1040,528,480,480], "visibleAlpha8Bounds": [1047,567,456,398], "description": "Closed premium supply chest with four seafood foods"}
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "method": "BVH candidates every half-frame; face polygons rest y<-1.20,z>.40,normal.y<-.15. Back-head/neck embedding excluded; key-pose visual review remains necessary.",
+  "clips": {
+    "attack": {
+      "samples": [
+        {
+          "frame": 1.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 1.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 2.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 2.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 3.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 3.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 4.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 4.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 5.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 5.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 6.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 6.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 7.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 7.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 8.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 8.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 9.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 9.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 10.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 10.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 11.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 11.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 12.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 12.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 13.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 13.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 14.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 14.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 15.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 15.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 16.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 16.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 17.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 17.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 18.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 18.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 19.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 19.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 20.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 20.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 21.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 21.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 22.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 22.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 23.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 23.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 24.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 24.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 25.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 25.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 26.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 26.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 27.0,
+          "shell": 0,
+          "front_legs": 0
+        }
+      ],
+      "max_shell": 0,
+      "max_front_legs": 0
+    },
+    "hit": {
+      "samples": [
+        {
+          "frame": 1.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 1.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 2.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 2.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 3.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 3.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 4.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 4.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 5.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 5.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 6.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 6.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 7.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 7.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 8.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 8.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 9.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 9.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 10.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 10.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 11.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 11.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 12.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 12.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 13.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 13.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 14.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 14.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 15.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 15.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 16.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 16.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 17.0,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 17.5,
+          "shell": 0,
+          "front_legs": 0
+        },
+        {
+          "frame": 18.0,
+          "shell": 0,
+          "front_legs": 0
+        }
+      ],
+      "max_shell": 0,
+      "max_front_legs": 0
+    }
+  }
+}

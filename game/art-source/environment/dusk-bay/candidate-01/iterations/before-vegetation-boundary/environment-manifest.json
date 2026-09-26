@@ -1,0 +1,163 @@
+{
+  "version": "dusk-bay-candidate-01",
+  "levelId": 3,
+  "levelName": "薄暮海湾",
+  "dataSource": "assets/scripts/core/data.ts",
+  "dataSourceSha256": "aaeaf0026cb3e27ef2c63ce558b14df9229ed455f9a4f4718d27b3e00eb90e73",
+  "coordinateConvention": "Cocos world x/y-up/z; Blender source x/-z/y",
+  "route": [
+    {
+      "x": -9.0,
+      "z": -1.0
+    },
+    {
+      "x": -5.0,
+      "z": 0.0
+    },
+    {
+      "x": -2.0,
+      "z": -2.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 4.0,
+      "z": 0.0
+    },
+    {
+      "x": 7.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 1.0
+    }
+  ],
+  "routeSurfaceY": 0.064,
+  "waterY": -1.06,
+  "roadConstruction": "Single non-overlapping planar polygon offset from actual route, round outer joins / intersected inner joins, explicitly triangulated",
+  "sourceSlots": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "z": -1.0
+    }
+  ],
+  "slotLayoutSource": "Live level3 shared slots; all five retained, no gameplay coordinate change",
+  "layoutProposalStatus": "offline-original-layout-no-move-required-for-foot-support",
+  "slots": [
+    {
+      "x": -5.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "y": 0.292,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "y": 0.292,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "y": 0.292,
+      "z": -1.0
+    }
+  ],
+  "gameplayBase": {
+    "x": 9.0,
+    "y": 0.064,
+    "z": 1.0
+  },
+  "pearl": {
+    "x": 9.0,
+    "y": 1.1,
+    "z": 1.0
+  },
+  "boundsXZ": [
+    -11.051838874816895,
+    11.553962707519531,
+    -5.497729301452637,
+    5.026238441467285
+  ],
+  "nominalFootprintXZ": [
+    22,
+    12
+  ],
+  "cameraSuggestion": {
+    "position": {
+      "x": 0,
+      "y": 15,
+      "z": 18
+    },
+    "target": {
+      "x": 0,
+      "y": 0.2,
+      "z": 0
+    },
+    "baseVerticalFovDegrees": 42,
+    "responsiveRule": "same as GameEntry.resizeViewport: preserve 1280/720 horizontal framing"
+  },
+  "sourceObjects": 1477,
+  "authorship": "Original procedural geometry, UV, colours, and composition; no downloaded game or stock assets.",
+  "sourceModule": "Project original tidal-island v04 and tutorial candidate geometry/material builders, adapted to level 3 with regenerated terrain/road, evening cove, low lamps and small headland beacon",
+  "status": "First dusk-bay source candidate; original station coverage retained; runtime integration and visual acceptance pending.",
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 4458,
+      "triangles": 8000
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 33831,
+      "triangles": 54386
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 1458,
+      "triangles": 2680
+    }
+  ],
+  "totalTriangles": 65066,
+  "opaqueDrawCalls": 3,
+  "materials": 2,
+  "fbxSha256": "546fc515b43fd4c14fdd161f3e67c0aa23417cf8e8cf3ca53291e7116966bfa1",
+  "geometryBoundsCocos": {
+    "min": [
+      -11.97614574432373,
+      -1.869998574256897,
+      -6.048585891723633
+    ],
+    "max": [
+      12.252265930175781,
+      2.7541165351867676,
+      5.567645072937012
+    ]
+  }
+}

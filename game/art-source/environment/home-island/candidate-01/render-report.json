@@ -1,0 +1,95 @@
+{
+  "status": "actual-offline-views-not-runtime-acceptance",
+  "threads": 2,
+  "samples": 32,
+  "resolution": [
+    1000,
+    700
+  ],
+  "environmentFbxSha256": "0c73b77cefa52a26da9b3c4fd751bb42573eff431859bea02342164b07a5b6af",
+  "previewReferences": [
+    {
+      "role": "stone",
+      "path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+      "scale": 0.65,
+      "anchor": [
+        -0.8,
+        0.16,
+        2.7
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "spike",
+      "path": "game/assets/resources/models/spike-turtle/spike-turtle.fbx",
+      "sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+      "scale": 0.65,
+      "anchor": [
+        -2.4,
+        0.16,
+        -0.25
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "crystal",
+      "path": "game/assets/resources/models/crystal-turtle/crystal-turtle.fbx",
+      "sha256": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+      "scale": 0.65,
+      "anchor": [
+        -3.15,
+        0.16,
+        2.15
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    },
+    {
+      "role": "leaf",
+      "path": "game/assets/resources/models/leaf-turtle/leaf-turtle.fbx",
+      "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+      "scale": 0.65,
+      "anchor": [
+        1.55,
+        0.16,
+        2.3
+      ],
+      "scope": "Preview only; environment FBX already exported without these objects"
+    }
+  ],
+  "bubble": "Empty reserved anchor; no fifth unapproved character substituted",
+  "views": [
+    {
+      "name": "home-overview",
+      "positionCocos": [
+        1.8,
+        8.2,
+        12.8
+      ],
+      "targetCocos": [
+        -0.45,
+        0.9,
+        0
+      ],
+      "orthographicScale": null,
+      "seconds": 66.99110099999962,
+      "sha256": "1bb363ab058cf2bcb43c23d791c5afc9cce40940219e9b22b2be6cc61246331d"
+    },
+    {
+      "name": "house-detail",
+      "positionCocos": [
+        5.3,
+        5.0,
+        5.3
+      ],
+      "targetCocos": [
+        0.05,
+        1.9,
+        -1.75
+      ],
+      "orthographicScale": 7.1,
+      "seconds": 64.99234230000002,
+      "sha256": "f6822c5613e8caf804a07712ef7d4809b8c63c48883149f86b3d5a216ccb3752"
+    }
+  ]
+}

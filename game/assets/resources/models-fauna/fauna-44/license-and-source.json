@@ -1,0 +1,43 @@
+{
+  "key": "fauna-44",
+  "name": "铁拳海僧",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Monkroose",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\monkroose-47ca67\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/c5b3bf1077891a5c370f04e0bb8020d25f091cb1a5baaaff41fc2d73e5d132d1_Monkroose.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "67cc3b54eede5fc0b8e4556710cb24ac47e3cbf89dda051b5c31d37e73907fa1",
+  "bytes": 1356916,
+  "animations": 14,
+  "displayName": "铁拳海僧",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 45004,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-44",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.1
+}

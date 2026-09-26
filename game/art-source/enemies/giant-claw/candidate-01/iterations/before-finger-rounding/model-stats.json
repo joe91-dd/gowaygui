@@ -1,0 +1,296 @@
+{
+  "version": "giant-claw-shape-candidate-01",
+  "enemy_kind": "boss",
+  "display_name": "巨钳蟹",
+  "stage": "Editable shape prototype only; no rig/actions/FBX/runtime export",
+  "triangles": 19952,
+  "vertices": 10046,
+  "editable_mesh_count": 36,
+  "material_count": 1,
+  "material": "GiantClaw_Toy_Atlas",
+  "bone_count": 0,
+  "action_count": 0,
+  "walking_legs": 8,
+  "parts": {
+    "Wide_sturdy_boss_body": {
+      "vertices": 432,
+      "triangles": 860,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Broad_cream_belly": {
+      "vertices": 398,
+      "triangles": 792,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Solid_wide_upper_shell": {
+      "vertices": 914,
+      "triangles": 1824,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Soft_continuous_shell_bumper": {
+      "vertices": 640,
+      "triangles": 1280,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Broad_low_shell_keystone": {
+      "vertices": 290,
+      "triangles": 576,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Shallow_rounded_shell_contour_L": {
+      "vertices": 136,
+      "triangles": 268,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Shallow_rounded_shell_contour_R": {
+      "vertices": 136,
+      "triangles": 268,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "leg_L1_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_L1",
+      "closed_positive_volume": true
+    },
+    "leg_L2_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_L2",
+      "closed_positive_volume": true
+    },
+    "leg_L3_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_L3",
+      "closed_positive_volume": true
+    },
+    "leg_L4_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_L4",
+      "closed_positive_volume": true
+    },
+    "leg_R1_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_R1",
+      "closed_positive_volume": true
+    },
+    "leg_R2_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_R2",
+      "closed_positive_volume": true
+    },
+    "leg_R3_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_R3",
+      "closed_positive_volume": true
+    },
+    "leg_R4_weight_bearing_leg": {
+      "vertices": 192,
+      "triangles": 380,
+      "planned_joint": "leg_R4",
+      "closed_positive_volume": true
+    },
+    "Dominant_short_power_arm": {
+      "vertices": 84,
+      "triangles": 164,
+      "planned_joint": "claw_R",
+      "closed_positive_volume": true
+    },
+    "Dominant_giant_palm": {
+      "vertices": 614,
+      "triangles": 1224,
+      "planned_joint": "claw_R",
+      "closed_positive_volume": true
+    },
+    "Dominant_fixed_round_finger": {
+      "vertices": 156,
+      "triangles": 308,
+      "planned_joint": "claw_R",
+      "closed_positive_volume": true
+    },
+    "Dominant_moving_round_finger": {
+      "vertices": 120,
+      "triangles": 236,
+      "planned_joint": "jaw_R",
+      "closed_positive_volume": true
+    },
+    "Dominant_palm_soft_crease": {
+      "vertices": 120,
+      "triangles": 236,
+      "planned_joint": "claw_R",
+      "closed_positive_volume": true
+    },
+    "Minor_short_power_arm": {
+      "vertices": 84,
+      "triangles": 164,
+      "planned_joint": "claw_L",
+      "closed_positive_volume": true
+    },
+    "Minor_round_palm": {
+      "vertices": 366,
+      "triangles": 728,
+      "planned_joint": "claw_L",
+      "closed_positive_volume": true
+    },
+    "Minor_fixed_round_finger": {
+      "vertices": 156,
+      "triangles": 308,
+      "planned_joint": "claw_L",
+      "closed_positive_volume": true
+    },
+    "Minor_moving_round_finger": {
+      "vertices": 120,
+      "triangles": 236,
+      "planned_joint": "jaw_L",
+      "closed_positive_volume": true
+    },
+    "Wide_soft_boss_muzzle": {
+      "vertices": 602,
+      "triangles": 1200,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Integrated_eye_socket_L": {
+      "vertices": 422,
+      "triangles": 840,
+      "planned_joint": "eye_L",
+      "closed_positive_volume": true
+    },
+    "Spherical_boss_eye_L": {
+      "vertices": 614,
+      "triangles": 1224,
+      "planned_joint": "eye_L",
+      "closed_positive_volume": true
+    },
+    "Broad_confident_brow_L": {
+      "vertices": 180,
+      "triangles": 356,
+      "planned_joint": "eye_L",
+      "closed_positive_volume": true
+    },
+    "Warm_cheek_L": {
+      "vertices": 164,
+      "triangles": 324,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Integrated_eye_socket_R": {
+      "vertices": 422,
+      "triangles": 840,
+      "planned_joint": "eye_R",
+      "closed_positive_volume": true
+    },
+    "Spherical_boss_eye_R": {
+      "vertices": 614,
+      "triangles": 1224,
+      "planned_joint": "eye_R",
+      "closed_positive_volume": true
+    },
+    "Broad_confident_brow_R": {
+      "vertices": 180,
+      "triangles": 356,
+      "planned_joint": "eye_R",
+      "closed_positive_volume": true
+    },
+    "Warm_cheek_R": {
+      "vertices": 164,
+      "triangles": 324,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Confident_offcentre_smile": {
+      "vertices": 210,
+      "triangles": 416,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Mouth_corner_L": {
+      "vertices": 86,
+      "triangles": 168,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    },
+    "Mouth_corner_R": {
+      "vertices": 86,
+      "triangles": 168,
+      "planned_joint": "body",
+      "closed_positive_volume": true
+    }
+  },
+  "bounds_blender_xyz": {
+    "min": [
+      -1.0748372077941895,
+      -0.7677403092384338,
+      0.0
+    ],
+    "max": [
+      1.3657217025756836,
+      0.5897020101547241,
+      1.273119568824768
+    ]
+  },
+  "dimensions_blender_width_depth_height": [
+    2.440558910369873,
+    1.357442319393158,
+    1.273119568824768
+  ],
+  "provisional_model_scale": 1.0,
+  "expected_width_height_depth_at_scale1": [
+    2.440558910369873,
+    1.273119568824768,
+    1.357442319393158
+  ],
+  "source_forward": "Blender -Y; Blender Z up; foot origin Z=0",
+  "future_axis_contract": "Follow existing enemies: FBX forward=-Z/up=Y, expected Cocos +Z; no export performed",
+  "proportions": {
+    "dominant_palm_radii": [
+      0.322,
+      0.257,
+      0.3
+    ],
+    "minor_palm_radii": [
+      0.164,
+      0.137,
+      0.156
+    ],
+    "palm_width_ratio": 1.9634146341463414,
+    "shell_width": 1.432,
+    "shell_height": 0.76,
+    "carrier_c02_width_at_scale1": 1.3589516878128052,
+    "prototype_width_to_carrier_ratio": 1.7959129321939946
+  },
+  "mechanism_reference": "core boss unchanged: hp2400 armor20 resist20 speed.45 attack60 interval1.8 range3 leak10. Prototype does not add abilities or change damage timing.",
+  "atlas": {
+    "size": [
+      512,
+      512
+    ],
+    "colour": "sRGB",
+    "roughness": "Non-Color RGB grayscale .38-.45",
+    "alpha": 1,
+    "nonmetal_F0": 0.04
+  },
+  "source": "Project-original new body/face/claw silhouette and dimensions, reusing internal crab-family mesh/UV construction helpers from build_shell_carrier.py. Only internal A4/environment/runner/armored/carrier references; no external games or stock assets.",
+  "protected_reference_hashes": {
+    "game/art-source/enemies/build_shell_carrier.py": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f",
+    "game/art-source/enemies/build_armored_crab.py": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24",
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier.blend": "044110abc79a22f6d0922de0a5f70a7cd9cac8052c7cd2e0b59bb968941a5292",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+  },
+  "status": "Awaiting parent shape review; not final art or runtime asset"
+}

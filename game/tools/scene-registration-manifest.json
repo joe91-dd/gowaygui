@@ -1,0 +1,351 @@
+{
+  "reviewed": "2026-09-23",
+  "coordinateFrame": [
+    560,
+    310
+  ],
+  "maps": [
+    {
+      "id": 0,
+      "art": "map-coast-stage-1",
+      "artSha256": "1c34520f27b112e332ed410fd101e17935fadb90514dc52456cdf3a6ddb5071c",
+      "geometrySha256": "e9d075f320439ca7bee32865a74dc5affcfe102f103196b21ba6ecb580c5b30e"
+    },
+    {
+      "id": 1,
+      "art": "map-coast-stage-2",
+      "artSha256": "9905cfaedfbf9e43882a33e677aef87b7ce137e1c31ad71dd66b0dea6559f4e3",
+      "geometrySha256": "a613205a1381d746f2d5d0ee53a66b5b569286427018f76b9cecf900b41bdf06"
+    },
+    {
+      "id": 2,
+      "art": "map-coast-stage-3",
+      "artSha256": "4f9be52c52333f186c5cb8906ae4428e5c9a240534138145df4cd0a63feb5446",
+      "geometrySha256": "c8fc1aa38d4d55558d5157a556872cbc7159c12e62737833e5ff6608d9a47d4f"
+    },
+    {
+      "id": 3,
+      "art": "map-coast-stage-4",
+      "artSha256": "d09a2dbb84031703c1ed1c4a0bdef3ee0d1d9aed2679ed2778b65101f13cd9a1",
+      "geometrySha256": "01f657f11010114016f22ea074a7eecf0e2ad5f932c28681092250e5256340c9"
+    },
+    {
+      "id": 4,
+      "art": "map-coast-stage-5",
+      "artSha256": "2407e455ae8c88c3ea81b8f1efc945bbdb580f4f13e2632c65d7eea9a84ba424",
+      "geometrySha256": "873a59cad97138fdd305fdee206e88e42b8aa5757afd6d0be02d7ad196659081"
+    },
+    {
+      "id": 5,
+      "art": "map-coast-stage-6",
+      "artSha256": "53e1440058b8d32e824f65c151208a12e12472700411e230624330dc15786af4",
+      "geometrySha256": "bd6d285445524f09b0b7cf960a059da8b2d67371567e76e9fa2eece3212cbf70"
+    },
+    {
+      "id": 6,
+      "art": "map-coast-stage-7",
+      "artSha256": "9fd5948159851309b829a83750634714d42d31c96f74be0af6dd44fb647f0990",
+      "geometrySha256": "1824e542ee66f27080b8e4b1668295534e4230d925a67e83b96eaaf9746c6dd4"
+    },
+    {
+      "id": 7,
+      "art": "map-coast-stage-8",
+      "artSha256": "e5c4232e7553be0ef96eef908b89a480e96ecf2738cccb57b5ec238f05576df0",
+      "geometrySha256": "3a425bf372d542d9007291e8a015df88e80296b76ff5d675fd2884a493df73fd"
+    },
+    {
+      "id": 8,
+      "art": "map-coast-stage-9",
+      "artSha256": "6112d1a321898b6ed51a3fa165033d5daacd13b644c58f3c59420bfa722bda2c",
+      "geometrySha256": "2b55ee61807c24a1c06012ea4b22aea6b148c92a92f0ae11ce421860fd278c16"
+    },
+    {
+      "id": 9,
+      "art": "map-coast-stage-10",
+      "artSha256": "94d37b77976c70e4c3a780041c48297eac94243b529b4ccde9c4af2bd02198eb",
+      "geometrySha256": "049daac6412ded62ad5c3e3d51daa842bbd06f1c0b658cd06e7683c6a2ddaaad"
+    },
+    {
+      "id": 10,
+      "art": "map-coast-stage-11",
+      "artSha256": "320c299fa4c6fb9d6135b008b73768a357e8626dcb945ebb6e80d5af740ced76",
+      "geometrySha256": "1568943e444cec5806b32c55eb900679e2d5c7e8f928d69f8886dc0ef51758cd"
+    },
+    {
+      "id": 11,
+      "art": "map-coast-stage-12",
+      "artSha256": "2bae31a61fbd4121d8853f83563f58b17ee1e8aa54de564523e67bf249c3f800",
+      "geometrySha256": "3addaa2fdf48fd06c5c900cfdd2b879a628df584eda0a6e9e2d2833cd2406b4c"
+    },
+    {
+      "id": 12,
+      "art": "map-coast-stage-13",
+      "artSha256": "a1e57eb73d6f11002d378705f3f22ab4a9707e07180aa368f57637d94035e7d3",
+      "geometrySha256": "ba1ad3dd87d21ffd32394a9fe4e76125229b5cfd29fee48a7e600fb222494429"
+    },
+    {
+      "id": 13,
+      "art": "map-coast-stage-14",
+      "artSha256": "d2028ad04de9b40fd8da68ffbd61180b7041098d235a46a3d91e89687e763fce",
+      "geometrySha256": "426b5ecca6e76b9959388d3a0db8eb6ba7ec7e11cacba98912378cdf87e9cb50"
+    },
+    {
+      "id": 14,
+      "art": "map-coast-stage-15",
+      "artSha256": "1cf17dfbd2cb640bb7169ea342439d0f7886845a9548e64e94fca721e08f61c3",
+      "geometrySha256": "73974e1fd43fee56967db2b6ea55318fad7224e9e6e07eb2927ea7319a7f9fb8"
+    },
+    {
+      "id": 15,
+      "art": "map-coast-stage-16",
+      "artSha256": "e23a23d73574066d70e7f3a81a8a5b397448e8a4355f947031e69833c683073a",
+      "geometrySha256": "25aa8e0c9f9c7e3e9d46e517c831e52d9b82795e80bae15cc9209f06edb1fb3c"
+    },
+    {
+      "id": 16,
+      "art": "map-coast-stage-17",
+      "artSha256": "988e28d2aca6965732f334bc3e4d1758ecec964324932164a1c081858ed297d9",
+      "geometrySha256": "d210a4e01c0ab5d1a2c6ef915731a67903caa95d235c653f9eb4c0e74fd0a93f"
+    },
+    {
+      "id": 17,
+      "art": "map-coast-stage-18",
+      "artSha256": "b115924bae108964f1553664d025f441c9bd82309eb5d2a0beb8ae355dc616ad",
+      "geometrySha256": "d00778ec919d891252db2344986fb38ede91509e2fa25064884840ba721cef73"
+    },
+    {
+      "id": 18,
+      "art": "map-coast-stage-19",
+      "artSha256": "1ddbb99f84d62ca4db422446b84e986d0efee7a05c54cdb8ac1b0b07edd4a66d",
+      "geometrySha256": "2bdfade9cbf10f1f9af2f75d4c0387583e9f05ca094f2092a1d245883237553c"
+    },
+    {
+      "id": 19,
+      "art": "map-coast-stage-20",
+      "artSha256": "5f08bc222f986d383b92f5828f62a570d6365bdc52874ef595307499d1a2175c",
+      "geometrySha256": "09c7c22ceca9c30791c4ffba917bec8f587097ce4ca45e9d84f861f1bd56d930"
+    },
+    {
+      "id": 20,
+      "art": "map-coast-stage-21",
+      "artSha256": "0dd925d77b800deabfe6618d3f984c31ca0f668499a2b8f9184849ec0d492af8",
+      "geometrySha256": "ff4d1fb5687905cb72894d896c2355a737f458239a1edffbca8e5c4a2144240b"
+    },
+    {
+      "id": 21,
+      "art": "map-coast-stage-22",
+      "artSha256": "c8281a8f899a6c6d78ce564965a1bbd8193fef314e99c84eadf07d296e48d636",
+      "geometrySha256": "80ba38a181cd8f6cc500818c488d464d8bbddfe0a32aa5fc56c6285fc10d58f3"
+    },
+    {
+      "id": 22,
+      "art": "map-coast-stage-23",
+      "artSha256": "17014dfea2a38d16487cd79f501c5a68fbfdeb4d42953b04f6ba55b5495c13dc",
+      "geometrySha256": "85d8a192968838115c732cfe2d791a46c89ab5c879e71cd7b2c7c1367b21d769"
+    },
+    {
+      "id": 23,
+      "art": "map-coast-stage-24",
+      "artSha256": "6f254dc7ad209a9d85b0169e88bc55b57c2df297290cc117d88c17d830ddd874",
+      "geometrySha256": "499ba4ed855605a356a475cd3d12acaeb4f3e8b74b1a3b113fd943b734211100"
+    },
+    {
+      "id": 24,
+      "art": "map-coast-stage-25",
+      "artSha256": "fc93f24d6d7c1fe079b8fa57bfb067e14eb11ee0b53e405fcf97b96fecc7e442",
+      "geometrySha256": "2c5d6cbf31e12982f7b981e94b671200ad802fbf0adb5b4fc20cd82cf252d54f"
+    },
+    {
+      "id": 25,
+      "art": "map-coast-stage-26",
+      "artSha256": "d142663cadd0b6e68f6e90a4d69b16dcc2f04520eb8d0abae7621513b9a67d4f",
+      "geometrySha256": "8308d3fe9b04828fcdd79c98ee0cf6ca0f6a9e0b6cfd355ce6661211f4fcbd54"
+    },
+    {
+      "id": 26,
+      "art": "map-coast-stage-27",
+      "artSha256": "d9c3e60111f6ab401bf7c1c55401f141f22cbe44d352d99ad2c5b9ee8b69cdae",
+      "geometrySha256": "7edff7c50199d958091816afbb47f38bab0720fb0b97b05cd538012658c8b5bf"
+    },
+    {
+      "id": 27,
+      "art": "map-coast-stage-28",
+      "artSha256": "e370c7777e07575f72df34d1607b001236829879034d6a1c89cffdbb4a095b84",
+      "geometrySha256": "55662c8191b041315fa44691c589c2611546f3e42c26f1bda39ad615a52e01b6"
+    },
+    {
+      "id": 28,
+      "art": "map-coast-stage-29",
+      "artSha256": "cfa75b7e3c2b1ddc95e10f639be48d3c94ad119d138645f348386459c4da0735",
+      "geometrySha256": "e22296276a2c4c50971b4b3069cb2f62f0a69ab7e736f7aba3327b74076bfed3"
+    },
+    {
+      "id": 29,
+      "art": "map-coast-stage-30",
+      "artSha256": "a5201c2afa8f75cb93a5d625a04710700b5586ef2987242e968247d831b3cc82",
+      "geometrySha256": "4553df396b23d9595550a2c5223ffe560742bad647572fc0d4d2f14f2d932f6d"
+    },
+    {
+      "id": 30,
+      "art": "map-coast-stage-31",
+      "artSha256": "9833bf7ccfa3fb5255f4aac22627e5de6f9ed821bf72290ffb035e184f7b5cea",
+      "geometrySha256": "03a727913957a0adfc94580b31df2f86d80669c94bec00a00d7e4a8d03877936"
+    },
+    {
+      "id": 31,
+      "art": "map-coast-stage-32",
+      "artSha256": "7fdfc65b6c287fa2c8f5858d336ac4f0723f03ce96d3489facb9645dcce58510",
+      "geometrySha256": "922df8f0639ee90cc7da16ce69a31eab0fc48154d8747fa9953e8bef4003c930"
+    },
+    {
+      "id": 32,
+      "art": "map-coast-stage-33",
+      "artSha256": "accfd35b4c1daf8161c55697eb0372e3c0fe0bbcbb97e323ea73900b6c0efab5",
+      "geometrySha256": "305c1532328aa29afb44f5c902c8445ba633e33655ed0a3f8ded78290c08857a"
+    },
+    {
+      "id": 33,
+      "art": "map-coast-stage-34",
+      "artSha256": "4a282929a16bf3bb1e81d6f294b858e7f7f65a245d1b34583124a766ed11b0bc",
+      "geometrySha256": "85b9ec02dd16703da619fbd03da4fa123fe2e54580a7f03d3eb0f18329f0c596"
+    },
+    {
+      "id": 34,
+      "art": "map-coast-stage-35",
+      "artSha256": "f5883395fccb50659240814c0978e1cb187409bee981d4ac82251640917a2671",
+      "geometrySha256": "a4d26c633ddc4281aa0260bde7186b5592dab7272461ca65323181fdb66b96fb"
+    },
+    {
+      "id": 35,
+      "art": "map-coast-stage-36",
+      "artSha256": "34a565479b3546e80a300d2eabe0fd06a502dfcd0f675b4ec4736cc78e6688eb",
+      "geometrySha256": "5c045284902bf02adab8a76d26848404d6974ae3453269aaa677da732dc3a09c"
+    },
+    {
+      "id": 36,
+      "art": "map-coast-stage-37",
+      "artSha256": "bb84dc5c2642809e153386caedd197f61113bb3766ae427b8cd09e4d7d6bf4a8",
+      "geometrySha256": "1d523727a89f941e2d5905cd22cb4998ba5ccc6dd6873e7e1a2bb429171ae56c"
+    },
+    {
+      "id": 37,
+      "art": "map-coast-stage-38",
+      "artSha256": "99a7ea926ba0db06857dcabaad429ccbc9c9cb9f6bfe2e36f7bd09d1da6affa7",
+      "geometrySha256": "e7e1ad01a3c4878d00169477175e264cf2a12b6c48a4f49403e00bad216b5f01"
+    },
+    {
+      "id": 38,
+      "art": "map-coast-stage-39",
+      "artSha256": "88614127f8ef5c38b2f34ec09da5e0f5c624b76208984e3526459930c34fc951",
+      "geometrySha256": "8691c8807c67c87f2e909d75ddc889b59d4c1b36622df04b50d6aaa0b6ca2142"
+    },
+    {
+      "id": 39,
+      "art": "map-coast-stage-40",
+      "artSha256": "ab7033bf8eba6be783e049fafa12b69175feac01cb783cb226f682a6ef18220f",
+      "geometrySha256": "28f40f6d6ed89f86fc081003b8fed57286e16f60f64417111b968d2289831bc6"
+    },
+    {
+      "id": 40,
+      "art": "map-coast-stage-41",
+      "artSha256": "dc1f0a48d31bfb1c3db343bc982770c5ac59903bb37a58343c7ac8e10568dfdc",
+      "geometrySha256": "97dcc7c404d2ca9f2b5615fcff55dc12970b2958a946d6980b04551f49378588"
+    },
+    {
+      "id": 41,
+      "art": "map-coast-stage-42",
+      "artSha256": "76b0d7df74852bd35add5a0217b41f56e135812fc3d466aa85c18157285de98d",
+      "geometrySha256": "35ddca5a7eeb7e6b2995e56959f952218a839e8598fa3649fd3bf8a4b5921e75"
+    },
+    {
+      "id": 42,
+      "art": "map-coast-stage-43",
+      "artSha256": "3805e7cbb98f17acd02d390f76c2fc2698cf7486e6061e6126df19a9f2f757cf",
+      "geometrySha256": "b18d612157b7981b523d335f25d586126b233d89f2474a87b349723e00ea47a4"
+    },
+    {
+      "id": 43,
+      "art": "map-coast-stage-44",
+      "artSha256": "718672d67c1cbdf0d868aae69713d0fea5ec2e80432260117f1486951f12db1f",
+      "geometrySha256": "7546978627a8c82f3cbac912b1d69e92c4dd4de33c03b3d78a776a66901fb2e0"
+    },
+    {
+      "id": 44,
+      "art": "map-coast-stage-45",
+      "artSha256": "7a276c6f66003b0956f66f451147f0d889b2dd1d8c0db835c17cb78c7b83035e",
+      "geometrySha256": "9472749ca57f082ab5b2045798bc2e84e48ca57deca18ba8c646c89cc58695d2"
+    },
+    {
+      "id": 45,
+      "art": "map-coast-stage-46",
+      "artSha256": "5acc9b09de3c10309f76b520da6ef4b0a874f8646b91f9ede4c12d2938071d69",
+      "geometrySha256": "553f4a7d575c86fa29940e39ea93f4cd7ed518d4f133b34619aaf033ab85106a"
+    },
+    {
+      "id": 46,
+      "art": "map-coast-stage-47",
+      "artSha256": "932d2cdc3a6597576db4d9a84c0e282dec484032397c0121d99ff6fcf7cef54d",
+      "geometrySha256": "553b286480eee6d0d86cc3fcc838482ae13fc53505f7d5e1e95f2ac31fb85ba3"
+    },
+    {
+      "id": 47,
+      "art": "map-coast-stage-48",
+      "artSha256": "4fe645d947dd70c4562c45a116a096a0a30f4dcb08802c368542ed4a66193972",
+      "geometrySha256": "15d5de81f6afe72004013e546d6a162f0ff880c5039ec6a045a0bb41e0406ed3"
+    },
+    {
+      "id": 48,
+      "art": "map-coast-stage-49",
+      "artSha256": "e5f251b7f6a9f9e6a1c0ea1afe8d36e1e4a95f6184a77f70101d57aa582fe608",
+      "geometrySha256": "a1e0849c0b98828d88f789666e188f656ca13ca1030c12ea7cf634c1369e50d7"
+    },
+    {
+      "id": 49,
+      "art": "map-coast-stage-50",
+      "artSha256": "aa8aab655ad0fd55b965f4f51ccbddf7c279c4be8128dccd380c0e56e2c1be45",
+      "geometrySha256": "7b9c6fc8e85c52fda6b2de3149d25a930e0df9a61c564937eb82d9d3fafaf7ad"
+    },
+    {
+      "id": 50,
+      "art": "map-mode-scene-50",
+      "artSha256": "c76c38313080d9ff09a6e7a6f37ba24a9b9c99cfc7a66056812ec2105e8cc72f",
+      "geometrySha256": "0b0e0f5cd90cf2feb4a052060a7c2789cc22da2db19b321e384cbf5b07702f21"
+    },
+    {
+      "id": 51,
+      "art": "map-mode-scene-51",
+      "artSha256": "bae961e31e4d2a5875d47c9392e0ab969e73e87489a2b5e64bd8555f24bb491f",
+      "geometrySha256": "7a7a859f75e6c3676eeca84675e35125e33a86a4f19bd6bdaaec1c1acb76d9ad"
+    },
+    {
+      "id": 52,
+      "art": "map-mode-scene-52",
+      "artSha256": "758bfede7473baf693cc52eb9f28e33d30cb0e1d30c5cb5f6393758d5b1af1e9",
+      "geometrySha256": "f092778b172449310d3c75c028d10548a086fcb26f41576bd39b43899d08773b"
+    },
+    {
+      "id": 53,
+      "art": "map-mode-scene-53",
+      "artSha256": "20e11550cdea3f8cff3e646dac9f85975a3fb871fec668a20f81da980fa60b8e",
+      "geometrySha256": "770da051a01c5f058a01453d592a7db0e4ef1e994b8a66fdb754219220ed39ef"
+    },
+    {
+      "id": 54,
+      "art": "map-mode-scene-54",
+      "artSha256": "a73057913cb53899b61bfd369a0fd0023b80f124d6ec4c5aaa50f29b93c4e00d",
+      "geometrySha256": "9054d40fc9d86da6451150fa79ea3b4b446b07bfcb3c6b1c927391d0bab5a7d1"
+    },
+    {
+      "id": 55,
+      "art": "map-mode-scene-55",
+      "artSha256": "65fe6ff3ca12d199cf694d58c3a50389131ffc915569de6f5a943c592c6669d4",
+      "geometrySha256": "e3f6a089af92cba44b9b841c8873bd090d43e15862676d646147a934679cbfbc"
+    },
+    {
+      "id": 56,
+      "art": "map-mode-scene-56",
+      "artSha256": "98fbf0a483eaa2d069acfc1be801a3408d9672fc42b79dd328eb73efd2871c51",
+      "geometrySha256": "1d806fc917888f54c40278b90ee1ed1d53a457ce96f50f159d4f6594bb8ad241"
+    }
+  ]
+}

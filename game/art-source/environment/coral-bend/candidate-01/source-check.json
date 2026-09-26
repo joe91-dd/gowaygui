@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "sourceBlendSha256": "31cb32054587efba52846ac9eac808c3118f29db9be0a028ec01eb036f9a05e7",
+  "editableMeshes": 1459,
+  "anchors": [
+    "Slot_0",
+    "Slot_1",
+    "Slot_2",
+    "Slot_3",
+    "Slot_4",
+    "Enemy_entrance",
+    "Pearl_center",
+    "Player_exit",
+    "Island_origin"
+  ],
+  "materials": 2,
+  "packedImages": [
+    {
+      "name": "Island_original_colour",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Island_original_roughness",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "renderSettings": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      1000,
+      700
+    ]
+  },
+  "notes": [
+    "Actual source blend reopened read-only; full editable part structure and packed textures verified.",
+    "Preview water/camera/lights are separate in coral-bend-review-scene.blend."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "blue-1",
+  "name": "裂牙决斗家",
+  "tier": 1,
+  "index": 15,
+  "base": 43,
+  "key": "boss-15",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 45352,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-43",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/42cdfc83c6be2793dca946e451e3fa32456c67f0a9fd66239ad24e540c3995ba_Dino.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24691,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.9
+}

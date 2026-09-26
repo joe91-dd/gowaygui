@@ -1,0 +1,18 @@
+{
+  "asset": "hero-bubble-rejected-opaque.png",
+  "status": "rejected: generated background is opaque checkerboard, no alpha",
+  "createdDate": "2026-09-10",
+  "tool": "built-in image_gen.imagegen",
+  "reference": "C:/Users/Administrator/Desktop/龟/04_五角色正式设定.png.png",
+  "referenceRegion": "fifth column, anchor turtle controller 潮行",
+  "generatedOriginal": "C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-7b2dc175-d9db-466e-a1f6-e93d89c3c7b6.png",
+  "productionPath": null,
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGB",
+  "alpha": false,
+  "prompt": "prompt.txt",
+  "requestedDimensions": "1024x1024",
+  "postProcessing": "None. Original generated PNG copied unchanged as rejected source.",
+  "visualReview": "Full body and full anchor staff are visible; friendly aqua turtle, gold-edged dark-blue spiked armor match reference. Major blocker: checkerboard is painted into RGB pixels, so image is not a transparent UI sprite and was not published to resources."
+}

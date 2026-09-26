@@ -1,0 +1,37 @@
+{
+  "id": "red-3",
+  "name": "黑曜血鲨骑士",
+  "tier": 4,
+  "index": 40,
+  "base": 56,
+  "key": "boss-40",
+  "ability": "mortar",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 29550,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-56",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/ee1b9608489d194cff76e9e76d4a84b7471dcefc6637d1c29075e5e44dd930f4_Mako.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 21.4
+}

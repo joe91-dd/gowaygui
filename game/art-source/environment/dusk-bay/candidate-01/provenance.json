@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "status": "offline-source-candidate-reviewed-not-runtime-accepted",
+  "title": "薄暮海湾 candidate-01",
+  "levelId": 3,
+  "recordedAtUtc": "2026-09-08T09:16:51.600740+00:00",
+  "authorship": "Original project procedural meshes, UVs, palette, lighting, composition and editable numeric layout diagram. Reuses project-owned A/v04/coral modules; no downloaded game/stock geometry, textures, branding or raster edits.",
+  "upstream": {
+    "method": "Project-owned source-module reuse with explicit new level3 geometry, palette, compositions and beacon; no downloaded geometry, textures or raster edits.",
+    "upstreamBuilder": "game\\art-source\\environment\\coral-bend\\candidate-01\\build_coral_bend.py",
+    "upstreamBuilderSha256": "3494f790d2f32f58cdf83ae763c55836f0e790f2613a72cf0fea5f2d740b09b2",
+    "standaloneBuilder": "build_dusk_bay.py",
+    "filesWritten": [
+      "build_dusk_bay.py",
+      "verify_dusk_bay.py",
+      "check_editable_source.py",
+      "render_dusk_views.py",
+      "verify_foot_support.py"
+    ]
+  },
+  "scope": "Writes only this independent candidate directory; no core/view/runtime changes or Cocos startup.",
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "renderSettings": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 32,
+    "width": 1000,
+    "height": 700
+  },
+  "technical": {
+    "totalTriangles": 65066,
+    "meshCount": 3,
+    "materials": 2,
+    "editableMeshes": 1474,
+    "packedAtlasCount": 2,
+    "geometryBoundsCocos": {
+      "min": [
+        -11.97614574432373,
+        -1.8699991703033447,
+        -6.048585891723633
+      ],
+      "max": [
+        12.252265930175781,
+        2.7541160583496094,
+        5.567645072937012
+      ]
+    },
+    "routeSamples": 108,
+    "routeHeightProblems": 0,
+    "routeCenterObstacles": 0,
+    "footSupportRays": 372240,
+    "unsupportedSamples": 0,
+    "vegetationRootParts": 473,
+    "unsupportedVegetationRoots": 0
+  },
+  "coordinates": "Original level3 route and all slots unchanged, road Y=.064, station top Y=.292.",
+  "meleeCoverage": "Original station indices1 and2 at distances3.0 andsqrt2 do not have stone base1.2 blocking coverage; root explicitly retained ranged/support uses.",
+  "currentStone": {
+    "source": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend",
+    "sourceSha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "runtimeFbxSha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "scale": 0.65,
+    "solePoints": 2068,
+    "allYawSoleRadius": 0.9746471943161487,
+    "strictContactAllYawRadius": 0.8874670245539223
+  },
+  "manualReview": {
+    "status": "source-candidate-review-complete-runtime-pending",
+    "actuallyViewed": true,
+    "reviewedAtUtc": "2026-09-08T09:16:51.347015+00:00",
+    "method": "Agent opened the exact final PNG files with view_image after final geometry checks and render completion; layout diagram also actually viewed.",
+    "images": [
+      "render-battle-overview.png",
+      "render-top-down.png",
+      "render-dusk-beacon-detail.png",
+      "layout-review.png"
+    ],
+    "imageSha256": {
+      "render-battle-overview.png": "2ea39acc34c98d5396179f8d73d6c33b6bccd780537fe9d60c068a183e0acbe3",
+      "render-top-down.png": "2b9bf591f20e08bfdd173c2b973e89b89a657322e5746bb3278e92083e0d47f4",
+      "render-dusk-beacon-detail.png": "c186f88477ca3ec820a5c00a3c4e7c2866e9ac72ae450bded22a0cef6773de95",
+      "layout-review.png": "75f33ef87f6f2eef91f13f472e46b91cc57903e547b71f6e18f77a1475dabe63"
+    },
+    "observations": [
+      "最终战斗全景五站台、入口与贝壳终点清楚，道路中央没有高装饰；植被都在真实岸内。",
+      "俯视显示完整原始弯折路线，原第2和第3站位的远程/辅助位置保持不变。",
+      "最终近景原右侧海面悬空草已经消失；灯台、灯笼与贝壳材质延续暖石和青绿玩具风。",
+      "布局图中文、全脚包络、1.2阻挡圆和精确距离表可读。"
+    ],
+    "remainingArtIssues": [
+      "黄昏感目前较柔和，属于暖色傍晚候选；正式环境光和天空需在 Cocos 里一起确定。",
+      "沙路与草地交界仍偏规整，近景石台和灯台保留低多边形分面；可在后续美术打磨中统一边缘细节。",
+      "海岸石块仍有模块重复感，灯笼和草团的散布属于首版构图。",
+      "三视是无战斗角色的离线舞台预览，尚未验证实际手机 UI、角色动作、技能效果和战斗遮挡。"
+    ],
+    "correction": "First detail review revealed coastline-external scatter; bounded bush/grass generation and relocated two reed roots. Re-exported and reran FBX/source/sole/root checks, then rerendered and viewed all final three PNGs. Failed iteration archived separately."
+  },
+  "files": [
+    {
+      "path": "build_dusk_bay.py",
+      "bytes": 38963,
+      "sha256": "111ba610c6bf20ec0776abd04491e61157e421ba895a7757957d6ca6b6924cd5"
+    },
+    {
+      "path": "author_dusk_candidate.py",
+      "bytes": 10832,
+      "sha256": "13d2cf22069b2853ac172675da99627454494d84a3b0f1929db1757fb9bb1cea"
+    },
+    {
+      "path": "prepare_dusk_layout.py",
+      "bytes": 4875,
+      "sha256": "d31b567d7128a735af27aa3c85eab7ed947e53a600ff7e32c3509f9e454b70c6"
+    },
+    {
+      "path": "measure_stone_footprint.py",
+      "bytes": 2359,
+      "sha256": "bd1b42b9df8492df1a5dd9236cfc578736361dc0cda6ccb1332479e11075de68"
+    },
+    {
+      "path": "verify_dusk_bay.py",
+      "bytes": 6256,
+      "sha256": "71b86b008175ef4884dc6205a8afe8385e079f2360e636eec4d9325a3b4a76a7"
+    },
+    {
+      "path": "verify_foot_support.py",
+      "bytes": 4277,
+      "sha256": "cb477f822c269c5a4b6674a0b47e2aa6c3c11d5328f6b889646d9a7566804462"
+    },
+    {
+      "path": "verify_vegetation_support.py",
+      "bytes": 1797,
+      "sha256": "d1db4ccf5c6818f68fd8d83fb4883322aea8e1a0d719b31f90d7524b39cbb089"
+    },
+    {
+      "path": "check_editable_source.py",
+      "bytes": 1936,
+      "sha256": "9a1645379bd68575fab7c1d84aecfb38c71def1384efbe0d826ec60a9cdcd88c"
+    },
+    {
+      "path": "render_dusk_views.py",
+      "bytes": 2069,
+      "sha256": "c29a99137dc0f227b295c7e0633fe6a0f1fa718a4d0431919084e0d35df0aed2"
+    },
+    {
+      "path": "render_layout_review.cjs",
+      "bytes": 5876,
+      "sha256": "ec3336f4b8582467a4e01f7e69e44b00d9d51ea53166f1640b9ba4591f7f2a1f"
+    },
+    {
+      "path": "finalize_records.py",
+      "bytes": 10925,
+      "sha256": "aefc1ca7ec65a63ffcd1f4ee55f436d42cb6105f01fa93f423354fb7048eff75"
+    },
+    {
+      "path": "dusk-bay.blend",
+      "bytes": 14103282,
+      "sha256": "426c1e90534e5b19db681ee7e837399977c514aa002b14a4237c946d0b973114"
+    },
+    {
+      "path": "dusk-bay-review-scene.blend",
+      "bytes": 6850531,
+      "sha256": "5b1e3a743560dd641e22896820bae76b21fb9be050f0b290316ae458bf896269"
+    },
+    {
+      "path": "dusk-bay.fbx",
+      "bytes": 4565068,
+      "sha256": "55ffe57152c8de18146b1bcb94550ff515b6a4c720e5da2f77c9fa4e3e606675"
+    },
+    {
+      "path": "island-colour.png",
+      "bytes": 2744112,
+      "sha256": "2c037afed3c8b55cda27d4eaa678772282f6327eeef555ad152e90672bda8e7a",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "path": "island-roughness.png",
+      "bytes": 39919,
+      "sha256": "2447da099d262a3afdbf84673ea4d3b66101d31071d00fa7b27abcd75116a480",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "path": "environment-manifest.json",
+      "bytes": 3501,
+      "sha256": "f7bc025256a5dafe0e8a3821bd402357a086491b7ff7b99f843a16b608131996"
+    },
+    {
+      "path": "environment-round-trip.json",
+      "bytes": 3723,
+      "sha256": "bcb63f633a5bfc4c8c4463b5bad1df34cf457ecaeb01abf3b8e5b65c66e8f46c"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 1078,
+      "sha256": "d074609fe93dbfe5b71c91b178a2eed580aadd421f0c31ff680d25cc9d017028"
+    },
+    {
+      "path": "foot-support-check.json",
+      "bytes": 5567,
+      "sha256": "d00eec82b26464d869099c079947c2bb1ff85f1b347fc60b3465dcdd7a223295"
+    },
+    {
+      "path": "vegetation-support-check.json",
+      "bytes": 551,
+      "sha256": "c349cab8b277d65002ce484b9e0a5b754a191e490b7c38cd33f54a2e20eff716"
+    },
+    {
+      "path": "stone-footprint-audit.json",
+      "bytes": 247319,
+      "sha256": "351d80eddca85f25131953423a955ff13b6c585c10516ecfd9c061f1e6192506"
+    },
+    {
+      "path": "layout-preflight.json",
+      "bytes": 5513,
+      "sha256": "f4cbae75375e76884b9505d263efa016cea281b36b21bdfc9c710277b95926f4"
+    },
+    {
+      "path": "proposal.json",
+      "bytes": 1787,
+      "sha256": "12b1c24a3c67bde1f0f3775520f22501347a713afff16066007335c114f09ad7"
+    },
+    {
+      "path": "derivation-record.json",
+      "bytes": 587,
+      "sha256": "11b92043cab14c2a53977b9ad685c07ca3ba6d9523a894a2f791dd5bdde6ecaa"
+    },
+    {
+      "path": "stone-version-foot-comparison.json",
+      "bytes": 392,
+      "sha256": "6c888a7d23854d6afc9fd5da14a5946bcc7d3c89cba0ddc436880c57371e1a8a"
+    },
+    {
+      "path": "render-report.json",
+      "bytes": 1364,
+      "sha256": "957d3f23bfb21748b826aa35b29b7d165a515da2b4100b96fe71eb1d7fc061c9"
+    },
+    {
+      "path": "manual-review.json",
+      "bytes": 2130,
+      "sha256": "afc31b2dc5847a93e2db765a2ef8df51b014825625e10490dc4bbfb38e2e5574"
+    },
+    {
+      "path": "layout-review.svg",
+      "bytes": 74850,
+      "sha256": "15718951a7568f8caa895d0c0119af60b3a6431f307b2370d418f105806e36ef"
+    },
+    {
+      "path": "render-battle-overview.png",
+      "bytes": 959202,
+      "sha256": "2ea39acc34c98d5396179f8d73d6c33b6bccd780537fe9d60c068a183e0acbe3",
+      "dimensions": [
+        1000,
+        700
+      ]
+    },
+    {
+      "path": "render-top-down.png",
+      "bytes": 946696,
+      "sha256": "2b9bf591f20e08bfdd173c2b973e89b89a657322e5746bb3278e92083e0d47f4",
+      "dimensions": [
+        1000,
+        700
+      ]
+    },
+    {
+      "path": "render-dusk-beacon-detail.png",
+      "bytes": 978203,
+      "sha256": "c186f88477ca3ec820a5c00a3c4e7c2866e9ac72ae450bded22a0cef6773de95",
+      "dimensions": [
+        1000,
+        700
+      ]
+    },
+    {
+      "path": "layout-review.png",
+      "bytes": 167823,
+      "sha256": "75f33ef87f6f2eef91f13f472e46b91cc57903e547b71f6e18f77a1475dabe63",
+      "dimensions": [
+        1200,
+        1000
+      ]
+    }
+  ],
+  "limits": [
+    "Offline rendering and support checks do not certify Cocos import, material culling, animation/contact, mobile performance, gameplay balance or final artistic acceptance.",
+    "Authorship provenance is recorded evidence, not an absolute copyright or legal-risk guarantee."
+  ]
+}

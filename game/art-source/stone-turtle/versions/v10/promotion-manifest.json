@@ -1,0 +1,43 @@
+{
+  "version": "stone-sample-10",
+  "promotion_status": "runtime-review-not-final-art",
+  "promoted_at_utc": "2026-09-08T04:05:51.418514+00:00",
+  "frozen_candidate": "candidate-10",
+  "previous_version_archive": "versions/v09",
+  "previous_fbx_sha256": "91f0a61c689d1e227d227559f57d22b7c9673563a3262bbf8f60182c1e4f9599",
+  "runtime_fbx_sha256": "8b8f0c56b2be36e8fa1fb082a253cc34271cf53d6983001f78f61ce4eb38260d",
+  "source_glb_sha256": "70eb7fabb3d62cce9518a91cf21d606a5fb4a9040f290c2c9c9d4c732e82d1da",
+  "runtime_asset_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "runtime_prefab_path": "models/stone-turtle/stone-turtle/stone-turtle",
+  "geometry_changed_during_promotion": false,
+  "live_meta_files_replaced": false,
+  "source_checks": {
+    "stone-turtle.blend": {
+      "sha256": "9977543bc23f3193932c8fd7eca8e884f7489a95a700a602dc35eea7dc331792",
+      "packed_textures": [
+        "StoneTurtle_Colour_1024",
+        "StoneTurtle_Roughness_1024"
+      ]
+    },
+    "stone-turtle-review-scene.blend": {
+      "sha256": "eaea079144079768275997a9730468ccac1c13617c5b7e3790ec7fb791013291",
+      "packed_textures": [
+        "StoneTurtle_Colour_1024",
+        "StoneTurtle_Roughness_1024"
+      ]
+    }
+  },
+  "runtime_triangles": 22436,
+  "runtime_vertices": 12326,
+  "clips": {
+    "idle": 2.3666666666666667,
+    "attack": 0.8666666666666667,
+    "skill": 1.3666666666666667,
+    "hit": 0.5666666666666667,
+    "rest": 2.3666666666666667,
+    "fusion": 1.9666666666666666
+  },
+  "forward_axis_cocos": "+Z",
+  "foot_origin_y": 0.0,
+  "remaining_review": "Cocos v10 lighting/material/animation review; final art acceptance remains pending."
+}

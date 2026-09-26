@@ -1,0 +1,43 @@
+{
+  "key": "fauna-39",
+  "name": "深渊魔裔 · 战斗形态",
+  "kind": "elite",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Demon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\demon-514500\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e15b1d4a1a59fcd7a6d6881175723d57d69272ddfa467b2c0473829bf3e82f2b_Demon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "29d38f9ba56ec9f279795b0ab3b8bbeef453f228fbac02c505add06f8b1259c1",
+  "bytes": 1400876,
+  "animations": 14,
+  "displayName": "深渊魔裔 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 50332,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-39",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.7
+}

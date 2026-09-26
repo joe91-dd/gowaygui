@@ -1,0 +1,157 @@
+{
+  "status": "offline-source-candidate-ready-for-root-image-review",
+  "generatedAt": "2026-09-08T11:28:08.873893+00:00",
+  "levelId": 4,
+  "name": "巨钳来袭",
+  "authorship": "Original editable project-authored code geometry/UV/atlases; reuses our own frozen tidal/tutorial/coral/dusk routines. No third-party game or stock assets.",
+  "routeExact": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 5.0,
+      "z": -2.0
+    },
+    {
+      "x": 6.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "sourceSlots": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "z": -1.0
+    }
+  ],
+  "candidateSlots": [
+    {
+      "x": -5,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0.292,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "y": 0.292,
+      "z": -1.31
+    }
+  ],
+  "layoutScope": "Only position5 offline art moves to (6.62,-1.31), as approved by root. Production/save/runtime untouched here.",
+  "checks": {
+    "triangles": 55128,
+    "meshes": 3,
+    "materials": 2,
+    "editableMeshes": 1091,
+    "routeSamples": 108,
+    "allYawFootRays": 372240,
+    "vegetationRootParts": 321,
+    "allPassed": true
+  },
+  "geometryBoundsCocos": {
+    "min": [
+      -12.029194831848145,
+      -1.8699992895126343,
+      -6.019547939300537
+    ],
+    "max": [
+      12.33581256866455,
+      2.2457756996154785,
+      5.48501443862915
+    ]
+  },
+  "materials": [
+    "Island_atlas",
+    "Warm_pearl_and_lamps"
+  ],
+  "fixedCorrections": [
+    "Initial right palm frond overhung slot5: remove that ornamental tree, keep full feet/platform.",
+    "Second deterministic layout had one bush leaf intersecting slot5 top: increase root spacing to include full leaf envelope. Rejected diagnostic JSON files retained."
+  ],
+  "limitations": [
+    "Static sole support and empty-stage renders do not establish Cocos animation/contact/performance/UI acceptance.",
+    "Nominal 22x12 includes external authored rocks/foam in the larger measured bounds.",
+    "Current v2 eight-seed fixed strategy showed no material regression; bubble5 had zero attacks/skill activations in both variants, so it does not prove that role station combat output.",
+    "Nearest ally from slot3 changes from5 to2; old leaf4 without reach loses3-to5 link. Root owns migration and live coverage review."
+  ],
+  "hashes": {
+    "author_boss_candidate.py": "d87d5647f69d23824e5a7f215727f10a9001ed8a153a2c8958a029e85c73dae2",
+    "build_boss_bay.py": "026c916eb9be590a42a68a353a19fece0871f06a73b220be231aae113843f2ec",
+    "boss-bay.blend": "965efe74dfb7642aa4b95beec011f62544ccf04aa84ab28549b12a9eabe2fc02",
+    "boss-bay-review-scene.blend": "f865ce011973b5675c87e827cd0a38775be6db356b340132bc8706f9a64ebb0b",
+    "boss-bay.fbx": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+    "island-colour.png": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+    "island-roughness.png": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+    "layout-decision.json": "47290190feff034472127b515be079fc7d19f5b2e6f78d41413e2f59f67d388a",
+    "proposal.json": "7cd4601a4b9d1d60ee7da39b5bec35f85012ef17b84280bd49ca3cae80a5ac84",
+    "layout-options.json": "60e092cf569bc4ab741352b4e97e9515b25c0c346367bc9abd7def9216f216ca",
+    "layout-options.svg": "602655d7a354612d5edd1b2a6a5783feabb7a6481e2992f0153813b451dc7232",
+    "layout-options.png": "0c1b0d09d89594c0aa8c363c743111410fae7033316f253e9c3e39939b5a1814",
+    "layout-preflight.json": "a5837b9cbf898b2e672209dc6c6a6233dee4ca80048f8a03ee7261cca5877d73",
+    "stone-footprint-audit.json": "351d80eddca85f25131953423a955ff13b6c585c10516ecfd9c061f1e6192506",
+    "environment-manifest.json": "9bec3037292cd3d5497d1e266d13e842b9291fba6935ca9ee68f7c6f29893ae8",
+    "environment-round-trip.json": "7de317b6761e9445810cd64e19ff6fb267e6fa96bee00f22d512347215aff43b",
+    "foot-support-check.json": "b8d8cd93d87d8f5ffcdf2c4d382fa85ef96e1fc8b72376ed1c594c719a722d88",
+    "source-check.json": "1648b53e1c89ebb747f25697125cead514e6b255363059869983a4d48ccbb8e7",
+    "vegetation-support-check.json": "2861a8697db8d1b1ef6e2479c4facf55f81d790d6ff500b1cbd14d4ec34651d0",
+    "render-report.json": "3f71286e9ceec4f2fac943a93a5aeff4308ff8321fa71e38a0b38c6430f1f2f9",
+    "render-battle-overview.png": "26e4581b4a653342ac965f8ea6890cd8a4921cdfda5a9cc3b38e545d9c87f338",
+    "render-top-down.png": "f1f07734c1d835845227f7f439b407055fb7648d0b832cea91e341ce2026ca9f",
+    "module-authorship.json": "a8ec50f6663e4a2f594d6ae5417075fcf94034e147a2df1d336576ac4d2d91e2",
+    "verify_boss_bay.py": "b32f3cf9d706db93744cf7663b614870c968852f58d8fb7ce1fce073bf380951",
+    "verify_foot_support.py": "9fe33a9fbd7e7893bdfacf199eaae53afff866ec2c5d6fc4d0e0faff9e29052e",
+    "check_editable_source.py": "6d6a9515a859eaa83694bcbb06d47cc82eaa01d4b9cc6dd471dabf0ccceb6a6b",
+    "verify_vegetation_support.py": "da85367675d15de996ba2bbf7117008908cd479cecac73dbab1741025d26de73",
+    "render_boss_views.py": "46addff1074673ea2512dea074f129bcc690d36cb533454bbfd2792caf14a121",
+    "compare_slot5.cjs": "5a9251fe04da364905702b4b96b63faecb7e32b84ca575c214b095ae8c45ee01",
+    "slot5-comparison-39QdTT/report.json": "9cd19b0566aefb846832e83320d93d5df8d84b68126feb53fc1d969b84f3d32a",
+    "slot5-comparison-39QdTT/README.md": "f76bbee7bd2c0a6520275c66a9a3a442d464f44a383a0113e38c0fc164cbc4cd",
+    "README.md": "7664c97d3de08d3b3dc8e08450b964c9d6fb65c73c80a00d3851463976d9b6c7"
+  }
+}

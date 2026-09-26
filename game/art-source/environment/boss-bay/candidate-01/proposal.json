@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-offline-art-layout",
+  "levelId": 4,
+  "levelName": "巨钳来袭",
+  "approvedForOfflineArt": true,
+  "sourceSlots": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6,
+      "z": -1
+    }
+  ],
+  "candidateSlots": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "z": -1.31
+    }
+  ],
+  "changedSlotIndices": [
+    4
+  ],
+  "unchangedRoute": [
+    {
+      "x": -9,
+      "z": 0
+    },
+    {
+      "x": -4,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "z": 0
+    },
+    {
+      "x": 2,
+      "z": -2
+    },
+    {
+      "x": 5,
+      "z": -2
+    },
+    {
+      "x": 6,
+      "z": 0
+    },
+    {
+      "x": 9,
+      "z": 0
+    }
+  ],
+  "stoneBattleScale": 0.65,
+  "meleeBlockingRadius": 1.2,
+  "fullNearGroundSoleRadius": 0.9746471943161487,
+  "surfaceY": 0.292,
+  "platformContinuousTopRadius": 0.995,
+  "platformTopSides": 48,
+  "reason": "Original station5 overlaps the true route center. Only its explicitly proposed center moves; retain full foot support and stone blocking. Production data/save migration belongs to root.",
+  "selectedOption": "safe-foot-margin",
+  "selectedOptionMetrics": {
+    "id": "safe-foot-margin",
+    "point": {
+      "x": 6.62,
+      "z": -1.31
+    },
+    "move": 0.6931810730249349,
+    "nearestRoute": {
+      "segment": 4,
+      "point": {
+        "x": 5.6,
+        "z": -0.8000000000000003
+      },
+      "distance": 1.1403946685248931
+    },
+    "footCenterClearance": 0.16574747420874447,
+    "platformCenterClearance": 0.14539466852489313,
+    "blockingMargin": 0.059605331475106826,
+    "stone": {
+      "radius": 1.2,
+      "intervals": [
+        [
+          15.796570923306403,
+          16.543564899185725
+        ]
+      ],
+      "length": 0.746993975879322
+    },
+    "bubble": {
+      "radius": 4.6,
+      "intervals": [
+        [
+          11.900471540090596,
+          20.064495102245978
+        ]
+      ],
+      "length": 8.164023562155382
+    },
+    "bubbleReach": {
+      "radius": 4.9,
+      "intervals": [
+        [
+          11.459031823347036,
+          20.064495102245978
+        ]
+      ],
+      "length": 8.605463278898942
+    },
+    "distanceToSlot3": 4.294240328626241,
+    "baseSurfaceGap": 0.41170756615429616,
+    "pairDistances": [
+      11.847383677420092,
+      7.962443092418306,
+      4.294240328626241,
+      5.868602900179906,
+      0
+    ],
+    "leafBaseGraph": [
+      {
+        "slot": 1,
+        "reachable": [
+          2
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 2,
+        "reachable": [
+          1,
+          3,
+          4
+        ],
+        "nearestTieSlots": [
+          1,
+          3
+        ]
+      },
+      {
+        "slot": 3,
+        "reachable": [
+          2,
+          4,
+          5
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 4,
+        "reachable": [
+          2,
+          3
+        ],
+        "nearestTieSlots": [
+          2,
+          3
+        ]
+      },
+      {
+        "slot": 5,
+        "reachable": [
+          3
+        ],
+        "nearestTieSlots": [
+          3
+        ]
+      }
+    ],
+    "leafStarterGraph": [
+      {
+        "slot": 1,
+        "reachable": [
+          2
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 2,
+        "reachable": [
+          1,
+          3,
+          4
+        ],
+        "nearestTieSlots": [
+          1,
+          3
+        ]
+      },
+      {
+        "slot": 3,
+        "reachable": [
+          2,
+          4,
+          5
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 4,
+        "reachable": [
+          2,
+          3
+        ],
+        "nearestTieSlots": [
+          2,
+          3
+        ]
+      },
+      {
+        "slot": 5,
+        "reachable": [
+          3
+        ],
+        "nearestTieSlots": [
+          3
+        ]
+      }
+    ],
+    "auraShareGraph": [
+      {
+        "slot": 1,
+        "reachable": [
+          2
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 2,
+        "reachable": [
+          1,
+          3,
+          4
+        ],
+        "nearestTieSlots": [
+          1,
+          3
+        ]
+      },
+      {
+        "slot": 3,
+        "reachable": [
+          2,
+          4,
+          5
+        ],
+        "nearestTieSlots": [
+          2
+        ]
+      },
+      {
+        "slot": 4,
+        "reachable": [
+          2,
+          3
+        ],
+        "nearestTieSlots": [
+          2,
+          3
+        ]
+      },
+      {
+        "slot": 5,
+        "reachable": [
+          3
+        ],
+        "nearestTieSlots": [
+          3
+        ]
+      }
+    ],
+    "oldLeafBaseCanSupportFrom3": false,
+    "oldLeafReachCanSupportFrom3": true
+  },
+  "pending": [
+    "Root final layout decision and separate legacy-combat coordinate compatibility",
+    "Actual exported FBX route/foot-support tests",
+    "Cocos/mobile visual acceptance"
+  ]
+}

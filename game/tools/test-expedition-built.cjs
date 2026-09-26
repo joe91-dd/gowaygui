@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
+const root=path.resolve(process.argv[2]||'build/expedition-20260924-source'),loader=require('./test-built-core.cjs').loadBuiltCore(root),C=n=>loader.load(n),plain=v=>JSON.parse(JSON.stringify(v));
+const {GameService}=C('game'),{SaveRepository,validateSave}=C('save'),{MemoryStorage}=C('storage'),{stepBattle}=C('battle'),{expeditionSlots,chapterWaves}=C('expeditionRules');
+const storage=new MemoryStorage(),clock={now:()=>1790240000000};let g=new GameService(new SaveRepository(storage),clock,41);g.enablePrototype('enable');g.beginPrototypeRun('begin',0,Object.keys(g.snapshot.collection));assert.equal(g.snapshot.run.battle.formationVersion,2);g.beginWave('start',g.snapshot.run.id,g.snapshot.run.battle);let b=g.snapshot.run.battle,n=0,offers=0,seq=0;
+function command(action,args={}){g.expeditionCommand('built-op'+(++seq),action,args,b);b=g.snapshot.run.battle;b.autoSkills=true;}
+for(;n<9000&&b.status==='fighting';n++){
+ b.autoSkills=true;const p=b.expedition.players[0];if(p.choices.length){offers++;command('buff',{buff:p.choices[0]});}
+ if(n%30===0){if(p.coins>=b.expedition.cost&&p.recruited<20&&b.units.length<12)command('recruit');const alive=b.units.filter(u=>u.alive),a=alive.find(a=>alive.length>=8&&a.fusionRank<3&&alive.some(c=>c!==a&&c.role===a.role&&c.fusionRank===a.fusionRank));if(a){const c=alive.find(c=>c!==a&&c.role===a.role&&c.fusionRank===a.fusionRank);try{command('merge',{a:a.id,b:c.id});}catch(e){assert.match(e.message,/冷却|持续技能/);}}}
+ stepBattle(b,.1);if(n%500===0){g.checkpointBattle('save'+n,g.snapshot.run.id,b);g=new GameService(new SaveRepository(storage),clock);b=g.snapshot.run.battle;}
+}
+assert.equal(b.status,'won');assert.equal(offers,10);g.completeWave('finish',g.snapshot.run.id,b);validateSave(g.snapshot);assert.equal(g.snapshot.run.phase,'result');assert.equal(expeditionSlots(51).length,24);assert.equal(expeditionSlots(50).length,27);assert.equal(chapterWaves(49),20);
+const report={status:'passed',at:new Date().toISOString(),build:root,loadedFiles:loader.loadedFiles,waves:10,bossBuffChoices:offers,recruits:b.expedition.players[0].recruited,rank3:b.units.filter(u=>u.fusionRank===3).length,coreHealth:b.coreHealth,checks:['actual emitted System.register game modules','10 waves, recruiting, fusion, buffs, checkpoints, recovery, settlement','24 raid stations, 27 endless stations, 20-wave late chapters']};
+fs.writeFileSync(path.resolve('temp/gameplay-v2-20260924/expedition-built.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

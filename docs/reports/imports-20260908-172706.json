@@ -1,0 +1,156 @@
+[
+  {
+    "path": "game/assets/resources/models/crystal-turtle/crystal-turtle.fbx.meta",
+    "uuid": "8e5edcd1-b218-49ef-bf01-1a7173cb73b9",
+    "imported": true,
+    "sha256": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+    "meshes": [
+      {
+        "name": "Torso_mesh.mesh",
+        "triangles": 28899
+      }
+    ],
+    "clips": [
+      {
+        "name": "CrystalTurtle_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        }
+      },
+      {
+        "name": "CrystalTurtle_Rig|fusion.animation",
+        "span": {
+          "from": 0,
+          "to": 1.9666666984558105
+        }
+      },
+      {
+        "name": "CrystalTurtle_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        }
+      },
+      {
+        "name": "CrystalTurtle_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        }
+      },
+      {
+        "name": "CrystalTurtle_Rig|rest.animation",
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        }
+      },
+      {
+        "name": "CrystalTurtle_Rig|skill.animation",
+        "span": {
+          "from": 0,
+          "to": 1.3666666746139526
+        }
+      }
+    ],
+    "materials": [
+      "CrystalAtlas_01.material"
+    ],
+    "prefabs": [
+      {
+        "uuid": "8e5edcd1-b218-49ef-bf01-1a7173cb73b9@ce8d3",
+        "name": "crystal-turtle.prefab"
+      }
+    ]
+  },
+  {
+    "path": "game/assets/resources/models/enemies/ink-snail/ink-snail.fbx.meta",
+    "uuid": "6d24846c-67c4-4cbd-b1ec-88b307b70a89",
+    "imported": true,
+    "sha256": "3ff3b91dab1e86e2c43ab2fe11d55810fb879e6b9f312c04dfc33e2822c59179",
+    "meshes": [
+      {
+        "name": "Continuous_gliding_soft_foot_mesh.mesh",
+        "triangles": 13956
+      }
+    ],
+    "clips": [
+      {
+        "name": "InkSnail_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.6000000238418579
+        }
+      },
+      {
+        "name": "InkSnail_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        }
+      },
+      {
+        "name": "InkSnail_Rig|exit.animation",
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        }
+      },
+      {
+        "name": "InkSnail_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.799999952316284
+        }
+      },
+      {
+        "name": "InkSnail_Rig|walk.animation",
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        }
+      }
+    ],
+    "materials": [
+      "InkSnail_Toy_Atlas.material"
+    ],
+    "prefabs": [
+      {
+        "uuid": "6d24846c-67c4-4cbd-b1ec-88b307b70a89@f156e",
+        "name": "ink-snail.prefab"
+      }
+    ]
+  },
+  {
+    "path": "game/assets/resources/environment/dusk-bay/dusk-bay.fbx.meta",
+    "uuid": "47cfb275-afcc-40ed-ae73-1d2bfbafad93",
+    "imported": true,
+    "sha256": "55ffe57152c8de18146b1bcb94550ff515b6a4c720e5da2f77c9fa4e3e606675",
+    "meshes": [
+      {
+        "name": "Sanctuary_luminous_pearl_geometry.mesh",
+        "triangles": 2680
+      },
+      {
+        "name": "Continuous_grass_island_geometry.mesh",
+        "triangles": 8000
+      },
+      {
+        "name": "Coast_chamfer_rock_00_geometry.mesh",
+        "triangles": 54386
+      }
+    ],
+    "clips": [],
+    "materials": [
+      "Island_atlas.material",
+      "Warm_pearl_and_lamps.material"
+    ],
+    "prefabs": [
+      {
+        "uuid": "47cfb275-afcc-40ed-ae73-1d2bfbafad93@43534",
+        "name": "dusk-bay.prefab"
+      }
+    ]
+  }
+]

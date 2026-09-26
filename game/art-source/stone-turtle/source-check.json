@@ -1,0 +1,162 @@
+{
+  "v09": {
+    "stone-turtle.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    },
+    "head_dimensions_m": [
+      0.662823,
+      0.707375,
+      0.573453
+    ],
+    "stone-turtle-review-scene.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    }
+  },
+  "v10": {
+    "stone-turtle.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    },
+    "head_dimensions_m": [
+      0.665502,
+      0.720812,
+      0.557401
+    ],
+    "stone-turtle-review-scene.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    }
+  },
+  "canonical_v10": {
+    "stone-turtle.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    },
+    "head_dimensions_m": [
+      0.665502,
+      0.720812,
+      0.557401
+    ],
+    "stone-turtle-review-scene.blend": {
+      "packed_images": [
+        {
+          "name": "StoneTurtle_Colour_1024",
+          "png_bytes": 1333560,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746"
+        },
+        {
+          "name": "StoneTurtle_Roughness_1024",
+          "png_bytes": 22192,
+          "size": [
+            1024,
+            1024
+          ],
+          "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+        }
+      ]
+    }
+  },
+  "head_size_ratio_v10_to_v09": [
+    1.0040418030152847,
+    1.0189955822583496,
+    0.9720081680625963
+  ],
+  "source_check": "pass",
+  "runtime_fbx_sha256": "8b8f0c56b2be36e8fa1fb082a253cc34271cf53d6983001f78f61ce4eb38260d"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-08",
+  "name": "棘刺软泥",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "GreenSpikyBlob",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\greenspikyblob-0796d4\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/0d10052c069f2446c56b828425a140182e7bc2736479abf79e2d752995e6bfcb_GreenSpikyBlob.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "8a0f3938d5da9b721357221566afb4c63507bfb482126d411dd3b61bcff673bf",
+  "bytes": 210780,
+  "animations": 8,
+  "displayName": "棘刺软泥",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 31012,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-08",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.9
+}

@@ -1,0 +1,57 @@
+# Generated Cocos/editor/compiler output and local developer state
+/tmp/
+/undefined/
+/.test-build/
+/game/library/
+/game/temp/
+/game/local/
+/game/build/
+/game/profiles/
+/game/.test-build*/
+/game/.server-build*/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.pid
+*.blend1
+*.blend2
+*.cocos-import-backup
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.exe
+*.msi
+.DS_Store
+Thumbs.db
+# Credentials, saves, room state, user-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.credentials.json
+/game/server/data/
+/.codex/
+/.agents/
+/.vscode/
+# Keep useful historical scripts and change notes, not exported games or previews.
+/output/**
+!/output/**/
+!/output/**/*.py
+!/output/**/*.cjs
+!/output/**/*.mjs
+!/output/**/*.ps1
+!/output/**/*.md
+/output/**/node_modules/
+/output/**/__pycache__/
+/output/**/code-before/
+# Reproducible audio intermediates; source sessions and runtime sounds are tracked.
+/game/audio-source/exports/*.wav
+/game/audio-source/exports/*_stems/
+/game/audio-source/exports/battle_sfx_masters/
+
+/game/.test-*/

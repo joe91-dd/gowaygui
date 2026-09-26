@@ -1,0 +1,21 @@
+{
+  "source": "candidate-01",
+  "sourceFreezeSha256": "93dd88555978e09e7268e664e35de28cf0398329596be39b1befbc63bcde3e50",
+  "reason": "Add exact rounded masks for existing 32/38/40/43-high buttons without changing their layout, corners, or click areas.",
+  "preservedRadii": [
+    10,
+    14,
+    18,
+    21,
+    22,
+    24
+  ],
+  "addedRadii": [
+    16,
+    19,
+    20,
+    21.5
+  ],
+  "sourceArchiveUnchanged": true,
+  "runtimeFilesWritten": false
+}

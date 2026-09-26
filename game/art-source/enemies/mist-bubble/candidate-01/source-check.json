@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "files": {
+    "mist-bubble.blend": {
+      "sha256": "99ff0ae5f298952588ca1194e3a23f120bd67641540e22ae4c156e51b3ead291",
+      "packed_images": [
+        "MistBubble_Colour_512",
+        "MistBubble_Roughness_512"
+      ],
+      "skinned_meshes": 13,
+      "editable_parts": 13,
+      "cloud_connected_components": 1,
+      "eye_vertices": {
+        "Spherical_painted_eye_L": 482,
+        "Spherical_painted_eye_R": 482
+      }
+    },
+    "mist-bubble-review-scene.blend": {
+      "sha256": "562ff979142ed05f52be31c6029877deb7b8b8efd2089fccdd34d490926c0ed7",
+      "packed_images": [
+        "MistBubble_Colour_512",
+        "MistBubble_Roughness_512"
+      ],
+      "skinned_meshes": 1
+    }
+  }
+}

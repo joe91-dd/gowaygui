@@ -1,0 +1,183 @@
+{
+  "status": "pass",
+  "method": "Actual current runtime-source REST-pose near-ground foot vertices, scale .65, raycast at 36 yaw orientations onto actual reimported candidate FBX; no turtle or runtime geometry modified.",
+  "footprintSourceAudit": "stone-footprint-audit.json",
+  "sourceModelFbxSha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "candidateFbxSha256": "55ffe57152c8de18146b1bcb94550ff515b6a4c720e5da2f77c9fa4e3e606675",
+  "allYawSoleRadius": 0.9746471943161487,
+  "continuousPlatformTopInradius": 0.9928696286224105,
+  "analyticAllYawSupportMargin": 0.018222434306261803,
+  "slots": [
+    {
+      "slot": 0,
+      "original": [
+        -5.0,
+        1.0
+      ],
+      "candidate": [
+        -5.0,
+        1.0
+      ],
+      "movement": 0.0,
+      "originalRouteDistance": 1.0,
+      "candidateRouteDistance": 1.0,
+      "nearestOriginalRoutePoint": [
+        -5.0,
+        0.0
+      ],
+      "nearestCandidateRoutePoint": [
+        -5.0,
+        0.0
+      ],
+      "originalRouteSegment": 0,
+      "candidateRouteSegment": 0,
+      "originalFullSoleClearance": 0.025352805683851343,
+      "candidateFullSoleClearance": 0.025352805683851343,
+      "strictContactOriginalClearance": 0.11253297544607765,
+      "insideMeleeBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "surfaceRays": 74448,
+      "unsupportedSamples": [],
+      "surfaceYMin": 0.29199957847595215,
+      "surfaceYMax": 0.2920408248901367
+    },
+    {
+      "slot": 1,
+      "original": [
+        -1.0,
+        1.0
+      ],
+      "candidate": [
+        -1.0,
+        1.0
+      ],
+      "movement": 0.0,
+      "originalRouteDistance": 3.0,
+      "candidateRouteDistance": 3.0,
+      "nearestOriginalRoutePoint": [
+        -1.0,
+        -2.0
+      ],
+      "nearestCandidateRoutePoint": [
+        -1.0,
+        -2.0
+      ],
+      "originalRouteSegment": 2,
+      "candidateRouteSegment": 2,
+      "originalFullSoleClearance": 2.0253528056838515,
+      "candidateFullSoleClearance": 2.0253528056838515,
+      "strictContactOriginalClearance": 2.1125329754460775,
+      "insideMeleeBlockingRadius": false,
+      "blockingMargin": -1.8,
+      "surfaceRays": 74448,
+      "unsupportedSamples": [],
+      "surfaceYMin": 0.29199957847595215,
+      "surfaceYMax": 0.2920408248901367
+    },
+    {
+      "slot": 2,
+      "original": [
+        3.0,
+        1.0
+      ],
+      "candidate": [
+        3.0,
+        1.0
+      ],
+      "movement": 0.0,
+      "originalRouteDistance": 1.4142135623730951,
+      "candidateRouteDistance": 1.4142135623730951,
+      "nearestOriginalRoutePoint": [
+        4.0,
+        0.0
+      ],
+      "nearestCandidateRoutePoint": [
+        4.0,
+        0.0
+      ],
+      "originalRouteSegment": 3,
+      "candidateRouteSegment": 3,
+      "originalFullSoleClearance": 0.4395663680569465,
+      "candidateFullSoleClearance": 0.4395663680569465,
+      "strictContactOriginalClearance": 0.5267465378191728,
+      "insideMeleeBlockingRadius": false,
+      "blockingMargin": -0.2142135623730952,
+      "surfaceRays": 74448,
+      "unsupportedSamples": [],
+      "surfaceYMin": 0.29199957847595215,
+      "surfaceYMax": 0.2920408248901367
+    },
+    {
+      "slot": 3,
+      "original": [
+        1.0,
+        -3.0
+      ],
+      "candidate": [
+        1.0,
+        -3.0
+      ],
+      "movement": 0.0,
+      "originalRouteDistance": 1.0,
+      "candidateRouteDistance": 1.0,
+      "nearestOriginalRoutePoint": [
+        1.0,
+        -2.0
+      ],
+      "nearestCandidateRoutePoint": [
+        1.0,
+        -2.0
+      ],
+      "originalRouteSegment": 2,
+      "candidateRouteSegment": 2,
+      "originalFullSoleClearance": 0.025352805683851343,
+      "candidateFullSoleClearance": 0.025352805683851343,
+      "strictContactOriginalClearance": 0.11253297544607765,
+      "insideMeleeBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "surfaceRays": 74448,
+      "unsupportedSamples": [],
+      "surfaceYMin": 0.29199886322021484,
+      "surfaceYMax": 0.2920401096343994
+    },
+    {
+      "slot": 4,
+      "original": [
+        6.0,
+        -1.0
+      ],
+      "candidate": [
+        6.0,
+        -1.0
+      ],
+      "movement": 0.0,
+      "originalRouteDistance": 1.0,
+      "candidateRouteDistance": 1.0,
+      "nearestOriginalRoutePoint": [
+        6.0,
+        0.0
+      ],
+      "nearestCandidateRoutePoint": [
+        6.0,
+        0.0
+      ],
+      "originalRouteSegment": 4,
+      "candidateRouteSegment": 4,
+      "originalFullSoleClearance": 0.025352805683851343,
+      "candidateFullSoleClearance": 0.025352805683851343,
+      "strictContactOriginalClearance": 0.11253297544607765,
+      "insideMeleeBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "surfaceRays": 74448,
+      "unsupportedSamples": [],
+      "surfaceYMin": 0.29199934005737305,
+      "surfaceYMax": 0.2920403480529785
+    }
+  ],
+  "notes": [
+    "All original level3 positions retained; actual c12b source feet tested against candidate FBX.",
+    "Original slot indices1 and2 have route distances3.0 and1.4142, outside stone base radius1.2; preserve ranged/support uses, no core edits.",
+    "Visual sand can run under plinth edges; route-center clearance and actual sole support are the constraints.",
+    "Static all-yaw sole support does not prove animation movement clearance or actual enemy contact."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Barrel",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\barrel-9c6d76\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Prop/4983bd049bfdec47fff77034160cd3e7a13d5ad9e65c2c2c46a39dfc9125110d_Barrel.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "f03ca40b11a060ad58f3c7832c9a40e01480746d27bb3868c60389f25eabeae9",
+  "bytes": 33016,
+  "animations": 0,
+  "runtimeKey": "barrel",
+  "height": 0.65,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 640,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

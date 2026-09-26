@@ -1,0 +1,60 @@
+{
+  "status": "Three-view prototype ready for parent review; leaf shell needs volume refinement; not approved or promoted",
+  "reference_images_actually_viewed": [
+    "output/art/A4-五龟三男两女角色参考.png",
+    "output/art/A-潮汐玩具岛.png"
+  ],
+  "reference_prompt_read": "output/A4角色图提示词.md",
+  "reviewed_files": [
+    {
+      "file": "render-front.png",
+      "observed": "Warm amber eyes and approved face proportion remain readable. Leaf surfaces are too close to the shell; front silhouette reads as a continuous green dome."
+    },
+    {
+      "file": "render-three-quarter.png",
+      "observed": "Leaves visibly exist as separate closed meshes, but overlap shadow and edge thickness are weak. Lower leaves look broad and orderly compared with A4."
+    },
+    {
+      "file": "render-side.png",
+      "observed": "Full leaf-covered dome, small natural white blossom, legs and tail visible. Shallow leaf layering remains clear as the main shortcoming; no missing textures seen."
+    }
+  ],
+  "review_recommendation": "Do not promote this c01 as final art. Next bounded iteration should increase individual leaf cross-section/rounded edges, introduce a small tip lift and clearer row separation, with shorter staggered leaves where necessary. Preserve the face and approved head/body proportions.",
+  "geometry": {
+    "closed_authored_leaf_count": 47,
+    "small_natural_blossoms": 2,
+    "editable_mesh_parts": 116,
+    "head_to_main_shell_width": 0.5959229600265995
+  },
+  "generation_statistics": {
+    "triangles": 28899,
+    "vertices": 15069,
+    "bones": 10,
+    "materials": 1,
+    "authored_clips": 6
+  },
+  "evidence": {
+    "original_numeric_atlas_seed": 81207,
+    "raster_inputs": [],
+    "two_source_images_packed_by_builder": true,
+    "source_weights_normalized_by_builder": true,
+    "independent_fbx_roundtrip_performed": false,
+    "independent_atlas_rebuild_comparison_performed": false,
+    "half_frame_clearance_performed": false
+  },
+  "fbx_sha256": "b1839d7450780cf3ea919269e8f6e49a902f40d91e92b54cc10cd8c7dcda91be",
+  "source_blend_sha256": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df",
+  "blender_threads": 2,
+  "samples": 32,
+  "resolution": [
+    800,
+    680
+  ],
+  "final_blender_exit_code": 0,
+  "render_process_finished": true,
+  "source_generation_issue_resolved": "An initially over-high left brow failed surface attachment assertion; it was moved inward without changing head geometry before any final render.",
+  "existing_species_source_and_runtime_payload_hashes_preserved": true,
+  "runtime_resources_written": false,
+  "meta_or_uuid_written": false,
+  "cocos_started": false
+}

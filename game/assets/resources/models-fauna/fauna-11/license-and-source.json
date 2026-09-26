@@ -1,0 +1,43 @@
+{
+  "key": "fauna-11",
+  "name": "深潮术士",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Wizard",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\wizard-dd8614\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/45e5cc2a54047ca2c5958edd77934b899a2ed23a6bb99a348e7bb81bc8672023_Wizard.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "9a535dfa228f29118f51b4799740dc532568d4914c89dba27347e97bb320d696",
+  "bytes": 122012,
+  "animations": 8,
+  "displayName": "深潮术士",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 12348,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-11",
+  "triangles": 12348,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.1
+}

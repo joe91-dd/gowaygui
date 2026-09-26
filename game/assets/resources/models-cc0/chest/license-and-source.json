@@ -1,0 +1,23 @@
+{
+  "name": "Chest Closed",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\chest-closed-d719ee\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Prop/95c214f523b80e8888d9ebf5185d08ed5be7cfbe4dfaccacbe51ca8de19047e2_Chest Closed.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "b03252479b19b32aa1d78f45150dddc07816c5c83ba7229e5a5223a92cebebee",
+  "bytes": 97184,
+  "animations": 0,
+  "runtimeKey": "chest",
+  "height": 0.75,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 1636,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

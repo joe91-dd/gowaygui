@@ -1,0 +1,178 @@
+{
+  "checks": [
+    "battle: MIDI and editable score agree, correct tempo/length, all notes close",
+    "battle: actual WAV/Ogg decode, exact frames, target loudness, dynamic headroom and loop seam",
+    "battle: 8 aligned audible 24-bit stems reconstruct master below -105 dBFS error",
+    "battle: continuous sections, mono-compatible stereo, moderated high-frequency energy and seam preview",
+    "boss: MIDI and editable score agree, correct tempo/length, all notes close",
+    "boss: actual WAV/Ogg decode, exact frames, target loudness, dynamic headroom and loop seam",
+    "boss: 9 aligned audible 24-bit stems reconstruct master below -105 dBFS error",
+    "boss: continuous sections, mono-compatible stereo, moderated high-frequency energy and seam preview",
+    "12 distinct layered battle SFX: editable recipes, 24-bit masters, finite stereo, capped peaks, silence at both ends",
+    "14 new runtime asset hashes match; all resource basenames are unambiguous"
+  ],
+  "music": {
+    "battle": {
+      "midi": {
+        "tracks": 9,
+        "paired_notes": 1120,
+        "end_beat": 128,
+        "tempo_microseconds": 535714,
+        "program_events": 9
+      },
+      "frames": 3024000,
+      "duration_seconds": 68.57142857142857,
+      "integrated_lufs": -18.99999968846171,
+      "runtime_lufs": -18.968664720490008,
+      "master": {
+        "true_peak_dbtp": -7.052837230709471,
+        "rms_dbfs": -21.092213061504005,
+        "crest_db": 14.030957165435005,
+        "seam_delta_dbfs": -50.94700455401065,
+        "seam_derivative_ratio": 0.4030867872117605
+      },
+      "runtime": {
+        "true_peak_dbtp": -6.987829577170156,
+        "rms_dbfs": -21.060708649140345,
+        "crest_db": 14.067351855451122,
+        "seam_delta_dbfs": -51.285012749859646,
+        "seam_derivative_ratio": 0.41085918090993423
+      },
+      "stem_rms_dbfs": {
+        "01_theme.wav": -23.833787403979294,
+        "02_reed_answers.wav": -39.901815356984095,
+        "03_picked_strings.wav": -32.96596599851481,
+        "04_rhythm_strings.wav": -40.619758494505795,
+        "05_round_bass.wav": -25.79163864802739,
+        "06_warm_air.wav": -40.39199684503296,
+        "07_shell_glints.wav": -50.738745600349226,
+        "08_percussion.wav": -39.86106661661126
+      },
+      "stem_residual_dbfs": -127.50407089359115,
+      "section_rms_dbfs": [
+        -20.534620937162522,
+        -20.64996038442153,
+        -24.30412519132615,
+        -20.02525237562809
+      ],
+      "above_6khz_power_fraction": 0.0002449126332066953,
+      "stereo_correlation": 0.9078432029218416
+    },
+    "boss": {
+      "midi": {
+        "tracks": 10,
+        "paired_notes": 1539,
+        "end_beat": 160,
+        "tempo_microseconds": 468750,
+        "program_events": 9
+      },
+      "frames": 3307500,
+      "duration_seconds": 75.0,
+      "integrated_lufs": -18.499999993166224,
+      "runtime_lufs": -18.474782578691087,
+      "master": {
+        "true_peak_dbtp": -6.116600074479277,
+        "rms_dbfs": -20.541134594597867,
+        "crest_db": 14.41900697900103,
+        "seam_delta_dbfs": -56.00199135329788,
+        "seam_derivative_ratio": 0.21773554906119255
+      },
+      "runtime": {
+        "true_peak_dbtp": -6.300169368409181,
+        "rms_dbfs": -20.51539179442195,
+        "crest_db": 14.209695017760051,
+        "seam_delta_dbfs": -48.94862609735161,
+        "seam_derivative_ratio": 0.5332462858911555
+      },
+      "stem_rms_dbfs": {
+        "01_theme.wav": -23.550309660224702,
+        "02_reed_answers.wav": -35.75390509746666,
+        "03_picked_strings.wav": -32.21362188435266,
+        "04_rhythm_strings.wav": -39.642802661672924,
+        "05_round_bass.wav": -25.24967165001156,
+        "06_warm_air.wav": -39.743656045161956,
+        "07_shell_glints.wav": -48.99204830365445,
+        "08_percussion.wav": -38.648173458809964,
+        "09_low_drums.wav": -40.62655583378334
+      },
+      "stem_residual_dbfs": -126.61850682262764,
+      "section_rms_dbfs": [
+        -20.1186644889572,
+        -20.393932011299874,
+        -23.886557198089285,
+        -19.83329841958242,
+        -19.66520003282317
+      ],
+      "above_6khz_power_fraction": 0.00030898023396730423,
+      "stereo_correlation": 0.9145220081498006
+    }
+  },
+  "effects": {
+    "sfx_attack_melee": {
+      "duration_seconds": 0.26,
+      "peak_dbfs": -16.000632247293233,
+      "rms_dbfs": -30.232879495425582
+    },
+    "sfx_attack_projectile": {
+      "duration_seconds": 0.3,
+      "peak_dbfs": -17.00113169360012,
+      "rms_dbfs": -32.48890926223289
+    },
+    "sfx_attack_magic": {
+      "duration_seconds": 0.38,
+      "peak_dbfs": -17.00113169360012,
+      "rms_dbfs": -30.92351434792983
+    },
+    "sfx_hit_soft": {
+      "duration_seconds": 0.2,
+      "peak_dbfs": -18.99912610181711,
+      "rms_dbfs": -32.347628431640544
+    },
+    "sfx_heal": {
+      "duration_seconds": 0.42,
+      "peak_dbfs": -18.99912610181711,
+      "rms_dbfs": -32.30494410636263
+    },
+    "sfx_core_hit": {
+      "duration_seconds": 0.65,
+      "peak_dbfs": -13.000996335608328,
+      "rms_dbfs": -27.500249920817048
+    },
+    "sfx_skill_stone": {
+      "duration_seconds": 1.0,
+      "peak_dbfs": -12.001001994948961,
+      "rms_dbfs": -25.336013563358538
+    },
+    "sfx_skill_spike": {
+      "duration_seconds": 0.72,
+      "peak_dbfs": -11.999946665424783,
+      "rms_dbfs": -29.986380524212322
+    },
+    "sfx_skill_crystal": {
+      "duration_seconds": 1.12,
+      "peak_dbfs": -11.999946665424783,
+      "rms_dbfs": -27.441780592339793
+    },
+    "sfx_skill_leaf": {
+      "duration_seconds": 1.34,
+      "peak_dbfs": -13.000996335608328,
+      "rms_dbfs": -26.108671516754335
+    },
+    "sfx_skill_bubble": {
+      "duration_seconds": 1.08,
+      "peak_dbfs": -12.999812245955065,
+      "rms_dbfs": -27.60399416597941
+    },
+    "sfx_defeat": {
+      "duration_seconds": 2.45,
+      "peak_dbfs": -13.998771951939075,
+      "rms_dbfs": -25.959051232664237
+    }
+  },
+  "pending": [
+    "human musical acceptance",
+    "actual Cocos looping and mix",
+    "mobile speaker and headphone review"
+  ],
+  "status": "offline checks passed; listening and in-engine acceptance still pending"
+}

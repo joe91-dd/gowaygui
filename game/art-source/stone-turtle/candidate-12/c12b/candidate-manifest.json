@@ -1,0 +1,317 @@
+{
+  "status": "Isolated candidate; no runtime or canonical promotion.",
+  "base": "game\\art-source\\stone-turtle\\candidate-11",
+  "head": {
+    "min": [
+      -0.6048617959022522,
+      -1.7167847156524658,
+      0.2567983567714691
+    ],
+    "max": [
+      0.6048617959022522,
+      -0.9013653993606567,
+      1.0318305492401123
+    ],
+    "dimensions": [
+      1.2097235918045044,
+      0.8154193162918091,
+      0.7750321924686432
+    ]
+  },
+  "main_shell": {
+    "min": [
+      -0.9977426528930664,
+      -1.1454132795333862,
+      0.4800000488758087
+    ],
+    "max": [
+      1.0204627513885498,
+      1.1534101963043213,
+      1.4721719026565552
+    ],
+    "dimensions": [
+      2.018205404281616,
+      2.2988234758377075,
+      0.9921718537807465
+    ]
+  },
+  "head_to_main_shell": 0.599405585396848,
+  "non_head_meshes_unchanged": {
+    "Torso": "fcf6331c80bc2e3dca872735f3f783f26ca52552bac48d597327e41d6306f45a",
+    "Warm_plastron": "ecaac40ddd5128128d158113c46ed3abcfb77ace30d987510e783f4db6392d52",
+    "Neck": "66c2f4558f14c1f85c4a567fe3c462057062009ca79ed9426ae7cacd4691bf70",
+    "front_L_sculpt": "7a2437210fec777d13759010f425d97744d72acb20835bdcfeb8225d6589fb16",
+    "front_L_toe_-1": "76e1bd42a2c8fd1514fd9e7b55413a1e4fdba77c335f1f5863c312a82449cfd8",
+    "front_L_toe_0": "196d22f33e49547de0965043eb96fdc08097302e5e49e481383b53dd1b852392",
+    "front_L_toe_1": "5982e2d45945e55e9e6878769a1fa6e09b28f2aec09b984a6e129503d1fdf315",
+    "front_L_flush_scale_0_0": "22a55750f33e8126d7d50a550e989e560c1fdf6ff97fb6589a079145f280c960",
+    "front_L_flush_scale_0_1": "19081e022ecf7c6265d7d6de187787ccaec7dbce187e7ed91f5461f52af5694e",
+    "front_L_flush_scale_0_2": "0a6fd2ba9489904f75e8445c76338ead3dc63dc14c5319fb65b4a9a1b9fd6806",
+    "front_L_flush_scale_1_0": "2a5b629be4ccf1b065ff9ecd0dac163a13f546cca8f055f05dcdbf790e82de8e",
+    "front_L_flush_scale_1_1": "ccfa06af169be15f24675c339e25c33d3a44981c891617df420d959c39fdfb62",
+    "front_L_flush_scale_2_0": "54ae1467a3b14fa577496e35348b0be7690ac926d958c7a3dbef5a0bc21219f5",
+    "front_L_flush_scale_2_1": "79bb360b9a493682c00b7b19a5a76bb6018bc6c1efee6e498218b67e35637d38",
+    "front_L_flush_scale_2_2": "56f8e0c41171554e8e62bed9db21c5fb1ba6d7842d2b6cc4922211b5af57b4d1",
+    "rear_L_sculpt": "68db4560372204aae483017fa45596b1532352017dbb4729bc105c1765974389",
+    "rear_L_toe_-1": "c1ba588c106f695f98baa33799f63a0fda1accb99cb389da89061d015f667da3",
+    "rear_L_toe_0": "997d24b3cf35f3c9291bd09d1580e3cc8b9ba5be0d65c28b3cf2cc75799c502a",
+    "rear_L_toe_1": "6d81aba45896e5590b3db98ef5a71ad54c95762c7c7d6a17ebc45c780ee01b53",
+    "rear_L_flush_scale_0_0": "c2e8f6810d1b71126ccf588e98f82ad05fa23fd24cf78ffa1c1570686d35dd4e",
+    "rear_L_flush_scale_0_1": "338a27beacb78ad641d9d49c6effa48d63c6d904b3766b3cffd9548ae89dbc23",
+    "rear_L_flush_scale_0_2": "c6b72900c4e5e0b480fd5229462f14c6665fbf2f750992f754037b035cedd13a",
+    "rear_L_flush_scale_1_0": "7d64e64f216be50a9ea11ebe121bcd88eedc8467184f957f06a90c43ca418b19",
+    "rear_L_flush_scale_1_1": "eb5196d0dd23a0615011a37bfabc911aa6519d1e4bf94b46a98b0f43b5d1027e",
+    "rear_L_flush_scale_2_0": "7ca229304a4d5be69299b9cd1a7d906ed70e9bf0b2437ac537de83f5fa4f12ac",
+    "rear_L_flush_scale_2_1": "d03ffc3b3f81a7ee42720878a24a6b4564f5d3a7ac1b74ba7a2e708b10ef28ff",
+    "rear_L_flush_scale_2_2": "4409c1f7f310c4e8916a8ae97f5967a08613df74d43849154d2b9b4f10dd93f0",
+    "front_R_sculpt": "a113bc9511cc87e8f35104bca3c2b00af6994809011d288812a8fb4507c7044f",
+    "front_R_toe_-1": "a2db540f31e32591b01443923f17e95a78c23eb4fa8d0fca477acc9519e990b3",
+    "front_R_toe_0": "7aee02034f1e8b51dd6960f20e2d8951dda1687a34247b1b55e9fa7c9f2f1ea4",
+    "front_R_toe_1": "059001b77dfe08222b3b29ee3dcb4e1d164a71561733816c317a0df50160a186",
+    "front_R_flush_scale_0_0": "8a6ace4be9277397443b03b302b5fd75b5923b5493977541069dc2babea0ab3d",
+    "front_R_flush_scale_0_1": "e00b9c9a4c0d6a44e39afbf0e66d7954c3f1e88625c683e7c3fc9416eabf5868",
+    "front_R_flush_scale_0_2": "ac3f0c4a4c5088dc0ef8232bbe7327bdf22810c04348cc33bb26815125231173",
+    "front_R_flush_scale_1_0": "6c105950ce80607f8b527de5f4e423cbe391504e568a538740a0b13ebe18904b",
+    "front_R_flush_scale_1_1": "66c558df8b11b5097f7e96660191c11c4b3cbfa3288637be28318fca3ffbce80",
+    "front_R_flush_scale_2_0": "83006287fc45053052281100c00f7a04161e239064bfbd13ccacd98e64fd372b",
+    "front_R_flush_scale_2_1": "0a6a0bc7e204b3b4217c4815d9911cb692b919ceaa265b7e0663f1a406a3206e",
+    "front_R_flush_scale_2_2": "f06cc2706b63e2499f2141eb43a3e0793fa7790cb4e9f57fd1a1b4cb3b0df7bb",
+    "rear_R_sculpt": "9d09c82031b563c46337ae39f5c149dd9c4ffd2a4ab3693f37f9f17a358f704b",
+    "rear_R_toe_-1": "3d1d81cb36a9cf6653e281421aaab9f3ed847cf69c10b6f9ea276296492b3133",
+    "rear_R_toe_0": "266e258b931bb90f593e09481040b41718c60df8a027514ee6e4c28be15f1358",
+    "rear_R_toe_1": "ee0ffc3eea1d5c9225e04ce88a8e0c36d75c481a23c0ef6563fb7ce6a22e0389",
+    "rear_R_flush_scale_0_0": "c15cfa5bb72c9e5bd244722d53ec6e2a240d14ef73a5f2475bfc2aadbc961e02",
+    "rear_R_flush_scale_0_1": "5b41f70d766d0a0d12e547ce8c41241bfa69aef15f804829a0e10be73fd9f762",
+    "rear_R_flush_scale_0_2": "dffc29623d63eb58985db4abb017351ca7240193d75bd64e37e5759c7963a1fd",
+    "rear_R_flush_scale_1_0": "946333cc80dedc64c727b55f2ef9623690b6e9c58e8c9a23baf7742083c54abe",
+    "rear_R_flush_scale_1_1": "bb86cb7455fba67d6b861058e7be349e95074de849d3880c00a1859c6ad09616",
+    "rear_R_flush_scale_2_0": "56c108d58d6edc890d120ce0d238459d449d3e280d262202dd1eebdecff82a97",
+    "rear_R_flush_scale_2_1": "04a91980109c1b7f4084eb0d0487748b96912958e73ba80f1809bb72941ba43e",
+    "rear_R_flush_scale_2_2": "198032c15b58eab1ed8ac43ded383da111b630e432c605ac05770a940862bdbd",
+    "Tail": "c08e028982535f2ac1a21bfb3e562ea3d7c2d5851a94f880b56ebe18001ff941",
+    "Carapace_shadow_between_stones": "e63f068fec3e306a94da2c4aa853487fc680a60679d0567668cf615e81b364e8",
+    "Fitted_stone_00": "e71c58450939e1bde3151d29b06a2fef87a159e6f7633e765f9f610afba74f6d",
+    "Fitted_stone_01": "62349e962099f10d8880b7a6b45a841c91458bd260ac834d39451e937bd81ce6",
+    "Fitted_stone_02": "3b0703905ea7681d7da6e8800a6d53e86682bdc6e176bdc2a763851bc8695172",
+    "Fitted_stone_03": "8da326b71f3e7ceb0d49d001e4128719ee14b34e583bb46d0c3d69e3bcf9fe8c",
+    "Fitted_stone_04": "ff4ce19f231ab76254c876498eb5301d4209ff7519fa6cc62bcb4e3f73a9ce0e",
+    "Fitted_stone_05": "5f3f504f7313aa8b18a499fb07b98a5c6f796f5fd76d203ee2f7f89ae5f71d6c",
+    "Fitted_stone_06": "477e840026e7edfac793c6d647ac4ff697754b857fd30c083db6800a03b7942b",
+    "Fitted_stone_07": "7467c369e2e3c9c9d16ea7dc075b6ca9ac8c321274d90968d8eb99de05a458b5",
+    "Fitted_stone_08": "6d47a1d2203f2d4d432ba4b33ac53b6aa43efaea9edc458b840f11e7c522d159",
+    "Fitted_stone_09": "6986ef11c6f9d153b4b6095810953f3211073cdbf805903bd729524473480678",
+    "Fitted_stone_10": "cdc4157a4662d6d64b44a2e0e105316d48f833e30a1d2295947fa3f892ea6388",
+    "Fitted_stone_11": "b020f7dc8fb5896f1778b85cab8233036b94d9c6313375038437128b55406c95",
+    "Fitted_stone_12": "c5d9c9ea95dc1c89e58ec833adb415cee889d50f4c1dfb9a361b350f70969887",
+    "Fitted_stone_13": "02db7671d268c4cb6bf3a5580b96120cbbfe9fde569566f55faf41b0f7c94b3c",
+    "Fitted_stone_14": "901df0b68cea4278cf8bb11a3b1b381b02fb4cf6b4afef902b3f347f3b230828",
+    "Fitted_stone_15": "247fe39524568a765843c6b376ad5ce6768ae267c73c5ca8f19d38264ea5ffb9",
+    "Fitted_stone_16": "e557afa32b12a6c2969dd3fc95dd71414cd66e670c550b7cb8f5e88ed8ef6903",
+    "Fitted_stone_17": "2db4bf3eac75108492f29bba57168cca164db53cfeee8e8e7289f5d52ea27a7d",
+    "Fitted_stone_18": "d2b414e0751609baa844daaa4f8999ff44b42fcfc739e3fb05e456ee626fee52",
+    "Fitted_stone_19": "4092da62570b405d3507c015ad5d598b3bae2703f1d132f17c7d403fce1bad73",
+    "Fitted_stone_20": "a492ba9b4e996e8502eb574a86f77ea15202bf3c6e833ccdbf5d3d9e36a8c95e",
+    "Fitted_stone_21": "729fe24f2c3771316c3700f4755d04195d0500826f9ef06c30068a4f71bc8e22",
+    "Fitted_stone_22": "09e259fe32289e74010b2ca46c893675931bde13bbc0bd5d3eff4537839f59c8",
+    "Fitted_stone_23": "16ba9f8d79c733f23d2d18e0e8bf7b0015305de40e55c10dc1b5b5b48514581b",
+    "Fitted_stone_24": "bc52ba631b815ba4188e7cb1215d268108a852ed361f8bad01001f699f23db88",
+    "Fitted_stone_25": "ab569b8d70455cab6c1a8487ba1770e66f26c74c0ec260c160c6e8a50d2363dc",
+    "Fitted_stone_26": "41ca8791e88d397b78f5ccdcbd7177955fec7b484e9181aee71736e01b1ff1ad",
+    "Fitted_stone_27": "de853352df190b0f260d9e7a5a39008c0ce9bff7694c98cb8db764d4ab8930d1",
+    "Fitted_stone_28": "1900f3c4672f672644dab577662123e68a2f5dea32767e39c751d86a8e9337e5",
+    "Fitted_stone_29": "f8770bdbe9a52728eb57c95ee476e116cb598bd306684fe125141c5261ed10d2",
+    "Fitted_stone_30": "d20ecaf1716a01576385f5e0af66943667fd3aea8e8945b99ca8801b35fd3b15",
+    "Fitted_stone_31": "c3af23be7cb9779a62bd38820f2e432080ad74541ff8f9351d2d74bb6f6eb5d7",
+    "Fitted_stone_32": "daba0d83f74d68f7bef895d4178f6a1f4680cce8d8668f691e61489bde0bbfd9",
+    "Fitted_stone_33": "51c1045b3bc38d682f3ce63d604e8950390692a1aef24d97e94ed2ba4a8a198f",
+    "Fitted_stone_34": "2293d6f3d0f4e26079f37ea3fa73528450d0ad7fefebbe7a54cac142c1c045cf",
+    "Fitted_stone_35": "b1999fb945641bc24fb03747f2fe9092a4b6d1be94082e596484d8b836d87a35",
+    "Fitted_stone_36": "a558420f8655f2e4786f564ceace5b254dcac72773654806b2bf8ac55149d8c1",
+    "Fitted_stone_37": "3cc987fce3aeec5d04eec1083feb56ce0f5b6836929f7ca58cafc02c698f3b36",
+    "Fitted_stone_38": "33082c73185daf823d53ab02b4c1a661bb05e167d745001b18400dc551932c96",
+    "Fitted_stone_39": "53b8dbbd459eec486855dbe8c25e1fcc4d11059851ad1ae663eea07a25fbe1c4",
+    "Fitted_stone_40": "dc15983cfeb44dc023eb4696f6aee38a7f65fa1934195ce0bc8604aea80d2765",
+    "Fitted_stone_41": "803bab63ef8fa67b906db509bf60729e8e1c1eddfd14da80b654babaa3767922",
+    "Fitted_stone_42": "e25d6ffa0cf9af6c952205bde945e45545ffd011459f1818b271a97f19516135",
+    "Fitted_stone_43": "afc9db5557ee57e8710dc289169dd538a2be6ea7bb8a6b45ee6ca8e63cb0cab1",
+    "Fitted_stone_44": "64b176efec218dedc40116bef9e8ce187427803b4cc9a68b5f03f29b6c8045fd",
+    "Fitted_stone_45": "ed4b41eda839b19800e5e273978474614782fbb6aed430e7a8fc69cdd291045b",
+    "Fitted_stone_46": "bf2857a9c8d9147f67f8e45b4420208fd78d6177ae117ccf4e3e43aa21c57371",
+    "Fitted_stone_47": "23e7333da0d36eda0a60a171a3c7d22506cf283aa8b8df9e80653a51051dd197",
+    "Overlapping_rim_00": "32993a81b052f68ddc81cdf94c3173fefa5b2dba06ceb9cc7e7ca5cdcf9c347a",
+    "Overlapping_rim_01": "681371abada807179fa149b34f9a84663f8e3dd323bffd7fb6334d96b223816a",
+    "Overlapping_rim_02": "34e2fadbc82e01581bc075602318b214d1852c0906e0aa20cb2d541f6b724723",
+    "Overlapping_rim_03": "289af7138f88a24f46bd29aae5c16f29d7ca38bc5c3ca0d6ec09b4eb0b438063",
+    "Overlapping_rim_04": "a4e7ebaf2c0054cfbfd691b9a5518c55a2c7b202b464876425c16654dc194f4d",
+    "Overlapping_rim_05": "9a19eadc197602260aa819709d67e997c6efc610d67a8c41af577511213ba6d4",
+    "Overlapping_rim_06": "6f1d5c43c96e3aa3a0a0b057e17dcec47a609d40af4055297a185f850f1d6d00",
+    "Overlapping_rim_07": "60b0ea18ad24c2350cf26dd0459baf6604fe5c8de9bf10d8918c38a568601714",
+    "Overlapping_rim_08": "e74638508ccaec9cfcd095428a39e36dcada090ec31a38c60f98459e68c57170",
+    "Overlapping_rim_09": "ef0589f6df1cadb9ef5167bd4164e57c4b8216635af7b1ab320d631f3bc4c424",
+    "Overlapping_rim_10": "6c955221b715be6c60bf5c86ec7ee6af3708d3ad4fb1db3a19d8b8b3e56ebcb2",
+    "Overlapping_rim_11": "a27817ef4bf8acae330ce4c7fd8547f1fec95d9e35b17c1be2dfd07421f03c44",
+    "Overlapping_rim_12": "43cac47d318f2ff1b1c50d2661da94a0e3f974a74c133efab1ee0c7574fa5c98",
+    "Overlapping_rim_13": "07391db3fd109cd883f61e8a062c7f7138c9f84d7268efbbee00dac5fda77998",
+    "Overlapping_rim_14": "12b3d5e0f8d0a86620b120b1ed05f3f70890a91725c3059db7639dbbb31de208",
+    "Overlapping_rim_15": "75eec50212a261ba1c54d770f680a19f1dbc51da8e9a633e29b938f74cf6c1e8",
+    "Overlapping_rim_16": "b3f1a4f29cb46d2ca7fd6323c9a507d9c1ae7cde4ba85e2ad781a1f728ff0f17",
+    "Overlapping_rim_17": "4211bf952568514fcb55867c08e7b9d54c439faab53517409169e9ee4ec724ce"
+  },
+  "six_actions_unchanged": {
+    "attack": "e6cc9a2267c2b3529f1eac30c8786d9f6da320d1f75e79eff881af7719a99b79",
+    "fusion": "e4a04e3733ce8cd4fb019918d10032078a8f1fb702147da434c2d84a3ac73f00",
+    "hit": "8a1c9785d97a2fbf43497f4cd75af7c64de0588c113a6760894d5a39f3dcc68d",
+    "idle": "5e1f9709eac9986f85d12b0545455385c7431c605ca82d0269dad34176e9dcdd",
+    "rest": "33e3d899e4b80a9103cd5ba4543afef4233d1788fe517a9a3c3c8a0ee583b0ae",
+    "skill": "e7b5679cc032ad4d64235eec71dc3d4b28168dc13f887f65953035499711446f"
+  },
+  "skeleton_unchanged": true,
+  "iris_colour_adjustment": "Full atlas regenerated from source palette/noise/UV equations; iris_colour=(.320,.207,.080). No raster inputs.",
+  "eye_opening_target_fraction": 0.22,
+  "eye_inner_lid_diameter_m": 0.276,
+  "muzzle_target_width_m": 0.856,
+  "muzzle_target_height_m": 0.188,
+  "atlas_parameters": {
+    "generator": "stone_turtle_atlas.py",
+    "raster_inputs": [],
+    "size": 1024,
+    "tile_grid": [
+      4,
+      4
+    ],
+    "noise_seed": 4127,
+    "palette": [
+      [
+        0.27,
+        0.26,
+        0.22
+      ],
+      [
+        0.34,
+        0.33,
+        0.27
+      ],
+      [
+        0.23,
+        0.24,
+        0.21
+      ],
+      [
+        0.38,
+        0.35,
+        0.28
+      ],
+      [
+        0.29,
+        0.33,
+        0.14
+      ],
+      [
+        0.43,
+        0.46,
+        0.22
+      ],
+      [
+        0.55,
+        0.54,
+        0.29
+      ],
+      [
+        0.57,
+        0.46,
+        0.24
+      ],
+      [
+        0.12,
+        0.15,
+        0.1
+      ],
+      [
+        0.93,
+        0.9,
+        0.76
+      ],
+      [
+        0.16,
+        0.19,
+        0.11
+      ],
+      [
+        0.035,
+        0.045,
+        0.025
+      ],
+      [
+        0.77,
+        0.73,
+        0.565
+      ],
+      [
+        0.37,
+        0.4,
+        0.2
+      ],
+      [
+        0.96,
+        0.94,
+        0.83
+      ],
+      [
+        0.18,
+        0.19,
+        0.15
+      ]
+    ],
+    "iris_colour": [
+      0.32,
+      0.207,
+      0.08
+    ],
+    "iris_uv_center": [
+      0.5,
+      0.49
+    ],
+    "iris_uv_radii": [
+      0.415,
+      0.411
+    ],
+    "pupil_uv_radii": [
+      0.302,
+      0.314
+    ],
+    "provenance": "Original math/UV/noise formulas extracted from build_stone_turtle_candidate11.py; full colour and roughness maps are regenerated."
+  },
+  "lower_eyelid_revision": "Only .060m localized lower-socket relief and .008m eye advancement; external head X/Z extents unchanged.",
+  "candidate_atlas_bytes": {
+    "game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+  },
+  "render_threads": 2,
+  "resolution": [
+    800,
+    680
+  ],
+  "samples": 32,
+  "iteration": "c12b",
+  "triangles": 28572,
+  "vertices": 15342,
+  "bones": 10,
+  "materials": 1,
+  "fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "protected_inputs": {
+    "game\\art-source\\stone-turtle\\candidate-11\\stone-turtle.blend": "66a4776dea6881c776707096d38b96de67feb5d8f71e4d711ca5349a506f1138",
+    "game\\art-source\\stone-turtle\\candidate-11\\stone-turtle-review-scene.blend": "376cff82999999ec14a0d766ac330f0d80ebf38f57b063928233e22d2df59080",
+    "game\\art-source\\stone-turtle\\candidate-11\\export\\stone-turtle.fbx": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+    "game\\art-source\\build_stone_turtle_candidate11.py": "1c8bbc713b59e1ec3d6cccd6ee52a0ed13173fc11a17349cc86317db46e2e1cb",
+    "game\\art-source\\build_stone_turtle.py": "69bb143d04ab3be83d6b6e71950b4d622ebc5d84952b3ee6fb28e30767399433",
+    "game\\art-source\\stone-turtle\\stone-turtle.blend": "9977543bc23f3193932c8fd7eca8e884f7489a95a700a602dc35eea7dc331792",
+    "game\\art-source\\stone-turtle\\stone-turtle-review-scene.blend": "eaea079144079768275997a9730468ccac1c13617c5b7e3790ec7fb791013291",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "331db30651c09e8930435b91bf78b7e714b13d6852e488c82a67233bad66ea57",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png.meta": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png.meta": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx.meta": "945a8a8f118d1c769f62bb3ad8ec0db35bc702db26dc00a089827b3cf42c366a"
+  },
+  "protected_files_unchanged": true
+}

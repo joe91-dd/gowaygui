@@ -1,0 +1,36 @@
+{
+  "id": "purple-1",
+  "name": "玄珠海吟师",
+  "tier": 2,
+  "index": 24,
+  "base": 52,
+  "key": "boss-24",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 76864,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-52",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/a11d36077b57a96d3a993f6a603562517eb44ade5e8b478c3d9a4e68b80b55c8_Henry.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24739,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 22.8
+}

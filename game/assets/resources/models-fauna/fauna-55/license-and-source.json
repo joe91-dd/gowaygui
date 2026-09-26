@@ -1,0 +1,44 @@
+{
+  "key": "fauna-55",
+  "name": "鲨鳍督军",
+  "kind": "elite",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Sharky",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\sharky-40a8a6\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/dcecc189187b8b827a9507f1bf08d90a62b0b1dbbf70bec40fc800dca15dafc9_Sharky.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "b3bf6c63883eddbb7a55e9fa489bc79f359894bc06e34e605a9580339d736ada",
+  "bytes": 1664072,
+  "animations": 14,
+  "displayName": "鲨鳍督军",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 28320,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-55",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 20.3
+}

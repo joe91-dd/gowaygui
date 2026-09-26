@@ -1,0 +1,43 @@
+{
+  "key": "fauna-25",
+  "name": "浮岩卫兵",
+  "kind": "armored",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Goleling",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\goleling-5a56ed\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/78396d839769b827ce0b6338e5a5b5b3f5c7213bb94f009a0d674599258fdcd8_Goleling.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "43ecb5ae3e344eb7b5bee55e4ea36d168b8c27ae13667c1e5db2d8bd6b604136",
+  "bytes": 344172,
+  "animations": 8,
+  "displayName": "浮岩卫兵",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 24032,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-25",
+  "triangles": 14166,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.7
+}

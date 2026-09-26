@@ -1,0 +1,24 @@
+{
+  "role": "crystal",
+  "vertices": 16230,
+  "triangles": 31974,
+  "bones": [
+    "root",
+    "body",
+    "shell",
+    "head",
+    "front_L",
+    "front_R",
+    "rear_L",
+    "rear_R"
+  ],
+  "clips": [
+    "idle",
+    "attack",
+    "skill",
+    "hit",
+    "rest",
+    "fusion"
+  ],
+  "source": "Original V2 geometry and keyframes; visual review pending"
+}

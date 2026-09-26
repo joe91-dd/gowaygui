@@ -1,0 +1,229 @@
+{
+  "status": "Own technical QA and actual offline image review complete; ready for parent runtime review. Not promoted or Cocos-validated.",
+  "species": "bubble",
+  "candidate": "02",
+  "files": {
+    "bubble-turtle.fbx": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+      "bytes": 2573804,
+      "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398"
+    },
+    "bubble-colour.png": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+      "bytes": 972370,
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711"
+    },
+    "bubble-roughness.png": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+      "bytes": 22011,
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb"
+    }
+  },
+  "editable_source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-lod-parts.blend",
+  "single_mesh_source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-runtime.blend",
+  "source_sha256": {
+    "bubble-turtle-lod-parts.blend": "486bc7031acf36553871b3b76740dda9f8679d7dfa908c3169af4b05a1c15fcc",
+    "bubble-turtle-lod-review-scene.blend": "d03eefbff77b4ccdba6f68b6e6f63c0fa5a1ccc83c4bb5e2de29db1aadbab34f",
+    "bubble-turtle-runtime.blend": "a4ae0721539349a1d2277e17480f5fe6b1975e64758c5232597f57a68efe2ec0"
+  },
+  "original_high_source_sha256": "e1e84485d53e76a04de7d6995655f78f845e3b1044b443da55f9a277383a5414",
+  "approved_high_images_sha256": {
+    "render-front.png": "ee7f4fbb83f6150fb8c576cbba1853c1b5a8dea9e6b628fa58482bef76b0a9f1",
+    "render-three-quarter.png": "bd8c3d2c4da7ec069f427c771937cd800814775ac2edd734951abc099ca9c12b"
+  },
+  "triangles": 29604,
+  "vertices": 15346,
+  "bones": [
+    "root",
+    "body",
+    "shell",
+    "neck",
+    "head",
+    "front_L",
+    "front_R",
+    "rear_L",
+    "rear_R",
+    "tail"
+  ],
+  "material_name": "BubbleAtlas_01",
+  "material_prefix": "BubbleAtlas_",
+  "texture_mapping": [
+    {
+      "fbx_channel": "DiffuseColor",
+      "texture": "bubble-colour.png"
+    },
+    {
+      "fbx_channel": "ShininessExponent",
+      "texture": "bubble-roughness.png"
+    }
+  ],
+  "opaque": true,
+  "cocos_scale": 0.65,
+  "blender_forward": "-Y",
+  "blender_up": "+Z",
+  "export_forward": "-Z",
+  "export_up": "+Y",
+  "expected_cocos_forward": "+Z",
+  "foot_plane": 0,
+  "rest_bounds": {
+    "min": [
+      -0.7304117560386658,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7304117560386658,
+      1.0257728040218355,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4608235120773316,
+      1.0257728024510326,
+      1.943768107891083
+    ]
+  },
+  "maximum_animation_y_scaled": 1.1136810243129731,
+  "height_measurement": "Measured actual FBX evaluated vertices every half-frame at 30fps; not an analytic continuous-time bound.",
+  "suggested_healthbar_height": 1.29,
+  "suggested_control_marker_height": 1.22,
+  "clips": {
+    "idle": {
+      "fbx_stack": "BubbleTurtle_Rig|idle",
+      "frames": [
+        1,
+        72
+      ],
+      "seconds": 2.3666666666666667,
+      "loop": true,
+      "maximum_cocos_y_scale_065": 1.0329228281974794,
+      "max_height_frame": 24.0
+    },
+    "attack": {
+      "fbx_stack": "BubbleTurtle_Rig|attack",
+      "frames": [
+        1,
+        27
+      ],
+      "seconds": 0.8666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0463287651538848,
+      "max_height_frame": 9.0
+    },
+    "skill": {
+      "fbx_stack": "BubbleTurtle_Rig|skill",
+      "frames": [
+        1,
+        42
+      ],
+      "seconds": 1.3666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0622154951095581,
+      "max_height_frame": 17.0
+    },
+    "hit": {
+      "fbx_stack": "BubbleTurtle_Rig|hit",
+      "frames": [
+        1,
+        18
+      ],
+      "seconds": 0.5666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0266795456409454,
+      "max_height_frame": 4.0
+    },
+    "rest": {
+      "fbx_stack": "BubbleTurtle_Rig|rest",
+      "frames": [
+        1,
+        72
+      ],
+      "seconds": 2.3666666666666667,
+      "loop": true,
+      "maximum_cocos_y_scale_065": 1.0108228027820587,
+      "max_height_frame": 1.0
+    },
+    "fusion": {
+      "fbx_stack": "BubbleTurtle_Rig|fusion",
+      "frames": [
+        1,
+        60
+      ],
+      "seconds": 1.9666666666666666,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.1136810243129731,
+      "max_height_frame": 23.0
+    }
+  },
+  "image_review": {
+    "status": "Own offline technical and actual image review complete; parent accepted runtime front/battle silhouette. Not final Cocos or release approval.",
+    "actual_images_reviewed": true,
+    "image_sha256": {
+      "animation-attack-08-side.png": "82c3d76d65681c953821359755c6cd8ce39322607b5c68b5bd7596400144c05e",
+      "animation-attack-13-three-quarter.png": "71efb15bfc81d94b19a4e3ad2cae45dba72a8b3ed7f90906836f4fd780261003",
+      "animation-fusion-23-three-quarter.png": "9473c1edc9e540a743e5346792a56f4a671f8dc067bee381ca621a3fd714f775",
+      "animation-hit-04-three-quarter.png": "4d32471965a94df6855862664de9ac84a991160231ba51f2ae7b708c1f336aa0",
+      "animation-rest-36-three-quarter.png": "8fc8c5be498cd4893b199e2b0ff63222ca7bd660162bf5ced562a7890b027b28",
+      "animation-skill-16-three-quarter.png": "fbda39a61841fabe513acff697675f361a04f772fdbd34df9c1aa63d9f074660",
+      "animation-skill-22-three-quarter.png": "66c6e4575fd56fabece3234befb593ec6d4c13470bb21f96a5bd100f203c225d",
+      "render-battle.png": "9936f6202e8c4ba828e0ac00d4be45d8f9fa339e5bddb37a2c3953808d116d5c",
+      "render-front.png": "fac648d5b0751fe71b7d9c12a2878f05f87f561e66406bb50560b8589cd63b9d",
+      "render-side.png": "bc897dedc0ee3cc581f1604f5ced4fe8183da4227247ce3d84e311e75ec90983",
+      "render-three-quarter.png": "6efbf986746d029ade015feda8536c3137182dc3ced33fb682f8663998f1ca1b"
+    },
+    "method": "Each of the 11 original rendered PNG files was opened with view_image; no contact-sheet-only or invented Cocos validation.",
+    "observations": {
+      "front": "Approved large eye opening, embedded white/iris highlights, asymmetric brows and blunt spiral terminal retained after LOD. Toes remain rounded.",
+      "three_quarter": "Continuous shallow blue ribbon and segmented rim retain c02 shape; no obvious strip collapse or floating oval parts.",
+      "side": "Solid dome, neck transition and short planted limbs remain intact. Rear ivory shell remains intentionally smooth.",
+      "battle": "Blue/ivory spiral reads clearly at elevated combat angle; eyes remain visible.",
+      "attack": "Frame 8 inhalation and frame 13 forward release retain clean face/shell separation and planted feet.",
+      "skill": "Frames 16 and 22 show broader breathing/lift then forward release; rim and spiral remain attached as one shell group.",
+      "hit": "Frame 4 recoil keeps eyebrows/eyes with face and no visible forward-face shell crossing.",
+      "rest": "Frame 36 lowers/retracts the head slightly with stable ground contact.",
+      "fusion": "Frame 23 shows a small hop with intentional ground separation; no visible detached eyes, shell parts or limb seams."
+    },
+    "parent_review": {
+      "approved_static_c02_front_and_three_quarter": true,
+      "approved_runtime_front_and_battle": true,
+      "no_further_shape_iteration_requested": true
+    },
+    "technical": {
+      "triangles": 29604,
+      "vertices": 15346,
+      "bones": 10,
+      "materials": 1,
+      "uv_layers": 1,
+      "normalized_weights": true,
+      "closed_head_and_shell": true,
+      "original_high_and_four_turtle_files_unchanged": 161,
+      "actual_fbx_clips": 6,
+      "half_frame_height_ground_samples": 576,
+      "forward_face_clearance_half_frames": 433,
+      "atlas_rebuilt_from_numeric_sources": true,
+      "embedded_png_bytes_match": true,
+      "minimum_sampled_z_m": -0.00025597595958970487,
+      "maximum_sampled_cocos_y_scale_065": 1.1136810243129731
+    },
+    "remaining_scope": [
+      "Actual Cocos lighting/material/camera validation remains with the parent.",
+      "Attack/skill use body breathing and forward release; final bubble projectile and control-ring timing must be evaluated with the view effects."
+    ],
+    "rendering": {
+      "owned_build_session": 35186,
+      "owned_qa_session": 21309,
+      "owned_render_session": 16563,
+      "all_exit_codes": 0,
+      "threads": 2,
+      "samples": 32,
+      "render_size": [
+        800,
+        680
+      ],
+      "slot_released_to": "ui_icons as scheduled by root; no further Blender process planned by turtle_art"
+    },
+    "runtime_promoted": false
+  },
+  "runtime_written": false,
+  "meta_written": false,
+  "cocos_started": false
+}

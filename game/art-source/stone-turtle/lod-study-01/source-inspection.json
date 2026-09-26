@@ -1,0 +1,4220 @@
+[
+  {
+    "file": "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend",
+    "meshes": [
+      {
+        "name": "Torso",
+        "bone": "body",
+        "vertices": 522,
+        "faces": 520,
+        "triangles": 1040,
+        "evaluated_triangles": 1040,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_04"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "body"
+        ],
+        "dimensions": [
+          1.4615927934646606,
+          1.8253780603408813,
+          0.6636833548545837
+        ]
+      },
+      {
+        "name": "Warm_plastron",
+        "bone": "body",
+        "vertices": 362,
+        "faces": 360,
+        "triangles": 720,
+        "evaluated_triangles": 720,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_07"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "body"
+        ],
+        "dimensions": [
+          1.0472153425216675,
+          1.6224898099899292,
+          0.1492966264486313
+        ]
+      },
+      {
+        "name": "Neck",
+        "bone": "neck",
+        "vertices": 282,
+        "faces": 280,
+        "triangles": 560,
+        "evaluated_triangles": 560,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "neck"
+        ],
+        "dimensions": [
+          0.49512171745300293,
+          0.43248897790908813,
+          0.4688902199268341
+        ]
+      },
+      {
+        "name": "front_L_sculpt",
+        "bone": "front_L",
+        "vertices": 626,
+        "faces": 624,
+        "triangles": 1248,
+        "evaluated_triangles": 1248,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.6679532527923584,
+          0.7732112407684326,
+          0.5882142782211304
+        ]
+      },
+      {
+        "name": "front_L_toe_-1",
+        "bone": "front_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.10200005769729614,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "front_L_toe_0",
+        "bone": "front_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.04160000756382942
+        ]
+      },
+      {
+        "name": "front_L_toe_1",
+        "bone": "front_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_0_0",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.15991365909576416,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_0_1",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.12021863460540771,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_0_2",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.13666659593582153,
+          0.14594411849975586,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_1_0",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.13666659593582153,
+          0.07187509536743164,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_1_1",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.06199157238006592,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_2_0",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.14558136463165283,
+          0.09428125619888306
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_2_1",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.034630656242370605,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "front_L_flush_scale_2_2",
+        "bone": "front_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_L"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.07915818691253662,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_L_sculpt",
+        "bone": "rear_L",
+        "vertices": 626,
+        "faces": 624,
+        "triangles": 1248,
+        "evaluated_triangles": 1248,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.6666325330734253,
+          0.715103030204773,
+          0.5882143974304199
+        ]
+      },
+      {
+        "name": "rear_L_toe_-1",
+        "bone": "rear_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.10200005769729614,
+          0.10200002789497375,
+          0.04160000756382942
+        ]
+      },
+      {
+        "name": "rear_L_toe_0",
+        "bone": "rear_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10200002789497375,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "rear_L_toe_1",
+        "bone": "rear_L",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_0_0",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.14956608414649963,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_0_1",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.1074780821800232,
+          0.09428132325410843
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_0_2",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.13633620738983154,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_1_0",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.06314978003501892,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_1_1",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.05326738953590393,
+          0.09428130090236664
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_2_0",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.1355946958065033,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_2_1",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.024498581886291504,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_L_flush_scale_2_2",
+        "bone": "rear_L",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_L"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.07636392116546631,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "front_R_sculpt",
+        "bone": "front_R",
+        "vertices": 626,
+        "faces": 624,
+        "triangles": 1248,
+        "evaluated_triangles": 1248,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.6679532527923584,
+          0.7732112407684326,
+          0.5882142782211304
+        ]
+      },
+      {
+        "name": "front_R_toe_-1",
+        "bone": "front_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "front_R_toe_0",
+        "bone": "front_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.04160000756382942
+        ]
+      },
+      {
+        "name": "front_R_toe_1",
+        "bone": "front_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.10200005769729614,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_0_0",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.13666659593582153,
+          0.14594388008117676,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_0_1",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.1202242374420166,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_0_2",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.16008079051971436,
+          0.09428130835294724
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_1_0",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.06200385093688965,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_1_1",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.13666659593582153,
+          0.07186424732208252,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_2_0",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.07920384407043457,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_2_1",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.03458666801452637,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "front_R_flush_scale_2_2",
+        "bone": "front_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "front_R"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.1453075408935547,
+          0.09428125619888306
+        ]
+      },
+      {
+        "name": "rear_R_sculpt",
+        "bone": "rear_R",
+        "vertices": 626,
+        "faces": 624,
+        "triangles": 1248,
+        "evaluated_triangles": 1248,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.6666325330734253,
+          0.715103030204773,
+          0.5882143974304199
+        ]
+      },
+      {
+        "name": "rear_R_toe_-1",
+        "bone": "rear_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10199999809265137,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "rear_R_toe_0",
+        "bone": "rear_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.10199999809265137,
+          0.10200002789497375,
+          0.041600003838539124
+        ]
+      },
+      {
+        "name": "rear_R_toe_1",
+        "bone": "rear_R",
+        "vertices": 108,
+        "faces": 96,
+        "triangles": 192,
+        "evaluated_triangles": 192,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.10200005769729614,
+          0.10200002789497375,
+          0.04160000756382942
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_0_0",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.13630998134613037,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_0_1",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.10748368501663208,
+          0.09428132325410843
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_0_2",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.14968156814575195,
+          0.09428131580352783
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_1_0",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.05327954888343811,
+          0.09428130090236664
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_1_1",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.063139408826828,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_2_0",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666671514511108,
+          0.07640823721885681,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_2_1",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_06"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.1366666555404663,
+          0.024453729391098022,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "rear_R_flush_scale_2_2",
+        "bone": "rear_R",
+        "vertices": 61,
+        "faces": 54,
+        "triangles": 108,
+        "evaluated_triangles": 108,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_13"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "rear_R"
+        ],
+        "dimensions": [
+          0.13666677474975586,
+          0.13526639342308044,
+          0.09428128600120544
+        ]
+      },
+      {
+        "name": "Tail",
+        "bone": "tail",
+        "vertices": 170,
+        "faces": 168,
+        "triangles": 336,
+        "evaluated_triangles": 336,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_04"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "tail"
+        ],
+        "dimensions": [
+          0.26593807339668274,
+          0.5713068246841431,
+          0.20788565278053284
+        ]
+      },
+      {
+        "name": "Carapace_shadow_between_stones",
+        "bone": "shell",
+        "vertices": 816,
+        "faces": 768,
+        "triangles": 1536,
+        "evaluated_triangles": 1536,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_15"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          1.899999976158142,
+          2.1600000858306885,
+          0.9449999332427979
+        ]
+      },
+      {
+        "name": "Fitted_stone_00",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.4511337876319885,
+          0.20293116569519043,
+          0.272991418838501
+        ]
+      },
+      {
+        "name": "Fitted_stone_01",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.28589895367622375,
+          0.3601836860179901,
+          0.3252364993095398
+        ]
+      },
+      {
+        "name": "Fitted_stone_02",
+        "bone": "shell",
+        "vertices": 127,
+        "faces": 119,
+        "triangles": 238,
+        "evaluated_triangles": 238,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.40079909563064575,
+          0.43400514125823975,
+          0.41651707887649536
+        ]
+      },
+      {
+        "name": "Fitted_stone_03",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.364992618560791,
+          0.36260300874710083,
+          0.31817978620529175
+        ]
+      },
+      {
+        "name": "Fitted_stone_04",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2868503928184509,
+          0.34589147567749023,
+          0.39516502618789673
+        ]
+      },
+      {
+        "name": "Fitted_stone_05",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.26404133439064026,
+          0.3369380235671997,
+          0.37084221839904785
+        ]
+      },
+      {
+        "name": "Fitted_stone_06",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.21459627151489258,
+          0.40347376465797424,
+          0.35513031482696533
+        ]
+      },
+      {
+        "name": "Fitted_stone_07",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.33443665504455566,
+          0.43500229716300964,
+          0.3208202123641968
+        ]
+      },
+      {
+        "name": "Fitted_stone_08",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.39341723918914795,
+          0.48939988017082214,
+          0.28076982498168945
+        ]
+      },
+      {
+        "name": "Fitted_stone_09",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.36661994457244873,
+          0.5050944685935974,
+          0.2600841522216797
+        ]
+      },
+      {
+        "name": "Fitted_stone_10",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3324078917503357,
+          0.4166126549243927,
+          0.27980852127075195
+        ]
+      },
+      {
+        "name": "Fitted_stone_11",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2938673496246338,
+          0.46342042088508606,
+          0.35742706060409546
+        ]
+      },
+      {
+        "name": "Fitted_stone_12",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.19582492113113403,
+          0.40159815549850464,
+          0.3095107078552246
+        ]
+      },
+      {
+        "name": "Fitted_stone_13",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.317525714635849,
+          0.3786715567111969,
+          0.2826017141342163
+        ]
+      },
+      {
+        "name": "Fitted_stone_14",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.33558017015457153,
+          0.5153628587722778,
+          0.16775822639465332
+        ]
+      },
+      {
+        "name": "Fitted_stone_15",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.37855660915374756,
+          0.5230967998504639,
+          0.0927884578704834
+        ]
+      },
+      {
+        "name": "Fitted_stone_16",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.37673792243003845,
+          0.4338797628879547,
+          0.20290672779083252
+        ]
+      },
+      {
+        "name": "Fitted_stone_17",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.35400891304016113,
+          0.42771291732788086,
+          0.3575955033302307
+        ]
+      },
+      {
+        "name": "Fitted_stone_18",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.24593651294708252,
+          0.40385010838508606,
+          0.3534691333770752
+        ]
+      },
+      {
+        "name": "Fitted_stone_19",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3118867874145508,
+          0.41324448585510254,
+          0.27745044231414795
+        ]
+      },
+      {
+        "name": "Fitted_stone_20",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.4208258390426636,
+          0.40559324622154236,
+          0.23171329498291016
+        ]
+      },
+      {
+        "name": "Fitted_stone_21",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3925785422325134,
+          0.451995849609375,
+          0.1915137767791748
+        ]
+      },
+      {
+        "name": "Fitted_stone_22",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3047022819519043,
+          0.4321073293685913,
+          0.2823561429977417
+        ]
+      },
+      {
+        "name": "Fitted_stone_23",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.27028900384902954,
+          0.42819035053253174,
+          0.31578677892684937
+        ]
+      },
+      {
+        "name": "Fitted_stone_24",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.30901601910591125,
+          0.39034411311149597,
+          0.3514994978904724
+        ]
+      },
+      {
+        "name": "Fitted_stone_25",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3385121524333954,
+          0.4032970070838928,
+          0.3843677043914795
+        ]
+      },
+      {
+        "name": "Fitted_stone_26",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3472611904144287,
+          0.45941871404647827,
+          0.40729910135269165
+        ]
+      },
+      {
+        "name": "Fitted_stone_27",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.35717689990997314,
+          0.4868945777416229,
+          0.44487398862838745
+        ]
+      },
+      {
+        "name": "Fitted_stone_28",
+        "bone": "shell",
+        "vertices": 109,
+        "faces": 102,
+        "triangles": 204,
+        "evaluated_triangles": 204,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.35007497668266296,
+          0.36508825421333313,
+          0.38366949558258057
+        ]
+      },
+      {
+        "name": "Fitted_stone_29",
+        "bone": "shell",
+        "vertices": 91,
+        "faces": 85,
+        "triangles": 170,
+        "evaluated_triangles": 170,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.4409681558609009,
+          0.23523515462875366,
+          0.3056405782699585
+        ]
+      },
+      {
+        "name": "Fitted_stone_30",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.20402872562408447,
+          0.390522837638855,
+          0.4852246344089508
+        ]
+      },
+      {
+        "name": "Fitted_stone_31",
+        "bone": "shell",
+        "vertices": 163,
+        "faces": 153,
+        "triangles": 306,
+        "evaluated_triangles": 306,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2114013433456421,
+          0.3559432029724121,
+          0.3536420166492462
+        ]
+      },
+      {
+        "name": "Fitted_stone_32",
+        "bone": "shell",
+        "vertices": 127,
+        "faces": 119,
+        "triangles": 238,
+        "evaluated_triangles": 238,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2542351484298706,
+          0.319979190826416,
+          0.25787976384162903
+        ]
+      },
+      {
+        "name": "Fitted_stone_33",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.34117555618286133,
+          0.26166027784347534,
+          0.4124060571193695
+        ]
+      },
+      {
+        "name": "Fitted_stone_34",
+        "bone": "shell",
+        "vertices": 163,
+        "faces": 153,
+        "triangles": 306,
+        "evaluated_triangles": 306,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3516727685928345,
+          0.2550818920135498,
+          0.4981044828891754
+        ]
+      },
+      {
+        "name": "Fitted_stone_35",
+        "bone": "shell",
+        "vertices": 145,
+        "faces": 136,
+        "triangles": 272,
+        "evaluated_triangles": 272,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3473953306674957,
+          0.16172873973846436,
+          0.28493931889533997
+        ]
+      },
+      {
+        "name": "Fitted_stone_36",
+        "bone": "shell",
+        "vertices": 199,
+        "faces": 187,
+        "triangles": 374,
+        "evaluated_triangles": 374,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.34894034266471863,
+          0.2769043445587158,
+          0.39767804741859436
+        ]
+      },
+      {
+        "name": "Fitted_stone_37",
+        "bone": "shell",
+        "vertices": 145,
+        "faces": 136,
+        "triangles": 272,
+        "evaluated_triangles": 272,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2677513360977173,
+          0.3795628845691681,
+          0.3577703535556793
+        ]
+      },
+      {
+        "name": "Fitted_stone_38",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.18788403272628784,
+          0.4148523509502411,
+          0.3227757513523102
+        ]
+      },
+      {
+        "name": "Fitted_stone_39",
+        "bone": "shell",
+        "vertices": 127,
+        "faces": 119,
+        "triangles": 238,
+        "evaluated_triangles": 238,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.10976189374923706,
+          0.3666408061981201,
+          0.2924405038356781
+        ]
+      },
+      {
+        "name": "Fitted_stone_40",
+        "bone": "shell",
+        "vertices": 163,
+        "faces": 153,
+        "triangles": 306,
+        "evaluated_triangles": 306,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.19061732292175293,
+          0.3850219249725342,
+          0.3182215988636017
+        ]
+      },
+      {
+        "name": "Fitted_stone_41",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2978074550628662,
+          0.35891997814178467,
+          0.32070115208625793
+        ]
+      },
+      {
+        "name": "Fitted_stone_42",
+        "bone": "shell",
+        "vertices": 163,
+        "faces": 153,
+        "triangles": 306,
+        "evaluated_triangles": 306,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.31584790349006653,
+          0.25433945655822754,
+          0.35491934418678284
+        ]
+      },
+      {
+        "name": "Fitted_stone_43",
+        "bone": "shell",
+        "vertices": 145,
+        "faces": 136,
+        "triangles": 272,
+        "evaluated_triangles": 272,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.32899022102355957,
+          0.20922595262527466,
+          0.43629488348960876
+        ]
+      },
+      {
+        "name": "Fitted_stone_44",
+        "bone": "shell",
+        "vertices": 145,
+        "faces": 136,
+        "triangles": 272,
+        "evaluated_triangles": 272,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.33004701137542725,
+          0.15810543298721313,
+          0.3045736849308014
+        ]
+      },
+      {
+        "name": "Fitted_stone_45",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.3463535010814667,
+          0.26476526260375977,
+          0.4042794406414032
+        ]
+      },
+      {
+        "name": "Fitted_stone_46",
+        "bone": "shell",
+        "vertices": 181,
+        "faces": 170,
+        "triangles": 340,
+        "evaluated_triangles": 340,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2869279384613037,
+          0.3746585249900818,
+          0.3503287136554718
+        ]
+      },
+      {
+        "name": "Fitted_stone_47",
+        "bone": "shell",
+        "vertices": 145,
+        "faces": 136,
+        "triangles": 272,
+        "evaluated_triangles": 272,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.19076502323150635,
+          0.3924671411514282,
+          0.3489803969860077
+        ]
+      },
+      {
+        "name": "Overlapping_rim_00",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.1243358850479126,
+          0.3433832824230194,
+          0.13218757510185242
+        ]
+      },
+      {
+        "name": "Overlapping_rim_01",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.1676405668258667,
+          0.32304319739341736,
+          0.13218745589256287
+        ]
+      },
+      {
+        "name": "Overlapping_rim_02",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.22453910112380981,
+          0.2832534909248352,
+          0.13218754529953003
+        ]
+      },
+      {
+        "name": "Overlapping_rim_03",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.27044570446014404,
+          0.2191724181175232,
+          0.13218754529953003
+        ]
+      },
+      {
+        "name": "Overlapping_rim_04",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.29862016439437866,
+          0.1458815336227417,
+          0.13218748569488525
+        ]
+      },
+      {
+        "name": "Overlapping_rim_05",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2986181676387787,
+          0.1458885669708252,
+          0.13218757510185242
+        ]
+      },
+      {
+        "name": "Overlapping_rim_06",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.26836884021759033,
+          0.2236717939376831,
+          0.13218751549720764
+        ]
+      },
+      {
+        "name": "Overlapping_rim_07",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.22844398021697998,
+          0.2786775827407837,
+          0.13218757510185242
+        ]
+      },
+      {
+        "name": "Overlapping_rim_08",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.16413241624832153,
+          0.3250015377998352,
+          0.13218754529953003
+        ]
+      },
+      {
+        "name": "Overlapping_rim_09",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.1243290901184082,
+          0.343363881111145,
+          0.1321876347064972
+        ]
+      },
+      {
+        "name": "Overlapping_rim_10",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.1675504446029663,
+          0.32309502363204956,
+          0.13218751549720764
+        ]
+      },
+      {
+        "name": "Overlapping_rim_11",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.22734051942825317,
+          0.2800186276435852,
+          0.13218751549720764
+        ]
+      },
+      {
+        "name": "Overlapping_rim_12",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.27001288533210754,
+          0.22014594078063965,
+          0.13218757510185242
+        ]
+      },
+      {
+        "name": "Overlapping_rim_13",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.29769980907440186,
+          0.14897000789642334,
+          0.13218751549720764
+        ]
+      },
+      {
+        "name": "Overlapping_rim_14",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_00"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.29867586493492126,
+          0.14568054676055908,
+          0.13218751549720764
+        ]
+      },
+      {
+        "name": "Overlapping_rim_15",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.2695764899253845,
+          0.22110742330551147,
+          0.1321876347064972
+        ]
+      },
+      {
+        "name": "Overlapping_rim_16",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_02"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.22525286674499512,
+          0.2824513912200928,
+          0.13218745589256287
+        ]
+      },
+      {
+        "name": "Overlapping_rim_17",
+        "bone": "shell",
+        "vertices": 51,
+        "faces": 45,
+        "triangles": 90,
+        "evaluated_triangles": 90,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_03"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "shell"
+        ],
+        "dimensions": [
+          0.16431063413619995,
+          0.32490503787994385,
+          0.13218742609024048
+        ]
+      },
+      {
+        "name": "Head_sculpt",
+        "bone": "head",
+        "vertices": 6082,
+        "faces": 6080,
+        "triangles": 12160,
+        "evaluated_triangles": 12160,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_12"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          1.2097235918045044,
+          0.8154193162918091,
+          0.7750320434570312
+        ]
+      },
+      {
+        "name": "Eye_white_L",
+        "bone": "head",
+        "vertices": 914,
+        "faces": 960,
+        "triangles": 1824,
+        "evaluated_triangles": 1824,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_09"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.3294159770011902,
+          0.21931028366088867,
+          0.35180699825286865
+        ]
+      },
+      {
+        "name": "Continuous_eyelid_L",
+        "bone": "head",
+        "vertices": 336,
+        "faces": 280,
+        "triangles": 560,
+        "evaluated_triangles": 560,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_12"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.3697035312652588,
+          0.4047369956970215,
+          0.3780456781387329
+        ]
+      },
+      {
+        "name": "Steady_brow_L",
+        "bone": "head",
+        "vertices": 272,
+        "faces": 258,
+        "triangles": 540,
+        "evaluated_triangles": 540,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_12"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.2677654027938843,
+          0.2371842861175537,
+          0.16318488121032715
+        ]
+      },
+      {
+        "name": "Nostril_L",
+        "bone": "head",
+        "vertices": 222,
+        "faces": 240,
+        "triangles": 440,
+        "evaluated_triangles": 440,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_08"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.03761851787567139,
+          0.012737035751342773,
+          0.022629499435424805
+        ]
+      },
+      {
+        "name": "Eye_white_R",
+        "bone": "head",
+        "vertices": 914,
+        "faces": 960,
+        "triangles": 1824,
+        "evaluated_triangles": 1824,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_09"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.32961326837539673,
+          0.2177729606628418,
+          0.3525419235229492
+        ]
+      },
+      {
+        "name": "Continuous_eyelid_R",
+        "bone": "head",
+        "vertices": 336,
+        "faces": 280,
+        "triangles": 560,
+        "evaluated_triangles": 560,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_12"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.3701896667480469,
+          0.4130866527557373,
+          0.379424512386322
+        ]
+      },
+      {
+        "name": "Steady_brow_R",
+        "bone": "head",
+        "vertices": 272,
+        "faces": 258,
+        "triangles": 540,
+        "evaluated_triangles": 540,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_12"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.2677611708641052,
+          0.23733186721801758,
+          0.16317462921142578
+        ]
+      },
+      {
+        "name": "Nostril_R",
+        "bone": "head",
+        "vertices": 222,
+        "faces": 240,
+        "triangles": 440,
+        "evaluated_triangles": 440,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_08"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.0374993160367012,
+          0.012296199798583984,
+          0.02312326431274414
+        ]
+      },
+      {
+        "name": "Friendly_closed_mouth",
+        "bone": "head",
+        "vertices": 330,
+        "faces": 322,
+        "triangles": 656,
+        "evaluated_triangles": 656,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_08"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.6987641453742981,
+          0.05748295783996582,
+          0.05618122220039368
+        ]
+      },
+      {
+        "name": "Cheek_crease_-1",
+        "bone": "head",
+        "vertices": 24,
+        "faces": 18,
+        "triangles": 44,
+        "evaluated_triangles": 44,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.02140188217163086,
+          0.010050296783447266,
+          0.028635144233703613
+        ]
+      },
+      {
+        "name": "Cheek_crease_1",
+        "bone": "head",
+        "vertices": 24,
+        "faces": 18,
+        "triangles": 44,
+        "evaluated_triangles": 44,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_05"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "head"
+        ],
+        "dimensions": [
+          0.02140188217163086,
+          0.009990453720092773,
+          0.02863442897796631
+        ]
+      }
+    ],
+    "rigs": [
+      {
+        "name": "StoneTurtle_Rig",
+        "bones": [
+          "root",
+          "body",
+          "shell",
+          "neck",
+          "head",
+          "front_L",
+          "front_R",
+          "rear_L",
+          "rear_R",
+          "tail"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "attack",
+        "range": [
+          1.0,
+          27.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "fusion",
+        "range": [
+          1.0,
+          60.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "hit",
+        "range": [
+          1.0,
+          18.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "idle",
+        "range": [
+          1.0,
+          72.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "rest",
+        "range": [
+          1.0,
+          72.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "skill",
+        "range": [
+          1.0,
+          42.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "StoneTurtle_Colour_1024_Rebuilt",
+        "packed": true,
+        "size": [
+          1024,
+          1024
+        ],
+        "filepath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-colour.png"
+      },
+      {
+        "name": "StoneTurtle_Roughness_1024_Rebuilt",
+        "packed": true,
+        "size": [
+          1024,
+          1024
+        ],
+        "filepath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-roughness.png"
+      }
+    ],
+    "cameras": []
+  },
+  {
+    "file": "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle-review-scene.blend",
+    "meshes": [
+      {
+        "name": "Studio_floor",
+        "bone": null,
+        "vertices": 4,
+        "faces": 1,
+        "triangles": 2,
+        "evaluated_triangles": 2,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "Warm_ivory_floor"
+        ],
+        "modifiers": [],
+        "min_weight_sum": 0,
+        "max_weight_sum": 0,
+        "groups": [],
+        "dimensions": [
+          200.0,
+          200.0,
+          0.0
+        ]
+      },
+      {
+        "name": "StoneTurtle_SkinnedMesh",
+        "bone": "body",
+        "vertices": 15342,
+        "faces": 17431,
+        "triangles": 28572,
+        "evaluated_triangles": 28572,
+        "uv_layers": [
+          "UVMap"
+        ],
+        "materials": [
+          "StoneAtlas_01"
+        ],
+        "modifiers": [
+          [
+            "Armature_deformation",
+            "ARMATURE"
+          ]
+        ],
+        "min_weight_sum": 1.0,
+        "max_weight_sum": 1.0,
+        "groups": [
+          "body",
+          "neck",
+          "front_L",
+          "rear_L",
+          "front_R",
+          "rear_R",
+          "tail",
+          "shell",
+          "head"
+        ],
+        "dimensions": [
+          2.2474405765533447,
+          2.9904122352600098,
+          1.4721719026565552
+        ]
+      }
+    ],
+    "rigs": [
+      {
+        "name": "StoneTurtle_Rig",
+        "bones": [
+          "root",
+          "body",
+          "shell",
+          "neck",
+          "head",
+          "front_L",
+          "front_R",
+          "rear_L",
+          "rear_R",
+          "tail"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "attack",
+        "range": [
+          1.0,
+          27.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "fusion",
+        "range": [
+          1.0,
+          60.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "hit",
+        "range": [
+          1.0,
+          18.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "idle",
+        "range": [
+          1.0,
+          72.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "rest",
+        "range": [
+          1.0,
+          72.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      },
+      {
+        "name": "skill",
+        "range": [
+          1.0,
+          42.0
+        ],
+        "slots": [
+          "OBStoneTurtle_Rig"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "StoneTurtle_Colour_1024_Rebuilt",
+        "packed": true,
+        "size": [
+          1024,
+          1024
+        ],
+        "filepath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-colour.png"
+      },
+      {
+        "name": "StoneTurtle_Roughness_1024_Rebuilt",
+        "packed": true,
+        "size": [
+          1024,
+          1024
+        ],
+        "filepath": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\stone-turtle\\candidate-12\\c12b\\export\\stone-roughness.png"
+      }
+    ],
+    "cameras": [
+      {
+        "name": "ArtReviewCamera",
+        "location": [
+          6.0,
+          -0.6000000238418579,
+          2.5
+        ],
+        "rotation": [
+          1.312979817390442,
+          1.1192972237950016e-07,
+          1.4711277484893799
+        ],
+        "type": "ORTHO",
+        "lens": 50.0,
+        "ortho_scale": 3.5999999046325684
+      }
+    ]
+  }
+]

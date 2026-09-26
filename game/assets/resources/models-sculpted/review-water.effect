@@ -1,0 +1,42 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: review-water-vs:vert
+      frag: review-water-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: true }
+}%
+CCProgram review-water-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <builtin/uniforms/cc-local>
+  in vec3 a_position;
+  out vec3 world;
+  vec4 vert () {
+    vec4 p=cc_matWorld*vec4(a_position,1.0);
+    p.y+=sin(p.x*1.4+cc_time.x*.7)*cos(p.z*1.6-cc_time.x*.9)*.026;
+    world=p.xyz;
+    return cc_matProj*cc_matView*p;
+  }
+}%
+CCProgram review-water-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  in vec3 world;
+  vec4 frag () {
+    vec2 p=world.xz;
+    float t=cc_time.x;
+    float shore=length(p/vec2(8.9,4.9));
+    float swell=sin(p.x*1.7+p.y*.7-t*.8)*cos(p.y*2.2+t*.4);
+    vec3 rgb=mix(vec3(.19,.55,.65),vec3(.31,.73,.76),1.0-smoothstep(1.0,2.4,shore));
+    rgb+=swell*.018;
+    vec2 q=p*.9+vec2(t*.10,-t*.07);
+    float caustic=abs(sin(q.x*3.4+sin(q.y*2.8))+sin(q.y*3.0+cos(q.x*2.6)));
+    float light=(1.0-smoothstep(.015,.105,caustic))*(.5+.5*sin(q.x+q.y+t*.3));
+    rgb+=vec3(.07,.14,.14)*light*(1.0-smoothstep(1.1,2.3,shore));
+    float ripple=sin((shore-1.0)*66.0-t*1.6+sin(atan(p.y,p.x)*11.0)*.45);
+    float foam=pow(max(0.0,ripple),12.0)*(1.0-smoothstep(1.02,1.22,shore))*smoothstep(.98,1.03,shore);
+    rgb=mix(rgb,vec3(.79,.91,.85),foam*.56);
+    return vec4(rgb,1.0);
+  }
+}%

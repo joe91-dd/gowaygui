@@ -1,0 +1,203 @@
+{
+  "version": "shell-carrier-candidate-02",
+  "promoted_at_utc": "2026-09-08T10:09:02.420967+00:00",
+  "status": "approved frozen runtime candidate; actual Cocos import/render/performance acceptance pending",
+  "authorization": "Parent actually viewed c02 three-quarter render, accepted rounded edge/shallow pleats and explicitly authorized runtime promotion after bounded-source QA.",
+  "enemy_kind": "elite",
+  "display_name": "搬壳大蟹",
+  "runtime_directory": "game/assets/resources/models/enemies/shell-carrier",
+  "runtime_directory_created_by_this_run": true,
+  "runtime_sha256": "876bdf8f22583ea8e9f14fff0e07ce906a9cffbbb72ef11b2b01157685983aea",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/shell-carrier/carrier-colour.png",
+      "source_path": "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-colour.png",
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+      "bytes": 70350,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/shell-carrier/carrier-roughness.png",
+      "source_path": "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-roughness.png",
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/shell-carrier/shell-carrier.fbx",
+      "source_path": "game/art-source/enemies/shell-carrier/candidate-02/export/shell-carrier.fbx",
+      "sha256": "876bdf8f22583ea8e9f14fff0e07ce906a9cffbbb72ef11b2b01157685983aea",
+      "bytes": 1105180,
+      "created_by_this_run": true
+    }
+  ],
+  "copied_frozen_bytes": true,
+  "meta_authored": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started_for_promotion": false,
+  "provenance_final_check": {
+    "half_frame_samples": 417,
+    "source_and_fbx_hashes_match": true,
+    "five_clip_names_ranges_durations_match": true,
+    "only_shell_mesh_changed_from_c01": true,
+    "other_30_parts_rig_actions_material_lighting_unchanged": true,
+    "atlas_bytes_embedded_and_match_c01": true,
+    "c01_all_recorded_bytes_preserved": true,
+    "generator_hash_matches_package": true
+  },
+  "source_hashes": {
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier.blend": "044110abc79a22f6d0922de0a5f70a7cd9cac8052c7cd2e0b59bb968941a5292",
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier-review-scene.blend": "e7ae32e5506dcf20848b9a684da786040fdd326cb03f2f5b8fd5e3335a873c22",
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier.glb": "407d9abc81c8be863ab358182dbf16bf0c18395b32f07e28b14aeb030c2a8eb8",
+    "game/art-source/enemies/shell-carrier/candidate-02/model-stats.json": "964c80f00b59139349eaf325e09639fd55f17da6811099d2a120268bd729ddf4",
+    "game/art-source/enemies/shell-carrier/candidate-02/round-trip-check.json": "cbfb06ace8d652d9d01b86c3552ed627522990704185f495657a6cae41078d8a",
+    "game/art-source/enemies/shell-carrier/candidate-02/source-check.json": "94ce9165baf11544568f05c0f0acf6b589d394f44ef019e953e889f87584db1c",
+    "game/art-source/enemies/shell-carrier/candidate-02/c01-comparison-check.json": "1f39274f42e38dfbc7ae3eaa84e454a42022f0b2a5f319fb1376daa4ad482bdb",
+    "game/art-source/enemies/shell-carrier/candidate-02/reference-preservation.json": "6d8998cf9e6afda42ab1d9a842a2b90dd7a41a714dec6e955f5e827e9a6967cf",
+    "game/art-source/enemies/shell-carrier/candidate-02/asset-manifest.json": "acc54729d4ac1cfa35d698f6c3a22ab988c5116f7924ecf1be3d779fb4d10fea"
+  },
+  "embedded_pngs": {
+    "carrier-colour.png": {
+      "sha256": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+      "bytes": 70350,
+      "exact_png_byte_offset": 356566
+    },
+    "carrier-roughness.png": {
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039,
+      "exact_png_byte_offset": 427565
+    }
+  },
+  "geometry": {
+    "triangles": 15088,
+    "vertices": 7606,
+    "meshes": 1,
+    "materials": 1,
+    "bones": 17
+  },
+  "clips": {
+    "idle": {
+      "expected_cocos_take": "ShellCarrier_Rig|idle",
+      "first": 1,
+      "last": 85,
+      "seconds": 2.8,
+      "loop": true,
+      "observed_blender_roundtrip_name": "ShellCarrier_Rig|ShellCarrier_Rig|idle"
+    },
+    "walk": {
+      "expected_cocos_take": "ShellCarrier_Rig|walk",
+      "first": 1,
+      "last": 33,
+      "seconds": 1.0666666666666667,
+      "loop": true,
+      "observed_blender_roundtrip_name": "ShellCarrier_Rig|ShellCarrier_Rig|walk"
+    },
+    "attack": {
+      "expected_cocos_take": "ShellCarrier_Rig|attack",
+      "first": 1,
+      "last": 40,
+      "seconds": 1.3,
+      "loop": false,
+      "observed_blender_roundtrip_name": "ShellCarrier_Rig|ShellCarrier_Rig|attack"
+    },
+    "hit": {
+      "expected_cocos_take": "ShellCarrier_Rig|hit",
+      "first": 1,
+      "last": 19,
+      "seconds": 0.6,
+      "loop": false,
+      "observed_blender_roundtrip_name": "ShellCarrier_Rig|ShellCarrier_Rig|hit"
+    },
+    "exit": {
+      "expected_cocos_take": "ShellCarrier_Rig|exit",
+      "first": 1,
+      "last": 34,
+      "seconds": 1.1,
+      "loop": false,
+      "observed_blender_roundtrip_name": "ShellCarrier_Rig|ShellCarrier_Rig|exit"
+    }
+  },
+  "coordinate_handoff": {
+    "source": "Blender Z up / -Y forward",
+    "fbx_export": "axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z; confirm first actual import",
+    "recommended_model_uniform_scale": 1.0,
+    "expected_cocos_bounds_at_scale_xyz": {
+      "min": [
+        -0.6794758439064026,
+        0.0,
+        -0.40935957431793213
+      ],
+      "max": [
+        0.6794758439064026,
+        1.157202124595642,
+        0.4259999990463257
+      ]
+    },
+    "expected_cocos_dimensions_width_height_depth": [
+      1.3589516878128052,
+      1.157202124595642,
+      0.8353595733642578
+    ],
+    "foot_origin_y": 0,
+    "road_actor_y": 0.064,
+    "root_motion": false,
+    "standing_action_peak_y_at_scale": 1.1682723760604858,
+    "health_bar_local_on_unscaled_actor": {
+      "position": [
+        0,
+        1.36,
+        0
+      ],
+      "suggested_width": 0.8
+    },
+    "control_icon_local_on_unscaled_actor": [
+      0,
+      1.26,
+      0
+    ],
+    "bounds_status": "Calculated from validated source and established axis contract; actual importer bounds not yet measured"
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/shell-carrier/shell-carrier/shell-carrier",
+    "path_status": "Established FBX filename/sub-prefab convention; confirm first generated Cocos metadata",
+    "material_name_prefix": "ShellCarrier_Toy_Atlas",
+    "colour_image_prefix": "ShellCarrier_Colour_",
+    "roughness_image_prefix": "ShellCarrier_Roughness_",
+    "colour": "sRGB mainTexture",
+    "roughness": "linear grayscale; imported shininessExponentMap -> native Standard pbrMap G",
+    "roughness_gray_u8": [
+      97,
+      115
+    ],
+    "roughness_alpha_u8": 255,
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "control_notes": [
+    "Scale only the model child at 1.0; do not apply the old placeholder elite 1.3 factor.",
+    "Keep unscaled actor coordinates for the suggested health bar and control icon; validate screen overlap in actual combat.",
+    "Walk is in-place; movement speed .6 and collision/path positions remain core-driven.",
+    "Trigger the 1.3 second attack from existing battle events; preserve interval 1.5, melee range .9 and current damage rules.",
+    "The carried shell is appearance only; no new throw, block or counter mechanic.",
+    "Keep actor until authored 1.1 second exit finishes; avoid extra placeholder shrink over the skinned exit.",
+    "Five clip suffixes are exact; importer may normalize the take prefix."
+  ],
+  "rollback": "Verify the three recorded runtime SHA values before removing only these promoted payloads; c01/c02 sources remain intact. Inspect later importer metadata before altering it."
+}

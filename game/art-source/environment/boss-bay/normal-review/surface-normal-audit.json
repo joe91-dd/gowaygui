@@ -1,0 +1,1813 @@
+{
+  "method": "Ordinary Python; installed binary FBX reader, no Blender process. Geometry cross products plus actual exported loop normals grouped by atlas UV tile. Cocos imported binary read separately. All source assets are read-only.",
+  "fbx": {
+    "boss": {
+      "path": "game/art-source/environment/boss-bay/candidate-01/boss-bay.fbx",
+      "sha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+      "fbxVersion": 7400,
+      "geometry": [
+        {
+          "name": "Continuous_grass_island_geometry",
+          "vertices": 5201,
+          "polygons": 4556,
+          "atlasTileGroups": {
+            "1": {
+              "polygons": 2304,
+              "nondegenerate": 2304,
+              "up": 0,
+              "down": 2304,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": -0.9718504272181611,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": -0.9785884022712708
+            },
+            "3": {
+              "polygons": 300,
+              "nondegenerate": 300,
+              "up": 300,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.5829908524607617,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.5831883549690247,
+              "storedNormalZMax": 1.0
+            },
+            "28": {
+              "polygons": 112,
+              "nondegenerate": 112,
+              "up": 112,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.1868181840508602,
+              "geometricZMax": 0.8349575398050793,
+              "storedNormalZMin": 0.187111958861351,
+              "storedNormalZMax": 0.8343468308448792
+            },
+            "4": {
+              "polygons": 384,
+              "nondegenerate": 384,
+              "up": 0,
+              "down": 256,
+              "side": 128,
+              "degenerate": 0,
+              "geometricZMin": -0.7739895802448904,
+              "geometricZMax": 0.0,
+              "storedNormalZMin": -0.7739897966384888,
+              "storedNormalZMax": 0.0
+            },
+            "13": {
+              "polygons": 448,
+              "nondegenerate": 448,
+              "up": 152,
+              "down": 152,
+              "side": 144,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "30": {
+              "polygons": 1008,
+              "nondegenerate": 1008,
+              "up": 384,
+              "down": 384,
+              "side": 240,
+              "degenerate": 0,
+              "geometricZMin": -0.9510848679368025,
+              "geometricZMax": 0.951092578188762,
+              "storedNormalZMin": -0.9595431685447693,
+              "storedNormalZMax": 0.9601290225982666
+            }
+          }
+        },
+        {
+          "name": "Coast_chamfer_rock_00_geometry",
+          "vertices": 26489,
+          "polygons": 20612,
+          "atlasTileGroups": {
+            "4": {
+              "polygons": 1293,
+              "nondegenerate": 1293,
+              "up": 545,
+              "down": 445,
+              "side": 303,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "5": {
+              "polygons": 2793,
+              "nondegenerate": 2793,
+              "up": 817,
+              "down": 913,
+              "side": 1063,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "6": {
+              "polygons": 2034,
+              "nondegenerate": 2034,
+              "up": 900,
+              "down": 801,
+              "side": 333,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "28": {
+              "polygons": 681,
+              "nondegenerate": 681,
+              "up": 327,
+              "down": 236,
+              "side": 118,
+              "degenerate": 0,
+              "geometricZMin": -0.9999883863092884,
+              "geometricZMax": 0.9999660705525097,
+              "storedNormalZMin": -0.9930220246315002,
+              "storedNormalZMax": 0.9926282167434692
+            },
+            "27": {
+              "polygons": 1054,
+              "nondegenerate": 1054,
+              "up": 555,
+              "down": 394,
+              "side": 105,
+              "degenerate": 0,
+              "geometricZMin": -0.9999982056434498,
+              "geometricZMax": 0.9999994303992732,
+              "storedNormalZMin": -0.9941517114639282,
+              "storedNormalZMax": 0.9942659735679626
+            },
+            "24": {
+              "polygons": 5,
+              "nondegenerate": 5,
+              "up": 0,
+              "down": 5,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": -1,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": -0.9999999403953552
+            },
+            "14": {
+              "polygons": 1620,
+              "nondegenerate": 1620,
+              "up": 640,
+              "down": 640,
+              "side": 340,
+              "degenerate": 0,
+              "geometricZMin": -0.9508403458599559,
+              "geometricZMax": 0.9508403458599559,
+              "storedNormalZMin": -0.9614524245262146,
+              "storedNormalZMax": 0.9614535570144653
+            },
+            "20": {
+              "polygons": 2892,
+              "nondegenerate": 2892,
+              "up": 882,
+              "down": 1494,
+              "side": 516,
+              "degenerate": 0,
+              "geometricZMin": -0.9992037037209599,
+              "geometricZMax": 0.9978431919643211,
+              "storedNormalZMin": -0.9993147850036621,
+              "storedNormalZMax": 0.9993458986282349
+            },
+            "13": {
+              "polygons": 98,
+              "nondegenerate": 98,
+              "up": 33,
+              "down": 33,
+              "side": 32,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "11": {
+              "polygons": 202,
+              "nondegenerate": 202,
+              "up": 74,
+              "down": 48,
+              "side": 80,
+              "degenerate": 0,
+              "geometricZMin": -0.9908480302433801,
+              "geometricZMax": 0.9669054347577795,
+              "storedNormalZMin": -0.750957190990448,
+              "storedNormalZMax": 0.7936846613883972
+            },
+            "12": {
+              "polygons": 1836,
+              "nondegenerate": 1836,
+              "up": 753,
+              "down": 753,
+              "side": 330,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "8": {
+              "polygons": 1336,
+              "nondegenerate": 1336,
+              "up": 1142,
+              "down": 194,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.985592845102426,
+              "geometricZMax": 0.9855930658738751,
+              "storedNormalZMin": -0.9865387082099915,
+              "storedNormalZMax": 0.9998882412910461
+            },
+            "9": {
+              "polygons": 2044,
+              "nondegenerate": 2044,
+              "up": 1329,
+              "down": 525,
+              "side": 190,
+              "degenerate": 0,
+              "geometricZMin": -0.9761876278309437,
+              "geometricZMax": 0.9669371009016375,
+              "storedNormalZMin": -0.9687175154685974,
+              "storedNormalZMax": 0.9998913407325745
+            },
+            "10": {
+              "polygons": 1248,
+              "nondegenerate": 1248,
+              "up": 1142,
+              "down": 106,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9061837393758267,
+              "geometricZMax": 0.963656564629617,
+              "storedNormalZMin": -0.9061840772628784,
+              "storedNormalZMax": 0.999859631061554
+            },
+            "0": {
+              "polygons": 70,
+              "nondegenerate": 70,
+              "up": 0,
+              "down": 70,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5270862202937528,
+              "geometricZMax": -0.3145355346256779,
+              "storedNormalZMin": -0.5270867943763733,
+              "storedNormalZMax": -0.31453531980514526
+            },
+            "1": {
+              "polygons": 35,
+              "nondegenerate": 35,
+              "up": 0,
+              "down": 35,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.4965966017283362,
+              "geometricZMax": -0.31365856822417276,
+              "storedNormalZMin": -0.49659499526023865,
+              "storedNormalZMax": -0.3136593997478485
+            },
+            "2": {
+              "polygons": 35,
+              "nondegenerate": 35,
+              "up": 0,
+              "down": 35,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5165911997742912,
+              "geometricZMax": -0.3195406773164831,
+              "storedNormalZMin": -0.5165894031524658,
+              "storedNormalZMax": -0.3195406496524811
+            },
+            "17": {
+              "polygons": 548,
+              "nondegenerate": 548,
+              "up": 242,
+              "down": 214,
+              "side": 92,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279240940618,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9812530875205994,
+              "storedNormalZMax": 0.9859282970428467
+            },
+            "18": {
+              "polygons": 480,
+              "nondegenerate": 480,
+              "up": 202,
+              "down": 186,
+              "side": 92,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279144463291,
+              "geometricZMax": 0.9816407858451407,
+              "storedNormalZMin": -0.9812536239624023,
+              "storedNormalZMax": 0.9859285354614258
+            },
+            "19": {
+              "polygons": 297,
+              "nondegenerate": 297,
+              "up": 130,
+              "down": 121,
+              "side": 46,
+              "degenerate": 0,
+              "geometricZMin": -0.9912278062484599,
+              "geometricZMax": 0.9999999999999988,
+              "storedNormalZMin": -0.9812527298927307,
+              "storedNormalZMax": 0.9859258532524109
+            },
+            "16": {
+              "polygons": 11,
+              "nondegenerate": 11,
+              "up": 11,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.4548400540227755,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.5282988548278809,
+              "storedNormalZMax": 0.8957780003547668
+            }
+          }
+        },
+        {
+          "name": "Sanctuary_luminous_pearl_geometry",
+          "vertices": 1248,
+          "polygons": 1152,
+          "atlasTileGroups": {
+            "21": {
+              "polygons": 864,
+              "nondegenerate": 864,
+              "up": 400,
+              "down": 400,
+              "side": 64,
+              "degenerate": 0,
+              "geometricZMin": -0.9968875666490776,
+              "geometricZMax": 0.9968876970644,
+              "storedNormalZMin": -0.9969176054000854,
+              "storedNormalZMax": 0.9969176650047302
+            },
+            "23": {
+              "polygons": 288,
+              "nondegenerate": 288,
+              "up": 144,
+              "down": 144,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9693503496827536,
+              "geometricZMax": 0.9693505444585185,
+              "storedNormalZMin": -0.9713165760040283,
+              "storedNormalZMax": 0.9713169932365417
+            }
+          }
+        }
+      ],
+      "models": [
+        {
+          "name": "Ground",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Landmarks_and_nature",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Pearl_and_lamps",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "axes": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ]
+      }
+    },
+    "dusk": {
+      "path": "game/art-source/environment/dusk-bay/candidate-01/dusk-bay.fbx",
+      "sha256": "55ffe57152c8de18146b1bcb94550ff515b6a4c720e5da2f77c9fa4e3e606675",
+      "fbxVersion": 7400,
+      "geometry": [
+        {
+          "name": "Continuous_grass_island_geometry",
+          "vertices": 4458,
+          "polygons": 4000,
+          "atlasTileGroups": {
+            "1": {
+              "polygons": 2304,
+              "nondegenerate": 2304,
+              "up": 2304,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.9408953994974616,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.9542289972305298,
+              "storedNormalZMax": 1.0
+            },
+            "3": {
+              "polygons": 304,
+              "nondegenerate": 304,
+              "up": 304,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.6303356126370477,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.6329758167266846,
+              "storedNormalZMax": 1.0
+            },
+            "4": {
+              "polygons": 384,
+              "nondegenerate": 384,
+              "up": 0,
+              "down": 256,
+              "side": 128,
+              "degenerate": 0,
+              "geometricZMin": -0.7711085107441253,
+              "geometricZMax": 0.0,
+              "storedNormalZMin": -0.7711079716682434,
+              "storedNormalZMax": 0.0
+            },
+            "30": {
+              "polygons": 1008,
+              "nondegenerate": 1008,
+              "up": 384,
+              "down": 384,
+              "side": 240,
+              "degenerate": 0,
+              "geometricZMin": -0.9510888497517901,
+              "geometricZMax": 0.9510887963502714,
+              "storedNormalZMin": -0.9607250690460205,
+              "storedNormalZMax": 0.9610164761543274
+            }
+          }
+        },
+        {
+          "name": "Coast_chamfer_rock_00_geometry",
+          "vertices": 33837,
+          "polygons": 25944,
+          "atlasTileGroups": {
+            "4": {
+              "polygons": 1230,
+              "nondegenerate": 1230,
+              "up": 471,
+              "down": 426,
+              "side": 333,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "5": {
+              "polygons": 2972,
+              "nondegenerate": 2972,
+              "up": 851,
+              "down": 1000,
+              "side": 1121,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "6": {
+              "polygons": 2980,
+              "nondegenerate": 2980,
+              "up": 1319,
+              "down": 1170,
+              "side": 491,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "28": {
+              "polygons": 414,
+              "nondegenerate": 414,
+              "up": 144,
+              "down": 144,
+              "side": 126,
+              "degenerate": 0,
+              "geometricZMin": -0.9999309824553456,
+              "geometricZMax": 0.9996857247240993,
+              "storedNormalZMin": -0.9007028937339783,
+              "storedNormalZMax": 0.9035767316818237
+            },
+            "27": {
+              "polygons": 1054,
+              "nondegenerate": 1054,
+              "up": 555,
+              "down": 394,
+              "side": 105,
+              "degenerate": 0,
+              "geometricZMin": -0.9999977122488124,
+              "geometricZMax": 0.9999981148241166,
+              "storedNormalZMin": -0.9937618374824524,
+              "storedNormalZMax": 0.9949027895927429
+            },
+            "24": {
+              "polygons": 5,
+              "nondegenerate": 5,
+              "up": 0,
+              "down": 5,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": -1,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": -0.9999999403953552
+            },
+            "14": {
+              "polygons": 1684,
+              "nondegenerate": 1684,
+              "up": 661,
+              "down": 667,
+              "side": 356,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "15": {
+              "polygons": 225,
+              "nondegenerate": 225,
+              "up": 88,
+              "down": 88,
+              "side": 49,
+              "degenerate": 0,
+              "geometricZMin": -0.9814157488732583,
+              "geometricZMax": 0.9814162410032097,
+              "storedNormalZMin": -0.9676326513290405,
+              "storedNormalZMax": 0.9676312208175659
+            },
+            "22": {
+              "polygons": 98,
+              "nondegenerate": 98,
+              "up": 50,
+              "down": 48,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9996904680175052,
+              "geometricZMax": 0.9996903974349346,
+              "storedNormalZMin": -0.8679745197296143,
+              "storedNormalZMax": 0.8640186786651611
+            },
+            "20": {
+              "polygons": 2772,
+              "nondegenerate": 2772,
+              "up": 973,
+              "down": 1355,
+              "side": 444,
+              "degenerate": 0,
+              "geometricZMin": -0.9992037036563398,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9993147850036621,
+              "storedNormalZMax": 1.0
+            },
+            "17": {
+              "polygons": 874,
+              "nondegenerate": 874,
+              "up": 396,
+              "down": 340,
+              "side": 138,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279332194431,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9812540411949158,
+              "storedNormalZMax": 0.9913074970245361
+            },
+            "13": {
+              "polygons": 98,
+              "nondegenerate": 98,
+              "up": 33,
+              "down": 33,
+              "side": 32,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "11": {
+              "polygons": 303,
+              "nondegenerate": 303,
+              "up": 102,
+              "down": 69,
+              "side": 132,
+              "degenerate": 0,
+              "geometricZMin": -0.9917230227621252,
+              "geometricZMax": 0.9791463547881236,
+              "storedNormalZMin": -0.7458979487419128,
+              "storedNormalZMax": 0.7694822549819946
+            },
+            "12": {
+              "polygons": 2826,
+              "nondegenerate": 2826,
+              "up": 1141,
+              "down": 1141,
+              "side": 544,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "8": {
+              "polygons": 1884,
+              "nondegenerate": 1884,
+              "up": 1590,
+              "down": 294,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.985592845102426,
+              "geometricZMax": 0.9855926243293965,
+              "storedNormalZMin": -0.9865390062332153,
+              "storedNormalZMax": 0.9998999238014221
+            },
+            "9": {
+              "polygons": 2912,
+              "nondegenerate": 2912,
+              "up": 1895,
+              "down": 747,
+              "side": 270,
+              "degenerate": 0,
+              "geometricZMin": -0.976187432672676,
+              "geometricZMax": 0.9671702052848423,
+              "storedNormalZMin": -0.968691885471344,
+              "storedNormalZMax": 0.9998935461044312
+            },
+            "10": {
+              "polygons": 1752,
+              "nondegenerate": 1752,
+              "up": 1602,
+              "down": 150,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9061831278094646,
+              "geometricZMax": 0.9670892399480848,
+              "storedNormalZMin": -0.9061840176582336,
+              "storedNormalZMax": 0.9998928308486938
+            },
+            "0": {
+              "polygons": 114,
+              "nondegenerate": 114,
+              "up": 0,
+              "down": 114,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.534193442773764,
+              "geometricZMax": -0.3137830408108649,
+              "storedNormalZMin": -0.5341881513595581,
+              "storedNormalZMax": -0.3137829005718231
+            },
+            "1": {
+              "polygons": 57,
+              "nondegenerate": 57,
+              "up": 0,
+              "down": 57,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5288771241225048,
+              "geometricZMax": -0.3139908590554687,
+              "storedNormalZMin": -0.5288755297660828,
+              "storedNormalZMax": -0.3139895498752594
+            },
+            "2": {
+              "polygons": 57,
+              "nondegenerate": 57,
+              "up": 0,
+              "down": 57,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5297004290622332,
+              "geometricZMax": -0.3169091609156409,
+              "storedNormalZMin": -0.5297005772590637,
+              "storedNormalZMax": -0.3169090151786804
+            },
+            "18": {
+              "polygons": 834,
+              "nondegenerate": 834,
+              "up": 361,
+              "down": 335,
+              "side": 138,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279332194431,
+              "geometricZMax": 0.9999999999999803,
+              "storedNormalZMin": -0.9812530875205994,
+              "storedNormalZMax": 0.985927164554596
+            },
+            "19": {
+              "polygons": 777,
+              "nondegenerate": 777,
+              "up": 332,
+              "down": 307,
+              "side": 138,
+              "degenerate": 0,
+              "geometricZMin": -0.991227911485139,
+              "geometricZMax": 0.9999999999998893,
+              "storedNormalZMin": -0.9812538623809814,
+              "storedNormalZMax": 0.9859284162521362
+            },
+            "16": {
+              "polygons": 22,
+              "nondegenerate": 22,
+              "up": 22,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.45484235119048994,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.5282958149909973,
+              "storedNormalZMax": 0.8957798480987549
+            }
+          }
+        },
+        {
+          "name": "Sanctuary_luminous_pearl_geometry",
+          "vertices": 1458,
+          "polygons": 1340,
+          "atlasTileGroups": {
+            "21": {
+              "polygons": 800,
+              "nondegenerate": 800,
+              "up": 368,
+              "down": 368,
+              "side": 64,
+              "degenerate": 0,
+              "geometricZMin": -0.9968875604134981,
+              "geometricZMax": 0.9968876301712444,
+              "storedNormalZMin": -0.9969179630279541,
+              "storedNormalZMax": 0.9969179630279541
+            },
+            "23": {
+              "polygons": 540,
+              "nondegenerate": 540,
+              "up": 270,
+              "down": 270,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9693509223663883,
+              "geometricZMax": 0.9693506360251446,
+              "storedNormalZMin": -0.9713177680969238,
+              "storedNormalZMax": 0.9713178873062134
+            }
+          }
+        }
+      ],
+      "models": [
+        {
+          "name": "Ground",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Landmarks_and_nature",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Pearl_and_lamps",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "axes": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ]
+      }
+    },
+    "coral": {
+      "path": "game/art-source/environment/coral-bend/candidate-01/coral-bend.fbx",
+      "sha256": "298f3326a6b46ac36259226762e711f2603183b01d30f84ca86239c9f17fff40",
+      "fbxVersion": 7400,
+      "geometry": [
+        {
+          "name": "Continuous_grass_island_geometry",
+          "vertices": 4464,
+          "polygons": 4006,
+          "atlasTileGroups": {
+            "1": {
+              "polygons": 2304,
+              "nondegenerate": 2304,
+              "up": 2304,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.9460517676621977,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.9503751397132874,
+              "storedNormalZMax": 1.0
+            },
+            "3": {
+              "polygons": 310,
+              "nondegenerate": 309,
+              "up": 309,
+              "down": 0,
+              "side": 0,
+              "degenerate": 1,
+              "geometricZMin": 0.5384073933665441,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.540304958820343,
+              "storedNormalZMax": 1.0
+            },
+            "4": {
+              "polygons": 384,
+              "nondegenerate": 384,
+              "up": 0,
+              "down": 256,
+              "side": 128,
+              "degenerate": 0,
+              "geometricZMin": -0.757232305186362,
+              "geometricZMax": 0.0,
+              "storedNormalZMin": -0.7572323679924011,
+              "storedNormalZMax": 0.0
+            },
+            "30": {
+              "polygons": 1008,
+              "nondegenerate": 1008,
+              "up": 384,
+              "down": 384,
+              "side": 240,
+              "degenerate": 0,
+              "geometricZMin": -0.9510791107041372,
+              "geometricZMax": 0.9511036632990301,
+              "storedNormalZMin": -0.9615920186042786,
+              "storedNormalZMax": 0.961796224117279
+            }
+          }
+        },
+        {
+          "name": "Coast_chamfer_rock_00_geometry",
+          "vertices": 33896,
+          "polygons": 25923,
+          "atlasTileGroups": {
+            "4": {
+              "polygons": 1102,
+              "nondegenerate": 1102,
+              "up": 436,
+              "down": 382,
+              "side": 284,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "5": {
+              "polygons": 2980,
+              "nondegenerate": 2980,
+              "up": 876,
+              "down": 1002,
+              "side": 1102,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "6": {
+              "polygons": 2634,
+              "nondegenerate": 2634,
+              "up": 1171,
+              "down": 1052,
+              "side": 411,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "28": {
+              "polygons": 414,
+              "nondegenerate": 414,
+              "up": 145,
+              "down": 144,
+              "side": 125,
+              "degenerate": 0,
+              "geometricZMin": -0.9998307382516652,
+              "geometricZMax": 0.9996333239212369,
+              "storedNormalZMin": -0.8956624865531921,
+              "storedNormalZMax": 0.8984118700027466
+            },
+            "27": {
+              "polygons": 575,
+              "nondegenerate": 575,
+              "up": 375,
+              "down": 200,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9999992585495351,
+              "geometricZMax": 0.9999942099187816,
+              "storedNormalZMin": -0.9945043325424194,
+              "storedNormalZMax": 0.9943442940711975
+            },
+            "24": {
+              "polygons": 5,
+              "nondegenerate": 5,
+              "up": 0,
+              "down": 5,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": -1,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": -0.9999999403953552
+            },
+            "14": {
+              "polygons": 1634,
+              "nondegenerate": 1634,
+              "up": 644,
+              "down": 650,
+              "side": 340,
+              "degenerate": 0,
+              "geometricZMin": -0.9508403458599559,
+              "geometricZMax": 0.9913078290153211,
+              "storedNormalZMin": -0.9614524245262146,
+              "storedNormalZMax": 0.9913075566291809
+            },
+            "15": {
+              "polygons": 225,
+              "nondegenerate": 225,
+              "up": 88,
+              "down": 88,
+              "side": 49,
+              "degenerate": 0,
+              "geometricZMin": -0.9814157007604638,
+              "geometricZMax": 0.9814161928916533,
+              "storedNormalZMin": -0.967629611492157,
+              "storedNormalZMax": 0.9676255583763123
+            },
+            "22": {
+              "polygons": 98,
+              "nondegenerate": 98,
+              "up": 50,
+              "down": 48,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9996904681568759,
+              "geometricZMax": 0.9996903975766201,
+              "storedNormalZMin": -0.8679749369621277,
+              "storedNormalZMax": 0.8640182614326477
+            },
+            "20": {
+              "polygons": 2731,
+              "nondegenerate": 2731,
+              "up": 932,
+              "down": 1355,
+              "side": 444,
+              "degenerate": 0,
+              "geometricZMin": -0.9992037037209599,
+              "geometricZMax": 0.9978431919643211,
+              "storedNormalZMin": -0.9993147850036621,
+              "storedNormalZMax": 0.9993460178375244
+            },
+            "17": {
+              "polygons": 1891,
+              "nondegenerate": 1891,
+              "up": 829,
+              "down": 740,
+              "side": 322,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279332194431,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9812532067298889,
+              "storedNormalZMax": 0.9913074970245361
+            },
+            "13": {
+              "polygons": 98,
+              "nondegenerate": 98,
+              "up": 33,
+              "down": 33,
+              "side": 32,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "11": {
+              "polygons": 303,
+              "nondegenerate": 303,
+              "up": 104,
+              "down": 67,
+              "side": 132,
+              "degenerate": 0,
+              "geometricZMin": -0.9921477045381554,
+              "geometricZMax": 0.978491960993189,
+              "storedNormalZMin": -0.7434417605400085,
+              "storedNormalZMax": 0.7883963584899902
+            },
+            "12": {
+              "polygons": 2634,
+              "nondegenerate": 2634,
+              "up": 1102,
+              "down": 1102,
+              "side": 430,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -1.0,
+              "storedNormalZMax": 1.0
+            },
+            "8": {
+              "polygons": 1980,
+              "nondegenerate": 1980,
+              "up": 1680,
+              "down": 300,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9855928712448724,
+              "geometricZMax": 0.985592650472235,
+              "storedNormalZMin": -0.986538827419281,
+              "storedNormalZMax": 0.9998993873596191
+            },
+            "9": {
+              "polygons": 2828,
+              "nondegenerate": 2828,
+              "up": 1904,
+              "down": 684,
+              "side": 240,
+              "degenerate": 0,
+              "geometricZMin": -0.9499696634457419,
+              "geometricZMax": 0.967406363486212,
+              "storedNormalZMin": -0.9687111973762512,
+              "storedNormalZMax": 0.9998959302902222
+            },
+            "10": {
+              "polygons": 1816,
+              "nondegenerate": 1816,
+              "up": 1654,
+              "down": 162,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9061827121000777,
+              "geometricZMax": 0.966663847838905,
+              "storedNormalZMin": -0.9061851501464844,
+              "storedNormalZMax": 0.9998886585235596
+            },
+            "0": {
+              "polygons": 114,
+              "nondegenerate": 114,
+              "up": 0,
+              "down": 114,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5338497382904179,
+              "geometricZMax": -0.3135301736320611,
+              "storedNormalZMin": -0.533855140209198,
+              "storedNormalZMax": -0.3135318458080292
+            },
+            "1": {
+              "polygons": 57,
+              "nondegenerate": 57,
+              "up": 0,
+              "down": 57,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5249904477098101,
+              "geometricZMax": -0.31410088303417655,
+              "storedNormalZMin": -0.524990975856781,
+              "storedNormalZMax": -0.3141044080257416
+            },
+            "2": {
+              "polygons": 57,
+              "nondegenerate": 57,
+              "up": 0,
+              "down": 57,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.5341000236273278,
+              "geometricZMax": -0.3134476283426621,
+              "storedNormalZMin": -0.5340995192527771,
+              "storedNormalZMax": -0.3134472966194153
+            },
+            "18": {
+              "polygons": 891,
+              "nondegenerate": 891,
+              "up": 390,
+              "down": 363,
+              "side": 138,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279332194431,
+              "geometricZMax": 0.9999999999999949,
+              "storedNormalZMin": -0.9812533259391785,
+              "storedNormalZMax": 0.9859283566474915
+            },
+            "16": {
+              "polygons": 742,
+              "nondegenerate": 742,
+              "up": 325,
+              "down": 279,
+              "side": 138,
+              "degenerate": 0,
+              "geometricZMin": -0.9912279355377154,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9812539219856262,
+              "storedNormalZMax": 0.9859272241592407
+            },
+            "19": {
+              "polygons": 114,
+              "nondegenerate": 114,
+              "up": 58,
+              "down": 56,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.49789928557124963,
+              "geometricZMax": 0.9999999999999992,
+              "storedNormalZMin": -0.48983079195022583,
+              "storedNormalZMax": 0.873393177986145
+            }
+          }
+        },
+        {
+          "name": "Sanctuary_luminous_pearl_geometry",
+          "vertices": 888,
+          "polygons": 832,
+          "atlasTileGroups": {
+            "21": {
+              "polygons": 640,
+              "nondegenerate": 640,
+              "up": 288,
+              "down": 288,
+              "side": 64,
+              "degenerate": 0,
+              "geometricZMin": -0.9968875583548749,
+              "geometricZMax": 0.9968876281126668,
+              "storedNormalZMin": -0.9969179034233093,
+              "storedNormalZMax": 0.9969179034233093
+            },
+            "23": {
+              "polygons": 192,
+              "nondegenerate": 192,
+              "up": 96,
+              "down": 96,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9693505847069425,
+              "geometricZMax": 0.9693505847069425,
+              "storedNormalZMin": -0.971316933631897,
+              "storedNormalZMax": 0.971316933631897
+            }
+          }
+        }
+      ],
+      "models": [
+        {
+          "name": "Ground",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Landmarks_and_nature",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Pearl_and_lamps",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "axes": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ]
+      }
+    },
+    "home": {
+      "path": "game/art-source/environment/home-island/candidate-01/home-island.fbx",
+      "sha256": "0c73b77cefa52a26da9b3c4fd751bb42573eff431859bea02342164b07a5b6af",
+      "fbxVersion": 7400,
+      "geometry": [
+        {
+          "name": "Home_continuous_grass_geometry",
+          "vertices": 2577,
+          "polygons": 2147,
+          "atlasTileGroups": {
+            "1": {
+              "polygons": 1344,
+              "nondegenerate": 1344,
+              "up": 1344,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 0.9979161684663055,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.9979335069656372,
+              "storedNormalZMax": 1.0
+            },
+            "6": {
+              "polygons": 381,
+              "nondegenerate": 381,
+              "up": 189,
+              "down": 96,
+              "side": 96,
+              "degenerate": 0,
+              "geometricZMin": -0.5455352249613599,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.5466038584709167,
+              "storedNormalZMax": 1.0
+            },
+            "20": {
+              "polygons": 95,
+              "nondegenerate": 95,
+              "up": 95,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 1,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.9999999403953552,
+              "storedNormalZMax": 1.0
+            },
+            "27": {
+              "polygons": 87,
+              "nondegenerate": 87,
+              "up": 87,
+              "down": 0,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": 1,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": 0.9999999403953552,
+              "storedNormalZMax": 1.0
+            },
+            "30": {
+              "polygons": 240,
+              "nondegenerate": 240,
+              "up": 80,
+              "down": 80,
+              "side": 80,
+              "degenerate": 0,
+              "geometricZMin": -0.9463644991428207,
+              "geometricZMax": 0.9489617250544266,
+              "storedNormalZMin": -0.9335376620292664,
+              "storedNormalZMax": 0.9430431723594666
+            }
+          }
+        },
+        {
+          "name": "Home_coast_block_00_geometry",
+          "vertices": 16710,
+          "polygons": 13659,
+          "atlasTileGroups": {
+            "4": {
+              "polygons": 644,
+              "nondegenerate": 644,
+              "up": 254,
+              "down": 224,
+              "side": 166,
+              "degenerate": 0,
+              "geometricZMin": -0.9999697200939373,
+              "geometricZMax": 0.9999981924528157,
+              "storedNormalZMin": -0.9421566128730774,
+              "storedNormalZMax": 0.9440658092498779
+            },
+            "5": {
+              "polygons": 782,
+              "nondegenerate": 782,
+              "up": 282,
+              "down": 272,
+              "side": 228,
+              "degenerate": 0,
+              "geometricZMin": -0.9999967336286509,
+              "geometricZMax": 0.9999641582005829,
+              "storedNormalZMin": -0.9223639369010925,
+              "storedNormalZMax": 0.9261566996574402
+            },
+            "6": {
+              "polygons": 2237,
+              "nondegenerate": 2237,
+              "up": 941,
+              "down": 877,
+              "side": 419,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.920867383480072,
+              "storedNormalZMax": 1.0
+            },
+            "20": {
+              "polygons": 2449,
+              "nondegenerate": 2449,
+              "up": 882,
+              "down": 896,
+              "side": 671,
+              "degenerate": 0,
+              "geometricZMin": -0.999945373728146,
+              "geometricZMax": 0.9999666420117123,
+              "storedNormalZMin": -0.974873960018158,
+              "storedNormalZMax": 0.976310670375824
+            },
+            "24": {
+              "polygons": 480,
+              "nondegenerate": 480,
+              "up": 195,
+              "down": 178,
+              "side": 107,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.980785608291626,
+              "storedNormalZMax": 0.9807847142219543
+            },
+            "14": {
+              "polygons": 75,
+              "nondegenerate": 75,
+              "up": 54,
+              "down": 3,
+              "side": 18,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 0.9969176929932937,
+              "storedNormalZMin": -0.577350378036499,
+              "storedNormalZMax": 0.7239325046539307
+            },
+            "13": {
+              "polygons": 24,
+              "nondegenerate": 24,
+              "up": 8,
+              "down": 8,
+              "side": 8,
+              "degenerate": 0,
+              "geometricZMin": -0.7071067811865476,
+              "geometricZMax": 0.7071067811865476,
+              "storedNormalZMin": -0.8164973855018616,
+              "storedNormalZMax": 0.8164973855018616
+            },
+            "23": {
+              "polygons": 192,
+              "nondegenerate": 192,
+              "up": 96,
+              "down": 96,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9774539117535196,
+              "geometricZMax": 0.9774539117535196,
+              "storedNormalZMin": -0.9807854890823364,
+              "storedNormalZMax": 0.980785608291626
+            },
+            "11": {
+              "polygons": 478,
+              "nondegenerate": 478,
+              "up": 123,
+              "down": 105,
+              "side": 250,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.7882511615753174,
+              "storedNormalZMax": 0.7882509827613831
+            },
+            "7": {
+              "polygons": 896,
+              "nondegenerate": 896,
+              "up": 448,
+              "down": 448,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9681382996188534,
+              "geometricZMax": 0.9681382996188534,
+              "storedNormalZMin": -0.9726179838180542,
+              "storedNormalZMax": 0.9726179838180542
+            },
+            "12": {
+              "polygons": 2358,
+              "nondegenerate": 2358,
+              "up": 1017,
+              "down": 1017,
+              "side": 324,
+              "degenerate": 0,
+              "geometricZMin": -1.0,
+              "geometricZMax": 1.0,
+              "storedNormalZMin": -0.9830681085586548,
+              "storedNormalZMax": 0.98306804895401
+            },
+            "22": {
+              "polygons": 580,
+              "nondegenerate": 580,
+              "up": 240,
+              "down": 228,
+              "side": 112,
+              "degenerate": 0,
+              "geometricZMin": -0.9924343192320307,
+              "geometricZMax": 0.9923903156479749,
+              "storedNormalZMin": -0.9767206311225891,
+              "storedNormalZMax": 0.9767207503318787
+            },
+            "8": {
+              "polygons": 680,
+              "nondegenerate": 680,
+              "up": 560,
+              "down": 120,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.9855926243293965,
+              "geometricZMax": 0.9855926243293965,
+              "storedNormalZMin": -0.9865385890007019,
+              "storedNormalZMax": 0.9998988509178162
+            },
+            "9": {
+              "polygons": 1304,
+              "nondegenerate": 1304,
+              "up": 766,
+              "down": 378,
+              "side": 160,
+              "degenerate": 0,
+              "geometricZMin": -0.9499615600446677,
+              "geometricZMax": 0.9675119912849848,
+              "storedNormalZMin": -0.9687182307243347,
+              "storedNormalZMax": 0.9998970031738281
+            },
+            "10": {
+              "polygons": 480,
+              "nondegenerate": 480,
+              "up": 452,
+              "down": 28,
+              "side": 0,
+              "degenerate": 0,
+              "geometricZMin": -0.906182161699484,
+              "geometricZMax": 0.9674372307164966,
+              "storedNormalZMin": -0.9061832427978516,
+              "storedNormalZMax": 0.9998961687088013
+            }
+          }
+        },
+        {
+          "name": "Home_warm_pearl_geometry",
+          "vertices": 532,
+          "polygons": 504,
+          "atlasTileGroups": {
+            "21": {
+              "polygons": 504,
+              "nondegenerate": 504,
+              "up": 224,
+              "down": 224,
+              "side": 56,
+              "degenerate": 0,
+              "geometricZMin": -0.9961466634032593,
+              "geometricZMax": 0.9961466634032593,
+              "storedNormalZMin": -0.9961948990821838,
+              "storedNormalZMax": 0.9961950778961182
+            }
+          }
+        }
+      ],
+      "models": [
+        {
+          "name": "Ground",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Landmarks_and_nature",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "name": "Pearl_and_lamps",
+          "transform": {
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "axes": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ]
+      }
+    }
+  },
+  "cocosBossGround": {
+    "path": "game/library/5b/5b5b1616-e6b8-4b3c-86ea-c733fe071d18@ae720.json",
+    "jsonSha256": "1754ca0c0d61d4da6a8280c6f8f1162b4e89e727ed855a83c1e36953b45506bb",
+    "binSha256": "6d086734ff79cc69d429f5480d12b0be9441b1093b9dc5f039127ca3220ef1ed",
+    "groupsByImportedUvTile": {
+      "25": {
+        "triangles": 4608,
+        "degenerate": 128,
+        "storedZNegative": 4608,
+        "localZNegative": 4480
+      },
+      "27": {
+        "triangles": 556,
+        "localZPositive": 556,
+        "storedZPositive": 556
+      },
+      "4": {
+        "triangles": 224,
+        "localZPositive": 224,
+        "storedZPositive": 224
+      },
+      "28": {
+        "triangles": 768,
+        "side": 256,
+        "storedZNegative": 768,
+        "localZNegative": 512
+      },
+      "21": {
+        "triangles": 1120,
+        "localZNegative": 416,
+        "storedZNegative": 704,
+        "side": 288,
+        "localZPositive": 416,
+        "storedZPositive": 416
+      },
+      "6": {
+        "triangles": 2064,
+        "localZNegative": 768,
+        "storedZNegative": 1029,
+        "side": 528,
+        "storedZPositive": 1035,
+        "localZPositive": 768
+      }
+    },
+    "groundNodeRotation": {
+      "__type__": "cc.Quat",
+      "x": -0.7071068407911908,
+      "y": 0,
+      "z": 0,
+      "w": 0.7071067215818992
+    },
+    "groundNodeScale": {
+      "__type__": "cc.Vec3",
+      "x": 100,
+      "y": 100,
+      "z": 100
+    },
+    "material": {
+      "__type__": "cc.Material",
+      "_name": "Island_atlas",
+      "_objFlags": 0,
+      "__editorExtras__": {},
+      "_native": "",
+      "_effectAsset": {
+        "__uuid__": "f648964e-8d32-41fc-9ac9-7a1e714dd17b",
+        "__expectedType__": "cc.EffectAsset"
+      },
+      "_techIdx": 0,
+      "_defines": [
+        {
+          "DCC_APP_NAME": 2,
+          "HAS_EXPORTED_METALLIC": true,
+          "USE_ALBEDO_MAP": true,
+          "USE_SHININESS_MAP": true
+        }
+      ],
+      "_states": [
+        {
+          "rasterizerState": {},
+          "blendState": {
+            "targets": [
+              {}
+            ]
+          },
+          "depthStencilState": {}
+        }
+      ],
+      "_props": [
+        {
+          "mainColor": {
+            "__type__": "cc.Color",
+            "r": 231,
+            "g": 231,
+            "b": 231,
+            "a": 255
+          },
+          "mainTexture": {
+            "__uuid__": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@0a1ef",
+            "__expectedType__": "cc.Texture2D"
+          },
+          "shininessExponent": 25,
+          "shininessExponentMap": {
+            "__uuid__": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@947de",
+            "__expectedType__": "cc.Texture2D"
+          },
+          "emissiveScale": 0,
+          "emissive": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "metallic": 0,
+          "specularFactor": 0.11999999731779099,
+          "transparencyFactor": 0
+        }
+      ]
+    }
+  }
+}

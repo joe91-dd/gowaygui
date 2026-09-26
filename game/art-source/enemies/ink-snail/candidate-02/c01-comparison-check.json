@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "changed_meshes_only": [
+    "Raised_spiral_L",
+    "Raised_spiral_R",
+    "Thick_rolled_shell_lip_L",
+    "Thick_rolled_shell_lip_R"
+  ],
+  "unchanged_meshes": [
+    "Continuous_gliding_soft_foot",
+    "Round_snail_head",
+    "Short_eye_stem_L",
+    "Short_eye_stem_R",
+    "Short_recessed_ink_spout",
+    "Soft_cream_sole_edge",
+    "Soft_watchful_lid_L",
+    "Soft_watchful_lid_R",
+    "Spherical_painted_eye_L",
+    "Spherical_painted_eye_R",
+    "Thick_ochre_shell"
+  ],
+  "mesh_comparison_fields": [
+    "vertex coordinates",
+    "face indices",
+    "UVs",
+    "weights",
+    "bone binding",
+    "material names"
+  ],
+  "bones_identical": true,
+  "authored_actions_identical": true,
+  "texture_sha256_identical": {
+    "snail-colour.png": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019",
+    "snail-roughness.png": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7"
+  },
+  "c01_all_recorded_bytes_unchanged": true,
+  "curve_topology": {
+    "Raised_spiral_L": {
+      "vertices": 1172,
+      "faces": 1180,
+      "euler": 2,
+      "manifold": true
+    },
+    "Raised_spiral_R": {
+      "vertices": 1172,
+      "faces": 1180,
+      "euler": 2,
+      "manifold": true
+    },
+    "Thick_rolled_shell_lip_L": {
+      "vertices": 512,
+      "faces": 512,
+      "euler": 0,
+      "manifold": true
+    },
+    "Thick_rolled_shell_lip_R": {
+      "vertices": 512,
+      "faces": 512,
+      "euler": 0,
+      "manifold": true
+    }
+  },
+  "evidence_boundary": "Same source geometry and curves verified; actual Cocos import/render/performance not run."
+}

@@ -1,0 +1,20 @@
+{
+  "foundation": "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend",
+  "foundation_sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+  "helpers": "game\\art-source\\build_crystal_turtle_candidate02.py",
+  "helpers_sha256": "9bde104fde65d743c26d796556f257eed0f253f1d9b536b2345dd680daefd21b",
+  "helper_functions_reused": [
+    "build_atlas",
+    "objmesh",
+    "tube"
+  ],
+  "local_changes": "c02 lowers shell height 11.71875%; widens spiral band 50%, lowers relief 50%, rounds inner terminal, broadens collar, slightly strengthens asymmetric brows/smile. Head/eyes/limbs and atlas parameters unchanged from c01.",
+  "previous_candidate": "game\\art-source\\bubble-turtle\\candidate-01",
+  "previous_builder_sha256": "1c586ccedc3eb2c3573fe96169c927f567f82ba7f74974f681373d13ba0c39c9",
+  "reference_images": [
+    "output/art/A-潮汐玩具岛.png",
+    "output/art/A4-五龟三男两女角色参考.png"
+  ],
+  "raster_image_inputs": [],
+  "rights": "Project-authored mesh/functions; no external model extraction."
+}

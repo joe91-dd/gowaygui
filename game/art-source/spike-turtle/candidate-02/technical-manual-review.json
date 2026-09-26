@@ -1,0 +1,41 @@
+{
+  "status": "Technical and actual offline pose review complete; authorized as runtime candidate, not final user art acceptance.",
+  "approved_shape_frozen": true,
+  "parent_runtime_candidate_authorization": true,
+  "authorization_summary": "Parent actually reviewed c02 front and three-quarter, approved improved round corners/roots as a runtime candidate and authorized promotion after c02 technical checks. No geometry changes authorized or made afterward.",
+  "all_ten_images_viewed": true,
+  "technical_review_complete": true,
+  "previously_viewed_approved_images_preserved": ["render-front.png", "render-three-quarter.png"],
+  "newly_rendered_and_actually_viewed_images": [
+    "render-side.png", "render-battle.png", "animation-attack-07-side.png",
+    "animation-attack-11-three-quarter.png", "animation-skill-18-three-quarter.png",
+    "animation-skill-23-side.png", "animation-hit-04-three-quarter.png",
+    "animation-fusion-23-three-quarter.png"
+  ],
+  "findings": [
+    "Rounded spikes remain attached to and move with the shell in the inspected charge/release keyframes.",
+    "No visible detached eye surfaces, forward face through shell, or obvious ground penetration in the inspected attack, skill and hit poses.",
+    "Fusion shows the intended small jump with separated ground shadows; no unexplained permanent foot offset was visible.",
+    "The remaining regularity of some scutes and visible root-over-scute transitions is unchanged from the approved candidate; no further shape work was done."
+  ],
+  "independent_c02_checks": {
+    "fbx_clips": 6, "triangles": 28900, "weighted_vertices": 15086, "bones": 10,
+    "materials": 1, "uv_layers": 1, "packed_source_textures": 2,
+    "normalized_source_and_imported_weights": true, "head_closed_manifold": true,
+    "two_atlases_full_source_rebuild_byte_identical": true,
+    "front_face_attack_skill_hit_half_frame_samples": 171,
+    "maximum_front_face_shell_or_front_leg_intersections": 0,
+    "maximum_clip_endpoint_vertex_gap_m": 0,
+    "minimum_sampled_vertex_z_m": -0.0000014328284123621415
+  },
+  "verification_scope": "All six FBX clips sampled every half-frame for vertex motion, endpoint continuity and minimum height. Front-face BVH sampled attack, skill and hit every half-frame, excluding intended back-head/neck embedding. Discrete sampling does not prove all-time collision absence.",
+  "render_settings": {"width": 800, "height": 680, "samples": 32, "cpu_threads": 2},
+  "full_verifier_exit_code": 0,
+  "approved_views_re_rendered": false,
+  "all_blender_processes_started_by_this_agent_exited": true,
+  "fbx_sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+  "source_blend_sha256": "9193078d649856f18c8ef3244c731480e00b86bc9ae000847cabb46fa38109ca",
+  "c01_and_stone_protected_inputs_unchanged": true,
+  "cocos_validation_done": false,
+  "next_step": "Authorized copy to the independent spike runtime directory, then root performs actual Cocos import/material/animation review."
+}

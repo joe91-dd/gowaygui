@@ -1,0 +1,43 @@
+{
+  "key": "fauna-03",
+  "name": "暗爪灵猫",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Cat",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\cat-595ad9\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/68ebd8be44683b6eb5b6f4a06e0c7f9bb9a40c6ab5f8c291ab1cb93187fffe76_Cat.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "368ba06d63628bfe9daedfe689c6af146de0df0c5418454f8037cd04fe5d1653",
+  "bytes": 142412,
+  "animations": 8,
+  "displayName": "暗爪灵猫",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 12936,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-03",
+  "triangles": 12936,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.9
+}

@@ -1,0 +1,46 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 32,
+  "width": 1000,
+  "height": 700,
+  "views": [
+    {
+      "name": "battle-overview",
+      "positionCocos": [
+        0,
+        15,
+        18
+      ],
+      "targetCocos": [
+        0,
+        0.2,
+        0
+      ],
+      "projection": "PERSP",
+      "verticalFovDegrees": 51.067375845914185,
+      "orthoScale": null,
+      "seconds": 57.64143480000348,
+      "sha256": "26e4581b4a653342ac965f8ea6890cd8a4921cdfda5a9cc3b38e545d9c87f338"
+    },
+    {
+      "name": "top-down",
+      "positionCocos": [
+        0,
+        28,
+        0
+      ],
+      "targetCocos": [
+        0,
+        0,
+        0
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 26.0,
+      "seconds": 57.71151899999677,
+      "sha256": "f1f07734c1d835845227f7f439b407055fb7648d0b832cea91e341ce2026ca9f"
+    }
+  ]
+}

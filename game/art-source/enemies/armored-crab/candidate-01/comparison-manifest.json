@@ -1,0 +1,18 @@
+{
+  "status": "Offline Blender comparison, equal ground and light; not Cocos",
+  "runner_source": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\runner-crab\\candidate-01\\runner-crab-review-scene.blend",
+  "runner_source_sha256": "48ce0292ccd786dc0807090ef3fada35d9a293e3cb9204a7da6f4e4a4f74f9f9",
+  "runner_unchanged": true,
+  "armored_scale": 0.9,
+  "runner_scale": 0.83,
+  "armored_runtime_dimensions": [
+    1.2230565190315248,
+    0.7350436627864838,
+    0.6245069324970246
+  ],
+  "runner_runtime_dimensions": [
+    0.8864400649070739,
+    0.675024664402008,
+    0.7753315716981888
+  ]
+}

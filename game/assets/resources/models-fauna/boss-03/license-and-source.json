@@ -1,0 +1,36 @@
+{
+  "id": "abyss-warden",
+  "name": "深渊锚狱",
+  "tier": 3,
+  "index": 3,
+  "base": 58,
+  "key": "boss-03",
+  "ability": "shock",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 82284,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-58",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/89f1f2fe6467c76c8f4bd758d941d0f8d095a463d736a59576eda2790a92675d_Skeleton Headless.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 25123,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 10.4
+}

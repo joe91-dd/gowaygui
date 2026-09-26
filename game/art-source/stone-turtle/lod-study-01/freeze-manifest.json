@@ -1,0 +1,190 @@
+{
+  "status": "Root reviewed both close renders: preserve independent study; do not promote runtime; no FPS claim",
+  "protected_files_unchanged": 35,
+  "original_runtime_meta_untouched": true,
+  "source_geometry": {
+    "path": "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend",
+    "sha256": "526bb397ef710d4d7bd25c131bfcd7a15756425864ad98628866ec8122159811"
+  },
+  "triangles": 15465,
+  "vertices": 8745,
+  "head_triangles_preserved": 8064,
+  "manual_review": [
+    "compare-original-close.png",
+    "compare-lod-close.png",
+    "compare-original-home-size.png",
+    "compare-lod-home-size.png",
+    "lod-attack-11.png",
+    "lod-hit-04.png"
+  ],
+  "manual_findings": [
+    "Face/eye/muzzle and native home-scale silhouette remain readable",
+    "Close view shows harder stone bevels and slightly faceted palm/toe edges; not a final art approval"
+  ],
+  "root_review": {
+    "images": [
+      "compare-original-close.png",
+      "compare-lod-close.png"
+    ],
+    "decision": "Do not promote this iteration",
+    "reason": "Face and eyes retain quality, but top plate planes and foot edge facets are more apparent"
+  },
+  "files": [
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/animation-clearance.json",
+      "sha256": "cf5a80a59efe1fadeda025253f72509a90927937586acbcea315fd6aaba57368",
+      "bytes": 9099
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/animation-half-frame-qa.json",
+      "sha256": "881cb3cacf5c51f95bce43796173779e43c3faa1578063ab1650dbcedeaff339",
+      "bytes": 366124
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/build_candidate.py",
+      "sha256": "1f899a5e697e5406bcddd7481a9372b7655d6449b200b3a17d348afe9791c447",
+      "bytes": 12402
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/candidate-stats.json",
+      "sha256": "6754cb9dcf830d6b366a5b5cb9dfbabca8bc109a33f3ded569ff57f60d0bfc18",
+      "bytes": 110153
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/compare-lod-close.png",
+      "sha256": "a491dc63eb611d555363b1513363b62c45b26ab822a214654f09de6c8f8dc122",
+      "bytes": 635205
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/compare-lod-home-size.png",
+      "sha256": "63f021cfa08fd7f62c38f19aeb53107fb28d6aab66867d22dec4aa1073f9d332",
+      "bytes": 39367
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/compare-original-close.png",
+      "sha256": "af0428d42feceef4ffc4fd2b5bd92361ae04bd4592673321ee39f6a52d08c701",
+      "bytes": 636096
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/compare-original-home-size.png",
+      "sha256": "4dd369e6c71f8ce26227fcb81bf43f4742e52e42d7a19646677d4a47f6010457",
+      "bytes": 39433
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/comparison-cameras.json",
+      "sha256": "9c30e7ce7d71099af953c00cc2001fa7a67a2083bdf1fd92e415fe7fdf5b5adf",
+      "bytes": 974
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/editable-parts-normal-check.json",
+      "sha256": "d76722a0c8c15c34484c9def1392b90b3833061d56fae7e0cca28154159ccc35",
+      "bytes": 1370
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/export/stone-colour.png",
+      "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+      "bytes": 1326566
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/export/stone-roughness.png",
+      "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+      "bytes": 22192
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/export/stone-turtle-lod.fbx",
+      "sha256": "6940c945b567387a7f54a5e4484c80b9165812e5009ae680e0bf9b165de22136",
+      "bytes": 2434268
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/export-files.json",
+      "sha256": "6d7c5ca134758f59e4400b8db61e215426d716f5ac90b03183f946f0ff228012",
+      "bytes": 479
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/finalize_parts_archive.py",
+      "sha256": "26b9e733d93e28af57f6eb41cf19eac82d09245639a709ad6b69c0439db140b0",
+      "bytes": 2091
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/freeze_study.py",
+      "sha256": "5b9e787b4f0f6966345d6a5486876b255fbc4a21f180cf27193c87aec59de854",
+      "bytes": 2036
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/head-preservation-check.json",
+      "sha256": "960d3a7177457fb2300fe5c0d6d2ad1a28caa53b16307ddcea879e96e532049f",
+      "bytes": 754
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/inspect_runtime.py",
+      "sha256": "df0bac94535d31fdc0f95ad76438e6457749d5e7b1098f4972f53b525ca78690",
+      "bytes": 1273
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/inspect_source.py",
+      "sha256": "3b6b6b6736d4d3df4be60cd50466c6a9c4112bb715052987a8e3817b18cbb7a4",
+      "bytes": 3058
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/lod-attack-11.png",
+      "sha256": "c1033db00ed51fbc2c2a571b171de49afc27858b1bae3f45f9dccad7211c1d81",
+      "bytes": 615894
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/lod-hit-04.png",
+      "sha256": "323e51746de613495437dec4ab4ee7633468b4192ee85d17b5d6b2a86eac2d3c",
+      "bytes": 613839
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/protected-inputs.json",
+      "sha256": "0bbe06d631cc0acea25a71a62d30eff68a2130cc78de387e655a4c7ef2f9bbd8",
+      "bytes": 6596
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/README.md",
+      "sha256": "543e56ae78cac2edc088141315a07084babbfbbef1196adeb5538c2e90939e84",
+      "bytes": 7350
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/review-complete.json",
+      "sha256": "de94930c5342377c65d3acb83148672118d7a82a39d1effe1feca38d425c95d5",
+      "bytes": 274
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/review_candidate.py",
+      "sha256": "db50a9f28f0f983b5bc639e0d5dc288896d1134818c84cf9938a9a8725ae978d",
+      "bytes": 9165
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/round-trip-check.json",
+      "sha256": "a1bc0a8f4d2995a28982af40eeffc20d0ce67dcd65149b49d8fb552c397e451b",
+      "bytes": 1846
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/runtime-components.json",
+      "sha256": "5aed6258cbcfb1c5b441f41509b04f6b604bc10f976ed133645a540cb355f4f1",
+      "bytes": 44658
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/source-inspection.json",
+      "sha256": "ea6fb7f8ae13d0c96609baae858e5bc6ea623a66da059c652c020889d5f219aa",
+      "bytes": 95466
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/stone-turtle-lod-parts.blend",
+      "sha256": "d6466ad0b3c59b120bf1a49e15b7bfd14c7df4e7c69a48b224b5edeee50f9283",
+      "bytes": 7350327
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/stone-turtle-lod-review.blend",
+      "sha256": "94cb271d3a41b0ff7f0c1b87885fe5f8c11c1d0b30f4834de5c1cd0f09eeac0d",
+      "bytes": 8189161
+    },
+    {
+      "file": "game/art-source/stone-turtle/lod-study-01/stone-turtle-lod.blend",
+      "sha256": "386604a3d4909aff2a3dffb49d0736e2f8d5100e718393014ef102a23842a572",
+      "bytes": 3803577
+    }
+  ],
+  "bytes_total": 26381093
+}

@@ -1,0 +1,85 @@
+{
+  "fbx_round_trip": "pass",
+  "version": "tidal-island-sample-04",
+  "fbx_sha256": "c8046dbc11fadc038259c02b28d8d6c426aeaa4e84b3d4de60411f3622b40e5e",
+  "runtime_meshes": [
+    {
+      "name": "Ground",
+      "vertices": 4738,
+      "triangles": 8388,
+      "uv_layers": 1,
+      "material": "Island_atlas"
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 44808,
+      "triangles": 67934,
+      "uv_layers": 1,
+      "material": "Island_atlas"
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 1104,
+      "triangles": 2048,
+      "uv_layers": 1,
+      "material": "Warm_pearl_and_lamps"
+    }
+  ],
+  "total_triangles": 78370,
+  "anchors_cocos_xyz": {
+    "Enemy_entrance": [
+      -9.0,
+      0.064,
+      -0.0
+    ],
+    "Island_origin": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "Pearl_center": [
+      9.45,
+      1.1,
+      -0.05
+    ],
+    "Player_exit": [
+      9.0,
+      0.064,
+      -0.0
+    ],
+    "Slot_0": [
+      -5.0,
+      0.292,
+      1.0
+    ],
+    "Slot_1": [
+      -1.0,
+      0.292,
+      1.0
+    ],
+    "Slot_2": [
+      3.0,
+      0.292,
+      1.0
+    ],
+    "Slot_3": [
+      1.0,
+      0.292,
+      -3.0
+    ],
+    "Slot_4": [
+      6.0,
+      0.292,
+      -1.0
+    ]
+  },
+  "route_samples": 73,
+  "route_min_y": 0.06350326538085938,
+  "route_max_y": 0.06400108337402344,
+  "route_height_problems": [],
+  "route_center_obstacles": [],
+  "notes": [
+    "Raycasts inspect the actual reimported geometry. They do not replace Cocos rendering, collision or mobile performance tests.",
+    "Foliage has thin open surfaces; actual Cocos material culling must be checked."
+  ]
+}

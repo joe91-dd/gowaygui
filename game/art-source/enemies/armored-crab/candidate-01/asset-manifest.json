@@ -1,0 +1,141 @@
+{
+  "version": "armored-crab-candidate-01",
+  "status": "isolated-first-review-not-final-art",
+  "recorded_at_utc": "2026-09-08T07:39:23.0776358Z",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_processes_exited": true,
+  "render_threads": 2,
+  "max_samples": 24,
+  "review_images_viewed": 6,
+  "source": "Original project-authored mesh, UV artwork, rig and animation. Internal runner helpers reused in an independent script; new body, armor, claws, legs, low eye placement and timing. No external stock assets.",
+  "generator": "game/art-source/enemies/build_armored_crab.py",
+  "generator_sha256": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+  "files": [
+    {
+      "path": "export/armored-crab.fbx",
+      "bytes": 1013164,
+      "sha256": "837caade510dd003847a05a4dfe7ee4551235b75026354338defc0523e409474"
+    },
+    {
+      "path": "export/armored-colour.png",
+      "bytes": 64886,
+      "sha256": "36faabdfab94e6e227f5ba8038ee7c51d85f59c9663c66c9c83758359191538d"
+    },
+    {
+      "path": "export/armored-roughness.png",
+      "bytes": 6039,
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+    },
+    {
+      "path": "armored-crab.blend",
+      "bytes": 2203673,
+      "sha256": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b"
+    },
+    {
+      "path": "armored-crab-review-scene.blend",
+      "bytes": 2064324,
+      "sha256": "ff4ca1a3d7edd6da69ae9c32e802a5166c5926fa3e80adfc559c744f09b7776d"
+    },
+    {
+      "path": "armored-crab.glb",
+      "bytes": 580960,
+      "sha256": "ab6b5d64e817bec6e585b2cb240e58d5a3a6fc01e4573b67ff0ad812ce2f42fd"
+    },
+    {
+      "path": "armored-runner-comparison.blend",
+      "bytes": 5346027,
+      "sha256": "efee9ddc275451e8e48145f2ee7dead4252fc28462934d7bcd22b54d052326f6"
+    },
+    {
+      "path": "armored-battle-context.blend",
+      "bytes": 12513675,
+      "sha256": "2f0d6a8f71da713463877bbaab136f58ba70b0d25f0722fa0fb658a122736bb4"
+    },
+    {
+      "path": "armored-crab-poses.blend",
+      "bytes": 7209775,
+      "sha256": "91e8045cf6136d20740cf4672b6db899b9f26f94ab108c96bb347b5fc5bf5d01"
+    },
+    {
+      "path": "render-front.png",
+      "bytes": 819084,
+      "sha256": "2e1293c663e0fcb9588207d0ae028d6cd8ef2996560769a1cd01860d47964e81"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 836039,
+      "sha256": "f31c4f715f37e3cac31c8a1f014c5b230e7ab7b7509205c9a7e7be8e0ef43fce"
+    },
+    {
+      "path": "render-side.png",
+      "bytes": 838054,
+      "sha256": "376aeceda2f7b186b37cd399da2a97f2ba72155d9cb7349318a6e6340c67c62c"
+    },
+    {
+      "path": "render-runner-scale-comparison.png",
+      "bytes": 1145307,
+      "sha256": "30e7ee42d4281dd268581d7ef9597067f994d028bde099c7235a9c299677d848"
+    },
+    {
+      "path": "render-battle-angle.png",
+      "bytes": 1325628,
+      "sha256": "acb655e1a10661cc3c639e04ebfe25c67e998c2e400f1d760b515617df9ac042"
+    },
+    {
+      "path": "render-five-poses.png",
+      "bytes": 943634,
+      "sha256": "ba56427add9950251525f2a643036c1b1ad576659b00b7c5933d90c91cba3c87"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 2506,
+      "sha256": "d3e38ab4f03d429703dd9d86361cb482109d70aa3a97905dd384f44e40caab1c"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2792,
+      "sha256": "ee53dfdfa7e79a4c7b365ae49db02f6b7c2fcb37f4b94b27d6680fa1e98f1db4"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 744,
+      "sha256": "f049e8c9fdda70917b6533d2e228d7983c1578a3b10610a81e41a73245539437"
+    },
+    {
+      "path": "comparison-manifest.json",
+      "bytes": 649,
+      "sha256": "3a57b067bcf516ae3d389b396112ba53fffad4a080ddc6d353f3720c3f172996"
+    },
+    {
+      "path": "battle-camera-manifest.json",
+      "bytes": 950,
+      "sha256": "bfb7580445a953e461c3e0044eaeeaf0902a3a34e28b5c4411c56d50b7c2d723"
+    },
+    {
+      "path": "verify_and_review.py",
+      "bytes": 14201,
+      "sha256": "914cc912210f03ceba7c9e50de2519f02c451b92a4588f61c9761d976bf0e4f1"
+    },
+    {
+      "path": "verify_files.py",
+      "bytes": 1950,
+      "sha256": "347bf48bfabe3464d6b4ec54706c0be74fa95586ee25b9a637db4140044324a7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4263,
+      "sha256": "37b1e8d9eb6b751c91fa8499cbdfa53bb44060aedafb53fb2d7fee24d4641919"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 2457,
+      "sha256": "67c3712dca3a42d14d3ae2d632d6dd3e02f08a9eae0ab1fa19f60c9daf1a9e45"
+    },
+    {
+      "path": "review.html",
+      "bytes": 1992,
+      "sha256": "7f42c1f6b809799891147377ed32ad842a682abd3cd045e69f292a5bdf803ce3"
+    }
+  ]
+}

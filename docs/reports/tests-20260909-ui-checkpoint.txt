@@ -1,0 +1,7 @@
+At C:\Users\Administrator\Documents\ChatGPT\gowaygui\game\tools\test-all.ps1:13 char:34
++   if($LASTEXITCODE -ne 0){throw 'Cocos宸ョ▼ TypeScript 绫诲瀷妫€鏌ュけ璐?}
++                                  ~~~~~~~~
+Unexpected token 'Cocos宸ョ▼' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 

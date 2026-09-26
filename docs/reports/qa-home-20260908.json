@@ -1,0 +1,5566 @@
+{
+  "schema": "gowaygui-local-qa-v1",
+  "startedAt": "2026-09-08T04:40:08.968Z",
+  "exportedAt": "2026-09-08T04:45:40.965Z",
+  "durationMs": 331997.7000000011,
+  "foregroundDurationMs": 331997.7000000011,
+  "hiddenDurationMs": 0,
+  "navigationToReadyMs": 3560.5,
+  "diagnosticsToReadyMs": 1491.5,
+  "frameTiming": {
+    "source": "performance.now intervals between actual Cocos update callbacks; hidden and first resumed intervals excluded",
+    "p95ResolutionMs": 0.1,
+    "p95Rounding": "upper bucket boundary, error below 0.1 ms",
+    "sampledDurationMs": 331930.0999999996,
+    "frames": 6149,
+    "averageFrameMs": 53.98115140673274,
+    "p95FrameMs": 66.3,
+    "maxFrameMs": 344.90000000037253,
+    "over33Ms": 6149,
+    "over50Ms": 4288
+  },
+  "cocosDeltaTiming": {
+    "source": "unmodified dt supplied by Cocos; engine may clamp it",
+    "frames": 6149,
+    "averageFrameMs": 53.98370466742572,
+    "p95FrameMs": 66.3,
+    "maxFrameMs": 345.5,
+    "over33Ms": 6149,
+    "over50Ms": 4290
+  },
+  "heap": {
+    "usedJSHeapSize": 168776983,
+    "totalJSHeapSize": 249395275,
+    "jsHeapSizeLimit": 4364173312
+  },
+  "heapMeaning": "Optional non-standard Chromium JS heap estimate; not game/GPU/total process memory; unavailable is null",
+  "context": {
+    "screen": "home"
+  },
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "devicePixelRatio": 1,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "timeline": [
+    {
+      "atMs": 1090.9000000003725,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 63.294117647058826,
+      "p95FrameMs": 191.5,
+      "maxFrameMs": 191.40000000037253,
+      "over33Ms": 17,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 196542845,
+        "totalJSHeapSize": 260577533,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 2100.5999999996275,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 14,
+      "averageFrameMs": 72.12142857137535,
+      "p95FrameMs": 345,
+      "maxFrameMs": 344.90000000037253,
+      "over33Ms": 14,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 209112425,
+        "totalJSHeapSize": 262033429,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 3153.9000000003725,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.43684210530237,
+      "p95FrameMs": 65,
+      "maxFrameMs": 65,
+      "over33Ms": 19,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 219587405,
+        "totalJSHeapSize": 262033429,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 4201,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.35499999998137,
+      "p95FrameMs": 56.2,
+      "maxFrameMs": 63.80000000074506,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 203760225,
+        "totalJSHeapSize": 267538453,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 5231.700000001118,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.2611111111732,
+      "p95FrameMs": 65.1,
+      "maxFrameMs": 65.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 213019197,
+        "totalJSHeapSize": 267538453,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 6251.9000000003725,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.67777777773639,
+      "p95FrameMs": 80.2,
+      "maxFrameMs": 80.19999999925494,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 160190618,
+        "totalJSHeapSize": 253669382,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 7289,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.58421052629618,
+      "p95FrameMs": 65.9,
+      "maxFrameMs": 65.80000000074506,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 169915678,
+        "totalJSHeapSize": 253669382,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 8294.400000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.27000000001863,
+      "p95FrameMs": 56.1,
+      "maxFrameMs": 70.20000000111759,
+      "over33Ms": 20,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 180153770,
+        "totalJSHeapSize": 253669382,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 9344.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.525,
+      "p95FrameMs": 60.5,
+      "maxFrameMs": 61.20000000111759,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 156816272,
+        "totalJSHeapSize": 250277792,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 10392.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.4,
+      "p95FrameMs": 56.8,
+      "maxFrameMs": 66.20000000111759,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 167044300,
+        "totalJSHeapSize": 250277792,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 11393.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.652631578966975,
+      "p95FrameMs": 57.7,
+      "maxFrameMs": 57.69999999925494,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 176742952,
+        "totalJSHeapSize": 250277792,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 12402.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.10526315789474,
+      "p95FrameMs": 64.1,
+      "maxFrameMs": 64.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 159250776,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 13455.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 50.152380952345474,
+      "p95FrameMs": 55.3,
+      "maxFrameMs": 60.19999999925494,
+      "over33Ms": 21,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 169952668,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 14465.700000001118,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.423529411830444,
+      "p95FrameMs": 69.6,
+      "maxFrameMs": 69.59999999962747,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 178559320,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 15482.200000001118,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.47222222222222,
+      "p95FrameMs": 69.9,
+      "maxFrameMs": 69.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 187665468,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 16484.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 58.9470588235075,
+      "p95FrameMs": 70.9,
+      "maxFrameMs": 70.80000000074506,
+      "over33Ms": 17,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 168740660,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 17486.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.699999999979305,
+      "p95FrameMs": 61,
+      "maxFrameMs": 60.90000000037253,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 177852812,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 18525.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.68421052631579,
+      "p95FrameMs": 65.9,
+      "maxFrameMs": 65.89999999850988,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 187474412,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 19545.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.66315789471724,
+      "p95FrameMs": 63.3,
+      "maxFrameMs": 63.29999999888241,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 169645092,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 20550.099999999627,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.81111111109041,
+      "p95FrameMs": 69.1,
+      "maxFrameMs": 69.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 178751916,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 21563.400000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.29444444448583,
+      "p95FrameMs": 61.9,
+      "maxFrameMs": 61.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 187875168,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 22604.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.81578947368421,
+      "p95FrameMs": 65.2,
+      "maxFrameMs": 65.19999999925494,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 173622308,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 23622.599999999627,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.538888888847495,
+      "p95FrameMs": 69,
+      "maxFrameMs": 69,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 182763984,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 24660.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.04117647065397,
+      "p95FrameMs": 68.4,
+      "maxFrameMs": 68.30000000074506,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 191470472,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 25714.099999999627,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.54444444438236,
+      "p95FrameMs": 64.7,
+      "maxFrameMs": 64.60000000149012,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 200518568,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 26735.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.105882352985006,
+      "p95FrameMs": 65.4,
+      "maxFrameMs": 65.39999999850988,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 181282444,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 27788.900000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.65,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 57.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 191332880,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 28803.800000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.41578947370382,
+      "p95FrameMs": 65.8,
+      "maxFrameMs": 65.79999999888241,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 200947672,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 29848.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.98421052627658,
+      "p95FrameMs": 69,
+      "maxFrameMs": 69,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 183112668,
+        "totalJSHeapSize": 251588512,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 30866.099999999627,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 15,
+      "averageFrameMs": 67.83999999997516,
+      "p95FrameMs": 73.2,
+      "maxFrameMs": 73.19999999925494,
+      "over33Ms": 15,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 190997715,
+        "totalJSHeapSize": 251598963,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 31911.400000000373,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.48823529416148,
+      "p95FrameMs": 73,
+      "maxFrameMs": 72.90000000037253,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 199533455,
+        "totalJSHeapSize": 251598963,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 32915.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 62.75624999997672,
+      "p95FrameMs": 69.5,
+      "maxFrameMs": 69.40000000037253,
+      "over33Ms": 16,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 207568927,
+        "totalJSHeapSize": 251598963,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 33916.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 58.88235294117647,
+      "p95FrameMs": 84.2,
+      "maxFrameMs": 84.10000000149012,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 151132506,
+        "totalJSHeapSize": 187363226,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 34970.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.53888888895098,
+      "p95FrameMs": 72.5,
+      "maxFrameMs": 72.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 151706306,
+        "totalJSHeapSize": 188411802,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 35989.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.95294117642676,
+      "p95FrameMs": 66.6,
+      "maxFrameMs": 66.59999999962747,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 155001618,
+        "totalJSHeapSize": 192343962,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 37013.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.90526315785552,
+      "p95FrameMs": 62,
+      "maxFrameMs": 61.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 154453710,
+        "totalJSHeapSize": 192606106,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 38054.800000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.06000000005588,
+      "p95FrameMs": 57.2,
+      "maxFrameMs": 67.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 157762622,
+        "totalJSHeapSize": 192606106,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 39092.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.90499999998137,
+      "p95FrameMs": 59.2,
+      "maxFrameMs": 63,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 160689537,
+        "totalJSHeapSize": 198635429,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 40128.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.51052631575026,
+      "p95FrameMs": 69.3,
+      "maxFrameMs": 69.29999999888241,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 151225216,
+        "totalJSHeapSize": 178188188,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 41154.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.295000000018625,
+      "p95FrameMs": 56.3,
+      "maxFrameMs": 61.69999999925494,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 154601148,
+        "totalJSHeapSize": 180809628,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 42168.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.26666666664893,
+      "p95FrameMs": 54,
+      "maxFrameMs": 54.09999999962747,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 158292520,
+        "totalJSHeapSize": 180809628,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 43181,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.64500000001863,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 56.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 161511028,
+        "totalJSHeapSize": 180809628,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 44220.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.504761904744164,
+      "p95FrameMs": 53.4,
+      "maxFrameMs": 61,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 165300684,
+        "totalJSHeapSize": 183168924,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 45248.800000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.12222222228431,
+      "p95FrameMs": 73.5,
+      "maxFrameMs": 73.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 159959616,
+        "totalJSHeapSize": 189198236,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 46264.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 63.46250000002328,
+      "p95FrameMs": 75.5,
+      "maxFrameMs": 75.5,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 152788136,
+        "totalJSHeapSize": 189460380,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 47316.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.3894736841321,
+      "p95FrameMs": 60.8,
+      "maxFrameMs": 60.79999999888241,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 162334288,
+        "totalJSHeapSize": 189460380,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 48348.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.331578947407635,
+      "p95FrameMs": 64.1,
+      "maxFrameMs": 64.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 156830900,
+        "totalJSHeapSize": 189460380,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 49370.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.74736842101342,
+      "p95FrameMs": 69.3,
+      "maxFrameMs": 69.20000000111759,
+      "over33Ms": 19,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 166369984,
+        "totalJSHeapSize": 196800412,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 50372.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.67222222230501,
+      "p95FrameMs": 62,
+      "maxFrameMs": 62,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 161884500,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 51417.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.7571428570719,
+      "p95FrameMs": 58.9,
+      "maxFrameMs": 59.90000000037253,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 158781964,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 52465.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.1684210526904,
+      "p95FrameMs": 83.7,
+      "maxFrameMs": 83.69999999925494,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 168340192,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 53480.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.452631578927765,
+      "p95FrameMs": 60,
+      "maxFrameMs": 60,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 164164472,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 54486.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.14705882352941,
+      "p95FrameMs": 67.2,
+      "maxFrameMs": 67.10000000149012,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 172699668,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 55510.300000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 63.99375000002328,
+      "p95FrameMs": 72.6,
+      "maxFrameMs": 72.59999999962747,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 166994836,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 56566.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 62.111764705904264,
+      "p95FrameMs": 76.5,
+      "maxFrameMs": 76.5,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 175527140,
+        "totalJSHeapSize": 197848988,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 57617.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 65.71875,
+      "p95FrameMs": 89.5,
+      "maxFrameMs": 89.5,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 154800604,
+        "totalJSHeapSize": 198635420,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 58674,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.68333333327124,
+      "p95FrameMs": 73.2,
+      "maxFrameMs": 73.19999999925494,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 163848100,
+        "totalJSHeapSize": 198635420,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 59724.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.77647058830104,
+      "p95FrameMs": 77.3,
+      "maxFrameMs": 77.29999999888241,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 172384620,
+        "totalJSHeapSize": 203878300,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 60780.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.68333333327124,
+      "p95FrameMs": 70.5,
+      "maxFrameMs": 70.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 157105474,
+        "totalJSHeapSize": 209131598,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 61829.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.18947368419092,
+      "p95FrameMs": 73.3,
+      "maxFrameMs": 73.20000000111759,
+      "over33Ms": 19,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 166641382,
+        "totalJSHeapSize": 209131598,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 62875.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.084210526394216,
+      "p95FrameMs": 64.3,
+      "maxFrameMs": 64.20000000111759,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 176184494,
+        "totalJSHeapSize": 216733774,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 63880.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.80555555555556,
+      "p95FrameMs": 68,
+      "maxFrameMs": 67.90000000037253,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 185220678,
+        "totalJSHeapSize": 225384526,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 64899.800000000745,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.64444444442375,
+      "p95FrameMs": 63.5,
+      "maxFrameMs": 63.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 166571718,
+        "totalJSHeapSize": 225908814,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 65947.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.18333333327124,
+      "p95FrameMs": 66.9,
+      "maxFrameMs": 66.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 175608062,
+        "totalJSHeapSize": 225908814,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 66967.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.711111111152505,
+      "p95FrameMs": 80.1,
+      "maxFrameMs": 80.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 184644118,
+        "totalJSHeapSize": 226957390,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 68014.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.12777777781917,
+      "p95FrameMs": 67.8,
+      "maxFrameMs": 67.79999999888241,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 166320674,
+        "totalJSHeapSize": 232200270,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 69025.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.488235294051904,
+      "p95FrameMs": 70,
+      "maxFrameMs": 69.90000000037253,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 174851862,
+        "totalJSHeapSize": 232200270,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 70035.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.40588235296309,
+      "p95FrameMs": 68.5,
+      "maxFrameMs": 68.40000000037253,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 183403610,
+        "totalJSHeapSize": 232200270,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 71035.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.577777777798474,
+      "p95FrameMs": 72.4,
+      "maxFrameMs": 72.30000000074506,
+      "over33Ms": 18,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 192439426,
+        "totalJSHeapSize": 232200270,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 72065.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.21578947366461,
+      "p95FrameMs": 68,
+      "maxFrameMs": 68,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 174568386,
+        "totalJSHeapSize": 236394574,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 73068.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.72222222222222,
+      "p95FrameMs": 76.4,
+      "maxFrameMs": 76.39999999850988,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 156676340,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 74124.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.53684210522395,
+      "p95FrameMs": 61.6,
+      "maxFrameMs": 61.59999999962747,
+      "over33Ms": 19,
+      "over50Ms": 19,
+      "heap": {
+        "usedJSHeapSize": 166223564,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 75157.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.427777777839864,
+      "p95FrameMs": 72,
+      "maxFrameMs": 72,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 175255024,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 76162,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.788888888847495,
+      "p95FrameMs": 66.1,
+      "maxFrameMs": 66.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 184287080,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 77185.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.85789473688132,
+      "p95FrameMs": 64.3,
+      "maxFrameMs": 64.20000000111759,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 163726052,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 78203.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.54444444438236,
+      "p95FrameMs": 67.2,
+      "maxFrameMs": 67.19999999925494,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 172763412,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 79206.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 62.71250000002328,
+      "p95FrameMs": 81.1,
+      "maxFrameMs": 81.09999999962747,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 180791272,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 80268.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 62.494117647080735,
+      "p95FrameMs": 73.7,
+      "maxFrameMs": 73.69999999925494,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 162232116,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 81332.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 66.45625000004657,
+      "p95FrameMs": 77.9,
+      "maxFrameMs": 77.80000000074506,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 170257568,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 82385.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.970588235294116,
+      "p95FrameMs": 76.2,
+      "maxFrameMs": 76.19999999925494,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 178781264,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 83399.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.623529411742794,
+      "p95FrameMs": 69.1,
+      "maxFrameMs": 69.09999999962747,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 187310632,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 84442.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.35882352938985,
+      "p95FrameMs": 73.1,
+      "maxFrameMs": 73.09999999962747,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 168440524,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 85485.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 65.18125000002328,
+      "p95FrameMs": 77.6,
+      "maxFrameMs": 77.59999999962747,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 176466856,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 86542.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 14,
+      "averageFrameMs": 75.52142857134875,
+      "p95FrameMs": 80.9,
+      "maxFrameMs": 80.80000000074506,
+      "over33Ms": 14,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 183538388,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 87601.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 66.15625,
+      "p95FrameMs": 82.5,
+      "maxFrameMs": 82.40000000037253,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 191559772,
+        "totalJSHeapSize": 232976284,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 88643.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 65.13125000009313,
+      "p95FrameMs": 75.4,
+      "maxFrameMs": 75.30000000074506,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 172215984,
+        "totalJSHeapSize": 236122012,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 89701.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 15,
+      "averageFrameMs": 70.53999999997517,
+      "p95FrameMs": 81.8,
+      "maxFrameMs": 81.79999999888241,
+      "over33Ms": 15,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 179737256,
+        "totalJSHeapSize": 236384156,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 90707.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.17058823531603,
+      "p95FrameMs": 71.6,
+      "maxFrameMs": 71.59999999962747,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 188373794,
+        "totalJSHeapSize": 236656718,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 91728.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.75555555553486,
+      "p95FrameMs": 63.9,
+      "maxFrameMs": 63.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 176010306,
+        "totalJSHeapSize": 240588878,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 92761.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.74705882348559,
+      "p95FrameMs": 69.3,
+      "maxFrameMs": 69.29999999888241,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 184533994,
+        "totalJSHeapSize": 240588878,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 93805.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.01666666670806,
+      "p95FrameMs": 66,
+      "maxFrameMs": 66,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 193576978,
+        "totalJSHeapSize": 240851022,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 94823.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.56111111109041,
+      "p95FrameMs": 70.7,
+      "maxFrameMs": 70.69999999925494,
+      "over33Ms": 18,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 202607398,
+        "totalJSHeapSize": 241375338,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 95827.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.04705882357324,
+      "p95FrameMs": 72.5,
+      "maxFrameMs": 72.5,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 183600693,
+        "totalJSHeapSize": 243996873,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 96878,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.78235294111073,
+      "p95FrameMs": 78.1,
+      "maxFrameMs": 78.09999999962747,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 192123973,
+        "totalJSHeapSize": 244259017,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 97895.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.54444444448583,
+      "p95FrameMs": 66.4,
+      "maxFrameMs": 66.30000000074506,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 201146493,
+        "totalJSHeapSize": 244783305,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 98906.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.205263157914345,
+      "p95FrameMs": 61,
+      "maxFrameMs": 60.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 183304077,
+        "totalJSHeapSize": 248453321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 99958,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.56499999994412,
+      "p95FrameMs": 58.5,
+      "maxFrameMs": 59.5,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 193329021,
+        "totalJSHeapSize": 248715465,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 100998.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.778947368460265,
+      "p95FrameMs": 62.9,
+      "maxFrameMs": 62.80000000074506,
+      "over33Ms": 19,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 202855449,
+        "totalJSHeapSize": 248977609,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 102020.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.78947368421053,
+      "p95FrameMs": 61.7,
+      "maxFrameMs": 61.69999999925494,
+      "over33Ms": 19,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 212387197,
+        "totalJSHeapSize": 249501897,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 103053.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.35789473678329,
+      "p95FrameMs": 64.9,
+      "maxFrameMs": 64.80000000074506,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 194566481,
+        "totalJSHeapSize": 253171913,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 104054.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 58.88235294117647,
+      "p95FrameMs": 69.5,
+      "maxFrameMs": 69.5,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 203084609,
+        "totalJSHeapSize": 253434057,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 105096.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.87777777781917,
+      "p95FrameMs": 66.7,
+      "maxFrameMs": 66.69999999925494,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 212119801,
+        "totalJSHeapSize": 253958345,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 106098.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.721052631539735,
+      "p95FrameMs": 60.9,
+      "maxFrameMs": 60.80000000074506,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 194260097,
+        "totalJSHeapSize": 257366217,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 107142.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.230000000074504,
+      "p95FrameMs": 57.3,
+      "maxFrameMs": 58,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 204291733,
+        "totalJSHeapSize": 257890505,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 108186.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.169999999925494,
+      "p95FrameMs": 60.3,
+      "maxFrameMs": 61.100000001490116,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 214322849,
+        "totalJSHeapSize": 258414793,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 109203.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.56842105267079,
+      "p95FrameMs": 64.5,
+      "maxFrameMs": 64.5,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 199056937,
+        "totalJSHeapSize": 262084809,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 110225.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.76111111106972,
+      "p95FrameMs": 66.6,
+      "maxFrameMs": 66.59999999962747,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 208085405,
+        "totalJSHeapSize": 262346953,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 111253.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.10000000004139,
+      "p95FrameMs": 67.1,
+      "maxFrameMs": 67.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 217114325,
+        "totalJSHeapSize": 262871241,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 112284.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.28333333331264,
+      "p95FrameMs": 76.4,
+      "maxFrameMs": 76.30000000074506,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 201218457,
+        "totalJSHeapSize": 266016969,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 113288.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.75555555553486,
+      "p95FrameMs": 65.3,
+      "maxFrameMs": 65.20000000111759,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 210246669,
+        "totalJSHeapSize": 266279113,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 114294.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.973684210526315,
+      "p95FrameMs": 58.5,
+      "maxFrameMs": 58.5,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 219778357,
+        "totalJSHeapSize": 266803401,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 115295.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.68421052631579,
+      "p95FrameMs": 62.8,
+      "maxFrameMs": 62.79999999888241,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 229306161,
+        "totalJSHeapSize": 267327689,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 116329.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.43684210530237,
+      "p95FrameMs": 67.5,
+      "maxFrameMs": 67.40000000037253,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 211220381,
+        "totalJSHeapSize": 270473417,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 117382.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.49444444446514,
+      "p95FrameMs": 67.1,
+      "maxFrameMs": 67.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 220248741,
+        "totalJSHeapSize": 270997705,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 118417.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.85294117647059,
+      "p95FrameMs": 70.9,
+      "maxFrameMs": 70.80000000074506,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 228776397,
+        "totalJSHeapSize": 271259849,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 119429,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.51176470583852,
+      "p95FrameMs": 72.4,
+      "maxFrameMs": 72.39999999850988,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 209933253,
+        "totalJSHeapSize": 275192009,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 120433.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.064705882331026,
+      "p95FrameMs": 63.8,
+      "maxFrameMs": 63.70000000111759,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 218569051,
+        "totalJSHeapSize": 275202427,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 121484.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.39444444452723,
+      "p95FrameMs": 64,
+      "maxFrameMs": 63.90000000037253,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 227597527,
+        "totalJSHeapSize": 275726715,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 122500.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.788235294029995,
+      "p95FrameMs": 68.3,
+      "maxFrameMs": 68.20000000111759,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 236125083,
+        "totalJSHeapSize": 276251003,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 123530.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.23888888893028,
+      "p95FrameMs": 75.9,
+      "maxFrameMs": 75.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 217735763,
+        "totalJSHeapSize": 279658875,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 124568.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.638888888888886,
+      "p95FrameMs": 62.8,
+      "maxFrameMs": 62.79999999888241,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 226763079,
+        "totalJSHeapSize": 279921019,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 125584.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.46666666668736,
+      "p95FrameMs": 68.6,
+      "maxFrameMs": 68.59999999962747,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 235791571,
+        "totalJSHeapSize": 280445307,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 126588.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.77222222224292,
+      "p95FrameMs": 65.5,
+      "maxFrameMs": 65.5,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 217415235,
+        "totalJSHeapSize": 284115323,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 127601.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.28947368421053,
+      "p95FrameMs": 60.5,
+      "maxFrameMs": 60.5,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 226943947,
+        "totalJSHeapSize": 284377467,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 128609.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.06842105257276,
+      "p95FrameMs": 65.3,
+      "maxFrameMs": 65.29999999888241,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 236476135,
+        "totalJSHeapSize": 284901755,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 129648.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.67368421056553,
+      "p95FrameMs": 62,
+      "maxFrameMs": 62,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 246003979,
+        "totalJSHeapSize": 285426043,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 130703.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.599999999937914,
+      "p95FrameMs": 73.1,
+      "maxFrameMs": 73.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 227596423,
+        "totalJSHeapSize": 288833915,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 131719.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.48333333339542,
+      "p95FrameMs": 64.8,
+      "maxFrameMs": 64.79999999888241,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 236624759,
+        "totalJSHeapSize": 289358203,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 132734.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.37222222218083,
+      "p95FrameMs": 64.1,
+      "maxFrameMs": 64.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 245652031,
+        "totalJSHeapSize": 289620347,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 133789.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.526315789473685,
+      "p95FrameMs": 62.7,
+      "maxFrameMs": 62.69999999925494,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 229426459,
+        "totalJSHeapSize": 293290363,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 134840.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.30526315793395,
+      "p95FrameMs": 64.5,
+      "maxFrameMs": 64.5,
+      "over33Ms": 19,
+      "over50Ms": 19,
+      "heap": {
+        "usedJSHeapSize": 238954015,
+        "totalJSHeapSize": 293552507,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 135884.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.973684210526315,
+      "p95FrameMs": 62.6,
+      "maxFrameMs": 62.59999999962747,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 248496083,
+        "totalJSHeapSize": 294076795,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 136911,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.01052631575026,
+      "p95FrameMs": 64.5,
+      "maxFrameMs": 64.40000000037253,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 258023855,
+        "totalJSHeapSize": 294601083,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 137952.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.794736842085655,
+      "p95FrameMs": 64.8,
+      "maxFrameMs": 64.70000000111759,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 240020827,
+        "totalJSHeapSize": 298008955,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 139005.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.46315789477605,
+      "p95FrameMs": 63,
+      "maxFrameMs": 62.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 249554327,
+        "totalJSHeapSize": 298271099,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 140007.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.705263157914345,
+      "p95FrameMs": 60.4,
+      "maxFrameMs": 60.30000000074506,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 259084767,
+        "totalJSHeapSize": 298795387,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 141056.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.47999999998137,
+      "p95FrameMs": 59.2,
+      "maxFrameMs": 59.29999999888241,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 241768187,
+        "totalJSHeapSize": 302203259,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 142074.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.865000000037256,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 57.5,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 251799263,
+        "totalJSHeapSize": 302727547,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 143113,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.93999999994412,
+      "p95FrameMs": 56.1,
+      "maxFrameMs": 56.5,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 261830203,
+        "totalJSHeapSize": 303251835,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 144168.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.76000000005588,
+      "p95FrameMs": 62,
+      "maxFrameMs": 62.19999999925494,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 246444315,
+        "totalJSHeapSize": 307446139,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 145176.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.06842105257276,
+      "p95FrameMs": 62.1,
+      "maxFrameMs": 62.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 255971727,
+        "totalJSHeapSize": 307446139,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 146201.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.23500000005588,
+      "p95FrameMs": 55,
+      "maxFrameMs": 55.30000000074506,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 266003911,
+        "totalJSHeapSize": 307708283,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 147213.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.273684210487104,
+      "p95FrameMs": 63,
+      "maxFrameMs": 63,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 247973847,
+        "totalJSHeapSize": 311640443,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 148241.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.384999999962744,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 56.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 258024251,
+        "totalJSHeapSize": 311640443,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 149281.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.03500000005588,
+      "p95FrameMs": 60.2,
+      "maxFrameMs": 74.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 268076027,
+        "totalJSHeapSize": 311902587,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 150312.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.52999999998137,
+      "p95FrameMs": 60.6,
+      "maxFrameMs": 66.60000000149012,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 255889797,
+        "totalJSHeapSize": 315583021,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 151367.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 50.228571428606905,
+      "p95FrameMs": 56,
+      "maxFrameMs": 56.80000000074506,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 266442077,
+        "totalJSHeapSize": 316107309,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 152369.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.10499999998137,
+      "p95FrameMs": 56.7,
+      "maxFrameMs": 58.29999999888241,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 276494169,
+        "totalJSHeapSize": 316631597,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 153413.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.70476190470869,
+      "p95FrameMs": 55.2,
+      "maxFrameMs": 56.30000000074506,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 259122813,
+        "totalJSHeapSize": 319515181,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 154414.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.070000000018624,
+      "p95FrameMs": 54.1,
+      "maxFrameMs": 58,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 269174741,
+        "totalJSHeapSize": 320039469,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 155425.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.53500000005588,
+      "p95FrameMs": 57.5,
+      "maxFrameMs": 58.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 279226689,
+        "totalJSHeapSize": 320563757,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 156448.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.144999999925496,
+      "p95FrameMs": 59.3,
+      "maxFrameMs": 61.69999999925494,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 261960641,
+        "totalJSHeapSize": 323971629,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 157495.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.88571428578524,
+      "p95FrameMs": 55.8,
+      "maxFrameMs": 57.90000000037253,
+      "over33Ms": 21,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 272506225,
+        "totalJSHeapSize": 324495917,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 158498.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.1199999999255,
+      "p95FrameMs": 56.7,
+      "maxFrameMs": 59,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 282556525,
+        "totalJSHeapSize": 325020205,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 159537.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.96500000003725,
+      "p95FrameMs": 58,
+      "maxFrameMs": 58.69999999925494,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 266012745,
+        "totalJSHeapSize": 328690221,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 160541.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.18499999996275,
+      "p95FrameMs": 56,
+      "maxFrameMs": 56,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 276058317,
+        "totalJSHeapSize": 328952365,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 161576.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.78500000005588,
+      "p95FrameMs": 62,
+      "maxFrameMs": 64.10000000149012,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 286104041,
+        "totalJSHeapSize": 329476653,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 162579,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.74736842101342,
+      "p95FrameMs": 62.9,
+      "maxFrameMs": 62.899999998509884,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 269741653,
+        "totalJSHeapSize": 332884525,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 163624.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.28500000005588,
+      "p95FrameMs": 60.3,
+      "maxFrameMs": 61.80000000074506,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 279800445,
+        "totalJSHeapSize": 333408813,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 164663.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.919999999925494,
+      "p95FrameMs": 56.2,
+      "maxFrameMs": 57.20000000111759,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 289844761,
+        "totalJSHeapSize": 333933101,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 165676.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.352631579006186,
+      "p95FrameMs": 69,
+      "maxFrameMs": 69,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 274098765,
+        "totalJSHeapSize": 337865261,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 166686.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.47999999998137,
+      "p95FrameMs": 56,
+      "maxFrameMs": 57.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 284142933,
+        "totalJSHeapSize": 337865261,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 167695.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.13157894736842,
+      "p95FrameMs": 64.9,
+      "maxFrameMs": 64.80000000074506,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 293694049,
+        "totalJSHeapSize": 338127405,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 168717.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.08499999996275,
+      "p95FrameMs": 55.8,
+      "maxFrameMs": 61.600000001490116,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 276145805,
+        "totalJSHeapSize": 342059565,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 169726.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.43500000005588,
+      "p95FrameMs": 56.5,
+      "maxFrameMs": 59.29999999888241,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 286189445,
+        "totalJSHeapSize": 342059565,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 170760.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.72000000001863,
+      "p95FrameMs": 59.3,
+      "maxFrameMs": 59.59999999962747,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 296233117,
+        "totalJSHeapSize": 342321709,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 171778.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.884999999962744,
+      "p95FrameMs": 55,
+      "maxFrameMs": 55.59999999962747,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 306276769,
+        "totalJSHeapSize": 342845997,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 172780,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.71578947366461,
+      "p95FrameMs": 61.2,
+      "maxFrameMs": 61.19999999925494,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 288409197,
+        "totalJSHeapSize": 346516013,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 173799.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.975,
+      "p95FrameMs": 58,
+      "maxFrameMs": 59.5,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 298453497,
+        "totalJSHeapSize": 346778157,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 174816.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.85499999998137,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 58,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 308497449,
+        "totalJSHeapSize": 347302445,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 175820.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.2,
+      "p95FrameMs": 55.7,
+      "maxFrameMs": 59.600000001490116,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 291132741,
+        "totalJSHeapSize": 350972461,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 176855,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.4421052631775,
+      "p95FrameMs": 88.3,
+      "maxFrameMs": 88.20000000111759,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 150943136,
+        "totalJSHeapSize": 199159716,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 177883.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.425,
+      "p95FrameMs": 57,
+      "maxFrameMs": 57,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 154289240,
+        "totalJSHeapSize": 199946148,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 178918.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.75499999998137,
+      "p95FrameMs": 57.5,
+      "maxFrameMs": 62.5,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 154050096,
+        "totalJSHeapSize": 203354020,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 179918.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.64736842109185,
+      "p95FrameMs": 59.8,
+      "maxFrameMs": 59.79999999888241,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 156888296,
+        "totalJSHeapSize": 203354020,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 180953.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.740000000037256,
+      "p95FrameMs": 58.1,
+      "maxFrameMs": 60,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 156486022,
+        "totalJSHeapSize": 207558742,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 181982.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.43499999996275,
+      "p95FrameMs": 56.7,
+      "maxFrameMs": 60.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 166523906,
+        "totalJSHeapSize": 214374486,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 182988.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.9421052631775,
+      "p95FrameMs": 68,
+      "maxFrameMs": 67.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 152167428,
+        "totalJSHeapSize": 182120356,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 184003.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.44736842105263,
+      "p95FrameMs": 66,
+      "maxFrameMs": 65.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 154947192,
+        "totalJSHeapSize": 182120356,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 185014.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.21052631578947,
+      "p95FrameMs": 60.2,
+      "maxFrameMs": 60.100000001490116,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 157681624,
+        "totalJSHeapSize": 182120356,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 186052.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.89500000001863,
+      "p95FrameMs": 59.2,
+      "maxFrameMs": 62.20000000111759,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 160933448,
+        "totalJSHeapSize": 182120356,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 187097.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.22999999998137,
+      "p95FrameMs": 57.5,
+      "maxFrameMs": 65.69999999925494,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 164155468,
+        "totalJSHeapSize": 182382500,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 188138.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.06499999994412,
+      "p95FrameMs": 56.7,
+      "maxFrameMs": 57.5,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 159790780,
+        "totalJSHeapSize": 190508964,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 189187.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.425,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 58,
+      "over33Ms": 20,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 169818492,
+        "totalJSHeapSize": 194703268,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 190191.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.87368421060474,
+      "p95FrameMs": 60.9,
+      "maxFrameMs": 60.899999998509884,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 165725956,
+        "totalJSHeapSize": 198897572,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 191230.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.72777777775708,
+      "p95FrameMs": 68.1,
+      "maxFrameMs": 68.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 174751352,
+        "totalJSHeapSize": 198897572,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 192251,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.67777777773639,
+      "p95FrameMs": 69.7,
+      "maxFrameMs": 69.60000000149012,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 170084040,
+        "totalJSHeapSize": 199421860,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 193255.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.78888888895098,
+      "p95FrameMs": 65.5,
+      "maxFrameMs": 65.5,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 165409372,
+        "totalJSHeapSize": 201781156,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 194293.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.67777777773639,
+      "p95FrameMs": 70.9,
+      "maxFrameMs": 70.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 153222791,
+        "totalJSHeapSize": 199055903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 195310.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.52222222224292,
+      "p95FrameMs": 64.5,
+      "maxFrameMs": 64.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 162246487,
+        "totalJSHeapSize": 199055903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 196330.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.68421052631579,
+      "p95FrameMs": 63.1,
+      "maxFrameMs": 63.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 156704723,
+        "totalJSHeapSize": 199055903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 197371.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.794736842085655,
+      "p95FrameMs": 60.1,
+      "maxFrameMs": 60.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 152664215,
+        "totalJSHeapSize": 199055903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 198384.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.31578947368421,
+      "p95FrameMs": 59,
+      "maxFrameMs": 59,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 162190235,
+        "totalJSHeapSize": 199055903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 199424.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.70000000003921,
+      "p95FrameMs": 65,
+      "maxFrameMs": 64.90000000037253,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 171712315,
+        "totalJSHeapSize": 202201631,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 200442.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.59999999992157,
+      "p95FrameMs": 62.5,
+      "maxFrameMs": 62.5,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 181238743,
+        "totalJSHeapSize": 211114527,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 201453.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.183333333374726,
+      "p95FrameMs": 69.7,
+      "maxFrameMs": 69.69999999925494,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 161438379,
+        "totalJSHeapSize": 215833119,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 202493,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.68947368419092,
+      "p95FrameMs": 62.1,
+      "maxFrameMs": 62.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 170960567,
+        "totalJSHeapSize": 215833119,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 203515.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.794736842085655,
+      "p95FrameMs": 62,
+      "maxFrameMs": 62,
+      "over33Ms": 19,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 180485203,
+        "totalJSHeapSize": 224221727,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 204545.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.22777777786056,
+      "p95FrameMs": 75.8,
+      "maxFrameMs": 75.70000000111759,
+      "over33Ms": 18,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 162925831,
+        "totalJSHeapSize": 232086047,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 205577.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.36666666664597,
+      "p95FrameMs": 63.5,
+      "maxFrameMs": 63.40000000037253,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 171948627,
+        "totalJSHeapSize": 232086047,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 206599.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.75,
+      "p95FrameMs": 63.9,
+      "maxFrameMs": 63.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 180972339,
+        "totalJSHeapSize": 232086047,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 207606.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.96111111104902,
+      "p95FrameMs": 66,
+      "maxFrameMs": 65.90000000037253,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 189994799,
+        "totalJSHeapSize": 232086047,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 208652.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.031578947446846,
+      "p95FrameMs": 67.1,
+      "maxFrameMs": 67.09999999962747,
+      "over33Ms": 19,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 172059863,
+        "totalJSHeapSize": 235493919,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 209688.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.59444444440305,
+      "p95FrameMs": 74.1,
+      "maxFrameMs": 74.09999999962747,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 181081331,
+        "totalJSHeapSize": 235493919,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 210695.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.217647058779704,
+      "p95FrameMs": 66.5,
+      "maxFrameMs": 66.5,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 189720461,
+        "totalJSHeapSize": 235766481,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 211712,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.78823529413956,
+      "p95FrameMs": 76.3,
+      "maxFrameMs": 76.20000000111759,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 198239853,
+        "totalJSHeapSize": 236815057,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 212765.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.5111111111732,
+      "p95FrameMs": 64.3,
+      "maxFrameMs": 64.20000000111759,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 179891873,
+        "totalJSHeapSize": 239960785,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 213789.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.276470588191465,
+      "p95FrameMs": 79.1,
+      "maxFrameMs": 79.09999999962747,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 188415353,
+        "totalJSHeapSize": 240222929,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 214821.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.705882352941174,
+      "p95FrameMs": 77.9,
+      "maxFrameMs": 77.80000000074506,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 196933249,
+        "totalJSHeapSize": 240747217,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 215852,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.59411764703691,
+      "p95FrameMs": 80.5,
+      "maxFrameMs": 80.40000000037253,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 178052825,
+        "totalJSHeapSize": 243892945,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 216882.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.605882352985006,
+      "p95FrameMs": 80.1,
+      "maxFrameMs": 80.09999999962747,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 186570909,
+        "totalJSHeapSize": 244417233,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 217941.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.83888888886819,
+      "p95FrameMs": 73.7,
+      "maxFrameMs": 73.69999999925494,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 195593337,
+        "totalJSHeapSize": 244941521,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 218968.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 64.17500000004657,
+      "p95FrameMs": 91,
+      "maxFrameMs": 90.90000000037253,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 151146771,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 220015,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.576470588169556,
+      "p95FrameMs": 73.3,
+      "maxFrameMs": 73.29999999888241,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 159669983,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 221044.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 60.53529411762514,
+      "p95FrameMs": 81.5,
+      "maxFrameMs": 81.5,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 168188175,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 222105.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 62.411764705882355,
+      "p95FrameMs": 73.2,
+      "maxFrameMs": 73.10000000149012,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 176711719,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 223113.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 59.317647058845445,
+      "p95FrameMs": 72.8,
+      "maxFrameMs": 72.79999999888241,
+      "over33Ms": 17,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 155047783,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 224149.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.53333333331264,
+      "p95FrameMs": 66.6,
+      "maxFrameMs": 66.59999999962747,
+      "over33Ms": 18,
+      "over50Ms": 18,
+      "heap": {
+        "usedJSHeapSize": 164070371,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 225157.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56,
+      "p95FrameMs": 65.6,
+      "maxFrameMs": 65.59999999962747,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 173092615,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 226171.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 16,
+      "averageFrameMs": 63.41875000006985,
+      "p95FrameMs": 81.3,
+      "maxFrameMs": 81.29999999888241,
+      "over33Ms": 16,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 181111367,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 227225.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 17,
+      "averageFrameMs": 61.988235294051904,
+      "p95FrameMs": 83.3,
+      "maxFrameMs": 83.29999999888241,
+      "over33Ms": 17,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 162487575,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 228231.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 15,
+      "averageFrameMs": 67.06000000002483,
+      "p95FrameMs": 75.6,
+      "maxFrameMs": 75.59999999962747,
+      "over33Ms": 15,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 170002963,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 229287.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 58.64444444442375,
+      "p95FrameMs": 69.9,
+      "maxFrameMs": 69.80000000074506,
+      "over33Ms": 18,
+      "over50Ms": 17,
+      "heap": {
+        "usedJSHeapSize": 179025567,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 230292.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.838888888971674,
+      "p95FrameMs": 62,
+      "maxFrameMs": 61.90000000037253,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 188047803,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 231339.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.36499999994412,
+      "p95FrameMs": 57.5,
+      "maxFrameMs": 61.5,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 170630867,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 232387.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.89047619052941,
+      "p95FrameMs": 57,
+      "maxFrameMs": 57.80000000074506,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 181158615,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 233414.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.899999999929044,
+      "p95FrameMs": 54.5,
+      "maxFrameMs": 55.29999999888241,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 191682087,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 234438.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.78095238097012,
+      "p95FrameMs": 54.7,
+      "maxFrameMs": 59.59999999962747,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 174854939,
+        "totalJSHeapSize": 234704763,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 235440.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 47.73333333335107,
+      "p95FrameMs": 53,
+      "maxFrameMs": 55.29999999888241,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 185379675,
+        "totalJSHeapSize": 235229051,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 236470.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 46.7863636363975,
+      "p95FrameMs": 53,
+      "maxFrameMs": 53.399999998509884,
+      "over33Ms": 22,
+      "over50Ms": 4,
+      "heap": {
+        "usedJSHeapSize": 196406107,
+        "totalJSHeapSize": 235753339,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 237483.09999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.23333333326237,
+      "p95FrameMs": 54.1,
+      "maxFrameMs": 54.09999999962747,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 179597719,
+        "totalJSHeapSize": 239161211,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 238519.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.357142857142854,
+      "p95FrameMs": 55,
+      "maxFrameMs": 57,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 190121131,
+        "totalJSHeapSize": 239423355,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 239547.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.390000000037254,
+      "p95FrameMs": 60.8,
+      "maxFrameMs": 66.10000000149012,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 150504935,
+        "totalJSHeapSize": 234966903,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 240574.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 46.67727272728966,
+      "p95FrameMs": 50.8,
+      "maxFrameMs": 51.5,
+      "over33Ms": 22,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 161655349,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 241591.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.423809523827266,
+      "p95FrameMs": 52.5,
+      "maxFrameMs": 52.70000000111759,
+      "over33Ms": 21,
+      "over50Ms": 4,
+      "heap": {
+        "usedJSHeapSize": 172182805,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 242607.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.40952380950607,
+      "p95FrameMs": 54.5,
+      "maxFrameMs": 54.69999999925494,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 182706713,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 243660.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 50.114285714303456,
+      "p95FrameMs": 54.8,
+      "maxFrameMs": 57.19999999925494,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 163118325,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 244660.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.65263157886894,
+      "p95FrameMs": 62.4,
+      "maxFrameMs": 62.30000000074506,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 172640021,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 245693.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.36315789475645,
+      "p95FrameMs": 67.5,
+      "maxFrameMs": 67.5,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 182165085,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 246742.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.205263157914345,
+      "p95FrameMs": 70.5,
+      "maxFrameMs": 70.5,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 164757365,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 247774.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 57.33888888886819,
+      "p95FrameMs": 68.8,
+      "maxFrameMs": 68.79999999888241,
+      "over33Ms": 18,
+      "over50Ms": 16,
+      "heap": {
+        "usedJSHeapSize": 173779733,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 248784.59999999963,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.16315789471724,
+      "p95FrameMs": 62.4,
+      "maxFrameMs": 62.30000000074506,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 183315597,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 249809.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.24500000001863,
+      "p95FrameMs": 60,
+      "maxFrameMs": 60.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 165880901,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 250847,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.404761904761905,
+      "p95FrameMs": 55.6,
+      "maxFrameMs": 57.5,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 176403341,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 251859,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.19047619047619,
+      "p95FrameMs": 53.5,
+      "maxFrameMs": 54.29999999888241,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 186930065,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 252890.90000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.138095238112975,
+      "p95FrameMs": 54.5,
+      "maxFrameMs": 54.70000000111759,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 170131165,
+        "totalJSHeapSize": 234977321,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 253900.70000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.085714285749766,
+      "p95FrameMs": 53.5,
+      "maxFrameMs": 54.90000000037253,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 180661781,
+        "totalJSHeapSize": 235239465,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 254925,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.77619047613726,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 62.09999999962747,
+      "over33Ms": 21,
+      "over50Ms": 3,
+      "heap": {
+        "usedJSHeapSize": 191184141,
+        "totalJSHeapSize": 235501609,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 255952.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.94285714289262,
+      "p95FrameMs": 56.3,
+      "maxFrameMs": 60.899999998509884,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 174321189,
+        "totalJSHeapSize": 239695913,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 256984.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.114285714303456,
+      "p95FrameMs": 55.9,
+      "maxFrameMs": 55.90000000037253,
+      "over33Ms": 21,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 184843829,
+        "totalJSHeapSize": 239695913,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 258012.20000000112,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.95238095238095,
+      "p95FrameMs": 57,
+      "maxFrameMs": 58.90000000037253,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 195370701,
+        "totalJSHeapSize": 239958057,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 259033.40000000037,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.62857142853595,
+      "p95FrameMs": 52.9,
+      "maxFrameMs": 53.09999999962747,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 183310001,
+        "totalJSHeapSize": 243365929,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 260077.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.71904761902988,
+      "p95FrameMs": 54.9,
+      "maxFrameMs": 57.399999998509884,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 193836425,
+        "totalJSHeapSize": 243628073,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 261102.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.25,
+      "p95FrameMs": 56.5,
+      "maxFrameMs": 56.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 203860217,
+        "totalJSHeapSize": 244152361,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 262147.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 54.97894736840144,
+      "p95FrameMs": 82.2,
+      "maxFrameMs": 82.19999999925494,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 148691847,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 263171.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.2,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 60.30000000074506,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 158715583,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 264198.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.91428571433893,
+      "p95FrameMs": 55,
+      "maxFrameMs": 56.59999999962747,
+      "over33Ms": 21,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 169242639,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 265210,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.176190476155,
+      "p95FrameMs": 51.7,
+      "maxFrameMs": 53.29999999888241,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 179765367,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 266231.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.642857142857146,
+      "p95FrameMs": 54.2,
+      "maxFrameMs": 54.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 160166779,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 267275.4000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 47.450000000016935,
+      "p95FrameMs": 53.5,
+      "maxFrameMs": 54.29999999888241,
+      "over33Ms": 22,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 171192043,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 268316.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.580952380916905,
+      "p95FrameMs": 54.5,
+      "maxFrameMs": 58.30000000074506,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 181714903,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 269317.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.03500000005588,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 58.80000000074506,
+      "over33Ms": 20,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 164597691,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 270357.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.02999999998137,
+      "p95FrameMs": 58.5,
+      "maxFrameMs": 59.5,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 174621355,
+        "totalJSHeapSize": 237064055,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 271395.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.87000000001863,
+      "p95FrameMs": 55.6,
+      "maxFrameMs": 58,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 184752537,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 272445.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 50,
+      "p95FrameMs": 56.6,
+      "maxFrameMs": 56.79999999888241,
+      "over33Ms": 21,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 167898989,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 273493.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.923809523827266,
+      "p95FrameMs": 56.2,
+      "maxFrameMs": 56.69999999925494,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 178421857,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 274537.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.70476190470869,
+      "p95FrameMs": 53.5,
+      "maxFrameMs": 54.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 188948365,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 275541.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.21500000003725,
+      "p95FrameMs": 52.5,
+      "maxFrameMs": 57.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 171604829,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 276568.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.34500000001863,
+      "p95FrameMs": 58.8,
+      "maxFrameMs": 59.59999999962747,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 181628649,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 277578.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.48999999994412,
+      "p95FrameMs": 56.6,
+      "maxFrameMs": 58.19999999925494,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 191652237,
+        "totalJSHeapSize": 237074473,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 278617,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.925,
+      "p95FrameMs": 56.6,
+      "maxFrameMs": 57.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 174254017,
+        "totalJSHeapSize": 239433769,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 279634.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.563157894795665,
+      "p95FrameMs": 59.7,
+      "maxFrameMs": 59.69999999925494,
+      "over33Ms": 19,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 183774713,
+        "totalJSHeapSize": 239695913,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 280650,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 53.436842105204335,
+      "p95FrameMs": 61.6,
+      "maxFrameMs": 61.59999999962747,
+      "over33Ms": 19,
+      "over50Ms": 14,
+      "heap": {
+        "usedJSHeapSize": 193299745,
+        "totalJSHeapSize": 240220201,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 281665.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.77999999998137,
+      "p95FrameMs": 56.1,
+      "maxFrameMs": 56.80000000074506,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 175926805,
+        "totalJSHeapSize": 243890217,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 282713.4000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 55.14736842109185,
+      "p95FrameMs": 69.2,
+      "maxFrameMs": 69.19999999925494,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 185447381,
+        "totalJSHeapSize": 243890217,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 283750.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.859999999962746,
+      "p95FrameMs": 56.5,
+      "maxFrameMs": 58.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 195471581,
+        "totalJSHeapSize": 244152361,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 284788.5,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.89500000001863,
+      "p95FrameMs": 59.6,
+      "maxFrameMs": 60.70000000111759,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 205495261,
+        "totalJSHeapSize": 244676649,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 285794.4000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.295000000018625,
+      "p95FrameMs": 55.4,
+      "maxFrameMs": 57,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 188190297,
+        "totalJSHeapSize": 248608809,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 286808.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.69000000003725,
+      "p95FrameMs": 55.7,
+      "maxFrameMs": 63.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 198212265,
+        "totalJSHeapSize": 248608809,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 287830.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.10499999998137,
+      "p95FrameMs": 57.6,
+      "maxFrameMs": 58.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 208235889,
+        "totalJSHeapSize": 248870953,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 288853,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.134999999962744,
+      "p95FrameMs": 58.5,
+      "maxFrameMs": 62.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 190902661,
+        "totalJSHeapSize": 252803113,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 289865.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.63500000005588,
+      "p95FrameMs": 57.2,
+      "maxFrameMs": 59.899999998509884,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 200926189,
+        "totalJSHeapSize": 252803113,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 290881.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.39047619044071,
+      "p95FrameMs": 54.6,
+      "maxFrameMs": 57.19999999925494,
+      "over33Ms": 21,
+      "over50Ms": 4,
+      "heap": {
+        "usedJSHeapSize": 211452857,
+        "totalJSHeapSize": 253327401,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 291925.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 47.42727272728966,
+      "p95FrameMs": 51,
+      "maxFrameMs": 55.30000000074506,
+      "over33Ms": 22,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 195049941,
+        "totalJSHeapSize": 256997417,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 292963.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.447619047636785,
+      "p95FrameMs": 62,
+      "maxFrameMs": 68.5,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 150199783,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 293970.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 47.95238095238095,
+      "p95FrameMs": 53.6,
+      "maxFrameMs": 54,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 160726875,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 294980,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.46499999994412,
+      "p95FrameMs": 55.5,
+      "maxFrameMs": 55.69999999925494,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 170748895,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 295989.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.46500000003725,
+      "p95FrameMs": 56.6,
+      "maxFrameMs": 58.70000000111759,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 180772527,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 297001.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.58999999994412,
+      "p95FrameMs": 59.4,
+      "maxFrameMs": 61.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 160662163,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 298048.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.89047619052941,
+      "p95FrameMs": 56.9,
+      "maxFrameMs": 57.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 171185219,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 299088.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.97000000001863,
+      "p95FrameMs": 58.5,
+      "maxFrameMs": 60.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 181208735,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 300135.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.857142857142854,
+      "p95FrameMs": 55.2,
+      "maxFrameMs": 55.30000000074506,
+      "over33Ms": 21,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 164580619,
+        "totalJSHeapSize": 239161207,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 301175.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.523809523809526,
+      "p95FrameMs": 54.8,
+      "maxFrameMs": 55.5,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 175230097,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 302196.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.075,
+      "p95FrameMs": 55.9,
+      "maxFrameMs": 57.59999999962747,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 163636749,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 303229.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.65999999996275,
+      "p95FrameMs": 65,
+      "maxFrameMs": 65.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 173671697,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 304250.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.045000000018625,
+      "p95FrameMs": 58.2,
+      "maxFrameMs": 58.80000000074506,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 183694989,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 305276.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.3,
+      "p95FrameMs": 58.9,
+      "maxFrameMs": 65.89999999850988,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 166633257,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 306311.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.71499999994412,
+      "p95FrameMs": 55.8,
+      "maxFrameMs": 55.79999999888241,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 176656609,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 307362.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 52.59000000003725,
+      "p95FrameMs": 59,
+      "maxFrameMs": 60.399999998509884,
+      "over33Ms": 20,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 186680197,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 308386.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.18499999996275,
+      "p95FrameMs": 56,
+      "maxFrameMs": 57.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 196704493,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 309404.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.9,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 59.09999999962747,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 179349865,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 310425.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.05,
+      "p95FrameMs": 56.3,
+      "maxFrameMs": 62.19999999925494,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 189373249,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 311461.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.775,
+      "p95FrameMs": 55.1,
+      "maxFrameMs": 63.90000000037253,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 199396605,
+        "totalJSHeapSize": 239171625,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 312483.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 56.77777777777778,
+      "p95FrameMs": 90.6,
+      "maxFrameMs": 90.59999999962747,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 181026405,
+        "totalJSHeapSize": 242579497,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 313518.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 47.077272727323525,
+      "p95FrameMs": 51.8,
+      "maxFrameMs": 53.5,
+      "over33Ms": 22,
+      "over50Ms": 3,
+      "heap": {
+        "usedJSHeapSize": 192052609,
+        "totalJSHeapSize": 243103785,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 314539.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.61904761904762,
+      "p95FrameMs": 52.9,
+      "maxFrameMs": 54.19999999925494,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 202579177,
+        "totalJSHeapSize": 243365929,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 315582.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.638095238112975,
+      "p95FrameMs": 55,
+      "maxFrameMs": 58.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 185753413,
+        "totalJSHeapSize": 247035945,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 316584.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 19,
+      "averageFrameMs": 52.73157894729,
+      "p95FrameMs": 62.5,
+      "maxFrameMs": 62.40000000037253,
+      "over33Ms": 19,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 195278265,
+        "totalJSHeapSize": 247298089,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 317593,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 50.445000000018624,
+      "p95FrameMs": 57.4,
+      "maxFrameMs": 58.5,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 205888524,
+        "totalJSHeapSize": 248346704,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 318603,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.095238095238095,
+      "p95FrameMs": 54.3,
+      "maxFrameMs": 55.29999999888241,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 189115384,
+        "totalJSHeapSize": 251754576,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 319610.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 47.995238095255836,
+      "p95FrameMs": 52.6,
+      "maxFrameMs": 55.59999999962747,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 199642896,
+        "totalJSHeapSize": 252278864,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 320619.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.033333333297854,
+      "p95FrameMs": 52.4,
+      "maxFrameMs": 53.5,
+      "over33Ms": 21,
+      "over50Ms": 5,
+      "heap": {
+        "usedJSHeapSize": 210164832,
+        "totalJSHeapSize": 252803152,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 321644.80000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.819047619100836,
+      "p95FrameMs": 56.2,
+      "maxFrameMs": 56.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 193478808,
+        "totalJSHeapSize": 257521744,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 322684.7000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 22,
+      "averageFrameMs": 47.26818181819875,
+      "p95FrameMs": 51.3,
+      "maxFrameMs": 54.59999999962747,
+      "over33Ms": 22,
+      "over50Ms": 2,
+      "heap": {
+        "usedJSHeapSize": 204504236,
+        "totalJSHeapSize": 257521744,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 323701.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.42380952373857,
+      "p95FrameMs": 54.7,
+      "maxFrameMs": 59.19999999925494,
+      "over33Ms": 21,
+      "over50Ms": 6,
+      "heap": {
+        "usedJSHeapSize": 215027148,
+        "totalJSHeapSize": 257521744,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 324708.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 18,
+      "averageFrameMs": 55.961111111152505,
+      "p95FrameMs": 75.5,
+      "maxFrameMs": 75.5,
+      "over33Ms": 18,
+      "over50Ms": 15,
+      "heap": {
+        "usedJSHeapSize": 153103356,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 325754.4000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 49.785714285714285,
+      "p95FrameMs": 56.1,
+      "maxFrameMs": 56.20000000111759,
+      "over33Ms": 21,
+      "over50Ms": 9,
+      "heap": {
+        "usedJSHeapSize": 163630276,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 326768.9000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.30952380952381,
+      "p95FrameMs": 53.9,
+      "maxFrameMs": 58.40000000037253,
+      "over33Ms": 21,
+      "over50Ms": 7,
+      "heap": {
+        "usedJSHeapSize": 174152536,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 327794.0999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 21,
+      "averageFrameMs": 48.81904761901214,
+      "p95FrameMs": 54,
+      "maxFrameMs": 54.5,
+      "over33Ms": 21,
+      "over50Ms": 8,
+      "heap": {
+        "usedJSHeapSize": 154551380,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 328814.5999999996,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.025,
+      "p95FrameMs": 59,
+      "maxFrameMs": 59.19999999925494,
+      "over33Ms": 20,
+      "over50Ms": 10,
+      "heap": {
+        "usedJSHeapSize": 164575276,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 329843.4000000004,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.44000000003725,
+      "p95FrameMs": 58.3,
+      "maxFrameMs": 61.59999999962747,
+      "over33Ms": 20,
+      "over50Ms": 11,
+      "heap": {
+        "usedJSHeapSize": 174598908,
+        "totalJSHeapSize": 249384848,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 330867.30000000075,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.195000000018624,
+      "p95FrameMs": 58.8,
+      "maxFrameMs": 59,
+      "over33Ms": 20,
+      "over50Ms": 12,
+      "heap": {
+        "usedJSHeapSize": 157663670,
+        "totalJSHeapSize": 249395266,
+        "jsHeapSizeLimit": 4364173312
+      }
+    },
+    {
+      "atMs": 331894.2000000011,
+      "context": {
+        "screen": "home"
+      },
+      "frames": 20,
+      "averageFrameMs": 51.34500000001863,
+      "p95FrameMs": 56.6,
+      "maxFrameMs": 57.40000000037253,
+      "over33Ms": 20,
+      "over50Ms": 13,
+      "heap": {
+        "usedJSHeapSize": 167695343,
+        "totalJSHeapSize": 249395275,
+        "jsHeapSizeLimit": 4364173312
+      }
+    }
+  ],
+  "timelineRetention": {
+    "maximumEntries": 3600,
+    "droppedEntries": 0
+  },
+  "currentInterval": {
+    "atMs": 331997.7000000011,
+    "context": {
+      "screen": "home"
+    },
+    "frames": 1,
+    "averageFrameMs": 50.79999999888241,
+    "p95FrameMs": 50.8,
+    "maxFrameMs": 50.79999999888241,
+    "over33Ms": 1,
+    "over50Ms": 1
+  },
+  "limitations": [
+    "Read-only instrumentation has a small cost. PNG encoding/export may affect adjacent frame samples.",
+    "Download requests do not prove that a browser saved a file.",
+    "Loading-to-ready ends at the caller markReady; it is not inferred from a screenshot."
+  ]
+}

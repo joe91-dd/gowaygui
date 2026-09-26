@@ -1,0 +1,105 @@
+{
+  "version": "ink-snail-candidate-02",
+  "enemy_kind": "snail",
+  "display_name": "吐墨螺",
+  "vertices": 7004,
+  "triangles": 13956,
+  "mesh_count": 1,
+  "material_count": 1,
+  "material_name": "InkSnail_Toy_Atlas",
+  "bones": [
+    "root",
+    "body",
+    "sole_front",
+    "sole_rear",
+    "head",
+    "shell",
+    "eye_L",
+    "eye_R",
+    "spout"
+  ],
+  "bone_count": 9,
+  "texture_size": [
+    512,
+    512
+  ],
+  "opaque": true,
+  "roughness": "RGB gray .31 / .38 / .43; alpha 1; Non-Color; F0 .04, nonmetal",
+  "clips": {
+    "idle": {
+      "name": "InkSnail_Rig|idle",
+      "first": 1,
+      "last": 85,
+      "seconds": 2.8
+    },
+    "walk": {
+      "name": "InkSnail_Rig|walk",
+      "first": 1,
+      "last": 37,
+      "seconds": 1.2
+    },
+    "attack": {
+      "name": "InkSnail_Rig|attack",
+      "first": 1,
+      "last": 37,
+      "seconds": 1.2
+    },
+    "hit": {
+      "name": "InkSnail_Rig|hit",
+      "first": 1,
+      "last": 19,
+      "seconds": 0.6
+    },
+    "exit": {
+      "name": "InkSnail_Rig|exit",
+      "first": 1,
+      "last": 34,
+      "seconds": 1.1
+    }
+  },
+  "loops": [
+    "idle",
+    "walk"
+  ],
+  "bounds_blender_xyz": {
+    "min": [
+      -0.2759999930858612,
+      -0.5580000281333923,
+      0.0
+    ],
+    "max": [
+      0.27599459886550903,
+      0.5979999899864197,
+      0.9200000166893005
+    ]
+  },
+  "dimensions_blender_xyz": [
+    0.5519945919513702,
+    1.156000018119812,
+    0.9200000166893005
+  ],
+  "recommended_scale": 0.93,
+  "dimensions_at_recommended_scale": [
+    0.5133549705147743,
+    1.0750800168514252,
+    0.8556000155210496
+  ],
+  "forward": "Blender -Y; FBX -Z forward/Y up; expected Cocos +Z, actual import pending",
+  "origin": "Blender Z=0 / expected Cocos Y=0 foot plane; all actions in place",
+  "shell_dimensions_xyz": [
+    0.51,
+    0.69,
+    0.76
+  ],
+  "shell_spiral": "Two genuine surface-following raised spirals, 1.78 turns each; broad sealed shell, not a decal or thin disc",
+  "projectile_anchor_blender": [
+    0,
+    -0.56,
+    0.29
+  ],
+  "projectile_note": "Visual handoff only: actual ranged attack and projectile events stay in core/view; no new mechanic.",
+  "fbx_sha256": "3ff3b91dab1e86e2c43ab2fe11d55810fb879e6b9f312c04dfc33e2822c59179",
+  "shape_revision": "c02 only: parallel-transport shell curves, round spiral tips, welded 64-section shell lips; c01 body/head/eyes/spout/palette/actions unchanged.",
+  "source": "Original scripted soft body, sealed shell, geometric spirals, recessed spout, UV eye art, skin and actions. Internal A direction and approved enemy materials only. No external assets.",
+  "status": "Isolated source review candidate, not runtime-promoted or final art acceptance"
+}

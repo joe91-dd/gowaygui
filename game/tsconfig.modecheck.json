@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["assets/scripts/**/*.ts"],"exclude":["temp","library","build",".server-build*",".test-build"]}

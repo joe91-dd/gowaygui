@@ -1,0 +1,745 @@
+{
+  "actions": [
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|attack",
+      "range": [
+        1.0,
+        27.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|attack",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"body\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.07999999821186066,
+          "max": 0.15000000596046448
+        },
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9997468590736389,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": 0.0,
+          "max": 0.022498108446598053
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.0002823770046234131
+          ],
+          "min": -0.0017460212111473083,
+          "max": 0.010348692536354065
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0005266815423965454
+          ],
+          "min": -0.003256559371948242,
+          "max": 0.02032840996980667
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            4.770583473145962e-06
+          ],
+          "min": -0.0007220763945952058,
+          "max": 4.770583473145962e-06
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9993875622749329,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            8.346982127704905e-08
+          ],
+          "min": -0.03499278053641319,
+          "max": 0.022498227655887604
+        }
+      ]
+    },
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|fusion",
+      "range": [
+        1.0,
+        60.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|fusion",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.0002823770046234131
+          ],
+          "min": -0.02676347643136978,
+          "max": 0.0002823770046234131
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0005266815423965454
+          ],
+          "min": -0.0499175488948822,
+          "max": 0.0005266815423965454
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            4.770583473145962e-06
+          ],
+          "min": -0.0004540141671895981,
+          "max": 4.770583473145962e-06
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9975510239601135,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            8.346982127704905e-08
+          ],
+          "min": -0.04997909441590309,
+          "max": 0.06994295865297318
+        },
+        {
+          "path": "pose.bones[\"tail\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9968017339706421,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"tail\"].rotation_quaternion",
+          "index": 2,
+          "first": [
+            1.0,
+            8.149074748331486e-10
+          ],
+          "min": 8.149074748331486e-10,
+          "max": 0.07991471886634827
+        },
+        {
+          "path": "pose.bones[\"root\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.05000000074505806,
+          "max": 0.14000000059604645
+        }
+      ]
+    },
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|hit",
+      "range": [
+        1.0,
+        18.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|hit",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"body\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.06499999761581421,
+          "max": 0.0
+        },
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9996219277381897,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.027496537193655968,
+          "max": 0.0
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.0002823770046234131
+          ],
+          "min": -0.016283981502056122,
+          "max": 0.0002823770046234131
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0005266815423965454
+          ],
+          "min": -0.028561651706695557,
+          "max": 0.0005266815423965454
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            4.770583473145962e-06
+          ],
+          "min": -0.0018588218372315168,
+          "max": 4.770583473145962e-06
+        },
+        {
+          "path": "pose.bones[\"neck\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.06000000238418579,
+          "max": 0.0
+        },
+        {
+          "path": "pose.bones[\"head\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9971888065338135,
+          "max": 1.0
+        }
+      ]
+    },
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|idle",
+      "range": [
+        1.0,
+        72.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|idle",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.0002823770046234131
+          ],
+          "min": 0.0002823770046234131,
+          "max": 0.005952455103397369
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0005266815423965454
+          ],
+          "min": 0.0005266815423965454,
+          "max": 0.011102154850959778
+        },
+        {
+          "path": "pose.bones[\"tail\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9996874928474426,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"tail\"].rotation_quaternion",
+          "index": 2,
+          "first": [
+            1.0,
+            8.149074748331486e-10
+          ],
+          "min": -0.019998665899038315,
+          "max": 0.024997401982545853
+        },
+        {
+          "path": "pose.bones[\"root\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": 0.0,
+          "max": 0.012000000104308128
+        },
+        {
+          "path": "pose.bones[\"head\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            4.6566133171666024e-09
+          ],
+          "min": -0.012499680742621422,
+          "max": 4.6566133171666024e-09
+        },
+        {
+          "path": "pose.bones[\"front_R\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            -0.0003193467855453491
+          ],
+          "min": -0.0067327991127967834,
+          "max": -0.0003193467855453491
+        },
+        {
+          "path": "pose.bones[\"front_R\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.000498160719871521
+          ],
+          "min": 0.000498160719871521,
+          "max": 0.010500028729438782
+        }
+      ]
+    },
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|rest",
+      "range": [
+        1.0,
+        72.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|rest",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            -0.01664428412914276
+          ],
+          "min": -0.01900681108236313,
+          "max": -0.01664428412914276
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            -0.03104385733604431
+          ],
+          "min": -0.03545030951499939,
+          "max": -0.03104385733604431
+        },
+        {
+          "path": "pose.bones[\"root\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            -0.029999999329447746
+          ],
+          "min": -0.03500000014901161,
+          "max": -0.029999999329447746
+        },
+        {
+          "path": "pose.bones[\"head\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            0.9971888065338135
+          ],
+          "min": 0.9963896870613098,
+          "max": 0.9971888065338135
+        },
+        {
+          "path": "pose.bones[\"head\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            0.07492970675230026
+          ],
+          "min": 0.07492970675230026,
+          "max": 0.08489768952131271
+        },
+        {
+          "path": "pose.bones[\"front_R\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.023006856441497803
+          ],
+          "min": 0.023006856441497803,
+          "max": 0.02567913383245468
+        },
+        {
+          "path": "pose.bones[\"front_R\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            -0.03587937355041504
+          ],
+          "min": -0.040046826004981995,
+          "max": -0.03587937355041504
+        },
+        {
+          "path": "pose.bones[\"front_R\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            -0.006034063175320625
+          ],
+          "min": -0.006734928116202354,
+          "max": -0.006034063175320625
+        }
+      ]
+    },
+    {
+      "name": "StoneTurtle_Rig|StoneTurtle_Rig|skill",
+      "range": [
+        1.0,
+        42.0
+      ],
+      "slots": [
+        {
+          "identifier": "OBStoneTurtle_Rig|StoneTurtle_Rig|skill",
+          "target": "OBJECT"
+        }
+      ],
+      "moving_curves": [
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9996219277381897,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"body\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.027496537193655968,
+          "max": 0.0
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 0,
+          "first": [
+            1.0,
+            0.0002823770046234131
+          ],
+          "min": -0.025671817362308502,
+          "max": 0.0002823770046234131
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0005266815423965454
+          ],
+          "min": -0.047881439328193665,
+          "max": 0.0005266815423965454
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].location",
+          "index": 2,
+          "first": [
+            1.0,
+            4.770583473145962e-06
+          ],
+          "min": -0.0004354960983619094,
+          "max": 4.770583473145962e-06
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 0,
+          "first": [
+            1.0,
+            1.0
+          ],
+          "min": 0.9987502694129944,
+          "max": 1.0
+        },
+        {
+          "path": "pose.bones[\"rear_L\"].rotation_quaternion",
+          "index": 1,
+          "first": [
+            1.0,
+            8.346982127704905e-08
+          ],
+          "min": -0.04997909441590309,
+          "max": 8.346982127704905e-08
+        },
+        {
+          "path": "pose.bones[\"root\"].location",
+          "index": 1,
+          "first": [
+            1.0,
+            0.0
+          ],
+          "min": -0.04500000178813934,
+          "max": 0.07500000298023224
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    {
+      "type": "ARMATURE",
+      "show_viewport": true,
+      "object": "StoneTurtle_Rig"
+    }
+  ],
+  "tests": [
+    {
+      "explicit_slot": false,
+      "snapshots": [
+        {
+          "frame": 1,
+          "action_slot": "None",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        },
+        {
+          "frame": 24,
+          "action_slot": "None",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        },
+        {
+          "frame": 48,
+          "action_slot": "None",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        },
+        {
+          "frame": 72,
+          "action_slot": "None",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        }
+      ]
+    },
+    {
+      "explicit_slot": true,
+      "snapshots": [
+        {
+          "frame": 1,
+          "action_slot": "<bpy_struct, ActionSlot(\"OBStoneTurtle_Rig|StoneTurtle_Rig|idle\") at 0x00000239341B1B58>",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        },
+        {
+          "frame": 24,
+          "action_slot": "<bpy_struct, ActionSlot(\"OBStoneTurtle_Rig|StoneTurtle_Rig|idle\") at 0x00000239341B1B58>",
+          "root_location": [
+            0.0,
+            0.012000000104308128,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.012000000104308128
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.4712560474872589
+          ]
+        },
+        {
+          "frame": 48,
+          "action_slot": "<bpy_struct, ActionSlot(\"OBStoneTurtle_Rig|StoneTurtle_Rig|idle\") at 0x00000239341B1B58>",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        },
+        {
+          "frame": 72,
+          "action_slot": "<bpy_struct, ActionSlot(\"OBStoneTurtle_Rig|StoneTurtle_Rig|idle\") at 0x00000239341B1B58>",
+          "root_location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "root_matrix": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vertex0": [
+            0.13182099163532257,
+            0.9183488488197327,
+            0.45925605297088623
+          ]
+        }
+      ]
+    }
+  ]
+}

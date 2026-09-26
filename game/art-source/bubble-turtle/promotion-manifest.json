@@ -1,0 +1,131 @@
+{
+  "status": "Ready for root to copy exactly three files; source candidate frozen. No copy executed by art agent.",
+  "candidate": "02/runtime-candidate",
+  "files": {
+    "bubble-turtle.fbx": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+      "bytes": 2573804,
+      "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+      "expected_target": "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx",
+      "copied": false,
+      "target_verified": false
+    },
+    "bubble-colour.png": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+      "bytes": 972370,
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "expected_target": "game/assets/resources/models/bubble-turtle/bubble-colour.png",
+      "copied": false,
+      "target_verified": false
+    },
+    "bubble-roughness.png": {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+      "bytes": 22011,
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "expected_target": "game/assets/resources/models/bubble-turtle/bubble-roughness.png",
+      "copied": false,
+      "target_verified": false
+    }
+  },
+  "expected_prefab_after_root_copy": "models/bubble-turtle/bubble-turtle/bubble-turtle",
+  "prefab_import_verified": false,
+  "material_prefix": "BubbleAtlas_",
+  "material_name": "BubbleAtlas_01",
+  "cocos_scale": 0.65,
+  "expected_cocos_forward": "+Z",
+  "up": "+Y",
+  "foot_y": 0,
+  "clips": {
+    "idle": {
+      "fbx_stack": "BubbleTurtle_Rig|idle",
+      "frames": [
+        1,
+        72
+      ],
+      "seconds": 2.3666666666666667,
+      "loop": true,
+      "maximum_cocos_y_scale_065": 1.0329228281974794,
+      "max_height_frame": 24.0
+    },
+    "attack": {
+      "fbx_stack": "BubbleTurtle_Rig|attack",
+      "frames": [
+        1,
+        27
+      ],
+      "seconds": 0.8666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0463287651538848,
+      "max_height_frame": 9.0
+    },
+    "skill": {
+      "fbx_stack": "BubbleTurtle_Rig|skill",
+      "frames": [
+        1,
+        42
+      ],
+      "seconds": 1.3666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0622154951095581,
+      "max_height_frame": 17.0
+    },
+    "hit": {
+      "fbx_stack": "BubbleTurtle_Rig|hit",
+      "frames": [
+        1,
+        18
+      ],
+      "seconds": 0.5666666666666667,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.0266795456409454,
+      "max_height_frame": 4.0
+    },
+    "rest": {
+      "fbx_stack": "BubbleTurtle_Rig|rest",
+      "frames": [
+        1,
+        72
+      ],
+      "seconds": 2.3666666666666667,
+      "loop": true,
+      "maximum_cocos_y_scale_065": 1.0108228027820587,
+      "max_height_frame": 1.0
+    },
+    "fusion": {
+      "fbx_stack": "BubbleTurtle_Rig|fusion",
+      "frames": [
+        1,
+        60
+      ],
+      "seconds": 1.9666666666666666,
+      "loop": false,
+      "maximum_cocos_y_scale_065": 1.1136810243129731,
+      "max_height_frame": 23.0
+    }
+  },
+  "rest_bounds": {
+    "min": [
+      -0.7304117560386658,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7304117560386658,
+      1.0257728040218355,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4608235120773316,
+      1.0257728024510326,
+      1.943768107891083
+    ]
+  },
+  "maximum_animation_y_scaled": 1.1136810243129731,
+  "suggested_healthbar_height": 1.29,
+  "suggested_control_marker_height": 1.22,
+  "source_freeze": "game/art-source/bubble-turtle/source-freeze.json",
+  "source_freeze_sha256": "5d6d28a4000e8b1f645cc450f275a19534e73e3a6866d256a0d47c3917591135",
+  "runtime_written": false,
+  "meta_written": false,
+  "cocos_started": false
+}

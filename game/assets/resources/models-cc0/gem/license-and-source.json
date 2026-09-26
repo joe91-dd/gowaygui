@@ -1,0 +1,23 @@
+{
+  "name": "Gem Blue",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\gem-blue-5d23b4\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Collectable/cd777a5c5e3580518b88c2c271a0618abdfbc86d157564c9a24b5f829ce5f4a0_Gem Blue.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "09e74ad0ce5b3a12a5bb2f013235f3e3e7c72046d9aea886b4e02aa198bd6f0f",
+  "bytes": 7924,
+  "animations": 0,
+  "runtimeKey": "gem",
+  "height": 0.55,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 44,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "image": "panels-atlas.png",
+  "width": 512,
+  "height": 1536,
+  "format": "RGBA8",
+  "coordinateOrigin": "top-left",
+  "runtimeScale": 0.5,
+  "logicalFrameSize": 64,
+  "logicalOverscanPerSide": 2,
+  "sourcePixelRatio": 2,
+  "atlasCellPadding": 8,
+  "estimatedGfxTextureBytes": 3145728,
+  "defaultPalette": {
+    "shadow": {
+      "hex": "#132D30",
+      "alpha": 90,
+      "offset": {
+        "x": 3,
+        "y": -5
+      },
+      "framePart": "fill"
+    },
+    "fill": {
+      "hex": "#203D3F",
+      "alpha": 244
+    },
+    "border": {
+      "hex": "#B4874D",
+      "alpha": 255
+    },
+    "highlight": {
+      "hex": "#FFF2CF",
+      "alpha": 65
+    }
+  },
+  "nodeSizing": "Existing interactive parent keeps w,h. Each decorative child is 2*(w+4) by 2*(h+4), local scale(.5,.5,1), anchor(.5,.5). All non-shadow children at (0,0); shadow at (3,-5).",
+  "drawOrder": [
+    "shadow/reused fill",
+    "fill",
+    "border",
+    "highlight"
+  ],
+  "frames": [
+    {
+      "id": "r10-fill",
+      "radius": 10,
+      "part": "fill",
+      "source": "svg/r10-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 8,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 24,
+        "right": 24,
+        "top": 24,
+        "bottom": 24
+      }
+    },
+    {
+      "id": "r10-border",
+      "radius": 10,
+      "part": "border",
+      "source": "svg/r10-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 8,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 24,
+        "right": 24,
+        "top": 24,
+        "bottom": 24
+      }
+    },
+    {
+      "id": "r10-highlight",
+      "radius": 10,
+      "part": "highlight",
+      "source": "svg/r10-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 8,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 24,
+        "right": 24,
+        "top": 24,
+        "bottom": 24
+      }
+    },
+    {
+      "id": "r14-fill",
+      "radius": 14,
+      "part": "fill",
+      "source": "svg/r14-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 152,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 32,
+        "right": 32,
+        "top": 32,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "r14-border",
+      "radius": 14,
+      "part": "border",
+      "source": "svg/r14-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 152,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 32,
+        "right": 32,
+        "top": 32,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "r14-highlight",
+      "radius": 14,
+      "part": "highlight",
+      "source": "svg/r14-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 152,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 32,
+        "right": 32,
+        "top": 32,
+        "bottom": 32
+      }
+    },
+    {
+      "id": "r18-fill",
+      "radius": 18,
+      "part": "fill",
+      "source": "svg/r18-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 296,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      }
+    },
+    {
+      "id": "r18-border",
+      "radius": 18,
+      "part": "border",
+      "source": "svg/r18-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 296,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      }
+    },
+    {
+      "id": "r18-highlight",
+      "radius": 18,
+      "part": "highlight",
+      "source": "svg/r18-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 296,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 40,
+        "right": 40,
+        "top": 40,
+        "bottom": 40
+      }
+    },
+    {
+      "id": "r21-fill",
+      "radius": 21,
+      "part": "fill",
+      "source": "svg/r21-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 440,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 46,
+        "right": 46,
+        "top": 46,
+        "bottom": 46
+      }
+    },
+    {
+      "id": "r21-border",
+      "radius": 21,
+      "part": "border",
+      "source": "svg/r21-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 440,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 46,
+        "right": 46,
+        "top": 46,
+        "bottom": 46
+      }
+    },
+    {
+      "id": "r21-highlight",
+      "radius": 21,
+      "part": "highlight",
+      "source": "svg/r21-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 440,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 46,
+        "right": 46,
+        "top": 46,
+        "bottom": 46
+      }
+    },
+    {
+      "id": "r22-fill",
+      "radius": 22,
+      "part": "fill",
+      "source": "svg/r22-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 584,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      }
+    },
+    {
+      "id": "r22-border",
+      "radius": 22,
+      "part": "border",
+      "source": "svg/r22-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 584,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      }
+    },
+    {
+      "id": "r22-highlight",
+      "radius": 22,
+      "part": "highlight",
+      "source": "svg/r22-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 584,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 48,
+        "right": 48,
+        "top": 48,
+        "bottom": 48
+      }
+    },
+    {
+      "id": "r24-fill",
+      "radius": 24,
+      "part": "fill",
+      "source": "svg/r24-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 728,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 52,
+        "right": 52,
+        "top": 52,
+        "bottom": 52
+      }
+    },
+    {
+      "id": "r24-border",
+      "radius": 24,
+      "part": "border",
+      "source": "svg/r24-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 728,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 52,
+        "right": 52,
+        "top": 52,
+        "bottom": 52
+      }
+    },
+    {
+      "id": "r24-highlight",
+      "radius": 24,
+      "part": "highlight",
+      "source": "svg/r24-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 728,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 52,
+        "right": 52,
+        "top": 52,
+        "bottom": 52
+      }
+    },
+    {
+      "id": "r16-fill",
+      "radius": 16,
+      "part": "fill",
+      "source": "svg/r16-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 872,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 36,
+        "right": 36,
+        "top": 36,
+        "bottom": 36
+      }
+    },
+    {
+      "id": "r16-border",
+      "radius": 16,
+      "part": "border",
+      "source": "svg/r16-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 872,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 36,
+        "right": 36,
+        "top": 36,
+        "bottom": 36
+      }
+    },
+    {
+      "id": "r16-highlight",
+      "radius": 16,
+      "part": "highlight",
+      "source": "svg/r16-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 872,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 36,
+        "right": 36,
+        "top": 36,
+        "bottom": 36
+      }
+    },
+    {
+      "id": "r19-fill",
+      "radius": 19,
+      "part": "fill",
+      "source": "svg/r19-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 1016,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 42,
+        "right": 42,
+        "top": 42,
+        "bottom": 42
+      }
+    },
+    {
+      "id": "r19-border",
+      "radius": 19,
+      "part": "border",
+      "source": "svg/r19-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 1016,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 42,
+        "right": 42,
+        "top": 42,
+        "bottom": 42
+      }
+    },
+    {
+      "id": "r19-highlight",
+      "radius": 19,
+      "part": "highlight",
+      "source": "svg/r19-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 1016,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 42,
+        "right": 42,
+        "top": 42,
+        "bottom": 42
+      }
+    },
+    {
+      "id": "r20-fill",
+      "radius": 20,
+      "part": "fill",
+      "source": "svg/r20-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 1160,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 44,
+        "right": 44,
+        "top": 44,
+        "bottom": 44
+      }
+    },
+    {
+      "id": "r20-border",
+      "radius": 20,
+      "part": "border",
+      "source": "svg/r20-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 1160,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 44,
+        "right": 44,
+        "top": 44,
+        "bottom": 44
+      }
+    },
+    {
+      "id": "r20-highlight",
+      "radius": 20,
+      "part": "highlight",
+      "source": "svg/r20-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 1160,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 44,
+        "right": 44,
+        "top": 44,
+        "bottom": 44
+      }
+    },
+    {
+      "id": "r21.5-fill",
+      "radius": 21.5,
+      "part": "fill",
+      "source": "svg/r21.5-fill.svg",
+      "rect": {
+        "x": 8,
+        "y": 1304,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 47,
+        "right": 47,
+        "top": 47,
+        "bottom": 47
+      }
+    },
+    {
+      "id": "r21.5-border",
+      "radius": 21.5,
+      "part": "border",
+      "source": "svg/r21.5-border.svg",
+      "rect": {
+        "x": 152,
+        "y": 1304,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 47,
+        "right": 47,
+        "top": 47,
+        "bottom": 47
+      }
+    },
+    {
+      "id": "r21.5-highlight",
+      "radius": 21.5,
+      "part": "highlight",
+      "source": "svg/r21.5-highlight.svg",
+      "rect": {
+        "x": 296,
+        "y": 1304,
+        "width": 128,
+        "height": 128
+      },
+      "originalSize": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "rotated": false,
+      "insets": {
+        "left": 47,
+        "right": 47,
+        "top": 47,
+        "bottom": 47
+      }
+    }
+  ]
+}

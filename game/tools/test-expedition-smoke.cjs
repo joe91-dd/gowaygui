@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict');const C=n=>require('../.test-build/core/'+n),{GameService}=C('game'),{SaveRepository,validateSave}=C('save'),{MemoryStorage}=require('../.test-build/platform/storage'),{stepBattle,expeditionAction}=C('battle'),{validateBattle}=C('battleValidation'),{expeditionSlots}=C('expeditionRules'),{sceneGroundIssue}=C('sceneGeometry');
+for(let id=0;id<57;id++){const slots=expeditionSlots(id);for(let i=0;i<slots.length;i++){assert.equal(sceneGroundIssue(id,slots[i]),undefined);assert.ok(slots.every((q,j)=>i===j||Math.hypot(q.x-slots[i].x,q.z-slots[i].z)>=1));}if(id<50||id===54||id===56)assert.equal(slots.length,12);else if(id===50)assert.ok(slots.length>12);else assert.equal(slots.length,24);}
+const storage=new MemoryStorage(),service=new GameService(new SaveRepository(storage),{now:()=>Date.now()},42);service.enablePrototype('enable');service.beginPrototypeRun('start',0,Object.keys(service.snapshot.collection));let r=service.snapshot.run;service.beginWave('wave',r.id,r.battle);let b=service.snapshot.run.battle;b.autoSkills=true;
+let changes=[];for(let n=0;n<5000&&b.status==='fighting';n++){
+ const e=b.expedition,p=e.players[0];if(p.choices.length){changes.push({wave:b.wave,coins:p.coins,buff:p.choices[0]});expeditionAction(b,p.id,'buff',{buff:p.choices[0]});}
+ if(n%30===0){try{expeditionAction(b,p.id,'recruit');}catch{}const units=b.units.filter(u=>u.alive),a=units.find(a=>units.length>=8&&a.fusionRank<3&&units.some(c=>c!==a&&c.role===a.role&&c.fusionRank===a.fusionRank));if(a){const c=units.find(c=>c!==a&&c.role===a.role&&c.fusionRank===a.fusionRank);try{expeditionAction(b,p.id,'merge',{a:a.id,b:c.id});}catch{}}}
+ stepBattle(b,.1);if(n%100===0){try{validateBattle(b)}catch(e){console.log('validation at',n,'wave',b.wave);throw e;}}
+}
+console.log({status:b.status,wave:b.wave,completed:b.expedition.completed,health:b.coreHealth,kills:b.kills,recruits:b.expedition.players[0].recruited,units:b.units.map(u=>[u.role,u.fusionRank,u.alive]),buffs:changes});
+// Service commands, rather than direct mutation, keep actor snapshots aligned.
+r=service.snapshot.run;let cb=r.battle;cb.expedition.players[0].coins=1000;cb.expedition.players[0].earned=1000;service.expeditionCommand('recruit','recruit',{},cb);validateSave(service.snapshot);console.log('recruit save',service.snapshot.run.battle.units.length);new GameService(new SaveRepository(storage),{now:()=>Date.now()},42);
+

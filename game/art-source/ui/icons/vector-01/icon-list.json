@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gold",
+    "label": "金币",
+    "description": "唯一货币，原创龟壳浮雕金币"
+  },
+  {
+    "id": "stamina",
+    "label": "体力",
+    "description": "青绿闪电形体力资源"
+  },
+  {
+    "id": "attack-medicine",
+    "label": "攻击药",
+    "description": "带剑符号的橙色药瓶"
+  },
+  {
+    "id": "health-medicine",
+    "label": "生命药",
+    "description": "带心形符号的珊瑚色药瓶"
+  },
+  {
+    "id": "defense-medicine",
+    "label": "防御药",
+    "description": "带盾符号的蓝色药瓶"
+  },
+  {
+    "id": "growth-medicine",
+    "label": "成长药",
+    "description": "带嫩芽符号的绿色药瓶"
+  },
+  {
+    "id": "collection-lock",
+    "label": "收藏锁",
+    "description": "带龟壳分片装饰的闭合锁"
+  },
+  {
+    "id": "growth-history",
+    "label": "成长历史",
+    "description": "带回转箭头与龟壳印记的历史册"
+  }
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="growth-medicine-title growth-medicine-desc">
+<title id="growth-medicine-title">成长药</title><desc id="growth-medicine-desc">带嫩芽符号的绿色药瓶；从零绘制的哥喂龟原创矢量图标，左上柔光。</desc>
+<defs><linearGradient id="growth-medicine-ivory" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#fff3d7"/><stop offset=".52" stop-color="#e8cda0"/><stop offset="1" stop-color="#b79667"/></linearGradient><linearGradient id="growth-medicine-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffe291"/><stop offset=".52" stop-color="#efb348"/><stop offset="1" stop-color="#b9742e"/></linearGradient><linearGradient id="growth-medicine-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#91d5c4"/><stop offset=".52" stop-color="#3d9d99"/><stop offset="1" stop-color="#255e62"/></linearGradient><linearGradient id="growth-medicine-attack" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffd086"/><stop offset=".52" stop-color="#e5a24b"/><stop offset="1" stop-color="#ad6d34"/></linearGradient><linearGradient id="growth-medicine-health" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#f7b6a9"/><stop offset=".52" stop-color="#df7d73"/><stop offset="1" stop-color="#a95753"/></linearGradient><linearGradient id="growth-medicine-defense" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#a1d9e3"/><stop offset=".52" stop-color="#58afc4"/><stop offset="1" stop-color="#397887"/></linearGradient><linearGradient id="growth-medicine-growth" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d4df97"/><stop offset=".52" stop-color="#92b65e"/><stop offset="1" stop-color="#587c43"/></linearGradient><linearGradient id="growth-medicine-dark-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d9a356"/><stop offset=".52" stop-color="#b9772b"/><stop offset="1" stop-color="#815327"/></linearGradient><linearGradient id="growth-medicine-deep-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#438f89"/><stop offset=".52" stop-color="#2b726f"/><stop offset="1" stop-color="#204f56"/></linearGradient><radialGradient id="growth-medicine-soft-glow" cx="28%" cy="20%" r="75%"><stop stop-color="#fff9e9" stop-opacity=".65"/><stop offset=".65" stop-color="#fff9e9" stop-opacity="0"/></radialGradient></defs>
+
+    <g stroke-linejoin="round" stroke-linecap="round">
+      <path d="M92 82c0 25-23 28-34 48-10 19-8 49-1 69 7 20 33 29 71 29s64-9 71-29c7-20 9-50-1-69-11-20-34-23-34-48z" fill="url(#growth-medicine-growth)" stroke="#587c43" stroke-width="6"/>
+      <path d="M63 192c4 18 31 28 65 28s61-10 65-28l-3 18c-14 13-39 18-62 18s-48-5-62-18z" fill="url(#growth-medicine-ivory)" stroke="#587c43" stroke-width="3"/>
+      <path d="M98 91c-1 20-21 26-31 41-6 10-9 30-6 41" fill="none" stroke="#fff6d8" stroke-opacity=".55" stroke-width="6"/>
+      <path d="M167 109c19 19 26 41 20 71" fill="none" stroke="#587c43" stroke-opacity=".3" stroke-width="5"/>
+      <path d="M100 122c17-7 40-8 58 0" fill="none" stroke="#fff8df" stroke-opacity=".25" stroke-width="5"/>
+      <path d="M127 194v-31" fill="none" stroke="#6d7446" stroke-width="12"/><path d="M127 194v-31" fill="none" stroke="#f1e5b5" stroke-width="6"/><path d="M127 174c-24 0-37-20-37-40 24 1 38 13 37 40z" fill="url(#growth-medicine-ivory)" stroke="#79804b" stroke-width="4"/><path d="M128 164c-1-23 14-38 40-41-1 25-15 42-40 41z" fill="url(#growth-medicine-ivory)" stroke="#79804b" stroke-width="4"/><path d="M102 147l19 21m13-12 21-20" fill="none" stroke="#d5c58d" stroke-width="3"/>
+      <path d="M89 76h78v16c-19 8-59 8-78 0z" fill="url(#growth-medicine-ivory)" stroke="#987a52" stroke-width="5"/>
+      <path d="M88 88q40 15 80 0" fill="none" stroke="#a77e47" stroke-width="8"/>
+      <path d="M89 86q40 13 78 0" fill="none" stroke="#ead0a0" stroke-width="4"/>
+      <path d="M102 88l7 7m7-5 7 7m7-6 7 6m7-8 7 5" fill="none" stroke="#b38a51" stroke-width="3"/>
+      <path d="M88 59q40-12 80 0v16q-40 13-80 0z" fill="url(#growth-medicine-growth)" stroke="#587c43" stroke-width="5"/>
+      <path d="M90 62q38 11 76 0" fill="none" stroke="#f7edcf" stroke-opacity=".9" stroke-width="4"/>
+      <path d="M96 36q31-13 64 0l-3 21q-28 12-58 0z" fill="url(#growth-medicine-ivory)" stroke="#9b815b" stroke-width="5"/>
+      <path d="M98 36q29-11 60 0" fill="none" stroke="#fff7dd" stroke-width="5"/>
+      <path d="M108 58q21 7 42 0" fill="none" stroke="#bb9966" stroke-width="3"/>
+    </g>
+</svg>

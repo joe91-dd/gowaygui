@@ -1,0 +1,1603 @@
+{
+  "schemaVersion": 1,
+  "scope": "Frozen original levelId 3 offline geometry and deterministic diagnostic; not a win-rate estimate or runtime acceptance.",
+  "sourceSha256": {
+    "game/assets/scripts/core/data.ts": "aaeaf0026cb3e27ef2c63ce558b14df9229ed455f9a4f4718d27b3e00eb90e73",
+    "game/assets/scripts/core/battle.ts": "d197a41a3f42c5cf40356f1e3e82535533237183341a69083cfa2054b5ee9a1a",
+    "game/assets/scripts/core/random.ts": "e408d544536f95d947e047f531cfbf49911eb51cbca3ac9d989fd13cff3a77c0",
+    "game/art-source/environment/dusk-bay/candidate-01/proposal.json": "12b1c24a3c67bde1f0f3775520f22501347a713afff16066007335c114f09ad7"
+  },
+  "levelId": 3,
+  "route": [
+    {
+      "x": -9,
+      "z": -1
+    },
+    {
+      "x": -5,
+      "z": 0
+    },
+    {
+      "x": -2,
+      "z": -2
+    },
+    {
+      "x": 2,
+      "z": -2
+    },
+    {
+      "x": 4,
+      "z": 0
+    },
+    {
+      "x": 7,
+      "z": 0
+    },
+    {
+      "x": 9,
+      "z": 1
+    }
+  ],
+  "routeLength": 19.79315200332763,
+  "segments": [
+    {
+      "a": {
+        "x": -9,
+        "z": -1
+      },
+      "b": {
+        "x": -5,
+        "z": 0
+      },
+      "length": 4.123105625617661,
+      "start": 0,
+      "end": 4.123105625617661,
+      "dx": 0.9701425001453319,
+      "dz": 0.24253562503633297
+    },
+    {
+      "a": {
+        "x": -5,
+        "z": 0
+      },
+      "b": {
+        "x": -2,
+        "z": -2
+      },
+      "length": 3.6055512754639896,
+      "start": 4.123105625617661,
+      "end": 7.72865690108165,
+      "dx": 0.8320502943378436,
+      "dz": -0.554700196225229
+    },
+    {
+      "a": {
+        "x": -2,
+        "z": -2
+      },
+      "b": {
+        "x": 2,
+        "z": -2
+      },
+      "length": 4,
+      "start": 7.72865690108165,
+      "end": 11.72865690108165,
+      "dx": 1,
+      "dz": 0
+    },
+    {
+      "a": {
+        "x": 2,
+        "z": -2
+      },
+      "b": {
+        "x": 4,
+        "z": 0
+      },
+      "length": 2.8284271247461903,
+      "start": 11.72865690108165,
+      "end": 14.55708402582784,
+      "dx": 0.7071067811865475,
+      "dz": 0.7071067811865475
+    },
+    {
+      "a": {
+        "x": 4,
+        "z": 0
+      },
+      "b": {
+        "x": 7,
+        "z": 0
+      },
+      "length": 3,
+      "start": 14.55708402582784,
+      "end": 17.55708402582784,
+      "dx": 1,
+      "dz": 0
+    },
+    {
+      "a": {
+        "x": 7,
+        "z": 0
+      },
+      "b": {
+        "x": 9,
+        "z": 1
+      },
+      "length": 2.23606797749979,
+      "start": 17.55708402582784,
+      "end": 19.79315200332763,
+      "dx": 0.8944271909999159,
+      "dz": 0.4472135954999579
+    }
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "position": {
+        "x": -5,
+        "z": 1
+      },
+      "nearestRoute": {
+        "distance": 1,
+        "point": {
+          "x": -5,
+          "z": 0
+        },
+        "s": 4.123105625617661
+      },
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            3.6593668497220584,
+            4.433097459939902
+          ]
+        ],
+        "length": 0.7737306102178438
+      },
+      "crystal": {
+        "radius": 4,
+        "intervals": [
+          [
+            0.48507125007266616,
+            7.4809100374015145
+          ]
+        ],
+        "length": 6.995838787328848
+      },
+      "crystalReach": {
+        "radius": 4.3,
+        "intervals": [
+          [
+            0.17650965455776202,
+            7.809241261231522
+          ]
+        ],
+        "length": 7.63273160667376
+      },
+      "spike": {
+        "radius": 4.5,
+        "intervals": [
+          [
+            0,
+            8.082758867331336
+          ]
+        ],
+        "length": 8.082758867331336
+      },
+      "spikeReach": {
+        "radius": 4.8,
+        "intervals": [
+          [
+            0,
+            8.47565570012069
+          ]
+        ],
+        "length": 8.47565570012069
+      }
+    },
+    {
+      "slot": 2,
+      "position": {
+        "x": -1,
+        "z": 1
+      },
+      "nearestRoute": {
+        "distance": 3,
+        "point": {
+          "x": -1,
+          "z": -2
+        },
+        "s": 8.72865690108165
+      },
+      "stone": {
+        "radius": 1.2,
+        "intervals": [],
+        "length": 0
+      },
+      "crystal": {
+        "radius": 4,
+        "intervals": [
+          [
+            4.309657111236078,
+            11.37440821214624
+          ]
+        ],
+        "length": 7.064751100910163
+      },
+      "crystalReach": {
+        "radius": 4.3,
+        "intervals": [
+          [
+            3.9462112512353213,
+            12.428656901081649
+          ]
+        ],
+        "length": 8.482445649846326
+      },
+      "spike": {
+        "radius": 4.5,
+        "intervals": [
+          [
+            3.746211251235321,
+            13.22865690108165
+          ]
+        ],
+        "length": 9.482445649846328
+      },
+      "spikeReach": {
+        "radius": 4.8,
+        "intervals": [
+          [
+            3.4462112512353213,
+            13.973651333146014
+          ]
+        ],
+        "length": 10.527440081910694
+      }
+    },
+    {
+      "slot": 3,
+      "position": {
+        "x": 3,
+        "z": 1
+      },
+      "nearestRoute": {
+        "distance": 1.4142135623730951,
+        "point": {
+          "x": 3.9999999999999996,
+          "z": -4.440892098500626e-16
+        },
+        "s": 14.55708402582784
+      },
+      "stone": {
+        "radius": 1.2,
+        "intervals": [],
+        "length": 0
+      },
+      "crystal": {
+        "radius": 4,
+        "intervals": [
+          [
+            10.08290559001706,
+            17.430067372035257
+          ]
+        ],
+        "length": 7.347161782018198
+      },
+      "crystalReach": {
+        "radius": 4.3,
+        "intervals": [
+          [
+            9.648072540931778,
+            17.786648380610423
+          ]
+        ],
+        "length": 8.138575839678644
+      },
+      "spike": {
+        "radius": 4.5,
+        "intervals": [
+          [
+            9.374554934831966,
+            18.039067230965824
+          ]
+        ],
+        "length": 8.664512296133857
+      },
+      "spikeReach": {
+        "radius": 4.8,
+        "intervals": [
+          [
+            8.981658102042612,
+            18.406538605754616
+          ]
+        ],
+        "length": 9.424880503712004
+      }
+    },
+    {
+      "slot": 4,
+      "position": {
+        "x": 1,
+        "z": -3
+      },
+      "nearestRoute": {
+        "distance": 1,
+        "point": {
+          "x": 1,
+          "z": -2
+        },
+        "s": 10.72865690108165
+      },
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            10.06533194301057,
+            11.39198185915273
+          ]
+        ],
+        "length": 1.326649916142161
+      },
+      "crystal": {
+        "radius": 4,
+        "intervals": [
+          [
+            6.867003372311327,
+            14.314443338708553
+          ]
+        ],
+        "length": 7.447439966397226
+      },
+      "crystalReach": {
+        "radius": 4.3,
+        "intervals": [
+          [
+            6.560776855006508,
+            14.637668385977712
+          ]
+        ],
+        "length": 8.076891530971203
+      },
+      "spike": {
+        "radius": 4.5,
+        "intervals": [
+          [
+            6.35710000415038,
+            14.911185992077524
+          ]
+        ],
+        "length": 8.554085987927145
+      },
+      "spikeReach": {
+        "radius": 4.8,
+        "intervals": [
+          [
+            6.052173392236729,
+            15.304082824866878
+          ]
+        ],
+        "length": 9.25190943263015
+      }
+    },
+    {
+      "slot": 5,
+      "position": {
+        "x": 6,
+        "z": -1
+      },
+      "nearestRoute": {
+        "distance": 1,
+        "point": {
+          "x": 6,
+          "z": 0
+        },
+        "s": 16.55708402582784
+      },
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            15.89375906775676,
+            17.22040898389892
+          ]
+        ],
+        "length": 1.326649916142161
+      },
+      "crystal": {
+        "radius": 4,
+        "intervals": [
+          [
+            11.873025815451753,
+            19.79315200332763
+          ]
+        ],
+        "length": 7.920126187875878
+      },
+      "crystalReach": {
+        "radius": 4.3,
+        "intervals": [
+          [
+            11.546552167816355,
+            19.79315200332763
+          ]
+        ],
+        "length": 8.246599835511276
+      },
+      "spike": {
+        "radius": 4.5,
+        "intervals": [
+          [
+            11.341174707385589,
+            19.79315200332763
+          ]
+        ],
+        "length": 8.451977295942042
+      },
+      "spikeReach": {
+        "radius": 4.8,
+        "intervals": [
+          [
+            11.03397906335945,
+            19.79315200332763
+          ]
+        ],
+        "length": 8.759172939968181
+      }
+    }
+  ],
+  "pairDistances": [
+    [
+      0,
+      4,
+      8,
+      7.211102550927979,
+      11.180339887498947
+    ],
+    [
+      4,
+      0,
+      4,
+      4.47213595499958,
+      7.280109889280519
+    ],
+    [
+      8,
+      4,
+      0,
+      4.47213595499958,
+      3.6055512754639896
+    ],
+    [
+      7.211102550927979,
+      4.47213595499958,
+      4.47213595499958,
+      0,
+      5.385164807134505
+    ],
+    [
+      11.180339887498947,
+      7.280109889280519,
+      3.6055512754639896,
+      5.385164807134505,
+      0
+    ]
+  ],
+  "healGraph4": [
+    {
+      "slot": 1,
+      "otherSlots": [
+        2
+      ]
+    },
+    {
+      "slot": 2,
+      "otherSlots": [
+        1,
+        3
+      ]
+    },
+    {
+      "slot": 3,
+      "otherSlots": [
+        2,
+        5
+      ]
+    },
+    {
+      "slot": 4,
+      "otherSlots": []
+    },
+    {
+      "slot": 5,
+      "otherSlots": [
+        3
+      ]
+    }
+  ],
+  "healGraph43": [
+    {
+      "slot": 1,
+      "otherSlots": [
+        2
+      ]
+    },
+    {
+      "slot": 2,
+      "otherSlots": [
+        1,
+        3
+      ]
+    },
+    {
+      "slot": 3,
+      "otherSlots": [
+        2,
+        5
+      ]
+    },
+    {
+      "slot": 4,
+      "otherSlots": []
+    },
+    {
+      "slot": 5,
+      "otherSlots": [
+        3
+      ]
+    }
+  ],
+  "healGraph45": [
+    {
+      "slot": 1,
+      "otherSlots": [
+        2
+      ]
+    },
+    {
+      "slot": 2,
+      "otherSlots": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "slot": 3,
+      "otherSlots": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "slot": 4,
+      "otherSlots": [
+        2,
+        3
+      ]
+    },
+    {
+      "slot": 5,
+      "otherSlots": [
+        3
+      ]
+    }
+  ],
+  "auraGraph3": [
+    {
+      "slot": 1,
+      "otherSlots": []
+    },
+    {
+      "slot": 2,
+      "otherSlots": []
+    },
+    {
+      "slot": 3,
+      "otherSlots": []
+    },
+    {
+      "slot": 4,
+      "otherSlots": []
+    },
+    {
+      "slot": 5,
+      "otherSlots": []
+    }
+  ],
+  "stoneFootRadius": 0.9746471943161487,
+  "platformRadius": 0.995,
+  "originalFirstBlock": {
+    "x": -5.4498926954616955,
+    "z": -0.11247317386542388
+  },
+  "originalFirstBlockDistances": [
+    1.2,
+    4.586844401513263,
+    8.522809579439583,
+    7.0667479758809115,
+    11.484239052052844
+  ],
+  "proposals": [
+    {
+      "id": "front-margin",
+      "slot": 1,
+      "to": {
+        "x": -3.8,
+        "z": 0.6
+      },
+      "from": {
+        "x": -5,
+        "z": 1
+      },
+      "displacement": 1.264911064067352,
+      "nearestRoute": {
+        "distance": 1.1648704120729814,
+        "point": {
+          "x": -4.446153846153846,
+          "z": -0.36923076923076925
+        },
+        "s": 4.788745861087936
+      },
+      "footCenterlineGap": 0.1902232177568327,
+      "platformCenterlineGap": 0.16987041207298137,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            4.500515184238779,
+            5.076976537937092
+          ]
+        ],
+        "length": 0.5764613536983134
+      },
+      "firstStoneContact": {
+        "x": -4.685976265663383,
+        "z": -0.20934915622441144
+      },
+      "firstStoneContactToSlot2": 3.879297154471989,
+      "originalFirstBlockToNewSlot": 1.7971543979346154,
+      "pairDistances": [
+        0,
+        2.8284271247461903,
+        6.811754546370561,
+        6,
+        9.929753269845127
+      ],
+      "healingReachableFromEach": [
+        {
+          "slot": 1,
+          "otherSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "otherSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "otherSlots": [
+            2,
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "otherSlots": []
+        },
+        {
+          "slot": 5,
+          "otherSlots": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-smaller",
+      "slot": 1,
+      "to": {
+        "x": -3.85,
+        "z": 0.6
+      },
+      "from": {
+        "x": -5,
+        "z": 1
+      },
+      "displacement": 1.217579566188592,
+      "nearestRoute": {
+        "distance": 1.1371354022617197,
+        "point": {
+          "x": -4.480769230769231,
+          "z": -0.3461538461538461
+        },
+        "s": 4.747143346371043
+      },
+      "footCenterlineGap": 0.16248820794557106,
+      "platformCenterlineGap": 0.14213540226171972,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            4.363837884731012,
+            5.130448808011074
+          ]
+        ],
+        "length": 0.7666109232800622
+      },
+      "firstStoneContact": {
+        "x": -4.799698652948122,
+        "z": -0.1335342313679188
+      },
+      "firstStoneContactToSlot2": 3.965174612409727,
+      "originalFirstBlockToNewSlot": 1.7513636574022997,
+      "pairDistances": [
+        0,
+        2.8779332862316322,
+        6.861668893206666,
+        6.040074502851765,
+        9.979103166116682
+      ],
+      "healingReachableFromEach": [
+        {
+          "slot": 1,
+          "otherSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "otherSlots": [
+            1,
+            3
+          ]
+        },
+        {
+          "slot": 3,
+          "otherSlots": [
+            2,
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "otherSlots": []
+        },
+        {
+          "slot": 5,
+          "otherSlots": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backline-smaller",
+      "slot": 2,
+      "to": {
+        "x": -1.6,
+        "z": 0.85
+      },
+      "from": {
+        "x": -1,
+        "z": 1
+      },
+      "displacement": 0.6184658438426491,
+      "nearestRoute": {
+        "distance": 2.593223417352946,
+        "point": {
+          "x": -3.0384615384615388,
+          "z": -1.3076923076923075
+        },
+        "s": 6.480581459574884
+      },
+      "footCenterlineGap": 1.6185762230367975,
+      "platformCenterlineGap": 1.598223417352946,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [],
+        "length": 0
+      },
+      "firstStoneContact": null,
+      "firstStoneContactToSlot2": null,
+      "originalFirstBlockToNewSlot": 3.9683785576706136,
+      "pairDistances": [
+        3.403307215048327,
+        0,
+        4.602445002387317,
+        4.645696933722647,
+        7.821924315665552
+      ],
+      "healingReachableFromEach": [
+        {
+          "slot": 1,
+          "otherSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "otherSlots": [
+            1
+          ]
+        },
+        {
+          "slot": 3,
+          "otherSlots": [
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "otherSlots": []
+        },
+        {
+          "slot": 5,
+          "otherSlots": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lower-heal-link",
+      "slot": 4,
+      "to": {
+        "x": -1,
+        "z": -3
+      },
+      "from": {
+        "x": 1,
+        "z": -3
+      },
+      "displacement": 2,
+      "nearestRoute": {
+        "distance": 1,
+        "point": {
+          "x": -1,
+          "z": -2
+        },
+        "s": 8.72865690108165
+      },
+      "footCenterlineGap": 0.025352805683851343,
+      "platformCenterlineGap": 0.0050000000000000044,
+      "stone": {
+        "radius": 1.2,
+        "intervals": [
+          [
+            8.06533194301057,
+            9.39198185915273
+          ]
+        ],
+        "length": 1.326649916142161
+      },
+      "firstStoneContact": {
+        "x": -1.6633249580710805,
+        "z": -2
+      },
+      "firstStoneContactToSlot2": 3.072458299147444,
+      "originalFirstBlockToNewSlot": 5.304654199169836,
+      "pairDistances": [
+        5.656854249492381,
+        4,
+        5.656854249492381,
+        0,
+        7.280109889280519
+      ],
+      "healingReachableFromEach": [
+        {
+          "slot": 1,
+          "otherSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 2,
+          "otherSlots": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "slot": 3,
+          "otherSlots": [
+            2,
+            5
+          ]
+        },
+        {
+          "slot": 4,
+          "otherSlots": [
+            2
+          ]
+        },
+        {
+          "slot": 5,
+          "otherSlots": [
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "coreReproduction": {
+    "inputs": [
+      {
+        "id": "stone-1",
+        "slot": 0,
+        "level": 1,
+        "turtle": {
+          "id": "t-stone-1",
+          "role": "stone",
+          "skills": [
+            "strong",
+            "armor"
+          ],
+          "innate": {
+            "attack": 80,
+            "health": 80,
+            "defense": 80,
+            "growth": 100
+          },
+          "training": {
+            "attack": 0,
+            "health": 0,
+            "defense": 0,
+            "growth": 0
+          }
+        }
+      },
+      {
+        "id": "crystal-2",
+        "slot": 1,
+        "level": 1,
+        "turtle": {
+          "id": "t-crystal-2",
+          "role": "crystal",
+          "skills": [
+            "resist",
+            "bounce"
+          ],
+          "innate": {
+            "attack": 80,
+            "health": 80,
+            "defense": 80,
+            "growth": 100
+          },
+          "training": {
+            "attack": 0,
+            "health": 0,
+            "defense": 0,
+            "growth": 0
+          }
+        }
+      }
+    ],
+    "seed": 20260908,
+    "levelId": 3,
+    "wave": 2,
+    "dt": 0.05,
+    "firstBlocked": {
+      "tick": 47,
+      "time": 2.35,
+      "enemyId": "enemy-2-1",
+      "kind": "runner",
+      "x": -5.429875599465175,
+      "z": -0.10746889986629393,
+      "s": 3.680000000000003,
+      "stoneDistance": 1.1879732299957784,
+      "crystalDistance": 4.566211251235318,
+      "crystalRange": 4,
+      "crystalAttackCount": 0
+    },
+    "firstCrystalAttack": {
+      "id": 79,
+      "tick": 447,
+      "type": "attack",
+      "sourceId": "crystal-2",
+      "targetId": "enemy-2-3",
+      "x": -4.836173977841712,
+      "z": -0.10921734810552508,
+      "effect": "crystal"
+    },
+    "firstOutsideRangeSecondary": {
+      "id": 81,
+      "tick": 447,
+      "type": "damage",
+      "sourceId": "crystal-2",
+      "targetId": "enemy-2-2",
+      "amount": 17.28,
+      "critical": false,
+      "secondary": true,
+      "x": -4.848654732256771,
+      "z": -0.10089684516215273,
+      "targetDistance": 4.003013503825638,
+      "targetBlockedBy": "stone-1"
+    },
+    "observedSingleSample": {
+      "tick": 670,
+      "status": "won",
+      "coreHealth": 20,
+      "kills": 5,
+      "leaked": 0,
+      "units": [
+        {
+          "id": "stone-1",
+          "alive": true,
+          "hp": 142.67214019962782,
+          "attackCount": 25
+        },
+        {
+          "id": "crystal-2",
+          "alive": true,
+          "hp": 259.20000000000005,
+          "attackCount": 8
+        }
+      ]
+    }
+  },
+  "healingDiagnostics": [
+    {
+      "name": "leaf4_starter_cannot_heal_other_slots",
+      "leafSlot": 4,
+      "skills": [
+        "reach",
+        "doubleHeal"
+      ],
+      "stimulus": {
+        "injuredSlots": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "ratio": 0.5,
+        "deadSlot": null,
+        "spawnDelaySeconds": 1000,
+        "ticks": 1
+      },
+      "before": [
+        {
+          "slot": 1,
+          "hp": 344.0640000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 129.60000000000002,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 144,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 134.4,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "after": [
+        {
+          "slot": 1,
+          "hp": 344.0640000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 129.60000000000002,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 144,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 134.4,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "healEvents": [],
+      "skillActivations": {
+        "reach": 1
+      },
+      "cooldowns": {}
+    },
+    {
+      "name": "leaf2_starter_heals_slot1_and_slot3",
+      "leafSlot": 2,
+      "skills": [
+        "reach",
+        "doubleHeal"
+      ],
+      "stimulus": {
+        "injuredSlots": [
+          1,
+          3
+        ],
+        "ratio": 0.5,
+        "deadSlot": null,
+        "spawnDelaySeconds": 1000,
+        "ticks": 1
+      },
+      "before": [
+        {
+          "slot": 1,
+          "hp": 344.0640000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 129.60000000000002,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 288,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 268.8,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "after": [
+        {
+          "slot": 1,
+          "hp": 357.5040000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 168.00000000000003,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 288,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 268.8,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "healEvents": [
+        {
+          "id": 2,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-2",
+          "targetId": "crystal-3",
+          "amount": 38.400000000000006,
+          "x": 3,
+          "z": 1
+        },
+        {
+          "id": 3,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-2",
+          "targetId": "stone-1",
+          "amount": 13.440000000000001,
+          "skillId": "doubleHeal",
+          "x": -5,
+          "z": 1
+        }
+      ],
+      "skillActivations": {
+        "reach": 1,
+        "doubleHeal": 1
+      },
+      "cooldowns": {}
+    },
+    {
+      "name": "leaf4_greatHeal_global_below60",
+      "leafSlot": 4,
+      "skills": [
+        "reach",
+        "doubleHeal",
+        "greatHeal"
+      ],
+      "stimulus": {
+        "injuredSlots": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "ratio": 0.5,
+        "deadSlot": null,
+        "spawnDelaySeconds": 1000,
+        "ticks": 1
+      },
+      "before": [
+        {
+          "slot": 1,
+          "hp": 344.0640000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 129.60000000000002,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 144,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 134.4,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "after": [
+        {
+          "slot": 1,
+          "hp": 428.5440000000001,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 214.08000000000004,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 228.48000000000002,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 218.88000000000002,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "healEvents": [
+        {
+          "id": 1,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "stone-1",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": -5,
+          "z": 1
+        },
+        {
+          "id": 2,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "crystal-2",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": -1,
+          "z": 1
+        },
+        {
+          "id": 3,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "spike-3",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": 3,
+          "z": 1
+        },
+        {
+          "id": 4,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "bubble-5",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": 6,
+          "z": -1
+        }
+      ],
+      "skillActivations": {
+        "reach": 1,
+        "greatHeal": 1
+      },
+      "cooldowns": {
+        "greatHeal": 561
+      }
+    },
+    {
+      "name": "leaf4_greatHeal_not_at_exact60",
+      "leafSlot": 4,
+      "skills": [
+        "reach",
+        "doubleHeal",
+        "greatHeal"
+      ],
+      "stimulus": {
+        "injuredSlots": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "ratio": 0.6,
+        "deadSlot": null,
+        "spawnDelaySeconds": 1000,
+        "ticks": 1
+      },
+      "before": [
+        {
+          "slot": 1,
+          "hp": 412.87680000000006,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 155.52,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 172.79999999999998,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 161.28,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "after": [
+        {
+          "slot": 1,
+          "hp": 412.87680000000006,
+          "maxHp": 688.1280000000002,
+          "alive": true
+        },
+        {
+          "slot": 2,
+          "hp": 155.52,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 172.79999999999998,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 161.28,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "healEvents": [],
+      "skillActivations": {
+        "reach": 1
+      },
+      "cooldowns": {}
+    },
+    {
+      "name": "leaf4_greatHeal_does_not_revive",
+      "leafSlot": 4,
+      "skills": [
+        "reach",
+        "doubleHeal",
+        "greatHeal"
+      ],
+      "stimulus": {
+        "injuredSlots": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "ratio": 0.5,
+        "deadSlot": 1,
+        "spawnDelaySeconds": 1000,
+        "ticks": 1
+      },
+      "before": [
+        {
+          "slot": 1,
+          "hp": 0,
+          "maxHp": 688.1280000000002,
+          "alive": false
+        },
+        {
+          "slot": 2,
+          "hp": 129.60000000000002,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 144,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 134.4,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "after": [
+        {
+          "slot": 1,
+          "hp": 0,
+          "maxHp": 688.1280000000002,
+          "alive": false
+        },
+        {
+          "slot": 2,
+          "hp": 214.08000000000004,
+          "maxHp": 259.20000000000005,
+          "alive": true
+        },
+        {
+          "slot": 3,
+          "hp": 228.48000000000002,
+          "maxHp": 288,
+          "alive": true
+        },
+        {
+          "slot": 4,
+          "hp": 345.6,
+          "maxHp": 345.6,
+          "alive": true
+        },
+        {
+          "slot": 5,
+          "hp": 218.88000000000002,
+          "maxHp": 268.8,
+          "alive": true
+        }
+      ],
+      "healEvents": [
+        {
+          "id": 1,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "crystal-2",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": -1,
+          "z": 1
+        },
+        {
+          "id": 2,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "spike-3",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": 3,
+          "z": 1
+        },
+        {
+          "id": 3,
+          "tick": 1,
+          "type": "heal",
+          "sourceId": "leaf-4",
+          "targetId": "bubble-5",
+          "amount": 84.48000000000002,
+          "skillId": "greatHeal",
+          "x": 6,
+          "z": -1
+        }
+      ],
+      "skillActivations": {
+        "reach": 1,
+        "greatHeal": 1
+      },
+      "cooldowns": {
+        "greatHeal": 561
+      }
+    }
+  ]
+}

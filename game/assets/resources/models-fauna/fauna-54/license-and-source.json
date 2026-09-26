@@ -1,0 +1,43 @@
+{
+  "key": "fauna-54",
+  "name": "红帆女船长",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Anne",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\anne-2096f2\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/f33fe1da7f98e11206fcd18c010834d619e0bf74d1ae73abafc3fc900073a79a_Anne.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "03582d8a64b2fb2e78cea6e9b146a7ad36c97b67c27670e232dd6d828ed569e8",
+  "bytes": 1610180,
+  "animations": 14,
+  "displayName": "红帆女船长",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 82492,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-54",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 9.6
+}

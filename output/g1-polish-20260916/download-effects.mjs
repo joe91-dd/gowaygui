@@ -1,0 +1,11 @@
+import https from 'node:https';
+import fs from 'node:fs';
+import {pipeline} from 'node:stream/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const base=path.join(path.dirname(fileURLToPath(import.meta.url)),'cc0-effects');
+const url='https://opengameart.org/sites/default/files/blender-volumetric-particles-effects.zip';
+const response=await new Promise((resolve,reject)=>{https.get(url,{timeout:180000},r=>{if(r.statusCode===200)resolve(r);else{r.resume();reject(Error('HTTP '+r.statusCode));}}).on('error',reject);});
+await pipeline(response,fs.createWriteStream(path.join(base,'rubberduck-volumetric.zip')));
+fs.writeFileSync(path.join(base,'LICENSE-and-source.json'),JSON.stringify({name:'25 special effects rendered with Blender',author:'rubberduck',license:'CC0 1.0',source:'https://opengameart.org/content/25-special-effects-rendered-with-blender',download:url,checked:'2026-09-16',usage:'Adapted flame, ice/magic and impact sequences; retain original source archive'},null,2));
+console.log('FREE_EFFECTS_DOWNLOADED',fs.statSync(path.join(base,'rubberduck-volumetric.zip')).size);

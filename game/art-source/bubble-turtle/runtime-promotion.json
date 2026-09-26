@@ -1,0 +1,68 @@
+{
+  "status": "Promoted exact three files and wired BattleWorld; awaiting root's unified Cocos build and actual runtime review.",
+  "createdUtc": "2026-09-08T12:51:39.885810+00:00",
+  "files": [
+    {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+      "destination": "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx",
+      "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+      "bytes": 2573804
+    },
+    {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+      "destination": "game/assets/resources/models/bubble-turtle/bubble-colour.png",
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "bytes": 972370
+    },
+    {
+      "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+      "destination": "game/assets/resources/models/bubble-turtle/bubble-roughness.png",
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "bytes": 22011
+    }
+  ],
+  "sourceFreeze": "game/art-source/bubble-turtle/source-freeze.json",
+  "sourceFreezeSha256": "5d6d28a4000e8b1f645cc450f275a19534e73e3a6866d256a0d47c3917591135",
+  "protectedSourceFilesVerified": 67,
+  "sourceProposal": "game/art-source/bubble-turtle/promotion-manifest.json",
+  "sourceProposalSha256": "4ff9379815ac525b5a93591791cd421acf457d6297eb64c32f5cd62443bdad49",
+  "previousFrozenManifestsModified": false,
+  "model": {
+    "path": "models/bubble-turtle/bubble-turtle/bubble-turtle",
+    "materialPrefix": "BubbleAtlas_",
+    "materialName": "BubbleAtlas_01",
+    "scale": 0.65,
+    "healthbarHeight": 1.29,
+    "controlHeight": 1.22,
+    "expectedForward": "+Z",
+    "up": "+Y",
+    "footY": 0
+  },
+  "changes": [
+    "BattleWorld.ts: bubble model spec added to the existing role loader and material-prefix list.",
+    "battle-world-models.test.cjs: bubble path, prefix, six actual durations and pending-model fixture entry.",
+    "Added one lifecycle scenario covering late paused load, bubble control area target, shield display, paused rest, and cleanup isolated from the leaf model/material."
+  ],
+  "validation": {
+    "focused": {
+      "file": "game/tests/battle-world-models.test.cjs",
+      "passed": 34,
+      "failed": 0,
+      "exitCode": 0
+    },
+    "cocosTypeScript": {
+      "command": "tsc --noEmit -p game/tsconfig.json",
+      "compiler": "Cocos Creator 3.8.8 bundled TypeScript",
+      "exitCode": 0
+    },
+    "allSourceAndDestinationBytesEqual": true,
+    "noMetaFilesCreated": true,
+    "fullSuiteRun": false,
+    "cocosBuildRun": false,
+    "blenderRun": false,
+    "gitCommitCreated": false
+  },
+  "runtime_written": true,
+  "meta_written": false,
+  "cocos_import_verified": false
+}

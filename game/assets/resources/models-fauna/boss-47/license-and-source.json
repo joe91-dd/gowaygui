@@ -1,0 +1,36 @@
+{
+  "id": "gold-5",
+  "name": "流光海凰君",
+  "tier": 5,
+  "index": 47,
+  "base": 26,
+  "key": "boss-47",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 28784,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-26",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/d9765199b521d00d906ec18017e03bdd83b73119b9958ba63e5d6c862fd63ffb_Pigeon.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.2
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-15",
+  "name": "影刃潜行者",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Ninja",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\ninja-3e60c4\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/f04621c7ae1fbafef332c3023d99b7d46a2aa7f8a414918bb4b33bc2c9748359_Ninja.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "6443891355a8b2e58184316a7f887a41824f563babbcc91eb82c50a6546e970b",
+  "bytes": 147988,
+  "animations": 8,
+  "displayName": "影刃潜行者",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 15264,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-15",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.8
+}

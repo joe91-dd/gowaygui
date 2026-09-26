@@ -1,0 +1,36 @@
+{
+  "id": "reef-pirate",
+  "name": "裂礁钳卫",
+  "tier": 0,
+  "index": 0,
+  "base": 50,
+  "key": "boss-00",
+  "ability": "breakwater",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 56132,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-50",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e99324137bf573e5320c51610bdb87ee898231208bf04b3d937ce138603a05f3_Orc.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24668,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.3
+}

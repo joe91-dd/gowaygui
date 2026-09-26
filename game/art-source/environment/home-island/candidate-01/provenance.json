@@ -1,0 +1,138 @@
+{
+  "status": "first-actual-offline-candidate-awaiting-root-image-review",
+  "recordedAtUtc": "2026-09-08T12:30:36.677692+00:00",
+  "runtimePromoted": false,
+  "coreViewsResourcesModified": false,
+  "geometry": {
+    "triangles": 33569,
+    "meshes": 3,
+    "materials": 2,
+    "editableMeshes": 757,
+    "boundsCocos": {
+      "min": [
+        -7.505000114440918,
+        -1.0649992227554321,
+        -4.322445392608643
+      ],
+      "max": [
+        6.586040019989014,
+        4.285477161407471,
+        4.419971466064453
+      ]
+    },
+    "displaySurfaceY": 0.16
+  },
+  "checks": {
+    "fbxReimport": "pass",
+    "actualFootRays": 372240,
+    "editablePackedSource": "pass",
+    "noCharactersInEnvironmentFbx": true,
+    "renderCount": 2,
+    "renderReferences": [
+      "stone",
+      "spike",
+      "crystal",
+      "leaf"
+    ],
+    "bubble": "reserved empty only"
+  },
+  "firstPassCorrections": [
+    "Blender tessellator index return handled before first successful export.",
+    "Actual reserved right display full-foot support collided with wide window ledge; facade windows/ledges kept inside house shoulder, display positions and turtle scale unchanged."
+  ],
+  "limitations": [
+    "Planning projection boxes do not prove complete mesh/animation/UI silhouette safety.",
+    "Four reference characters exist only in review scene, never baked into environment FBX.",
+    "No Cocos import, performance, UI-layout or resource-lifecycle acceptance in this subtask."
+  ],
+  "files": {
+    "author_home_candidate.py": {
+      "sha256": "2cfe9de2184c87719b6d8a7ead7d3c0be724d68c3f9f5448d5490be09460e3b3",
+      "bytes": 2675
+    },
+    "build_home_island.py": {
+      "sha256": "e7e523f35c7d7a79a02518a4cd661af899c46f2901f17f5476a799aefece24ef",
+      "bytes": 26364
+    },
+    "home_composition.py": {
+      "sha256": "def70038829a4efdfee8a3eba2f53a3c4b0764872850789784f95d0e1ea11c8d",
+      "bytes": 15607
+    },
+    "prepare_home_layout.py": {
+      "sha256": "2fbb64c7f783b45572258db43b17122a1a11115949f4a96e98eaa76a5b4a18d2",
+      "bytes": 7790
+    },
+    "layout-proposal.json": {
+      "sha256": "b1a5a369186b48a4ce1129bd86dd5ce18c2017e185cb7589eb76d04c2c80a473",
+      "bytes": 10232
+    },
+    "layout-proposal.svg": {
+      "sha256": "df9978ead87acc489e1e3d35c6b4c3adf9f248dbcd678307cad321e36eca1bb9",
+      "bytes": 3653
+    },
+    "layout-proposal.png": {
+      "sha256": "bc52f1852c7aab53f194c1f569cae4b62b3ce77bf47493257c2d986606b5636f",
+      "bytes": 104439
+    },
+    "module-authorship.json": {
+      "sha256": "0bd7e08ed68fe1f2196823f6bc90eeb2366ac4372671caef2eabbd3780256bea",
+      "bytes": 830
+    },
+    "home-island.blend": {
+      "sha256": "cc1df4cee25766ce51ca69210a6074c6ada4e391bcef450c159c476397c75def",
+      "bytes": 8821580
+    },
+    "home-island.fbx": {
+      "sha256": "0c73b77cefa52a26da9b3c4fd751bb42573eff431859bea02342164b07a5b6af",
+      "bytes": 3690700
+    },
+    "home-island-review-scene.blend": {
+      "sha256": "832ac4bc62e41b6eb22d1ae2cd23ff9c9a4ded4288c239cb027fd1ee3d3a4041",
+      "bytes": 5116116
+    },
+    "home-island-scale-review.blend": {
+      "sha256": "2882c4b9ea6a5a8f1a759748e3dc57ad1b05af4297697b2ca15cea7f3ef48686",
+      "bytes": 25460847
+    },
+    "island-colour.png": {
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+      "bytes": 2727591
+    },
+    "island-roughness.png": {
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+      "bytes": 40385
+    },
+    "environment-manifest.json": {
+      "sha256": "b5fdb72db29c870bab2133c14f9a74beaf2ce6d224a7366f600fa3d19654d21a",
+      "bytes": 3426
+    },
+    "round-trip-and-support.json": {
+      "sha256": "0789533d22b23dc31ec02c9e2ee5fb525fa906dbee6a90fc6e220ec013a53bf8",
+      "bytes": 2857
+    },
+    "rejected-initial-support.json": {
+      "sha256": "01230d2f99aa34ad139f8d7983e5d39a3024346bbc16514ec716b11ef0dcb50b",
+      "bytes": 6033
+    },
+    "verify_home_island.py": {
+      "sha256": "97b7222ee7c0e9c06954015b124f3fe653d9a637d13eedd676b6fd0183d5e69f",
+      "bytes": 4166
+    },
+    "render_home_views.py": {
+      "sha256": "8e381362692f8a428f4a5310d32aaf25f14de958bf2d2d34bed1d891553daeed",
+      "bytes": 4660
+    },
+    "render-report.json": {
+      "sha256": "4a18a6f774cb441785b6742765bc52f9de3b7f2919de28c9947c9eb154ff267a",
+      "bytes": 2614
+    },
+    "render-home-overview.png": {
+      "sha256": "1bb363ab058cf2bcb43c23d791c5afc9cce40940219e9b22b2be6cc61246331d",
+      "bytes": 914931
+    },
+    "render-house-detail.png": {
+      "sha256": "f6822c5613e8caf804a07712ef7d4809b8c63c48883149f86b3d5a216ccb3752",
+      "bytes": 1034747
+    }
+  }
+}

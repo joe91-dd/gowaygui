@@ -1,0 +1,43 @@
+{
+  "key": "fauna-09",
+  "name": "毒冠菌王",
+  "kind": "snail",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Mushnub Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\mushnub-evolved-728c92\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/591eb2e707a6f06a575989a57d6e183f39b0731b981820793db4dd1c17a696ad_Mushnub Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "1a88125f8a4fcdb72df536accfa618abaa46e29dc211222807ff846a772818fd",
+  "bytes": 175108,
+  "animations": 8,
+  "displayName": "毒冠菌王",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 20736,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-09",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.6
+}

@@ -1,0 +1,21 @@
+{
+  "asset": "hero-crystal.png",
+  "status": "production UI raster; verified real transparent alpha",
+  "createdDate": "2026-09-10",
+  "tool": "built-in image_gen.imagegen, fresh generation with text description after reference-based transparency attempts failed",
+  "visualReferenceInspected": "C:/Users/Administrator/Desktop/龟/04_五角色正式设定.png.png",
+  "referenceRegion": "third column, sea mage 珊歌",
+  "generatedOriginal": "C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-9e891a06-5882-4724-8786-4ef293e888eb.png",
+  "productionPath": "game/assets/resources/art-v2/hero-crystal.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "alphaRange": [0, 255],
+  "fullyTransparentPixels": 925054,
+  "fourCornersTransparent": true,
+  "bytes": 1486674,
+  "sha256": "370f6b181f40118b1d2d930fe64e9457f667389057e4405301e9c9144034d567",
+  "prompt": "final-prompt.txt",
+  "postProcessing": "None. Original generated RGBA PNG copied unchanged.",
+  "visualReview": "Complete upright sea mage, staff and feet visible. Blue-white hood, gold-trimmed water swirls and aqua face preserve approved class identity. Fresh generation is a somewhat taller/slimmer interpretation than the approved small turtle body; this is a UI illustration, not a 3D model. Very faint low-alpha pixels extend beyond the main visible silhouette."
+}

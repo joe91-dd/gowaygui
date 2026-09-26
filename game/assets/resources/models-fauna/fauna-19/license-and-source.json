@@ -1,0 +1,43 @@
+{
+  "key": "fauna-19",
+  "name": "刺翼工蜂",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Armabee",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\armabee-10eded\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/5a652acc87095aeb88ac7f92e9df043d6ef1f5e9ac0afee15ac2372facd92e08_Armabee.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "1a97e56bfff091524e74f771fe47a57b9720fb91253f9114ac53180c9e8651f0",
+  "bytes": 274312,
+  "animations": 8,
+  "displayName": "刺翼工蜂",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 14296,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-19",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 3.8
+}

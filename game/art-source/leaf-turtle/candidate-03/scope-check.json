@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "non_leaf_meshes_exactly_preserved": 68,
+  "bone_layout_exactly_preserved": true,
+  "source_clip_inventory_and_ranges_preserved": true,
+  "source_actions": {
+    "attack": [
+      1.0,
+      27.0
+    ],
+    "fusion": [
+      1.0,
+      60.0
+    ],
+    "hit": [
+      1.0,
+      18.0
+    ],
+    "idle": [
+      1.0,
+      72.0
+    ],
+    "rest": [
+      1.0,
+      72.0
+    ],
+    "skill": [
+      1.0,
+      42.0
+    ]
+  },
+  "full_preview_lights_camera_world_identical": true,
+  "both_packed_atlases_retained": true,
+  "external_atlas_png_bytes_identical": true,
+  "c01_c02_and_frozen_runtime_bytes_preserved": true,
+  "six_animation_reexport_performed": false,
+  "full_half_frame_or_runtime_qa_performed": false,
+  "runtime_written": false,
+  "cocos_started": false
+}

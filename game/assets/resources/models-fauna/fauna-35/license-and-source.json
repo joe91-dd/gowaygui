@@ -1,0 +1,40 @@
+{
+  "key": "fauna-35",
+  "name": "噬浪巨鲨",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Shark",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\shark-e40f8d\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Animal/Shark/faa36d6ea8fb228bb6415ad7958732439803ff83af4997a7e0173998863ff8c0_Shark.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "622e472d0bf03424d39d36e4801f1ff4fa711e3607d1fd65ac45eeadb189865f",
+  "bytes": 537952,
+  "animations": 3,
+  "displayName": "噬浪巨鲨",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 40240,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-35",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "exit"
+  ],
+  "seconds": 4.6
+}

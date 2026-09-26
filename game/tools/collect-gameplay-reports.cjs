@@ -1,0 +1,17 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'../..'),reports=path.join(root,'docs/reports');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const build=read(path.join(root,'game/temp/build-logs/latest-build.json'));
+const hash=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'game/build/web-mobile/assets/main/index.js'))).digest('hex');
+if(build.status!=='passed'||!build.builtCorePassed||build.bundleSha256!==hash)throw new Error('Latest build is not verified');
+const tests=fs.readFileSync(path.join(root,'game/temp/latest-gameplay-tests.log'),'utf8');
+if(!/ℹ fail 0\s/.test(tests)||!tests.includes('ℹ tests 427'))throw new Error('Expected full current test run');
+fs.copyFileSync(build.builtCoreReport,path.join(reports,'gameplay-built.json'));
+fs.copyFileSync(path.join(root,'game/temp/build-logs/latest-build.json'),path.join(reports,'gameplay-cocos-build.json'));
+fs.writeFileSync(path.join(reports,'gameplay-tests.txt'),tests);
+fs.copyFileSync(path.join(root,'game/temp/multifront-balance.json'),path.join(reports,'gameplay-balance.json'));
+const {packBookOdds,SHOP_PACKS}=require('../.test-build/core/shop.js');
+const {SKILL_BY_ID}=require('../.test-build/core/data.js');
+const odds={packages:SHOP_PACKS.map(p=>({...p,price:p.price*1000})),bookRandom:packBookOdds('bookRandom').map(p=>({...p,name:SKILL_BY_ID[p.skillId].name})),bookAttack:packBookOdds('bookAttack').map(p=>({...p,name:SKILL_BY_ID[p.skillId].name}))};
+fs.writeFileSync(path.join(reports,'gameplay-book-odds.json'),JSON.stringify(odds,null,2));
+console.log(JSON.stringify({tests:427,bundleSha256:hash,reports}));

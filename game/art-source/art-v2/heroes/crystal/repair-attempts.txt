@@ -1,0 +1,13 @@
+Two targeted built-in image generation transparency repair attempts were made on 2026-09-10. Both returned RGB images with a baked gray-and-white checkerboard and no alpha channel. They are not approved for production and no hero-crystal.png resource was published.
+
+Attempt 1 generated original:
+C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-ab739295-7cd9-482e-82fc-53d4520c8cdf.png
+
+Prompt:
+Use case: background-extraction. Edit target: the provided single sea turtle mage image. Remove the gray-and-white checkerboard background COMPLETELY and produce a real transparent PNG with a true alpha channel. Transparency means actual alpha-zero pixels, not depicting transparency with any drawn checkerboard. Preserve exactly the original single character identity, pose, clothes, colors, staff, full body, edges and water spiral. No added background, no shadow, no ground plane, no pedestal. Keep entire mage, staff and all feet visible within a square canvas with margin. The final background must genuinely have transparent alpha=0 around the opaque character, including gaps between arms and body and inside the staff fork. Do not render a checkerboard or colored matte. This is an actual production cutout sprite for compositing.
+
+Attempt 2 generated original:
+C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-86bbf31d-01c8-4bd3-b027-2fac6ce60afd.png
+
+Prompt:
+Background removal / transparent cutout editing task. Return the attached SEA MAGE TURTLE as a TRANSPARENT PNG file, not a picture on a checkerboard. The existing gray checkerboard is unwanted background pixels. Erase those background pixels, retaining only the turtle character with all her staff, clothes, feet, and blue water spiral. Requested PNG color mode: RGBA; alpha 0 for the entire surrounding empty area, alpha 255 for the character, and partial alpha only at fine cutout edges. Preserve the character image, pose, color and shape. No scene or floor. No new shapes or graphics. No checkerboard pattern in output RGB channels, no white background, no beige background. Actual invisible alpha background is essential for a game sprite. Do not simulate transparency visually; use true transparent-background image output.

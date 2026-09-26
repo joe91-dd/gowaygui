@@ -1,0 +1,140 @@
+{
+  "imageWidth": 1983,
+  "imageHeight": 793,
+  "coordinateOrigin": "top-left",
+  "units": "native pixels",
+  "cropPurpose": "Square sprite extraction coordinates; runtime may trim transparent margins; no pixels were cropped or altered in saved atlas.",
+  "frames": [
+    {
+      "quality": "silver",
+      "crop": {
+        "x": 28,
+        "y": 170,
+        "width": 384,
+        "height": 384
+      },
+      "contentRectLocal": {
+        "x": 84,
+        "y": 96,
+        "width": 216,
+        "height": 192
+      },
+      "contentInsets": {
+        "left": 84,
+        "top": 96,
+        "right": 84,
+        "bottom": 96
+      },
+      "centerAlpha": 0,
+      "contentAlphaRange": [
+        0,
+        1
+      ]
+    },
+    {
+      "quality": "green",
+      "crop": {
+        "x": 414,
+        "y": 170,
+        "width": 384,
+        "height": 384
+      },
+      "contentRectLocal": {
+        "x": 84,
+        "y": 96,
+        "width": 216,
+        "height": 192
+      },
+      "contentInsets": {
+        "left": 84,
+        "top": 96,
+        "right": 84,
+        "bottom": 96
+      },
+      "centerAlpha": 0,
+      "contentAlphaRange": [
+        0,
+        1
+      ]
+    },
+    {
+      "quality": "blue",
+      "crop": {
+        "x": 800,
+        "y": 170,
+        "width": 384,
+        "height": 384
+      },
+      "contentRectLocal": {
+        "x": 84,
+        "y": 97,
+        "width": 216,
+        "height": 192
+      },
+      "contentInsets": {
+        "left": 84,
+        "top": 97,
+        "right": 84,
+        "bottom": 95
+      },
+      "centerAlpha": 0,
+      "contentAlphaRange": [
+        0,
+        1
+      ]
+    },
+    {
+      "quality": "purple",
+      "crop": {
+        "x": 1186,
+        "y": 170,
+        "width": 384,
+        "height": 384
+      },
+      "contentRectLocal": {
+        "x": 83,
+        "y": 97,
+        "width": 216,
+        "height": 192
+      },
+      "contentInsets": {
+        "left": 83,
+        "top": 97,
+        "right": 85,
+        "bottom": 95
+      },
+      "centerAlpha": 0,
+      "contentAlphaRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "quality": "orange",
+      "crop": {
+        "x": 1572,
+        "y": 170,
+        "width": 384,
+        "height": 384
+      },
+      "contentRectLocal": {
+        "x": 83,
+        "y": 96,
+        "width": 216,
+        "height": 192
+      },
+      "contentInsets": {
+        "left": 83,
+        "top": 96,
+        "right": 85,
+        "bottom": 96
+      },
+      "centerAlpha": 0,
+      "contentAlphaRange": [
+        0,
+        1
+      ]
+    }
+  ],
+  "note": "Transparent portrait holes verified. Four holes include extremely faint alpha1 pixels (less than0.4% opacity), centers allalpha0. Border shapes are slightly wider than tall but square crops retain correct aspect and all substantive artwork. No opaque fill."
+}

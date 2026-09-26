@@ -1,0 +1,9 @@
+{
+  "status": "verified-c12b-runtime-candidate-not-final-art",
+  "runtime_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "runtime_fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "c11_archive_verified": true,
+  "canonical_v10_source_preserved": true,
+  "frozen_sources_verified": true,
+  "meta_byte_changes_since_promotion": []
+}

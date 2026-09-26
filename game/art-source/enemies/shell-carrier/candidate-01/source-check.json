@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "files": {
+    "shell-carrier.blend": {
+      "sha256": "ac5703ed0fad4626566ed307522ab580d8d7dbabbb0cb9815fbf8829a0b413d3",
+      "packed_images": [
+        "ShellCarrier_Colour_512",
+        "ShellCarrier_Roughness_512"
+      ],
+      "skinned_meshes": 31,
+      "walking_legs": 8,
+      "editable_parts": 31,
+      "carried_fan_dimensions": [
+        1.0865536332130432,
+        0.29169367253780365,
+        0.6703512668609619
+      ],
+      "eye_vertices": {
+        "Spherical_painted_eye_L": 482,
+        "Spherical_painted_eye_R": 482
+      }
+    },
+    "shell-carrier-review-scene.blend": {
+      "sha256": "33bbd25f209d41663cbbfae9f115e638ae277009b4ad66286cb24f97b27b3f99",
+      "packed_images": [
+        "ShellCarrier_Colour_512",
+        "ShellCarrier_Roughness_512"
+      ],
+      "skinned_meshes": 1
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": "giant-claw-runtime-candidate-01",
+  "enemy_kind": "boss",
+  "display_name": "巨钳蟹",
+  "status": "isolated rigged runtime candidate; not copied to resources or finally accepted in Cocos",
+  "triangles": 21208,
+  "vertices": 10674,
+  "mesh_count": 1,
+  "material_count": 1,
+  "material_name": "GiantClaw_Toy_Atlas",
+  "bones": [
+    "root",
+    "body",
+    "leg_L1",
+    "leg_L2",
+    "leg_L3",
+    "leg_L4",
+    "leg_R1",
+    "leg_R2",
+    "leg_R3",
+    "leg_R4",
+    "claw_R",
+    "jaw_R",
+    "claw_L",
+    "jaw_L",
+    "eye_L",
+    "eye_R"
+  ],
+  "bone_count": 16,
+  "walking_legs": 8,
+  "clips": {
+    "idle": {
+      "name": "GiantClaw_Rig|idle",
+      "first": 1,
+      "last": 85,
+      "seconds": 2.8
+    },
+    "walk": {
+      "name": "GiantClaw_Rig|walk",
+      "first": 1,
+      "last": 37,
+      "seconds": 1.2
+    },
+    "attack": {
+      "name": "GiantClaw_Rig|attack",
+      "first": 1,
+      "last": 16,
+      "seconds": 0.5
+    },
+    "hit": {
+      "name": "GiantClaw_Rig|hit",
+      "first": 1,
+      "last": 16,
+      "seconds": 0.5
+    },
+    "exit": {
+      "name": "GiantClaw_Rig|exit",
+      "first": 1,
+      "last": 37,
+      "seconds": 1.2
+    }
+  },
+  "loops": [
+    "idle",
+    "walk"
+  ],
+  "bounds_blender_xyz": {
+    "min": [
+      -1.0748372077941895,
+      -0.7677403092384338,
+      0.0
+    ],
+    "max": [
+      1.3688597679138184,
+      0.5897020101547241,
+      1.2760032415390015
+    ]
+  },
+  "recommended_scale": 1.0,
+  "dimensions_blender_xyz": [
+    2.443696975708008,
+    1.357442319393158,
+    1.2760032415390015
+  ],
+  "forward": "Blender -Y/Z up; FBX -Z forward/Y up; expected Cocos +Z, actual importer not yet checked",
+  "fbx_sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+  "protected_reference_hashes": {
+    "game/art-source/enemies/giant-claw/candidate-01/asset-manifest.json": "52a6bd05cbf723197e161b772242e1cc23467b292f4e927de0d9071b559f8c0e",
+    "game/art-source/enemies/giant-claw/candidate-01/build.log": "3924119d73967e6a207c0b5a849f87cfe3abb4f3afbac9ec814da7e8fb6291e0",
+    "game/art-source/enemies/giant-claw/candidate-01/giant-claw-prototype.blend": "cd579fb4c56cf276d9a02dec9267a354e0442e4875683d0a7ae48de3704924e0",
+    "game/art-source/enemies/giant-claw/candidate-01/giant-claw-review-scene.blend": "29b9bb5161257f501dd249d8b3bfb965333716d2d668d79e9f7fbc481b4ce17c",
+    "game/art-source/enemies/giant-claw/candidate-01/model-stats.json": "2c811f95668ea0512bea55636ad83170be47d2113e0bc1f8ae3e2324b81f692b",
+    "game/art-source/enemies/giant-claw/candidate-01/package_prototype.py": "fcb523d2850d291c0050bbe628c2d8d63d8e1620e436e144bea52e53b0d0b0ce",
+    "game/art-source/enemies/giant-claw/candidate-01/README.md": "1fedeb1066082cd825f1deb6893fe799eea2660b6ad6c4489dc0a88b3c95de85",
+    "game/art-source/enemies/giant-claw/candidate-01/render-front.png": "1cd10fc410d8619a886bb79f6afb0dd2824d69c5755845da90b349d7ff9b813e",
+    "game/art-source/enemies/giant-claw/candidate-01/render-three-quarter.png": "a0879944861b6e78578a9288bc1ede9c1de1e3592fea2a14e95f3dfd8362c87f",
+    "game/art-source/enemies/giant-claw/candidate-01/review.html": "e6e3bec20eb9473a427f522dc46a7003ddea275514f603dbbc9702d16260cc9d",
+    "game/art-source/enemies/giant-claw/candidate-01/source-check.json": "75933a4e2e263ede8417c4295609361fcd5fa5dc2dcb15aac5406718205288cf",
+    "game/art-source/enemies/giant-claw/candidate-01/verification.log": "d31a84655c96198d2d3fc61d07d232cca011afa967864de39568cabfd205e329",
+    "game/art-source/enemies/giant-claw/candidate-01/verify_prototype.py": "cb30c70ee43d51afdf525d38e51c31c82625cea42da7c306a6b328498e8e9c56",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/build.log": "a790fda67d2c640943af9495395274a44c83e78da29fae928ff80f2377599845",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/build_giant_claw_prototype.py": "9c74ed4eef6e21c45b9782d2f75860d8b595af9b71f3dc27767b057fa5ac0541",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/giant-claw-prototype.blend": "561b1ba3dfcdb608ad8619550b0b09979767bae16aeca33849c52633c7a47e78",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/giant-claw-review-scene.blend": "c519aea14c6b12eea121f5ff9b54f66bcf0c0287a28d5ef2060691f102c5ba04",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/model-stats.json": "a0caf6e52cda0d58194e3dca877670d93400d8310b1655fca5f6111d59ebe6af",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/render-front.png": "ced814fefb0045602e1c313a4d3cb0a335d95b4fc211cc7401a198c45854dad4",
+    "game/art-source/enemies/giant-claw/candidate-01/iterations/before-finger-rounding/render-three-quarter.png": "3e3b1345a3f9f529fcfd2ca53600370e5e81d672231d692988112ff4448bc150",
+    "game/art-source/enemies/giant-claw/candidate-01/textures/giant-colour.png": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+    "game/art-source/enemies/giant-claw/candidate-01/textures/giant-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+    "game/art-source/enemies/build_giant_claw_prototype.py": "fbd899c445393b61485e3240d1ff47ba4f5c9c3a6746b012a6ed88dde612e648"
+  },
+  "source": "Approved project-original giant-claw c01 exact geometry/material, new single skeleton/weights and five authored actions. No external stock asset.",
+  "attack_contract": {
+    "interval_seconds": 1.8,
+    "range": 3,
+    "core_movement_pause_seconds": 0.3,
+    "attack_animation_seconds": 0.5,
+    "main_impulse_frame": 6,
+    "main_impulse_seconds": 0.16666666666666666,
+    "damage_timing": "core event tick; animation never schedules damage or cooldown",
+    "existing_special_events": "crabSlam every third attack; crabSummon once at half hp. No new attacks or extra skill take."
+  },
+  "skin_note": "Rigid body/eyes/claws, first four existing rings of each leg blend body->leg; distal stance rings explicitly grounded at authored keys",
+  "prototype_sha256": "cd579fb4c56cf276d9a02dec9267a354e0442e4875683d0a7ae48de3704924e0"
+}

@@ -1,0 +1,10 @@
+{
+  "olderSource": "c11",
+  "currentSource": "c12b",
+  "sameSolePoints": true,
+  "sameAllYawRadius": true,
+  "sameStrictContactRadius": true,
+  "sourceHashesDiffer": true,
+  "runtimeFbxHashesDiffer": true,
+  "note": "All actual measured REST-pose foot/toe vertex sets are equal although the complete source and runtime asset hashes differ. This is a foot geometry comparison only."
+}

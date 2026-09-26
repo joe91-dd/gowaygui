@@ -1,0 +1,7 @@
+{
+  "left": "current v09",
+  "right": "isolated candidate v10",
+  "method": "Both real rigged meshes rendered in one Blender scene with one orthographic camera and shared studio lighting. No raster painting or compositing.",
+  "same_model_scale": true,
+  "runtime_assets_modified": false
+}

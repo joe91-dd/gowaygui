@@ -1,0 +1,43 @@
+{
+  "key": "fauna-07",
+  "name": "翡翠软泥",
+  "kind": "mist",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "GreenBlob",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\greenblob-eab6cc\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/ea2e8729301673806a85052a21008a98ea4b727e4c4c3734d2fad7f5cec9cef1_GreenBlob.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d0c7bfaab66c877eb241512dddf15759443e610c5fd4abeb169fba50315e04d8",
+  "bytes": 107340,
+  "animations": 8,
+  "displayName": "翡翠软泥",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 10804,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-07",
+  "triangles": 10804,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.4
+}

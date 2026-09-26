@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "status": "root-reviewed-c02-promoted-awaiting-Cocos",
+  "promotedAtUtc": "2026-09-08T14:00:47.260Z",
+  "approval": "Root opened the compact corner comparison, verified all c01 archive bytes and the original 18 tile bytes, then approved this exact four-radius extension.",
+  "sourceFreeze": {
+    "path": "game/art-source/ui/panels/candidate-02/source-freeze.json",
+    "sha256": "4efa29011c7cd70edba7fbbe4eb3a26d63751c335645cbcb02617448e02ffa5c",
+    "files": 78
+  },
+  "layout": {
+    "path": "game/art-source/ui/panels/candidate-02/layout.json",
+    "sha256": "81b059bd7d34fcf0bb9a3f6bba46f3e7d6bef91851a1a7d06403255e7b66e351"
+  },
+  "files": [
+    {
+      "source": "game/art-source/ui/panels/candidate-02/panels-atlas.png",
+      "destination": "game/assets/resources/ui/panels/panels-atlas.png",
+      "sha256": "79fe5dd948b2cfb703d94efe8239183c27ac895ede1db9206600adf88ca2c1e7",
+      "bytes": 49349
+    }
+  ],
+  "resourcePath": "ui/panels/panels-atlas",
+  "width": 512,
+  "height": 1536,
+  "sharedFrames": 30,
+  "sharedTextures": 1,
+  "metasOrUuidsAuthored": false,
+  "sourceModified": false,
+  "previousPromotion": "game/art-source/ui/panels/runtime-promotion-c01.json",
+  "pending": [
+    "Actual Cocos import and compact-corner sampling",
+    "Actual home/collection/battle interaction and resource cost"
+  ]
+}

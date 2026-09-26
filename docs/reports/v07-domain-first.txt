@@ -1,0 +1,23 @@
+✔ V07 newborn roles favor their own talent and can roll a perfect focus and growth; initial skill roles remain themed (358.9217ms)
+✔ V07 trained panel inheritance reaches combined four maximum talents and the exact preview distribution sums to one (92.8847ms)
+✔ V07 main/sub parents give 60/40 appearance; all passive skills transfer but only matching active can transfer (417.2333ms)
+✔ V07 books can teach a foreign passive, cannot teach foreign active, and keep the learned result after reload (9.3952ms)
+✔ V07 rebirth rolls once per wave; successful revival can later fall asleep and the sleep wave is fixed in saved state (9.0331ms)
+✔ V07 sleeping turtles stay unavailable through the exact wake wave when recreating battle (1.5253ms)
+✔ V07 stone blocks one enemy for three seconds rather than holding two indefinitely (2.2143ms)
+✔ V07 reward board is exactly two gold, two distinct foods and one book; pause, continued draws and discounted all-open are atomic (9.8697ms)
+✔ V07 failed gold draw purchase and failed storage write leave the board, wallet and RNG unchanged (2.722ms)
+✔ V07 local friends, AI chat, three assists, expired loans and battle-use loans survive restart without making permanent duplicates (41.2903ms)
+✔ V07 market escrow, transfers, taxes, cancellation and retries conserve coins and ownership (23.3368ms)
+✔ V07 rental daily five limits, same-body five limits and owner usage remain independent (82.5233ms)
+✔ V07 score ordering, hiding and fastest-progress ordering use saved arrivals and completed receipts (17.8336ms)
+✔ V07 five-person raid enforces owner priority, allows swaps with retained HP, checkpoints and settles once (41.0645ms)
+✔ V07 arena plays actual ordered turtles against defense, resumes deterministically, and persists rank or practice result once (132.2895ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1447.5159

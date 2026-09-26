@@ -1,0 +1,64 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 32,
+  "width": 1000,
+  "height": 700,
+  "views": [
+    {
+      "name": "battle-overview",
+      "positionCocos": [
+        0,
+        15,
+        18
+      ],
+      "targetCocos": [
+        0,
+        0.2,
+        0
+      ],
+      "projection": "PERSP",
+      "verticalFovDegrees": 51.067375845914185,
+      "orthoScale": null,
+      "seconds": 38.750856400001794,
+      "sha256": "2ea39acc34c98d5396179f8d73d6c33b6bccd780537fe9d60c068a183e0acbe3"
+    },
+    {
+      "name": "top-down",
+      "positionCocos": [
+        0,
+        28,
+        0
+      ],
+      "targetCocos": [
+        0,
+        0,
+        0
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 26.0,
+      "seconds": 38.372095400001854,
+      "sha256": "2b9bf591f20e08bfdd173c2b973e89b89a657322e5746bb3278e92083e0d47f4"
+    },
+    {
+      "name": "dusk-beacon-detail",
+      "positionCocos": [
+        13,
+        5,
+        3
+      ],
+      "targetCocos": [
+        8.3,
+        1,
+        -2.6
+      ],
+      "projection": "ORTHO",
+      "verticalFovDegrees": null,
+      "orthoScale": 7.0,
+      "seconds": 41.66111330000058,
+      "sha256": "c186f88477ca3ec820a5c00a3c4e7c2866e9ac72ae450bded22a0cef6773de95"
+    }
+  ]
+}

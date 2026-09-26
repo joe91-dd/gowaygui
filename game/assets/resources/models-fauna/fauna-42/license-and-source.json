@@ -1,0 +1,43 @@
+{
+  "key": "fauna-42",
+  "name": "毒沼猎手",
+  "kind": "snail",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Frog",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\frog-44bee5\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/c8ec849f39a3fc6cf66904e52047ff6ad5e9cb8963834207f056169fa4e39c0a_Frog.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "107faedb632c41c137820f90f8d2aed60cdfa24393ff214501ff602f51686b75",
+  "bytes": 1318452,
+  "animations": 14,
+  "displayName": "毒沼猎手",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 40156,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-42",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.6
+}

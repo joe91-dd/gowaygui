@@ -1,0 +1,10 @@
+{
+  "protected_files_unchanged": 35,
+  "clips": 6,
+  "round_trip": true,
+  "clearance_samples": 88,
+  "rendered_images": 6,
+  "threads": 4,
+  "samples": 32,
+  "status": "Independent candidate only; manual image review pending; no runtime promotion/FPS assertion."
+}

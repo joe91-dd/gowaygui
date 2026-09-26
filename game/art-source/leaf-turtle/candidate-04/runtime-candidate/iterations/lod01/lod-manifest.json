@@ -1,0 +1,1090 @@
+{
+  "status": "isolated runtime candidate, QA and review pending; not promoted",
+  "protected_inputs": {
+    "game\\art-source\\leaf-turtle\\candidate-01\\atlas-parameters.json": "6f209e4256e7df470ea8d31afaff0d653f716320ef5b5104d77f7b46bbe63fb6",
+    "game\\art-source\\leaf-turtle\\candidate-01\\candidate-manifest.json": "158f6aad8d2cc03412bf0e3e810e19fae478ec5c03875a3aaa90a3f0383ff252",
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle-review-scene.blend": "840b5a882a05346edef534d2a28d111445213b5eeaeb7e4cd7b683ba7adb7d41",
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle.blend": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df",
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle.glb": "37f3be5ee87bc32c2c631d47cd9d5a77928148d29b073795290124030c87de22",
+    "game\\art-source\\leaf-turtle\\candidate-01\\manual-review.json": "c61e2241021eec238d24afa6ac3d0f01161d1da2a6b12b23c9e71d2bb13ba71b",
+    "game\\art-source\\leaf-turtle\\candidate-01\\README.md": "0417c5a62be0a60e5df20da013c335e4b5713c0358def999cddad57c6a93bf22",
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-front.png": "600e7b5489a95cd80c928f8ccfdd51cef78496c7b477a6f7bd88171db38bad74",
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-side.png": "58e6d27a3ab24768d44ec8518513fc04a4b4d2e3240826180891be5bedf97a09",
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-three-quarter.png": "96b2605f5b847c36c73030f347f853947ec508f65ab59991f4b5b1fec419cd75",
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-colour.png": "5e28277b37e45bf3c69e1c9a10d7b89f0f8de4b636c3b0895d6725ca41a202f3",
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-turtle.fbx": "b1839d7450780cf3ea919269e8f6e49a902f40d91e92b54cc10cd8c7dcda91be",
+    "game\\art-source\\leaf-turtle\\candidate-01\\inputs\\authored-c12b-foundation.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game\\art-source\\leaf-turtle\\candidate-01\\inputs\\provenance.json": "a6adc2c12b38aff8ff582b131c13bb477d42907cf39c17fc5fd0a7018694bf73",
+    "game\\art-source\\leaf-turtle\\candidate-02\\atlas-parameters.json": "b378405d7a420d6c05ebcec611a4be742cdfe8741a724d4e720828eafde87ca0",
+    "game\\art-source\\leaf-turtle\\candidate-02\\candidate-manifest.json": "41528adaae0f2d5341bceea9f6ad225cbe177ae3b04f128149f517e6081fee34",
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle-review-scene.blend": "e8ee1c53a6a25440070dcc84c384928c43212fafd9bf0d5677f0d633289425df",
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle.blend": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e",
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle.glb": "9450996d19690c2fa8f06fdbe2a572483c5aa3c1f0c00f456ed922b10550160f",
+    "game\\art-source\\leaf-turtle\\candidate-02\\manual-review.json": "b141d8969de1ff6e5a8f25e1d330b3c3412fbe9d0e826fea857af8c7555ad744",
+    "game\\art-source\\leaf-turtle\\candidate-02\\README.md": "e5978a79ef2de4825f7e78ee0940c518c2044a670efae4b1878fec134fc63335",
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-front.png": "4d2f451faf5c7d9aed92cbe9cfbb7f973bc393ca1656fcd5d305a7f13c9f9151",
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-side.png": "3684cad9c44fc8e237469fddcb9ade040dd17291b0a7584fe9820905ca2e607b",
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-three-quarter.png": "0c671330d80da9c144b33ce44f5336ad733520799d2a4d7d7ac785fd9672387d",
+    "game\\art-source\\leaf-turtle\\candidate-02\\scope-check.json": "39c107ac96074f4b535df81b31d3e4e4c91391fd9d15eae29daf164982a10696",
+    "game\\art-source\\leaf-turtle\\candidate-02\\verify_candidate02_scope.py": "b0fdba8db8b406f2e0c98a3154b5a996424d6bdab98e42c5fce03e493e67a741",
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-turtle.fbx": "a8610fe8d010b0fcc1b6d16e371f509302fa6e8af42df6a4de82f9f816fee7bb",
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\authored-c12b-foundation.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\authored-leaf-c01.blend": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df",
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\provenance.json": "9b38fdc4b923f767c0a2871807c8f1005c2d85f48ed7ecfd7e8ab350ed98c018",
+    "game\\art-source\\leaf-turtle\\candidate-03\\candidate-manifest.json": "eace93fa69142aea3374c858bc8fef72ff4901cd26072e5d622cf1189df0473d",
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-preview.png": "baebcfaf991a14e5edcd5ad5e1b1be2a73b9250d0531d6f3fc6feffefd9e622e",
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-review-scene.blend": "588d3f9ec0c8f207a123bb1706ed2f957a87b15b88f3139e7d2ffa796ef345a2",
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-sample.blend": "f09250ff05eff4334bad83308d2c5ceffa872e69f11084941fa1d35af274dd54",
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-turtle-review-scene.blend": "96e48d01486344ae0b07939cf41ff6a7e94660039acae39b40a03d152aa05e0d",
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-turtle.blend": "0590bc0b07c6408715e421af98ee5a22a89f8713505fc7b7b4432da2d2ee80c5",
+    "game\\art-source\\leaf-turtle\\candidate-03\\manual-review.json": "dc145ddc7c036d03918403e38c5f601cf54eaf7bf8e1b28e24aa65e540c26d87",
+    "game\\art-source\\leaf-turtle\\candidate-03\\README.md": "8821f2ddf018aa3dd21fc5ab015ca51713576a9cd46d8bb68aeba380cfbfb45e",
+    "game\\art-source\\leaf-turtle\\candidate-03\\render-three-quarter.png": "7bb0baf74a843edbf9e7f915b63ea8031fb6cc1f881b8625243fbb8f5ea3eec5",
+    "game\\art-source\\leaf-turtle\\candidate-03\\sample-manifest.json": "e06a34dbd4202f8471fcfcb96d8989b600e7b92c46c756eb59b1c195d78f074c",
+    "game\\art-source\\leaf-turtle\\candidate-03\\scope-check.json": "84259d26fe4fa80891738bf11ef4b001cae84005bad43d23ad663a3d4926fdca",
+    "game\\art-source\\leaf-turtle\\candidate-03\\verify_scope.py": "fc6872c6709589e2ebaa6f3c1d91555317e2e5ba3f285019cf332a89da4d05a9",
+    "game\\art-source\\leaf-turtle\\candidate-03\\inputs\\authored-leaf-c02.blend": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e",
+    "game\\art-source\\leaf-turtle\\candidate-03\\inputs\\authored_leaf_c02_functions.py": "ddd3ec6b3ae28856ce397d1f43c7f7ae0f856ef5617d2da03125d8bde8b732ae",
+    "game\\art-source\\leaf-turtle\\candidate-03\\textures\\leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "game\\art-source\\leaf-turtle\\candidate-03\\textures\\leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-colour.png": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-roughness.png": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+    "game\\assets\\resources\\models\\spike-turtle\\spike-turtle.fbx": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+    "game\\assets\\resources\\models\\crystal-turtle\\crystal-colour.png": "8762633b9608f096b592f29db3d3d8cc12cda0ef247a53b2697e385f74f981e2",
+    "game\\assets\\resources\\models\\crystal-turtle\\crystal-roughness.png": "f84cf3281104c0baa61c5f03658db6c1ff1f1c9cfdcacef8943bccf1c20e10e5",
+    "game\\assets\\resources\\models\\crystal-turtle\\crystal-turtle.fbx": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+    "game\\art-source\\leaf-turtle\\candidate-04\\leaf-turtle.blend": "902faa81d3c99e5bd9bdf3f00d868d25a000eb9f0dfe802615eb17ea07a62986",
+    "game\\art-source\\leaf-turtle\\candidate-04\\leaf-turtle-review-scene.blend": "fcff5174a57a41c2baaf58874fcdae3f1e455a0cdeb730f686cf0faeb5b855b8",
+    "game\\art-source\\leaf-turtle\\candidate-04\\render-three-quarter.png": "526b72c479dd37ee7d1a62998dd940d27335e1511629c3b716a2a17dccb43687",
+    "game\\art-source\\build_leaf_turtle_candidate04.py": "716b5467b09e3172df3b5e25056aa9461383169018beabc71cfe3e5356096a7d"
+  },
+  "source_high_sha256": "902faa81d3c99e5bd9bdf3f00d868d25a000eb9f0dfe802615eb17ea07a62986",
+  "source_high_preview_sha256": "526b72c479dd37ee7d1a62998dd940d27335e1511629c3b716a2a17dccb43687",
+  "builder_sha256": "bc9b086ce9ec3e1e7479c622b1f680d9dff81b110ea7ccb8b74e7b6e63704efc",
+  "leaf_sampling": {
+    "rows": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      15,
+      16
+    ],
+    "columns": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      12,
+      13,
+      15,
+      17
+    ],
+    "original_grid": [
+      17,
+      18
+    ],
+    "method": "exact authored sample selection, no leaf decimation"
+  },
+  "leaf_surface_comparison": [
+    {
+      "name": "Layered_leaf_00",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009407146833837032,
+      "bounds_error_max_m": 0.0038534998893737793,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_01",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009326991625130177,
+      "bounds_error_max_m": 0.0036326050758361816,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_02",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009536374360322952,
+      "bounds_error_max_m": 0.0017374157905578613,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_03",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.00989190861582756,
+      "bounds_error_max_m": 0.00022745132446289062,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_04",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009702285751700401,
+      "bounds_error_max_m": 0.00010538101196289062,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_05",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009725525043904781,
+      "bounds_error_max_m": 0.005459427833557129,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_06",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010458351112902164,
+      "bounds_error_max_m": 0.005356311798095703,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_07",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009390749037265778,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_08",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.00984690897166729,
+      "bounds_error_max_m": 0.00023049116134643555,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_09",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010042259469628334,
+      "bounds_error_max_m": 0.004857540130615234,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_10",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.00922736432403326,
+      "bounds_error_max_m": 0.003999590873718262,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_11",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009245583787560463,
+      "bounds_error_max_m": 0.001072525978088379,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_12",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.00981837697327137,
+      "bounds_error_max_m": 0.0019119977951049805,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_13",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.009849700145423412,
+      "bounds_error_max_m": 0.002579629421234131,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_14",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010504618287086487,
+      "bounds_error_max_m": 0.0040213316679000854,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_15",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010737631469964981,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_16",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.0118344621732831,
+      "bounds_error_max_m": 0.0017344653606414795,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_17",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011416751891374588,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_18",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011343911290168762,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_19",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.012068631127476692,
+      "bounds_error_max_m": 0.0016848444938659668,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_20",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011653506197035313,
+      "bounds_error_max_m": 0.0007281899452209473,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_21",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.01107904501259327,
+      "bounds_error_max_m": 0.0002884864807128906,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_22",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011167031712830067,
+      "bounds_error_max_m": 0.002968728542327881,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_23",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011113623157143593,
+      "bounds_error_max_m": 0.0030976533889770508,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_24",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011430924758315086,
+      "bounds_error_max_m": 0.0006798505783081055,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_25",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011210714466869831,
+      "bounds_error_max_m": 0.000579833984375,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_26",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010512218810617924,
+      "bounds_error_max_m": 0.0028090476989746094,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_27",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011578154750168324,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_28",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011509944684803486,
+      "bounds_error_max_m": 0.0004417300224304199,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_29",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.012030789628624916,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_30",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011823835782706738,
+      "bounds_error_max_m": 0.0024357736110687256,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_31",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011579114012420177,
+      "bounds_error_max_m": 0.006306290626525879,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_32",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011497948318719864,
+      "bounds_error_max_m": 0.00037160515785217285,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_33",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011662434786558151,
+      "bounds_error_max_m": 9.608268737792969e-05,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_34",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011283713392913342,
+      "bounds_error_max_m": 0.004993639886379242,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_35",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.012209254316985607,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_36",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011506692506372929,
+      "bounds_error_max_m": 0.002794325351715088,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_37",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011712522245943546,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_38",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011378660798072815,
+      "bounds_error_max_m": 0.007495462894439697,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_39",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010989212431013584,
+      "bounds_error_max_m": 0.0028063952922821045,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_40",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011160011403262615,
+      "bounds_error_max_m": 0.0001704096794128418,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_41",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011664505116641521,
+      "bounds_error_max_m": 0.0022055506706237793,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_42",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011228431947529316,
+      "bounds_error_max_m": 0.00015157461166381836,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_43",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.011389649473130703,
+      "bounds_error_max_m": 0.00013720989227294922,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_44",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010780541226267815,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_45",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010784879326820374,
+      "bounds_error_max_m": 0.0031225383281707764,
+      "selected_vertex_positions_exact": true
+    },
+    {
+      "name": "Layered_leaf_46",
+      "source_triangles": 608,
+      "lod_triangles": 284,
+      "source_vertices_to_lod_surface_max_m": 0.010581268928945065,
+      "bounds_error_max_m": 0.0,
+      "selected_vertex_positions_exact": true
+    }
+  ],
+  "part_triangles": [
+    {
+      "name": "Torso",
+      "source_triangles": 1040,
+      "lod_triangles": 364
+    },
+    {
+      "name": "Warm_plastron",
+      "source_triangles": 720,
+      "lod_triangles": 252
+    },
+    {
+      "name": "Neck",
+      "source_triangles": 560,
+      "lod_triangles": 196
+    },
+    {
+      "name": "front_L_sculpt",
+      "source_triangles": 1248,
+      "lod_triangles": 436
+    },
+    {
+      "name": "front_L_toe_-1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_L_toe_0",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_L_toe_1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_L_flush_scale_0_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_0_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_0_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_1_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_1_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_2_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_2_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_L_flush_scale_2_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_sculpt",
+      "source_triangles": 1248,
+      "lod_triangles": 436
+    },
+    {
+      "name": "rear_L_toe_-1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "rear_L_toe_0",
+      "source_triangles": 192,
+      "lod_triangles": 80
+    },
+    {
+      "name": "rear_L_toe_1",
+      "source_triangles": 192,
+      "lod_triangles": 80
+    },
+    {
+      "name": "rear_L_flush_scale_0_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_0_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_0_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_1_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_1_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_2_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_2_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_L_flush_scale_2_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_sculpt",
+      "source_triangles": 1248,
+      "lod_triangles": 436
+    },
+    {
+      "name": "front_R_toe_-1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_R_toe_0",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_R_toe_1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "front_R_flush_scale_0_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_0_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_0_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_1_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_1_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_2_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_2_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "front_R_flush_scale_2_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_sculpt",
+      "source_triangles": 1248,
+      "lod_triangles": 436
+    },
+    {
+      "name": "rear_R_toe_-1",
+      "source_triangles": 192,
+      "lod_triangles": 80
+    },
+    {
+      "name": "rear_R_toe_0",
+      "source_triangles": 192,
+      "lod_triangles": 80
+    },
+    {
+      "name": "rear_R_toe_1",
+      "source_triangles": 192,
+      "lod_triangles": 78
+    },
+    {
+      "name": "rear_R_flush_scale_0_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_0_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_0_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_1_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_1_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_2_0",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_2_1",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "rear_R_flush_scale_2_2",
+      "source_triangles": 108,
+      "lod_triangles": 36
+    },
+    {
+      "name": "Tail",
+      "source_triangles": 336,
+      "lod_triangles": 116
+    },
+    {
+      "name": "Head_sculpt",
+      "source_triangles": 12160,
+      "lod_triangles": 4864
+    },
+    {
+      "name": "Eye_white_L",
+      "source_triangles": 1824,
+      "lod_triangles": 1458
+    },
+    {
+      "name": "Continuous_eyelid_L",
+      "source_triangles": 560,
+      "lod_triangles": 392
+    },
+    {
+      "name": "Nostril_L",
+      "source_triangles": 440,
+      "lod_triangles": 220
+    },
+    {
+      "name": "Eye_white_R",
+      "source_triangles": 1824,
+      "lod_triangles": 1458
+    },
+    {
+      "name": "Continuous_eyelid_R",
+      "source_triangles": 560,
+      "lod_triangles": 392
+    },
+    {
+      "name": "Nostril_R",
+      "source_triangles": 440,
+      "lod_triangles": 220
+    },
+    {
+      "name": "Gentle_inquisitive_brow_L",
+      "source_triangles": 404,
+      "lod_triangles": 242
+    },
+    {
+      "name": "Restrained_outer_eye_accent_L",
+      "source_triangles": 56,
+      "lod_triangles": 56
+    },
+    {
+      "name": "Gentle_inquisitive_brow_R",
+      "source_triangles": 404,
+      "lod_triangles": 242
+    },
+    {
+      "name": "Restrained_outer_eye_accent_R",
+      "source_triangles": 56,
+      "lod_triangles": 56
+    },
+    {
+      "name": "Warm_leaf_smile",
+      "source_triangles": 616,
+      "lod_triangles": 430
+    },
+    {
+      "name": "Small_shell_blossom_L_petals",
+      "source_triangles": 238,
+      "lod_triangles": 238
+    },
+    {
+      "name": "Small_shell_blossom_L_pollen",
+      "source_triangles": 30,
+      "lod_triangles": 30
+    },
+    {
+      "name": "Small_shell_blossom_R_petals",
+      "source_triangles": 238,
+      "lod_triangles": 238
+    },
+    {
+      "name": "Small_shell_blossom_R_pollen",
+      "source_triangles": 30,
+      "lod_triangles": 30
+    },
+    {
+      "name": "Leaf_shell_core",
+      "source_triangles": 1918,
+      "lod_triangles": 574
+    },
+    {
+      "name": "Layered_leaf_00",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_01",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_02",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_03",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_04",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_05",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_06",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_07",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_08",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_09",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_10",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_11",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_12",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_13",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_14",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_15",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_16",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_17",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_18",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_19",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_20",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_21",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_22",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_23",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_24",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_25",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_26",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_27",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_28",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_29",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_30",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_31",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_32",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_33",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_34",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_35",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_36",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_37",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_38",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_39",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_40",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_41",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_42",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_43",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_44",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_45",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    },
+    {
+      "name": "Layered_leaf_46",
+      "source_triangles": 608,
+      "lod_triangles": 284
+    }
+  ],
+  "triangles": 29256,
+  "vertices": 15248,
+  "bones": 10,
+  "materials": 1,
+  "uv_layers": 1,
+  "atlas_rebuilt_from_numeric_parameters": true,
+  "atlas_byte_identical_to_approved": true,
+  "atlas_sha256": {
+    "leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+  },
+  "fbx_sha256": "a11fa847c5b3bcea196aa27a512b82e0e1f6b334131b45792b01d261e9033c9c",
+  "lod_parts_sha256": "dff8637bde9fc5333f289052780e7952dc4da22908a48133da72afaee7be7e2c",
+  "runtime_source_sha256": "ba7b553a1e610ecd9e63ce0049d073d8c005a949cda12852e6e471d12ba79d81",
+  "packed_textures": 2,
+  "material_name": "LeafAtlas_01",
+  "material_prefix": "LeafAtlas_",
+  "forward_blender": "-Y",
+  "up_blender": "+Z",
+  "fbx_export_forward": "-Z",
+  "fbx_export_up": "+Y",
+  "cocos_expected_forward": "+Z",
+  "recommended_cocos_scale": 0.65,
+  "runtime_written": false,
+  "cocos_started": false
+}

@@ -1,0 +1,139 @@
+{
+  "fbx_sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+  "triangles": 29560,
+  "vertices": 15400,
+  "bones": [
+    "root",
+    "body",
+    "shell",
+    "neck",
+    "head",
+    "front_L",
+    "front_R",
+    "rear_L",
+    "rear_R",
+    "tail"
+  ],
+  "materials": [
+    "LeafAtlas_01"
+  ],
+  "uv_layers": 1,
+  "weights_normalized": true,
+  "closed_manifold_head_and_47_leaves": true,
+  "packed_source_textures": 2,
+  "atlas_rebuild_byte_identical": true,
+  "opaque_single_material_glb": true,
+  "rest_bounds_blender_xyz": {
+    "min": [
+      -1.1237103939056396,
+      -1.7167848348617554,
+      2.4166195711217142e-09
+    ],
+    "max": [
+      1.1237103939056396,
+      1.2736276388168335,
+      1.554671049118042
+    ],
+    "dimensions": [
+      2.2474207878112793,
+      2.990412473678589,
+      1.5546710467014224
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_unscaled": {
+    "min": [
+      -1.1237103939056396,
+      2.4166195711217142e-09,
+      -1.2736276388168335
+    ],
+    "max": [
+      1.1237103939056396,
+      1.554671049118042,
+      1.7167848348617554
+    ],
+    "dimensions": [
+      2.2474207878112793,
+      1.5546710467014224,
+      2.990412473678589
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_scale_065": {
+    "min": [
+      -0.7304117560386658,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7304117560386658,
+      1.0105361819267273,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4608235120773316,
+      1.0105361803559245,
+      1.943768107891083
+    ]
+  },
+  "clips": {
+    "idle": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|idle",
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "loop_recommended": true,
+      "max_vertex_motion_m": 0.02698546013090055,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "attack": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|attack",
+      "first": 1,
+      "last": 27,
+      "seconds": 0.8666666666666667,
+      "loop_recommended": false,
+      "max_vertex_motion_m": 0.0627222772492762,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "skill": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|skill",
+      "first": 1,
+      "last": 42,
+      "seconds": 1.3666666666666667,
+      "loop_recommended": false,
+      "max_vertex_motion_m": 0.0968936319913935,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -0.00024210377887357026
+    },
+    "hit": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|hit",
+      "first": 1,
+      "last": 18,
+      "seconds": 0.5666666666666667,
+      "loop_recommended": false,
+      "max_vertex_motion_m": 0.06793325406446475,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -0.0002383005921728909
+    },
+    "rest": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|rest",
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "loop_recommended": true,
+      "max_vertex_motion_m": 0.016665174816269508,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -0.00039186287904158235
+    },
+    "fusion": {
+      "fbx_name": "LeafTurtle_Rig|LeafTurtle_Rig|fusion",
+      "first": 1,
+      "last": 60,
+      "seconds": 1.9666666666666666,
+      "loop_recommended": false,
+      "max_vertex_motion_m": 0.2206868007802987,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -0.0001999827363761142
+    }
+  }
+}

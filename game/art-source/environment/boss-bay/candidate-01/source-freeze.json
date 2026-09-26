@@ -1,0 +1,15 @@
+{
+  "status": "frozen-source-approved-as-runtime-candidate",
+  "approvedBy": "Root agent after actually viewing final battle overview and top-down on 2026-09-08",
+  "scope": "Freeze source/provenance; do not promote runtime. Cocos acceptance is pending.",
+  "slot5": { "x": 6.62, "z": -1.31 },
+  "hashes": {
+    "provenance.json": "3a9974b9ef68df8a5f3a3c2211888fef9ccc328c6cab1a079db1b48bc983a62c",
+    "boss-bay.fbx": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+    "boss-bay.blend": "965efe74dfb7642aa4b95beec011f62544ccf04aa84ab28549b12a9eabe2fc02",
+    "island-colour.png": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+    "island-roughness.png": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+    "render-battle-overview.png": "26e4581b4a653342ac965f8ea6890cd8a4921cdfda5a9cc3b38e545d9c87f338",
+    "render-top-down.png": "f1f07734c1d835845227f7f439b407055fb7648d0b832cea91e341ce2026ca9f"
+  }
+}

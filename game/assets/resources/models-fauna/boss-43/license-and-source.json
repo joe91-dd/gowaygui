@@ -1,0 +1,36 @@
+{
+  "id": "gold-1",
+  "name": "弑月深海帝",
+  "tier": 5,
+  "index": 43,
+  "base": 7,
+  "key": "boss-43",
+  "ability": "breakwater",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 15504,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-07",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/ea2e8729301673806a85052a21008a98ea4b727e4c4c3734d2fad7f5cec9cef1_GreenBlob.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 15504,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.7
+}

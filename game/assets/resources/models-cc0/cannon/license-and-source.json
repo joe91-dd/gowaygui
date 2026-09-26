@@ -1,0 +1,23 @@
+{
+  "name": "Cannon",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\cannon-becba1\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Prop/d2502af609528e5e30018bdcec61330b9bdc62e1c33d947183fda5aa64473c64_Cannon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "0c4e36a371c26248e9c91bf08096d5248cdec157e813410b641086b9f3f2f403",
+  "bytes": 91640,
+  "animations": 0,
+  "runtimeKey": "cannon",
+  "height": 0.85,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 2362,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

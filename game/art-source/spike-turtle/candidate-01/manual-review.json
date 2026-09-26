@@ -1,0 +1,36 @@
+{
+  "status": "Frozen first candidate; parent requested a limited candidate-02 style revision. No runtime promotion.",
+  "all_eleven_images_viewed": true,
+  "images": [
+    "render-front.png", "render-three-quarter.png", "render-side.png", "render-battle.png",
+    "animation-attack-07-side.png", "animation-attack-11-three-quarter.png",
+    "animation-skill-18-three-quarter.png", "animation-skill-23-side.png",
+    "animation-hit-04-three-quarter.png", "animation-fusion-23-three-quarter.png",
+    "render-island-battle-context.png"
+  ],
+  "actual_review": "All listed rendered files were opened through view_image. No detached eyes or forward face-through-shell was visible in the inspected attack, skill and hit keyframes. Fusion shows the intended small jump.",
+  "technical_checks": {
+    "fbx_clips": 6, "triangles": 28900, "weighted_vertices": 15086, "bones": 10,
+    "materials": 1, "uv_layers": 1, "packed_source_textures": 2,
+    "atlas_rebuild_byte_identical": true, "front_face_clearance_half_frame_samples": 171,
+    "maximum_front_face_shell_or_front_leg_intersections": 0,
+    "minimum_sampled_z_m": -0.0000014328284123621415
+  },
+  "remaining_art_issues": [
+    "Large spikes still read as straight planar pyramids; the A4 reference has softer tips, edges and a more integrated root.",
+    "Some shell plates look too regular in size and arrangement.",
+    "Eyebrows and grin distinguish personality only subtly from the stone turtle."
+  ],
+  "parent_review": "Parent viewed front and three-quarter against A4; retains proportions and amber palette, requests one bounded candidate-02 revision of spike rounding/root integration, scute variation and confident brow/grin.",
+  "context_limit": "Offline Blender composition only. Spike scale is 0.65 on level-1 slot (-5,0.292,1). Ink context uses 0.75, whereas current BattleWorld uses 0.68; this image is not an exact runtime camera/scale validation.",
+  "render_settings": {"width": 800, "height": 680, "samples": 32, "cpu_threads": 2},
+  "generation_exit_code": 0,
+  "full_verification_exit_code": 0,
+  "context_render_exit_code": 0,
+  "all_candidate01_blender_processes_exited": true,
+  "fbx_sha256": "f26c593116b59d251732596431c45f16285b369b602b2e4084c86ac363ba9a56",
+  "colour_sha256": "b99dc1a6703050e9856910bd1f6b25bbbd2825c5135dd65b127897c24f26d1cf",
+  "roughness_sha256": "603b5505de380c9c4368c513535a36f7983d82dca57a9dd119e7beffaa844ec0",
+  "runtime_written": false,
+  "stone_sources_and_runtime_preserved": true
+}

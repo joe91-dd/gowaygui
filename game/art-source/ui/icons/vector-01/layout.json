@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "image": "icons-atlas.png",
+  "imageWidth": 1024,
+  "imageHeight": 512,
+  "coordinateOrigin": "top-left",
+  "columns": 4,
+  "rows": 2,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "padding": 24,
+  "cells": [
+    {
+      "id": "gold",
+      "label": "金币",
+      "description": "唯一货币，原创龟壳浮雕金币",
+      "row": 0,
+      "column": 0,
+      "spriteRect": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "stamina",
+      "label": "体力",
+      "description": "青绿闪电形体力资源",
+      "row": 0,
+      "column": 1,
+      "spriteRect": {
+        "x": 256,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "attack-medicine",
+      "label": "攻击药",
+      "description": "带剑符号的橙色药瓶",
+      "row": 0,
+      "column": 2,
+      "spriteRect": {
+        "x": 512,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "health-medicine",
+      "label": "生命药",
+      "description": "带心形符号的珊瑚色药瓶",
+      "row": 0,
+      "column": 3,
+      "spriteRect": {
+        "x": 768,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "defense-medicine",
+      "label": "防御药",
+      "description": "带盾符号的蓝色药瓶",
+      "row": 1,
+      "column": 0,
+      "spriteRect": {
+        "x": 0,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "growth-medicine",
+      "label": "成长药",
+      "description": "带嫩芽符号的绿色药瓶",
+      "row": 1,
+      "column": 1,
+      "spriteRect": {
+        "x": 256,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "collection-lock",
+      "label": "收藏锁",
+      "description": "带龟壳分片装饰的闭合锁",
+      "row": 1,
+      "column": 2,
+      "spriteRect": {
+        "x": 512,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    },
+    {
+      "id": "growth-history",
+      "label": "成长历史",
+      "description": "带回转箭头与龟壳印记的历史册",
+      "row": 1,
+      "column": 3,
+      "spriteRect": {
+        "x": 768,
+        "y": 256,
+        "width": 256,
+        "height": 256
+      },
+      "originalSize": {
+        "width": 256,
+        "height": 256
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotated": false
+    }
+  ]
+}

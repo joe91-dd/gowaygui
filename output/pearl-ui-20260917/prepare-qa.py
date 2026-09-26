@@ -1,0 +1,8 @@
+from pathlib import Path
+import shutil
+folder=Path('output/pearl-ui-20260917')
+refs=Path('C:/Users/Administrator/.codex/generated_images/01a07c91-e0c7-7823-94f5-a4a7384b1a14')
+for name,filename in [('collection','exec-1c1b01b1-fde9-4b7a-b958-9a153ee7c820.png'),('tasks','exec-56596e82-d5a9-4d40-bfc9-7ff0fa4adf59.png'),('shop','exec-c671481c-0a71-4b0a-bd9c-3bf348af40fe.png')]:
+ shutil.copy2(refs/filename,folder/(name+'-reference.png'))
+(folder/'index.html').write_text('''<!doctype html><html lang="zh"><meta charset="utf-8"><title>海岛界面 · 视觉对照</title><style>*{box-sizing:border-box}body{margin:0;background:#e9f3f3;color:#153b55;font:16px "Microsoft YaHei",sans-serif}header{padding:10px 20px;display:flex;gap:22px;align-items:center}a{color:#007f97}section{width:960px;max-width:100%;margin:auto}h2{font-size:16px;margin:0;padding:9px 15px;background:white}img{width:100%;height:auto;display:block}.note{margin:0;padding:10px 18px;background:#fff}</style><header><b>同尺度视觉对照</b><a href="?page=collection">龟龟</a><a href="?page=tasks">任务</a><a href="?page=shop">商城</a></header><section><h2>已确认效果图</h2><img id="source"><h2>游戏实机 · 960 × 540</h2><img id="actual"><p class="note">原角色、技能图标与真实存档数值优先；概念图中的占位数据不作为游戏配置。</p></section><script>const p=new URLSearchParams(location.search).get('page')||'collection';const rows={collection:['collection-reference.png','collection-v2.png'],tasks:['tasks-reference.png','tasks-v2.png'],shop:['shop-reference.png','recruit-v2.png']};const r=rows[p]||rows.collection;document.querySelector('#source').src=r[0];document.querySelector('#actual').src=r[1];</script></html>''',encoding='utf-8')
+print('Read-only visual comparison prepared.')

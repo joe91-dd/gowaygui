@@ -1,0 +1,10 @@
+{
+  "approvedForOfflineArt": true,
+  "slot5": { "x": 6.62, "z": -1.31 },
+  "source": "Root agent instruction on 2026-09-08: select (6.62,-1.31) for level5 offline art; run eight-seed current-v2 comparison before Blender generation.",
+  "scope": "Offline candidate only. No production coordinate, runtime resource or save migration approval is implied.",
+  "knownTradeoffs": [
+    "Slot3 nearest ally changes from slot5 to slot2; v2 4.5 reachability is retained.",
+    "A legacy leaf with range4 and no reach loses its slot3-to-slot5 healing edge; root handles legacy combat compatibility separately."
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "version": "mist-bubble-candidate-01",
+  "status": "isolated-review-candidate-not-final-art",
+  "recorded_at_utc": "2026-09-08T08:21:31.690916+00:00",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_threads": 2,
+  "max_samples": 24,
+  "review_images": [
+    "render-front.png",
+    "render-three-quarter.png",
+    "render-battle-angle.png",
+    "render-five-poses.png",
+    "render-island-context.png"
+  ],
+  "human_or_agent_visual_review": "See REVIEW.md; file checks alone are not visual acceptance.",
+  "triangles": 10748,
+  "vertices": 5400,
+  "material_count": 1,
+  "bones": 10,
+  "half_frame_samples": 365,
+  "connected_cloud_shells": 1,
+  "opaque_atlases": true,
+  "roughness_gray_u8": [
+    87,
+    112
+  ],
+  "embedded_pngs": {
+    "mist-colour.png": {
+      "sha256": "c99da2e27a32225df92c874737d5ff4bb9f27c4efb796b65b37f55e8019ae00d",
+      "exact_png_byte_offset": 323116,
+      "bytes": 93889
+    },
+    "mist-roughness.png": {
+      "sha256": "27d38fb3d6be6ffdb94c27216f0a2b26d9e0240c73b06afb3ed6cdabf0ff317f",
+      "exact_png_byte_offset": 417633,
+      "bytes": 5832
+    }
+  },
+  "generator": "game/art-source/enemies/build_mist_bubble.py",
+  "generator_sha256": "1eba5d3af2a911bfb1aedf2851e486de2108760a5224d9d9ac41624050817dd3",
+  "original_sources": "Original script, fused closed cloud shell, UV palette/eye artwork, skin and keyframes. Internal A4/island/ink style references only; no external stock models, textures, animations or particles.",
+  "files": [
+    {
+      "path": "battle-camera-manifest.json",
+      "bytes": 687,
+      "sha256": "ab735e265aaa6bdffe399293accfcbd73100cfcec7252ed0b79be2bb8d4c0d11"
+    },
+    {
+      "path": "export/mist-bubble.fbx",
+      "bytes": 835420,
+      "sha256": "a477c65832bec6f452cdc616d850b0d24d306f644e35c7450bae79495604df29"
+    },
+    {
+      "path": "export/mist-colour.png",
+      "bytes": 93889,
+      "sha256": "c99da2e27a32225df92c874737d5ff4bb9f27c4efb796b65b37f55e8019ae00d"
+    },
+    {
+      "path": "export/mist-roughness.png",
+      "bytes": 5832,
+      "sha256": "27d38fb3d6be6ffdb94c27216f0a2b26d9e0240c73b06afb3ed6cdabf0ff317f"
+    },
+    {
+      "path": "mist-bubble-island-context.blend",
+      "bytes": 9959481,
+      "sha256": "d9b3355b56c6a1c5f7fd54d0019f2670063472a5dc464296472099d87beb92a1"
+    },
+    {
+      "path": "mist-bubble-poses.blend",
+      "bytes": 6645150,
+      "sha256": "0236b3c4df840967abacf37c883ce464e14aed80b2604b0a263b3e6ccd6f5543"
+    },
+    {
+      "path": "mist-bubble-review-scene.blend",
+      "bytes": 1852629,
+      "sha256": "562ff979142ed05f52be31c6029877deb7b8b8efd2089fccdd34d490926c0ed7"
+    },
+    {
+      "path": "mist-bubble.blend",
+      "bytes": 1839506,
+      "sha256": "99ff0ae5f298952588ca1194e3a23f120bd67641540e22ae4c156e51b3ead291"
+    },
+    {
+      "path": "mist-bubble.glb",
+      "bytes": 489468,
+      "sha256": "6964a327cffb18a686281bae49a8b7c22ef3af213898978f4f83acd24c625bcc"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 3285,
+      "sha256": "9d7692c1f054732d54ec8759f78d55ce7854229b1bd419da0e74e07fbdc6b49f"
+    },
+    {
+      "path": "package_candidate.py",
+      "bytes": 4321,
+      "sha256": "ca8f9b401f487f3a739d15af35fa080b4d1e09d58c44eea5277226ac7ae151c0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4881,
+      "sha256": "7f51b6694bc331c7f6d1af88b5ebf3a473f972c67de4b22bdc87f2c35c85a95b"
+    },
+    {
+      "path": "render-battle-angle.png",
+      "bytes": 823915,
+      "sha256": "fdc09cbad2a3f81fe08d61dabf2b0f2ddf14d35ca585ef7fd281a9b772687e59"
+    },
+    {
+      "path": "render-five-poses.png",
+      "bytes": 977052,
+      "sha256": "0d7611f7b06354632ebdf750ed25eeb9643962f40c9fa0e0a1fa12c4fb4c7b44"
+    },
+    {
+      "path": "render-front.png",
+      "bytes": 867638,
+      "sha256": "17da7e532950f8a549b43e210d6607dbcfc27c7176ba356409c345c27c1fa740"
+    },
+    {
+      "path": "render-island-context.png",
+      "bytes": 1322948,
+      "sha256": "ce5f54ff38f68965752c9fec43a643d20a9eb779d680adb70e55165b4b13dfc5"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 850486,
+      "sha256": "a5d4c3bb4f4e46a67d0ad08536fd3e2bdb0e698d07cf03faffd7dd3fb92b8765"
+    },
+    {
+      "path": "review.html",
+      "bytes": 2060,
+      "sha256": "fa97947e63157c6c8ab503fdb055dff988222580e1eec87a0dfa2292e7e01421"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 3771,
+      "sha256": "d5ff331c2d7736848df79dd16f74a7d1bb6a82c81b2678a83f56ba5fdab133dc"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2652,
+      "sha256": "9f06c27f0dc153661ff12344ec2993247744f9d7d7e37a85a460012a325eabff"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 752,
+      "sha256": "503ed7f5a358a2bb009d0af512375fe5737a54b98257a84675ce1b2e850bcafb"
+    },
+    {
+      "path": "verify_and_review.py",
+      "bytes": 12224,
+      "sha256": "0fff7861fe86f99668f04ab988415f5a963e6b850e3ac8dd548b64845c50d5d5"
+    }
+  ]
+}

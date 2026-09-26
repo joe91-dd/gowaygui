@@ -1,0 +1,278 @@
+{
+  "renderer": "sharp 0.35.4",
+  "svgBackend": "librsvg 2.62.91",
+  "source": "new authored SVG files only",
+  "pixelImagesReadAsInput": [],
+  "checks": [
+    {
+      "id": "gold",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 34017,
+      "opaquePixels": 30781,
+      "antialiasedPixels": 738,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 28,
+        "y": 25,
+        "width": 200,
+        "height": 202
+      },
+      "margins": {
+        "left": 28,
+        "top": 25,
+        "right": 28,
+        "bottom": 29
+      }
+    },
+    {
+      "id": "stamina",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 52713,
+      "opaquePixels": 12137,
+      "antialiasedPixels": 686,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 62,
+        "y": 25,
+        "width": 132,
+        "height": 202
+      },
+      "margins": {
+        "left": 62,
+        "top": 25,
+        "right": 62,
+        "bottom": 29
+      }
+    },
+    {
+      "id": "attack-medicine",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 41552,
+      "opaquePixels": 23269,
+      "antialiasedPixels": 715,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 48,
+        "y": 27,
+        "width": 160,
+        "height": 204
+      },
+      "margins": {
+        "left": 48,
+        "top": 27,
+        "right": 48,
+        "bottom": 25
+      }
+    },
+    {
+      "id": "health-medicine",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 41552,
+      "opaquePixels": 23269,
+      "antialiasedPixels": 715,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 48,
+        "y": 27,
+        "width": 160,
+        "height": 204
+      },
+      "margins": {
+        "left": 48,
+        "top": 27,
+        "right": 48,
+        "bottom": 25
+      }
+    },
+    {
+      "id": "defense-medicine",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 41552,
+      "opaquePixels": 23269,
+      "antialiasedPixels": 715,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 48,
+        "y": 27,
+        "width": 160,
+        "height": 204
+      },
+      "margins": {
+        "left": 48,
+        "top": 27,
+        "right": 48,
+        "bottom": 25
+      }
+    },
+    {
+      "id": "growth-medicine",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 41552,
+      "opaquePixels": 23269,
+      "antialiasedPixels": 715,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 48,
+        "y": 27,
+        "width": 160,
+        "height": 204
+      },
+      "margins": {
+        "left": 48,
+        "top": 27,
+        "right": 48,
+        "bottom": 25
+      }
+    },
+    {
+      "id": "collection-lock",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 43117,
+      "opaquePixels": 21776,
+      "antialiasedPixels": 643,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 59,
+        "y": 26,
+        "width": 143,
+        "height": 205
+      },
+      "margins": {
+        "left": 59,
+        "top": 26,
+        "right": 54,
+        "bottom": 25
+      }
+    },
+    {
+      "id": "growth-history",
+      "width": 256,
+      "height": 256,
+      "channels": 4,
+      "transparentPixels": 30174,
+      "opaquePixels": 35164,
+      "antialiasedPixels": 198,
+      "nonzeroOutside24pxMargin": 0,
+      "bounds": {
+        "x": 41,
+        "y": 26,
+        "width": 175,
+        "height": 205
+      },
+      "margins": {
+        "left": 41,
+        "top": 26,
+        "right": 40,
+        "bottom": 25
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "gold.svg",
+      "sha256": "d4a44bcd97bb10cfa5246772c7c6a4f8a8c9520166546120568f34c515521c1e",
+      "bytes": 4004
+    },
+    {
+      "path": "png/gold.png",
+      "sha256": "aac2868187274f706ce19fd6cb42931cf5432c06fa898d66e3a912ef3dc118a7",
+      "bytes": 33134
+    },
+    {
+      "path": "stamina.svg",
+      "sha256": "992ea7eb3d29e30a2339c08e31e25285072d5da6d5c2f353f3e44f3ba763b4aa",
+      "bytes": 3075
+    },
+    {
+      "path": "png/stamina.png",
+      "sha256": "e21de2db1c11bc49dcbbcecfed3a9eaabeb6f02aa45259d2d46288d269034907",
+      "bytes": 12560
+    },
+    {
+      "path": "attack-medicine.svg",
+      "sha256": "983ac2f8b38227d938d5e8452b1600cc99d121ba4cf108b6a7a3188c5ef0ce41",
+      "bytes": 4482
+    },
+    {
+      "path": "png/attack-medicine.png",
+      "sha256": "f2528fd44e1ebf08ebeb6a318b1774dffa4b1af3b4183df13357ef5bed5f5a3a",
+      "bytes": 21177
+    },
+    {
+      "path": "health-medicine.svg",
+      "sha256": "798aeb2a3858a6c01206770937dfc4562d6f964d8fd114f42512c85f2d77d5c2",
+      "bytes": 4352
+    },
+    {
+      "path": "png/health-medicine.png",
+      "sha256": "a31b257f4bbbabea4461fc6492f1608b50512420fd992b8946eea6da9ad73ab9",
+      "bytes": 22312
+    },
+    {
+      "path": "defense-medicine.svg",
+      "sha256": "bb30d130a65a8e9cfb0bbf06bfcafe06919f64f4b5e95ce267fc7996d2133b97",
+      "bytes": 4496
+    },
+    {
+      "path": "png/defense-medicine.png",
+      "sha256": "460ce3f8e4ce52550dfc1bd5c3b82a7d47bc41605c9b38302141a93089af7197",
+      "bytes": 24564
+    },
+    {
+      "path": "growth-medicine.svg",
+      "sha256": "4a8c98f747dd5713629ab2a36819812a4a032cf53a3a149d9e6e3f7d56146fe5",
+      "bytes": 4583
+    },
+    {
+      "path": "png/growth-medicine.png",
+      "sha256": "71cf3bc26728d7ea5ee91d3e0c485e08ac9e93346906a66dc3ef628eb1d5b431",
+      "bytes": 22459
+    },
+    {
+      "path": "collection-lock.svg",
+      "sha256": "00db39a848a47402118eaa08fa0ba7fb85541184e0c173fe6893c2d04d72106c",
+      "bytes": 3774
+    },
+    {
+      "path": "png/collection-lock.png",
+      "sha256": "fbbb474378747f79e8f25c55033f005b0e225bcb2c7a14215c00debd8a4a1244",
+      "bytes": 20129
+    },
+    {
+      "path": "growth-history.svg",
+      "sha256": "a2bf969b9292cae0aa883181159576485a1c29e52c317364824ce56beca4c436",
+      "bytes": 4339
+    },
+    {
+      "path": "png/growth-history.png",
+      "sha256": "648d069e044a4ed605a92f8e4c5fe8f93c15a3a2885424aa8432fc40ee3f34ac",
+      "bytes": 22508
+    },
+    {
+      "path": "icons-atlas.png",
+      "sha256": "422cc6b40f689fcaebbb4a2fe2fd315ab9dfb27b7a15d485561b9102e34dd129",
+      "bytes": 185233
+    }
+  ],
+  "atlasChecks": {
+    "width": 1024,
+    "height": 512,
+    "channels": 4,
+    "hasAlpha": true,
+    "cellMargin24NonzeroPixels": 0
+  }
+}

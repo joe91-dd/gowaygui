@@ -1,0 +1,166 @@
+{
+  "fbx_round_trip": "pass",
+  "version": "boss-bay-candidate-01",
+  "fbx_sha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397",
+  "runtime_meshes": [
+    {
+      "name": "Ground",
+      "vertices": 5201,
+      "triangles": 9340,
+      "uv_layers": 1,
+      "material": "Island_atlas"
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 26489,
+      "triangles": 43484,
+      "uv_layers": 1,
+      "material": "Island_atlas"
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 1248,
+      "triangles": 2304,
+      "uv_layers": 1,
+      "material": "Warm_pearl_and_lamps"
+    }
+  ],
+  "total_triangles": 55128,
+  "materials": 2,
+  "geometry_bounds_cocos": {
+    "min": [
+      -12.029194831848145,
+      -1.8699992895126343,
+      -6.019547939300537
+    ],
+    "max": [
+      12.33581256866455,
+      2.2457756996154785,
+      5.48501443862915
+    ]
+  },
+  "station_center_surface_checks": [
+    {
+      "slot": 0,
+      "x": -5,
+      "z": 1,
+      "anchorY": 0.292,
+      "actualCenterSurfaceY": 0.292020320892334
+    },
+    {
+      "slot": 1,
+      "x": -1,
+      "z": 1,
+      "anchorY": 0.292,
+      "actualCenterSurfaceY": 0.292020320892334
+    },
+    {
+      "slot": 2,
+      "x": 3,
+      "z": 1,
+      "anchorY": 0.292,
+      "actualCenterSurfaceY": 0.292020320892334
+    },
+    {
+      "slot": 3,
+      "x": 1,
+      "z": -3,
+      "anchorY": 0.292,
+      "actualCenterSurfaceY": 0.292020320892334
+    },
+    {
+      "slot": 4,
+      "x": 6.62,
+      "z": -1.31,
+      "anchorY": 0.292,
+      "actualCenterSurfaceY": 0.292020320892334
+    }
+  ],
+  "imported_textures": [
+    {
+      "name": "Island_original_colour",
+      "width": 2048,
+      "height": 1024,
+      "packed": true
+    },
+    {
+      "name": "Island_original_colour.001",
+      "width": 2048,
+      "height": 1024,
+      "packed": true
+    },
+    {
+      "name": "Island_original_colour.002",
+      "width": 2048,
+      "height": 1024,
+      "packed": true
+    },
+    {
+      "name": "Island_original_roughness",
+      "width": 2048,
+      "height": 1024,
+      "packed": true
+    }
+  ],
+  "anchors_cocos_xyz": {
+    "Enemy_entrance": [
+      -9.0,
+      0.064,
+      -0.0
+    ],
+    "Island_origin": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "Pearl_center": [
+      9.0,
+      1.1,
+      -0.0
+    ],
+    "Player_exit": [
+      9.0,
+      0.064,
+      -0.0
+    ],
+    "Slot_0": [
+      -5.0,
+      0.292,
+      1.0
+    ],
+    "Slot_1": [
+      -1.0,
+      0.292,
+      1.0
+    ],
+    "Slot_2": [
+      3.0,
+      0.292,
+      1.0
+    ],
+    "Slot_3": [
+      1.0,
+      0.292,
+      -3.0
+    ],
+    "Slot_4": [
+      6.62,
+      0.292,
+      -1.31
+    ]
+  },
+  "route_samples": 108,
+  "route_min_y": 0.06399822235107422,
+  "route_max_y": 0.06400108337402344,
+  "route_height_problems": [],
+  "route_center_obstacles": [],
+  "layoutProposalStatus": "approved-offline-art-layout",
+  "liveSlotCoordinatesMatchCandidate": false,
+  "routeMatchesLiveData": true,
+  "notes": [
+    "Route samples and station centers are raycast against actual reimported FBX meshes. They do not replace Cocos rendering, collision or mobile performance tests.",
+    "Core sanctuary at the final route point is intentionally outside the obstacle-free route-center interval (-8.85,7.55).",
+    "22x12 is the shared nominal gameplay footprint. True authored coastal rocks/foam bounds are reported without hiding overhangs.",
+    "Foliage has thin open surfaces; actual Cocos material culling must be checked."
+  ]
+}

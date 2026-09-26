@@ -1,0 +1,9 @@
+{
+  "unchanged": true,
+  "sha256": {
+    "game\\art-source\\build_stone_turtle.py": "69bb143d04ab3be83d6b6e71950b4d622ebc5d84952b3ee6fb28e30767399433",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-turtle.fbx": "8b8f0c56b2be36e8fa1fb082a253cc34271cf53d6983001f78f61ce4eb38260d",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-colour.png": "68e22dd052641ee72a2775d4041ec0683d2437db116364fc8e05aeb54f904746",
+    "game\\assets\\resources\\models\\stone-turtle\\stone-roughness.png": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434"
+  }
+}

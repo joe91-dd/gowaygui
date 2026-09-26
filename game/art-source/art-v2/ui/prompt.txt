@@ -1,0 +1,14 @@
+Use case: stylized-concept.
+Asset type: ONE production texture atlas of six UI skins for the existing original 3D stylized tropical island turtle adventure game 哥喂龟, used as Cocos nine-slice sprite frames, not a UI mockup.
+Primary request: create a clean professional 1536 by 1024 PNG texture atlas with TRUE transparent alpha background. Exactly 3 columns and 2 rows, six isolated components. Each cell is 512 by 512. No background artwork, no board, no checkerboard pixels, no labels.
+Approved style: premium friendly 3D stylized fantasy tropical island adventure UI. Rich but clear, tactile polished beveled metals, warm golden accents, ocean blues, cream parchment, subtly weathered wood. Mature clarity, not preschool, not a famous game IP.
+Layout coordinates from top left: top row GOLD button centered at (256,256), vivid OCEAN BLUE button centered at (768,256), dark NAVY slate button centered at (1280,256). Bottom row WOOD building sign centered at (256,768), PARCHMENT panel centered at (768,768), dark NAVY resource panel centered at (1280,768).
+Top buttons and wood sign each approximately 448 pixels wide by 188 pixels high. Bottom parchment panel and bottom navy resource panel each approximately 448 pixels wide by 384 pixels high. Maintain large completely transparent gaps, NO items touching.
+Gold: warm bright golden face, dimensional amber gold clipped-corner faceted rim, highlight on upper edge, readable plain empty central area.
+Blue: saturated clear ocean-blue face, silver stone beveled frame, thin electric cyan highlight on inner edge, readable plain empty center.
+Navy: deep midnight blue/slate face, clean silver stone beveled clipped-corner frame, readable plain empty center.
+Wood: brown horizontal planks, subtly worn rich warm wood, small brass end fasteners, simple beveled wood frame, empty plain center.
+Parchment: warm ivory cream plain paper center, narrow stylized stone and silver border with a tiny moss detail confined entirely to outside corner, empty center.
+Navy resource panel: nearly uniform deep translucent navy center, narrow rounded silver edge and subtle cyan inner edge. Its center should have alpha around 220, unlike transparent canvas.
+9-slice constraints: ALL six components exactly face-on orthographic, NO perspective. Smooth low-detail expandable centers. Border widths approximately 12 to 22 pixels only, protected corner details within 48 pixels. No decorative shapes across centers, no inset pictures, no irregular hanging pieces, no broad cast shadows, no shadow crossing another cell. Clean usable edges and genuine alpha.
+Absolutely NO text, NO letters, NO numbers, NO icons, NO symbols, NO runes, NO watermarks, NO turtle pictures, NO people, NO landscape. Six components only.

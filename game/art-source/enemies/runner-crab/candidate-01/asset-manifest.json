@@ -1,0 +1,125 @@
+{
+  "version": "runner-crab-candidate-01",
+  "status": "isolated-first-review-not-final-art",
+  "recorded_at_utc": "2026-09-08T06:59:50.2720242Z",
+  "runtime_written": false,
+  "cocos_started": false,
+  "render_processes_exited": true,
+  "render_threads": 2,
+  "max_samples": 24,
+  "source": "Original project-authored mesh, UV atlas, rig and five actions; no external stock assets",
+  "generator": "game/art-source/enemies/build_runner_crab.py",
+  "generator_sha256": "75d93f0e61600d07be7bbae03ce90721b480908b55d55b7eadad5bcf301cd5d3",
+  "files": [
+    {
+      "path": "export/runner-crab.fbx",
+      "bytes": 919052,
+      "sha256": "9a881e9afd4f168f9af8348b4da47e95faa2bc46ed9c8705a479f69e99e55e14"
+    },
+    {
+      "path": "export/runner-colour.png",
+      "bytes": 68984,
+      "sha256": "18c46e33630712ce34b94add1703e880799d279b4a1f35e10cc03bd2b5b9a72d"
+    },
+    {
+      "path": "export/runner-roughness.png",
+      "bytes": 5842,
+      "sha256": "c2ca32a47a37f2ec0c42a3c3548cbe30208d0fccf91d48a93cd40a1e67fff48c"
+    },
+    {
+      "path": "runner-crab.blend",
+      "bytes": 2025804,
+      "sha256": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24"
+    },
+    {
+      "path": "runner-crab-review-scene.blend",
+      "bytes": 1881871,
+      "sha256": "48ce0292ccd786dc0807090ef3fada35d9a293e3cb9204a7da6f4e4a4f74f9f9"
+    },
+    {
+      "path": "runner-crab.glb",
+      "bytes": 483392,
+      "sha256": "e232360c312c40f95b88ef9beafc6122993986148344dd775c40e99dc1981a23"
+    },
+    {
+      "path": "runner-crab-poses.blend",
+      "bytes": 6095735,
+      "sha256": "282d357ee2b8098bce6a78a53546e1ae6a4ad144b936bfd389a1d48e4b8e60c0"
+    },
+    {
+      "path": "runner-crab-island-context.blend",
+      "bytes": 15299337,
+      "sha256": "fcbe51378ced1f5d7a4cb33d599fd82b09a8b57a62732e893695ec10490143a9"
+    },
+    {
+      "path": "render-front.png",
+      "bytes": 994114,
+      "sha256": "3e097dc6b319c8b1320c540a847ea02ebceeb9aa62d408e401891cc61f9e08a5"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 1012761,
+      "sha256": "9063d90868e3420b000e0cdc4b23de67b188eb773bd234cb2d7c3040fb276a1e"
+    },
+    {
+      "path": "render-battle-angle.png",
+      "bytes": 1008657,
+      "sha256": "f99ec8cafc89e3202ba23f53c12a546f35898afc9eed032a22c3e8db43ae5c4e"
+    },
+    {
+      "path": "render-five-poses.png",
+      "bytes": 1185334,
+      "sha256": "ae85266951c8cbdec112625abbc7d6a86cc0d17f1053a07b0df1db938bb8d758"
+    },
+    {
+      "path": "render-attack-side.png",
+      "bytes": 687963,
+      "sha256": "33d8191be3ead95a22ee2932529f1133fb05a36fa5a2f5580f1246efd7e04520"
+    },
+    {
+      "path": "render-island-battle-context.png",
+      "bytes": 1511668,
+      "sha256": "e08a0b6a8fa41448b85f8a1392bb7fad2553321329497d4cfb4186fba952636c"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 2383,
+      "sha256": "75fdaed769665e01d8ccf7439602755bd0445016606cb8fd5cd11e06bef0dca9"
+    },
+    {
+      "path": "round-trip-check.json",
+      "bytes": 2782,
+      "sha256": "371248ac2554fa0aee84cf67e7f8650d7195ae76ca0be8a36856bd71efe9748e"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 738,
+      "sha256": "d41f89aa40ce3378fbc58033460f9407b9e0b62c1bf3204c21e1673b0665b5b4"
+    },
+    {
+      "path": "verify_and_review.py",
+      "bytes": 12070,
+      "sha256": "16e766e635f736787069e8420567ce3c3eafb097db06d70f24a4656de95af1ab"
+    },
+    {
+      "path": "verify_files.py",
+      "bytes": 1765,
+      "sha256": "c1612782a7d325053b52b8de9a1eebc2c2df64194b4aff1c9008298a65d224fa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5069,
+      "sha256": "503227029b2e6a4b038336e199746d148ec03ca97007eb96822098ba271e9a36"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 3733,
+      "sha256": "46f078b10f10f3201fd792863626722c780cfd238c09b982e577d71529577f90"
+    },
+    {
+      "path": "review.html",
+      "bytes": 2297,
+      "sha256": "237f5346f20129170c978ea9455315f5adf520c5843e7fcbf54b1e3e8d72221a"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "version": "giant-claw-shape-candidate-01",
+  "recorded_at_utc": "2026-09-08T11:06:08.283410+00:00",
+  "status": "isolated editable static boss shape candidate; no rig/actions/interchange export/runtime promotion",
+  "enemy_kind": "boss",
+  "display_name": "巨钳蟹",
+  "triangles": 21208,
+  "vertices": 10674,
+  "editable_meshes": 36,
+  "model_materials": 1,
+  "bones": 0,
+  "actions": 0,
+  "source_bounds": {
+    "min": [
+      -1.0748372077941895,
+      -0.7677403092384338,
+      0.0
+    ],
+    "max": [
+      1.3688597679138184,
+      0.5897020101547241,
+      1.2760032415390015
+    ]
+  },
+  "provisional_scale": 1.0,
+  "images_actually_viewed": [
+    "render-three-quarter.png",
+    "render-front.png"
+  ],
+  "render_threads": 2,
+  "render_samples": 24,
+  "blender_processes_exited": true,
+  "runtime_written": false,
+  "cocos_started": false,
+  "fbx_exported": false,
+  "scope_check": {
+    "changed_meshes": [
+      "Dominant_fixed_round_finger",
+      "Dominant_moving_round_finger"
+    ],
+    "other_34_parts_exactly_unchanged": true,
+    "packed_atlas_bytes_exactly_unchanged": true,
+    "initial_source_sha256": "561b1ba3dfcdb608ad8619550b0b09979767bae16aeca33849c52633c7a47e78",
+    "comparison": "Exact vertex/face/UV/planned-joint/transform data; original shape preview archived before two-finger smoothing and front-camera adjustment."
+  },
+  "atlas_files": {
+    "giant-colour.png": {
+      "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+      "bytes": 68454
+    },
+    "giant-roughness.png": {
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+      "bytes": 6039
+    }
+  },
+  "original_source": "Project-original new body/face/claw silhouette and dimensions, reusing internal crab-family mesh/UV construction helpers from build_shell_carrier.py. Only internal A4/environment/runner/armored/carrier references; no external games or stock assets.",
+  "protected_reference_hashes": {
+    "game/art-source/enemies/build_shell_carrier.py": "16149292e5d86f907373c5ca865e184c3ee80336d195acc351fbcfc080eec87f",
+    "game/art-source/enemies/build_armored_crab.py": "2dfa522a64a7ff96d3517471f6b1d279dc88762adae7e6d1db74943605fbf24e",
+    "game/art-source/enemies/armored-crab/candidate-01/armored-crab.blend": "12d96a338e43f70a557e0947fbf075508e749a1cf084c51da844e55ce779554b",
+    "game/art-source/enemies/runner-crab/candidate-01/runner-crab.blend": "7f9a21313f7dad4de2b662a742ac043eab7b770aa56ec7b12ec61b975ef40e24",
+    "game/art-source/enemies/shell-carrier/candidate-02/shell-carrier.blend": "044110abc79a22f6d0922de0a5f70a7cd9cac8052c7cd2e0b59bb968941a5292",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "game/art-source/enemies/shell-carrier/candidate-02/export/carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+  },
+  "generator": "game/art-source/enemies/build_giant_claw_prototype.py",
+  "generator_sha256": "fbd899c445393b61485e3240d1ff47ba4f5c9c3a6746b012a6ed88dde612e648",
+  "files": [
+    {
+      "path": "giant-claw-prototype.blend",
+      "bytes": 1803820,
+      "sha256": "cd579fb4c56cf276d9a02dec9267a354e0442e4875683d0a7ae48de3704924e0"
+    },
+    {
+      "path": "giant-claw-review-scene.blend",
+      "bytes": 1843303,
+      "sha256": "29b9bb5161257f501dd249d8b3bfb965333716d2d668d79e9f7fbc481b4ce17c"
+    },
+    {
+      "path": "iterations/before-finger-rounding/build_giant_claw_prototype.py",
+      "bytes": 20968,
+      "sha256": "9c74ed4eef6e21c45b9782d2f75860d8b595af9b71f3dc27767b057fa5ac0541"
+    },
+    {
+      "path": "iterations/before-finger-rounding/giant-claw-prototype.blend",
+      "bytes": 1737760,
+      "sha256": "561b1ba3dfcdb608ad8619550b0b09979767bae16aeca33849c52633c7a47e78"
+    },
+    {
+      "path": "iterations/before-finger-rounding/giant-claw-review-scene.blend",
+      "bytes": 1777243,
+      "sha256": "c519aea14c6b12eea121f5ff9b54f66bcf0c0287a28d5ef2060691f102c5ba04"
+    },
+    {
+      "path": "iterations/before-finger-rounding/model-stats.json",
+      "bytes": 9038,
+      "sha256": "a0caf6e52cda0d58194e3dca877670d93400d8310b1655fca5f6111d59ebe6af"
+    },
+    {
+      "path": "iterations/before-finger-rounding/render-front.png",
+      "bytes": 921672,
+      "sha256": "ced814fefb0045602e1c313a4d3cb0a335d95b4fc211cc7401a198c45854dad4"
+    },
+    {
+      "path": "iterations/before-finger-rounding/render-three-quarter.png",
+      "bytes": 923156,
+      "sha256": "3e3b1345a3f9f529fcfd2ca53600370e5e81d672231d692988112ff4448bc150"
+    },
+    {
+      "path": "model-stats.json",
+      "bytes": 9042,
+      "sha256": "2c811f95668ea0512bea55636ad83170be47d2113e0bc1f8ae3e2324b81f692b"
+    },
+    {
+      "path": "package_prototype.py",
+      "bytes": 3822,
+      "sha256": "fcb523d2850d291c0050bbe628c2d8d63d8e1620e436e144bea52e53b0d0b0ce"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4825,
+      "sha256": "1fedeb1066082cd825f1deb6893fe799eea2660b6ad6c4489dc0a88b3c95de85"
+    },
+    {
+      "path": "render-front.png",
+      "bytes": 916824,
+      "sha256": "1cd10fc410d8619a886bb79f6afb0dd2824d69c5755845da90b349d7ff9b813e"
+    },
+    {
+      "path": "render-three-quarter.png",
+      "bytes": 923264,
+      "sha256": "a0879944861b6e78578a9288bc1ede9c1de1e3592fea2a14e95f3dfd8362c87f"
+    },
+    {
+      "path": "review.html",
+      "bytes": 1433,
+      "sha256": "e6e3bec20eb9473a427f522dc46a7003ddea275514f603dbbc9702d16260cc9d"
+    },
+    {
+      "path": "source-check.json",
+      "bytes": 3622,
+      "sha256": "75933a4e2e263ede8417c4295609361fcd5fa5dc2dcb15aac5406718205288cf"
+    },
+    {
+      "path": "textures/giant-colour.png",
+      "bytes": 68454,
+      "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d"
+    },
+    {
+      "path": "textures/giant-roughness.png",
+      "bytes": 6039,
+      "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+    },
+    {
+      "path": "verify_prototype.py",
+      "bytes": 5794,
+      "sha256": "cb30c70ee43d51afdf525d38e51c31c82625cea42da7c306a6b328498e8e9c56"
+    }
+  ]
+}

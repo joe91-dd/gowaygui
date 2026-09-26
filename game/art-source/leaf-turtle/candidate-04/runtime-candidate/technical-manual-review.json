@@ -1,0 +1,40 @@
+{
+  "status": "All ten final LOD images actually viewed by asset subagent; awaiting parent runtime-candidate review. No final user/Cocos approval claimed.",
+  "images_actually_viewed": {
+    "render-front.png": "c7b84b857c4ad742871ae9e3ef8f803e5a7e4164affc252ba5fe6c8926b449b4",
+    "render-three-quarter.png": "87ae09a84ebeba4a2feff034bdbc93bae1e42f737b716e3f8e224c7a10b62172",
+    "render-side.png": "9c7293fcfe2c4a9218131ea8d452651fd20b808f65d63f34cbfab7c2f4720e78",
+    "render-battle.png": "e4a83008f72342d96a8f14a79edece5b77b34adb57df6388bec74a239ae8b173",
+    "animation-attack-08-side.png": "72f99a0c13865742b16dbdf291433fe5eda412fb0c6a95bf284da7c442beaec2",
+    "animation-attack-13-three-quarter.png": "207eb81db0cf6fd2e244ae5e357a7e2ae757cab3044b36fb50f011ed5a7733b6",
+    "animation-skill-20-three-quarter.png": "dad880e928d5d30f37b9bdea405d22ab169c647ab06b54a119c124f481e24c9f",
+    "animation-rest-36-three-quarter.png": "4c2f8d36e3727676da5709af80ce1f902b313488d7e9f0d45f539c76996962d5",
+    "animation-hit-04-three-quarter.png": "315d4b0e5cf53994c26b263fc9cd59beed0fc403c6309a833e5e0b2ea969c09b",
+    "animation-fusion-23-three-quarter.png": "06fe1b4d838604893fa1b1117ed131d1569860b356a5c82b230f94dfba72f8d6"
+  },
+  "final_fbx_sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+  "observations": [
+    "Front and three-quarter: rounded toe tips restored after first LOD review; warm face and eye layering retained.",
+    "Three-quarter versus approved high source: rounded directional leaf tips and shallow midribs remain readable, overlap rhythm preserved.",
+    "Side and battle: leaf coverage and bottom hem are coherent; a small natural white blossom remains visible from the side.",
+    "Attack/skill/hit/rest/fusion key frames: no visible forward facial penetration or detached facial features; fusion intentionally lifts feet."
+  ],
+  "remaining_aesthetic_limits": [
+    "A mild tiered rhythm remains near the shell crown, inherited from the approved high source.",
+    "Attack and skill motion is deliberately gentle in the retained six source clips; final combat readability needs Cocos effects/timing review.",
+    "Offline studio images do not establish final Cocos lighting, animation timing or mobile performance."
+  ],
+  "read_image_retry_note": "Three image reads initially timed out in filesystem helper; all were later reopened successfully without altering files.",
+  "blender_generation_exit_code": 0,
+  "blender_technical_qa_exit_code": 0,
+  "blender_final_render_exit_code": 0,
+  "blender_processes_exited": true,
+  "threads": 2,
+  "samples": 32,
+  "six_fbx_clips_reimported": true,
+  "all_six_animation_half_frame_ground_samples": 576,
+  "critical_face_half_frame_samples": 171,
+  "c01_c02_c03_and_approved_c04_high_preview_bytes_preserved": true,
+  "runtime_promoted": false,
+  "cocos_started": false
+}

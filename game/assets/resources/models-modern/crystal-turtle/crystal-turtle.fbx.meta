@@ -1,0 +1,482 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin",
+    "__original-animation-5.bin",
+    "__original-animation-6.bin"
+  ],
+  "subMetas": {
+    "60635": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@60635",
+      "displayName": "",
+      "id": "60635",
+      "name": "CrystalTurtle_Rig|attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "98811": {
+      "importer": "gltf-material",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@98811",
+      "displayName": "",
+      "id": "98811",
+      "name": "CrystalAtlas_Modern.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "825ed": {
+      "importer": "gltf-mesh",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@825ed",
+      "displayName": "",
+      "id": "825ed",
+      "name": "Sphere.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 28290
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "336e7": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@336e7",
+      "displayName": "",
+      "id": "336e7",
+      "name": "CrystalTurtle_Rig|fusion.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.9666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "a9553": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@a9553",
+      "displayName": "",
+      "id": "a9553",
+      "name": "CrystalTurtle_Rig|hit.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "fa745": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@fa745",
+      "displayName": "",
+      "id": "fa745",
+      "name": "CrystalTurtle_Rig|idle.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "c1c24": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@c1c24",
+      "displayName": "",
+      "id": "c1c24",
+      "name": "CrystalTurtle_Rig|rest.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "e9b62": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@e9b62",
+      "displayName": "",
+      "id": "e9b62",
+      "name": "CrystalTurtle_Rig|skill.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.3666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "c91cb": {
+      "importer": "gltf-animation",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@c91cb",
+      "displayName": "",
+      "id": "c91cb",
+      "name": "CrystalTurtle_Rig|walk.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.9666666388511658
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 8
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b02": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@48b02",
+      "displayName": "",
+      "id": "48b02",
+      "name": "base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "cf2e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@cf2e8",
+      "displayName": "",
+      "id": "cf2e8",
+      "name": "roughness_texture.image",
+      "userData": {
+        "gltfIndex": 1,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@48b02"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75fa1": {
+      "importer": "texture",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@75fa1",
+      "displayName": "",
+      "id": "75fa1",
+      "name": "roughness_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@cf2e8"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ce8d3": {
+      "importer": "gltf-scene",
+      "uuid": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@ce8d3",
+      "displayName": "",
+      "id": "ce8d3",
+      "name": "crystal-turtle.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@48b02"
+      },
+      {
+        "name": "roughness_texture",
+        "uri": "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@cf2e8"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "CrystalTurtle_Rig|attack",
+        "duration": 0.8666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|attack",
+            "from": 0,
+            "to": 0.8666666746139526,
+            "wrapMode": 2,
+            "previousId": "60635"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|fusion",
+        "duration": 1.9666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|fusion",
+            "from": 0,
+            "to": 1.9666666984558105,
+            "wrapMode": 2,
+            "previousId": "336e7"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|hit",
+        "duration": 0.5666666626930237,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|hit",
+            "from": 0,
+            "to": 0.5666666626930237,
+            "wrapMode": 2,
+            "previousId": "a9553"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|idle",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|idle",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "fa745"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|rest",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|rest",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "c1c24"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|skill",
+        "duration": 1.3666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|skill",
+            "from": 0,
+            "to": 1.3666666746139526,
+            "wrapMode": 2,
+            "previousId": "e9b62"
+          }
+        ]
+      },
+      {
+        "name": "CrystalTurtle_Rig|walk",
+        "duration": 0.9666666388511658,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CrystalTurtle_Rig|walk",
+            "from": 0,
+            "to": 0.9666666388511658,
+            "wrapMode": 2,
+            "previousId": "c91cb"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@825ed"
+      ],
+      "skeletons": [
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@438fe"
+      ],
+      "textures": [
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@7d6ab",
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@75fa1"
+      ],
+      "materials": [
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@98811"
+      ],
+      "scenes": [
+        "f6f5f40a-1d29-40fb-9b9a-223aba9ec6ca@ce8d3"
+      ]
+    }
+  }
+}

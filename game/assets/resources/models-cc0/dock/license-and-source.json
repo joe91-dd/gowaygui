@@ -1,0 +1,23 @@
+{
+  "name": "Dock",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\dock-eee0b0\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/3d8f6659a307fd3ba75339a645118e543945ff32729829cf3f0c00005bf7c9c5_Dock.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "0f8a6546672e834601be709ca6f5d9ff1466ccb041b9cc41cfaf0d85a37af4e3",
+  "bytes": 79172,
+  "animations": 0,
+  "runtimeKey": "dock",
+  "height": 0.55,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 1912,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

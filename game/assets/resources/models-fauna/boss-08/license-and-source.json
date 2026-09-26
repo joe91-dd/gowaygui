@@ -1,0 +1,36 @@
+{
+  "id": "green-3",
+  "name": "尖喙海巫",
+  "tier": 0,
+  "index": 8,
+  "base": 36,
+  "key": "boss-08",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 46420,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-36",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/42d0caa56666991da629128270c11ca59b57c049a04d725c0eb3248532feab16_Birb.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24668,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.1
+}

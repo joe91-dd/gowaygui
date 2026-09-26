@@ -1,0 +1,111 @@
+{
+  "size": 1024,
+  "tile_grid": [
+    4,
+    4
+  ],
+  "noise_seed": 81207,
+  "palette": [
+    [
+      0.28,
+      0.43,
+      0.055
+    ],
+    [
+      0.4,
+      0.56,
+      0.073
+    ],
+    [
+      0.51,
+      0.65,
+      0.115
+    ],
+    [
+      0.335,
+      0.5,
+      0.067
+    ],
+    [
+      0.32,
+      0.39,
+      0.095
+    ],
+    [
+      0.49,
+      0.59,
+      0.23
+    ],
+    [
+      0.77,
+      0.67,
+      0.28
+    ],
+    [
+      0.59,
+      0.66,
+      0.29
+    ],
+    [
+      0.085,
+      0.082,
+      0.025
+    ],
+    [
+      0.97,
+      0.95,
+      0.84
+    ],
+    [
+      0.34,
+      0.22,
+      0.08
+    ],
+    [
+      0.03,
+      0.025,
+      0.012
+    ],
+    [
+      0.71,
+      0.75,
+      0.39
+    ],
+    [
+      0.23,
+      0.38,
+      0.05
+    ],
+    [
+      0.945,
+      0.968,
+      0.866
+    ],
+    [
+      0.13,
+      0.24,
+      0.025
+    ]
+  ],
+  "iris_colour": [
+    0.305,
+    0.21,
+    0.052
+  ],
+  "iris_uv_center": [
+    0.5,
+    0.49
+  ],
+  "iris_uv_radii": [
+    0.415,
+    0.411
+  ],
+  "pupil_uv_radii": [
+    0.302,
+    0.314
+  ],
+  "raster_inputs": [],
+  "leaf_surface_policy": "Closed original curled leaf geometry; subtle analytic midrib pigment, no raster inputs.",
+  "leaf_roughness": 0.35,
+  "provenance": "Local numeric pigment/grain generator; eye UV equations reused from self-authored stone_turtle_atlas.py."
+}

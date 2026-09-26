@@ -1,0 +1,133 @@
+{
+  "version": "stone-sample-12b",
+  "promotion_status": "runtime-review-not-final-art",
+  "promoted_at_utc": "2026-09-08T07:19:34.984555+00:00",
+  "runtime_asset_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "runtime_prefab_path": "models/stone-turtle/stone-turtle/stone-turtle",
+  "previous_version_archive": "versions/c11",
+  "previous_manifest_sha256": "e732343b62c2f45f96654d84980883fd641f4a809d95bd2cb037c90eb2aed3ce",
+  "previous_fbx_sha256": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+  "runtime_fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "before_runtime": [
+    {
+      "name": "stone-colour.png",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-colour.png",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-colour.png",
+      "sha256": "331db30651c09e8930435b91bf78b7e714b13d6852e488c82a67233bad66ea57",
+      "bytes": 1324998
+    },
+    {
+      "name": "stone-colour.png.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-colour.png.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-colour.png.meta",
+      "sha256": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+      "bytes": 982
+    },
+    {
+      "name": "stone-roughness.png",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-roughness.png",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-roughness.png",
+      "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+      "bytes": 22192
+    },
+    {
+      "name": "stone-roughness.png.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-roughness.png.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-roughness.png.meta",
+      "sha256": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+      "bytes": 985
+    },
+    {
+      "name": "stone-turtle.fbx",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-turtle.fbx",
+      "sha256": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+      "bytes": 2636444
+    },
+    {
+      "name": "stone-turtle.fbx.meta",
+      "target_path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx.meta",
+      "archive_path": "game/art-source/stone-turtle/versions/c11/runtime/stone-turtle.fbx.meta",
+      "sha256": "945a8a8f118d1c769f62bb3ad8ec0db35bc702db26dc00a089827b3cf42c366a",
+      "bytes": 10454
+    }
+  ],
+  "promoted_runtime": [
+    {
+      "target_path": "game/assets/resources/models/stone-turtle/stone-colour.png",
+      "candidate_path": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-colour.png",
+      "sha256": "3af9be17175d22b860fe9b7b4bdd3e3ee5a9d02fbea191b3b3a1d885506893b7",
+      "bytes": 1326566
+    },
+    {
+      "target_path": "game/assets/resources/models/stone-turtle/stone-roughness.png",
+      "candidate_path": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-roughness.png",
+      "sha256": "8fb7f0157aebcd620a6f6535ef04d7307412aea09c553b64e1957335b8b52434",
+      "bytes": 22192
+    },
+    {
+      "target_path": "game/assets/resources/models/stone-turtle/stone-turtle.fbx",
+      "candidate_path": "game/art-source/stone-turtle/candidate-12/c12b/export/stone-turtle.fbx",
+      "sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+      "bytes": 2802364
+    }
+  ],
+  "meta_hashes_immediately_after_promotion": {
+    "stone-colour.png.meta": "aff036f56038fc4861615117c3a98e843f76853107242f72543c761a9ed3546b",
+    "stone-roughness.png.meta": "48fc84d00ab2f937094fc7c8404e4702483c9e07dca9840024cd7ed46d017801",
+    "stone-turtle.fbx.meta": "945a8a8f118d1c769f62bb3ad8ec0db35bc702db26dc00a089827b3cf42c366a"
+  },
+  "live_meta_files_replaced": false,
+  "geometry_changed_during_promotion": false,
+  "canonical_source_version": "stone-sample-10-preserved",
+  "canonical_source_hashes": {
+    "game/art-source/build_stone_turtle.py": "69bb143d04ab3be83d6b6e71950b4d622ebc5d84952b3ee6fb28e30767399433",
+    "game/art-source/stone-turtle/stone-turtle.blend": "9977543bc23f3193932c8fd7eca8e884f7489a95a700a602dc35eea7dc331792",
+    "game/art-source/stone-turtle/stone-turtle-review-scene.blend": "eaea079144079768275997a9730468ccac1c13617c5b7e3790ec7fb791013291",
+    "game/art-source/stone-turtle/stone-turtle.glb": "70eb7fabb3d62cce9518a91cf21d606a5fb4a9040f290c2c9c9d4c732e82d1da"
+  },
+  "current_editable_source": "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend",
+  "current_generation_script": "game/art-source/build_stone_turtle_candidate12b.py",
+  "atlas_generation_script": "game/art-source/stone_turtle_atlas.py",
+  "atlas_raster_inputs": [],
+  "candidate_source_hashes": {
+    "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+    "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-review-scene.blend": "526bb397ef710d4d7bd25c131bfcd7a15756425864ad98628866ec8122159811",
+    "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle-keypose-review.blend": "6502bbce6734488cc63d607393901ad6eb96af115f54a8cbf27fa3b2e64faee3",
+    "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.glb": "2f1f2e98038982a60273cb5835b956dcced9428584387be83681a00056fb7140",
+    "game/art-source/stone-turtle/candidate-12/c12b/candidate-manifest.json": "730a46241a293a6b75e6017e6e62648534331df023053a0b0380ff4461c72f3a",
+    "game/art-source/stone-turtle/candidate-12/c12b/atlas-parameters.json": "5aeb6d72b0b5721477668f8037706c35cc2fdf8796cf1026289a602a39313a44",
+    "game/art-source/stone-turtle/candidate-12/c12b/round-trip-check.json": "8b9677e13d2635f83e1997b561961397059f7c2a3f5fd3ce07e64cb39b60e0d8",
+    "game/art-source/stone-turtle/candidate-12/c12b/animation-clearance.json": "69d46977fec7d04303a2d73eb0ce87ced7c389d7192fd052f8cb4876eb3123f7",
+    "game/art-source/stone-turtle/candidate-12/c12b/review-complete.json": "b753c21ce3e7c5b57ecab17931665e2ef9142601464698d78e430f588d51bb01",
+    "game/art-source/stone-turtle/candidate-12/c12b/manual-review.json": "15d4faacdb9daeb7956073e65cf7ab16d4f6690e2fb12c4e0e76883589c99447",
+    "game/art-source/build_stone_turtle_candidate12b.py": "fbb4bd93d952fe560e1fee48b95dbfc37e15f589405ee7e5a12764511482a7cc",
+    "game/art-source/stone_turtle_atlas.py": "33d84bcec6dc394ff63c0c1986b6837e41d03c26c68338838a0a386c87215f85",
+    "game/art-source/stone-turtle/candidate-12/c12b/review_candidate12b.py": "b83cc5792ccda4d8ee37055f087abed27f5cd130a62795d174b42b165b24138c",
+    "game/art-source/stone-turtle/candidate-11/stone-turtle.blend": "66a4776dea6881c776707096d38b96de67feb5d8f71e4d711ca5349a506f1138",
+    "game/art-source/build_stone_turtle_candidate11.py": "1c8bbc713b59e1ec3d6cccd6ee52a0ed13173fc11a17349cc86317db46e2e1cb"
+  },
+  "runtime_triangles_expected": 28572,
+  "runtime_vertices_expected": 15342,
+  "runtime_bones_expected": 10,
+  "runtime_materials_expected": 1,
+  "clips": {
+    "idle": 2.3666666666666667,
+    "attack": 0.8666666666666667,
+    "skill": 1.3666666666666667,
+    "hit": 0.5666666666666667,
+    "rest": 2.3666666666666667,
+    "fusion": 1.9666666666666666
+  },
+  "forward_axis_cocos": "+Z",
+  "battle_scale": 0.65,
+  "foot_origin_y": 0,
+  "review_basis": "Parent actually viewed final front/three-quarter and authorized runtime candidate after technical review. All seven renders viewed, six FBX actions and source-atlas rebuild checked.",
+  "remaining_review": "Actual Cocos importer/material/animation and final user art approval remain pending.",
+  "tools_started": {
+    "blender": false,
+    "cocos": false
+  },
+  "rollback_command": "python game/art-source/stone-turtle/candidate-12/c12b/runtime_promotion.py rollback",
+  "note": "Use the current_editable_source/current_generation_script. The canonical v10 builder intentionally remains archived in place, following the c11 promotion convention."
+}

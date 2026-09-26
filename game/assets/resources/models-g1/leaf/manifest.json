@@ -1,0 +1,63 @@
+{
+  "asset": "yangguang",
+  "role": "leaf",
+  "source": "AHOLO G1 / PRO generation",
+  "originalTriangles": 187936,
+  "runtimeTriangles": 87538,
+  "bones": 18,
+  "maxInfluences": 4,
+  "height": 2.28,
+  "weapon": "sun-lantern",
+  "clips": {
+    "idle": 4,
+    "walk": 1.067,
+    "attack": 1.067,
+    "attack2": 1.067,
+    "skill": 2.167,
+    "hit": 0.767,
+    "greeting": 2,
+    "rest": 2.167,
+    "exit": 1.6
+  },
+  "sockets": [
+    {
+      "name": "FX_Weapon_Core",
+      "bone": "hand.L",
+      "position": [
+        0.8899999856948853,
+        -0.22499999403953552,
+        0.5
+      ]
+    },
+    {
+      "name": "FX_Weapon_Grip",
+      "bone": "hand.L",
+      "position": [
+        0.8399999737739563,
+        -0.1899999976158142,
+        0.8600000143051147
+      ]
+    },
+    {
+      "name": "FX_Chest",
+      "bone": "chest",
+      "position": [
+        0,
+        -0.29,
+        1.15
+      ]
+    }
+  ],
+  "faceGeometryReplaced": false,
+  "texturesRepainted": false,
+  "knownLimitations": [
+    "Generated triangulated topology; weights require extreme-pose visual review.",
+    "Facial expressions are the source sculpt, not a full facial blendshape rig."
+  ],
+  "coincidentWeightGroups": 53828,
+  "uvSeamWeightsUnified": true,
+  "neutralEquipmentUpright": true,
+  "gripSculpt": "curled weapon hand; warrior fists",
+  "runtimeGeometry": "Connected surface; original per-corner UV atlas retained",
+  "runtimePath": "runtime-v2/yangguang"
+}

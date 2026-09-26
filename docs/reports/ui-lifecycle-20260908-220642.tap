@@ -1,0 +1,466 @@
+TAP version 13
+# Subtest: 加载顺序 models 先到：两者就绪前不建控制器、不显示战场、不推进战斗
+ok 1 - 加载顺序 models 先到：两者就绪前不建控制器、不显示战场、不推进战斗
+  ---
+  duration_ms: 10.2836
+  type: 'test'
+  ...
+# Subtest: 加载顺序 island 先到：两者就绪前不建控制器、不显示战场、不推进战斗
+ok 2 - 加载顺序 island 先到：两者就绪前不建控制器、不显示战场、不推进战斗
+  ---
+  duration_ms: 1.9542
+  type: 'test'
+  ...
+# Subtest: 取消加载恢复海岛：迟到资源不挂载，下一次继续使用同一冒险
+ok 3 - 取消加载恢复海岛：迟到资源不挂载，下一次继续使用同一冒险
+  ---
+  duration_ms: 1.5418
+  type: 'test'
+  ...
+# Subtest: 加载失败 model：展示返回/重试，重试不再扣体力且丢弃旧回调
+ok 4 - 加载失败 model：展示返回/重试，重试不再扣体力且丢弃旧回调
+  ---
+  duration_ms: 4.6105
+  type: 'test'
+  ...
+# Subtest: 加载失败 island：展示返回/重试，重试不再扣体力且丢弃旧回调
+ok 5 - 加载失败 island：展示返回/重试，重试不再扣体力且丢弃旧回调
+  ---
+  duration_ms: 3.2003
+  type: 'test'
+  ...
+# Subtest: 加载失败 attach：展示返回/重试，重试不再扣体力且丢弃旧回调
+ok 6 - 加载失败 attach：展示返回/重试，重试不再扣体力且丢弃旧回调
+  ---
+  duration_ms: 3.1874
+  type: 'test'
+  ...
+# Subtest: 加载失败 layout：展示返回/重试，重试不再扣体力且丢弃旧回调
+ok 7 - 加载失败 layout：展示返回/重试，重试不再扣体力且丢弃旧回调
+  ---
+  duration_ms: 3.4782
+  type: 'test'
+  ...
+# Subtest: 加载失败 controller：展示返回/重试，重试不再扣体力且丢弃旧回调
+ok 8 - 加载失败 controller：展示返回/重试，重试不再扣体力且丢弃旧回调
+  ---
+  duration_ms: 1.3884
+  type: 'test'
+  ...
+# Subtest: 后台收到资源后仍不建控制器；回到前台才显示，后续 hide/show 传给控制器
+ok 9 - 后台收到资源后仍不建控制器；回到前台才显示，后续 hide/show 传给控制器
+  ---
+  duration_ms: 1.352
+  type: 'test'
+  ...
+# Subtest: 组件销毁取消加载，迟到资源不能创建世界或恢复页面
+ok 10 - 组件销毁取消加载，迟到资源不能创建世界或恢复页面
+  ---
+  duration_ms: 1.9267
+  type: 'test'
+  ...
+# Subtest: 进入成功后返回海岛仍先 checkpoint 再释放控制器拥有的世界
+ok 11 - 进入成功后返回海岛仍先 checkpoint 再释放控制器拥有的世界
+  ---
+  duration_ms: 1.3458
+  type: 'test'
+  ...
+# Subtest: 初次实际加载前不开放空首页，玩家状态更新不重建UI，ready仅撤掉一次加载界面
+ok 12 - 初次实际加载前不开放空首页，玩家状态更新不重建UI，ready仅撤掉一次加载界面
+  ---
+  duration_ms: 16.4846
+  type: 'test'
+  ...
+# Subtest: 会话仍在等待时进入后台，加载完成不会提前显示或计时，回前台后才开放首页
+ok 13 - 会话仍在等待时进入后台，加载完成不会提前显示或计时，回前台后才开放首页
+  ---
+  duration_ms: 2.2507
+  type: 'test'
+  ...
+# Subtest: 资源失败重试只重建显示资源，旧实例迟到不能结束新一轮等待或重复获取会话
+ok 14 - 资源失败重试只重建显示资源，旧实例迟到不能结束新一轮等待或重复获取会话
+  ---
+  duration_ms: 3.9214
+  type: 'test'
+  ...
+# Subtest: 首次完整场景激活仍处于暂停和旧加载门控内，成功才注入正式UI并撤掉arrival
+ok 15 - 首次完整场景激活仍处于暂停和旧加载门控内，成功才注入正式UI并撤掉arrival
+  ---
+  duration_ms: 2.9858
+  type: 'test'
+  ...
+# Subtest: 首次激活动画失败不放行且保留重试，重建世界后复用健康UI批次与玩家进度
+ok 16 - 首次激活动画失败不放行且保留重试，重建世界后复用健康UI批次与玩家进度
+  ---
+  duration_ms: 8.2065
+  type: 'test'
+  ...
+# Subtest: 构造失败可重试，离开首页后的旧重试回调和迟到就绪都不能覆盖战斗页
+ok 17 - 构造失败可重试，离开首页后的旧重试回调和迟到就绪都不能覆盖战斗页
+  ---
+  duration_ms: 4.175
+  type: 'test'
+  ...
+# Subtest: 非首页冻结招呼时钟、战斗隐藏，回首页复用五龟；后台恢复不重播招呼
+ok 18 - 非首页冻结招呼时钟、战斗隐藏，回首页复用五龟；后台恢复不重播招呼
+  ---
+  duration_ms: 6.6373
+  type: 'test'
+  ...
+# Subtest: 减少动态设置在点击当帧传给HomeWorld，回首页禁用招呼，关闭后立即可用
+ok 19 - 减少动态设置在点击当帧传给HomeWorld，回首页禁用招呼，关闭后立即可用
+  ---
+  duration_ms: 10.9423
+  type: 'test'
+  ...
+# Subtest: 使用首页作者相机，窄窗扩大FOV并保留提示，返回首页恢复相机且不重新加载
+ok 20 - 使用首页作者相机，窄窗扩大FOV并保留提示，返回首页恢复相机且不重新加载
+  ---
+  duration_ms: 5.6168
+  type: 'test'
+  ...
+# Subtest: 销毁等待中的会话只关闭一次，销毁后迟到Home和旧UI事件不创建或显示任何页面
+ok 21 - 销毁等待中的会话只关闭一次，销毁后迟到Home和旧UI事件不创建或显示任何页面
+  ---
+  duration_ms: 8.9423
+  type: 'test'
+  ...
+# Subtest: 四道首页屏障：home 最后就绪前不注入正式面板与头像
+ok 22 - 四道首页屏障：home 最后就绪前不注入正式面板与头像
+  ---
+  duration_ms: 8.0639
+  type: 'test'
+  ...
+# Subtest: 四道首页屏障：panels 最后就绪前不注入正式面板与头像
+ok 23 - 四道首页屏障：panels 最后就绪前不注入正式面板与头像
+  ---
+  duration_ms: 4.6802
+  type: 'test'
+  ...
+# Subtest: 四道首页屏障：portraits 最后就绪前不注入正式面板与头像
+ok 24 - 四道首页屏障：portraits 最后就绪前不注入正式面板与头像
+  ---
+  duration_ms: 6.7677
+  type: 'test'
+  ...
+# Subtest: 四道首页屏障：icons 最后就绪前不注入正式面板与头像
+ok 25 - 四道首页屏障：icons 最后就绪前不注入正式面板与头像
+  ---
+  duration_ms: 3.0301
+  type: 'test'
+  ...
+# Subtest: 界面 panels 失败重试保留已就绪世界和成功批次，不重复会话或页面
+ok 26 - 界面 panels 失败重试保留已就绪世界和成功批次，不重复会话或页面
+  ---
+  duration_ms: 3.8788
+  type: 'test'
+  ...
+# Subtest: 界面 portraits 失败重试保留已就绪世界和成功批次，不重复会话或页面
+ok 27 - 界面 portraits 失败重试保留已就绪世界和成功批次，不重复会话或页面
+  ---
+  duration_ms: 4.0118
+  type: 'test'
+  ...
+# Subtest: 界面 icons 失败重试保留已就绪世界和成功批次，不重复会话或页面
+ok 28 - 界面 icons 失败重试保留已就绪世界和成功批次，不重复会话或页面
+  ---
+  duration_ms: 5.1563
+  type: 'test'
+  ...
+# Subtest: 面板/头像/图标在后台全部就绪仍等前台；销毁关闭三个所有者且迟到结果不注入UI
+ok 29 - 面板/头像/图标在后台全部就绪仍等前台；销毁关闭三个所有者且迟到结果不注入UI
+  ---
+  duration_ms: 6.1555
+  type: 'test'
+  ...
+# Subtest: 等待会话时已经失败的三批界面不自动重试，玩家确认后才各开启下一次请求
+ok 30 - 等待会话时已经失败的三批界面不自动重试，玩家确认后才各开启下一次请求
+  ---
+  duration_ms: 1.9646
+  type: 'test'
+  ...
+# Subtest: 全部六份资源到齐才创建海岛与五个不同正式模型，显式显示后恢复待机
+ok 31 - 全部六份资源到齐才创建海岛与五个不同正式模型，显式显示后恢复待机
+  ---
+  duration_ms: 10.9455
+  type: 'test'
+  ...
+# Subtest: 默认隐藏以及加载中暂停保持骨骼冻结，显示不能覆盖手动暂停
+ok 32 - 默认隐藏以及加载中暂停保持骨骼冻结，显示不能覆盖手动暂停
+  ---
+  duration_ms: 5.2865
+  type: 'test'
+  ...
+# Subtest: 隐藏组装不预建或播放state，首次显示由引擎初始化；以后显示沿用原state与播放相位
+ok 33 - 隐藏组装不预建或播放state，首次显示由引擎初始化；以后显示沿用原state与播放相位
+  ---
+  duration_ms: 10.0649
+  type: 'test'
+  ...
+# Subtest: 父节点未激活时请求显示仍等待真实onLoad，激活后的首帧启动一次待机
+ok 34 - 父节点未激活时请求显示仍等待真实onLoad，激活后的首帧启动一次待机
+  ---
+  duration_ms: 5.5792
+  type: 'test'
+  ...
+# Subtest: 单龟招呼不重入，暂停冻结剩余时间；完整长帧后只回一次idle
+ok 35 - 单龟招呼不重入，暂停冻结剩余时间；完整长帧后只回一次idle
+  ---
+  duration_ms: 9.298
+  type: 'test'
+  ...
+# Subtest: 减少动态直接保持idle，不启动招呼或新增节点
+ok 36 - 减少动态直接保持idle，不启动招呼或新增节点
+  ---
+  duration_ms: 6.9461
+  type: 'test'
+  ...
+# Subtest: 减少动态设置立即结束正在播放的五龟招呼，保留后台暂停并支持重新开启
+ok 37 - 减少动态设置立即结束正在播放的五龟招呼，保留后台暂停并支持重新开启
+  ---
+  duration_ms: 8.4149
+  type: 'test'
+  ...
+# Subtest: 任一加载失败释放先到资源，晚回调和显示请求不能复活首页
+ok 38 - 任一加载失败释放先到资源，晚回调和显示请求不能复活首页
+  ---
+  duration_ms: 5.3368
+  type: 'test'
+  ...
+# Subtest: 中途组装失败回滚已适配模型、六Prefab和外海资源
+ok 39 - 中途组装失败回滚已适配模型、六Prefab和外海资源
+  ---
+  duration_ms: 13.4823
+  type: 'test'
+  ...
+# Subtest: 加载中销毁及父节点提前离开都不接收迟到资源，重复回调不重复持有
+ok 40 - 加载中销毁及父节点提前离开都不接收迟到资源，重复回调不重复持有
+  ---
+  duration_ms: 13.4437
+  type: 'test'
+  ...
+# Subtest: 就绪后父节点销毁自动释放全部引用，后续destroy和招呼安全幂等
+ok 41 - 就绪后父节点销毁自动释放全部引用，后续destroy和招呼安全幂等
+  ---
+  duration_ms: 9.6437
+  type: 'test'
+  ...
+# Subtest: 一次图集加载，八帧整数切片，共享同一纹理与同名SpriteFrame
+ok 42 - 一次图集加载，八帧整数切片，共享同一纹理与同名SpriteFrame
+  ---
+  duration_ms: 16.5966
+  type: 'test'
+  ...
+# Subtest: 切屏待销毁节点仍isValid时使用strict检查，迟到资源只绑定新页面
+ok 43 - 切屏待销毁节点仍isValid时使用strict检查，迟到资源只绑定新页面
+  ---
+  duration_ms: 2.7318
+  type: 'test'
+  ...
+# Subtest: 已销毁节点立即解除等待记录；后续节点无需再次加载图集
+ok 44 - 已销毁节点立即解除等待记录；后续节点无需再次加载图集
+  ---
+  duration_ms: 36.699
+  type: 'test'
+  ...
+# Subtest: 所有者在资源完成前销毁，迟到回调不创建纹理/帧/引用或恢复图标
+ok 45 - 所有者在资源完成前销毁，迟到回调不创建纹理/帧/引用或恢复图标
+  ---
+  duration_ms: 1.1254
+  type: 'test'
+  ...
+# Subtest: 销毁先清理活跃Sprite再释放帧和纹理，不重复释放source ImageAsset
+ok 46 - 销毁先清理活跃Sprite再释放帧和纹理，不重复释放source ImageAsset
+  ---
+  duration_ms: 1.5975
+  type: 'test'
+  ...
+# Subtest: 资源失败记录明确失败状态，保持图标禁用，不把文字退化当通过或反复请求
+ok 47 - 资源失败记录明确失败状态，保持图标禁用，不把文字退化当通过或反复请求
+  ---
+  duration_ms: 2.9124
+  type: 'test'
+  ...
+# Subtest: 尺寸不正确拒绝切片；分配中失败会释放所有已分配资源
+ok 48 - 尺寸不正确拒绝切片；分配中失败会释放所有已分配资源
+  ---
+  duration_ms: 3.5116
+  type: 'test'
+  ...
+# Subtest: 同一节点改图标复用组件，只保留一份销毁监听
+ok 49 - 同一节点改图标复用组件，只保留一份销毁监听
+  ---
+  duration_ms: 3.5048
+  type: 'test'
+  ...
+# Subtest: 运行资源是已审查的1024x512 RGBA图集，未替换为伪棋盘候选
+ok 50 - 运行资源是已审查的1024x512 RGBA图集，未替换为伪棋盘候选
+  ---
+  duration_ms: 3.4488
+  type: 'test'
+  ...
+# Subtest: 显式重试失败批次只发一次请求，旧成功/错误回调不覆盖新结果或多持有图集
+ok 51 - 显式重试失败批次只发一次请求，旧成功/错误回调不覆盖新结果或多持有图集
+  ---
+  duration_ms: 2.9706
+  type: 'test'
+  ...
+# Subtest: 同步抛错留下的旧回调被代号隔离，销毁后重试和迟到回调均不分配
+ok 52 - 同步抛错留下的旧回调被代号隔离，销毁后重试和迟到回调均不分配
+  ---
+  duration_ms: 0.9599
+  type: 'test'
+  ...
+# Subtest: 无效图片或持有引用失败不切片，不释放从未获得的源引用，随后可正常重试
+ok 53 - 无效图片或持有引用失败不切片，不释放从未获得的源引用，随后可正常重试
+  ---
+  duration_ms: 1.02
+  type: 'test'
+  ...
+# Subtest: Node刚请求销毁而Sprite仍有效时，同帧销毁图标owner先断开引用再释放共享帧
+ok 54 - Node刚请求销毁而Sprite仍有效时，同帧销毁图标owner先断开引用再释放共享帧
+  ---
+  duration_ms: 2.1894
+  type: 'test'
+  ...
+# Subtest: 单独pending的Sprite仍须在共享帧释放前解除引用
+ok 55 - 单独pending的Sprite仍须在共享帧释放前解除引用
+  ---
+  duration_ms: 2.9211
+  type: 'test'
+  ...
+# Subtest: NODE_DESTROYED事件中仍活着的组件先清理，后续监听销毁owner也安全
+ok 56 - NODE_DESTROYED事件中仍活着的组件先清理，后续监听销毁owner也安全
+  ---
+  duration_ms: 3.8018
+  type: 'test'
+  ...
+# Subtest: 图集绑定中失败时，已经赋帧但刚进入pending的Sprite先清理再回滚资源
+ok 57 - 图集绑定中失败时，已经赋帧但刚进入pending的Sprite先清理再回滚资源
+  ---
+  duration_ms: 3.1702
+  type: 'test'
+  ...
+# Subtest: 预载门控共用一次请求；30帧精确对应冻结rect/insets并共享一张atlas
+ok 58 - 预载门控共用一次请求；30帧精确对应冻结rect/insets并共享一张atlas
+  ---
+  duration_ms: 7.4695
+  type: 'test'
+  ...
+# Subtest: 十种最小高度不挤压九宫格角；2x/.5外延保留原父点击尺寸与透明余量
+ok 59 - 十种最小高度不挤压九宫格角；2x/.5外延保留原父点击尺寸与透明余量
+  ---
+  duration_ms: 4.731
+  type: 'test'
+  ...
+# Subtest: 两面板借用同帧；关一页不释放共享资源，所有者先解绑含pending节点再释放
+ok 60 - 两面板借用同帧；关一页不释放共享资源，所有者先解绑含pending节点再释放
+  ---
+  duration_ms: 4.9827
+  type: 'test'
+  ...
+# Subtest: 所有者在加载中销毁立即结束gate；迟到资源不建立引用或节点
+ok 61 - 所有者在加载中销毁立即结束gate；迟到资源不建立引用或节点
+  ---
+  duration_ms: 2.7112
+  type: 'test'
+  ...
+# Subtest: 普通面板注入前必须完成gate；只有未注入或明确特殊圆角使用Graphics
+ok 62 - 普通面板注入前必须完成gate；只有未注入或明确特殊圆角使用Graphics
+  ---
+  duration_ms: 6.0139
+  type: 'test'
+  ...
+# Subtest: 载入失败及坏尺寸拒收，显式retry重新加载；旧回调不能抢占新的attempt
+ok 63 - 载入失败及坏尺寸拒收，显式retry重新加载；旧回调不能抢占新的attempt
+  ---
+  duration_ms: 3.2015
+  type: 'test'
+  ...
+# Subtest: 部分帧分配和同步加载异常完整释放；面板创建失败仅移除自己的装饰
+ok 64 - 部分帧分配和同步加载异常完整释放；面板创建失败仅移除自己的装饰
+  ---
+  duration_ms: 9.2584
+  type: 'test'
+  ...
+# Subtest: pending/destroyed父节点不接收面板，重复attach不残留旧decor或多份监听
+ok 65 - pending/destroyed父节点不接收面板，重复attach不残留旧decor或多份监听
+  ---
+  duration_ms: 8.4601
+  type: 'test'
+  ...
+# Subtest: 按钮名字/尺寸/位置、文字和事件保持父节点；装饰不新增触控监听
+ok 66 - 按钮名字/尺寸/位置、文字和事件保持父节点；装饰不新增触控监听
+  ---
+  duration_ms: 3.3012
+  type: 'test'
+  ...
+# Subtest: 实际运行PNG等于已审冻结源，布局/图集推广记录指向同一文件
+ok 67 - 实际运行PNG等于已审冻结源，布局/图集推广记录指向同一文件
+  ---
+  duration_ms: 5.0633
+  type: 'test'
+  ...
+# Subtest: 五图乱序加载只请求一次；全部就绪后绑定，保留384整帧与原白色RGBA
+ok 68 - 五图乱序加载只请求一次；全部就绪后绑定，保留384整帧与原白色RGBA
+  ---
+  duration_ms: 8.937
+  type: 'test'
+  ...
+# Subtest: 切屏待销毁节点不会绑定迟到头像；同节点改职业只保留一个组件和监听
+ok 69 - 切屏待销毁节点不会绑定迟到头像；同节点改职业只保留一个组件和监听
+  ---
+  duration_ms: 1.4307
+  type: 'test'
+  ...
+# Subtest: 头像已就绪后Node请求销毁，同帧owner销毁先清仍有效Sprite引用，再释放共享帧
+ok 70 - 头像已就绪后Node请求销毁，同帧owner销毁先清仍有效Sprite引用，再释放共享帧
+  ---
+  duration_ms: 1.3038
+  type: 'test'
+  ...
+# Subtest: 单独pending的Sprite及NODE_DESTROYED事件中仍有效的组件均先解除引用
+ok 71 - 单独pending的Sprite及NODE_DESTROYED事件中仍有效的组件均先解除引用
+  ---
+  duration_ms: 7.4443
+  type: 'test'
+  ...
+# Subtest: 已销毁卡片解除绑定，共享头像直到管理器结束才释放
+ok 72 - 已销毁卡片解除绑定，共享头像直到管理器结束才释放
+  ---
+  duration_ms: 7.6673
+  type: 'test'
+  ...
+# Subtest: 部分加载失败释放已取得资源；显式重试隔离旧批次迟到回调
+ok 73 - 部分加载失败释放已取得资源；显式重试隔离旧批次迟到回调
+  ---
+  duration_ms: 2.4925
+  type: 'test'
+  ...
+# Subtest: 加载中销毁管理器，清理已有资源且所有迟到回调不创建对象或复活头像
+ok 74 - 加载中销毁管理器，清理已有资源且所有迟到回调不创建对象或复活头像
+  ---
+  duration_ms: 1.2405
+  type: 'test'
+  ...
+# Subtest: 错尺寸、分配失败与同步load异常有明确失败状态且不泄漏
+ok 75 - 错尺寸、分配失败与同步load异常有明确失败状态且不泄漏
+  ---
+  duration_ms: 4.7797
+  type: 'test'
+  ...
+# Subtest: 运行五张PNG逐字节等于已批准384px真RGBA，推广未替换64px审查图
+ok 76 - 运行五张PNG逐字节等于已批准384px真RGBA，推广未替换64px审查图
+  ---
+  duration_ms: 14.6533
+  type: 'test'
+  ...
+1..76
+# tests 76
+# suites 0
+# pass 76
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3772.0138

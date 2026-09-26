@@ -1,0 +1,52 @@
+{
+  "status": "c03 leaf-shape prototype submitted for parent review; not promoted",
+  "sample_viewed": "leaf-stack-preview.png",
+  "full_view_viewed": "render-three-quarter.png",
+  "sample_observation": "The three-leaf sample shows a rounded short tip, a visible shallow central midrib and an upper tip lying above the two lower leaf bellies.",
+  "full_observation": "The complete carapace now reads as layered leaves rather than round plates. Tip direction and shallow midribs are visible, while radial gaps are wider/darker than A4 and row bands remain pronounced.",
+  "geometry_choice": "A thinner cambered lamina with a rounded shallow central midrib; strictly ordered layer offsets expose the tips instead of burying them beneath neighbouring bellies.",
+  "remaining_issue": "Review whether the inter-row gaps and tiered contour are too strong. Any later refinement should keep the exposed tips while reducing excessive radial separation; no extra change has been made after this one full-shell preview.",
+  "preserved": {
+    "non_leaf_meshes_vertices_faces_uv_weights": 68,
+    "rig_layout": true,
+    "source_clip_inventory_ranges": true,
+    "atlas_png_bytes": true,
+    "full_camera_lights_world": true,
+    "c01_c02_original_bytes": true,
+    "frozen_other_species_runtime_payloads": true
+  },
+  "source_statistics": {
+    "triangles_source": 63782,
+    "leaf_count": 47,
+    "non_leaf_meshes_unchanged": 68,
+    "source_sha256": "0590bc0b07c6408715e421af98ee5a22a89f8713505fc7b7b4432da2d2ee80c5",
+    "atlas_png_sha256": {
+      "leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+      "leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    }
+  },
+  "not_done": [
+    "No FBX/GLB export",
+    "No runtime LOD generation",
+    "No six-action re-export",
+    "No full half-frame animation/intersection QA",
+    "No Cocos import/build"
+  ],
+  "rendering": {
+    "cpu_threads": 2,
+    "samples": 32,
+    "resolution": [
+      800,
+      680
+    ],
+    "sample_exit_code": 0,
+    "full_preview_exit_code": 0,
+    "scope_check_exit_code": 0,
+    "all_blender_processes_finished": true
+  },
+  "output_source": "leaf-turtle.blend",
+  "source_is_editable_parts": true,
+  "source_atlases_packed": 2,
+  "full_preview_uses_editable_source_meshes_not_runtime_lod": true,
+  "sample_display_note": "Only the sample-review scene enlarges the three leaves for inspection. Full-shell camera and source coordinates remain unchanged from the authored family convention."
+}

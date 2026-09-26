@@ -1,0 +1,774 @@
+{
+  "version": "home-island-candidate-02",
+  "status": "offline-model-generated-runtime-not-promoted",
+  "coordinateConvention": "Cocos x/y-up/z; Blender x/-z/y",
+  "nominalFootprintXZ": [
+    12,
+    8
+  ],
+  "displayAnchors": [
+    {
+      "name": "Display_stone",
+      "role": "stone",
+      "x": -0.8,
+      "y": 0.16,
+      "z": 2.7,
+      "yawDegrees": 8
+    },
+    {
+      "name": "Display_spike",
+      "role": "spike",
+      "x": -2.4,
+      "y": 0.16,
+      "z": -0.25,
+      "yawDegrees": 12
+    },
+    {
+      "name": "Display_crystal",
+      "role": "crystal",
+      "x": -3.15,
+      "y": 0.16,
+      "z": 2.15,
+      "yawDegrees": 15
+    },
+    {
+      "name": "Display_leaf",
+      "role": "leaf",
+      "x": 1.55,
+      "y": 0.16,
+      "z": 2.3,
+      "yawDegrees": -8
+    },
+    {
+      "name": "Display_bubble",
+      "role": "bubble",
+      "x": 2.05,
+      "y": 0.16,
+      "z": -0.3,
+      "yawDegrees": -12
+    }
+  ],
+  "displaySurfaceY": 0.16,
+  "waterY": -0.72,
+  "houseDoor": [
+    0.05,
+    0.24,
+    -1.18
+  ],
+  "pearl": [
+    0.05,
+    3.11,
+    -2.37
+  ],
+  "editableMeshes": 845,
+  "cameraCandidate": {
+    "position": [
+      1.8,
+      8.2,
+      12.8
+    ],
+    "target": [
+      -0.45,
+      0.9,
+      0
+    ],
+    "baseVerticalFovDegrees": 38
+  },
+  "characterReferences": {
+    "stone": {
+      "path": "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend",
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "spike": {
+      "path": "game/art-source/spike-turtle/candidate-02/spike-turtle.blend",
+      "sha256": "9193078d649856f18c8ef3244c731480e00b86bc9ae000847cabb46fa38109ca",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "crystal": {
+      "path": "game/art-source/crystal-turtle/candidate-02/crystal-turtle.blend",
+      "sha256": "694e5496e9e44040259f3f4ea525b42a51e13acb52c4c685b134fb2fb152a51e",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "leaf": {
+      "path": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/leaf-turtle-runtime.blend",
+      "sha256": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    }
+  },
+  "charactersExported": false,
+  "noGameplayRoute": true,
+  "authorship": "New home-only geometry, original own-project modules/UV/pigment atlas; no imported stock/game assets",
+  "boundedChanges": [
+    "Irregular embedded courtyard perimeter with raised grass contact",
+    "Shallow lower clam and central collar support unchanged pearl",
+    "Few varied-height low edge/house-side grass tufts"
+  ],
+  "openUpperSurfaceChecks": [
+    {
+      "mesh": "Home_continuous_grass",
+      "upperFaces": 1344,
+      "flipped": 0,
+      "minimumLocalZ": 0.9979162216186523
+    },
+    {
+      "mesh": "Continuous_level_display_court",
+      "upperFaces": 62,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Irregular_grass_embedded_paving_collar",
+      "upperFaces": 64,
+      "flipped": 0,
+      "minimumLocalZ": 0.8633792996406555
+    },
+    {
+      "mesh": "Courtyard_paver_00_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_00_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_00_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_00_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_01_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_01_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_01_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_01_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_01_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_01_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_01_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_01_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_02_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_02_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_02_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_02_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_02_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_02_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_02_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_02_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_03_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_03_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_04_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_04_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_04_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_04_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_04_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_04_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_04_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_05_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_05_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_05_08",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_06_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_06_08",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_07_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_07_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_07_08",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_08_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_08_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_08_08",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_09_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_09_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_09_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_09_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_09_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_09_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_09_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_09_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_03",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_04",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_10_05",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_10_06",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_10_07",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_11_00",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "Courtyard_paver_11_01",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Courtyard_paver_11_02",
+      "upperFaces": 3,
+      "flipped": 0,
+      "minimumLocalZ": 1.0
+    },
+    {
+      "mesh": "House_cream_foundation",
+      "upperFaces": 30,
+      "flipped": 0,
+      "minimumLocalZ": 0.9999999403953552
+    },
+    {
+      "mesh": "Pearl_supported_lower_clam",
+      "upperFaces": 336,
+      "flipped": 0,
+      "minimumLocalZ": 0.9398265480995178
+    }
+  ],
+  "newLowFoliage": [
+    {
+      "centerXZ": [
+        -4.45,
+        1.18
+      ],
+      "height": 0.26,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.392004932174992
+    },
+    {
+      "centerXZ": [
+        -4.34,
+        3.03
+      ],
+      "height": 0.37,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.2500337833982034
+    },
+    {
+      "centerXZ": [
+        -2.01,
+        3.91
+      ],
+      "height": 0.22,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.4811984104714448
+    },
+    {
+      "centerXZ": [
+        0.55,
+        3.8
+      ],
+      "height": 0.29,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.5114074767267998
+    },
+    {
+      "centerXZ": [
+        3.29,
+        1.4
+      ],
+      "height": 0.32,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.7289793260777409
+    },
+    {
+      "centerXZ": [
+        3.45,
+        -0.58
+      ],
+      "height": 0.25,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 1.1977254638059802
+    },
+    {
+      "centerXZ": [
+        -2.43,
+        -2.94
+      ],
+      "height": 0.42,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 2.4601672810440616
+    },
+    {
+      "centerXZ": [
+        2.55,
+        -2.97
+      ],
+      "height": 0.34,
+      "radialBound": 0.23,
+      "minimumDisplayCenterClearanceAfterRadius": 2.4864130760987
+    }
+  ],
+  "firstRoundLayoutAndCameraUnchanged": true,
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 3140,
+      "triangles": 4750
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 19200,
+      "triangles": 33230
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 532,
+      "triangles": 1008
+    }
+  ],
+  "totalTriangles": 38988,
+  "materials": 2,
+  "fbxSha256": "e15033c9068ed6e5ccdfe424be6d4a11490712a576ab8fccd05e3b392c300f14",
+  "geometryBoundsCocos": {
+    "min": [
+      -7.505000114440918,
+      -1.064998984336853,
+      -4.322445392608643
+    ],
+    "max": [
+      6.586040019989014,
+      4.285477638244629,
+      4.419971466064453
+    ]
+  }
+}

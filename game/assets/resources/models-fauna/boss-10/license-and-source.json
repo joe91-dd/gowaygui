@@ -1,0 +1,36 @@
+{
+  "id": "green-5",
+  "name": "蓝角寄居王",
+  "tier": 0,
+  "index": 10,
+  "base": 38,
+  "key": "boss-10",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 47656,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-38",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/fdfdbf673233a7fd2a2164172836ebd402707014e52ba2eb331446da0d50fa5f_BlueDemon.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24692,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.9
+}

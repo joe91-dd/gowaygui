@@ -1,0 +1,22 @@
+{
+  "asset": "hero-bubble.png",
+  "status": "production UI raster; verified real transparent alpha",
+  "createdDate": "2026-09-10",
+  "tool": "built-in image_gen.imagegen, fresh generation with text description after reference-based transparency failed",
+  "visualReferenceInspected": "C:/Users/Administrator/Desktop/龟/04_五角色正式设定.png.png",
+  "referenceRegion": "fifth column, anchor turtle controller 潮行",
+  "generatedOriginal": "C:/Users/Administrator/.codex/generated_images/01a086f6-905e-7270-bb32-8e17d692e21d/exec-4b9d9beb-6040-4736-ae5a-e6913d863511.png",
+  "productionPath": "game/assets/resources/art-v2/hero-bubble.png",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "alphaRange": [0, 255],
+  "fullyTransparentPixels": 945273,
+  "fourCornersTransparent": true,
+  "visibleAlpha32BBox": [147, 43, 1107, 1198],
+  "bytes": 1488066,
+  "sha256": "d22da0a3db8b016ed31907cbcd969857fb7c21f949c6ec6d261c91c749364c8f",
+  "prompt": "final-prompt.txt",
+  "postProcessing": "None. Original generated RGBA PNG copied unchanged.",
+  "visualReview": "Complete standing aqua controller, gold-edged blue armor, spiked shell and full double-ended anchor staff visible. Friendly boyish face. Real transparent margins, no pedestal or text. Fresh generation preserves class identity with an adapted face/armor interpretation; this is a UI illustration, not a 3D model."
+}

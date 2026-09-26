@@ -1,0 +1,100 @@
+{
+  "buildDir": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile",
+  "generatedAt": "2026-09-09T16:03:08.813Z",
+  "scope": "Validates the identified built JavaScript artifact. Source edits require a fresh Cocos build.",
+  "status": "passed",
+  "stage": "complete",
+  "checks": [
+    "real two-wave combat, malformed-skill validation and deterministic checkpoint recovery",
+    "nonempty role-filtered union, normalized odds and 32 valid offspring",
+    "uncollected parents persist; confirmed collection retires both sources once; restart and duplicate commands preserve result"
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "e62d4d59564222055b1d55b2bf7fa34c9575e5d3d7a3e0871eb5c17be0747618",
+      "bytes": 23034,
+      "builtAt": "2026-09-09T16:00:20.217Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "b4f05a089c216d9fbc17c8c1cebc2200cbb6086ebf7d061e0d7945aa223db18e",
+      "bytes": 842764,
+      "builtAt": "2026-09-09T16:00:19.258Z"
+    }
+  ],
+  "parents": [
+    {
+      "role": "spike",
+      "skills": [
+        "critical",
+        "strong",
+        "healShield"
+      ],
+      "level": 3
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "sleep",
+        "encourage"
+      ],
+      "level": 2
+    }
+  ],
+  "pools": [
+    {
+      "role": "spike",
+      "skills": [
+        "critical",
+        "strong",
+        "healShield",
+        "sleep",
+        "encourage"
+      ]
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "critical",
+        "strong",
+        "healShield",
+        "sleep",
+        "encourage"
+      ]
+    }
+  ],
+  "output": {
+    "role": "spike",
+    "skills": [
+      "encourage",
+      "critical",
+      "strong"
+    ],
+    "sourceCount": 2,
+    "historyCount": 2
+  },
+  "executedModules": [
+    "chunks:///_virtual/game.ts",
+    "chunks:///_virtual/rollupPluginModLoBabelHelpers.js",
+    "chunks:///_virtual/data.ts",
+    "chunks:///_virtual/campaign.ts",
+    "chunks:///_virtual/multiFront.ts",
+    "chunks:///_virtual/random.ts",
+    "chunks:///_virtual/fusion.ts",
+    "chunks:///_virtual/talents.ts",
+    "chunks:///_virtual/save.ts",
+    "chunks:///_virtual/communityValidation.ts",
+    "chunks:///_virtual/battleValidation.ts",
+    "chunks:///_virtual/storage.ts",
+    "chunks:///_virtual/skillBooks.ts",
+    "chunks:///_virtual/prototype.ts",
+    "chunks:///_virtual/economy.ts",
+    "chunks:///_virtual/prototypeConfig.ts",
+    "chunks:///_virtual/battle.ts",
+    "chunks:///_virtual/community.ts",
+    "chunks:///_virtual/arena.ts",
+    "chunks:///_virtual/raids.ts",
+    "chunks:///_virtual/shop.ts"
+  ]
+}

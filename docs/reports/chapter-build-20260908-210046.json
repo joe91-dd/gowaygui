@@ -1,0 +1,294 @@
+{
+  "generatedAt": "2026-09-08T13:04:12.476Z",
+  "status": "passed",
+  "scope": "Actual built fifth-level coordinates and one-unit primary/backup legacy-layout recovery, plus actual Cocos imports and approved source bytes. Full compatibility is separately tested; this does not prove browser visuals, audio, performance or chapter completion.",
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "75fc23cbb9ecc78efeaf5c912e2bd20fd019e44f85255c9eba2a3f61ddfa973f",
+      "bytes": 22559,
+      "builtAt": "2026-09-08T13:01:59.699Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "04967e87fd5b58794dc7da1653c762b497c3e52abe53a6843c4c3258c77e2ea1",
+      "bytes": 341207,
+      "builtAt": "2026-09-08T13:01:59.575Z"
+    }
+  ],
+  "bossSlots": [
+    {
+      "x": -5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "z": -1.31
+    }
+  ],
+  "recovery": {
+    "tick": 7,
+    "balanceVersion": 2,
+    "primary": true,
+    "backup": true,
+    "readWrites": 0
+  },
+  "assets": [
+    {
+      "id": "leaf",
+      "manifest": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/promotion.json",
+      "files": [
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-turtle.fbx",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-turtle.fbx",
+          "bytes": 2538348,
+          "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e"
+        },
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-colour.png",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-colour.png",
+          "bytes": 970021,
+          "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+        },
+        {
+          "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-roughness.png",
+          "target": "game\\assets\\resources\\models\\leaf-turtle\\leaf-roughness.png",
+          "bytes": 22192,
+          "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+        }
+      ],
+      "uuid": "f9a1a3ca-8b07-4a33-ab2b-8c33c636cb74",
+      "meshes": [
+        {
+          "name": "Torso_mesh.mesh",
+          "triangles": 29560
+        }
+      ],
+      "materials": [
+        "LeafAtlas_01"
+      ],
+      "prefabs": [
+        {
+          "name": "leaf-turtle.prefab",
+          "uuid": "f9a1a3ca-8b07-4a33-ab2b-8c33c636cb74@46e2a"
+        }
+      ],
+      "clips": [
+        {
+          "name": "LeafTurtle_Rig|fusion.animation",
+          "duration": 1.9666666984558105
+        },
+        {
+          "name": "LeafTurtle_Rig|attack.animation",
+          "duration": 0.8666666746139526
+        },
+        {
+          "name": "LeafTurtle_Rig|hit.animation",
+          "duration": 0.5666666626930237
+        },
+        {
+          "name": "LeafTurtle_Rig|idle.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "LeafTurtle_Rig|rest.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "LeafTurtle_Rig|skill.animation",
+          "duration": 1.3666666746139526
+        }
+      ]
+    },
+    {
+      "id": "bubble",
+      "manifest": "game/art-source/bubble-turtle/runtime-promotion.json",
+      "files": [
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-turtle.fbx",
+          "bytes": 2573804,
+          "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398"
+        },
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-colour.png",
+          "bytes": 972370,
+          "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711"
+        },
+        {
+          "source": "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png",
+          "target": "game/assets/resources/models/bubble-turtle/bubble-roughness.png",
+          "bytes": 22011,
+          "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb"
+        }
+      ],
+      "uuid": "1e8d7baf-bb51-4bc9-9eac-49b1d045976d",
+      "meshes": [
+        {
+          "name": "Torso_mesh.mesh",
+          "triangles": 29604
+        }
+      ],
+      "materials": [
+        "BubbleAtlas_01"
+      ],
+      "prefabs": [
+        {
+          "name": "bubble-turtle.prefab",
+          "uuid": "1e8d7baf-bb51-4bc9-9eac-49b1d045976d@7ae0f"
+        }
+      ],
+      "clips": [
+        {
+          "name": "BubbleTurtle_Rig|attack.animation",
+          "duration": 0.8666666746139526
+        },
+        {
+          "name": "BubbleTurtle_Rig|fusion.animation",
+          "duration": 1.9666666984558105
+        },
+        {
+          "name": "BubbleTurtle_Rig|hit.animation",
+          "duration": 0.5666666626930237
+        },
+        {
+          "name": "BubbleTurtle_Rig|idle.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "BubbleTurtle_Rig|rest.animation",
+          "duration": 2.366666555404663
+        },
+        {
+          "name": "BubbleTurtle_Rig|skill.animation",
+          "duration": 1.3666666746139526
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "manifest": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/promotion-manifest.json",
+      "files": [
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-claw.fbx",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-claw.fbx",
+          "bytes": 1187980,
+          "sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0"
+        },
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-colour.png",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-colour.png",
+          "bytes": 68454,
+          "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d"
+        },
+        {
+          "source": "game/art-source/enemies/giant-claw/rigged/runtime-candidate/export/giant-roughness.png",
+          "target": "game/assets/resources/models/enemies/giant-claw/giant-roughness.png",
+          "bytes": 6039,
+          "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+        }
+      ],
+      "uuid": "9224e9ea-247e-4073-8823-334aa2108fac",
+      "meshes": [
+        {
+          "name": "Wide_sturdy_boss_body_mesh.mesh",
+          "triangles": 21208
+        }
+      ],
+      "materials": [
+        "GiantClaw_Toy_Atlas"
+      ],
+      "prefabs": [
+        {
+          "name": "giant-claw.prefab",
+          "uuid": "9224e9ea-247e-4073-8823-334aa2108fac@6bf80"
+        }
+      ],
+      "clips": [
+        {
+          "name": "GiantClaw_Rig|exit.animation",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "GiantClaw_Rig|attack.animation",
+          "duration": 0.5
+        },
+        {
+          "name": "GiantClaw_Rig|hit.animation",
+          "duration": 0.5
+        },
+        {
+          "name": "GiantClaw_Rig|idle.animation",
+          "duration": 2.799999952316284
+        },
+        {
+          "name": "GiantClaw_Rig|walk.animation",
+          "duration": 1.2000000476837158
+        }
+      ]
+    },
+    {
+      "id": "bossBay",
+      "manifest": "game/art-source/environment/boss-bay/candidate-02/promotion-manifest.json",
+      "files": [
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/boss-bay.fbx",
+          "target": "game/assets/resources/environment/boss-bay/boss-bay.fbx",
+          "bytes": 4274172,
+          "sha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a"
+        },
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/island-colour.png",
+          "target": "game/assets/resources/environment/boss-bay/island-colour.png",
+          "bytes": 2727591,
+          "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f"
+        },
+        {
+          "source": "game/art-source/environment/boss-bay/candidate-02/island-roughness.png",
+          "target": "game/assets/resources/environment/boss-bay/island-roughness.png",
+          "bytes": 40385,
+          "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16"
+        }
+      ],
+      "uuid": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18",
+      "meshes": [
+        {
+          "name": "Sanctuary_luminous_pearl_geometry.mesh",
+          "triangles": 2304
+        },
+        {
+          "name": "Continuous_grass_island_geometry.mesh",
+          "triangles": 9340
+        },
+        {
+          "name": "Coast_chamfer_rock_00_geometry.mesh",
+          "triangles": 43484
+        }
+      ],
+      "materials": [
+        "Island_atlas",
+        "Warm_pearl_and_lamps"
+      ],
+      "prefabs": [
+        {
+          "name": "boss-bay.prefab",
+          "uuid": "5b5b1616-e6b8-4b3c-86ea-c733fe071d18@5d37f"
+        }
+      ],
+      "clips": []
+    }
+  ]
+}

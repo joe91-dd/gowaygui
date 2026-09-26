@@ -1,0 +1,154 @@
+{
+  "asset": "yeling",
+  "role": "spike",
+  "source": "AHOLO G1 / PRO generation",
+  "originalTriangles": 197742,
+  "runtimeTriangles": 108705,
+  "bones": 18,
+  "maxInfluences": 4,
+  "height": 2.3,
+  "weapon": "leaf-bow",
+  "clips": {
+    "idle": 4,
+    "walk": 1.067,
+    "attack": 1,
+    "attack2": 1,
+    "skill": 1.7,
+    "hit": 0.767,
+    "greeting": 2,
+    "rest": 2.167,
+    "exit": 1.6
+  },
+  "sockets": [
+    {
+      "name": "FX_Weapon_Core",
+      "bone": "hand.L",
+      "position": [
+        0.85999995470047,
+        -0.2750000059604645,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "FX_Weapon_Grip",
+      "bone": "hand.L",
+      "position": [
+        0.8299999833106995,
+        -0.20000000298023224,
+        0.8700000047683716
+      ]
+    },
+    {
+      "name": "FX_Quiver",
+      "bone": "chest",
+      "position": [
+        0.24,
+        0.25,
+        1.76
+      ]
+    },
+    {
+      "name": "FX_Vine_00",
+      "bone": "hand.L",
+      "position": [
+        0.6199999451637268,
+        -0.3100000023841858,
+        0.15000000596046448
+      ]
+    },
+    {
+      "name": "FX_Vine_01",
+      "bone": "hand.L",
+      "position": [
+        0.7599999308586121,
+        -0.3100000023841858,
+        0.2900000214576721
+      ]
+    },
+    {
+      "name": "FX_Vine_02",
+      "bone": "hand.L",
+      "position": [
+        0.9799999594688416,
+        -0.3100000023841858,
+        0.48000001907348633
+      ]
+    },
+    {
+      "name": "FX_Vine_03",
+      "bone": "hand.L",
+      "position": [
+        1.0099999904632568,
+        -0.3100000023841858,
+        0.6599999666213989
+      ]
+    },
+    {
+      "name": "FX_Vine_04",
+      "bone": "hand.L",
+      "position": [
+        0.85999995470047,
+        -0.3100000023841858,
+        0.8799999952316284
+      ]
+    },
+    {
+      "name": "FX_Vine_05",
+      "bone": "hand.L",
+      "position": [
+        1.0099999904632568,
+        -0.3100000023841858,
+        1.100000023841858
+      ]
+    },
+    {
+      "name": "FX_Vine_06",
+      "bone": "hand.L",
+      "position": [
+        0.9799999594688416,
+        -0.3100000023841858,
+        1.2799999713897705
+      ]
+    },
+    {
+      "name": "FX_Vine_07",
+      "bone": "hand.L",
+      "position": [
+        0.7599999308586121,
+        -0.3100000023841858,
+        1.4700000286102295
+      ]
+    },
+    {
+      "name": "FX_Vine_08",
+      "bone": "hand.L",
+      "position": [
+        0.6199999451637268,
+        -0.3100000023841858,
+        1.6100000143051147
+      ]
+    },
+    {
+      "name": "FX_Chest",
+      "bone": "chest",
+      "position": [
+        0,
+        -0.29,
+        1.15
+      ]
+    }
+  ],
+  "faceGeometryReplaced": false,
+  "texturesRepainted": false,
+  "knownLimitations": [
+    "Generated triangulated topology; weights require extreme-pose visual review.",
+    "Facial expressions are the source sculpt, not a full facial blendshape rig."
+  ],
+  "coincidentWeightGroups": 59982,
+  "uvSeamWeightsUnified": true,
+  "neutralEquipmentUpright": true,
+  "weaponProvenance": "Blender-authored jade recurved bow replaces malformed AHOLO leaf-bow; source generation preserved separately.",
+  "gripSculpt": "curled weapon hand; warrior fists",
+  "runtimeGeometry": "Connected surface; original per-corner UV atlas retained",
+  "runtimePath": "runtime-v2/yeling"
+}

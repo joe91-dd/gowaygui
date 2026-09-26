@@ -1,0 +1,23 @@
+{
+  "asset": "quality-frames.png",
+  "generatedAtDate": "2026-09-10",
+  "generator": "OpenAI built-in image_gen",
+  "mode": "fresh generation, text design based on inspected approved references03and10",
+  "referenceImages": [
+    "C:/Users/Administrator/Desktop/龟/03_UI按钮面板组件规范.png.png",
+    "C:/Users/Administrator/Desktop/龟/10_我的龟龟页面参考.png"
+  ],
+  "originalGeneratedFile": "C:/Users/Administrator/.codex/generated_images/01a086f7-59cf-74f0-bb28-c163e75eb53d/exec-5f96e71b-c224-4ad9-91ac-f7743a59e882.png",
+  "sourceCopy": "game/art-source/art-v2/quality/quality-frames-source.png",
+  "runtimeCopy": "game/assets/resources/art-v2/quality-frames.png",
+  "prompt": "prompt.txt",
+  "coordinates": "coordinates.json",
+  "width": 1983,
+  "height": 793,
+  "bytes": 522434,
+  "sha256": "350db19559d64600c721b99cf94467cf0d52ddbc3335917b6c982f60837c1093",
+  "postProcessing": "none; byte-identical source and runtime copy",
+  "visualQA": "Exactly five consistently styled beveled jewel portrait rims in silver, green, blue, purple, orange-gold left-to-right. No portraits, text, stars, numbers, opaque panel centers or huge protrusions. Flat front-facing UI artwork, well-separated. True nativeRGBA background and portrait holes, all five center pixels alpha0; safe content rectangles have alpha0or1 only.",
+  "implementation": "Use the five384x384 native crop rectangles in coordinates.json. Conservative content insets verified for readable portrait/labels; do not stretch full atlas into an individual border.",
+  "rightsNote": "Generated from user-provided approved art direction; provenance records source and generation, not independent legal clearance."
+}

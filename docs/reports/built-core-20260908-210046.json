@@ -1,0 +1,86 @@
+{
+  "buildDir": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile",
+  "generatedAt": "2026-09-08T13:02:07.082Z",
+  "scope": "Validates the identified built JavaScript artifact. Source edits require a fresh Cocos build.",
+  "status": "passed",
+  "stage": "complete",
+  "checks": [
+    "real two-wave combat, malformed-skill validation and deterministic checkpoint recovery",
+    "nonempty role-filtered union, normalized odds and 32 valid offspring",
+    "uncollected parents persist; confirmed collection retires both sources once; restart and duplicate commands preserve result"
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "75fc23cbb9ecc78efeaf5c912e2bd20fd019e44f85255c9eba2a3f61ddfa973f",
+      "bytes": 22559,
+      "builtAt": "2026-09-08T13:01:59.699Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "04967e87fd5b58794dc7da1653c762b497c3e52abe53a6843c4c3258c77e2ea1",
+      "bytes": 341207,
+      "builtAt": "2026-09-08T13:01:59.575Z"
+    }
+  ],
+  "parents": [
+    {
+      "role": "spike",
+      "skills": [
+        "swift",
+        "critical",
+        "combo"
+      ],
+      "level": 3
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "strong",
+        "armor"
+      ],
+      "level": 2
+    }
+  ],
+  "pools": [
+    {
+      "role": "spike",
+      "skills": [
+        "swift",
+        "critical",
+        "combo",
+        "strong",
+        "armor"
+      ]
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "swift",
+        "strong",
+        "armor"
+      ]
+    }
+  ],
+  "output": {
+    "role": "spike",
+    "skills": [
+      "swift",
+      "strong",
+      "critical"
+    ],
+    "sourceCount": 2,
+    "historyCount": 2
+  },
+  "executedModules": [
+    "chunks:///_virtual/game.ts",
+    "chunks:///_virtual/rollupPluginModLoBabelHelpers.js",
+    "chunks:///_virtual/data.ts",
+    "chunks:///_virtual/random.ts",
+    "chunks:///_virtual/fusion.ts",
+    "chunks:///_virtual/save.ts",
+    "chunks:///_virtual/battleValidation.ts",
+    "chunks:///_virtual/storage.ts",
+    "chunks:///_virtual/battle.ts"
+  ]
+}

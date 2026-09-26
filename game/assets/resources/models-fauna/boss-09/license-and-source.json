@@ -1,0 +1,36 @@
+{
+  "id": "green-4",
+  "name": "卷须劫掠者",
+  "tier": 0,
+  "index": 9,
+  "base": 37,
+  "key": "boss-09",
+  "ability": "drain",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 58924,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-37",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/5eaac0a104976176095b725316d9d9ad21af21393d8d13a30ad10ed679507d99_Alien.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24692,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.8
+}

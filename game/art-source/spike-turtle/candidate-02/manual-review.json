@@ -1,0 +1,28 @@
+{
+  "status": "Two-view style candidate frozen for parent review; no runtime promotion.",
+  "actual_images_viewed": ["render-front.png", "render-three-quarter.png"],
+  "all_requested_quick_views_viewed": true,
+  "observations": [
+    "Large spike tips and ridges visibly round in both real renders; the previous straight triangular-paper silhouette is reduced.",
+    "Expanded roots meet the scutes more naturally, although some root-over-scute transitions remain visibly separate.",
+    "Scute size/angle variation is increased while overall shell proportions and amber palette remain stable.",
+    "Lower/inward brow starts and one raised mouth corner increase confidence modestly; parent aesthetic review remains necessary."
+  ],
+  "generated_triangles": 28900,
+  "generated_bones": 10,
+  "generated_materials": 1,
+  "head_to_main_shell": 0.5952817750417428,
+  "c01_and_stone_protected_inputs_unchanged": true,
+  "colour_and_roughness_pngs_byte_identical_to_c01": true,
+  "fbx_sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+  "render_settings": {"width": 800, "height": 680, "samples": 32, "cpu_threads": 2},
+  "generation_exit_code": 0,
+  "quick_render_exit_code": 0,
+  "all_candidate02_blender_processes_exited": true,
+  "independent_c02_fbx_round_trip_done": false,
+  "independent_c02_animation_clearance_done": false,
+  "full_c02_pose_rendering_done": false,
+  "cocos_started": false,
+  "runtime_written": false,
+  "next_step": "Parent reviews two images before authorizing full c02 technical/pose checks. No further geometry edits or rendering started by this delivery."
+}

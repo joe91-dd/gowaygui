@@ -1,0 +1,291 @@
+{
+  "source_check": "pass",
+  "files": {
+    "ink-blob.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "6ad7ba81ec3240a79751235664fdd8c057bd2f2b77579a9689c9348c0dd6d6ab",
+      "texture_count": 2,
+      "surface_orientation": {
+        "status": "pass",
+        "errors": [],
+        "eye_rays": {
+          "L": {
+            "origin": [
+              -0.19437849521636963,
+              -3.0,
+              0.5640668272972107
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "eyeball_vertex_center": [
+              -0.19437849521636963,
+              -0.3408297896385193,
+              0.5640668272972107
+            ],
+            "body": {
+              "position": [
+                -0.19437849521636963,
+                -0.3959224224090576,
+                0.5640668272972107
+              ],
+              "normal": [
+                -0.24182991683483124,
+                -0.9056563973426819,
+                0.34828823804855347
+              ],
+              "distance_m": 2.6040775775909424
+            },
+            "eyeball": {
+              "position": [
+                -0.19437849521636963,
+                -0.431476354598999,
+                0.5640668272972107
+              ],
+              "normal": [
+                -0.07275683432817459,
+                -0.9765787720680237,
+                0.20248524844646454
+              ],
+              "distance_m": 2.568523645401001,
+              "clearance_in_front_of_body_m": 0.035553932189941406
+            }
+          },
+          "R": {
+            "origin": [
+              0.19540739059448242,
+              -3.0,
+              0.5635793209075928
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "eyeball_vertex_center": [
+              0.19540739059448242,
+              -0.33145755529403687,
+              0.5635793209075928
+            ],
+            "body": {
+              "position": [
+                0.19540739059448242,
+                -0.38805198669433594,
+                0.5635793209075928
+              ],
+              "normal": [
+                0.34554019570350647,
+                -0.8638162016868591,
+                0.3666381239891052
+              ],
+              "distance_m": 2.611948013305664
+            },
+            "eyeball": {
+              "position": [
+                0.19540739059448242,
+                -0.4221174716949463,
+                0.5635793209075928
+              ],
+              "normal": [
+                0.05369550734758377,
+                -0.9917495846748352,
+                0.11640327423810959
+              ],
+              "distance_m": 2.5778825283050537,
+              "clearance_in_front_of_body_m": 0.03406548500061035
+            }
+          }
+        },
+        "eye_geometry_mode": "single_sphere_atlas",
+        "body_identification": "Continuous_ink_body: atlas tile 0",
+        "body_triangle_count": 2944,
+        "body_signed_volume_m3": 0.4859648782405682
+      },
+      "authored_eyeballs": {
+        "status": "pass",
+        "errors": [],
+        "eyes": {
+          "Warm_eye_L": {
+            "status": "pass",
+            "errors": [],
+            "vertex_count": 914,
+            "boundary_edge_count": 0,
+            "non_manifold_edge_count": 0,
+            "signed_volume_m3": 0.006506707077985724,
+            "face_weighted_vertex_count": 914,
+            "invalid_face_weight_vertex_indices": []
+          },
+          "Warm_eye_R": {
+            "status": "pass",
+            "errors": [],
+            "vertex_count": 914,
+            "boundary_edge_count": 0,
+            "non_manifold_edge_count": 0,
+            "signed_volume_m3": 0.006506706191569064,
+            "face_weighted_vertex_count": 914,
+            "invalid_face_weight_vertex_indices": []
+          }
+        }
+      },
+      "sha256_after": "6ad7ba81ec3240a79751235664fdd8c057bd2f2b77579a9689c9348c0dd6d6ab",
+      "source_unchanged": true
+    },
+    "ink-blob-review-scene.blend": {
+      "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob-review-scene.blend",
+      "status": "pass",
+      "textures": [
+        {
+          "name": "InkBlob_Colour_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-colour.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "InkBlob_Roughness_512",
+          "source": "FILE",
+          "filepath": "//export\\ink-roughness.png",
+          "packed_file": true,
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "errors": [],
+      "sha256_before": "c3e251adfea80191ca4019740d5ad90a6ee99d7f0cab44ef8b3f3818b12a9f7e",
+      "texture_count": 2,
+      "surface_orientation": {
+        "status": "pass",
+        "errors": [],
+        "eye_rays": {
+          "L": {
+            "origin": [
+              -0.1943785846233368,
+              -3.0,
+              0.5640668869018555
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "eyeball_vertex_center": [
+              -0.1943785846233368,
+              -0.3408297598361969,
+              0.5640668869018555
+            ],
+            "body": {
+              "position": [
+                -0.1943785846233368,
+                -0.3953828811645508,
+                0.5640668869018555
+              ],
+              "normal": [
+                -0.2386723905801773,
+                -0.8938314318656921,
+                0.37960630655288696
+              ],
+              "distance_m": 2.604617118835449
+            },
+            "eyeball": {
+              "position": [
+                -0.1943785846233368,
+                -0.431476354598999,
+                0.5640668869018555
+              ],
+              "normal": [
+                -0.07275683432817459,
+                -0.9765787720680237,
+                0.20248524844646454
+              ],
+              "distance_m": 2.568523645401001,
+              "clearance_in_front_of_body_m": 0.03609347343444824
+            }
+          },
+          "R": {
+            "origin": [
+              0.1954074203968048,
+              -3.0,
+              0.5635790228843689
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "eyeball_vertex_center": [
+              0.1954074203968048,
+              -0.3314574658870697,
+              0.5635790228843689
+            ],
+            "body": {
+              "position": [
+                0.1954074203968048,
+                -0.38805222511291504,
+                0.5635790228843689
+              ],
+              "normal": [
+                0.34554019570350647,
+                -0.8638162016868591,
+                0.3666381239891052
+              ],
+              "distance_m": 2.611947774887085
+            },
+            "eyeball": {
+              "position": [
+                0.1954074203968048,
+                -0.4221172332763672,
+                0.5635790228843689
+              ],
+              "normal": [
+                0.05369550734758377,
+                -0.9917495846748352,
+                0.11640327423810959
+              ],
+              "distance_m": 2.577882766723633,
+              "clearance_in_front_of_body_m": 0.03406500816345215
+            }
+          }
+        },
+        "eye_geometry_mode": "single_sphere_atlas",
+        "body_identification": "Continuous_ink_body: atlas tile 0",
+        "body_triangle_count": 2354,
+        "body_signed_volume_m3": 0.4859330056585629
+      },
+      "sha256_after": "c3e251adfea80191ca4019740d5ad90a6ee99d7f0cab44ef8b3f3818b12a9f7e",
+      "source_unchanged": true
+    }
+  },
+  "errors": [],
+  "source_version": "ink-blob-sample-02"
+}

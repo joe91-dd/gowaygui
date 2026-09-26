@@ -1,0 +1,128 @@
+{
+  "status": "Promoted c04 LOD runtime candidate after parent actually viewed final front and battle renders; final Cocos acceptance pending.",
+  "files": [
+    {
+      "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-turtle.fbx",
+      "proposed_destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-turtle.fbx",
+      "bytes": 2538348,
+      "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+      "destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-turtle.fbx",
+      "target_sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e",
+      "source_target_identical": true
+    },
+    {
+      "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-colour.png",
+      "proposed_destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-colour.png",
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+      "destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-colour.png",
+      "target_sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+      "source_target_identical": true
+    },
+    {
+      "source": "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-roughness.png",
+      "proposed_destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-roughness.png",
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+      "destination": "game\\assets\\resources\\models\\leaf-turtle\\leaf-roughness.png",
+      "target_sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+      "source_target_identical": true
+    }
+  ],
+  "total_bytes": 3530561,
+  "expected_prefab_resource_path": "models/leaf-turtle/leaf-turtle/leaf-turtle",
+  "prefab_path_cocos_verified": false,
+  "material_name": "LeafAtlas_01",
+  "material_prefix": "LeafAtlas_",
+  "texture_adapter_mapping": {
+    "DiffuseColor": "mainTexture -> Standard.mainTexture",
+    "ShininessExponent": "shininessExponentMap -> Standard.pbrMap"
+  },
+  "atlas_raster_inputs": [],
+  "blender_forward": "-Y",
+  "blender_up": "+Z",
+  "cocos_expected_forward": "+Z",
+  "cocos_scale": 0.65,
+  "cocos_foot_y": 0,
+  "bounds_at_scale_065": {
+    "min": [
+      -0.7304117560386658,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7304117560386658,
+      1.0105361819267273,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4608235120773316,
+      1.0105361803559245,
+      1.943768107891083
+    ]
+  },
+  "fbx_animation_stack_names": [
+    "LeafTurtle_Rig|attack",
+    "LeafTurtle_Rig|fusion",
+    "LeafTurtle_Rig|hit",
+    "LeafTurtle_Rig|idle",
+    "LeafTurtle_Rig|rest",
+    "LeafTurtle_Rig|skill"
+  ],
+  "clips": {
+    "idle": {
+      "seconds": 2.3666666666666667,
+      "first_frame": 1,
+      "last_frame": 72,
+      "loop": true
+    },
+    "attack": {
+      "seconds": 0.8666666666666667,
+      "first_frame": 1,
+      "last_frame": 27,
+      "loop": false
+    },
+    "skill": {
+      "seconds": 1.3666666666666667,
+      "first_frame": 1,
+      "last_frame": 42,
+      "loop": false
+    },
+    "hit": {
+      "seconds": 0.5666666666666667,
+      "first_frame": 1,
+      "last_frame": 18,
+      "loop": false
+    },
+    "rest": {
+      "seconds": 2.3666666666666667,
+      "first_frame": 1,
+      "last_frame": 72,
+      "loop": true
+    },
+    "fusion": {
+      "seconds": 1.9666666666666666,
+      "first_frame": 1,
+      "last_frame": 60,
+      "loop": false
+    }
+  },
+  "original_high_source_sha256": "902faa81d3c99e5bd9bdf3f00d868d25a000eb9f0dfe802615eb17ea07a62986",
+  "approved_high_preview_sha256": "526b72c479dd37ee7d1a62998dd940d27335e1511629c3b716a2a17dccb43687",
+  "lod_parts_sha256": "4519162da640637ae267ad72ed5b60b20a64b55ce5ced854b64d61e956e164fc",
+  "runtime_blend_sha256": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce",
+  "script_sha256": {
+    "build_runtime_lod.py": "b059200243830554578d092bcafa6606d21ae58521dfc6384028772d64dffe68",
+    "review_runtime_lod.py": "c562f07123933f98bb8d50230a1b940a67b036a2a17d3e684d644dd570717f5b",
+    "inspect_export_payload.py": "0dc64315a69ed48879b59abce18fc2b3df687a8673d97a2d7f7023c8632484f2",
+    "record_runtime_handoff.py": "e831564a343d71e0e5eefd452cf42ca55ab6a8148b5da81edf66aae280854e0e"
+  },
+  "meta_or_uuid_written": false,
+  "cocos_started": false,
+  "approved_by": "root agent review of final render-front.png and render-battle.png",
+  "source_proposal_sha256": "3d909d847045d8f0267f5b7f0f8930cc2c30190dfdc4a9d6b8414646f4483621",
+  "runtime_destination": "game\\assets\\resources\\models\\leaf-turtle",
+  "existing_meta_sha256": {},
+  "cocos_actual_validation_complete": false,
+  "runtime_promoted": true
+}

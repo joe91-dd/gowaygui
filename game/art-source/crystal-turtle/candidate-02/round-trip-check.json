@@ -1,0 +1,114 @@
+{
+  "fbx_sha256": "b35d20a6ffbc737231631e505c8ae5b9d5eefea3a83b1b46fd58b838a5bd0364",
+  "triangles": 28899,
+  "weighted_vertices": 15031,
+  "bones": 10,
+  "materials": 1,
+  "uv_layers": 1,
+  "packed_source_textures": 2,
+  "head_closed_manifold": true,
+  "c01_non_shell_geometry_uv_weights_unchanged": true,
+  "opaque_glb_and_source_verified": true,
+  "atlas_rebuild_byte_identical": true,
+  "clips": {
+    "idle": {
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.026985459826453253,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "attack": {
+      "first": 1,
+      "last": 27,
+      "seconds": 0.8666666666666667,
+      "max_vertex_motion_m": 0.06628716970408106,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "skill": {
+      "first": 1,
+      "last": 42,
+      "seconds": 1.3666666666666667,
+      "max_vertex_motion_m": 0.09798786198044417,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "hit": {
+      "first": 1,
+      "last": 18,
+      "seconds": 0.5666666666666667,
+      "max_vertex_motion_m": 0.06795669405623875,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.6609846770497825e-08
+    },
+    "rest": {
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.016665337187606623,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -7.315370709193303e-08
+    },
+    "fusion": {
+      "first": 1,
+      "last": 60,
+      "seconds": 1.9666666666666666,
+      "max_vertex_motion_m": 0.2206867996136768,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -3.2359238844037463e-08
+    }
+  },
+  "rest_bounds_blender_xyz": {
+    "min": [
+      -1.123720407485962,
+      -1.7167848348617554,
+      2.4166195711217142e-09
+    ],
+    "max": [
+      1.123720407485962,
+      1.2736276388168335,
+      1.8825123310089111
+    ],
+    "dimensions": [
+      2.247440814971924,
+      2.990412473678589,
+      1.8825123285922916
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_unscaled": {
+    "min": [
+      -1.123720407485962,
+      2.4166195711217142e-09,
+      -1.2736276388168335
+    ],
+    "max": [
+      1.123720407485962,
+      1.8825123310089111,
+      1.7167848348617554
+    ],
+    "dimensions": [
+      2.247440814971924,
+      1.8825123285922916,
+      2.990412473678589
+    ]
+  },
+  "expected_rest_bounds_cocos_xyz_at_scale_065": {
+    "min": [
+      -0.7304182648658752,
+      1.5708027212291142e-09,
+      -0.8278579652309418
+    ],
+    "max": [
+      0.7304182648658752,
+      1.2236330151557924,
+      1.115910142660141
+    ],
+    "dimensions": [
+      1.4608365297317505,
+      1.2236330135849895,
+      1.943768107891083
+    ]
+  }
+}

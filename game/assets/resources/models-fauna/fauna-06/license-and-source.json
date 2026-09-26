@@ -1,0 +1,43 @@
+{
+  "key": "fauna-06",
+  "name": "尖鳍鱼人",
+  "kind": "snail",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Fish",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\fish-90bed8\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/49b9ffa5a766cc38e882b384f18f03c6261df6b16422b367bce0d5f61f480148_Fish.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "fcf8bb001890040f1c0b8f8efe7a6192ae0128fd31e4a3e13613c2c35a57943f",
+  "bytes": 183348,
+  "animations": 8,
+  "displayName": "尖鳍鱼人",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 22380,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-06",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.1
+}

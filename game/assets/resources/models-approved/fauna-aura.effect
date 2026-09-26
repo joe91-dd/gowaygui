@@ -1,0 +1,51 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: fauna-aura-vs:vert
+      frag: fauna-aura-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [0.26, 0.75, 0.65, 1], editor: { type: color } }
+        crest: { value: [0.81, 1, 0.90, 1], editor: { type: color } }
+        motion: { value: [0, 0.50, 0, 0] }
+}%
+CCProgram fauna-aura-vs %{
+ precision highp float;
+ #include <builtin/uniforms/cc-global>
+ #include <builtin/uniforms/cc-local>
+ in vec3 a_position;
+ in vec2 a_texCoord;
+ out vec2 uv;
+ vec4 vert(){
+  uv=a_texCoord;
+  vec3 p=a_position;
+  float phase=cc_matWorld[3].x*.53+cc_matWorld[3].z*.31;
+  float wave=sin(cc_time.x*1.55+uv.x*5.0+phase);
+  p.x+=wave*.042*uv.x;
+  p.z+=cos(cc_time.x*1.3+uv.x*4.0+phase)*.045*uv.x;
+  p.y*=.90+.10*sin(cc_time.x*1.6+phase);
+  return cc_matProj*cc_matView*cc_matWorld*vec4(p,1.0);
+ }
+}%
+CCProgram fauna-aura-fs %{
+ precision highp float;
+ in vec2 uv;
+ uniform Aura { vec4 tint; vec4 crest; vec4 motion; };
+ vec4 frag(){
+  float across=max(0.0,1.0-abs(uv.y*2.0-1.0));
+  float ends=max(0.0,sin(clamp(uv.x,0.0,1.0)*3.14159265));
+  float sweep=.5+.5*sin(uv.x*11.0-motion.x*2.8);
+  float edge=max(0.0,1.0-abs(uv.y-.30)*5.0);
+  float alpha=across*ends*(.36+.25*sweep+.34*edge);
+  vec3 col=mix(tint.rgb,crest.rgb,min(.94,edge*.58+sweep*.25));
+  return vec4(col,alpha);
+ }
+}%

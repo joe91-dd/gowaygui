@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "offline-layout-proposal-not-approved-for-runtime",
+  "levelId": 2,
+  "levelName": "珊瑚转角",
+  "reason": "Original shared slots 2 and 4 are too close to their adjacent navigation segments for the current stone turtle's complete rotating sole envelope at scale 0.65.",
+  "sourceSlots": [{"x":-5,"z":1},{"x":-1,"z":1},{"x":3,"z":1},{"x":1,"z":-3},{"x":6,"z":-1}],
+  "candidateSlots": [{"x":-5,"z":1},{"x":-1,"z":1},{"x":3.395,"z":1.099},{"x":1,"z":-3},{"x":5.832,"z":-0.748}],
+  "changedSlotIndices": [2,4],
+  "unchangedRoute": [{"x":-9,"z":0},{"x":-4,"z":0},{"x":-2,"z":2},{"x":2,"z":2},{"x":3,"z":-2},{"x":6,"z":-2},{"x":9,"z":0}],
+  "stoneBattleScale": 0.65,
+  "meleeBlockingRadius": 1.2,
+  "fullNearGroundSoleRadius": 0.9746471943161487,
+  "strictGroundContactRadius": 0.8874670245539223,
+  "surfaceY": 0.292,
+  "platformContinuousTopRadius": 0.995,
+  "platformTopSides": 48,
+  "approvalScope": "Root authorized an offline slot 2 layout candidate and slot 4 comparison proposal; no core, runtime, or save migration changes are included. The FBX uses candidate coordinates and must not be integrated before gameplay data and restored-battle positions are synchronized by root.",
+  "pending": ["Root approval of both slot shifts", "Root gameplay data update plus attack coverage and save restoration tests", "Actual Cocos runtime and mobile review"]
+}

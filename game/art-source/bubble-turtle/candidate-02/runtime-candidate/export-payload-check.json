@@ -1,0 +1,37 @@
+{
+  "fbx_version": 7400,
+  "fbx_bytes": 2573804,
+  "fbx_animation_stack_names": [
+    "BubbleTurtle_Rig|attack",
+    "BubbleTurtle_Rig|fusion",
+    "BubbleTurtle_Rig|hit",
+    "BubbleTurtle_Rig|idle",
+    "BubbleTurtle_Rig|rest",
+    "BubbleTurtle_Rig|skill"
+  ],
+  "embedded_pngs": [
+    {
+      "name": "bubble-colour.png",
+      "bytes": 972370,
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711"
+    },
+    {
+      "name": "bubble-roughness.png",
+      "bytes": 22011,
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb"
+    }
+  ],
+  "texture_connections": [
+    {
+      "fbx_channel": "DiffuseColor",
+      "texture": "bubble-colour.png"
+    },
+    {
+      "fbx_channel": "ShininessExponent",
+      "texture": "bubble-roughness.png"
+    }
+  ],
+  "runtime_promoted": false,
+  "cocos_validation": false,
+  "note": "AnimationStack names are actual FBX payload names. Blender reimport prepends the armature name again."
+}

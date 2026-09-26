@@ -1,0 +1,21 @@
+{
+  "status": "root-reviewed-expanded-compact-corners-awaiting-Cocos",
+  "opened": [
+    {
+      "path": "review-compact.png",
+      "sha256": "6d758019a193fbc5fa3066eef5cacff69c7fa06b0f474c6bcee6796f34debb31"
+    }
+  ],
+  "observations": [
+    "All four new exact radii match the former rounded contours in the opened compact comparison.",
+    "Original 18 frames preserve their metadata and rendered tile bytes.",
+    "No c01 archived file changed."
+  ],
+  "oldFilesVerified": 52,
+  "oldFramesVerified": 18,
+  "limitations": [
+    "Only the compact review was newly opened in this root turn.",
+    "Actual Cocos sampling, user interaction, and frame/memory performance remain to be checked."
+  ],
+  "runtimeFilesWritten": false
+}

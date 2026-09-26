@@ -1,0 +1,36 @@
+{
+  "id": "yellow-6",
+  "name": "三首鸣潮王",
+  "tier": 3,
+  "index": 36,
+  "base": 21,
+  "key": "boss-36",
+  "ability": "drain",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 38864,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-21",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/e1dc87abd11873bf496baa25e33904853fa236e011aed1530f1d156493319b9a_Glub Evolved.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.5
+}

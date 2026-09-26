@@ -1,0 +1,3803 @@
+{
+  "generatedAt": "2026-09-08T02:47:41.910Z",
+  "label": "pressure",
+  "seeds": [
+    731,
+    913,
+    2027,
+    4093,
+    6553,
+    9173,
+    12037,
+    19391
+  ],
+  "method": "Real GameService from a fresh 2-skill/76-aptitude save. One initial turtle, one recruit per wave interval, real local skill growth and collection, per-wave checkpoint/restart. Mature 4–6-skill fixture isolated and training paid from actual income. Candidate changes are in-memory only; no data.ts modifications.",
+  "results": [
+    {
+      "candidate": {
+        "id": "G12x20-D1-A12",
+        "waves": 12,
+        "spawnDuration": 20,
+        "preparationSeconds": 6,
+        "mergeWaves": [
+          4,
+          8,
+          10
+        ],
+        "difficulty": 1,
+        "bossHpScale": 1.2,
+        "bossAttackScale": 1.2
+      },
+      "runs": [
+        {
+          "seed": 731,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 459,
+            "combatSeconds": 393,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 525.4580666666682,
+              "maxHp": 2880,
+              "attackCount": 40,
+              "allyHpDamage": 2082.2461757634164,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 101.3,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              23.5,
+              30.7,
+              22.2,
+              27.1,
+              28.6,
+              28.95,
+              34.05,
+              33.2,
+              101.3
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 393.05,
+            "combatSeconds": 327.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 923.6506689358158,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.4,
+              29.55,
+              30.25,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 304.5,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 335.1,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 354.25,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 913,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 417.3,
+            "combatSeconds": 351.3,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 20,
+              "allyHpDamage": 1071.6349157298591,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 58.75,
+            "stageSeconds": [
+              22.55,
+              20.85,
+              20.85,
+              25.2,
+              31.55,
+              23.05,
+              26.25,
+              27.75,
+              28.95,
+              33.2,
+              32.35,
+              58.75
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 390.55,
+            "combatSeconds": 324.55,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 947.8868011170574,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              22.05,
+              29.25,
+              20.85,
+              22.55,
+              26.9,
+              23.55,
+              29.55,
+              30.95,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 307.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 330.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 350.75,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 2027,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 466.05,
+            "combatSeconds": 400.05,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 181.0006666666671,
+              "maxHp": 2880,
+              "attackCount": 37,
+              "allyHpDamage": 1920.947418636922,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 93.9,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              32.4,
+              24.75,
+              27.1,
+              30.3,
+              29.8,
+              37.45,
+              34.05,
+              93.9
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 393.1,
+            "combatSeconds": 327.1,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 934.6545821930339,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              20.85,
+              20.85,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.4,
+              30.4,
+              30.55,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.2,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 345.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 356.3,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 4093,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 430.05,
+            "combatSeconds": 364.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 21,
+              "allyHpDamage": 1063.2334828925718,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 59.6,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              31.55,
+              23.9,
+              28.8,
+              30.3,
+              29.8,
+              36.6,
+              33.2,
+              59.6
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 396.05,
+            "combatSeconds": 330.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 938.624247870241,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.95,
+              30.4,
+              31.1,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 311.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 349.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 361.85,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 6553,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 459.1,
+            "combatSeconds": 393.1,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 1012.2553333333344,
+              "maxHp": 2880,
+              "attackCount": 35,
+              "allyHpDamage": 1871.7143571562508,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 90.35,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              24.35,
+              31.55,
+              24.75,
+              27.95,
+              31.15,
+              29.8,
+              34.05,
+              34.05,
+              90.35
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 394.25,
+            "combatSeconds": 328.25,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 863.4087869143779,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 54,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.1,
+              31.25,
+              30.55,
+              54
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 315.55,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.95,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 362.35,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 9173,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 471.5,
+            "combatSeconds": 405.5,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 691.9866666666679,
+              "maxHp": 2880,
+              "attackCount": 38,
+              "allyHpDamage": 1904.4838439683795,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 96.8,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              32.4,
+              24.75,
+              28.8,
+              31.15,
+              30.65,
+              36.6,
+              34.05,
+              96.8
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 394.85,
+            "combatSeconds": 328.85,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 857.2452193395677,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 54.65,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.1,
+              30.2,
+              30.95,
+              54.65
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 312.85,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 359.8,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 12037,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 432.6,
+            "combatSeconds": 366.6,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 22,
+              "allyHpDamage": 1035.982338619807,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 60.45,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              24.35,
+              31.55,
+              24.75,
+              28.8,
+              31.15,
+              30.65,
+              36.6,
+              33.2,
+              60.45
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 391.75,
+            "combatSeconds": 325.75,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 886.7742390904186,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 53.8,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20,
+              22.05,
+              30.1,
+              22.05,
+              22.05,
+              26.9,
+              24.4,
+              30.1,
+              31.75,
+              53.8
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 343.05,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 358.6,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 19391,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 460.85,
+            "combatSeconds": 394.85,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 44,
+              "allyHpDamage": 2130.0698841845974,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 104.6,
+            "stageSeconds": [
+              22.05,
+              20.85,
+              20.85,
+              22.65,
+              31.6,
+              23.3,
+              27.95,
+              29.45,
+              26.8,
+              31.8,
+              32.95,
+              104.6
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 390.65,
+            "combatSeconds": 324.65,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 907.4062578942838,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.55,
+              28.7,
+              30.25,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 297.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 319.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 346.6,
+              "coreHealth": 17
+            }
+          ]
+        }
+      ],
+      "fresh": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 4,
+        "bossLeaks": 4,
+        "minSeconds": 417.3,
+        "maxSeconds": 471.5,
+        "meanSeconds": 449.56,
+        "within360to480": 8,
+        "within360to450": 3,
+        "minCore": 10,
+        "maxCore": 20
+      },
+      "mature": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 8,
+        "bossLeaks": 0,
+        "minSeconds": 390.55,
+        "maxSeconds": 396.05,
+        "meanSeconds": 393.03,
+        "within360to480": 8,
+        "within360to450": 8,
+        "minCore": 20,
+        "maxCore": 20
+      }
+    },
+    {
+      "candidate": {
+        "id": "H12x22-D1-A1",
+        "waves": 12,
+        "spawnDuration": 22,
+        "preparationSeconds": 6,
+        "mergeWaves": [
+          4,
+          8,
+          10
+        ],
+        "difficulty": 1,
+        "bossHpScale": 1.2,
+        "bossAttackScale": 1
+      },
+      "runs": [
+        {
+          "seed": 731,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 432.35,
+            "combatSeconds": 366.35,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 20,
+              "allyHpDamage": 846.8327103540363,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 59.9,
+            "stageSeconds": [
+              23.7,
+              22.85,
+              22.85,
+              25.15,
+              31.9,
+              23.7,
+              27.6,
+              28.8,
+              29.8,
+              36.9,
+              33.2,
+              59.9
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 409.5,
+            "combatSeconds": 343.5,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 700.8366768009952,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 57.2,
+            "stageSeconds": [
+              22.85,
+              22.05,
+              22.05,
+              25.15,
+              31.05,
+              22.05,
+              24.55,
+              27.1,
+              26.7,
+              30.95,
+              31.8,
+              57.2
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 304.5,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 335.1,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 354.25,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 913,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 428.95,
+            "combatSeconds": 362.95,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 853.8339043851091,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 59.05,
+            "stageSeconds": [
+              24.55,
+              22.85,
+              22.85,
+              26.85,
+              32.75,
+              23.9,
+              26.75,
+              27.95,
+              28.95,
+              33.3,
+              33.2,
+              59.05
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 405.65,
+            "combatSeconds": 339.65,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 17,
+              "allyHpDamage": 707.786309101857,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 54.8,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22.05,
+              24.3,
+              31.9,
+              22.05,
+              24.55,
+              27.1,
+              25,
+              31.25,
+              32.55,
+              54.8
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 307.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 330.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 350.75,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 2027,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 492.7,
+            "combatSeconds": 426.7,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 43,
+              "allyHpDamage": 1896.350573433124,
+              "downedAllies": [
+                "spike",
+                "stone"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 103.7,
+            "stageSeconds": [
+              24.55,
+              23.7,
+              22.85,
+              26.85,
+              33.6,
+              25.6,
+              27.6,
+              32.2,
+              30.65,
+              40.5,
+              34.9,
+              103.7
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 409.6,
+            "combatSeconds": 343.6,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 750.2690830807082,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 56,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22.05,
+              25.15,
+              31.05,
+              22.05,
+              24.55,
+              27.1,
+              26.7,
+              33.5,
+              31.35,
+              56
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.2,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 345.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 356.3,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 4093,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 448.9,
+            "combatSeconds": 382.9,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 20,
+              "allyHpDamage": 846.8327103540363,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 60.75,
+            "stageSeconds": [
+              24.55,
+              23.7,
+              22.85,
+              26.85,
+              33.6,
+              24.75,
+              29.3,
+              31.35,
+              29.8,
+              40.5,
+              34.9,
+              60.75
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 408.1,
+            "combatSeconds": 342.1,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 715.8971473063547,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 56.5,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22.05,
+              25.15,
+              31.05,
+              22.05,
+              24.55,
+              27.1,
+              25.95,
+              31.8,
+              31.8,
+              56.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 311.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 349.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 361.85,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 6553,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 489.5,
+            "combatSeconds": 423.5,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 558.3496666666681,
+              "maxHp": 2880,
+              "attackCount": 42,
+              "allyHpDamage": 1867.0509480756734,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 102.25,
+            "stageSeconds": [
+              24.55,
+              23.7,
+              22.85,
+              26,
+              32.4,
+              25.6,
+              28.45,
+              31.35,
+              30,
+              41.45,
+              34.9,
+              102.25
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 408.3,
+            "combatSeconds": 342.3,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 704.1447315320012,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 56,
+            "stageSeconds": [
+              22.85,
+              22.05,
+              22.05,
+              25.15,
+              31.05,
+              22.05,
+              24.55,
+              27.1,
+              25.85,
+              31.8,
+              31.8,
+              56
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 315.55,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.95,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 362.35,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 9173,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 500.4,
+            "combatSeconds": 434.4,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 47,
+              "allyHpDamage": 1992.3566770835605,
+              "downedAllies": [
+                "spike",
+                "stone"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 110.1,
+            "stageSeconds": [
+              24.55,
+              23.7,
+              22.85,
+              26.85,
+              33.6,
+              25.6,
+              29.3,
+              31.35,
+              31.5,
+              40.1,
+              34.9,
+              110.1
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 407.5,
+            "combatSeconds": 341.5,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 17,
+              "allyHpDamage": 699.3419480585093,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.65,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22.05,
+              25.15,
+              31.05,
+              23.3,
+              24.55,
+              27.1,
+              25.1,
+              32.1,
+              31.35,
+              55.65
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 312.85,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 359.8,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 12037,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 453.25,
+            "combatSeconds": 387.25,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 21,
+              "allyHpDamage": 875.5969115306959,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 61.6,
+            "stageSeconds": [
+              24.55,
+              23.7,
+              22.85,
+              26,
+              32.75,
+              25.6,
+              30.15,
+              32.2,
+              31.5,
+              41.45,
+              34.9,
+              61.6
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 405.75,
+            "combatSeconds": 339.75,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 758.713444124056,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 56,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22,
+              25.15,
+              31.05,
+              22.05,
+              23.7,
+              25.4,
+              26.7,
+              31.8,
+              31.8,
+              56
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 343.05,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 358.6,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 19391,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 475.9,
+            "combatSeconds": 409.9,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 48,
+              "allyHpDamage": 1964.967965356514,
+              "downedAllies": [
+                "spike",
+                "stone"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 113.1,
+            "stageSeconds": [
+              22.85,
+              22.05,
+              22.05,
+              24.3,
+              32.75,
+              23.3,
+              27.6,
+              29.65,
+              26.8,
+              32.8,
+              32.65,
+              113.1
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 407.35,
+            "combatSeconds": 341.35,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 738.5166673063546,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 57.2,
+            "stageSeconds": [
+              22.05,
+              22.05,
+              22,
+              24.3,
+              31.05,
+              22.05,
+              24.55,
+              27.1,
+              26.7,
+              30.95,
+              31.35,
+              57.2
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 297.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 319.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 346.6,
+              "coreHealth": 17
+            }
+          ]
+        }
+      ],
+      "fresh": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 7,
+        "bossLeaks": 1,
+        "minSeconds": 428.95,
+        "maxSeconds": 500.4,
+        "meanSeconds": 465.24,
+        "within360to480": 5,
+        "within360to450": 3,
+        "minCore": 10,
+        "maxCore": 20
+      },
+      "mature": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 8,
+        "bossLeaks": 0,
+        "minSeconds": 405.65,
+        "maxSeconds": 409.6,
+        "meanSeconds": 407.72,
+        "within360to480": 8,
+        "within360to450": 8,
+        "minCore": 20,
+        "maxCore": 20
+      }
+    },
+    {
+      "candidate": {
+        "id": "I12x20-D1-A1",
+        "waves": 12,
+        "spawnDuration": 20,
+        "preparationSeconds": 6,
+        "mergeWaves": [
+          4,
+          8,
+          10
+        ],
+        "difficulty": 1,
+        "bossHpScale": 1.2,
+        "bossAttackScale": 1
+      },
+      "runs": [
+        {
+          "seed": 731,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 415.6,
+            "combatSeconds": 349.6,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 20,
+              "allyHpDamage": 846.8327103540363,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 57.9,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              23.5,
+              30.7,
+              22.2,
+              27.1,
+              28.6,
+              28.95,
+              34.05,
+              33.2,
+              57.9
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 393.05,
+            "combatSeconds": 327.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 743.3194507798465,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.4,
+              29.55,
+              30.25,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 304.5,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 335.1,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 354.25,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 913,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 417.3,
+            "combatSeconds": 351.3,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 20,
+              "allyHpDamage": 893.0290964415502,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 58.75,
+            "stageSeconds": [
+              22.55,
+              20.85,
+              20.85,
+              25.2,
+              31.55,
+              23.05,
+              26.25,
+              27.75,
+              28.95,
+              33.2,
+              32.35,
+              58.75
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 390.55,
+            "combatSeconds": 324.55,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 763.5162275975476,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              22.05,
+              29.25,
+              20.85,
+              22.55,
+              26.9,
+              23.55,
+              29.55,
+              30.95,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 307.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 330.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 350.75,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 2027,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 475.45,
+            "combatSeconds": 409.45,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 154.4240000000015,
+              "maxHp": 2880,
+              "attackCount": 43,
+              "allyHpDamage": 1878.3679832580904,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 103.3,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              32.4,
+              24.75,
+              27.1,
+              30.3,
+              29.8,
+              37.45,
+              34.05,
+              103.3
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 393.1,
+            "combatSeconds": 327.1,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 752.4893784941947,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              20.85,
+              20.85,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.4,
+              30.4,
+              30.55,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.2,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 345.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 356.3,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 4093,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 430.05,
+            "combatSeconds": 364.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 21,
+              "allyHpDamage": 886.0279024104774,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 59.6,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              31.55,
+              23.9,
+              28.8,
+              30.3,
+              29.8,
+              36.6,
+              33.2,
+              59.6
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 396.05,
+            "combatSeconds": 330.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 19,
+              "allyHpDamage": 755.7974332252006,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.95,
+              30.4,
+              31.1,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 311.45,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 349.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 361.85,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 6553,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 471.25,
+            "combatSeconds": 405.25,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 480.00006666666826,
+              "maxHp": 2880,
+              "attackCount": 43,
+              "allyHpDamage": 1905.4035293224108,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 102.5,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              24.35,
+              31.55,
+              24.75,
+              27.95,
+              31.15,
+              29.8,
+              34.05,
+              34.05,
+              102.5
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 394.25,
+            "combatSeconds": 328.25,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 693.1178824286482,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 54,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.1,
+              31.25,
+              30.55,
+              54
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 315.55,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.95,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 362.35,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 9173,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 485.95,
+            "combatSeconds": 419.95,
+            "coreHealth": 10,
+            "boss": {
+              "defeated": false,
+              "leaked": true,
+              "remainingHp": 60.255333333335415,
+              "maxHp": 2880,
+              "attackCount": 47,
+              "allyHpDamage": 1982.9289704752,
+              "downedAllies": [
+                "spike",
+                "stone",
+                "bubble"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 111.25,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              25.2,
+              32.4,
+              24.75,
+              28.8,
+              31.15,
+              30.65,
+              36.6,
+              34.05,
+              111.25
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 394.85,
+            "combatSeconds": 328.85,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 710.6010961163065,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 54.65,
+            "stageSeconds": [
+              21.7,
+              21.7,
+              20.85,
+              22.65,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              25.1,
+              30.2,
+              30.95,
+              54.65
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 312.85,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 344.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 359.8,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 12037,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 432.6,
+            "combatSeconds": 366.6,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 22,
+              "allyHpDamage": 918.1031297604801,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 60.45,
+            "stageSeconds": [
+              22.55,
+              21.7,
+              20.85,
+              24.35,
+              31.55,
+              24.75,
+              28.8,
+              31.15,
+              30.65,
+              36.6,
+              33.2,
+              60.45
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 391.75,
+            "combatSeconds": 325.75,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 712.5890925753489,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 53.8,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20,
+              22.05,
+              30.1,
+              22.05,
+              22.05,
+              26.9,
+              24.4,
+              30.1,
+              31.75,
+              53.8
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 120.7,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 313.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 343.05,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 358.6,
+              "coreHealth": 17
+            }
+          ]
+        },
+        {
+          "seed": 19391,
+          "fresh": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 465.05,
+            "combatSeconds": 399.05,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 47,
+              "allyHpDamage": 1937.6880273662089,
+              "downedAllies": [
+                "spike",
+                "stone"
+              ]
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 100,
+              "total": 216
+            },
+            "finalWaveSeconds": 108.8,
+            "stageSeconds": [
+              22.05,
+              20.85,
+              20.85,
+              22.65,
+              31.6,
+              23.3,
+              27.95,
+              29.45,
+              26.8,
+              31.8,
+              32.95,
+              108.8
+            ]
+          },
+          "mature": {
+            "attempted": true,
+            "victory": true,
+            "completedWaves": 12,
+            "seconds": 390.65,
+            "combatSeconds": 324.65,
+            "coreHealth": 20,
+            "boss": {
+              "defeated": true,
+              "leaked": false,
+              "remainingHp": 0,
+              "maxHp": 2880,
+              "attackCount": 18,
+              "allyHpDamage": 724.3415083497025,
+              "downedAllies": []
+            },
+            "reward": {
+              "baseGold": 116,
+              "firstClearGold": 0,
+              "total": 116
+            },
+            "finalWaveSeconds": 55.5,
+            "stageSeconds": [
+              21.7,
+              20.85,
+              20,
+              22.05,
+              29.25,
+              22.05,
+              22.85,
+              26.9,
+              24.55,
+              28.7,
+              30.25,
+              55.5
+            ]
+          },
+          "matureTraining": [
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "crystal",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "attack",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "health",
+              "cost": 100
+            },
+            {
+              "role": "stone",
+              "material": "defense",
+              "cost": 100
+            },
+            {
+              "role": "spike",
+              "material": "growth",
+              "cost": 300
+            }
+          ],
+          "freshEarlierLevels": [
+            {
+              "levelId": 0,
+              "victory": true,
+              "seconds": 122.4,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 1,
+              "victory": true,
+              "seconds": 297.6,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 2,
+              "victory": true,
+              "seconds": 319.65,
+              "coreHealth": 20
+            },
+            {
+              "levelId": 3,
+              "victory": true,
+              "seconds": 346.6,
+              "coreHealth": 17
+            }
+          ]
+        }
+      ],
+      "fresh": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 5,
+        "bossLeaks": 3,
+        "minSeconds": 415.6,
+        "maxSeconds": 485.95,
+        "meanSeconds": 449.16,
+        "within360to480": 7,
+        "within360to450": 4,
+        "minCore": 10,
+        "maxCore": 20
+      },
+      "mature": {
+        "sampleCount": 8,
+        "attempted": 8,
+        "victories": 8,
+        "bossKills": 8,
+        "bossLeaks": 0,
+        "minSeconds": 390.55,
+        "maxSeconds": 396.05,
+        "meanSeconds": 393.03,
+        "within360to480": 8,
+        "within360to450": 8,
+        "minCore": 20,
+        "maxCore": 20
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1010" viewBox="0 0 1280 1010">
+<rect width="1280" height="1010" fill="#f1ebdc"/>
+<style>text{font-family:Arial,"Microsoft YaHei";fill:#234840;font-size:17px}.small{font-size:13px}</style>
+<text x="30" y="32">首页海岛 c01 · 静态布局提案（不是建模/运行验收）</text>
+<ellipse cx="330" cy="265" rx="222" ry="148" fill="#98b385" stroke="#657963" stroke-width="12"/>
+<rect x="261.85" y="130.5" width="140" height="84" rx="30" fill="#dacaab" stroke="#7c6e51" stroke-width="3"/>
+<text x="274.85" y="177.5">贝壳屋 / 珍珠</text>
+<rect x="58" y="292.95" width="100" height="44" rx="8" fill="#ae8656"/>
+<ellipse cx="300.4" cy="364.9" rx="30.34" ry="39.96" fill="#fff6da" stroke="#467b77" stroke-width="2"/><text class="small" x="277.4" y="369.9">stone</text>
+<ellipse cx="241.2" cy="255.75" rx="30.34" ry="39.96" fill="#fff6da" stroke="#467b77" stroke-width="2"/><text class="small" x="218.2" y="260.75">spike</text>
+<ellipse cx="213.45" cy="344.55" rx="30.34" ry="39.96" fill="#fff6da" stroke="#467b77" stroke-width="2"/><text class="small" x="190.45" y="349.55">crystal</text>
+<ellipse cx="387.35" cy="350.1" rx="30.34" ry="39.96" fill="#fff6da" stroke="#467b77" stroke-width="2"/><text class="small" x="364.35" y="355.1">leaf</text>
+<ellipse cx="405.85" cy="253.9" rx="30.34" ry="39.96" fill="#fff6da" stroke="#467b77" stroke-width="2"/><text class="small" x="382.85" y="258.9">bubble</text>
+<text x="650" y="92">五个真实空地锚点，地面连续；不做五个摄影棚圆盘。</text>
+<text x="650" y="128">左木栈桥 / 后贝壳屋 / 前方五龟，右侧留主按钮。</text>
+<text x="650" y="164">规划包络 1.64×2.16×1.45；实际角色实例审查待执行。</text>
+<text x="650" y="200">最小足底圈间距 0.435 格</text>
+<rect y="465" width="1280" height="540" fill="#669da1"/>
+<text x="28" y="490">候选镜头投影（1280×720 按 .72 缩放；橙=门，金=主按钮，白=龟尺度包络）</text>
+<rect x="833.04" y="876.5999999999999" width="230.39999999999998" height="57.599999999999994" fill="#ffcc68" fill-opacity=".6" stroke="#254b49"/><text class="small" x="835.04" y="889.5999999999999">开始冒险</text>
+<rect x="645.6409339964059" y="678.7285694831726" width="60.38675390427352" height="77.30938197291344" fill="#efac70" fill-opacity=".6" stroke="#254b49"/><text class="small" x="647.6409339964059" y="691.7285694831726">门</text>
+<rect x="522.4207662852743" y="757.7628144841302" width="128.86562232399496" height="154.41951668202333" fill="#fff9e4" fill-opacity=".6" stroke="#254b49"/><text class="small" x="524.4207662852743" y="770.7628144841302">stone</text>
+<rect x="489.23736819911414" y="684.3621073074992" width="111.48979667731403" height="118.38485775063829" fill="#fff9e4" fill-opacity=".6" stroke="#254b49"/><text class="small" x="491.23736819911414" y="697.3621073074992">spike</text>
+<rect x="394.72459190371643" y="732.8785821001852" width="141.29599968886933" height="141.71465153014873" fill="#fff9e4" fill-opacity=".6" stroke="#254b49"/><text class="small" x="396.72459190371643" y="745.8785821001852">crystal</text>
+<rect x="676.4382847266918" y="758.1221869801392" width="111.9922012454008" height="154.6067416326733" fill="#fff9e4" fill-opacity=".6" stroke="#254b49"/><text class="small" x="678.4382847266918" y="771.1221869801392">leaf</text>
+<rect x="720.5416581410667" y="698.690957425427" width="96.52809100398548" height="125.08003885930238" fill="#fff9e4" fill-opacity=".6" stroke="#254b49"/><text class="small" x="722.5416581410667" y="711.690957425427">bubble</text>
+</svg>

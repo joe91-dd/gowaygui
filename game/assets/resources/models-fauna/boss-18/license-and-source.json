@@ -1,0 +1,36 @@
+{
+  "id": "blue-4",
+  "name": "霜帽法卫",
+  "tier": 1,
+  "index": 18,
+  "base": 46,
+  "key": "boss-18",
+  "ability": "frost",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 49132,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-46",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/b29009c953188ade7869c74e10771342a627ca96456218904d2f8eab47688e3f_MushroomKing.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24690,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.1
+}

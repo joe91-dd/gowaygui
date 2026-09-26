@@ -1,0 +1,147 @@
+{
+  "version": "mist-bubble-candidate-01",
+  "promoted_at_utc": "2026-09-08T08:24:28.286240+00:00",
+  "status": "approved-runtime-candidate-not-final-art; first Cocos import/build/runtime review pending",
+  "authorization": "Parent actually reviewed front, three-quarter and battle-angle renders; approved the distinct cloud silhouette as frozen c01 runtime candidate.",
+  "enemy_kind": "mist",
+  "display_name": "雾泡怪",
+  "runtime_directory": "game/assets/resources/models/enemies/mist-bubble",
+  "runtime_directory_created_by_this_run": true,
+  "runtime_sha256": "a477c65832bec6f452cdc616d850b0d24d306f644e35c7450bae79495604df29",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/mist-bubble/mist-colour.png",
+      "source_path": "game/art-source/enemies/mist-bubble/candidate-01/export/mist-colour.png",
+      "bytes": 93889,
+      "sha256": "c99da2e27a32225df92c874737d5ff4bb9f27c4efb796b65b37f55e8019ae00d",
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/mist-bubble/mist-roughness.png",
+      "source_path": "game/art-source/enemies/mist-bubble/candidate-01/export/mist-roughness.png",
+      "bytes": 5832,
+      "sha256": "27d38fb3d6be6ffdb94c27216f0a2b26d9e0240c73b06afb3ed6cdabf0ff317f",
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/mist-bubble/mist-bubble.fbx",
+      "source_path": "game/art-source/enemies/mist-bubble/candidate-01/export/mist-bubble.fbx",
+      "bytes": 835420,
+      "sha256": "a477c65832bec6f452cdc616d850b0d24d306f644e35c7450bae79495604df29",
+      "created_by_this_run": true
+    }
+  ],
+  "copied_frozen_bytes": true,
+  "meta_created_by_this_script": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started": false,
+  "embedded_pngs": {
+    "mist-colour.png": {
+      "sha256": "c99da2e27a32225df92c874737d5ff4bb9f27c4efb796b65b37f55e8019ae00d",
+      "exact_png_byte_offset": 323116,
+      "bytes": 93889
+    },
+    "mist-roughness.png": {
+      "sha256": "27d38fb3d6be6ffdb94c27216f0a2b26d9e0240c73b06afb3ed6cdabf0ff317f",
+      "exact_png_byte_offset": 417633,
+      "bytes": 5832
+    }
+  },
+  "source_hashes": {
+    "game/art-source/enemies/mist-bubble/candidate-01/mist-bubble.blend": "99ff0ae5f298952588ca1194e3a23f120bd67641540e22ae4c156e51b3ead291",
+    "game/art-source/enemies/mist-bubble/candidate-01/mist-bubble-review-scene.blend": "562ff979142ed05f52be31c6029877deb7b8b8efd2089fccdd34d490926c0ed7",
+    "game/art-source/enemies/mist-bubble/candidate-01/mist-bubble.glb": "6964a327cffb18a686281bae49a8b7c22ef3af213898978f4f83acd24c625bcc",
+    "game/art-source/enemies/mist-bubble/candidate-01/model-stats.json": "9d7692c1f054732d54ec8759f78d55ce7854229b1bd419da0e74e07fbdc6b49f",
+    "game/art-source/enemies/mist-bubble/candidate-01/round-trip-check.json": "9f06c27f0dc153661ff12344ec2993247744f9d7d7e37a85a460012a325eabff",
+    "game/art-source/enemies/mist-bubble/candidate-01/source-check.json": "503ed7f5a358a2bb009d0af512375fe5737a54b98257a84675ce1b2e850bcafb"
+  },
+  "geometry": {
+    "triangles": 10748,
+    "vertices": 5400,
+    "meshes": 1,
+    "materials": 1,
+    "bones": 10
+  },
+  "clips": {
+    "idle": {
+      "expected_cocos_take": "MistBubble_Rig|idle",
+      "seconds": 2.4,
+      "loop": true
+    },
+    "walk": {
+      "expected_cocos_take": "MistBubble_Rig|walk",
+      "seconds": 0.8,
+      "loop": true
+    },
+    "attack": {
+      "expected_cocos_take": "MistBubble_Rig|attack",
+      "seconds": 1.2,
+      "loop": false
+    },
+    "hit": {
+      "expected_cocos_take": "MistBubble_Rig|hit",
+      "seconds": 0.6,
+      "loop": false
+    },
+    "exit": {
+      "expected_cocos_take": "MistBubble_Rig|exit",
+      "seconds": 1.0,
+      "loop": false
+    }
+  },
+  "coordinate_handoff": {
+    "source": "Blender Z up / -Y forward",
+    "fbx_export": "axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z; confirm first actual import",
+    "foot_origin_y": 0,
+    "road_root_y": 0.064,
+    "recommended_model_uniform_scale": 0.83,
+    "dimensions_at_scale": [
+      0.863478000164032,
+      0.5593517741560936,
+      0.8813742458820343
+    ],
+    "standing_action_peak_height_at_scale": 0.9276971185207367,
+    "recommended_health_bar_y_on_unscaled_actor": 1.09,
+    "root_motion": false
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/mist-bubble/mist-bubble/mist-bubble",
+    "path_status": "Expected from existing enemy FBX importer structure; confirm generated metadata during first build",
+    "material_name_prefix": "MistBubble_Toy_Atlas",
+    "colour_image_prefix": "MistBubble_Colour_",
+    "roughness_image_prefix": "MistBubble_Roughness_",
+    "colour": "sRGB mainTexture; preserve original atlas",
+    "roughness": "linear gray; imported shininessExponentMap -> native Standard pbrMap G",
+    "roughness_gray_u8": [
+      87,
+      112
+    ],
+    "roughness_alpha_u8": 255,
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "integration_notes": [
+    "Authored exit lasts 1.0 seconds; retain actor until it ends and do not compound placeholder shrink.",
+    "Material adapter needs explicit MistBubble_Toy_Atlas acceptance; no view files changed here.",
+    "No manual meta or importer UUID; actual Cocos animation, light and performance review remains pending.",
+    "Original asset-manifest/REVIEW describe the historical isolated candidate before this authorized promotion."
+  ],
+  "rollback": "Remove only the three runtime_files after verifying their hashes still match this manifest; source candidate and editable files remain intact. Do not delete later importer metadata without inspecting it."
+}

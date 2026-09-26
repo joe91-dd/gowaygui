@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "method": "SHA-256 before/after c02 generation and two-view rendering; no c01 writes",
+  "files": {
+    "game/art-source/enemies/ink-snail/candidate-01/battle-camera-manifest.json": "d7cd880cbd68dc3b4765b568287df85370ca23244ea24fa0a39bcb486bc21532",
+    "game/art-source/enemies/ink-snail/candidate-01/build.log": "0b9e8ee2da3078305df11e3c0e57768a58fd4a552823142da094ab2cee3f905b",
+    "game/art-source/enemies/ink-snail/candidate-01/export/ink-snail.fbx": "710640df2e2aba443b164dd51c3237ed77c7d830099e8f052d03910e1964c060",
+    "game/art-source/enemies/ink-snail/candidate-01/export/snail-colour.png": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019",
+    "game/art-source/enemies/ink-snail/candidate-01/export/snail-roughness.png": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7",
+    "game/art-source/enemies/ink-snail/candidate-01/ink-snail-island-context.blend": "3d38eee5cfe884a90c392ce228d59236dc4668dd64b5010b022890b4db261afb",
+    "game/art-source/enemies/ink-snail/candidate-01/ink-snail-poses.blend": "0bad76d0b24107a535d43c94424f7d42fe42e679a41f6069ba516d7d93c51d69",
+    "game/art-source/enemies/ink-snail/candidate-01/ink-snail-review-scene.blend": "e83bb4c671277400f24c44fc9d5fdf0562d03d27e5566f4a4fed8fb9c3656717",
+    "game/art-source/enemies/ink-snail/candidate-01/ink-snail.blend": "c41eefd9eabca08b0dcce70ddb0d7e945f839701884abd15f3aa87a794d5c75c",
+    "game/art-source/enemies/ink-snail/candidate-01/ink-snail.glb": "9f154691f17718d5d30446e8c032a62a2676febd6973b66dd18ae254a50b0c71",
+    "game/art-source/enemies/ink-snail/candidate-01/model-stats.json": "9a2519ebfa4c33fad68fa8d1f9efae54c89faa1e0e6c32945a4e127978e108f9",
+    "game/art-source/enemies/ink-snail/candidate-01/render-battle-angle.png": "f4fe618a66a97473ffd1f6361725ca157a22cebaedc68671e94e73242da22402",
+    "game/art-source/enemies/ink-snail/candidate-01/render-five-poses.png": "67e343ac2e80e303eb6c01b73ee75eec2cf24e5c50bf1c6114d344cdaffb06f8",
+    "game/art-source/enemies/ink-snail/candidate-01/render-front.png": "e9e3acc17a9c821c5d02d16583ffab8d8405649f2b37310f769e43c8bbca8544",
+    "game/art-source/enemies/ink-snail/candidate-01/render-island-context.png": "bc7bb169c5e4ddda5e5d515c44f3d18cfcb488523832d6fcdc5fc43226a0f336",
+    "game/art-source/enemies/ink-snail/candidate-01/render-side.png": "d1079e73c3fa57372244faa8fc5239283c70895c0379d2ebc1b5b1a42542d014",
+    "game/art-source/enemies/ink-snail/candidate-01/render-three-quarter.png": "d462995fe79c001c682c953e4dc3c7ee76ebe317f7b1c99e29e2b645aede9371",
+    "game/art-source/enemies/ink-snail/candidate-01/round-trip-check.json": "aac3b8935271474531be7a97fa8fee228ab599c731a43e19d8bf4c91bbcd1e04",
+    "game/art-source/enemies/ink-snail/candidate-01/source-check.json": "69fd7372305df60b69632d22a634fac4a4d24617347de8961dd2bdadd59db0cc",
+    "game/art-source/enemies/ink-snail/candidate-01/verification-render.log": "74717a6a596c2563a4a90bd175749992341ceb168352263d1147d8281690283c",
+    "game/art-source/enemies/ink-snail/candidate-01/verify_and_review.py": "b14b34fa92688bc78878f99ccbfa9c7e335654aaef0198a02bb968aff6b2d50b",
+    "game/art-source/enemies/build_ink_snail.py": "c3768b9037c991143f34eff0879080374fcb9829a24f2d1912c2ac407dc7429d"
+  }
+}

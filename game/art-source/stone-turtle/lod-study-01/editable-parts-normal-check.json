@@ -1,0 +1,53 @@
+{
+  "parts": [
+    {
+      "part": "LOD_Head_sculpt",
+      "max_normal_vector_error": 1.6049041769309353e-07
+    },
+    {
+      "part": "LOD_Eye_white_L",
+      "max_normal_vector_error": 1.4600096599955427e-07
+    },
+    {
+      "part": "LOD_Continuous_eyelid_L",
+      "max_normal_vector_error": 0.00011666488624097936
+    },
+    {
+      "part": "LOD_Steady_brow_L",
+      "max_normal_vector_error": 3.501772880554199e-07
+    },
+    {
+      "part": "LOD_Nostril_L",
+      "max_normal_vector_error": 1.0745380149674383e-07
+    },
+    {
+      "part": "LOD_Eye_white_R",
+      "max_normal_vector_error": 1.6858739404357614e-07
+    },
+    {
+      "part": "LOD_Continuous_eyelid_R",
+      "max_normal_vector_error": 0.0001477921003162247
+    },
+    {
+      "part": "LOD_Steady_brow_R",
+      "max_normal_vector_error": 7.508562643358995e-07
+    },
+    {
+      "part": "LOD_Nostril_R",
+      "max_normal_vector_error": 1.228781230931777e-07
+    },
+    {
+      "part": "LOD_Friendly_closed_mouth",
+      "max_normal_vector_error": 1.3328003749250113e-07
+    },
+    {
+      "part": "LOD_Cheek_crease_-1",
+      "max_normal_vector_error": 8.940696716308594e-08
+    },
+    {
+      "part": "LOD_Cheek_crease_1",
+      "max_normal_vector_error": 7.450580596923828e-08
+    }
+  ],
+  "final_candidate_and_export_unchanged": true
+}

@@ -1,0 +1,99 @@
+{
+  "version": "runner-crab-candidate-01",
+  "enemy_kind": "runner",
+  "display_name": "快跑蟹",
+  "vertices": 5490,
+  "triangles": 10828,
+  "mesh_count": 1,
+  "material_count": 1,
+  "material_name": "RunnerCrab_Toy_Atlas",
+  "bones": [
+    "root",
+    "body",
+    "leg_L1",
+    "leg_L2",
+    "leg_L3",
+    "leg_L4",
+    "leg_R1",
+    "leg_R2",
+    "leg_R3",
+    "leg_R4",
+    "claw_L",
+    "jaw_L",
+    "claw_R",
+    "jaw_R",
+    "eye_L",
+    "eye_R"
+  ],
+  "bone_count": 16,
+  "walking_legs": 8,
+  "texture_size": [
+    512,
+    512
+  ],
+  "roughness": "RGB grayscale 0.34–0.42; alpha 1; Non-Color; nonmetal F0 0.04",
+  "clips": {
+    "idle": {
+      "name": "RunnerCrab_Rig|idle",
+      "first": 1,
+      "last": 61,
+      "seconds": 2.0
+    },
+    "walk": {
+      "name": "RunnerCrab_Rig|walk",
+      "first": 1,
+      "last": 13,
+      "seconds": 0.4
+    },
+    "attack": {
+      "name": "RunnerCrab_Rig|attack",
+      "first": 1,
+      "last": 22,
+      "seconds": 0.7
+    },
+    "hit": {
+      "name": "RunnerCrab_Rig|hit",
+      "first": 1,
+      "last": 16,
+      "seconds": 0.5
+    },
+    "exit": {
+      "name": "RunnerCrab_Rig|exit",
+      "first": 1,
+      "last": 25,
+      "seconds": 0.8
+    }
+  },
+  "loops": [
+    "idle",
+    "walk"
+  ],
+  "bounds_blender_xyz": {
+    "min": [
+      -0.534000039100647,
+      -0.4063136577606201,
+      0.0
+    ],
+    "max": [
+      0.534000039100647,
+      0.4069690704345703,
+      0.9341344237327576
+    ]
+  },
+  "dimensions_blender_xyz": [
+    1.068000078201294,
+    0.8132827281951904,
+    0.9341344237327576
+  ],
+  "recommended_scale": 0.83,
+  "dimensions_at_recommended_scale": [
+    0.8864400649070739,
+    0.675024664402008,
+    0.7753315716981888
+  ],
+  "forward": "Blender -Y; FBX axis_forward=-Z/axis_up=Y; expected Cocos +Z as ink contract, actual Cocos import pending",
+  "origin": "Blender Z=0/Cocos Y=0 foot origin; in-place animation, movement belongs to core/view",
+  "fbx_sha256": "9a881e9afd4f168f9af8348b4da47e95faa2bc46ed9c8705a479f69e99e55e14",
+  "source": "Original scripted mesh, UV artwork, rig and animation. A4, island and project ink c02 used only as internal style references. No external stock asset.",
+  "status": "Isolated first review candidate; no runtime promotion, not final art acceptance."
+}

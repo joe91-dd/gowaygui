@@ -1,0 +1,10 @@
+Use case: precise-object-edit.
+Edit target: the provided transparent eight-icon atlas for an original turtle island game.
+
+Make ONE targeted correction: clean the EXTERIOR CONTOURS of all eight cutouts. The current image has unwanted pale paper-like slivers outside the left edge of the turquoise lightning bolt, the upper-left and left edge of the blue medicine bottle, and colored speckles around other objects. Erase these external paper fragments, stray white outlines, colored fringes, halos and glow debris. They are not part of the toys. The resulting boundary must be a clean smooth antialiased cutout directly from the actual 3D toy surface into alpha-zero transparency. No added outline around the cutout.
+
+Preserve the deliberate sculpted ivory rim that IS part of the lightning toy. Preserve ivory bottle stoppers, sword/heart/shield/sprout symbols, lock shackle, book pages, and all glossy highlights INSIDE the real toy silhouettes. Do not erase genuine cream-colored surfaces or brighten/darken the objects to hide bad edges.
+
+Keep all eight main objects, their positions, sizes, 4-column 2-row composition, colors, silhouettes and symbols unchanged: gold turtle coin; turquoise lightning; amber sword medicine; coral heart medicine; blue shield medicine; green sprout medicine; closed teal lock; teal history book with clockwise arrow and turtle.
+Keep the generous spacing and current canvas shape. Do not redesign or add objects, decorative particles, pedestals, ground shadows, labels or words.
+Output PNG with a real transparent alpha channel. Every pixel outside the clean antialiased toy contours must be fully transparent, not painted black, white, gray or checkerboard. Solid toy interiors should remain opaque. This is a production UI cutout cleanup, not a picture of icons printed on paper.

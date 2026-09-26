@@ -1,0 +1,43 @@
+{
+  "key": "fauna-01",
+  "name": "礁岸猎犬",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Dog",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\dog-127a25\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/252e8301a5ca89e9a04f27e3081351827df4c70359318bd5a0e9aac8f08998b6_Dog.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "4d44231637a8f146b041ccd94bacd505e55aa845f8fbd5ec888fe6b87e6729c3",
+  "bytes": 116672,
+  "animations": 8,
+  "displayName": "礁岸猎犬",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 14376,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-01",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.8
+}

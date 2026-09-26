@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "sourceBlendSha256": "426c1e90534e5b19db681ee7e837399977c514aa002b14a4237c946d0b973114",
+  "editableMeshes": 1474,
+  "anchors": [
+    "Slot_0",
+    "Slot_1",
+    "Slot_2",
+    "Slot_3",
+    "Slot_4",
+    "Enemy_entrance",
+    "Pearl_center",
+    "Player_exit",
+    "Island_origin"
+  ],
+  "materials": 2,
+  "packedImages": [
+    {
+      "name": "Island_original_colour",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Island_original_roughness",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "renderSettings": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      1000,
+      700
+    ]
+  },
+  "notes": [
+    "Actual source blend reopened read-only; full editable part structure and packed textures verified.",
+    "Preview water/camera/lights are separate in dusk-bay-review-scene.blend."
+  ]
+}

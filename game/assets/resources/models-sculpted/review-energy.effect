@@ -1,0 +1,47 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: review-energy-vs:vert
+      frag: review-energy-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [0.25, 0.72, 0.92, 1], editor: { type: color } }
+        motion: { value: [0, 1, 0, 0] }
+}%
+CCProgram review-energy-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <builtin/uniforms/cc-local>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  out vec2 uv;
+  vec4 vert () {
+    uv=a_texCoord;
+    return cc_matProj*cc_matView*cc_matWorld*vec4(a_position,1.0);
+  }
+}%
+CCProgram review-energy-fs %{
+  precision highp float;
+  in vec2 uv;
+  uniform Energy {
+    vec4 tint;
+    vec4 motion;
+  };
+  vec4 frag () {
+    float across=pow(max(0.0,sin(uv.y*3.14159265)),1.6);
+    float ends=pow(max(0.0,sin(uv.x*3.14159265)),.65);
+    float flow=.65+.35*sin(uv.x*29.0-motion.x*12.0+sin(uv.x*11.0+motion.x*3.0));
+    float thread=pow(max(0.0,1.0-abs(uv.y-.48)*5.0),3.0);
+    float alpha=across*ends*flow*motion.y*tint.a;
+    vec3 rgb=mix(tint.rgb,tint.rgb*.25+vec3(.70),thread*.65);
+    return vec4(rgb,alpha);
+  }
+}%

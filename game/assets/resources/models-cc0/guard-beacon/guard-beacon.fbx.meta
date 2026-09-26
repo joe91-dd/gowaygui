@@ -1,0 +1,521 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2",
+  "files": [],
+  "subMetas": {
+    "33532": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@33532",
+      "displayName": "",
+      "id": "33532",
+      "name": "Cylinder.007.mesh",
+      "userData": {
+        "gltfIndex": 12,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9a18a": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@9a18a",
+      "displayName": "",
+      "id": "9a18a",
+      "name": "Cut crystal.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 16
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d2815": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@d2815",
+      "displayName": "",
+      "id": "d2815",
+      "name": "Bronze strut.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 588
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "24b9a": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@24b9a",
+      "displayName": "",
+      "id": "24b9a",
+      "name": "Bronze strut.001.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 588
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "61c56": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@61c56",
+      "displayName": "",
+      "id": "61c56",
+      "name": "Bronze strut.002.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 588
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "10dfa": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@10dfa",
+      "displayName": "",
+      "id": "10dfa",
+      "name": "Cylinder.005.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "10a81": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@10a81",
+      "displayName": "",
+      "id": "10a81",
+      "name": "Cylinder.006.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1e446": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@1e446",
+      "displayName": "",
+      "id": "1e446",
+      "name": "Icosphere.mesh",
+      "userData": {
+        "gltfIndex": 6,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6b206": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@6b206",
+      "displayName": "",
+      "id": "6b206",
+      "name": "Icosphere.001.mesh",
+      "userData": {
+        "gltfIndex": 7,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2efc5": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@2efc5",
+      "displayName": "",
+      "id": "2efc5",
+      "name": "Icosphere.002.mesh",
+      "userData": {
+        "gltfIndex": 8,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bcac8": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@bcac8",
+      "displayName": "",
+      "id": "bcac8",
+      "name": "Icosphere.003.mesh",
+      "userData": {
+        "gltfIndex": 9,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd3a0": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@fd3a0",
+      "displayName": "",
+      "id": "fd3a0",
+      "name": "Icosphere.004.mesh",
+      "userData": {
+        "gltfIndex": 10,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a9170": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@a9170",
+      "displayName": "",
+      "id": "a9170",
+      "name": "Icosphere.005.mesh",
+      "userData": {
+        "gltfIndex": 11,
+        "triangleCount": 20
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db9ab": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@db9ab",
+      "displayName": "",
+      "id": "db9ab",
+      "name": "Cylinder.008.mesh",
+      "userData": {
+        "gltfIndex": 13,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "825ed": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@825ed",
+      "displayName": "",
+      "id": "825ed",
+      "name": "Sphere.mesh",
+      "userData": {
+        "gltfIndex": 14,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ed341": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@ed341",
+      "displayName": "",
+      "id": "ed341",
+      "name": "Sphere.001.mesh",
+      "userData": {
+        "gltfIndex": 15,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "597d3": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@597d3",
+      "displayName": "",
+      "id": "597d3",
+      "name": "Sphere.002.mesh",
+      "userData": {
+        "gltfIndex": 16,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "96da3": {
+      "importer": "gltf-mesh",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@96da3",
+      "displayName": "",
+      "id": "96da3",
+      "name": "Cylinder.009.mesh",
+      "userData": {
+        "gltfIndex": 17,
+        "triangleCount": 380
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ff68e": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@ff68e",
+      "displayName": "",
+      "id": "ff68e",
+      "name": "CC0_Guard_CrystalBlue.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "28e85": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@28e85",
+      "displayName": "",
+      "id": "28e85",
+      "name": "CC0_Guard_CrystalFacet.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4487f": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@4487f",
+      "displayName": "",
+      "id": "4487f",
+      "name": "CC0_Guard_Brass.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "84e8d": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@84e8d",
+      "displayName": "",
+      "id": "84e8d",
+      "name": "CC0_Guard_Limestone.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "14eda": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@14eda",
+      "displayName": "",
+      "id": "14eda",
+      "name": "CC0_Guard_Jade.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6d607": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@6d607",
+      "displayName": "",
+      "id": "6d607",
+      "name": "CC0_Guard_CrystalLight.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f86d6": {
+      "importer": "gltf-material",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@f86d6",
+      "displayName": "",
+      "id": "f86d6",
+      "name": "CC0_Guard_Ivory.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e6853": {
+      "importer": "gltf-scene",
+      "uuid": "2bde7652-94f3-4127-9fef-40f7d1f72ea2@e6853",
+      "displayName": "",
+      "id": "e6853",
+      "name": "guard-beacon.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@9a18a",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@d2815",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@24b9a",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@61c56",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@10dfa",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@10a81",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@1e446",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@6b206",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@2efc5",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@bcac8",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@fd3a0",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@a9170",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@33532",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@db9ab",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@825ed",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@ed341",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@597d3",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@96da3"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@ff68e",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@28e85",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@4487f",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@84e8d",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@14eda",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@6d607",
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@f86d6"
+      ],
+      "scenes": [
+        "2bde7652-94f3-4127-9fef-40f7d1f72ea2@e6853"
+      ]
+    }
+  }
+}

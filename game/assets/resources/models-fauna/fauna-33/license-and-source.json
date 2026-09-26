@@ -1,0 +1,43 @@
+{
+  "key": "fauna-33",
+  "name": "墨触潜袭者",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Squidle",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\squidle-3ecbf8\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/3042abbeda56de6842d5ce9e5a0f5ff229ec1b17115c0d8b2f96a8cbb02c84b5_Squidle.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "c28dd0602cb5ee5c3191714d6f1e72100de23da2659b875e0e6f9e159cbd635c",
+  "bytes": 841048,
+  "animations": 8,
+  "displayName": "墨触潜袭者",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 31136,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-33",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 6.1
+}

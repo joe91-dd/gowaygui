@@ -1,0 +1,62 @@
+{
+  "fbx_sha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "triangles": 28572,
+  "weighted_vertices": 15342,
+  "bones": 10,
+  "materials": 1,
+  "uv_layers": 1,
+  "source_head_closed_manifold": true,
+  "source_packed_textures": 2,
+  "atlas_source_rebuild_byte_identical": true,
+  "non_eye_colour_pixels_and_roughness_png_preserved": true,
+  "clips": {
+    "idle": {
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.031425053817549765,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -2.7385695489101636e-08
+    },
+    "attack": {
+      "first": 1,
+      "last": 27,
+      "seconds": 0.8666666666666667,
+      "max_vertex_motion_m": 0.17864230437179715,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -5.5127692633050174e-08
+    },
+    "skill": {
+      "first": 1,
+      "last": 42,
+      "seconds": 1.3666666666666667,
+      "max_vertex_motion_m": 0.35530336169047083,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -4.8090321058680274e-08
+    },
+    "hit": {
+      "first": 1,
+      "last": 18,
+      "seconds": 0.5666666666666667,
+      "max_vertex_motion_m": 0.10225978409437134,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -1.0101302905241027e-08
+    },
+    "rest": {
+      "first": 1,
+      "last": 72,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.020546748294996767,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -9.196388361942809e-08
+    },
+    "fusion": {
+      "first": 1,
+      "last": 60,
+      "seconds": 1.9666666666666666,
+      "max_vertex_motion_m": 0.2637739253357811,
+      "loop_seam_m": 0.0,
+      "minimum_z_m": -1.496613322160556e-08
+    }
+  }
+}

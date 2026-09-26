@@ -1,0 +1,43 @@
+{
+  "key": "fauna-13",
+  "name": "礁堡蛮兵",
+  "kind": "armored",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Orc",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\orc-bc0086\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/9a5389a4d6af8651ffefbd35c32601ac6283ebb5e900101891e7987c5bf38ac4_Orc.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d4ebedf5c9cb2e548de756571d86312cccc8db981faf8bc8a8d31523d42dfa33",
+  "bytes": 174156,
+  "animations": 8,
+  "displayName": "礁堡蛮兵",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 16080,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-13",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.8
+}

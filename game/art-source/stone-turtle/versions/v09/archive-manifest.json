@@ -1,0 +1,9 @@
+{
+  "version": "stone-sample-09",
+  "archived_at_utc": "2026-09-08T04:05:49.866764+00:00",
+  "runtime_fbx_sha256": "91f0a61c689d1e227d227559f57d22b7c9673563a3262bbf8f60182c1e4f9599",
+  "asset_uuid": "5d7d68a1-9672-41e8-a0ad-05d7a87185f7",
+  "source_main": "stone-turtle.blend",
+  "runtime_fbx": "runtime/stone-turtle.fbx",
+  "note": "Original canonical v09 preserved before v10 promotion. Source textures are packed."
+}

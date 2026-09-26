@@ -1,0 +1,66 @@
+{
+  "status": "needs-correction",
+  "sourceBlendSha256": "edd6c612502ac59fed68c485db07021a52d2e205052c2d92754d2b619be6261a",
+  "checkedRootParts": 473,
+  "unsupportedRoots": [
+    {
+      "part": "Dusk_reed_3_0",
+      "rootCocos": [
+        4.45603084564209,
+        0.05949774384498596,
+        4.45654821395874
+      ],
+      "terrainY": null
+    },
+    {
+      "part": "Dusk_reed_3_1",
+      "rootCocos": [
+        4.432670593261719,
+        0.05949777737259865,
+        4.436851978302002
+      ],
+      "terrainY": null
+    },
+    {
+      "part": "Dusk_reed_3_2",
+      "rootCocos": [
+        4.461465835571289,
+        0.05949775129556656,
+        4.426630973815918
+      ],
+      "terrainY": null
+    },
+    {
+      "part": "Dusk_reed_4_0",
+      "rootCocos": [
+        7.700870990753174,
+        0.041106369346380234,
+        3.9675912857055664
+      ],
+      "terrainY": null
+    },
+    {
+      "part": "Dusk_reed_4_1",
+      "rootCocos": [
+        7.684375286102295,
+        0.04110639914870262,
+        3.941871166229248
+      ],
+      "terrainY": null
+    },
+    {
+      "part": "Dusk_reed_4_2",
+      "rootCocos": [
+        7.71490478515625,
+        0.04110635444521904,
+        3.9406163692474365
+      ],
+      "terrainY": null
+    }
+  ],
+  "method": "Raycast low-root center of each editable bush/grass/reed mesh onto actual Continuous_grass_island mesh. This detects coastline-external scatter independently of the builder predicate.",
+  "notes": [
+    "Root center support is checked; curved outer leaf tips may naturally overhang rock or sand.",
+    "Cocos animation and view acceptance remain separate."
+  ]
+}

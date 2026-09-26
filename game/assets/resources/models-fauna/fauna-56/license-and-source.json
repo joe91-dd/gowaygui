@@ -1,0 +1,44 @@
+{
+  "key": "fauna-56",
+  "name": "双刃锤鲨",
+  "kind": "elite",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Mako",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\mako-f2b399\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/ee1b9608489d194cff76e9e76d4a84b7471dcefc6637d1c29075e5e44dd930f4_Mako.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "cd000f44193e155cffda92940646ff4317e18eeb192375de52f46e758afd603a",
+  "bytes": 1796676,
+  "animations": 14,
+  "displayName": "双刃锤鲨",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 26846,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-56",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 19.2
+}

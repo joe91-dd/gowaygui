@@ -1,0 +1,43 @@
+{
+  "key": "fauna-48",
+  "name": "海岛战祭 · 战斗形态",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Tribal",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\tribal-a141f5\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/0d7dd5e8201535df3f021fae2500da8c4d155aea1e1f6a8ed619af3205bdea30_Tribal.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "da1cad5e22d5716bb28931028545e56981a4a0c1dad00a786d3236d44486f01d",
+  "bytes": 1426152,
+  "animations": 14,
+  "displayName": "海岛战祭 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 49780,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-48",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.8
+}

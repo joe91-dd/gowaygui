@@ -1,0 +1,34 @@
+{
+  "key": "world-3",
+  "base": 16,
+  "name": "晶脊岩王",
+  "tier": 6,
+  "ability": "frost",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 21298,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-16",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/978d46009fa936a909375d95b80db3496a77f4b684a32df336333d62b0a604b5_Yeti.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 21298,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 6.1
+}

@@ -1,0 +1,14 @@
+# Home environment asset
+
+- Created: 2026-09-11
+- Output: `home-environment.png`
+- Generator: built-in image_gen (not CLI)
+- Reference: `output/modern-art-directions-20260911/08-approved-home.png`, the user's approved home style and layout.
+- Original generated file: `C:/Users/Administrator/.codex/generated_images/01a09109-96bb-79f0-9f7f-60f047d46d5a/exec-40c4368c-4bdf-425f-bbdf-63873cbdc836.png`
+- Intent: environment-only screen background; real controls, text, portraits and hero must be rendered separately.
+- Visual review: all characters and UI removed; warm ivory negative space at left; empty warm sandstone platform center-right; blue ocean and distant island; bottom remains quiet for navigation. No visible words, logos or watermark.
+- Limitation: raster environment plate has fixed lighting and camera. Engine hero lighting/shadow must match the upper-left sunlight. This image supplies neither a 3D map nor functional controls.
+
+## Prompt
+
+Use case: stylized-concept. Asset type: production background-only raster asset for a landscape 16:9 mobile game home screen, desired canvas 2048x1152. The supplied image is an approved STYLE AND COMPOSITION REFERENCE only. Recreate its bright modern stylized 3D tropical island environment as a clean background plate, removing ALL characters, portraits, logos, text, numbers, icons, UI panels, buttons, menus and progress bars. Keep the approved sunny fresh sophisticated material style: warm pale sandstone, turquoise cyan-blue ocean, simple tropical silhouettes and a few distant sculpted islands. Left 35 percent of canvas is softly feathered warm ivory atmospheric negative space with very low contrast, suitable for a real menu rendered by the game engine; no visible panel outline. Center-right contains a broad EMPTY warm sandstone display platform at roughly x=58% y=65%, suitable for a large character to be composited later, open floor and no objects blocking it. The upper-middle right is a calm blue sky and simple sea background. Keep the entire bottom 20 percent very simple bright pale stone / cream soft fade, suitable for real team portraits and navigation laid over it later. A restrained palm silhouette at the upper middle-left edge and a few small leaves only at outer edges. Ocean and a small number of softly simplified distant islands in far right background. Soft coherent daytime lighting from upper-left. Broad clear shapes, rounded stylized physically plausible 3D materials with subtle texture, crisp yet calm; polished friendly contemporary game aesthetic. Important: THIS IS NOT A UI MOCKUP; it is the empty environment plate behind real interactive controls and a separate hero. No characters, no turtles, no buildings, no interface, no decorative frames, no stone podium circle, no wooden signage, no tiny scattered flowers, no logos, no writing, no watermark. Preserve functional negative space and restrained reference palette.

@@ -1,0 +1,59 @@
+{
+  "fbx_sha256": "9bc1cc37580ad3cb1c9fb57e2f54bf574fc7bac129befb1f7b08f60027d836a7",
+  "bone_count": 10,
+  "weighted_vertices": 12581,
+  "triangles": 22986,
+  "materials": 1,
+  "uv_layers": 1,
+  "clips": {
+    "idle": {
+      "first": 1.0,
+      "last": 72.0,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.027405097780164967,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -2.7385695489101636e-08
+    },
+    "attack": {
+      "first": 1.0,
+      "last": 27.0,
+      "seconds": 0.8666666666666667,
+      "max_vertex_motion_m": 0.1520009509211961,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -0.00019230054749641567
+    },
+    "skill": {
+      "first": 1.0,
+      "last": 42.0,
+      "seconds": 1.3666666666666667,
+      "max_vertex_motion_m": 0.3084722436313661,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -0.00024076405679807067
+    },
+    "hit": {
+      "first": 1.0,
+      "last": 18.0,
+      "seconds": 0.5666666666666667,
+      "max_vertex_motion_m": 0.10269581926564678,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -1.0101302905241027e-08
+    },
+    "rest": {
+      "first": 1.0,
+      "last": 72.0,
+      "seconds": 2.3666666666666667,
+      "max_vertex_motion_m": 0.01731241235588366,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": -0.0001255470997421071
+    },
+    "fusion": {
+      "first": 1.0,
+      "last": 60.0,
+      "seconds": 1.9666666666666666,
+      "max_vertex_motion_m": 0.2387403497935263,
+      "loop_seam_m": 0.0,
+      "sampled_min_z_m": 2.4166195711217142e-09
+    }
+  },
+  "axis_contract": "Unchanged FBX axis_forward=-Z, axis_up=Y; Blender round-trip forward checked via head-bone placement. Actual Cocos +Z contract uses the existing importer and still requires runtime promotion review."
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-10",
+  "name": "毒芽菌兵",
+  "kind": "snail",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Mushnub",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\mushnub-90fe0a\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/5b98d29a46d721bd56420724ec8651070d270cfb8ae1910f4a894304709ea0f7_Mushnub.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d1cc6a37746f8a5d5c1f6d7572f868936d316149c61282ea2080a2fa47b53a55",
+  "bytes": 101256,
+  "animations": 8,
+  "displayName": "毒芽菌兵",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 9792,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-10",
+  "triangles": 9792,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 3.2
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-20",
+  "name": "角冠守卫",
+  "kind": "armored",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Alpaking",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\alpaking-85b283\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/33336c6c5a15c998adcf2034e95b43d9c6ad29cc27c386342b0083e005587258_Alpaking.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d14e7dec76d380de62f5d42d084e7a4da2b16381f82fba51e6b7048ab3410139",
+  "bytes": 278036,
+  "animations": 8,
+  "displayName": "角冠守卫",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 15664,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-20",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 3.8
+}

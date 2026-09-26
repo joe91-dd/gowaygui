@@ -1,0 +1,478 @@
+{
+  "status": "c01-c04 source archives frozen after c04 approved runtime promotion; no further source edits unless separately authorized",
+  "files": {
+    "game\\art-source\\leaf-turtle\\candidate-01\\atlas-parameters.json": {
+      "bytes": 1472,
+      "sha256": "6f209e4256e7df470ea8d31afaff0d653f716320ef5b5104d77f7b46bbe63fb6"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\candidate-manifest.json": {
+      "bytes": 7703,
+      "sha256": "158f6aad8d2cc03412bf0e3e810e19fae478ec5c03875a3aaa90a3f0383ff252"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-colour.png": {
+      "bytes": 976603,
+      "sha256": "5e28277b37e45bf3c69e1c9a10d7b89f0f8de4b636c3b0895d6725ca41a202f3"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\export\\leaf-turtle.fbx": {
+      "bytes": 2387676,
+      "sha256": "b1839d7450780cf3ea919269e8f6e49a902f40d91e92b54cc10cd8c7dcda91be"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\inputs\\authored-c12b-foundation.blend": {
+      "bytes": 7042585,
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\inputs\\provenance.json": {
+      "bytes": 437,
+      "sha256": "a6adc2c12b38aff8ff582b131c13bb477d42907cf39c17fc5fd0a7018694bf73"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle-review-scene.blend": {
+      "bytes": 4912214,
+      "sha256": "840b5a882a05346edef534d2a28d111445213b5eeaeb7e4cd7b683ba7adb7d41"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle.blend": {
+      "bytes": 6878999,
+      "sha256": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\leaf-turtle.glb": {
+      "bytes": 2153908,
+      "sha256": "37f3be5ee87bc32c2c631d47cd9d5a77928148d29b073795290124030c87de22"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\manual-review.json": {
+      "bytes": 2676,
+      "sha256": "c61e2241021eec238d24afa6ac3d0f01161d1da2a6b12b23c9e71d2bb13ba71b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\README.md": {
+      "bytes": 3843,
+      "sha256": "0417c5a62be0a60e5df20da013c335e4b5713c0358def999cddad57c6a93bf22"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-front.png": {
+      "bytes": 618113,
+      "sha256": "600e7b5489a95cd80c928f8ccfdd51cef78496c7b477a6f7bd88171db38bad74"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-side.png": {
+      "bytes": 606805,
+      "sha256": "58e6d27a3ab24768d44ec8518513fc04a4b4d2e3240826180891be5bedf97a09"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-01\\render-three-quarter.png": {
+      "bytes": 614042,
+      "sha256": "96b2605f5b847c36c73030f347f853947ec508f65ab59991f4b5b1fec419cd75"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\atlas-parameters.json": {
+      "bytes": 1537,
+      "sha256": "b378405d7a420d6c05ebcec611a4be742cdfe8741a724d4e720828eafde87ca0"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\candidate-manifest.json": {
+      "bytes": 10265,
+      "sha256": "41528adaae0f2d5341bceea9f6ad225cbe177ae3b04f128149f517e6081fee34"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-colour.png": {
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\export\\leaf-turtle.fbx": {
+      "bytes": 2384860,
+      "sha256": "a8610fe8d010b0fcc1b6d16e371f509302fa6e8af42df6a4de82f9f816fee7bb"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\authored-c12b-foundation.blend": {
+      "bytes": 7042585,
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\authored-leaf-c01.blend": {
+      "bytes": 6878999,
+      "sha256": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\provenance.json": {
+      "bytes": 674,
+      "sha256": "9b38fdc4b923f767c0a2871807c8f1005c2d85f48ed7ecfd7e8ab350ed98c018"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle-review-scene.blend": {
+      "bytes": 4921292,
+      "sha256": "e8ee1c53a6a25440070dcc84c384928c43212fafd9bf0d5677f0d633289425df"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle.blend": {
+      "bytes": 6871621,
+      "sha256": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\leaf-turtle.glb": {
+      "bytes": 2144832,
+      "sha256": "9450996d19690c2fa8f06fdbe2a572483c5aa3c1f0c00f456ed922b10550160f"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\manual-review.json": {
+      "bytes": 3941,
+      "sha256": "b141d8969de1ff6e5a8f25e1d330b3c3412fbe9d0e826fea857af8c7555ad744"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\README.md": {
+      "bytes": 4130,
+      "sha256": "e5978a79ef2de4825f7e78ee0940c518c2044a670efae4b1878fec134fc63335"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-front.png": {
+      "bytes": 631408,
+      "sha256": "4d2f451faf5c7d9aed92cbe9cfbb7f973bc393ca1656fcd5d305a7f13c9f9151"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-side.png": {
+      "bytes": 623831,
+      "sha256": "3684cad9c44fc8e237469fddcb9ade040dd17291b0a7584fe9820905ca2e607b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\render-three-quarter.png": {
+      "bytes": 630659,
+      "sha256": "0c671330d80da9c144b33ce44f5336ad733520799d2a4d7d7ac785fd9672387d"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\scope-check.json": {
+      "bytes": 969,
+      "sha256": "39c107ac96074f4b535df81b31d3e4e4c91391fd9d15eae29daf164982a10696"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-02\\verify_candidate02_scope.py": {
+      "bytes": 4357,
+      "sha256": "b0fdba8db8b406f2e0c98a3154b5a996424d6bdab98e42c5fce03e493e67a741"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\candidate-manifest.json": {
+      "bytes": 7677,
+      "sha256": "eace93fa69142aea3374c858bc8fef72ff4901cd26072e5d622cf1189df0473d"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\inputs\\authored-leaf-c02.blend": {
+      "bytes": 6871621,
+      "sha256": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\inputs\\authored_leaf_c02_functions.py": {
+      "bytes": 28948,
+      "sha256": "ddd3ec6b3ae28856ce397d1f43c7f7ae0f856ef5617d2da03125d8bde8b732ae"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-preview.png": {
+      "bytes": 542103,
+      "sha256": "baebcfaf991a14e5edcd5ad5e1b1be2a73b9250d0531d6f3fc6feffefd9e622e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-review-scene.blend": {
+      "bytes": 5470789,
+      "sha256": "588d3f9ec0c8f207a123bb1706ed2f957a87b15b88f3139e7d2ffa796ef345a2"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-stack-sample.blend": {
+      "bytes": 5431306,
+      "sha256": "f09250ff05eff4334bad83308d2c5ceffa872e69f11084941fa1d35af274dd54"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-turtle-review-scene.blend": {
+      "bytes": 8007614,
+      "sha256": "96e48d01486344ae0b07939cf41ff6a7e94660039acae39b40a03d152aa05e0d"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\leaf-turtle.blend": {
+      "bytes": 7968131,
+      "sha256": "0590bc0b07c6408715e421af98ee5a22a89f8713505fc7b7b4432da2d2ee80c5"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\manual-review.json": {
+      "bytes": 2539,
+      "sha256": "dc145ddc7c036d03918403e38c5f601cf54eaf7bf8e1b28e24aa65e540c26d87"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\README.md": {
+      "bytes": 3438,
+      "sha256": "8821f2ddf018aa3dd21fc5ab015ca51713576a9cd46d8bb68aeba380cfbfb45e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\render-three-quarter.png": {
+      "bytes": 640984,
+      "sha256": "7bb0baf74a843edbf9e7f915b63ea8031fb6cc1f881b8625243fbb8f5ea3eec5"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\sample-manifest.json": {
+      "bytes": 7648,
+      "sha256": "e06a34dbd4202f8471fcfcb96d8989b600e7b92c46c756eb59b1c195d78f074c"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\scope-check.json": {
+      "bytes": 832,
+      "sha256": "84259d26fe4fa80891738bf11ef4b001cae84005bad43d23ad663a3d4926fdca"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\textures\\leaf-colour.png": {
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\textures\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-03\\verify_scope.py": {
+      "bytes": 4345,
+      "sha256": "fc6872c6709589e2ebaa6f3c1d91555317e2e5ba3f285019cf332a89da4d05a9"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\build_runtime_lod.py": {
+      "bytes": 9938,
+      "sha256": "b059200243830554578d092bcafa6606d21ae58521dfc6384028772d64dffe68"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\candidate-manifest.json": {
+      "bytes": 10065,
+      "sha256": "4ae848b25ffcd472cbd27867fea2e205e51660abe1ab7c0bc6bc6f84050f437e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\freeze_sources.py": {
+      "bytes": 1657,
+      "sha256": "f9aa81f5f6470cf08c89f7d3a4fd80d581c225f432cfa69ba70880083a1276d0"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\inputs\\authored-leaf-c02.blend": {
+      "bytes": 6871621,
+      "sha256": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\inputs\\authored_leaf_c02_functions.py": {
+      "bytes": 28948,
+      "sha256": "ddd3ec6b3ae28856ce397d1f43c7f7ae0f856ef5617d2da03125d8bde8b732ae"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\inspect_export_payload.py": {
+      "bytes": 3577,
+      "sha256": "0dc64315a69ed48879b59abce18fc2b3df687a8673d97a2d7f7023c8632484f2"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\leaf-turtle-review-scene.blend": {
+      "bytes": 8007614,
+      "sha256": "fcff5174a57a41c2baaf58874fcdae3f1e455a0cdeb730f686cf0faeb5b855b8"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\leaf-turtle.blend": {
+      "bytes": 7968131,
+      "sha256": "902faa81d3c99e5bd9bdf3f00d868d25a000eb9f0dfe802615eb17ea07a62986"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\manual-review.json": {
+      "bytes": 891,
+      "sha256": "4bee8f9a0f721e88b7d45dcad2e81d34803be2611d2c5c93a228f6cfedf7309b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\promote_runtime.py": {
+      "bytes": 3290,
+      "sha256": "ca37a38a559720a58ce6e366fabcb75ca383f47b2864f4fdcfd2e2f4ca361275"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\README.md": {
+      "bytes": 3085,
+      "sha256": "26083e1ccd92b2dfcd7bc513535bbc43f204d9c8b693090d6261014bcb62099f"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\record_runtime_handoff.py": {
+      "bytes": 4982,
+      "sha256": "e831564a343d71e0e5eefd452cf42ca55ab6a8148b5da81edf66aae280854e0e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\render-three-quarter.png": {
+      "bytes": 640880,
+      "sha256": "526b72c479dd37ee7d1a62998dd940d27335e1511629c3b716a2a17dccb43687"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\review_runtime_lod.py": {
+      "bytes": 11697,
+      "sha256": "c562f07123933f98bb8d50230a1b940a67b036a2a17d3e684d644dd570717f5b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-attack-08-side.png": {
+      "bytes": 641577,
+      "sha256": "72f99a0c13865742b16dbdf291433fe5eda412fb0c6a95bf284da7c442beaec2"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-attack-13-three-quarter.png": {
+      "bytes": 647176,
+      "sha256": "207eb81db0cf6fd2e244ae5e357a7e2ae757cab3044b36fb50f011ed5a7733b6"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-clearance.json": {
+      "bytes": 17486,
+      "sha256": "2a47d5aa1066229003fd213de6c86760e6cb72d8b898588b87f27e48832b6578"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-fusion-23-three-quarter.png": {
+      "bytes": 649620,
+      "sha256": "06fe1b4d838604893fa1b1117ed131d1569860b356a5c82b230f94dfba72f8d6"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-hit-04-three-quarter.png": {
+      "bytes": 644513,
+      "sha256": "315d4b0e5cf53994c26b263fc9cd59beed0fc403c6309a833e5e0b2ea969c09b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-rest-36-three-quarter.png": {
+      "bytes": 641507,
+      "sha256": "4c2f8d36e3727676da5709af80ce1f902b313488d7e9f0d45f539c76996962d5"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\animation-skill-20-three-quarter.png": {
+      "bytes": 649159,
+      "sha256": "dad880e928d5d30f37b9bdea405d22ab169c647ab06b54a119c124f481e24c9f"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\atlas-parameters.json": {
+      "bytes": 1537,
+      "sha256": "b378405d7a420d6c05ebcec611a4be742cdfe8741a724d4e720828eafde87ca0"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-colour.png": {
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export\\leaf-turtle.fbx": {
+      "bytes": 2538348,
+      "sha256": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\export-payload-check.json": {
+      "bytes": 1003,
+      "sha256": "6b28b265686789c75ad49cd310ce164ce4a09860ce33d396d9d0b99e2a44e229"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\inputs\\authored_leaf_atlas_source.py": {
+      "bytes": 28948,
+      "sha256": "ddd3ec6b3ae28856ce397d1f43c7f7ae0f856ef5617d2da03125d8bde8b732ae"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\animation-clearance.json": {
+      "bytes": 17486,
+      "sha256": "2a47d5aa1066229003fd213de6c86760e6cb72d8b898588b87f27e48832b6578"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\build_runtime_lod.py": {
+      "bytes": 9899,
+      "sha256": "bc9b086ce9ec3e1e7479c622b1f680d9dff81b110ea7ccb8b74e7b6e63704efc"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\leaf-turtle-runtime.blend": {
+      "bytes": 5570699,
+      "sha256": "ba7b553a1e610ecd9e63ce0049d073d8c005a949cda12852e6e471d12ba79d81"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\leaf-turtle.fbx": {
+      "bytes": 2526428,
+      "sha256": "a11fa847c5b3bcea196aa27a512b82e0e1f6b334131b45792b01d261e9033c9c"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\lod-manifest.json": {
+      "bytes": 36561,
+      "sha256": "c1fd9d7388f5f1b8ca53b0d62c8e9c36edd4d100612e1b13fb7f73547c5c3a7b"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\render-battle.png": {
+      "bytes": 625917,
+      "sha256": "56969162b32c08e6a46388fbd941565e23c9ec05641bb6f18e8e1149181a2803"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\render-front.png": {
+      "bytes": 644752,
+      "sha256": "3db67bde62f0b26c623be2f3ad7bc09b5b43718c364dcad35ac393098f2e9294"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\render-three-quarter.png": {
+      "bytes": 644643,
+      "sha256": "defe2e2193f20557baacb04f19a702284d8cbf96f7c8a2ab866de3937b5f2f48"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\round-trip-check.json": {
+      "bytes": 3548,
+      "sha256": "f55a99e762de570569a22ce8b3225ae391bc014d64dc28a054095b0173fbcf32"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\iterations\\lod01\\technical-complete.json": {
+      "bytes": 225,
+      "sha256": "a86e86d8a479b25f516ee34c53dc7bcf219b1615852c6676f49de555f88f1a83"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-lod-parts.blend": {
+      "bytes": 5313840,
+      "sha256": "4519162da640637ae267ad72ed5b60b20a64b55ce5ced854b64d61e956e164fc"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-lod-parts.blend1": {
+      "bytes": 5287438,
+      "sha256": "dff8637bde9fc5333f289052780e7952dc4da22908a48133da72afaee7be7e2c"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-lod-review-scene.blend": {
+      "bytes": 5259236,
+      "sha256": "da887be7e713b0521d2aa2896acb846457aa36a434e7c55dc3455ee9b72db7a1"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-lod-review-scene.blend1": {
+      "bytes": 5224276,
+      "sha256": "0274659b40967bd32fa1405a1d9a62f3cf7532221a99d931263b27522161ca01"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-runtime.blend": {
+      "bytes": 5605659,
+      "sha256": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle-runtime.blend1": {
+      "bytes": 5570699,
+      "sha256": "ba7b553a1e610ecd9e63ce0049d073d8c005a949cda12852e6e471d12ba79d81"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\leaf-turtle.glb": {
+      "bytes": 2145728,
+      "sha256": "37d430246a5b52bd08a9ab747c6b304ff192308b3103e29e12477175bbb5fdf4"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\lod-manifest.json": {
+      "bytes": 36573,
+      "sha256": "c50fcafcb2bfade0ab981757fe47288e54d09889e00469ae44274fb79022eb4e"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\promotion-proposal.json": {
+      "bytes": 3900,
+      "sha256": "3d909d847045d8f0267f5b7f0f8930cc2c30190dfdc4a9d6b8414646f4483621"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\promotion.json": {
+      "bytes": 4980,
+      "sha256": "0660863631958c1aa65613f0a42a5f06a1cbb976dcd59b32662b2efaf099ef39"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\README.md": {
+      "bytes": 6623,
+      "sha256": "b0f00fed4d009ae6e439b04fca7390bce05e162325097916e947b36da78dcc5f"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\render-battle.png": {
+      "bytes": 626001,
+      "sha256": "e4a83008f72342d96a8f14a79edece5b77b34adb57df6388bec74a239ae8b173"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\render-front.png": {
+      "bytes": 644399,
+      "sha256": "c7b84b857c4ad742871ae9e3ef8f803e5a7e4164affc252ba5fe6c8926b449b4"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\render-latest-job.json": {
+      "bytes": 506,
+      "sha256": "eb9d42662502d4890f5a7d259f1669ea1d41e7c9fbd4f90c0c8617dee566ff65"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\render-side.png": {
+      "bytes": 642598,
+      "sha256": "9c7293fcfe2c4a9218131ea8d452651fd20b808f65d63f34cbfab7c2f4720e78"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\render-three-quarter.png": {
+      "bytes": 644428,
+      "sha256": "87ae09a84ebeba4a2feff034bdbc93bae1e42f737b716e3f8e224c7a10b62172"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\round-trip-check.json": {
+      "bytes": 3548,
+      "sha256": "b8f263d62e860762bd25cbf6a375223dfee31f7f714c588764ec9e3a0562dbd4"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\technical-complete.json": {
+      "bytes": 225,
+      "sha256": "a86e86d8a479b25f516ee34c53dc7bcf219b1615852c6676f49de555f88f1a83"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\technical-manual-review.json": {
+      "bytes": 2908,
+      "sha256": "ed12217c8413bf456f24a8f6bcd27eb5484339efb7819ac9d62d2d0e69905945"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\verification\\atlas-rebuild\\leaf-colour.png": {
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\runtime-candidate\\verification\\atlas-rebuild\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\scope-check.json": {
+      "bytes": 911,
+      "sha256": "7ee87e4bc07f6c5b77a021202df69b095a0a5c264f9e2123983ab3ef9fa2dc2c"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\textures\\leaf-colour.png": {
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\textures\\leaf-roughness.png": {
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "game\\art-source\\leaf-turtle\\candidate-04\\verify_scope.py": {
+      "bytes": 4920,
+      "sha256": "e39cec9ee1733fa984a6dac24a69aa0b52b1e740d810c58caeedf84eb02f9139"
+    },
+    "game\\art-source\\build_leaf_turtle_candidate01.py": {
+      "bytes": 26602,
+      "sha256": "9e42c142b9b065d379670b34ff5251cecbacbf170ad634797a92ab2834b768c7"
+    },
+    "game\\art-source\\build_leaf_turtle_candidate02.py": {
+      "bytes": 28948,
+      "sha256": "ddd3ec6b3ae28856ce397d1f43c7f7ae0f856ef5617d2da03125d8bde8b732ae"
+    },
+    "game\\art-source\\build_leaf_turtle_candidate03.py": {
+      "bytes": 11762,
+      "sha256": "29a32afb2bb45e152400866d42324fb6973f244631a43bfc869bc3d71a1618c2"
+    },
+    "game\\art-source\\build_leaf_turtle_candidate04.py": {
+      "bytes": 12000,
+      "sha256": "716b5467b09e3172df3b5e25056aa9461383169018beabc71cfe3e5356096a7d"
+    },
+    "game\\art-source\\leaf-turtle\\promotion-manifest.json": {
+      "bytes": 4980,
+      "sha256": "0660863631958c1aa65613f0a42a5f06a1cbb976dcd59b32662b2efaf099ef39"
+    }
+  },
+  "file_count": 116,
+  "runtime_payload_sha256": {
+    "leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+    "leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269",
+    "leaf-turtle.fbx": "c6abed3f0de639a37b80fdd0780c5474525f5b33f579a231bd3d0e6d4a44b74e"
+  },
+  "source_mutations_performed_by_freeze": false,
+  "filesystem_attributes_changed": false,
+  "cocos_meta_excluded_from_runtime_payload": true
+}

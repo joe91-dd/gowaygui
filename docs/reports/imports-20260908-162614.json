@@ -1,0 +1,210 @@
+[
+  {
+    "path": "game/assets/resources/models/spike-turtle/spike-turtle.fbx.meta",
+    "uuid": "4ecb546d-bf46-4df2-9a14-7212e559087a",
+    "imported": true,
+    "meshes": [
+      {
+        "name": "Torso_mesh.mesh",
+        "triangles": 28900
+      }
+    ],
+    "clips": [
+      {
+        "name": "SpikeTurtle_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        }
+      },
+      {
+        "name": "SpikeTurtle_Rig|fusion.animation",
+        "span": {
+          "from": 0,
+          "to": 1.9666666984558105
+        }
+      },
+      {
+        "name": "SpikeTurtle_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        }
+      },
+      {
+        "name": "SpikeTurtle_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        }
+      },
+      {
+        "name": "SpikeTurtle_Rig|rest.animation",
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        }
+      },
+      {
+        "name": "SpikeTurtle_Rig|skill.animation",
+        "span": {
+          "from": 0,
+          "to": 1.3666666746139526
+        }
+      }
+    ],
+    "materials": [
+      "SpikeAtlas_01.material"
+    ],
+    "prefabs": [
+      {
+        "name": "spike-turtle.prefab",
+        "uuid": "4ecb546d-bf46-4df2-9a14-7212e559087a@a3a9d"
+      }
+    ]
+  },
+  {
+    "path": "game/assets/resources/models/enemies/armored-crab/armored-crab.fbx.meta",
+    "uuid": "29dee071-bea9-4605-a045-dac7961ca708",
+    "imported": true,
+    "meshes": [
+      {
+        "name": "Broad_bluegray_body_mesh.mesh",
+        "triangles": 13340
+      }
+    ],
+    "clips": [
+      {
+        "name": "ArmoredCrab_Rig|exit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.8999999761581421
+        }
+      },
+      {
+        "name": "ArmoredCrab_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        }
+      },
+      {
+        "name": "ArmoredCrab_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.5
+        }
+      },
+      {
+        "name": "ArmoredCrab_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.4000000953674316
+        }
+      },
+      {
+        "name": "ArmoredCrab_Rig|walk.animation",
+        "span": {
+          "from": 0,
+          "to": 0.800000011920929
+        }
+      }
+    ],
+    "materials": [
+      "ArmoredCrab_Toy_Atlas.material"
+    ],
+    "prefabs": [
+      {
+        "name": "armored-crab.prefab",
+        "uuid": "29dee071-bea9-4605-a045-dac7961ca708@b3050"
+      }
+    ]
+  },
+  {
+    "path": "game/assets/resources/models/enemies/mist-bubble/mist-bubble.fbx.meta",
+    "uuid": "d9a1c251-1548-4d87-87c1-ed21a37da11a",
+    "imported": true,
+    "meshes": [
+      {
+        "name": "Cloud_form_1_mesh.mesh",
+        "triangles": 10748
+      }
+    ],
+    "clips": [
+      {
+        "name": "MistBubble_Rig|attack.animation",
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        }
+      },
+      {
+        "name": "MistBubble_Rig|exit.animation",
+        "span": {
+          "from": 0,
+          "to": 1
+        }
+      },
+      {
+        "name": "MistBubble_Rig|hit.animation",
+        "span": {
+          "from": 0,
+          "to": 0.6000000238418579
+        }
+      },
+      {
+        "name": "MistBubble_Rig|idle.animation",
+        "span": {
+          "from": 0,
+          "to": 2.4000000953674316
+        }
+      },
+      {
+        "name": "MistBubble_Rig|walk.animation",
+        "span": {
+          "from": 0,
+          "to": 0.800000011920929
+        }
+      }
+    ],
+    "materials": [
+      "MistBubble_Toy_Atlas.material"
+    ],
+    "prefabs": [
+      {
+        "name": "mist-bubble.prefab",
+        "uuid": "d9a1c251-1548-4d87-87c1-ed21a37da11a@5dd3d"
+      }
+    ]
+  },
+  {
+    "path": "game/assets/resources/environment/coral-bend/coral-bend.fbx.meta",
+    "uuid": "739bd8ac-24fe-44d8-82d3-06f3abbb3c7d",
+    "imported": true,
+    "meshes": [
+      {
+        "name": "Sanctuary_luminous_pearl_geometry.mesh",
+        "triangles": 1664
+      },
+      {
+        "name": "Continuous_grass_island_geometry.mesh",
+        "triangles": 8006
+      },
+      {
+        "name": "Coast_chamfer_rock_00_geometry.mesh",
+        "triangles": 54196
+      }
+    ],
+    "clips": [],
+    "materials": [
+      "Island_atlas.material",
+      "Warm_pearl_and_lamps.material"
+    ],
+    "prefabs": [
+      {
+        "name": "coral-bend.prefab",
+        "uuid": "739bd8ac-24fe-44d8-82d3-06f3abbb3c7d@21f20"
+      }
+    ]
+  }
+]

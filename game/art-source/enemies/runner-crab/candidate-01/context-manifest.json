@@ -1,0 +1,14 @@
+{
+  "status": "Offline Blender real-mesh composition, not Cocos gameplay screenshot",
+  "runner_scale": 0.83,
+  "runner_road_y": 0.064,
+  "stone_scale": 0.65,
+  "stone_floor_y": 0.292,
+  "references": [
+    "tidal island current source",
+    "stone candidate-11"
+  ],
+  "render_threads": 2,
+  "samples": 20,
+  "written_under": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\runner-crab\\candidate-01"
+}

@@ -1,0 +1,48 @@
+{
+  "generatedAtDate": "2026-09-10",
+  "generator": "OpenAI built-in image_gen",
+  "referenceImages": [
+    "C:/Users/Administrator/Desktop/龟/06_宠物合成_父母汇入泡泡.png.png",
+    "C:/Users/Administrator/Desktop/龟/07_宠物合成_五彩泡泡揭晓.png.png",
+    "C:/Users/Administrator/Desktop/龟/08_宠物合成_结果属性技能.png.png"
+  ],
+  "assets": [
+    {
+      "asset": "fusion-background.png",
+      "mode": "reference edit",
+      "originalGeneratedFile": "C:/Users/Administrator/.codex/generated_images/01a086f7-59cf-74f0-bb28-c163e75eb53d/exec-1aa9240d-abb8-4565-88bc-58cb573ce964.png",
+      "sourceCopy": "game/art-source/art-v2/fusion/fusion-background-source.png",
+      "runtimeCopy": "game/assets/resources/art-v2/fusion-background.png",
+      "prompt": "background-prompt.txt",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2835835,
+      "sha256": "992562f525f8bae1acbc09120252beb084e3411a7123bce274075a9120c5c5da",
+      "visualQA": "Clean sunny tropical ritual workshop environment. Large central stone pool, empty parent pedestals at left/right, cyan rune gate and waterfall at back, bright ocean and limestone vegetation. No characters, bubbles, UI or text. Native approximately16:9 output retained without upscaling."
+    },
+    {
+      "asset": "fusion-bubble.png",
+      "mode": "fresh transparent generation guided by inspected style",
+      "originalGeneratedFile": "C:/Users/Administrator/.codex/generated_images/01a086f7-59cf-74f0-bb28-c163e75eb53d/exec-c6920ea1-1917-4238-8c96-a85962ca1d20.png",
+      "sourceCopy": "game/art-source/art-v2/fusion/fusion-bubble-source.png",
+      "runtimeCopy": "game/assets/resources/art-v2/fusion-bubble.png",
+      "prompt": "bubble-prompt.txt",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1465445,
+      "sha256": "e9858751287dab0c5474d51e21a7c23cd3f212621897e8f114139ca0a33e4905",
+      "visualQA": "One circular pearl-rainbow iridescent soap bubble with luminous glossy rim, partial translucent opal center and delicate sparkles. No character, silhouettes, UI, text or scene.",
+      "alphaQA": {
+        "passed": true,
+        "pixelFormat": "Format32bppArgb",
+        "sampleAlphaMinimum": 0,
+        "sampleAlphaMaximum": 253,
+        "centerAlpha": 50,
+        "transparentSampleFraction": 0.43020000811391945,
+        "partialSampleFraction": 0.5697999918860805
+      }
+    }
+  ],
+  "postProcessing": "none; all copies byte-identical",
+  "rightsNote": "Generated from user-provided approved art direction; source and generation recorded, not independent legal clearance."
+}

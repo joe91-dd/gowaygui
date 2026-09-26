@@ -1,0 +1,30 @@
+{
+  "status": "Offline Blender actual geometry; not a Cocos screenshot",
+  "cocos_camera": [
+    0,
+    15,
+    18
+  ],
+  "cocos_target": [
+    0,
+    0.2,
+    0
+  ],
+  "blender_camera": [
+    0,
+    -18,
+    15
+  ],
+  "blender_target": [
+    0,
+    0,
+    0.2
+  ],
+  "vertical_fov_degrees": 42,
+  "aspect": "16:9",
+  "mist_scale": 0.83,
+  "closeup_battle_angle": "matching pitch, orthographic studio framing to inspect face",
+  "source_hashes_unchanged": {
+    "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\environment\\tidal-island-review-scene.blend": "76f84ececca5a438a4bdf71a112ed6c2164141fa957512a255f555d09c532120"
+  }
+}

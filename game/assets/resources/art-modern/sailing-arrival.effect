@@ -1,0 +1,80 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: arrival-vs:vert
+      frag: arrival-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        sceneTexture: { value: white }
+        mistTexture: { value: white }
+        arrivalMotion: { value: [0, 0, 0, 0] }
+}%
+
+CCProgram arrival-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec2 uv0;
+  out vec4 color;
+  vec4 vert(){
+    vec4 position=vec4(a_position,1.);
+    #if USE_LOCAL
+      position=cc_matWorld*position;
+    #endif
+    uv0=a_texCoord;
+    color=a_color;
+    return cc_matViewProj*position;
+  }
+}%
+
+CCProgram arrival-fs %{
+  precision highp float;
+  in vec2 uv0;
+  in vec4 color;
+  uniform sampler2D sceneTexture;
+  uniform sampler2D mistTexture;
+  uniform ArrivalParams { vec4 arrivalMotion; };
+float oval(vec2 point,vec2 center,vec2 radius){vec2 delta=(point-center)/radius;return 1.-smoothstep(.38,1.,dot(delta,delta));}
+float range(float value,float low,float high,float feather){return smoothstep(low,low+feather,value)*(1.-smoothstep(high-feather,high,value));}
+vec2 breathing(vec2 point,vec2 center,vec2 radius,float offset){float weight=oval(point,center,radius);return vec2(sin(arrivalMotion.x*.95+offset)*.00055,sin(arrivalMotion.x*1.55+offset)*.0018)*weight;}
+vec4 fog(vec2 point,vec2 origin,vec2 scale,float offset){vec2 local=(point-origin)/scale+vec2(.5);local.x+=sin(arrivalMotion.x*.09+offset)*.12;float edge=range(local.x,0.,1.,.16)*range(local.y,0.,1.,.22);return texture(mistTexture,clamp(local,0.,1.))*edge;}
+
+vec4 frag(){
+  vec2 p=uv0;float t=arrivalMotion.x;
+  vec3 base=texture(sceneTexture,p).rgb;
+  float hull=oval(p,vec2(.69,.66),vec2(.31,.21));
+  float sail=range(p.x,.53,.82,.04)*range(p.y,.17,.58,.04)*smoothstep(.20,.55,base.r);
+  float crew=oval(p,vec2(.70,.54),vec2(.27,.20));
+  float boat=max(hull,max(sail,crew));
+  vec2 d=p-vec2(.70,.71);float rock=sin(t*.82)*.0016;
+  vec2 shift=boat*vec2(-d.y*rock,d.x*rock+sin(t*.95)*.0012);
+  float flag=range(p.x,.49,.75,.03)*range(p.y,.025,.18,.02)*smoothstep(.04,.17,base.g-base.b);
+  shift+=flag*vec2(sin(t*2.2-p.x*29.)*.0014,sin(t*2.5-p.x*30.)*.0028);
+  shift+=sail*vec2(sin(p.y*13.-t*1.25)*.0012,sin(p.x*22.-t)*.0007);
+  float water=smoothstep(.56,.79,p.y)*range(p.x,.10,.99,.09)*smoothstep(.055,.21,base.b-base.r);
+  shift+=water*vec2(sin(p.y*121.-t*1.7+sin(p.x*17.))*.0018,sin(p.x*88.+p.y*48.-t*1.2)*.0008);
+  vec3 result=texture(sceneTexture,clamp(p+shift,.001,.999)).rgb;
+  result+=water*vec3(.018,.029,.033)*sin(p.x*116.+p.y*170.-t*1.4);
+  float wave=oval(p,vec2(.506,.471),vec2(.027,.047));
+  float gem=oval(p,vec2(.900,.385),vec2(.02,.038));
+  result+=vec3(.025,.13,.17)*(wave+gem)*(.45+.3*sin(t*1.9));
+  return vec4(result,1.)*color;
+}
+
+}%
+

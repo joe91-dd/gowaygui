@@ -1,0 +1,36 @@
+{
+  "id": "yellow-5",
+  "name": "幽灯毒翼王",
+  "tier": 3,
+  "index": 35,
+  "base": 18,
+  "key": "boss-35",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 24248,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-18",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/a4d0d409e2c5789e9b4c59b7772e1b4d18c366a8a45856b30f0e05654c92dea7_Armabee Evolved.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24248,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.5
+}

@@ -1,0 +1,298 @@
+{
+  "configuration": [
+    {
+      "name": "碎礁洞穴",
+      "waves": 6,
+      "baseWave": 16,
+      "gold": 300,
+      "food": 3,
+      "books": 1,
+      "description": "狭窄入口与重甲蟹，考验轮换和持续治疗"
+    },
+    {
+      "name": "深潮遗迹",
+      "waves": 8,
+      "baseWave": 20,
+      "gold": 600,
+      "food": 5,
+      "books": 2,
+      "description": "法术与远程敌人增加，考验双抗和恢复"
+    },
+    {
+      "name": "巨钳王庭",
+      "waves": 10,
+      "baseWave": 21,
+      "gold": 1000,
+      "food": 8,
+      "books": 3,
+      "description": "精英和巨钳轮番进攻，需要完整的技能搭配"
+    }
+  ],
+  "note": "Isolated fixtures: starter vs explicit perfect twelve-skill player roster, four explicit eight-skill local AI teammates; player opens with shooter. Not a browser playthrough.",
+  "rows": [
+    {
+      "mature": false,
+      "tier": 0,
+      "waves": 6,
+      "seconds": 258.45,
+      "coreHealth": 10,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 300
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 3
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "mature": false,
+      "tier": 1,
+      "waves": 8,
+      "seconds": 358.7,
+      "coreHealth": 10,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 600
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 5
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "shredArmor",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "mature": false,
+      "tier": 2,
+      "waves": 10,
+      "seconds": 412.40000000000003,
+      "coreHealth": 2,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 1000
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 8
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "shredArmor",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "critical",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "mature": true,
+      "tier": 0,
+      "waves": 6,
+      "seconds": 207.35000000000002,
+      "coreHealth": 20,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 300
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 3
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 3
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "mature": true,
+      "tier": 1,
+      "waves": 8,
+      "seconds": 297.35,
+      "coreHealth": 20,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 600
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 5
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 5
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "shredArmor",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "mature": true,
+      "tier": 2,
+      "waves": 10,
+      "seconds": 372.5,
+      "coreHealth": 10,
+      "victory": true,
+      "rewards": [
+        {
+          "kind": "gold",
+          "amount": 1000
+        },
+        {
+          "kind": "material",
+          "material": "attack",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "health",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "defense",
+          "amount": 8
+        },
+        {
+          "kind": "material",
+          "material": "growth",
+          "amount": 8
+        },
+        {
+          "kind": "book",
+          "skillId": "reflect",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "shredArmor",
+          "amount": 1
+        },
+        {
+          "kind": "book",
+          "skillId": "critical",
+          "amount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "sourceBlendSha256": "965efe74dfb7642aa4b95beec011f62544ccf04aa84ab28549b12a9eabe2fc02",
+  "checkedRootParts": 321,
+  "unsupportedRoots": [],
+  "method": "Raycast low-root center of each editable bush/grass/reed mesh onto actual Continuous_grass_island mesh. This detects coastline-external scatter independently of the builder predicate.",
+  "notes": [
+    "Root center support is checked; curved outer leaf tips may naturally overhang rock or sand.",
+    "Cocos animation and view acceptance remain separate."
+  ]
+}

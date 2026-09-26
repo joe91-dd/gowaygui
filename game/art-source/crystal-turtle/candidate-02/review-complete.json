@@ -1,0 +1,23 @@
+{
+  "status": "Candidate only; actual image review and Cocos review remain required",
+  "quick_only": false,
+  "six_fbx_clips_checked": true,
+  "atlas_rebuild_checked": true,
+  "protected_inputs_unchanged": true,
+  "approved_view_hashes_preserved": {
+    "render-front.png": "2bbacd6cb9f28038153cd445bcf2a60ce099bf38845797e359450184b2c76b6e",
+    "render-three-quarter.png": "95fe1999c70b3e34087edd2cadf5f2b4617e30160b8ca8153cc2a46df8834eb1"
+  },
+  "rendered_files": [
+    "render-side.png",
+    "render-battle.png",
+    "animation-attack-08-side.png",
+    "animation-attack-13-three-quarter.png",
+    "animation-skill-20-three-quarter.png",
+    "animation-rest-36-three-quarter.png",
+    "animation-hit-04-three-quarter.png",
+    "animation-fusion-23-three-quarter.png"
+  ],
+  "threads": 2,
+  "samples": 32
+}

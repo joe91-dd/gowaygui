@@ -1,0 +1,35 @@
+{
+  "name": "Glub Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\glub-evolved-611029\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/e1dc87abd11873bf496baa25e33904853fa236e011aed1530f1d156493319b9a_Glub Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "c14e1fd87177aca40e5df013113c076dcbbb8a18409e16d3aa45ef2955cfec7c",
+  "bytes": 337856,
+  "animations": 8,
+  "runtimeKey": "spitter",
+  "height": 1.4,
+  "runtimeAnimations": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "bones": 13,
+  "triangles": 4452,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Removed importer bone custom-shape meshes before export",
+    "Ground and height recalibrated using evaluated idle skinning",
+    "Rough coastal materials; source colours retained"
+  ]
+}

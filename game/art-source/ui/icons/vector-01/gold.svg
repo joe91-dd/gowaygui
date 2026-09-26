@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="gold-title gold-desc">
+<title id="gold-title">金币</title><desc id="gold-desc">唯一货币，原创龟壳浮雕金币；从零绘制的哥喂龟原创矢量图标，左上柔光。</desc>
+<defs><linearGradient id="gold-ivory" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#fff3d7"/><stop offset=".52" stop-color="#e8cda0"/><stop offset="1" stop-color="#b79667"/></linearGradient><linearGradient id="gold-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffe291"/><stop offset=".52" stop-color="#efb348"/><stop offset="1" stop-color="#b9742e"/></linearGradient><linearGradient id="gold-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#91d5c4"/><stop offset=".52" stop-color="#3d9d99"/><stop offset="1" stop-color="#255e62"/></linearGradient><linearGradient id="gold-attack" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffd086"/><stop offset=".52" stop-color="#e5a24b"/><stop offset="1" stop-color="#ad6d34"/></linearGradient><linearGradient id="gold-health" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#f7b6a9"/><stop offset=".52" stop-color="#df7d73"/><stop offset="1" stop-color="#a95753"/></linearGradient><linearGradient id="gold-defense" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#a1d9e3"/><stop offset=".52" stop-color="#58afc4"/><stop offset="1" stop-color="#397887"/></linearGradient><linearGradient id="gold-growth" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d4df97"/><stop offset=".52" stop-color="#92b65e"/><stop offset="1" stop-color="#587c43"/></linearGradient><linearGradient id="gold-dark-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d9a356"/><stop offset=".52" stop-color="#b9772b"/><stop offset="1" stop-color="#815327"/></linearGradient><linearGradient id="gold-deep-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#438f89"/><stop offset=".52" stop-color="#2b726f"/><stop offset="1" stop-color="#204f56"/></linearGradient><radialGradient id="gold-soft-glow" cx="28%" cy="20%" r="75%"><stop stop-color="#fff9e9" stop-opacity=".65"/><stop offset=".65" stop-color="#fff9e9" stop-opacity="0"/></radialGradient></defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="138" cy="132" rx="87" ry="92" fill="url(#gold-dark-gold)" stroke="#866037" stroke-width="6"/>
+    <path d="M195 67l12 4m-4 16 13 4m-8 16 13 3m-10 18 13 2m-15 18 13 1m-17 18 12-1m-19 18 12-3m-23 18 11-4" fill="none" stroke="#edbe6a" stroke-width="4"/>
+    <ellipse cx="117" cy="119" rx="86" ry="91" fill="url(#gold-gold)" stroke="#956934" stroke-width="6"/>
+    <ellipse cx="117" cy="119" rx="75" ry="80" fill="none" stroke="#fff0b5" stroke-width="5"/>
+    <ellipse cx="117" cy="119" rx="68" ry="73" fill="#c58a37" fill-opacity=".35" stroke="#cf943c" stroke-width="3"/>
+    <path d="M58 86q15-35 49-43" fill="none" stroke="#fff7d0" stroke-width="6"/>
+    <g transform="rotate(-9 117 122)">
+      <path d="M107 83c-8-4-8-17-1-23 6-6 16-5 20 1 5 7 3 18-4 22" fill="url(#gold-ivory)" stroke="#a67637" stroke-width="4"/>
+      <path d="M83 103c-11-8-26-5-28 5-2 8 11 15 24 16m73-21c11-9 24-6 27 4 2 8-8 16-24 19M85 152c-11 0-25 7-23 16 2 9 16 9 28-1m58-14c13 0 24 7 22 16-2 9-15 8-24-1" fill="url(#gold-ivory)" stroke="#a67637" stroke-width="4"/>
+      <path d="M112 173l5 12 8-12" fill="url(#gold-ivory)" stroke="#a67637" stroke-width="3"/>
+      <path d="M116 78c-26 0-43 21-43 49s17 47 43 47 45-19 45-47-20-49-45-49z" fill="url(#gold-ivory)" stroke="#a67637" stroke-width="4"/>
+      <path d="M112 101l21 5 10 20-12 22-25 1-13-21z" fill="url(#gold-gold)" stroke="#ac803f" stroke-width="3"/>
+      <path d="M113 101l1-20m19 25 16-12m-6 32 15 3m-27 19 5 18m-30-17-13 16m0-37-17-3m36-24-16-14" fill="none" stroke="#ac803f" stroke-width="3"/>
+      <path d="M94 98q8-11 19-11" fill="none" stroke="#fff7d9" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

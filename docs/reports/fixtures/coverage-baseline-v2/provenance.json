@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact historical range comparison runtime, including the pre-adoption balanceVersion=2 marker. This is not balance-v1 and is not current runtime code.",
+  "gitCommit": "cf544b813771c7a9334f885c52703c43acb949db",
+  "typescriptVersion": "5.8.2",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS"
+  },
+  "historicalReport": "docs/reports/coverage-range-comparison.json",
+  "historicalReportSha256LF": "4776b8166259c9bac2ea3d627350c0185623d700741ac9b708b902703da13e7f",
+  "entries": [
+    {
+      "originalFile": "game/.test-build/core/battle.js",
+      "fixture": "battle.js.txt",
+      "sha256": "dda08f7fa3c5fe0128dffe56a81fb945180d9e0e8c0b97d0715692b7741edc7f",
+      "recovery": "Exact compiled historical bytes reconstructed by reverting only the adopted 4.5/4.5 range literal to 3/3; SHA matches the pre-existing 2026-09-08 comparison report."
+    },
+    {
+      "originalFile": "game/.test-build/core/battleValidation.js",
+      "fixture": "battleValidation.js.txt",
+      "sha256": "1f43734398e5564b1d2145636411980eab184f36b8b663b04b99005b0774dff1",
+      "recovery": "Unchanged compiled historical bytes; SHA matches the pre-existing 2026-09-08 comparison report."
+    }
+  ],
+  "gitEntries": [
+    {
+      "source": "game/assets/scripts/core/data.ts",
+      "logicalModule": "game/.test-build/core/data.js",
+      "sourceSha256": "aaeaf0026cb3e27ef2c63ce558b14df9229ed455f9a4f4718d27b3e00eb90e73",
+      "compiledSha256": "eb3de5e2206f6618511b8e65be815f592e31c222f7da4c8f7fd36dcb8ca0d543"
+    },
+    {
+      "source": "game/assets/scripts/core/game.ts",
+      "logicalModule": "game/.test-build/core/game.js",
+      "sourceSha256": "15c88326881467d5b66560303ea5081aedc030e2fb4f871418c3c0a747ba8700",
+      "compiledSha256": "84a05ff25802e97c31ccb059a45877fc5434d7d28f91f5a1300cdf750c9683d4"
+    },
+    {
+      "source": "game/assets/scripts/core/save.ts",
+      "logicalModule": "game/.test-build/core/save.js",
+      "sourceSha256": "da0021c062593d9c4eb812761ae42d41cb1d97b4327de59ddfb932cb0c745078",
+      "compiledSha256": "2f867362b87c143b1a48b3183dd3cf015609c1d51ce01c607bdf7786c7234d01"
+    },
+    {
+      "source": "game/assets/scripts/core/random.ts",
+      "logicalModule": "game/.test-build/core/random.js",
+      "sourceSha256": "e408d544536f95d947e047f531cfbf49911eb51cbca3ac9d989fd13cff3a77c0",
+      "compiledSha256": "b32891bb3fe0124fc77ae2d35e3efc159ec7ecfdd10d19b9aff17a56175cf879"
+    },
+    {
+      "source": "game/assets/scripts/core/fusion.ts",
+      "logicalModule": "game/.test-build/core/fusion.js",
+      "sourceSha256": "1e7a90f30a61907774ba207cd5d5ad557a840a55f738af0823c263bbe885f40c",
+      "compiledSha256": "0717d59ce082e24431b1ec2035aba84a4aea3f38da68f6805dcc4560604f075a"
+    },
+    {
+      "source": "game/assets/scripts/platform/storage.ts",
+      "logicalModule": "game/.test-build/platform/storage.js",
+      "sourceSha256": "6fb6acbb66d65464f5e5fc9386f483d296a164ddf792d903fdff34beb7c30418",
+      "compiledSha256": "27a6d4f5434042a3b04ec72722cd0335422b8e89b7558c13ae0513fde970d948"
+    },
+    {
+      "source": "game/tools/simulate-chapter.cjs",
+      "logicalModule": "game/tools/simulate-chapter.cjs",
+      "sourceSha256": "223c875af3d06250fa967b1464fd5ce7550a3065ec643b6cf4449413006f98a0",
+      "compiledSha256": "223c875af3d06250fa967b1464fd5ce7550a3065ec643b6cf4449413006f98a0"
+    },
+    {
+      "source": "game/tools/simulate-boss-balance.cjs",
+      "logicalModule": "game/tools/simulate-boss-balance.cjs",
+      "sourceSha256": "4176d54a7adad588dfdc6f773115b7746a76712c81bd8043dfeaf76239fedb60",
+      "compiledSha256": "4176d54a7adad588dfdc6f773115b7746a76712c81bd8043dfeaf76239fedb60"
+    }
+  ]
+}

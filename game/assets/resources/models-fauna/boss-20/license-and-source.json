@@ -1,0 +1,37 @@
+{
+  "id": "blue-6",
+  "name": "双斧锤鲨",
+  "tier": 1,
+  "index": 20,
+  "base": 56,
+  "key": "boss-20",
+  "ability": "drain",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 29654,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-56",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/ee1b9608489d194cff76e9e76d4a84b7471dcefc6637d1c29075e5e44dd930f4_Mako.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24691,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 19.8
+}

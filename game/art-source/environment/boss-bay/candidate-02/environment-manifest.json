@@ -1,0 +1,164 @@
+{
+  "version": "boss-bay-candidate-02",
+  "levelId": 4,
+  "levelName": "巨钳来袭",
+  "dataSource": "assets/scripts/core/data.ts",
+  "dataSourceSha256": "0fa0d219e0134a2c3ed18cd1878da66d42398141e59c0630faff58cc922dffe3",
+  "coordinateConvention": "Cocos world x/y-up/z; Blender source x/-z/y",
+  "route": [
+    {
+      "x": -9.0,
+      "z": 0.0
+    },
+    {
+      "x": -4.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 5.0,
+      "z": -2.0
+    },
+    {
+      "x": 6.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 0.0
+    }
+  ],
+  "routeSurfaceY": 0.064,
+  "waterY": -1.06,
+  "roadConstruction": "Single non-overlapping planar polygon offset from actual route, round outer joins / intersected inner joins, explicitly triangulated",
+  "sourceSlots": [
+    {
+      "x": -5.0,
+      "z": 1.0
+    },
+    {
+      "x": -1.0,
+      "z": 1.0
+    },
+    {
+      "x": 3.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "z": -3.0
+    },
+    {
+      "x": 6.0,
+      "z": -1.0
+    }
+  ],
+  "slotLayoutSource": "Explicit source proposal; route and slots1-4 preserved, slot5 only as separately approved offline candidate",
+  "layoutProposalStatus": "approved-offline-art-layout",
+  "slots": [
+    {
+      "x": -5,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": 3,
+      "y": 0.292,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0.292,
+      "z": -3
+    },
+    {
+      "x": 6.62,
+      "y": 0.292,
+      "z": -1.31
+    }
+  ],
+  "gameplayBase": {
+    "x": 9.0,
+    "y": 0.064,
+    "z": 0.0
+  },
+  "pearl": {
+    "x": 9.0,
+    "y": 1.1,
+    "z": 0.0
+  },
+  "boundsXZ": [
+    -11.020942687988281,
+    11.401704788208008,
+    -5.435352802276611,
+    4.875570774078369
+  ],
+  "nominalFootprintXZ": [
+    22,
+    12
+  ],
+  "cameraSuggestion": {
+    "position": {
+      "x": 0,
+      "y": 15,
+      "z": 18
+    },
+    "target": {
+      "x": 0,
+      "y": 0.2,
+      "z": 0
+    },
+    "baseVerticalFovDegrees": 42,
+    "responsiveRule": "same as GameEntry.resizeViewport: preserve 1280/720 horizontal framing"
+  },
+  "sourceObjects": 1091,
+  "authorship": "Original procedural geometry, UV, colours, and composition; no downloaded game or stock assets.",
+  "sourceModule": "Project original tidal/tutorial/coral/dusk geometry builders; independently regenerated boss route/terrain, open reef landing, wave-washed foreground bay and pearl headland",
+  "status": "Only grass winding/normals corrected; pending actual Cocos import/visibility acceptance.",
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 5201,
+      "triangles": 9340
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 26489,
+      "triangles": 43484
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 1248,
+      "triangles": 2304
+    }
+  ],
+  "totalTriangles": 55128,
+  "opaqueDrawCalls": 3,
+  "materials": 2,
+  "fbxSha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+  "geometryBoundsCocos": {
+    "min": [
+      -12.029194831848145,
+      -1.869998574256897,
+      -6.019547939300537
+    ],
+    "max": [
+      12.33581256866455,
+      2.245776414871216,
+      5.48501443862915
+    ]
+  },
+  "sourceFbxSha256": "011b94a72decfa697f8b6df16a0970e8ebd8df802240ee59b6e8248f53394397"
+}

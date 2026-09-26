@@ -1,0 +1,87 @@
+{
+  "status": "parent-reviewed-approved-candidate-promotion-planned-not-copied",
+  "sourceFreeze": {
+    "file": "game/art-source/ui/portraits/candidate-01/source-freeze.json",
+    "sha256": "c05ea2d965720efc8ba4f0016d655eeb6d9700c13d82509ec1e021614b092144",
+    "files": 27
+  },
+  "supplementalManifest": "Created after source freeze; original frozen source files and freeze record remain unchanged.",
+  "approval": "Root visually opened all five 384px PNGs and accepted character identity and transparent composition. Actual UI and phone readability remain unverified.",
+  "files": [
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-stone.png",
+      "target": "game/assets/resources/ui/portraits/portrait-stone.png",
+      "resourcePath": "ui/portraits/portrait-stone",
+      "bytes": 136544,
+      "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4"
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-spike.png",
+      "target": "game/assets/resources/ui/portraits/portrait-spike.png",
+      "resourcePath": "ui/portraits/portrait-spike",
+      "bytes": 160876,
+      "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792"
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-crystal.png",
+      "target": "game/assets/resources/ui/portraits/portrait-crystal.png",
+      "resourcePath": "ui/portraits/portrait-crystal",
+      "bytes": 152627,
+      "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b"
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-leaf.png",
+      "target": "game/assets/resources/ui/portraits/portrait-leaf.png",
+      "resourcePath": "ui/portraits/portrait-leaf",
+      "bytes": 147421,
+      "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e"
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-bubble.png",
+      "target": "game/assets/resources/ui/portraits/portrait-bubble.png",
+      "resourcePath": "ui/portraits/portrait-bubble",
+      "bytes": 133637,
+      "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411"
+    }
+  ],
+  "texture": {
+    "eachWidth": 384,
+    "eachHeight": 384,
+    "channels": "RGBA8",
+    "alpha": "straight alpha transparent background",
+    "individualImages": 5,
+    "totalEstimatedGfxBytes": 2949120,
+    "filters": "LINEAR/LINEAR",
+    "mip": "NONE",
+    "wrap": "CLAMP_TO_EDGE"
+  },
+  "cocos": {
+    "loadAs": "ImageAsset",
+    "spriteType": "SIMPLE",
+    "sizeMode": "CUSTOM",
+    "trim": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 384,
+      "height": 384
+    },
+    "originalSize": {
+      "width": 384,
+      "height": 384
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "suggestedDisplay": "48–96 logical pixels; keep square full frame, preserve common framing; Cocos phone review required",
+    "sixtyFourPixelImages": "source review only; not planned for runtime copy"
+  },
+  "runtimeFilesCopied": false,
+  "metaWritten": false,
+  "uiChanged": false
+}

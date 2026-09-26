@@ -1,0 +1,43 @@
+{
+  "key": "fauna-38",
+  "name": "蓝焰魔将",
+  "kind": "elite",
+  "height": 2,
+  "flying": false,
+  "sourceName": "BlueDemon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\bluedemon-525a79\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/fdfdbf673233a7fd2a2164172836ebd402707014e52ba2eb331446da0d50fa5f_BlueDemon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "203b8fd7710002901069f0ed805e0e893a6799c27fdd04a0fe7d9923f15d32b8",
+  "bytes": 1350912,
+  "animations": 14,
+  "displayName": "蓝焰魔将",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 44848,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-38",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.1
+}

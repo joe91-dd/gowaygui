@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "generatedAt": "2026-09-09T04:14:52.319Z",
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "e62d4d59564222055b1d55b2bf7fa34c9575e5d3d7a3e0871eb5c17be0747618",
+      "bytes": 23034,
+      "builtAt": "2026-09-09T04:11:52.875Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "230fe7ba5c5a8ebcd09d618c267f66bc8e1ee17995e6244a480c9dfeafd7e8ea",
+      "bytes": 562871,
+      "builtAt": "2026-09-09T04:11:51.870Z"
+    }
+  ],
+  "checks": [
+    "actual built field-to-bench swap and return retain the permanent original",
+    "actual built tutorial: five field + five bench, consumed parents, fixed reveal, locked refresh and only final survivors carried",
+    "actual built outside fusion: restart keeps fixed C, keeping A consumes B and C",
+    "actual built chapter unlock and endless death: earned weighted books and materials persist, learning/training and second run work without injected resources",
+    "stage-30 fine pack uses its distinct weighted pool (configuration check; starter run is not claimed to reach wave 30)"
+  ],
+  "endlessResult": {
+    "runId": "run-157",
+    "mode": "endless",
+    "levelId": 4,
+    "victory": false,
+    "waves": 24,
+    "baseGold": 221,
+    "firstClearGold": 0,
+    "combatSeconds": 926.4499999999999,
+    "at": 1788900000000,
+    "doubled": false,
+    "materials": {
+      "health": 1,
+      "growth": 2
+    },
+    "skillBooks": {
+      "reach": 1
+    },
+    "stages": [
+      {
+        "wave": 10,
+        "grants": [
+          {
+            "kind": "gold",
+            "amount": 35
+          },
+          {
+            "kind": "material",
+            "material": "health",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "wave": 20,
+        "grants": [
+          {
+            "kind": "gold",
+            "amount": 35
+          },
+          {
+            "kind": "material",
+            "material": "growth",
+            "amount": 1
+          },
+          {
+            "kind": "book",
+            "skillId": "reach",
+            "amount": 1,
+            "pack": "ordinary"
+          }
+        ]
+      }
+    ],
+    "broughtIds": [],
+    "bestWave": 24
+  },
+  "scope": "Isolated MemoryStorage; actual Cocos built JS and production defaults. No browser/user save injection."
+}

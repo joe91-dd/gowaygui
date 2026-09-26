@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "Actual Cocos System.register V07 output; all saves isolated MemoryStorage, no browser save access",
+  "checks": [
+    "33 skills, 60/40 parents, local AI creation, finite book market purchase and idempotent receipt",
+    "five-member local raid runs the actual built battle loop and checkpoint/settlement validators",
+    "five-versus-five ordered arena reaches a real result and commits one rank settlement",
+    "all borrowed and rented pets are restricted to chapter/endless"
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "e62d4d59564222055b1d55b2bf7fa34c9575e5d3d7a3e0871eb5c17be0747618",
+      "bytes": 23034,
+      "builtAt": "2026-09-09T09:28:09.427Z"
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "c07734466cd875825a2ef341107c9134311f52f9481c9c87a672545f40142603",
+      "bytes": 735564,
+      "builtAt": "2026-09-09T09:28:08.954Z"
+    }
+  ],
+  "modules": [
+    "chunks:///_virtual/game.ts",
+    "chunks:///_virtual/rollupPluginModLoBabelHelpers.js",
+    "chunks:///_virtual/data.ts",
+    "chunks:///_virtual/random.ts",
+    "chunks:///_virtual/fusion.ts",
+    "chunks:///_virtual/talents.ts",
+    "chunks:///_virtual/save.ts",
+    "chunks:///_virtual/communityValidation.ts",
+    "chunks:///_virtual/battleValidation.ts",
+    "chunks:///_virtual/storage.ts",
+    "chunks:///_virtual/skillBooks.ts",
+    "chunks:///_virtual/prototype.ts",
+    "chunks:///_virtual/prototypeConfig.ts",
+    "chunks:///_virtual/battle.ts",
+    "chunks:///_virtual/community.ts",
+    "chunks:///_virtual/arena.ts",
+    "chunks:///_virtual/raids.ts"
+  ]
+}

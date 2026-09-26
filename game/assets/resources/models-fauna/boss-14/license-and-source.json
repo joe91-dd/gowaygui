@@ -1,0 +1,36 @@
+{
+  "id": "green-9",
+  "name": "铁拳礁骑士",
+  "tier": 0,
+  "index": 14,
+  "base": 42,
+  "key": "boss-14",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 42292,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-42",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/c8ec849f39a3fc6cf66904e52047ff6ad5e9cb8963834207f056169fa4e39c0a_Frog.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24667,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.7
+}

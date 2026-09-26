@@ -1,0 +1,8 @@
+{
+  "status": "verified-spike-c02-runtime-candidate-not-final-art",
+  "runtime_fbx_sha256": "5bc7d55d4a69ad8bb89af6637be30ff77024c30f51637490f684bd39abc3f26e",
+  "source_and_payloads_verified": true,
+  "c01_and_stone_payloads_preserved": true,
+  "meta_files_created_by_promotion": false,
+  "current_meta_files": []
+}

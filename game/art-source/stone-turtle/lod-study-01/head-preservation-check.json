@@ -1,0 +1,17 @@
+{
+  "before": {
+    "polygon_count": 5721,
+    "triangles": 8064,
+    "sha256": "3e46d1bf8ffcacc51b82b8895ea77c8aeed63e160d04973e2908e294d675e9c6",
+    "geometry_sha256": "61159fcb8312a0a030be023d9a74eceb2ea7a5ec2f332756c2d9f11514694735",
+    "geometry_uv_sha256": "0618ce729f3ad3b8cf7fcf1e2b1c61d521216f7bf59988888915a2e8869b325c"
+  },
+  "after": {
+    "polygon_count": 5721,
+    "triangles": 8064,
+    "sha256": "206ce3b680936567fb3351f40a17ab39363dd08dc354a02bbc453018b9ae9be0",
+    "geometry_sha256": "61159fcb8312a0a030be023d9a74eceb2ea7a5ec2f332756c2d9f11514694735",
+    "geometry_uv_sha256": "0618ce729f3ad3b8cf7fcf1e2b1c61d521216f7bf59988888915a2e8869b325c"
+  },
+  "restored_split_normal_max_vector_delta": 0.0001477921003162247
+}

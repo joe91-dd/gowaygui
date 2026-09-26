@@ -1,0 +1,20 @@
+{
+  "name": "海心守护灯塔",
+  "group": "project-authored",
+  "source": "output/free-assets-20260916/prepare_guard.py",
+  "license": "Project-authored",
+  "author": [
+    "哥喂龟项目 · Blender 程序化建模"
+  ],
+  "sha256": "8a511716a3eebd8d513ebcd1623c826501b586b44a025cb527db62eb3c90a7f8",
+  "bytes": 230292,
+  "runtimeKey": "guard-beacon",
+  "height": 1.16,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 4160,
+  "changes": [
+    "Fully Blender-authored cut crystal, brass cradle and limestone pedestal; no third-party mesh in final beacon",
+    "Ground origin at the lower stone step"
+  ]
+}

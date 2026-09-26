@@ -1,0 +1,450 @@
+{
+  "version": 1,
+  "origin": "Original layered synthesis, no recordings or external sounds",
+  "sample_rate": 44100,
+  "effects": {
+    "sfx_attack_melee": {
+      "duration": 0.26,
+      "peak_dbfs": -16,
+      "layers": [
+        {
+          "instrument": "impact",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.15,
+          "gain": 0.27,
+          "pan": 0,
+          "seed": 2026090812
+        },
+        {
+          "instrument": "sweep",
+          "midi": 62,
+          "at": 0.012,
+          "duration": 0.16,
+          "gain": 0.14,
+          "pan": 0,
+          "seed": 2026090813
+        }
+      ],
+      "use": "Stone/enemy melee; throttle 90 ms"
+    },
+    "sfx_attack_projectile": {
+      "duration": 0.3,
+      "peak_dbfs": -17,
+      "layers": [
+        {
+          "instrument": "sweep",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.2,
+          "gain": 0.27,
+          "pan": 0,
+          "seed": 2026090814
+        },
+        {
+          "instrument": "pluck",
+          "midi": 74,
+          "at": 0,
+          "duration": 0.06,
+          "gain": 0.052,
+          "pan": 0,
+          "seed": 2026090815
+        }
+      ],
+      "use": "Spike ranged attack; throttle 90 ms"
+    },
+    "sfx_attack_magic": {
+      "duration": 0.38,
+      "peak_dbfs": -17,
+      "layers": [
+        {
+          "instrument": "bubble",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.22,
+          "gain": 0.17,
+          "pan": 0,
+          "seed": 2026090816,
+          "frequency": 590
+        },
+        {
+          "instrument": "wood",
+          "midi": 71,
+          "at": 0,
+          "duration": 0.07,
+          "gain": 0.1,
+          "pan": 0,
+          "seed": 2026090817
+        }
+      ],
+      "use": "Crystal magic attack; throttle 100 ms"
+    },
+    "sfx_hit_soft": {
+      "duration": 0.2,
+      "peak_dbfs": -19,
+      "layers": [
+        {
+          "instrument": "impact",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.16,
+          "gain": 0.25,
+          "pan": 0,
+          "seed": 2026090818,
+          "frequency": 175
+        }
+      ],
+      "use": "Incoming damage only; throttle global 110 ms"
+    },
+    "sfx_heal": {
+      "duration": 0.42,
+      "peak_dbfs": -19,
+      "layers": [
+        {
+          "instrument": "wood",
+          "midi": 79,
+          "at": 0,
+          "duration": 0.07,
+          "gain": 0.09,
+          "pan": 0,
+          "seed": 2026090819
+        },
+        {
+          "instrument": "wood",
+          "midi": 83,
+          "at": 0.055,
+          "duration": 0.07,
+          "gain": 0.054,
+          "pan": 0,
+          "seed": 2026090820
+        }
+      ],
+      "use": "Effective normal heal; throttle 180 ms, skip passive tiny heal"
+    },
+    "sfx_core_hit": {
+      "duration": 0.65,
+      "peak_dbfs": -13,
+      "layers": [
+        {
+          "instrument": "low_drum",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.3,
+          "gain": 0.21,
+          "pan": 0,
+          "seed": 2026090821
+        },
+        {
+          "instrument": "impact",
+          "midi": 62,
+          "at": 0.13,
+          "duration": 0.22,
+          "gain": 0.13,
+          "pan": 0,
+          "seed": 2026090822,
+          "frequency": 145
+        },
+        {
+          "instrument": "wood",
+          "midi": 62,
+          "at": 0.08,
+          "duration": 0.1,
+          "gain": 0.055,
+          "pan": 0,
+          "seed": 2026090823
+        }
+      ],
+      "use": "Enemy leak; once per leak event, throttle 160 ms"
+    },
+    "sfx_skill_stone": {
+      "duration": 1.0,
+      "peak_dbfs": -12,
+      "layers": [
+        {
+          "instrument": "low_drum",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.15,
+          "gain": 0.23,
+          "pan": 0,
+          "seed": 2026090832
+        },
+        {
+          "instrument": "impact",
+          "midi": 62,
+          "at": 0.045,
+          "duration": 0.26,
+          "gain": 0.14,
+          "pan": 0,
+          "seed": 2026090833,
+          "frequency": 210
+        },
+        {
+          "instrument": "wood",
+          "midi": 62,
+          "at": 0.08,
+          "duration": 0.35,
+          "gain": 0.09,
+          "pan": 0,
+          "seed": 2026090834
+        },
+        {
+          "instrument": "bells",
+          "midi": 69,
+          "at": 0.17,
+          "duration": 0.24,
+          "gain": 0.036,
+          "pan": 0,
+          "seed": 2026090835
+        }
+      ],
+      "use": "hold: firm soft shell thump and shield resonance"
+    },
+    "sfx_skill_spike": {
+      "duration": 0.72,
+      "peak_dbfs": -12,
+      "layers": [
+        {
+          "instrument": "sweep",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.29,
+          "gain": 0.23,
+          "pan": 0,
+          "seed": 2026090842
+        },
+        {
+          "instrument": "sweep",
+          "midi": 62,
+          "at": 0.08,
+          "duration": 0.2,
+          "gain": 0.18,
+          "pan": 0,
+          "seed": 2026090843
+        },
+        {
+          "instrument": "impact",
+          "midi": 62,
+          "at": 0.19,
+          "duration": 0.22,
+          "gain": 0.15,
+          "pan": 0,
+          "seed": 2026090844
+        },
+        {
+          "instrument": "pluck",
+          "midi": 74,
+          "at": 0.18,
+          "duration": 0.12,
+          "gain": 0.07,
+          "pan": 0,
+          "seed": 2026090845
+        }
+      ],
+      "use": "piercingShot: focused air pass and warm impact"
+    },
+    "sfx_skill_crystal": {
+      "duration": 1.12,
+      "peak_dbfs": -12,
+      "layers": [
+        {
+          "instrument": "sweep",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.34,
+          "gain": 0.14,
+          "pan": 0,
+          "seed": 2026090852
+        },
+        {
+          "instrument": "bells",
+          "midi": 76,
+          "at": 0.08,
+          "duration": 0.25,
+          "gain": 0.07,
+          "pan": -0.14,
+          "seed": 2026090853
+        },
+        {
+          "instrument": "bells",
+          "midi": 83,
+          "at": 0.18,
+          "duration": 0.3,
+          "gain": 0.047,
+          "pan": 0.14,
+          "seed": 2026090854
+        },
+        {
+          "instrument": "bubble",
+          "midi": 62,
+          "at": 0.28,
+          "duration": 0.32,
+          "gain": 0.16,
+          "pan": 0,
+          "seed": 2026090855,
+          "frequency": 370
+        }
+      ],
+      "use": "crystalCannon: soft crystal charge and rounded pulse"
+    },
+    "sfx_skill_leaf": {
+      "duration": 1.34,
+      "peak_dbfs": -13,
+      "layers": [
+        {
+          "instrument": "breath",
+          "midi": 67,
+          "at": 0,
+          "duration": 0.55,
+          "gain": 0.07,
+          "pan": -0.15,
+          "seed": 2026090862
+        },
+        {
+          "instrument": "breath",
+          "midi": 74,
+          "at": 0.08,
+          "duration": 0.53,
+          "gain": 0.05,
+          "pan": 0.15,
+          "seed": 2026090863
+        },
+        {
+          "instrument": "wood",
+          "midi": 79,
+          "at": 0.1,
+          "duration": 0.18,
+          "gain": 0.053,
+          "pan": 0,
+          "seed": 2026090864
+        },
+        {
+          "instrument": "wood",
+          "midi": 83,
+          "at": 0.23,
+          "duration": 0.18,
+          "gain": 0.036,
+          "pan": 0,
+          "seed": 2026090865
+        }
+      ],
+      "use": "greatHeal / cleanse: breath bloom, distinct from collect chime"
+    },
+    "sfx_skill_bubble": {
+      "duration": 1.08,
+      "peak_dbfs": -13,
+      "layers": [
+        {
+          "instrument": "bubble",
+          "midi": 62,
+          "at": 0,
+          "duration": 0.32,
+          "gain": 0.14,
+          "pan": -0.25,
+          "seed": 2026090872,
+          "frequency": 430
+        },
+        {
+          "instrument": "bubble",
+          "midi": 62,
+          "at": 0.13,
+          "duration": 0.38,
+          "gain": 0.13,
+          "pan": 0.25,
+          "seed": 2026090873,
+          "frequency": 580
+        },
+        {
+          "instrument": "bubble",
+          "midi": 62,
+          "at": 0.26,
+          "duration": 0.44,
+          "gain": 0.1,
+          "pan": 0,
+          "seed": 2026090874,
+          "frequency": 320
+        },
+        {
+          "instrument": "breath",
+          "midi": 62,
+          "at": 0.2,
+          "duration": 0.3,
+          "gain": 0.025,
+          "pan": 0,
+          "seed": 2026090875
+        }
+      ],
+      "use": "bubbleRing: several rounded bubbles closing a ring"
+    },
+    "sfx_defeat": {
+      "duration": 2.45,
+      "peak_dbfs": -14,
+      "layers": [
+        {
+          "instrument": "wood",
+          "midi": 71,
+          "at": 0,
+          "duration": 0.17,
+          "gain": 0.12,
+          "pan": 0,
+          "seed": 2026090882
+        },
+        {
+          "instrument": "wood",
+          "midi": 67,
+          "at": 0.22,
+          "duration": 0.17,
+          "gain": 0.11,
+          "pan": 0,
+          "seed": 2026090883
+        },
+        {
+          "instrument": "wood",
+          "midi": 64,
+          "at": 0.47,
+          "duration": 0.24,
+          "gain": 0.1,
+          "pan": 0,
+          "seed": 2026090884
+        },
+        {
+          "instrument": "wood",
+          "midi": 62,
+          "at": 0.81,
+          "duration": 0.45,
+          "gain": 0.065,
+          "pan": 0,
+          "seed": 2026090885
+        },
+        {
+          "instrument": "pluck",
+          "midi": 55,
+          "at": 0.85,
+          "duration": 0.7,
+          "gain": 0.062,
+          "pan": -0.15,
+          "seed": 2026090886
+        },
+        {
+          "instrument": "pluck",
+          "midi": 59,
+          "at": 0.87,
+          "duration": 0.7,
+          "gain": 0.052,
+          "pan": 0.15,
+          "seed": 2026090887
+        },
+        {
+          "instrument": "breath",
+          "midi": 64,
+          "at": 0.91,
+          "duration": 0.56,
+          "gain": 0.029,
+          "pan": 0,
+          "seed": 2026090888
+        }
+      ],
+      "use": "Run failure: gentle descent and hopeful open ending; once per result"
+    }
+  }
+}

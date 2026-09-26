@@ -1,0 +1,31 @@
+{
+  "asset": "game/assets/resources/art-v2/ui-skins.png",
+  "generator": "built-in image_gen",
+  "generatedAtLocalDate": "2026-09-10",
+  "reference": "C:/Users/Administrator/Desktop/龟/03_UI按钮面板组件规范.png.png",
+  "referenceRole": "User-approved visual style, inspected before generation. Not a game data specification.",
+  "generatedSource": "C:/Users/Administrator/.codex/generated_images/01a086f7-e260-77a3-94db-453b9de0c3cc/exec-d6754992-0d74-48cc-b80c-8768dc13e34f.png",
+  "sha256": "8c28b7177c3c8c1c19f828dfe98cf0b9e5ce98090dbf229fe83a0cf6a0ae7e44",
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGBA",
+  "alphaMin": 0,
+  "alphaMax": 254,
+  "fullyTransparentPixelCount": 854862,
+  "coordinateConvention": "Top-left image origin. Rect [x,y,width,height]. Insets are source pixels.",
+  "notes": [
+    "The renderer preview showed RGB hidden beneath alpha, but actual canvas alpha was confirmed zero at all sampled exterior points.",
+    "Generation did not maintain equal cell centers and sizes. Use these measured sprite rectangles, not a uniform grid split.",
+    "The navy resource center alpha is 253 rather than requested 220. Apply runtime opacity when translucency is wanted.",
+    "Rectangles include 4px exterior padding beyond alpha >= 8 bounds. No image editing or alpha processing performed.",
+    "Insets are conservative initial integration values and may be adjusted during actual Cocos UI review."
+  ],
+  "frames": {
+    "gold": { "rect": [24,158,448,206], "visibleAlpha8Bounds": [28,162,440,198], "insetLeft": 64, "insetRight": 64, "insetTop": 56, "insetBottom": 56 },
+    "blue": { "rect": [521,158,480,205], "visibleAlpha8Bounds": [525,162,472,197], "insetLeft": 68, "insetRight": 68, "insetTop": 54, "insetBottom": 54 },
+    "navy": { "rect": [1048,159,467,204], "visibleAlpha8Bounds": [1052,163,459,196], "insetLeft": 64, "insetRight": 64, "insetTop": 54, "insetBottom": 54 },
+    "wood": { "rect": [26,535,462,255], "visibleAlpha8Bounds": [30,539,454,247], "insetLeft": 64, "insetRight": 64, "insetTop": 64, "insetBottom": 64 },
+    "parchment": { "rect": [535,463,463,384], "visibleAlpha8Bounds": [539,467,455,376], "insetLeft": 68, "insetRight": 68, "insetTop": 68, "insetBottom": 68 },
+    "resource": { "rect": [1050,464,464,380], "visibleAlpha8Bounds": [1054,468,456,372], "insetLeft": 64, "insetRight": 64, "insetTop": 64, "insetBottom": 64 }
+  }
+}

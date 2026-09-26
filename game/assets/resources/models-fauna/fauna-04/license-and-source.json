@@ -1,0 +1,43 @@
+{
+  "key": "fauna-04",
+  "name": "刺甲荆妖",
+  "kind": "runner",
+  "height": 1.45,
+  "flying": false,
+  "sourceName": "Cactoro",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\cactoro-aaf22d\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Blob/a45d4524d089518c479a371e054fbe7498fb7f31dd4ae073a180a7473dbf21e5_Cactoro.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "940936e3fd8f6fbf2f1f325427f7fbc35ce39fe26e32bfca84a5da27f57298f6",
+  "bytes": 168552,
+  "animations": 8,
+  "displayName": "刺甲荆妖",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 15392,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-04",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "hit",
+    "exit",
+    "rest",
+    "greeting",
+    "attack2",
+    "skill"
+  ],
+  "seconds": 4.7
+}

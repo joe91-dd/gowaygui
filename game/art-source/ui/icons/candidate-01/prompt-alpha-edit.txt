@@ -1,0 +1,5 @@
+Use case: background-extraction.
+Edit target: the supplied eight-icon atlas.
+Remove the entire painted gray-and-white checkerboard background and replace it with ACTUAL TRANSPARENCY in the output PNG alpha channel. Every background pixel between and around the eight objects must have alpha = 0. Do not render a checkerboard or any other background in the output. Transparent background, isolated cutout objects.
+Keep the eight objects at EXACTLY their current positions and sizes with all existing large padding. Keep all their designs, colors, shading and symbols unchanged. Do not regenerate or rearrange objects. Preserve the gold coin, turquoise bolt, amber sword potion, coral heart potion, blue shield potion, green sprout potion, closed teal lock and teal history journal with arrow. Clean antialiased boundaries. Main solid objects fully opaque. No floor shadow, no haze, no particles, no text.
+Output RGBA PNG, not RGB. The checkerboard must be absent from the actual pixels, not merely colored white.

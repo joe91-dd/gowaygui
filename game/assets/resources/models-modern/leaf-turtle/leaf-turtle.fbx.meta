@@ -1,0 +1,482 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin",
+    "__original-animation-5.bin",
+    "__original-animation-6.bin"
+  ],
+  "subMetas": {
+    "19985": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@19985",
+      "displayName": "",
+      "id": "19985",
+      "name": "LeafTurtle_Rig|fusion.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.9666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "825ed": {
+      "importer": "gltf-mesh",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@825ed",
+      "displayName": "",
+      "id": "825ed",
+      "name": "Sphere.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 25717
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "551d1": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@551d1",
+      "displayName": "",
+      "id": "551d1",
+      "name": "LeafTurtle_Rig|attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.8666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "cb0e7": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@cb0e7",
+      "displayName": "",
+      "id": "cb0e7",
+      "name": "LeafTurtle_Rig|hit.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5666666626930237
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "9ace4": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@9ace4",
+      "displayName": "",
+      "id": "9ace4",
+      "name": "LeafTurtle_Rig|idle.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "e2626": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@e2626",
+      "displayName": "",
+      "id": "e2626",
+      "name": "LeafTurtle_Rig|rest.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "7adc9": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@7adc9",
+      "displayName": "",
+      "id": "7adc9",
+      "name": "LeafTurtle_Rig|skill.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.3666666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "0f61b": {
+      "importer": "gltf-animation",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@0f61b",
+      "displayName": "",
+      "id": "0f61b",
+      "name": "LeafTurtle_Rig|walk.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.9666666388511658
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 8
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b02": {
+      "importer": "gltf-embeded-image",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@48b02",
+      "displayName": "",
+      "id": "48b02",
+      "name": "base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "cf2e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@cf2e8",
+      "displayName": "",
+      "id": "cf2e8",
+      "name": "roughness_texture.image",
+      "userData": {
+        "gltfIndex": 1,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": false,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@48b02"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75fa1": {
+      "importer": "texture",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@75fa1",
+      "displayName": "",
+      "id": "75fa1",
+      "name": "roughness_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@cf2e8"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5914a": {
+      "importer": "gltf-material",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@5914a",
+      "displayName": "",
+      "id": "5914a",
+      "name": "LeafAtlas_Modern.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "46e2a": {
+      "importer": "gltf-scene",
+      "uuid": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@46e2a",
+      "displayName": "",
+      "id": "46e2a",
+      "name": "leaf-turtle.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@48b02"
+      },
+      {
+        "name": "roughness_texture",
+        "uri": "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@cf2e8"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "LeafTurtle_Rig|attack",
+        "duration": 0.8666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|attack",
+            "from": 0,
+            "to": 0.8666666746139526,
+            "wrapMode": 2,
+            "previousId": "551d1"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|fusion",
+        "duration": 1.9666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|fusion",
+            "from": 0,
+            "to": 1.9666666984558105,
+            "wrapMode": 2,
+            "previousId": "19985"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|hit",
+        "duration": 0.5666666626930237,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|hit",
+            "from": 0,
+            "to": 0.5666666626930237,
+            "wrapMode": 2,
+            "previousId": "cb0e7"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|idle",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|idle",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "9ace4"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|rest",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|rest",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "e2626"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|skill",
+        "duration": 1.3666666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|skill",
+            "from": 0,
+            "to": 1.3666666746139526,
+            "wrapMode": 2,
+            "previousId": "7adc9"
+          }
+        ]
+      },
+      {
+        "name": "LeafTurtle_Rig|walk",
+        "duration": 0.9666666388511658,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "LeafTurtle_Rig|walk",
+            "from": 0,
+            "to": 0.9666666388511658,
+            "wrapMode": 2,
+            "previousId": "0f61b"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@825ed"
+      ],
+      "skeletons": [
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@438fe"
+      ],
+      "textures": [
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@7d6ab",
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@75fa1"
+      ],
+      "materials": [
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@5914a"
+      ],
+      "scenes": [
+        "545a6692-a5c0-4a2c-99dc-b52d5c581b0c@46e2a"
+      ]
+    }
+  }
+}

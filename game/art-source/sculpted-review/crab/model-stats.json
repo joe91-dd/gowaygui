@@ -1,0 +1,55 @@
+{
+  "role": "crab",
+  "triangles": 6060,
+  "vertices": 3224,
+  "bones": [
+    "root",
+    "body",
+    "head",
+    "leg_L0",
+    "leg_L0_tip",
+    "leg_L1",
+    "leg_L1_tip",
+    "leg_L2",
+    "leg_L2_tip",
+    "claw_L",
+    "pincer_L",
+    "finger_L-1",
+    "finger_L1",
+    "leg_R0",
+    "leg_R0_tip",
+    "leg_R1",
+    "leg_R1_tip",
+    "leg_R2",
+    "leg_R2_tip",
+    "claw_R",
+    "pincer_R",
+    "finger_R-1",
+    "finger_R1"
+  ],
+  "clips": {
+    "idle": 90,
+    "walk": 30,
+    "attack": 36,
+    "skill": 60,
+    "hit": 21,
+    "death": 45,
+    "turn_left": 30,
+    "turn_right": 30,
+    "arrive": 48
+  },
+  "weightedVertices": 3224,
+  "materials": [
+    "shell",
+    "armor",
+    "edge",
+    "eye",
+    "pupil"
+  ],
+  "contactOcclusion": {
+    "method": "12 hemisphere rays, .28m local contact radius",
+    "minimum": 0.6399999999999999,
+    "maximum": 1.0
+  },
+  "source": "New editable geometry and authored weighted rig. No billboard body."
+}

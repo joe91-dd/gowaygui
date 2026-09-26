@@ -1,0 +1,37 @@
+{
+  "id": "purple-5",
+  "name": "深渊鲨剑圣",
+  "tier": 2,
+  "index": 28,
+  "base": 56,
+  "key": "boss-28",
+  "ability": "breakwater",
+  "artVersion": 4,
+  "faceRevision": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 28926,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-56",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/ee1b9608489d194cff76e9e76d4a84b7471dcefc6637d1c29075e5e44dd930f4_Mako.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24739,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 15.8
+}

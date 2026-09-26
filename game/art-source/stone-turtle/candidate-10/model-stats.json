@@ -1,0 +1,22 @@
+{
+  "version": "stone-sample-10-candidate",
+  "vertices": 12326,
+  "triangles": 22436,
+  "bones": 10,
+  "clips": {
+    "idle": 2.3666666666666667,
+    "attack": 0.8666666666666667,
+    "skill": 1.3666666666666667,
+    "hit": 0.5666666666666667,
+    "rest": 2.3666666666666667,
+    "fusion": 1.9666666666666666
+  },
+  "atlas": {
+    "size": 1024,
+    "colour": "stone-colour.png",
+    "roughness": "stone-roughness.png"
+  },
+  "forward": "-Y in Blender; Cocos imported prefab faces +Z",
+  "source": "Original scripted mesh, atlas, rig and keyframes; preserved project AI concept references do not imply exclusive-rights clearance.",
+  "status": "Rendered sample awaiting comparison and user aesthetic acceptance; not final art approval."
+}

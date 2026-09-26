@@ -1,0 +1,41 @@
+{
+  "buildDir": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile",
+  "generatedAt": "2026-09-08T03:48:05.990Z",
+  "status": "failed",
+  "stage": "3-skill spike plus 2-skill stone preview",
+  "checks": [
+    "real two-wave combat, malformed-skill validation and deterministic checkpoint recovery"
+  ],
+  "loadedFiles": [
+    {
+      "relative": "src/chunks/bundle.js",
+      "sha256": "75fc23cbb9ecc78efeaf5c912e2bd20fd019e44f85255c9eba2a3f61ddfa973f",
+      "bytes": 22559
+    },
+    {
+      "relative": "assets/main/index.js",
+      "sha256": "1fb41fbf764bc359db41522c3c2d4e018f3d506838d040c3dd1641d8df2e1fe1",
+      "bytes": 241797
+    }
+  ],
+  "parents": [
+    {
+      "role": "spike",
+      "skills": [
+        "swift",
+        "critical",
+        "combo"
+      ],
+      "level": 3
+    },
+    {
+      "role": "stone",
+      "skills": [
+        "strong",
+        "armor"
+      ],
+      "level": 2
+    }
+  ],
+  "error": "Error: 合成数量参数不合法\n    at countDistribution (C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile\\assets\\main\\index.js:3173:88)\n    at C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile\\assets\\main\\index.js:3225:21\n    at Array.map (<anonymous>)\n    at previewFusion (C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\build\\web-mobile\\assets\\main\\index.js:3216:22)\n    at runBuiltCoreRegression (C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\tools\\test-built-core.cjs:82:20)\n    at Object.<anonymous> (C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\tools\\test-built-core.cjs:125:16)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)"
+}

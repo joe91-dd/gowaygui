@@ -1,0 +1,24 @@
+{
+  "role": "leaf",
+  "vertices": 13760,
+  "triangles": 26725,
+  "bones": [
+    "root",
+    "body",
+    "shell",
+    "head",
+    "front_L",
+    "front_R",
+    "rear_L",
+    "rear_R"
+  ],
+  "clips": [
+    "idle",
+    "attack",
+    "skill",
+    "hit",
+    "rest",
+    "fusion"
+  ],
+  "source": "Original V2 geometry and keyframes; visual review pending"
+}

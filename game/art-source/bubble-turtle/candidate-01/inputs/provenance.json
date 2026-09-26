@@ -1,0 +1,18 @@
+{
+  "foundation": "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend",
+  "foundation_sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+  "helpers": "game\\art-source\\build_crystal_turtle_candidate02.py",
+  "helpers_sha256": "9bde104fde65d743c26d796556f257eed0f253f1d9b536b2345dd680daefd21b",
+  "helper_functions_reused": [
+    "build_atlas",
+    "objmesh",
+    "tube"
+  ],
+  "local_changes": "Numeric palette/roughness/seed, conforming ivory/blue shell, asymmetric brows and smile.",
+  "reference_images": [
+    "output/art/A-潮汐玩具岛.png",
+    "output/art/A4-五龟三男两女角色参考.png"
+  ],
+  "raster_image_inputs": [],
+  "rights": "Project-authored mesh/functions; no external model extraction."
+}

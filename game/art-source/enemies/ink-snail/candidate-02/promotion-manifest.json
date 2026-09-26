@@ -1,0 +1,202 @@
+{
+  "version": "ink-snail-candidate-02",
+  "promoted_at_utc": "2026-09-08T09:21:46.346134+00:00",
+  "status": "approved-frozen-runtime-candidate; actual Cocos import/render/performance acceptance pending",
+  "authorization": "Parent actually reviewed c02 three-quarter render, accepted corrected shell creases/bulges, and explicitly authorized frozen runtime promotion.",
+  "enemy_kind": "snail",
+  "display_name": "吐墨螺",
+  "runtime_directory": "game/assets/resources/models/enemies/ink-snail",
+  "runtime_directory_created_by_this_run": true,
+  "runtime_sha256": "3ff3b91dab1e86e2c43ab2fe11d55810fb879e6b9f312c04dfc33e2822c59179",
+  "runtime_files": [
+    {
+      "path": "game/assets/resources/models/enemies/ink-snail/snail-colour.png",
+      "source_path": "game/art-source/enemies/ink-snail/candidate-02/export/snail-colour.png",
+      "sha256": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019",
+      "bytes": 94254,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/ink-snail/snail-roughness.png",
+      "source_path": "game/art-source/enemies/ink-snail/candidate-02/export/snail-roughness.png",
+      "sha256": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7",
+      "bytes": 6031,
+      "created_by_this_run": true
+    },
+    {
+      "path": "game/assets/resources/models/enemies/ink-snail/ink-snail.fbx",
+      "source_path": "game/art-source/enemies/ink-snail/candidate-02/export/ink-snail.fbx",
+      "sha256": "3ff3b91dab1e86e2c43ab2fe11d55810fb879e6b9f312c04dfc33e2822c59179",
+      "bytes": 801788,
+      "created_by_this_run": true
+    }
+  ],
+  "copied_frozen_bytes": true,
+  "meta_authored": false,
+  "fbx_subasset_uuids_authored": false,
+  "cocos_started": false,
+  "blender_started_for_promotion": false,
+  "provenance_final_check": {
+    "source_hashes_match": true,
+    "roundtrip_fbx_hash_matches": true,
+    "half_frame_samples": 419,
+    "five_clip_names_ranges_durations_match": true,
+    "atlas_bytes_embedded_and_match_c01": true,
+    "c01_all_recorded_bytes_preserved": true,
+    "generator_hash_matches_package": true
+  },
+  "source_hashes": {
+    "game/art-source/enemies/ink-snail/candidate-02/ink-snail.blend": "58152a8145f2330a5099b4b56d4783801020b5a640d024695b5505dbc22d661f",
+    "game/art-source/enemies/ink-snail/candidate-02/ink-snail-review-scene.blend": "a828cbadd4afa4b7efb1c6920a18074ea1f7c999626a0c8d34a40f49b7726b44",
+    "game/art-source/enemies/ink-snail/candidate-02/ink-snail.glb": "208c003daf170dd92125551d11d3e534697142dbcab763b83b319fc8205ae906",
+    "game/art-source/enemies/ink-snail/candidate-02/model-stats.json": "cb7b288426e9c7861979a7f1c5acc676fc54c5192da7dfaf1b23b71193b8a656",
+    "game/art-source/enemies/ink-snail/candidate-02/round-trip-check.json": "420a89b0b289762f74ea23007bc6f2b27f92b6b695dbee5b6a380ca29b7cf3a2",
+    "game/art-source/enemies/ink-snail/candidate-02/source-check.json": "f75d98edb24ab0621f288ad3021485a69edbf363ac0f7117e43700e158ce96ff",
+    "game/art-source/enemies/ink-snail/candidate-02/c01-comparison-check.json": "f28f2495e0e84964e95aa53412c9355cdc404be8e71bbb8b33c18d172dc8963e",
+    "game/art-source/enemies/ink-snail/candidate-02/c01-preservation.json": "0d2320eb6b4f03dd00e8e2c7f58a842891c2da85549a00dd89168c5e212c908d"
+  },
+  "embedded_pngs": {
+    "snail-colour.png": {
+      "sha256": "96969a32fdd36c032c3e4d27efe810c279b21fd47c03da49ef8898c452f9c019",
+      "bytes": 94254,
+      "exact_png_byte_offset": 328012
+    },
+    "snail-roughness.png": {
+      "sha256": "2e172711b3983c23709048ffc4cebc6cfa5887fff0b7e7bb7799ff8330a14eb7",
+      "bytes": 6031,
+      "exact_png_byte_offset": 422885
+    }
+  },
+  "geometry": {
+    "triangles": 13956,
+    "vertices": 7004,
+    "meshes": 1,
+    "materials": 1,
+    "bones": 9
+  },
+  "clips": {
+    "idle": {
+      "expected_cocos_take": "InkSnail_Rig|idle",
+      "seconds": 2.8,
+      "first": 1,
+      "last": 85,
+      "loop": true,
+      "observed_blender_roundtrip_name": "InkSnail_Rig|InkSnail_Rig|idle"
+    },
+    "walk": {
+      "expected_cocos_take": "InkSnail_Rig|walk",
+      "seconds": 1.2,
+      "first": 1,
+      "last": 37,
+      "loop": true,
+      "observed_blender_roundtrip_name": "InkSnail_Rig|InkSnail_Rig|walk"
+    },
+    "attack": {
+      "expected_cocos_take": "InkSnail_Rig|attack",
+      "seconds": 1.2,
+      "first": 1,
+      "last": 37,
+      "loop": false,
+      "observed_blender_roundtrip_name": "InkSnail_Rig|InkSnail_Rig|attack"
+    },
+    "hit": {
+      "expected_cocos_take": "InkSnail_Rig|hit",
+      "seconds": 0.6,
+      "first": 1,
+      "last": 19,
+      "loop": false,
+      "observed_blender_roundtrip_name": "InkSnail_Rig|InkSnail_Rig|hit"
+    },
+    "exit": {
+      "expected_cocos_take": "InkSnail_Rig|exit",
+      "seconds": 1.1,
+      "first": 1,
+      "last": 34,
+      "loop": false,
+      "observed_blender_roundtrip_name": "InkSnail_Rig|InkSnail_Rig|exit"
+    }
+  },
+  "coordinate_handoff": {
+    "source": "Blender Z up / -Y forward",
+    "fbx_export": "axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z; confirm first actual import",
+    "recommended_model_uniform_scale": 0.93,
+    "expected_cocos_bounds_at_scale_xyz": {
+      "min": [
+        -0.25667999356985094,
+        0.0,
+        -0.5561399906873703
+      ],
+      "max": [
+        0.2566749769449234,
+        0.8556000155210496,
+        0.5189400261640549
+      ]
+    },
+    "expected_cocos_dimensions_width_height_depth": [
+      0.5133549705147744,
+      0.8556000155210496,
+      1.0750800168514252
+    ],
+    "bounds_status": "Calculated from validated source and established axis contract; actual importer bounds not yet measured",
+    "foot_origin_y": 0,
+    "road_actor_y": 0.064,
+    "root_motion": false,
+    "standing_action_peak_y_at_scale": 0.859320023059845,
+    "health_bar_local_on_unscaled_actor": {
+      "position": [
+        0,
+        1.02,
+        0
+      ],
+      "suggested_width": 0.65
+    },
+    "rest_spout_local_on_unscaled_actor": [
+      0,
+      0.2697,
+      0.5208
+    ],
+    "spout_note": "Rest approximation only; spout/head move during attack, prefer bone-derived visual origin when available."
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/ink-snail/ink-snail/ink-snail",
+    "path_status": "Matches established filename/sub-prefab importer layout; confirm generated metadata during first Cocos build",
+    "material_name_prefix": "InkSnail_Toy_Atlas",
+    "colour_image_prefix": "InkSnail_Colour_",
+    "roughness_image_prefix": "InkSnail_Roughness_",
+    "colour": "sRGB mainTexture",
+    "roughness": "linear gray; imported shininessExponentMap -> native Standard pbrMap G",
+    "roughness_gray_u8": [
+      79,
+      97,
+      110
+    ],
+    "roughness_alpha_u8": 255,
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "control_notes": [
+    "Scale the visual model child, preserving unscaled actor coordinates for path/health bar.",
+    "Walk is in-place soft gliding at 1.2 seconds; position and .8 movement speed remain core-driven.",
+    "Trigger attack from existing battle events; the 1.2 second animation does not schedule damage or new projectiles.",
+    "Keep the existing ranged range 3.5 and attack interval 2.0 seconds; do not convert into a melee or sand enemy.",
+    "Keep the actor until authored exit 1.1 seconds finishes; avoid stacking placeholder shrink on the skinned exit.",
+    "Actual importer may normalize take prefixes; the expected take prefix is InkSnail_Rig| and the five suffixes are exact."
+  ],
+  "rollback": "Verify these three runtime hashes and remove only those frozen payloads if rollback is needed; c01/c02 editable sources remain intact. Inspect any later importer metadata before altering it."
+}

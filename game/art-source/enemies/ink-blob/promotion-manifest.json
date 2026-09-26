@@ -1,0 +1,249 @@
+{
+  "promoted_at_local": "2026-09-08T13:29:35.208883+08:00",
+  "status": "Approved for this offline sample review; runtime candidate only. First Cocos build and final visual acceptance pending.",
+  "enemy_kind": "ink",
+  "display_name": "小墨团",
+  "candidate": "candidate-02",
+  "runtime_file": "game\\assets\\resources\\models\\enemies\\ink-blob\\ink-blob.fbx",
+  "runtime_sha256": "3fadf087fdd359486b9cd23b1f9d415f826481d5743c71d95fcbcb7dcc1d08d3",
+  "runtime_bytes": 614092,
+  "copied_frozen_bytes": true,
+  "runtime_file_created_by_this_run": true,
+  "meta_created_by_this_script": false,
+  "cocos_build_started": false,
+  "source_fbx": "game\\art-source\\enemies\\ink-blob\\candidate-02\\export\\ink-blob.fbx",
+  "source_fbx_sha256": "3fadf087fdd359486b9cd23b1f9d415f826481d5743c71d95fcbcb7dcc1d08d3",
+  "sources": {
+    "ink-blob.blend": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob.blend",
+      "sha256": "6ad7ba81ec3240a79751235664fdd8c057bd2f2b77579a9689c9348c0dd6d6ab",
+      "bytes": 1654801
+    },
+    "ink-blob-review-scene.blend": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob-review-scene.blend",
+      "sha256": "c3e251adfea80191ca4019740d5ad90a6ee99d7f0cab44ef8b3f3818b12a9f7e",
+      "bytes": 1456288
+    },
+    "ink-blob.glb": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\ink-blob.glb",
+      "sha256": "aef877565cb8d0bd1c19210ac720fca4f28d6019de0d4ba41c1a6979f2458f2c",
+      "bytes": 342984
+    },
+    "model-stats.json": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\model-stats.json",
+      "sha256": "2137ccba0d12ba2bfa6a71baa30cd757984459b47fbef128dcbbf01c29e46519",
+      "bytes": 861
+    },
+    "round-trip-check.json": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\round-trip-check.json",
+      "sha256": "0e146db5b70225a0c5233afe9face71314761f198870e0c51ac8563045d76d68",
+      "bytes": 11011
+    },
+    "source-check.json": {
+      "path": "game\\art-source\\enemies\\ink-blob\\candidate-02\\source-check.json",
+      "sha256": "75d91ed3e06c885b4edf5b4519fbfc91648c6cc8be1ae1842bc88b0466ad48b1",
+      "bytes": 8877
+    }
+  },
+  "embedded_pngs": {
+    "ink-colour.png": {
+      "sha256": "f1cb87a34289f30c32f5675cf893f2aa078ce9d96b16fb068d9ba3111b65beba",
+      "bytes": 10982,
+      "embedded_exact_png_byte_offset": 244944
+    },
+    "ink-roughness.png": {
+      "sha256": "c16b60a9652f48936d4e444411d23f9bb133818738ab2dc883ecb69baffcc055",
+      "bytes": 5937,
+      "embedded_exact_png_byte_offset": 256533
+    }
+  },
+  "geometry": {
+    "triangles": 7870,
+    "weighted_vertices": 3967,
+    "bones": 9,
+    "meshes": 1,
+    "materials": 1
+  },
+  "coordinate_handoff": {
+    "source_axes": "Blender Z up / -Y forward",
+    "export_axes": "FBX axis_forward=-Z / axis_up=Y",
+    "expected_cocos_forward": "+Z, verify after first importer pass",
+    "recommended_model_uniform_scale": 0.68,
+    "foot_origin_cocos_local_y": 0,
+    "ground_position": "Set actor root Y to road surface; levelId=1 road Y=0.064",
+    "rest_bounds_blender_m": {
+      "min": [
+        -0.6101043224334717,
+        -0.553321123123169,
+        0.0
+      ],
+      "max": [
+        0.6100545525550842,
+        0.6264594793319702,
+        0.9948901534080505
+      ]
+    },
+    "rest_height_at_recommended_scale_m": 0.6765253043174744,
+    "standing_action_peak_height_at_recommended_scale_m": 0.7327148246765137,
+    "recommended_health_bar_local_y_on_unscaled_actor": 0.89,
+    "recommended_health_bar_local_y_if_parented_under_scaled_model": 1.3088235294117647
+  },
+  "clips": {
+    "idle": {
+      "seconds": 2.0,
+      "frames": [
+        1,
+        61
+      ],
+      "loop": true,
+      "expected_cocos_take": "InkBlob_Rig|idle",
+      "all_integer_frames_bounds_blender_m": {
+        "min": [
+          -0.6101043224334717,
+          -0.553321123123169,
+          0.0
+        ],
+        "max": [
+          0.6100545525550842,
+          0.6271812319755554,
+          1.0163688659667969
+        ]
+      }
+    },
+    "walk": {
+      "seconds": 0.5333333333333333,
+      "frames": [
+        1,
+        17
+      ],
+      "loop": true,
+      "expected_cocos_take": "InkBlob_Rig|walk",
+      "all_integer_frames_bounds_blender_m": {
+        "min": [
+          -0.6242057085037231,
+          -0.6633211374282837,
+          0.0
+        ],
+        "max": [
+          0.6219785213470459,
+          0.6275152564048767,
+          0.9948901534080505
+        ]
+      }
+    },
+    "attack": {
+      "seconds": 0.7666666666666667,
+      "frames": [
+        1,
+        24
+      ],
+      "loop": false,
+      "expected_cocos_take": "InkBlob_Rig|attack",
+      "all_integer_frames_bounds_blender_m": {
+        "min": [
+          -0.6101043224334717,
+          -0.6022765636444092,
+          0.0
+        ],
+        "max": [
+          0.6100545525550842,
+          0.628298282623291,
+          1.077521800994873
+        ]
+      }
+    },
+    "hit": {
+      "seconds": 0.5,
+      "frames": [
+        1,
+        16
+      ],
+      "loop": false,
+      "expected_cocos_take": "InkBlob_Rig|hit",
+      "all_integer_frames_bounds_blender_m": {
+        "min": [
+          -0.6101043224334717,
+          -0.553321123123169,
+          0.0
+        ],
+        "max": [
+          0.6100545525550842,
+          0.6283324956893921,
+          1.0226736068725586
+        ]
+      }
+    },
+    "exit": {
+      "seconds": 0.8333333333333334,
+      "frames": [
+        1,
+        26
+      ],
+      "loop": false,
+      "expected_cocos_take": "InkBlob_Rig|exit",
+      "all_integer_frames_bounds_blender_m": {
+        "min": [
+          -0.6771243810653687,
+          -0.553321123123169,
+          0.0
+        ],
+        "max": [
+          0.6641882061958313,
+          0.6283107995986938,
+          1.0652028322219849
+        ]
+      }
+    }
+  },
+  "expected_import": {
+    "prefab_resource_path": "models/enemies/ink-blob/ink-blob/ink-blob",
+    "path_status": "Expected only; inspect generated importer metadata on first build",
+    "material_name_prefix": "InkBlob_Toy_Atlas",
+    "source_material_name": "InkBlob_Toy_Atlas",
+    "effect": "Expected util/dcc/imported-specular-glossiness; confirm actual first import",
+    "colour": {
+      "embedded_png": "ink-colour.png",
+      "blender_property": "Principled BSDF Base Color",
+      "expected_import_property": "mainTexture",
+      "native_standard_property": "mainTexture",
+      "sampling": "sRGB colour"
+    },
+    "roughness": {
+      "embedded_png": "ink-roughness.png",
+      "blender_property": "Principled BSDF Roughness",
+      "expected_import_property": "shininessExponentMap",
+      "native_standard_property": "pbrMap",
+      "sampling": "linear data, G=roughness",
+      "source_gray_levels_u8": [
+        79,
+        82,
+        110
+      ],
+      "alpha_u8": 255
+    },
+    "native_standard_starting_values": {
+      "roughness": 1,
+      "metallic": 0,
+      "occlusion": 0,
+      "specularIntensity": 0.5,
+      "mainColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "albedoScale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "integration_notes": [
+    "Do not apply the temporary-enemy procedural shrink/drop on top of this authored exit clip.",
+    "Current temporary enemy view disables at 0.55s; authored exit is 0.833s, so keep the visual node until clip completes.",
+    "Existing TurtleMaterialAdapter filters StoneAtlas_; InkBlob_Toy_Atlas requires an explicit separate or expanded eligibility check.",
+    "Use embedded textures from the imported material first; no duplicate external PNG copies were added to resources.",
+    "No importer UUIDs were fabricated. Do not claim Cocos imported/runtime validation before its first build."
+  ]
+}

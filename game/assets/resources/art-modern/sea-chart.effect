@@ -1,0 +1,86 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: chart-vs:vert
+      frag: chart-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        sceneTexture: { value: white }
+        chartMotion: { value: [0, 0, 0, 0] }
+}%
+CCProgram chart-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec2 uv0;
+  out vec4 tint;
+  vec4 vert(){
+    vec4 position=vec4(a_position,1.);
+    #if USE_LOCAL
+      position=cc_matWorld*position;
+    #endif
+    uv0=a_texCoord;tint=a_color;return cc_matViewProj*position;
+  }
+}%
+CCProgram chart-fs %{
+  precision highp float;
+  in vec2 uv0;
+  in vec4 tint;
+  uniform sampler2D sceneTexture;
+  uniform ChartParams { vec4 chartMotion; };
+  vec4 frag(){
+    if(chartMotion.y>4.5){
+      vec2 p=uv0;vec3 original=texture(sceneTexture,p).rgb;float t=chartMotion.x,on=chartMotion.z;
+      float sea=smoothstep(.29,.38,p.y)*(1.-smoothstep(.58,.64,p.y))*smoothstep(.08,.21,original.b-original.r);
+      vec2 flow=vec2(sin(p.y*112.-t*1.6)*.00085,sin(p.x*75.-t)*.00045)*sea*on;
+      vec3 result=texture(sceneTexture,clamp(p+flow,.001,.999)).rgb;
+      float center=chartMotion.y>5.5?.5:.358;
+      float nearCrown=(1.-smoothstep(.11,.19,abs(p.x-center)))*(1.-smoothstep(.56,.63,p.y));
+      float gold=smoothstep(.17,.34,original.r-original.b)*smoothstep(.52,.8,original.r)*nearCrown;
+      float shine=pow(max(0.,sin(p.y*23.+p.x*8.-t*.85)),18.);
+      result+=vec3(.085,.055,.018)*gold*shine*on;
+      return vec4(result,1.)*tint;
+    }
+    vec4 original=texture(sceneTexture,uv0);
+    float time=chartMotion.x;
+    float enabled=chartMotion.z;
+    float water=smoothstep(.06,.22,original.b-original.r)*smoothstep(.04,.17,original.g-original.r);
+    vec2 shift=vec2(0.);
+    if(chartMotion.y<.5){shift=water*vec2(sin(uv0.y*126.-time*1.5)*.0012,sin(uv0.x*94.+uv0.y*28.-time)*.0008);}
+    else if(chartMotion.y<1.5){
+      float sail=(1.-smoothstep(.36,.64,uv0.y))*smoothstep(.40,.70,original.r)*smoothstep(.04,.16,original.r-original.b);
+      shift=sail*vec2(sin(uv0.y*24.-time*1.9)*.004,sin(uv0.x*24.-time*1.6)*.002);
+    }
+    else if(chartMotion.y>2.5){
+      float entry=1.-step(3.5,chartMotion.y);
+      float boat=1.-entry*smoothstep(.52,.63,uv0.x);
+      float sail=(1.-smoothstep(.35,.57,uv0.y))*boat;
+      float crew=smoothstep(.46,.57,uv0.y)*(1.-smoothstep(.72,.82,uv0.y))*boat;
+      shift=sail*vec2(sin(uv0.y*23.-time*1.7)*.0035,sin(uv0.x*19.-time*1.3)*.0015);
+      shift.y+=crew*sin(time*1.5+uv0.x*22.)*.0018;
+    }
+    vec4 result=texture(sceneTexture,clamp(uv0+shift*enabled,.001,.999));
+    if(chartMotion.y<.5)result.rgb+=vec3(.012,.024,.027)*water*sin(uv0.x*150.+uv0.y*90.-time*1.3)*enabled;
+    else if(chartMotion.y>2.5){
+      float magic=smoothstep(.15,.35,original.b-original.r)*smoothstep(.3,.7,original.b);
+      result.rgb+=vec3(.03,.06,.08)*magic*(.5+.5*sin(time*1.8))*enabled;
+    }
+    else if(chartMotion.y>1.5)result.rgb+=original.rgb*smoothstep(.58,.92,max(original.r,original.b))*(.018+.018*sin(time*1.6))*enabled;
+    return result*tint;
+  }
+}%

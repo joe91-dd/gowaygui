@@ -1,0 +1,170 @@
+{
+  "version": "mist-bubble-candidate-01",
+  "enemy_kind": "mist",
+  "display_name": "雾泡怪",
+  "vertices": 5400,
+  "triangles": 10748,
+  "mesh_count": 1,
+  "material_count": 1,
+  "material_name": "MistBubble_Toy_Atlas",
+  "bones": [
+    "root",
+    "body",
+    "face",
+    "puff_L",
+    "puff_R",
+    "crown",
+    "foot_L1",
+    "foot_L2",
+    "foot_R1",
+    "foot_R2"
+  ],
+  "bone_count": 10,
+  "walking_feet": 4,
+  "connected_cloud_shells": 1,
+  "large_cloud_lobes": 6,
+  "source_lobe_specs": [
+    [
+      [
+        0,
+        -0.005,
+        0.43
+      ],
+      [
+        0.34,
+        0.262,
+        0.31
+      ]
+    ],
+    [
+      [
+        -0.275,
+        0.018,
+        0.5
+      ],
+      [
+        0.245,
+        0.233,
+        0.255
+      ]
+    ],
+    [
+      [
+        0.278,
+        0.025,
+        0.545
+      ],
+      [
+        0.247,
+        0.237,
+        0.255
+      ]
+    ],
+    [
+      [
+        -0.173,
+        0.04,
+        0.752
+      ],
+      [
+        0.231,
+        0.22,
+        0.231
+      ]
+    ],
+    [
+      [
+        0.135,
+        0.067,
+        0.812
+      ],
+      [
+        0.253,
+        0.226,
+        0.252
+      ]
+    ],
+    [
+      [
+        0.025,
+        0.195,
+        0.595
+      ],
+      [
+        0.27,
+        0.185,
+        0.29
+      ]
+    ]
+  ],
+  "opaque": true,
+  "texture_size": [
+    512,
+    512
+  ],
+  "roughness": "RGB grayscale .34/.44, alpha 1; Non-Color; metallic 0; F0 .04",
+  "clips": {
+    "idle": {
+      "name": "MistBubble_Rig|idle",
+      "first": 1,
+      "last": 73,
+      "seconds": 2.4
+    },
+    "walk": {
+      "name": "MistBubble_Rig|walk",
+      "first": 1,
+      "last": 25,
+      "seconds": 0.8
+    },
+    "attack": {
+      "name": "MistBubble_Rig|attack",
+      "first": 1,
+      "last": 37,
+      "seconds": 1.2
+    },
+    "hit": {
+      "name": "MistBubble_Rig|hit",
+      "first": 1,
+      "last": 19,
+      "seconds": 0.6
+    },
+    "exit": {
+      "name": "MistBubble_Rig|exit",
+      "first": 1,
+      "last": 31,
+      "seconds": 1.0
+    }
+  },
+  "loops": [
+    "idle",
+    "walk"
+  ],
+  "bounds_blender_xyz": {
+    "min": [
+      -0.5176411271095276,
+      -0.29600000381469727,
+      0.0
+    ],
+    "max": [
+      0.5226938128471375,
+      0.3779177963733673,
+      1.0618966817855835
+    ]
+  },
+  "dimensions_blender_xyz": [
+    1.040334939956665,
+    0.6739178001880646,
+    1.0618966817855835
+  ],
+  "recommended_scale": 0.83,
+  "dimensions_at_recommended_scale": [
+    0.863478000164032,
+    0.5593517741560936,
+    0.8813742458820343
+  ],
+  "forward": "Blender -Y; FBX axis_forward=-Z/axis_up=Y; expected Cocos +Z, actual Cocos import pending",
+  "origin": "Blender Z=0 / Cocos Y=0 foot origin; in-place actions; runtime controls translation",
+  "fbx_sha256": "a477c65832bec6f452cdc616d850b0d24d306f644e35c7450bae79495604df29",
+  "source": "Original scripted connected cloud geometry, UV palette/eyes, skin and motion; only internal A4, island and ink used as style references. No external asset or transparent particle layers.",
+  "status": "Isolated first review candidate; not promoted and not final art acceptance"
+}

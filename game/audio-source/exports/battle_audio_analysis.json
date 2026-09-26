@@ -1,0 +1,341 @@
+{
+  "origin": "Original project composition and synthesis; no imported audio",
+  "music": {
+    "battle": {
+      "master": {
+        "sample_rate": 44100,
+        "channels": 2,
+        "frames": 3024000,
+        "duration_seconds": 68.57142857142857,
+        "sample_peak_dbfs": -7.061,
+        "true_peak_4x_dbtp": -7.053,
+        "rms_dbfs": -21.092,
+        "integrated_lufs": -18.99999968745576,
+        "crest_factor_db": 14.031,
+        "dc_offset": [
+          2.191689718600287e-09,
+          -1.1360361540369013e-09
+        ],
+        "clipped_samples": 0,
+        "finite": true,
+        "listening_review": "not yet completed; numerical checks are not an auditory approval",
+        "loop_boundary_delta_dbfs": -50.947,
+        "boundary_to_local_derivative_ratio": 0.403,
+        "loop_method": "circular event tails and room convolution; exact 128-beat loop"
+      },
+      "runtime": {
+        "sample_rate": 44100,
+        "channels": 2,
+        "frames": 3024000,
+        "duration_seconds": 68.57142857142857,
+        "sample_peak_dbfs": -6.993,
+        "true_peak_4x_dbtp": -6.988,
+        "rms_dbfs": -21.061,
+        "integrated_lufs": -18.968664720490008,
+        "crest_factor_db": 14.067,
+        "dc_offset": [
+          5.375949967856286e-06,
+          -3.5291665767545055e-07
+        ],
+        "clipped_samples": 0,
+        "finite": true,
+        "listening_review": "not yet completed; numerical checks are not an auditory approval",
+        "loop_boundary_delta_dbfs": -51.285,
+        "boundary_to_local_derivative_ratio": 0.411,
+        "loop_method": "circular event tails and room convolution; exact 128-beat loop"
+      },
+      "master_gain": 1.2162402421919847,
+      "target_lufs": -19,
+      "bytes": 873195,
+      "decoded_rate": 44100,
+      "round_trip_frames_equal": true,
+      "stem_count": 8,
+      "score_events": 1120
+    },
+    "boss": {
+      "master": {
+        "sample_rate": 44100,
+        "channels": 2,
+        "frames": 3307500,
+        "duration_seconds": 75.0,
+        "sample_peak_dbfs": -6.122,
+        "true_peak_4x_dbtp": -6.117,
+        "rms_dbfs": -20.541,
+        "integrated_lufs": -18.499999995699984,
+        "crest_factor_db": 14.419,
+        "dc_offset": [
+          4.926485885903276e-10,
+          1.6111512124439287e-09
+        ],
+        "clipped_samples": 0,
+        "finite": true,
+        "listening_review": "not yet completed; numerical checks are not an auditory approval",
+        "loop_boundary_delta_dbfs": -56.002,
+        "boundary_to_local_derivative_ratio": 0.218,
+        "loop_method": "circular event tails and room convolution; exact 160-beat loop"
+      },
+      "runtime": {
+        "sample_rate": 44100,
+        "channels": 2,
+        "frames": 3307500,
+        "duration_seconds": 75.0,
+        "sample_peak_dbfs": -6.306,
+        "true_peak_4x_dbtp": -6.3,
+        "rms_dbfs": -20.515,
+        "integrated_lufs": -18.474782578691087,
+        "crest_factor_db": 14.21,
+        "dc_offset": [
+          2.7659998522722162e-05,
+          3.839848068309948e-05
+        ],
+        "clipped_samples": 0,
+        "finite": true,
+        "listening_review": "not yet completed; numerical checks are not an auditory approval",
+        "loop_boundary_delta_dbfs": -48.949,
+        "boundary_to_local_derivative_ratio": 0.533,
+        "loop_method": "circular event tails and room convolution; exact 160-beat loop"
+      },
+      "master_gain": 1.303195240334944,
+      "target_lufs": -18.5,
+      "bytes": 983442,
+      "decoded_rate": 44100,
+      "round_trip_frames_equal": true,
+      "stem_count": 9,
+      "score_events": 1539
+    }
+  },
+  "effects": {
+    "sfx_attack_melee": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 11466,
+      "duration_seconds": 0.26,
+      "sample_peak_dbfs": -16.001,
+      "true_peak_4x_dbtp": -15.993,
+      "rms_dbfs": -30.233,
+      "integrated_lufs": null,
+      "crest_factor_db": 14.232,
+      "dc_offset": [
+        -0.0001027233520289883,
+        -0.0001027233520289883
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_attack_projectile": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 13230,
+      "duration_seconds": 0.3,
+      "sample_peak_dbfs": -17.001,
+      "true_peak_4x_dbtp": -16.996,
+      "rms_dbfs": -32.489,
+      "integrated_lufs": null,
+      "crest_factor_db": 15.488,
+      "dc_offset": [
+        -1.5168828213063534e-05,
+        -1.5168828213063534e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_attack_magic": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 16758,
+      "duration_seconds": 0.38,
+      "sample_peak_dbfs": -17.001,
+      "true_peak_4x_dbtp": -16.972,
+      "rms_dbfs": -30.924,
+      "integrated_lufs": null,
+      "crest_factor_db": 13.922,
+      "dc_offset": [
+        -1.5187767530733254e-05,
+        -1.5187767530733254e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_hit_soft": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 8820,
+      "duration_seconds": 0.2,
+      "sample_peak_dbfs": -18.999,
+      "true_peak_4x_dbtp": -18.989,
+      "rms_dbfs": -32.348,
+      "integrated_lufs": null,
+      "crest_factor_db": 13.349,
+      "dc_offset": [
+        -0.00010319923603674397,
+        -0.00010319923603674397
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_heal": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 18522,
+      "duration_seconds": 0.42,
+      "sample_peak_dbfs": -18.999,
+      "true_peak_4x_dbtp": -18.994,
+      "rms_dbfs": -32.305,
+      "integrated_lufs": -29.238017151953283,
+      "crest_factor_db": 13.306,
+      "dc_offset": [
+        -1.761985731718596e-05,
+        -1.761985731718596e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_core_hit": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 28665,
+      "duration_seconds": 0.65,
+      "sample_peak_dbfs": -13.001,
+      "true_peak_4x_dbtp": -12.988,
+      "rms_dbfs": -27.5,
+      "integrated_lufs": -25.599843317007675,
+      "crest_factor_db": 14.499,
+      "dc_offset": [
+        1.4691874639538582e-05,
+        1.4691874639538582e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_skill_stone": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 44100,
+      "duration_seconds": 1.0,
+      "sample_peak_dbfs": -12.001,
+      "true_peak_4x_dbtp": -11.995,
+      "rms_dbfs": -25.336,
+      "integrated_lufs": -23.323584214421153,
+      "crest_factor_db": 13.335,
+      "dc_offset": [
+        8.058439561864361e-06,
+        8.058439561864361e-06
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_skill_spike": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 31752,
+      "duration_seconds": 0.72,
+      "sample_peak_dbfs": -12.0,
+      "true_peak_4x_dbtp": -11.994,
+      "rms_dbfs": -29.986,
+      "integrated_lufs": -25.06052607500232,
+      "crest_factor_db": 17.986,
+      "dc_offset": [
+        -1.8003756849793717e-05,
+        -1.8003756849793717e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_skill_crystal": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 49392,
+      "duration_seconds": 1.12,
+      "sample_peak_dbfs": -12.0,
+      "true_peak_4x_dbtp": -11.994,
+      "rms_dbfs": -27.442,
+      "integrated_lufs": -22.376135781222473,
+      "crest_factor_db": 15.442,
+      "dc_offset": [
+        -1.5618386896676384e-05,
+        -1.55930538312532e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_skill_leaf": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 59094,
+      "duration_seconds": 1.34,
+      "sample_peak_dbfs": -13.001,
+      "true_peak_4x_dbtp": -12.96,
+      "rms_dbfs": -26.109,
+      "integrated_lufs": -21.684056969787182,
+      "crest_factor_db": 13.108,
+      "dc_offset": [
+        -1.593220622453373e-05,
+        -1.5846479072934017e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_skill_bubble": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 47628,
+      "duration_seconds": 1.08,
+      "sample_peak_dbfs": -13.0,
+      "true_peak_4x_dbtp": -12.994,
+      "rms_dbfs": -27.604,
+      "integrated_lufs": -24.389737356395468,
+      "crest_factor_db": 14.604,
+      "dc_offset": [
+        -1.5714362234575674e-05,
+        -1.5861092833802104e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    },
+    "sfx_defeat": {
+      "sample_rate": 44100,
+      "channels": 2,
+      "frames": 108045,
+      "duration_seconds": 2.45,
+      "sample_peak_dbfs": -13.999,
+      "true_peak_4x_dbtp": -13.976,
+      "rms_dbfs": -25.959,
+      "integrated_lufs": -22.459335076191326,
+      "crest_factor_db": 11.96,
+      "dc_offset": [
+        -1.621644332772121e-05,
+        -1.6055446394602768e-05
+      ],
+      "clipped_samples": 0,
+      "finite": true,
+      "listening_review": "not yet completed; numerical checks are not an auditory approval"
+    }
+  },
+  "asset_sha256": {
+    "bgm_battle.ogg": "4a0c2e6d0c43f2d715ba1a93f7b49526ad97b6340b16c88339d8d2bd6a594090",
+    "bgm_boss.ogg": "7e2cbe1803e9ea1446c36f26b119eba91d49ea230b2259117063ce972b569256",
+    "sfx_attack_melee.wav": "28fa304ec1f3d6dc125805da49f8c16867d177b616f16d5774630b6c0acea36f",
+    "sfx_attack_projectile.wav": "aae4da8a6381add743687f8d9ea23907805ee3b874820e3b67c9873c98ada41b",
+    "sfx_attack_magic.wav": "ac0762afc444e5506c92f685ba80650349e785f118c498250cc967d73e8f7a3b",
+    "sfx_hit_soft.wav": "5583b935c89d19512069f04b469ac45c4ff3b7177f4ce387f85c72823c107e78",
+    "sfx_heal.wav": "91df5a503a73aeff364f2f4e6509e88922f1a0fb5467cf66de3bcd088a0ec48e",
+    "sfx_core_hit.wav": "ae6cf56ba32a0fe3f756200fe0a4256ff311bbf301e96a9ba00097f7149b9d76",
+    "sfx_skill_stone.wav": "42da32ba778d81f2a2a7addfc81a940e14f7bee403f6395d21e78586ae79e6d1",
+    "sfx_skill_spike.wav": "593e86a1d83d2fd0cc2aac94b3fcdd71b471c79af631ff052acd0181c93b74a4",
+    "sfx_skill_crystal.wav": "df25b4b63f5e5f543385ca1ac1be6672ffd832dd0898ac53d243d8c289091284",
+    "sfx_skill_leaf.wav": "ae703142785a539094ecc570e677e6058fe732e8d7fab0d8a565a86ee3c460b3",
+    "sfx_skill_bubble.wav": "236c573b88bb90ff3c51267b99e6470100ea2ae09d064d00fc6ca95d26288c19",
+    "sfx_defeat.wav": "2b8d25eeb843ea0d2e94ca9e5026b4aa7b748296e9f5b8e5006bb6dd5f377ba4"
+  }
+}

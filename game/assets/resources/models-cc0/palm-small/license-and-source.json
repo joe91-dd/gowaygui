@@ -1,0 +1,23 @@
+{
+  "name": "Palm Tree 2",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\palm-tree-2-d41036\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Plant/e29ccef8e8c3c12eb4a3390fd501f3c69b71e6f66f6a5f104e9a85c413b1a829_Palm Tree 2.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "3e9fad66ae0b36669d90d16bf4566705e5bab61448c629dde4975b706e08ea99",
+  "bytes": 105360,
+  "animations": 0,
+  "runtimeKey": "palm-small",
+  "height": 2.7,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 2924,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

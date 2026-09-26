@@ -1,0 +1,43 @@
+{
+  "key": "fauna-23",
+  "name": "浮岩领主",
+  "kind": "armored",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Goleling Evolved",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\goleling-evolved-889929\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/8fdc56697eed6009c6dd27069e1096f56860fea3888d95fd7343bd571fb70b2d_Goleling Evolved.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "2d19598ef6edc2e435d1453365b45d8aba227ea91b75e54ac16351902db463f8",
+  "bytes": 431364,
+  "animations": 8,
+  "displayName": "浮岩领主",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 37040,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-23",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.3
+}

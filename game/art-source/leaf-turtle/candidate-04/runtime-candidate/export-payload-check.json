@@ -1,0 +1,37 @@
+{
+  "fbx_version": 7400,
+  "fbx_bytes": 2538348,
+  "fbx_animation_stack_names": [
+    "LeafTurtle_Rig|attack",
+    "LeafTurtle_Rig|fusion",
+    "LeafTurtle_Rig|hit",
+    "LeafTurtle_Rig|idle",
+    "LeafTurtle_Rig|rest",
+    "LeafTurtle_Rig|skill"
+  ],
+  "embedded_pngs": [
+    {
+      "name": "leaf-colour.png",
+      "bytes": 970021,
+      "sha256": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125"
+    },
+    {
+      "name": "leaf-roughness.png",
+      "bytes": 22192,
+      "sha256": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    }
+  ],
+  "texture_connections": [
+    {
+      "fbx_channel": "DiffuseColor",
+      "texture": "leaf-colour.png"
+    },
+    {
+      "fbx_channel": "ShininessExponent",
+      "texture": "leaf-roughness.png"
+    }
+  ],
+  "runtime_promoted": false,
+  "cocos_validation": false,
+  "note": "AnimationStack names are actual FBX payload names. Blender reimport prepends the armature name again."
+}

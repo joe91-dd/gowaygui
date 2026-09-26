@@ -1,0 +1,43 @@
+{
+  "key": "fauna-24",
+  "name": "潮翼幼龙",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Dragon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\dragon-bae3b2\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/356ad6a400d222e4b893f79525b93a9e20f4642449460e9d37d76cbb9d137f6d_Dragon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "2ce4a7ed945905a550199006857229975dc22b28ae9e4122876691a62770bda0",
+  "bytes": 376044,
+  "animations": 8,
+  "displayName": "潮翼幼龙",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 29228,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-24",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.9
+}

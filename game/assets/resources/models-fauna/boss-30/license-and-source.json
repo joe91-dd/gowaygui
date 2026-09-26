@@ -1,0 +1,36 @@
+{
+  "id": "purple-7",
+  "name": "无首海狱领主",
+  "tier": 2,
+  "index": 30,
+  "base": 58,
+  "key": "boss-30",
+  "ability": "mortar",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 81916,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-58",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Character/89f1f2fe6467c76c8f4bd758d941d0f8d095a463d736a59576eda2790a92675d_Skeleton Headless.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 25075,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 10.4
+}

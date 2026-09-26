@@ -1,0 +1,36 @@
+{
+  "id": "green-6",
+  "name": "星砂鸣钟者",
+  "tier": 0,
+  "index": 11,
+  "base": 39,
+  "key": "boss-11",
+  "ability": "shock",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 52340,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-39",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/e15b1d4a1a59fcd7a6d6881175723d57d69272ddfa467b2c0473829bf3e82f2b_Demon.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24667,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.2
+}

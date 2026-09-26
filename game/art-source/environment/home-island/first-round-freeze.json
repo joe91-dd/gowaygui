@@ -1,0 +1,132 @@
+{
+  "status": "first-round-complete-original-bytes-frozen",
+  "recordedAtUtc": "2026-09-08T12:36:33.675308+00:00",
+  "rootReview": "Direction approved; second round only courtyard edge, pearl support, sparse low foliage.",
+  "scope": "Every candidate-01 file, including original previews, logs and blend backups, retained in place.",
+  "files": {
+    "author_home_candidate.py": {
+      "bytes": 2675,
+      "sha256": "2cfe9de2184c87719b6d8a7ead7d3c0be724d68c3f9f5448d5490be09460e3b3"
+    },
+    "build_home_island.py": {
+      "bytes": 26364,
+      "sha256": "e7e523f35c7d7a79a02518a4cd661af899c46f2901f17f5476a799aefece24ef"
+    },
+    "environment-manifest.json": {
+      "bytes": 3426,
+      "sha256": "b5fdb72db29c870bab2133c14f9a74beaf2ce6d224a7366f600fa3d19654d21a"
+    },
+    "finalize_home_candidate.py": {
+      "bytes": 3369,
+      "sha256": "6feb389576822a1e18d13836f41f3d489b85a5f4ec802a9c767ab9a8e85510a1"
+    },
+    "FIRST_MODEL_REVIEW.md": {
+      "bytes": 3737,
+      "sha256": "39068533e63fa41cd01f611b0168341adabd158017551138f084dda4ae2da971"
+    },
+    "home-island-review-scene.blend": {
+      "bytes": 5116116,
+      "sha256": "832ac4bc62e41b6eb22d1ae2cd23ff9c9a4ded4288c239cb027fd1ee3d3a4041"
+    },
+    "home-island-review-scene.blend1": {
+      "bytes": 5116116,
+      "sha256": "2f239891ccc14d584a755350d720b71018e0879a791820f81c26754ac5fddfd7"
+    },
+    "home-island-scale-review.blend": {
+      "bytes": 25460847,
+      "sha256": "2882c4b9ea6a5a8f1a759748e3dc57ad1b05af4297697b2ca15cea7f3ef48686"
+    },
+    "home-island.blend": {
+      "bytes": 8821580,
+      "sha256": "cc1df4cee25766ce51ca69210a6074c6ada4e391bcef450c159c476397c75def"
+    },
+    "home-island.blend1": {
+      "bytes": 8821580,
+      "sha256": "1627094e2c4718caf694d2f1783daead70d08f4af183c155059ab84a12b9a8df"
+    },
+    "home-island.fbx": {
+      "bytes": 3690700,
+      "sha256": "0c73b77cefa52a26da9b3c4fd751bb42573eff431859bea02342164b07a5b6af"
+    },
+    "home_composition.py": {
+      "bytes": 15607,
+      "sha256": "def70038829a4efdfee8a3eba2f53a3c4b0764872850789784f95d0e1ea11c8d"
+    },
+    "island-colour.png": {
+      "bytes": 2727591,
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f"
+    },
+    "island-roughness.png": {
+      "bytes": 40385,
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16"
+    },
+    "layout-proposal.json": {
+      "bytes": 10232,
+      "sha256": "b1a5a369186b48a4ce1129bd86dd5ce18c2017e185cb7589eb76d04c2c80a473"
+    },
+    "layout-proposal.png": {
+      "bytes": 104439,
+      "sha256": "bc52f1852c7aab53f194c1f569cae4b62b3ce77bf47493257c2d986606b5636f"
+    },
+    "layout-proposal.svg": {
+      "bytes": 3653,
+      "sha256": "df9978ead87acc489e1e3d35c6b4c3adf9f248dbcd678307cad321e36eca1bb9"
+    },
+    "module-authorship.json": {
+      "bytes": 830,
+      "sha256": "0bd7e08ed68fe1f2196823f6bc90eeb2366ac4372671caef2eabbd3780256bea"
+    },
+    "prepare_home_layout.py": {
+      "bytes": 7790,
+      "sha256": "2fbb64c7f783b45572258db43b17122a1a11115949f4a96e98eaa76a5b4a18d2"
+    },
+    "provenance.json": {
+      "bytes": 4804,
+      "sha256": "2cd02a00934a2592921782cfad817262318149fef239b961ea6ad7dc79d59f95"
+    },
+    "README.md": {
+      "bytes": 3795,
+      "sha256": "40642ec5b81371cebccad35728af346892eb347957be5df5473aa795ed86c120"
+    },
+    "rejected-initial-support.json": {
+      "bytes": 6033,
+      "sha256": "01230d2f99aa34ad139f8d7983e5d39a3024346bbc16514ec716b11ef0dcb50b"
+    },
+    "render-home-overview.png": {
+      "bytes": 914931,
+      "sha256": "1bb363ab058cf2bcb43c23d791c5afc9cce40940219e9b22b2be6cc61246331d"
+    },
+    "render-house-detail.png": {
+      "bytes": 1034747,
+      "sha256": "f6822c5613e8caf804a07712ef7d4809b8c63c48883149f86b3d5a216ccb3752"
+    },
+    "render-report.json": {
+      "bytes": 2614,
+      "sha256": "4a18a6f774cb441785b6742765bc52f9de3b7f2919de28c9947c9eb154ff267a"
+    },
+    "render.log": {
+      "bytes": 19893,
+      "sha256": "17e1927c93426383b38ef8fb5896121b01422420653679ca5de9cf3b90aa767a"
+    },
+    "render_home_views.py": {
+      "bytes": 4660,
+      "sha256": "8e381362692f8a428f4a5310d32aaf25f14de958bf2d2d34bed1d891553daeed"
+    },
+    "render_layout_plan.cjs": {
+      "bytes": 458,
+      "sha256": "f0e3931aff4b5404a0ea175f33d660897d3389e7f0d2c9f73d5b66578f168613"
+    },
+    "round-trip-and-support.json": {
+      "bytes": 2857,
+      "sha256": "0789533d22b23dc31ec02c9e2ee5fb525fa906dbee6a90fc6e220ec013a53bf8"
+    },
+    "verify.log": {
+      "bytes": 3092,
+      "sha256": "9793f07159a30861bbf7fb5437990b71b45eb0fe26912b3810d94ceca7d4ae23"
+    },
+    "verify_home_island.py": {
+      "bytes": 4166,
+      "sha256": "97b7222ee7c0e9c06954015b124f3fe653d9a637d13eedd676b6fd0183d5e69f"
+    }
+  }
+}

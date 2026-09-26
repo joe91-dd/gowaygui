@@ -1,0 +1,329 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.validateBattle = validateBattle;
+exports.validateBattleForSaveDecode = validateBattleForSaveDecode;
+exports.migrateLegacyCoralCoordinates = migrateLegacyCoralCoordinates;
+const data_1 = require("./data");
+const MAX = Number.MAX_SAFE_INTEGER;
+// Version 1 serializes 50 ms ticks. Keep this schema constant separate from battle.ts
+// so importing save validation cannot create a runtime dependency cycle.
+const TICK_SECONDS_V1 = .05;
+const CORE_HEALTH_V1 = 20;
+const STATUS_KINDS = new Set(['stun', 'root', 'slow', 'weaken', 'armorDown', 'resistDown', 'hold']);
+const EVENT_KINDS = new Set(['attack', 'heal', 'skill', 'damage', 'spawn', 'defeat', 'leak', 'waveEnd', 'shield', 'control']);
+const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
+// Frozen coordinates accepted only while decoding historical coral-bend saves.
+// Keep this even after a device has completed the level: an older backup may reappear.
+const LEGACY_CORAL_SLOTS = { 2: { x: 3, z: 1 }, 4: { x: 6, z: -1 } };
+const LEGACY_CORAL_ROUTE = [
+    { x: -9, z: 0 }, { x: -4, z: 0 }, { x: -2, z: 2 }, { x: 2, z: 2 }, { x: 3, z: -2 }, { x: 6, z: -2 }, { x: 9, z: 0 },
+];
+function check(condition, field, reason) {
+    if (!condition)
+        throw new Error(`战斗存档损坏：${field}${reason}`);
+}
+function object(value, field) {
+    check(value !== null && typeof value === 'object' && !Array.isArray(value), field, '必须是对象');
+    const prototype = Object.getPrototypeOf(value);
+    check(prototype === Object.prototype || prototype === null, field, '不是可保存的数据对象');
+    return value;
+}
+function array(value, field, max = MAX) {
+    check(Array.isArray(value) && value.length <= max, field, '必须是长度合法的数组');
+    return value;
+}
+function number(value, field, min = 0, max = MAX) {
+    check(typeof value === 'number' && Number.isFinite(value) && value >= min && value <= max, field, '数值不合法');
+    return value;
+}
+function integer(value, field, min = 0, max = MAX) {
+    const result = number(value, field, min, max);
+    check(Number.isSafeInteger(result), field, '必须是安全整数');
+    return result;
+}
+function bool(value, field) {
+    check(typeof value === 'boolean', field, '必须是布尔值');
+    return value;
+}
+function text(value, field, allowEmpty = false) {
+    check(typeof value === 'string' && (allowEmpty || value.length > 0) && value.length <= 512 && !/[\x00-\x1f]/.test(value), field, '文字或编号不合法');
+    return value;
+}
+function skill(value, field) {
+    const id = text(value, field);
+    check(own(data_1.SKILL_BY_ID, id), field, '包含未知技能');
+    return id;
+}
+const tolerance = (value) => 1e-8 * Math.max(1, Math.abs(value));
+function samePoint(a, b) {
+    return Math.abs(a.x - b.x) <= tolerance(Math.max(Math.abs(a.x), Math.abs(b.x)))
+        && Math.abs(a.z - b.z) <= tolerance(Math.max(Math.abs(a.z), Math.abs(b.z)));
+}
+function close(a, b, field) {
+    check(Math.abs(a - b) <= tolerance(Math.max(Math.abs(a), Math.abs(b))), field, '与关联数据不一致');
+}
+function point(value, field) {
+    const p = object(value, field);
+    return { x: number(p.x, `${field}.x`, -MAX), z: number(p.z, `${field}.z`, -MAX) };
+}
+/** Reject values that JSON would silently corrupt, including unknown extension fields. */
+function checkSerializable(value, field, visiting = new Set(), depth = 0) {
+    check(depth <= 64, field, '嵌套过深');
+    if (value === null || value === undefined || typeof value === 'string' || typeof value === 'boolean')
+        return;
+    if (typeof value === 'number') {
+        check(Number.isFinite(value), field, '包含非有限数字');
+        return;
+    }
+    check(typeof value === 'object', field, '包含无法保存的值');
+    check(!visiting.has(value), field, '包含循环引用');
+    visiting.add(value);
+    if (Array.isArray(value)) {
+        for (let i = 0; i < value.length; i++) {
+            check(own(value, String(i)) && value[i] !== undefined, `${field}[${i}]`, '缺少数组元素');
+            checkSerializable(value[i], `${field}[${i}]`, visiting, depth + 1);
+        }
+    }
+    else {
+        const record = object(value, field);
+        for (const [key, child] of Object.entries(record))
+            checkSerializable(child, `${field}.${key}`, visiting, depth + 1);
+    }
+    visiting.delete(value);
+}
+function reference(value, field, ids) {
+    const id = text(value, field);
+    check(ids.has(id), field, '指向不存在的战斗个体');
+    return id;
+}
+function statuses(value, field, refs) {
+    const kinds = new Set();
+    for (const [index, item] of Array.from(array(value, field, STATUS_KINDS.size).entries())) {
+        const name = `${field}[${index}]`, status = object(item, name);
+        const kind = text(status.kind, `${name}.kind`);
+        check(STATUS_KINDS.has(kind) && !kinds.has(kind), name, '状态类型未知或重复');
+        kinds.add(kind);
+        // Expired states may remain in a snapshot until the next simulation tick.
+        number(status.amount, `${name}.amount`, 0, ['slow', 'weaken', 'root', 'stun'].includes(kind) ? 1 : MAX);
+        integer(status.untilTick, `${name}.untilTick`);
+        reference(status.sourceId, `${name}.sourceId`, refs.entities);
+    }
+}
+function skillMap(value, field, owned, maxTick) {
+    const entries = object(value, field);
+    for (const [key, count] of Object.entries(entries)) {
+        const id = skill(key, `${field}.${key}`);
+        check(owned.has(id), field, '记录了个体未拥有的技能');
+        integer(count, `${field}.${key}`, 0, maxTick ?? MAX);
+    }
+}
+function health(value, field) {
+    const maxHp = number(value.maxHp, `${field}.maxHp`, Number.MIN_VALUE);
+    const hp = number(value.hp, `${field}.hp`, 0, maxHp + tolerance(maxHp));
+    const alive = bool(value.alive, `${field}.alive`);
+    check(!alive || hp > 0, field, '存活个体没有生命');
+    return { hp, maxHp, alive };
+}
+/** Structural and simulation-invariant validation. This is not a client anti-cheat proof. */
+function validateBattle(state) {
+    validateBattleState(state, false);
+}
+/** Save decoding only: all checks remain active, with two known historical coordinate pairs allowed. */
+function validateBattleForSaveDecode(state) {
+    validateBattleState(state, true);
+}
+/** Called only after the entire decoded save passes validation, including its run/roster bindings. */
+function migrateLegacyCoralCoordinates(state) {
+    if (state.levelId !== 2)
+        return;
+    for (const unit of state.units) {
+        const legacy = LEGACY_CORAL_SLOTS[unit.slot];
+        if (legacy && samePoint(unit, legacy)) {
+            const current = data_1.LEVELS[2].slots[unit.slot];
+            unit.x = current.x;
+            unit.z = current.z;
+        }
+    }
+}
+function validateBattleState(state, allowLegacyCoralSlots) {
+    checkSerializable(state, '战斗');
+    const s = object(state, '战斗');
+    check(s.version === 1, '版本', '不受支持');
+    check(s.balanceVersion === undefined || s.balanceVersion === 2, '平衡版本', '不受支持');
+    const levelId = integer(s.levelId, '关卡', 0, data_1.LEVELS.length - 1), level = data_1.LEVELS[levelId];
+    integer(s.wave, '波次', 1, level.waves);
+    const status = text(s.status, '战斗状态');
+    check(['fighting', 'won', 'lost'].includes(status), '战斗状态', '未知');
+    const tick = integer(s.tick, 'tick');
+    const elapsed = number(s.elapsed, 'elapsed');
+    close(elapsed, tick * TICK_SECONDS_V1, 'elapsed');
+    const pending = number(s.pendingSeconds, 'pendingSeconds', 0, TICK_SECONDS_V1);
+    check(pending < TICK_SECONDS_V1, 'pendingSeconds', '存在未处理的完整时间步');
+    if (status !== 'fighting')
+        check(pending === 0, 'pendingSeconds', '结束后仍有待处理时间');
+    integer(s.rng, '随机状态', 0, 4294967295);
+    const coreHealth = number(s.coreHealth, '核心耐久', 0, CORE_HEALTH_V1);
+    check(status === 'lost' ? coreHealth === 0 : coreHealth > 0, '核心耐久', '与胜负状态不一致');
+    const route = array(s.route, '路线').map((p, i) => point(p, `路线[${i}]`));
+    check(route.length >= 2, '路线', '至少需要两个不同点');
+    let routeLength = 0;
+    for (let i = 1; i < route.length; i++) {
+        const length = Math.hypot(route[i].x - route[i - 1].x, route[i].z - route[i - 1].z);
+        check(Number.isFinite(length) && length > 0, `路线[${i}]`, '与前一点重合或距离无效');
+        routeLength += length;
+    }
+    close(number(s.routeLength, '路线长度', Number.MIN_VALUE), routeLength, '路线长度');
+    if (levelId === 2) {
+        check(route.length === level.route.length && route.every((p, i) => samePoint(p, level.route[i])), '路线', '与当前珊瑚转角不一致');
+        if (allowLegacyCoralSlots)
+            check(route.length === LEGACY_CORAL_ROUTE.length && route.every((p, i) => samePoint(p, LEGACY_CORAL_ROUTE[i])), '路线', '不是受支持的旧珊瑚布局');
+    }
+    const units = array(s.units, '伙伴', 5), enemies = array(s.enemies, '敌人');
+    const refs = { entities: new Set(), units: new Map(), enemies: new Set(), unitSkills: new Map() };
+    const slots = new Set(), turtleIds = new Set();
+    for (const [i, raw] of Array.from(units.entries())) {
+        const name = `伙伴[${i}]`, unit = object(raw, name), id = text(unit.id, `${name}.id`);
+        check(!refs.entities.has(id), name, '战斗个体编号重复');
+        refs.entities.add(id);
+        refs.units.set(id, unit);
+        const turtleId = text(unit.turtleId, `${name}.turtleId`);
+        check(!turtleIds.has(turtleId), name, '龟档案编号重复');
+        turtleIds.add(turtleId);
+        const slot = integer(unit.slot, `${name}.slot`, 0, level.slots.length - 1);
+        check(!slots.has(slot), name, '布阵位置重复');
+        slots.add(slot);
+        const position = point(unit, name), legacy = allowLegacyCoralSlots && levelId === 2 ? LEGACY_CORAL_SLOTS[slot] : undefined;
+        check(samePoint(position, level.slots[slot]) || !!legacy && samePoint(position, legacy), `${name}.位置`, '与站位坐标不一致');
+        const role = text(unit.role, `${name}.role`);
+        check(own(data_1.ROLES, role), name, '职业未知');
+        const owned = new Set();
+        for (const [j, item] of Array.from(array(unit.skills, `${name}.skills`, 12).entries())) {
+            const id = skill(item, `${name}.skills[${j}]`), definition = data_1.SKILL_BY_ID[id];
+            check(!owned.has(id) && (!definition.role || definition.role === role), name, '技能重复或职业不兼容');
+            owned.add(id);
+        }
+        refs.unitSkills.set(id, owned);
+    }
+    for (const [i, raw] of Array.from(enemies.entries())) {
+        const enemy = object(raw, `敌人[${i}]`), id = text(enemy.id, `敌人[${i}].id`);
+        check(!refs.entities.has(id), `敌人[${i}]`, '战斗个体编号重复');
+        refs.entities.add(id);
+        refs.enemies.add(id);
+    }
+    for (const [i, raw] of Array.from(units.entries())) {
+        const name = `伙伴[${i}]`, unit = object(raw, name), id = unit.id, owned = refs.unitSkills.get(id);
+        integer(unit.level, `${name}.level`, 1, 10);
+        point(unit, name);
+        const hp = health(unit, name);
+        check(hp.alive || hp.hp === 0, name, '休整个体生命尚未归零');
+        for (const field of ['attack', 'armor', 'resist', 'range'])
+            number(unit[field], `${name}.${field}`);
+        number(unit.interval, `${name}.interval`, Number.MIN_VALUE);
+        for (const field of ['nextAttackTick', 'actionUntilTick', 'attackCount', 'nextRegenTick', 'cleanseReadyTick'])
+            integer(unit[field], `${name}.${field}`);
+        integer(unit.lastDamageTick, `${name}.lastDamageTick`, 0, tick);
+        bool(unit.lastShieldUsed, `${name}.lastShieldUsed`);
+        statuses(unit.statuses, `${name}.statuses`, refs);
+        skillMap(unit.cooldowns, `${name}.cooldowns`, owned);
+        skillMap(unit.skillActivations, `${name}.skillActivations`, owned);
+        const shield = number(unit.shield, `${name}.shield`, 0, hp.maxHp * .4 + tolerance(hp.maxHp));
+        let shieldSum = 0;
+        for (const [j, rawShield] of Array.from(array(unit.shields, `${name}.shields`).entries())) {
+            const label = `${name}.shields[${j}]`, entry = object(rawShield, label);
+            shieldSum += number(entry.amount, `${label}.amount`, 0, hp.maxHp * .4 + tolerance(hp.maxHp));
+            integer(entry.untilTick, `${label}.untilTick`);
+            const source = reference(entry.sourceId, `${label}.sourceId`, new Set(refs.units.keys()));
+            const sourceSkill = skill(entry.skillId, `${label}.skillId`);
+            check(refs.unitSkills.get(source).has(sourceSkill), label, '护盾来源未拥有对应技能');
+        }
+        close(shield, shieldSum, `${name}.shield`);
+        for (const [enemyId, at] of Object.entries(object(unit.reflectTicks, `${name}.reflectTicks`))) {
+            reference(enemyId, `${name}.reflectTicks`, refs.enemies);
+            integer(at, `${name}.reflectTicks.${enemyId}`, 0, tick);
+        }
+        for (const [j, item] of Array.from(array(unit.drainHistory, `${name}.drainHistory`).entries())) {
+            const label = `${name}.drainHistory[${j}]`, entry = object(item, label);
+            integer(entry.tick, `${label}.tick`, 0, tick);
+            number(entry.amount, `${label}.amount`, 0, hp.maxHp + tolerance(hp.maxHp));
+        }
+        for (const field of ['encouragedBy', 'auraTargetId'])
+            if (unit[field] !== undefined)
+                reference(unit[field], `${name}.${field}`, new Set(refs.units.keys()));
+    }
+    let deadEnemies = 0;
+    for (const [i, raw] of Array.from(enemies.entries())) {
+        const name = `敌人[${i}]`, enemy = object(raw, name), kind = text(enemy.kind, `${name}.kind`);
+        check(own(data_1.ENEMIES, kind), name, '敌人类型未知');
+        point(enemy, name);
+        const hp = health(enemy, name);
+        if (!hp.alive)
+            deadEnemies++;
+        // A leaked enemy is inactive but retains HP; one movement tick may overshoot the route.
+        for (const field of ['attack', 'armor', 'resist', 'speed', 'range', 'distance'])
+            number(enemy[field], `${name}.${field}`);
+        number(enemy.interval, `${name}.interval`, Number.MIN_VALUE);
+        integer(enemy.leak, `${name}.leak`, 0, CORE_HEALTH_V1);
+        for (const field of ['nextAttackTick', 'actionUntilTick', 'attackCount', 'controlWindowUntilTick', 'controlCount'])
+            integer(enemy[field], `${name}.${field}`);
+        bool(enemy.summoned, `${name}.summoned`);
+        statuses(enemy.statuses, `${name}.statuses`, refs);
+        if (enemy.blockedBy !== undefined)
+            reference(enemy.blockedBy, `${name}.blockedBy`, new Set(refs.units.keys()));
+    }
+    const spawns = array(s.spawns, '出怪计划');
+    for (const [i, raw] of Array.from(spawns.entries())) {
+        const name = `出怪计划[${i}]`, spawn = object(raw, name), kind = text(spawn.kind, `${name}.kind`);
+        check(own(data_1.ENEMIES, kind), name, '敌人类型未知');
+        number(spawn.time, `${name}.time`);
+        number(spawn.hpScale, `${name}.hpScale`, Number.MIN_VALUE);
+        number(spawn.attackScale, `${name}.attackScale`, 0);
+    }
+    const spawnCursor = integer(s.spawnCursor, '出怪位置', 0, spawns.length);
+    check(enemies.length >= spawnCursor, '出怪位置', '超过已生成敌人数量');
+    integer(s.nextEnemyId, '下一个敌人编号', enemies.length + 1);
+    const kills = integer(s.kills, '击杀数', 0, enemies.length), leaked = integer(s.leaked, '漏怪数', 0, enemies.length);
+    check(kills + leaked === deadEnemies, '敌人计数', '与当前敌人状态不一致');
+    if (status === 'won')
+        check(spawnCursor === spawns.length && deadEnemies === enemies.length, '胜利状态', '仍有未完成的敌人');
+    const queuedUnits = new Set();
+    for (const [i, raw] of Array.from(array(s.commands, '技能指令', units.length).entries())) {
+        const name = `技能指令[${i}]`, command = object(raw, name);
+        check(command.type === 'cast', name, '指令类型未知');
+        const unitId = reference(command.unitId, `${name}.unitId`, new Set(refs.units.keys()));
+        const id = skill(command.skillId, `${name}.skillId`);
+        check(!queuedUnits.has(unitId), name, '同一个体存在重复指令');
+        queuedUnits.add(unitId);
+        check(refs.unitSkills.get(unitId).has(id) && data_1.SKILL_BY_ID[id].active, name, '主动技能不属于该个体');
+    }
+    const nextEventId = integer(s.nextEventId, '下一个事件编号', 1);
+    let previousEventId = 0;
+    for (const [i, raw] of Array.from(array(s.events, '表现事件', 4096).entries())) {
+        const name = `表现事件[${i}]`, event = object(raw, name), id = integer(event.id, `${name}.id`, 1, nextEventId - 1);
+        check(id > previousEventId, name, '事件编号重复或顺序错误');
+        previousEventId = id;
+        integer(event.tick, `${name}.tick`, 0, tick);
+        const type = text(event.type, `${name}.type`);
+        check(EVENT_KINDS.has(type), name, '事件类型未知');
+        if (event.sourceId !== undefined)
+            reference(event.sourceId, `${name}.sourceId`, refs.entities);
+        if (event.targetId !== undefined)
+            reference(event.targetId, `${name}.targetId`, refs.entities);
+        if (event.skillId !== undefined)
+            skill(event.skillId, `${name}.skillId`);
+        if (event.amount !== undefined)
+            number(event.amount, `${name}.amount`);
+        if (event.x !== undefined || event.z !== undefined)
+            point(event, name);
+        for (const field of ['critical', 'secondary'])
+            if (event[field] !== undefined)
+                bool(event[field], `${name}.${field}`);
+        if (event.effect !== undefined)
+            text(event.effect, `${name}.effect`, true);
+        if (type !== 'waveEnd')
+            check(event.sourceId !== undefined, name, '缺少来源个体');
+        if (['attack', 'heal', 'damage', 'defeat', 'shield', 'control'].includes(type))
+            check(event.targetId !== undefined, name, '缺少目标个体');
+        if (['heal', 'damage', 'leak', 'waveEnd', 'shield', 'control'].includes(type))
+            check(event.amount !== undefined, name, '缺少效果数值');
+    }
+}

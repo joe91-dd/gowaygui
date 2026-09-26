@@ -1,0 +1,36 @@
+{
+  "id": "red-2",
+  "name": "猩红章鱼主教",
+  "tier": 4,
+  "index": 39,
+  "base": 33,
+  "key": "boss-39",
+  "ability": "frost",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 36104,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-33",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/3042abbeda56de6842d5ce9e5a0f5ff229ec1b17115c0d8b2f96a8cbb02c84b5_Squidle.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.2
+}

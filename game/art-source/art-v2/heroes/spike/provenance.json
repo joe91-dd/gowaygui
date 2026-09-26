@@ -1,0 +1,24 @@
+{
+  "asset": "game/assets/resources/art-v2/hero-spike.png",
+  "stableGameplaySpeciesId": "spike",
+  "visualCharacter": "叶灵 / standing leaf archer",
+  "generator": "built-in image_gen",
+  "reference": "C:/Users/Administrator/Desktop/龟/04_五角色正式设定.png.png",
+  "referenceRole": "User-approved first-column character, inspected before generation",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a086f7-e260-77a3-94db-453b9de0c3cc/exec-8367d473-713e-4bad-b95f-3b2124b35301.png",
+  "sha256": "ead486dba9ea9086c1c156a68ae58507488bba2135b60f5d834176d2df8d426c",
+  "requestedDimensions": [1024,1024],
+  "actualDimensions": [1254,1254],
+  "mode": "RGBA",
+  "alphaRange": [0,255],
+  "fullyTransparentPixelCount": 1027537,
+  "alphaAtExteriorSamples": 0,
+  "alpha8BoundsXYWH": [159,54,1015,1119],
+  "visualInspection": "Single standing full-body leaf archer, both feet and full bow visible; green leaf hood and cape, amber eyes, leather bindings, golden-green turtle skin. No base, UI or text.",
+  "notes": [
+    "This is a 2D full-body UI portrait, not a rigged or animated 3D model.",
+    "Two reference edit attempts were rejected because they produced RGB files with baked checkerboards. Final accepted output was regenerated through image_gen and its actual alpha inspected.",
+    "Tool returned 1254 square despite the requested 1024; preserved original pixels without resampling or pixel editing.",
+    "The existing species ID spike is intentionally retained; no gameplay data or species mapping code changed in this asset task."
+  ]
+}

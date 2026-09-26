@@ -1,0 +1,11 @@
+Use case: stylized-concept.
+Asset type: ONE horizontal sprite atlas of five active skill icon tiles for the original fantasy island turtle game 哥喂龟. This is a production game texture, not a UI mockup.
+Canvas requested exactly 1920 x 640 pixels, landscape 3:1. Real transparent PNG alpha surrounding tiles. Exactly FIVE square icon tiles in ONE horizontal row. Tile boxes: [112,160,320,320], [456,160,320,320], [800,160,320,320], [1144,160,320,320], [1488,160,320,320]. Their centers are all y=320. All five tiles the same size and straight-on. Leave actual transparent gaps around every tile; do not crop any tile.
+Tile style: near-black midnight-navy square background, small beveled clipped corners, narrow polished silver stone rim, one crisp luminous skill illustration filling 75% of the central area. Premium bright stylized 3D fantasy game icons, saturated jewel-like color and excellent readability at 48px, restrained tiny sparks, clean strong silhouette, no busy details.
+From LEFT to RIGHT, exactly:
+1. LEAF ARROWS: three sharp bright green magical leaf arrowheads racing diagonally upward, leaf veins visible, green-white luminous trails. Archer attack.
+2. ROCK SHIELD: a simple central gold-edged shield made of six to eight dark gray rock plates, warm amber golden defensive glow behind it. Tank defense.
+3. WATER VORTEX: a powerful clear sapphire blue and bright cyan spiral of water curling clockwise toward a dark center, white water glints. Mage spell.
+4. HEALING LANTERN: one glowing warm-gold hanging lantern with simple bronze structure, bright pale golden light and two gentle concentric healing rings, soft golden halo. No cross or medical emblem.
+5. ANCHOR WAVE: one strong silver-cyan sea anchor, recognizable round eye, upright stem and two symmetric curved flukes, a blue wave sweeping behind its lower half, bright aqua glow. Control skill.
+Exact count five, exact sequence, one tile per concept. Do not create a sixth icon or large auto button. NO text, NO letters, NO numbers, NO labels, NO cooldown, NO mana cost, NO UI menus, NO rune writing, NO logo, NO watermark, NO character faces, NO landscape, NO checker pattern. Only the five polished square icon sprites on real transparent background.

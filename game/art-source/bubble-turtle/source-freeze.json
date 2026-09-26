@@ -1,0 +1,278 @@
+{
+  "status": "Logical c01-c02 source byte freeze after own QA and parent shape review; final Cocos appearance pending.",
+  "created_utc": "2026-09-08T12:44:09.171190+00:00",
+  "file_count": 67,
+  "files": {
+    "game/art-source/bubble-turtle/candidate-01/atlas-parameters.json": {
+      "sha256": "cf6f8de29b573b94df62dc393e205b1ff384386f56318c029885aec041c2d043",
+      "bytes": 1585
+    },
+    "game/art-source/bubble-turtle/candidate-01/bubble-turtle-review-scene.blend": {
+      "sha256": "da35ba14273094ab7a58a09695b49c8266d7e7d2f224d7e7621cdcf5be28bb6d",
+      "bytes": 6401376
+    },
+    "game/art-source/bubble-turtle/candidate-01/bubble-turtle.blend": {
+      "sha256": "bc13de6672948d0cae50499e759f2c287c67a941aa56946ecb7aa7cc82974fe0",
+      "bytes": 6361893
+    },
+    "game/art-source/bubble-turtle/candidate-01/candidate-manifest.json": {
+      "sha256": "6972418751efc1c9c80158336f01dd3f994fe77abd3169711312be9411b30c0e",
+      "bytes": 25208
+    },
+    "game/art-source/bubble-turtle/candidate-01/inputs/authored-c12b-foundation.blend": {
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+      "bytes": 7042585
+    },
+    "game/art-source/bubble-turtle/candidate-01/inputs/authored_mesh_atlas_helpers.py": {
+      "sha256": "9bde104fde65d743c26d796556f257eed0f253f1d9b536b2345dd680daefd21b",
+      "bytes": 26270
+    },
+    "game/art-source/bubble-turtle/candidate-01/inputs/provenance.json": {
+      "sha256": "85f7ea69a62606a1e3ad0e4911d84f3e5c9bd0c3482f09ab6ee9ba42bd853e40",
+      "bytes": 783
+    },
+    "game/art-source/bubble-turtle/candidate-01/manual-review.json": {
+      "sha256": "ce477305d7aab2d700de4f157447559f59c353d6fa8cd2685d36e5b5446a998b",
+      "bytes": 1602
+    },
+    "game/art-source/bubble-turtle/candidate-01/README.md": {
+      "sha256": "b29c383451b29cf90adb83c59d8e72a2055796cf589aa5e282086336c3ee1139",
+      "bytes": 3618
+    },
+    "game/art-source/bubble-turtle/candidate-01/render-front.png": {
+      "sha256": "2e4c9d717aca4fe4bf19b4ad7cc1a7ad7170dbedc4f2dcfe93ef67894876946c",
+      "bytes": 606954
+    },
+    "game/art-source/bubble-turtle/candidate-01/render-three-quarter.png": {
+      "sha256": "67324c9790386292900b4cb7d00e5b4b271731d3df1ed22b502b4888d3d49245",
+      "bytes": 607915
+    },
+    "game/art-source/bubble-turtle/candidate-01/textures/bubble-colour.png": {
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "bytes": 972370
+    },
+    "game/art-source/bubble-turtle/candidate-01/textures/bubble-roughness.png": {
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "bytes": 22011
+    },
+    "game/art-source/bubble-turtle/candidate-02/atlas-parameters.json": {
+      "sha256": "cf6f8de29b573b94df62dc393e205b1ff384386f56318c029885aec041c2d043",
+      "bytes": 1585
+    },
+    "game/art-source/bubble-turtle/candidate-02/bubble-turtle-review-scene.blend": {
+      "sha256": "ce0924e429d537069c99f8b4c28cd42596c8956779034d3be4e0b932c123716d",
+      "bytes": 6412296
+    },
+    "game/art-source/bubble-turtle/candidate-02/bubble-turtle.blend": {
+      "sha256": "e1e84485d53e76a04de7d6995655f78f845e3b1044b443da55f9a277383a5414",
+      "bytes": 6372813
+    },
+    "game/art-source/bubble-turtle/candidate-02/bubble_atlas_rebuild.py": {
+      "sha256": "4f85618336d278258ba08a700388411c0f1f330fc917a127a54c7666680e25ea",
+      "bytes": 1403
+    },
+    "game/art-source/bubble-turtle/candidate-02/build_runtime_lod.py": {
+      "sha256": "789535b9461df6e81aa9fb4c7eb7595e73673fd37b8687b04e2c4cbf9d34d9c4",
+      "bytes": 13574
+    },
+    "game/art-source/bubble-turtle/candidate-02/candidate-manifest.json": {
+      "sha256": "c56aa44f1d8da3631976481c2b0b97df54e25e19ab3218dddbd98fb9ab5d2cb4",
+      "bytes": 27602
+    },
+    "game/art-source/bubble-turtle/candidate-02/freeze_sources.py": {
+      "sha256": "d9db0724e8d41cce60dd469c0c0bd500466cfe7218a7bed20888558586da585f",
+      "bytes": 2976
+    },
+    "game/art-source/bubble-turtle/candidate-02/inputs/authored-c12b-foundation.blend": {
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+      "bytes": 7042585
+    },
+    "game/art-source/bubble-turtle/candidate-02/inputs/authored_mesh_atlas_helpers.py": {
+      "sha256": "9bde104fde65d743c26d796556f257eed0f253f1d9b536b2345dd680daefd21b",
+      "bytes": 26270
+    },
+    "game/art-source/bubble-turtle/candidate-02/inputs/provenance.json": {
+      "sha256": "e14a7de2badd03d64c0d8302b138a84e84e8dd72c77c90b87222bb151b3834f0",
+      "bytes": 1086
+    },
+    "game/art-source/bubble-turtle/candidate-02/inspect_export_payload.py": {
+      "sha256": "db8563953f8c03160f1078c2de27e8ac15b451bb4fceb08582d31ac7db837660",
+      "bytes": 3585
+    },
+    "game/art-source/bubble-turtle/candidate-02/manual-review.json": {
+      "sha256": "18641afc44bd5825cd1fce90134bdf30f6f579a66e8f10ac4cf599baa4ac2fba",
+      "bytes": 1863
+    },
+    "game/art-source/bubble-turtle/candidate-02/README.md": {
+      "sha256": "404309ede6645c59134e87ed23aa4104acc4fb5b5354d8f733a1a40c0f5d603c",
+      "bytes": 2505
+    },
+    "game/art-source/bubble-turtle/candidate-02/record_runtime_handoff.py": {
+      "sha256": "ba9d8b77b0aa1c1a5bc5b252e25d707016bf059fe4cf1bb2a98b345aa1dee87f",
+      "bytes": 5269
+    },
+    "game/art-source/bubble-turtle/candidate-02/render-front.png": {
+      "sha256": "ee7f4fbb83f6150fb8c576cbba1853c1b5a8dea9e6b628fa58482bef76b0a9f1",
+      "bytes": 603971
+    },
+    "game/art-source/bubble-turtle/candidate-02/render-three-quarter.png": {
+      "sha256": "bd8c3d2c4da7ec069f427c771937cd800814775ac2edd734951abc099ca9c12b",
+      "bytes": 602822
+    },
+    "game/art-source/bubble-turtle/candidate-02/review_runtime_lod.py": {
+      "sha256": "0c427186d073de9338f2f828ccc6069848f835358741b73414656702ebba927c",
+      "bytes": 12130
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-attack-08-side.png": {
+      "sha256": "82c3d76d65681c953821359755c6cd8ce39322607b5c68b5bd7596400144c05e",
+      "bytes": 591920
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-attack-13-three-quarter.png": {
+      "sha256": "71efb15bfc81d94b19a4e3ad2cae45dba72a8b3ed7f90906836f4fd780261003",
+      "bytes": 604649
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-clearance.json": {
+      "sha256": "99fe8323d51159fe8481d5b4670d0f3599bc0d00e7dbe7a852af4348fa06ce8e",
+      "bytes": 43606
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-fusion-23-three-quarter.png": {
+      "sha256": "9473c1edc9e540a743e5346792a56f4a671f8dc067bee381ca621a3fd714f775",
+      "bytes": 607037
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-hit-04-three-quarter.png": {
+      "sha256": "4d32471965a94df6855862664de9ac84a991160231ba51f2ae7b708c1f336aa0",
+      "bytes": 603534
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-parameters.json": {
+      "sha256": "f10a4184fec7a974582fa466b98759310a1721a091bdf7738611a895ac596184",
+      "bytes": 3837
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-rest-36-three-quarter.png": {
+      "sha256": "8fc8c5be498cd4893b199e2b0ff63222ca7bd660162bf5ced562a7890b027b28",
+      "bytes": 600873
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-skill-16-three-quarter.png": {
+      "sha256": "fbda39a61841fabe513acff697675f361a04f772fdbd34df9c1aa63d9f074660",
+      "bytes": 606448
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/animation-skill-22-three-quarter.png": {
+      "sha256": "66c6e4575fd56fabece3234befb593ec6d4c13470bb21f96a5bd100f203c225d",
+      "bytes": 605226
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/atlas-parameters.json": {
+      "sha256": "cf6f8de29b573b94df62dc393e205b1ff384386f56318c029885aec041c2d043",
+      "bytes": 1585
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-lod-parts.blend": {
+      "sha256": "486bc7031acf36553871b3b76740dda9f8679d7dfa908c3169af4b05a1c15fcc",
+      "bytes": 4971160
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-lod-review-scene.blend": {
+      "sha256": "d03eefbff77b4ccdba6f68b6e6f63c0fa5a1ccc83c4bb5e2de29db1aadbab34f",
+      "bytes": 5261430
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle-runtime.blend": {
+      "sha256": "a4ae0721539349a1d2277e17480f5fe6b1975e64758c5232597f57a68efe2ec0",
+      "bytes": 5513015
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/bubble-turtle.glb": {
+      "sha256": "4ee2a024aadffb1718a8666506fbfec3f28a0e19f752e7631a632a3d166c8323",
+      "bytes": 2162856
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-colour.png": {
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "bytes": 972370
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-roughness.png": {
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "bytes": 22011
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export/bubble-turtle.fbx": {
+      "sha256": "76a4baef0eec5d1473c2b866ae3599455082c72549b89da5a08cd08105dac398",
+      "bytes": 2573804
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/export-payload-check.json": {
+      "sha256": "e8e79bce42bad6ee470d97b0660cc1cea399b9826e584602790c773c087592c8",
+      "bytes": 1023
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/handoff-manifest.json": {
+      "sha256": "738e058ad9e34124244d5ee9a2ffba16022858304a7b43954b794b5e4862991b",
+      "bytes": 9141
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/inputs/authored_bubble_c02_source.py": {
+      "sha256": "b4a5e7020b92dcf94d2e045ddbc9a8996f102294e8dc9b82d4be92e85e0749cb",
+      "bytes": 18375
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/inputs/authored_mesh_atlas_helpers.py": {
+      "sha256": "9bde104fde65d743c26d796556f257eed0f253f1d9b536b2345dd680daefd21b",
+      "bytes": 26270
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/lod-manifest.json": {
+      "sha256": "03aa9397868b5f352f9e43904c3d1df52d37f29b49dc65b53953c8177f9519b3",
+      "bytes": 42598
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/manual-review.json": {
+      "sha256": "514f4a340cd716ee1124dc7b5c1bc8e1bbdb26ca96de3431d06f5f968fd9d946",
+      "bytes": 4003
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/README.md": {
+      "sha256": "1e4d658290212eea926bdb4906fe8e488aafc1b52b3e022fc3eab0bd11ca0e8f",
+      "bytes": 1945
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/render-battle.png": {
+      "sha256": "9936f6202e8c4ba828e0ac00d4be45d8f9fa339e5bddb37a2c3953808d116d5c",
+      "bytes": 590775
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/render-front.png": {
+      "sha256": "fac648d5b0751fe71b7d9c12a2878f05f87f561e66406bb50560b8589cd63b9d",
+      "bytes": 604511
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/render-latest-job.json": {
+      "sha256": "0da6b52f4cd7168f7664388b246f8e71c01ae1fdf9fb6354a63bf9b2c5d67812",
+      "bytes": 551
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/render-side.png": {
+      "sha256": "bc897dedc0ee3cc581f1604f5ced4fe8183da4227247ce3d84e311e75ec90983",
+      "bytes": 591000
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/render-three-quarter.png": {
+      "sha256": "6efbf986746d029ade015feda8536c3137182dc3ced33fb682f8663998f1ca1b",
+      "bytes": 602961
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/round-trip-check.json": {
+      "sha256": "a28704d8be7ab752a312a005cbee606afeea443cc59a208f781b68f6b4ced93f",
+      "bytes": 5559
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/technical-complete.json": {
+      "sha256": "4cb1147a5fa8d7dd6beb24e1a1ffe10885322986771e85a581cb73bb1d29a536",
+      "bytes": 225
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/verification/atlas-rebuild/bubble-colour.png": {
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "bytes": 972370
+    },
+    "game/art-source/bubble-turtle/candidate-02/runtime-candidate/verification/atlas-rebuild/bubble-roughness.png": {
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "bytes": 22011
+    },
+    "game/art-source/bubble-turtle/candidate-02/textures/bubble-colour.png": {
+      "sha256": "f1608bc2e5fd381bd41170e312ac26c718e2872ea3a0346a7dafab738f1e9711",
+      "bytes": 972370
+    },
+    "game/art-source/bubble-turtle/candidate-02/textures/bubble-roughness.png": {
+      "sha256": "1578cd9381117329fb20c2b83fe9a46b78bccff8b0f82e6f547674b10484bcdb",
+      "bytes": 22011
+    },
+    "game/art-source/build_bubble_turtle_candidate01.py": {
+      "sha256": "1c586ccedc3eb2c3573fe96169c927f567f82ba7f74974f681373d13ba0c39c9",
+      "bytes": 16849
+    },
+    "game/art-source/build_bubble_turtle_candidate02.py": {
+      "sha256": "b4a5e7020b92dcf94d2e045ddbc9a8996f102294e8dc9b82d4be92e85e0749cb",
+      "bytes": 18375
+    }
+  },
+  "excluded": "Python bytecode caches. Global promotion-manifest.json is an external handoff status record and is not part of frozen c01/c02 sources.",
+  "os_readonly_attributes_changed": false,
+  "runtime_written": false
+}

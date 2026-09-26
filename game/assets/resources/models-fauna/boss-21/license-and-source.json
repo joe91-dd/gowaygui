@@ -1,0 +1,36 @@
+{
+  "id": "blue-7",
+  "name": "霜牙炮总管",
+  "tier": 1,
+  "index": 21,
+  "base": 49,
+  "key": "boss-21",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 49432,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-49",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/7eb05db681c175397362b118197f70ad7c654ef87a689efea29c1f32d8c488a0_Yeti.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24692,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 13.3
+}

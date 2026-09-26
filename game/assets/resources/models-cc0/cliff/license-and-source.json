@@ -1,0 +1,23 @@
+{
+  "name": "Cliff 2",
+  "group": "pirates",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\pirates\\cliff-2-bb69e7\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Pirate Kit/Rock/7b5433a2694bec24e898fd1905ac0a3e167deedff77c9affbdb6d515352f497c_Cliff 2.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "14129883333465f20bfb110136bda580e05c99ab2a20ecb9ff7d2ce9f40328c5",
+  "bytes": 451836,
+  "animations": 0,
+  "runtimeKey": "cliff",
+  "height": 1.6,
+  "runtimeAnimations": [],
+  "bones": 0,
+  "triangles": 19144,
+  "changes": [
+    "Normalized scale and ground pivot",
+    "Stable animation names",
+    "Rough coastal materials; source colours retained"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "status": "Leaf c02 three-view candidate; parent review pending; not promoted",
+  "views": [
+    {
+      "file": "render-front.png",
+      "observed": "Individual surfaces are rounder and fuller than c01; lower hem is staggered. Upper leaves still read partly as round pads, with leaf-tip direction not as clear as A4."
+    },
+    {
+      "file": "render-three-quarter.png",
+      "observed": "Real relief and lower-layer overlap shadows are stronger; some yellow-green lower leaf tips read clearly. Some upper tips are visually absorbed by adjacent leaf bellies."
+    },
+    {
+      "file": "render-side.png",
+      "observed": "Shorter, plump leaf outlines and lower leaf points are visible; the natural white blossom remains visible. Upper dome still has a rounded-patch appearance."
+    }
+  ],
+  "fixed_scope_checks": {
+    "c01_original_bytes_preserved": true,
+    "non_leaf_meshes_exactly_matched": 68,
+    "white_blossom_mesh_parts_exactly_matched": 4,
+    "face_eye_and_body_geometry_uv_weights_unchanged": true,
+    "action_source_unchanged": true,
+    "lighting_and_cameras_unchanged": true,
+    "non_leaf_palette_tiles_unchanged": true,
+    "roughness_png_same_as_c01": true
+  },
+  "statistics": {
+    "triangles": 28899,
+    "vertices": 15069,
+    "bones": 10,
+    "materials": 1,
+    "source_parts": 116,
+    "layered_leaves": 47,
+    "fbx_sha256": "a8610fe8d010b0fcc1b6d16e371f509302fa6e8af42df6a4de82f9f816fee7bb",
+    "source_blend_sha256": "497b43e76520b70d3caec9192e1ee13e84930661d7266029bd58dc31208a694e",
+    "atlas_sha256": {
+      "leaf-colour.png": "cfd607ce955c68af8cc0cd2a8e93b807d7a4335645349a6921cca56a486c4125",
+      "leaf-roughness.png": "547e91c609c8e79518b1218336daf9f878fa041e9a1a9e453f15e78fb1b01269"
+    },
+    "proportions": {
+      "head": {
+        "min": [
+          -0.6048617959022522,
+          -1.7167847156524658,
+          0.2567983567714691
+        ],
+        "max": [
+          0.6048617959022522,
+          -0.9013653993606567,
+          1.0318305492401123
+        ],
+        "dimensions": [
+          1.2097235918045044,
+          0.8154193162918091,
+          0.7750321924686432
+        ]
+      },
+      "shell_main": {
+        "min": [
+          -1.0149999856948853,
+          -1.1910381317138672,
+          0.3499223589897156
+        ],
+        "max": [
+          1.0149999856948853,
+          1.1913036108016968,
+          1.5617061853408813
+        ],
+        "dimensions": [
+          2.0299999713897705,
+          2.382341742515564,
+          1.2117838263511658
+        ]
+      },
+      "whole": {
+        "min": [
+          -1.1237202882766724,
+          -1.7167847156524658,
+          0.0005976539687253535
+        ],
+        "max": [
+          1.1237202882766724,
+          1.273627758026123,
+          1.5617061853408813
+        ],
+        "dimensions": [
+          2.2474405765533447,
+          2.990412473678589,
+          1.561108531372156
+        ]
+      },
+      "head_to_main_shell": 0.5959229600265995
+    }
+  },
+  "source_evidence": {
+    "leaf_meshes": 47,
+    "seed": 81207,
+    "raster_texture_inputs": [],
+    "packed_atlases": 2,
+    "c01_white_blossom_snapshot": "inputs/authored-leaf-c01.blend",
+    "c01_snapshot_sha256": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df"
+  },
+  "render": {
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      800,
+      680
+    ],
+    "generator_exit_code": 0,
+    "scope_check_exit_code": 0,
+    "all_three_images_actually_viewed": true,
+    "blender_processes_finished": true
+  },
+  "remaining_aesthetic_issue": "Short plump volume improved, but leaf identity/direction is still weaker on the upper carapace than A4. Increasing gloss or pigment contrast is not the next solution; any further change should address which leaf tip overlaps which neighbour, subject to parent review.",
+  "full_fbx_reimport_or_half_frame_qa_performed": false,
+  "runtime_promotion": false,
+  "cocos_started": false
+}

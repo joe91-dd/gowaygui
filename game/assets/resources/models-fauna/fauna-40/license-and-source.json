@@ -1,0 +1,43 @@
+{
+  "key": "fauna-40",
+  "name": "刺甲荆妖 · 战斗形态",
+  "kind": "runner",
+  "height": 2,
+  "flying": false,
+  "sourceName": "Cactoro",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\cactoro-8c39ad\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/ca0363bb3934630ef5bfb0b76a605db43a00b7d4f9373b3f934e63a932b94971_Cactoro.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "af335051fd0f4b6f821f594c54afcd7c7e77b5105d47a8918f622447931ec8b0",
+  "bytes": 1386188,
+  "animations": 14,
+  "displayName": "刺甲荆妖 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 48448,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-40",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 7.2
+}

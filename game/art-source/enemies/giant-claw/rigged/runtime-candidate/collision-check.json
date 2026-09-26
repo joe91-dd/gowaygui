@@ -1,0 +1,636 @@
+{
+  "status": "pass",
+  "method": "Evaluated skinned source, BVH triangle surface overlap on six claw/face safety pairs and six neighboring leg pairs, every half-frame. Joined parts intentionally overlap at palm/shoulder/body roots and are excluded. This is not an exhaustive physics or containment solver.",
+  "baseline_surface_pairs": {
+    "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+    "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+    "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+    "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+    "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 44,
+    "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+    "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+    "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 44,
+    "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+    "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+  },
+  "baseline_visible_leg_crossings": {
+    "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+    "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+    "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+    "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+    "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 31,
+    "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+    "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+    "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 32,
+    "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+    "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+  },
+  "baseline_unclassified_leg_contacts": {
+    "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+    "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+    "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+    "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+    "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+    "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 0,
+    "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+    "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 0,
+    "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 0,
+    "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+    "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 0
+  },
+  "leg_location_method": "Actual triangle edge/triangle intersection points must lie at least 1mm inside one of body, upper shell, or belly closed surfaces (nearest oriented normal). Coplanar contacts use both triangle centroids and are conservative; any unclassified contact is separately reported.",
+  "clips": {
+    "idle": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 44,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 44,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "first_increased_frame": {},
+      "maximum_visible_leg_crossings": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 31,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 32,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "maximum_unclassified_leg_contacts": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 0
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    },
+    "walk": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 48,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 22,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 48,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 20
+      },
+      "first_increased_frame": {
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 1.0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 1.0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 8.0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 13.0
+      },
+      "maximum_visible_leg_crossings": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 34,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 17,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 37,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 15
+      },
+      "maximum_unclassified_leg_contacts": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 0
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6008263826370239,
+            -0.14199279248714447,
+            0.36700373888015747
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6066434979438782,
+            0.20868627727031708,
+            0.36156508326530457
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7014634013175964,
+            -0.21804727613925934,
+            0.36674100160598755
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 11.0,
+          "position": [
+            0.6406190395355225,
+            0.2048168182373047,
+            0.33413195610046387
+          ]
+        }
+      }
+    },
+    "attack": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 46,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 20,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 44,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 20
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 3.0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 5.5,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 5.5
+      },
+      "maximum_visible_leg_crossings": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 32,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 33,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "maximum_unclassified_leg_contacts": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 0
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    },
+    "hit": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 46,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 46,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 2.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 2.5
+      },
+      "maximum_visible_leg_crossings": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 33,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 35,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "maximum_unclassified_leg_contacts": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 0,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 0,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 0,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 0
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    },
+    "exit": {
+      "maximum_overlapping_triangle_pairs": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 46,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 46,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "first_increased_frame": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 14.5,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 14.5
+      },
+      "maximum_visible_leg_crossings": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 39,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 41,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "maximum_unclassified_leg_contacts": {
+        "Dominant_fixed_round_finger / Dominant_moving_round_finger": 0,
+        "Dominant_giant_palm / Wide_soft_boss_muzzle": 0,
+        "Dominant_giant_palm / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Spherical_boss_eye_R": 0,
+        "Dominant_moving_round_finger / Wide_soft_boss_muzzle": 0,
+        "Minor_round_palm / Wide_soft_boss_muzzle": 0,
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 34,
+        "leg_L2_weight_bearing_leg / leg_L3_weight_bearing_leg": 0,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 37,
+        "leg_R2_weight_bearing_leg / leg_R3_weight_bearing_leg": 0,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    }
+  },
+  "warnings": [
+    {
+      "clip": "walk",
+      "visible_neighbor_leg_crossings_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 34,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 17,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 37,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 15
+      },
+      "unclassified_neighbor_contacts_above_rest": {},
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6008263826370239,
+            -0.14199279248714447,
+            0.36700373888015747
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6066434979438782,
+            0.20868627727031708,
+            0.36156508326530457
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7014634013175964,
+            -0.21804727613925934,
+            0.36674100160598755
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 11.0,
+          "position": [
+            0.6406190395355225,
+            0.2048168182373047,
+            0.33413195610046387
+          ]
+        }
+      }
+    },
+    {
+      "clip": "attack",
+      "visible_neighbor_leg_crossings_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 32,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 33
+      },
+      "unclassified_neighbor_contacts_above_rest": {},
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    },
+    {
+      "clip": "hit",
+      "visible_neighbor_leg_crossings_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 33,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 35
+      },
+      "unclassified_neighbor_contacts_above_rest": {},
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    },
+    {
+      "clip": "exit",
+      "visible_neighbor_leg_crossings_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 39,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 41
+      },
+      "unclassified_neighbor_contacts_above_rest": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": 34,
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": 12,
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": 37,
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": 12
+      },
+      "outside_examples": {
+        "leg_L1_weight_bearing_leg / leg_L2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.5923410654067993,
+            -0.1574864685535431,
+            0.3840809762477875
+          ]
+        },
+        "leg_L3_weight_bearing_leg / leg_L4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            -0.6301813125610352,
+            0.19816410541534424,
+            0.33293721079826355
+          ]
+        },
+        "leg_R1_weight_bearing_leg / leg_R2_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.7005263566970825,
+            -0.18111124634742737,
+            0.36095768213272095
+          ]
+        },
+        "leg_R3_weight_bearing_leg / leg_R4_weight_bearing_leg": {
+          "frame": 1.0,
+          "position": [
+            0.6416242122650146,
+            0.20096085965633392,
+            0.3325826823711395
+          ]
+        }
+      }
+    }
+  ]
+}

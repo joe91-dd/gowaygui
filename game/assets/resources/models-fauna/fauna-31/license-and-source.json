@@ -1,0 +1,43 @@
+{
+  "key": "fauna-31",
+  "name": "回旋风兽",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Hywirl",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\hywirl-b27410\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/17f3cd47d4ea968ec3a36a9bab8b1de8cb11bb179d1e62397a09d7896b591048_Hywirl.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "d0733a5e788e37e93d29034dfda158506fef80533d3c7627ae6c80ff2ff93f86",
+  "bytes": 680812,
+  "animations": 8,
+  "displayName": "回旋风兽",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 21632,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-31",
+  "triangles": 14168,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 5.3
+}

@@ -1,0 +1,5 @@
+const fs=require('node:fs'),path=require('node:path');
+const rate=44100,seconds=.48,samples=Math.ceil(rate*seconds),wav=Buffer.alloc(44+samples*2);
+wav.write('RIFF');wav.writeUInt32LE(wav.length-8,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(rate,24);wav.writeUInt32LE(rate*2,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(samples*2,40);
+let seed=71027,phase=0,filtered=0;for(let i=0;i<samples;i++){const t=i/rate,p=t/seconds;seed=(Math.imul(seed,1664525)+1013904223)>>>0;const noise=seed/2147483648-1;filtered+=.12*(noise-filtered);phase+=Math.PI*2*(75+310*Math.exp(-t*14))/rate;const env=Math.min(1,t/.006)*Math.pow(1-p,2.4);const value=env*(.36*Math.sin(phase)+.20*filtered+.08*(noise-filtered)*Math.exp(-t*12));wav.writeInt16LE(Math.round(Math.max(-1,Math.min(1,value))*32767),44+i*2);}
+const target=path.resolve(__dirname,'../assets/resources/audio/sfx_death.wav');fs.writeFileSync(target,wav);console.log(target);

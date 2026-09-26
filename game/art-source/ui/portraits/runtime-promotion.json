@@ -1,0 +1,66 @@
+{
+  "status": "promoted-exact-five-approved-PNGs",
+  "promotedAtUTC": "2026-09-08T13:32:50.726Z",
+  "approval": "Root viewed all five 384px images and explicitly authorized five-file runtime promotion.",
+  "sourceFreeze": {
+    "file": "game/art-source/ui/portraits/candidate-01/source-freeze.json",
+    "sha256": "c05ea2d965720efc8ba4f0016d655eeb6d9700c13d82509ec1e021614b092144",
+    "files": 27
+  },
+  "files": [
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-stone.png",
+      "target": "game/assets/resources/ui/portraits/portrait-stone.png",
+      "resourcePath": "ui/portraits/portrait-stone",
+      "bytes": 136544,
+      "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4",
+      "sourceSha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4",
+      "targetSha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4",
+      "alreadyIdentical": false
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-spike.png",
+      "target": "game/assets/resources/ui/portraits/portrait-spike.png",
+      "resourcePath": "ui/portraits/portrait-spike",
+      "bytes": 160876,
+      "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792",
+      "sourceSha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792",
+      "targetSha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792",
+      "alreadyIdentical": false
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-crystal.png",
+      "target": "game/assets/resources/ui/portraits/portrait-crystal.png",
+      "resourcePath": "ui/portraits/portrait-crystal",
+      "bytes": 152627,
+      "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b",
+      "sourceSha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b",
+      "targetSha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b",
+      "alreadyIdentical": false
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-leaf.png",
+      "target": "game/assets/resources/ui/portraits/portrait-leaf.png",
+      "resourcePath": "ui/portraits/portrait-leaf",
+      "bytes": 147421,
+      "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e",
+      "sourceSha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e",
+      "targetSha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e",
+      "alreadyIdentical": false
+    },
+    {
+      "source": "game/art-source/ui/portraits/candidate-01/portrait-bubble.png",
+      "target": "game/assets/resources/ui/portraits/portrait-bubble.png",
+      "resourcePath": "ui/portraits/portrait-bubble",
+      "bytes": 133637,
+      "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411",
+      "sourceSha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411",
+      "targetSha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411",
+      "alreadyIdentical": false
+    }
+  ],
+  "metaWritten": false,
+  "sourceFilesChanged": false,
+  "uiChanged": false,
+  "blenderStarted": false
+}

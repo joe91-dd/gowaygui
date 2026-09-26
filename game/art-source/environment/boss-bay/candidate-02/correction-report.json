@@ -1,0 +1,22 @@
+{
+  "status": "minimal-source-and-export-corrected",
+  "sourceCheck": {
+    "object": "Continuous_grass_island",
+    "facesReversed": 2304,
+    "positionsUvPairsMaterialsTransformsIdentical": true,
+    "explicitUpwardPostcondition": "all 2304 grass polygon normals local Z > .97"
+  },
+  "exportCheck": {
+    "object": "Ground",
+    "facesReversed": 2304,
+    "positionsUvPairsMaterialsTransformsIdentical": true,
+    "explicitUpwardPostcondition": "all 2304 grass polygon normals local Z > .97"
+  },
+  "routeSlotsBoundsUnchanged": true,
+  "totalTriangles": 55128,
+  "sourceSha256": "b3b4c80162de03ae231242c6395a7adcd79b259a7b30b22f4a8754397fdeb97c",
+  "fbxSha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+  "retainedDegenerates": "128 center-ring triangulation degenerates retained; no vertex or topology simplification.",
+  "runtimeModified": false,
+  "materialDoubleSidedWorkaround": false
+}

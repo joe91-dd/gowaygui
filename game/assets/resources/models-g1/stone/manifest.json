@@ -1,0 +1,90 @@
+{
+  "asset": "yandun",
+  "role": "stone",
+  "source": "AHOLO G1 / PRO generation",
+  "originalTriangles": 187548,
+  "runtimeTriangles": 187548,
+  "bones": 18,
+  "maxInfluences": 4,
+  "height": 2.5,
+  "weapon": null,
+  "clips": {
+    "idle": 4,
+    "walk": 1.067,
+    "attack": 0.933,
+    "attack2": 0.933,
+    "skill": 2.2,
+    "hit": 0.767,
+    "greeting": 2,
+    "rest": 2.167,
+    "exit": 1.6
+  },
+  "sockets": [
+    {
+      "name": "FX_Weapon_Core",
+      "bone": "chest",
+      "position": [
+        0,
+        0.03,
+        2.37
+      ]
+    },
+    {
+      "name": "FX_Crystal_Wrist_L",
+      "bone": "forearm.L",
+      "position": [
+        0.97,
+        -0.28,
+        1.07
+      ]
+    },
+    {
+      "name": "FX_Crystal_Foot_L",
+      "bone": "foot.L",
+      "position": [
+        0.37,
+        -0.36,
+        0.12
+      ]
+    },
+    {
+      "name": "FX_Crystal_Wrist_R",
+      "bone": "forearm.R",
+      "position": [
+        -0.97,
+        -0.28,
+        1.07
+      ]
+    },
+    {
+      "name": "FX_Crystal_Foot_R",
+      "bone": "foot.R",
+      "position": [
+        -0.37,
+        -0.36,
+        0.12
+      ]
+    },
+    {
+      "name": "FX_Chest",
+      "bone": "chest",
+      "position": [
+        0,
+        -0.29,
+        1.15
+      ]
+    }
+  ],
+  "faceGeometryReplaced": false,
+  "texturesRepainted": false,
+  "knownLimitations": [
+    "Generated triangulated topology; weights require extreme-pose visual review.",
+    "Facial expressions are the source sculpt, not a full facial blendshape rig."
+  ],
+  "coincidentWeightGroups": 43890,
+  "uvSeamWeightsUnified": true,
+  "neutralEquipmentUpright": true,
+  "gripSculpt": "Source palms and claw shapes retained",
+  "runtimeGeometry": "Full source geometry preserved to protect rigid shoulder armour; simplified variant rejected",
+  "runtimePath": "runtime-v2/yandun"
+}

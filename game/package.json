@@ -1,0 +1,18 @@
+{
+  "name": "gowaygui",
+  "uuid": "6e1f9489-aade-4a47-a69b-ad70e1287521",
+  "version": "0.1.0",
+  "creator": { "version": "3.8.8" },
+  "private": true,
+  "scripts": {
+    "build:web": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-web.ps1",
+    "build:server": "tsc -p tsconfig.server.json",
+    "typecheck": "tsc --noEmit -p tsconfig.modecheck.json",
+    "test": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/test-all.ps1",
+    "test:gait": "node tools/test-enemy-locomotion.cjs",
+    "serve": "node tools/serve-local.cjs",
+    "serve:static": "node tools/build-serve.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "typescript": "5.8.2" }
+}

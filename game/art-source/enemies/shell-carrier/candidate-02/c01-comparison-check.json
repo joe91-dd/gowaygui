@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "changed_meshes": [
+    "Large_carried_fan_shell"
+  ],
+  "unchanged_meshes": [
+    "Rounded_carrier_body",
+    "Cream_carrier_belly",
+    "Rounded_shell_hinge",
+    "leg_L1_curved_leg",
+    "leg_L2_curved_leg",
+    "leg_L3_curved_leg",
+    "leg_L4_curved_leg",
+    "leg_R1_curved_leg",
+    "leg_R2_curved_leg",
+    "leg_R3_curved_leg",
+    "leg_R4_curved_leg",
+    "Thick_short_arm_L",
+    "Heavy_round_pincer_palm_L",
+    "Heavy_fixed_finger_L",
+    "Heavy_moving_finger_L",
+    "Thick_short_arm_R",
+    "Heavy_round_pincer_palm_R",
+    "Heavy_fixed_finger_R",
+    "Heavy_moving_finger_R",
+    "Short_protected_eye_stalk_L",
+    "Protected_eye_socket_L",
+    "Spherical_painted_eye_L",
+    "Carrier_soft_brow_L",
+    "Short_protected_eye_stalk_R",
+    "Protected_eye_socket_R",
+    "Spherical_painted_eye_R",
+    "Carrier_soft_brow_R",
+    "Stubborn_small_smile",
+    "Subtle_cheek_L",
+    "Subtle_cheek_R"
+  ],
+  "comparison": "Exact vertex/index/UV/weight/binding/transform/material-slot data for all unchanged parts; exact bone and F-curve keyframe/handle data; exact material nodes; studio lighting/exposure unchanged.",
+  "rig_exactly_unchanged": true,
+  "five_actions_exactly_unchanged": true,
+  "material_nodes_exactly_unchanged": true,
+  "studio_lighting_exactly_unchanged": true,
+  "old_shell_bounds": [
+    [
+      -0.5432767868041992,
+      0.543276846408844
+    ],
+    [
+      0.019364550709724426,
+      0.3110582232475281
+    ],
+    [
+      0.4868508577346802,
+      1.157202124595642
+    ]
+  ],
+  "new_shell_bounds": [
+    [
+      -0.5432767868041992,
+      0.543276846408844
+    ],
+    [
+      0.019364550709724426,
+      0.3110582232475281
+    ],
+    [
+      0.4868508577346802,
+      1.157202124595642
+    ]
+  ],
+  "maximum_shell_bound_error_m": 0.0,
+  "atlas_bytes_unchanged": {
+    "carrier-colour.png": "3323f31e25680d4fab39ba29b758f3d0012f372bf7c4e148747c98132a12067f",
+    "carrier-roughness.png": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1"
+  }
+}

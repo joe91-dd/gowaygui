@@ -1,0 +1,92 @@
+{
+  "status": "offline-c02-source-frozen-awaiting-root-cocos-acceptance",
+  "recordedAtUtc": "2026-09-08T12:51:33.941754+00:00",
+  "actualImageReview": "Both overview and top-down opened with view_image; original road, five platforms, shoreline and pearl remain readable; green ground present.",
+  "changeBoundary": "2304 grass faces and corresponding normals reversed; other 24016 face index orders/normals identical, maximum unrelated normal delta zero. All positions/UV pairs/transforms/atlas bytes unchanged.",
+  "triangles": 55128,
+  "meshCount": 3,
+  "materialCount": 2,
+  "retainedDegenerateTriangles": 128,
+  "sourceOrigin": "Frozen own-project boss c01 editable and merged scene, no third-party game or stock assets.",
+  "runtimeFilesWrittenByThisSubtask": false,
+  "cocosStarted": false,
+  "runtimeAcceptance": "pending actual Cocos reimport/browser",
+  "files": {
+    "fix_upward_surface.py": {
+      "sha256": "1b00c14f1fe9b47a9bf7e16d0f01e29dace271dd59267c7ee99b7411fbf3044d",
+      "bytes": 5343
+    },
+    "prepare_correction.py": {
+      "sha256": "9244faf6db100f8349f6c659849cbdec4028b1d38785a365848f02e47713e19b",
+      "bytes": 1105
+    },
+    "verify_fbx_semantics.py": {
+      "sha256": "b0ab2b698e93dd0e30d44ef86cca9f6b48a995ebbb27711b3447fca0cca1f5a8",
+      "bytes": 5766
+    },
+    "finalize_correction.py": {
+      "sha256": "50dcd84422e708b4404cba6f8223cd6802dff23f0b89b2a4a1a224c8aad0aa06",
+      "bytes": 4234
+    },
+    "boss-bay.blend": {
+      "sha256": "b3b4c80162de03ae231242c6395a7adcd79b259a7b30b22f4a8754397fdeb97c",
+      "bytes": 11580709
+    },
+    "boss-bay.fbx": {
+      "sha256": "b47b3cde76f4f94ac1a3083aa4d4c5abfcca968bc61db0df357038130a39556a",
+      "bytes": 4274172
+    },
+    "boss-bay-review-scene.blend": {
+      "sha256": "20dbe45cb0155c876b0694f2a907ad8e13a16e4c61428ef8cb99921fcbb0a8e5",
+      "bytes": 6229562
+    },
+    "island-colour.png": {
+      "sha256": "47b2d8799e18e6fcb5af58ddd079dbe7bf934c175922a1f93d3a3b07066d700f",
+      "bytes": 2727591
+    },
+    "island-roughness.png": {
+      "sha256": "bd4f1cecf97a4da3f7199ee2117a2fc9242edcf7ebe24edbe248917846762e16",
+      "bytes": 40385
+    },
+    "c01-full-freeze.json": {
+      "sha256": "472ff43cfc91c4faf807081d43a4b87c127e80929dd5cc19676f8050d8033290",
+      "bytes": 7333
+    },
+    "correction-report.json": {
+      "sha256": "3f3b2b9d69f57bf6f04241717cd6e756161ed371cffb559188d16c9679690d54",
+      "bytes": 942
+    },
+    "environment-manifest.json": {
+      "sha256": "2adf27c35bdd0cb40e55c554125747c34cdaf13e291da8da3623dc995b05d08e",
+      "bytes": 3533
+    },
+    "fbx-semantic-check.json": {
+      "sha256": "b3f26cee9dcb03e9fa2cc29962914d56d1b46d7a96172047e331518a5c81ff51",
+      "bytes": 1554
+    },
+    "render_boss_views.py": {
+      "sha256": "46addff1074673ea2512dea074f129bcc690d36cb533454bbfd2792caf14a121",
+      "bytes": 2014
+    },
+    "render-battle-overview.png": {
+      "sha256": "6587fb1a3cbce390fea6fdf56d936d42cb2dc79439ea7a5ee0ee6774b6248fdc",
+      "bytes": 942553
+    },
+    "render-top-down.png": {
+      "sha256": "4c80e0161652a55751d0edf1c53c25d48c722d95db2a63dbb69f21278692ca8e",
+      "bytes": 933058
+    },
+    "render-report.json": {
+      "sha256": "740ef3bfaa681e52c29375ea4933a05473f3e5a0295fd4a351a116ab261f8144",
+      "bytes": 952
+    },
+    "render.log": {
+      "sha256": "3f833777990a033f539c06e92ce978fc8ce973e6e389d136ac7271708950b885",
+      "bytes": 12804
+    },
+    "README.md": {
+      "sha256": "3ffa61a107154a641a52d1930489462313de4ab2939ea54d55af3503bf695078",
+      "bytes": 4179
+    }
+  }
+}

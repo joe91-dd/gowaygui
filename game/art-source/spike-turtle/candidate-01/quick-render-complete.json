@@ -1,0 +1,13 @@
+{
+  "status": "Candidate only; actual image review and Cocos review remain required",
+  "quick_only": true,
+  "six_fbx_clips_checked": false,
+  "atlas_rebuild_checked": false,
+  "protected_inputs_unchanged": true,
+  "rendered_files": [
+    "render-front.png",
+    "render-three-quarter.png"
+  ],
+  "threads": 2,
+  "samples": 32
+}

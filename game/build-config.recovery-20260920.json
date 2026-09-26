@@ -1,0 +1,25 @@
+{
+  "name": "哥喂龟",
+  "platform": "web-mobile",
+  "buildPath": "project://build",
+  "outputName": "recovery-20260920",
+  "startScene": "f5b8b6b2-c8cc-41f8-afd7-f6ce7b5f6401",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/Main.scene",
+      "uuid": "f5b8b6b2-c8cc-41f8-afd7-f6ce7b5f6401"
+    }
+  ],
+  "debug": true,
+  "sourceMaps": true,
+  "md5Cache": false,
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "web-mobile": {
+      "__version__": "1.0.1",
+      "orientation": "landscape",
+      "embedWebDebugger": false,
+      "useWebGPU": false
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "purple-2",
+  "name": "月刃禁卫长",
+  "tier": 2,
+  "index": 25,
+  "base": 53,
+  "key": "boss-25",
+  "ability": "drain",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 62632,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-53",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/d3ede48f1b7b3c5c2a0aba8499f84117c72e1411f3069b94dd026db295587de5_Bunny.glb",
+  "license": "CC0 (public domain)",
+  "height": 2,
+  "triangles": 24763,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 14.6
+}

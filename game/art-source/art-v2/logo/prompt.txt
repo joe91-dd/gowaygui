@@ -1,0 +1,9 @@
+Create a transparent PNG with real alpha, requested 1600x640, wide 2.5:1 composition. Asset: ONE original polished game wordmark for a sunny stylized 3D fantasy tropical island turtle adventure.
+
+The exact entire text is these THREE simplified Chinese characters, in this exact left-to-right order on ONE horizontal line:
+哥喂龟
+Character verification: first 哥 (U+54E5); second 喂 (U+5582, mouth radical 口 at left and 畏 at right); third 龟 (U+9F9F, standard SIMPLIFIED turtle character). Do not substitute 噢, 偎, 唯, 跪, 龜 or other lookalikes. All essential strokes and open counters must be clearly legible. No icon can replace any character or stroke. NO other text at all.
+
+Wordmark style: big chunky lovingly hand-carved warm ivory limestone letters, deep dimensional stone extrusion with sunny honey-gold beveled edges, fine light weathering at a few outer edges, clean wide front faces, soft warm sunlight, confident premium fantasy-adventure title proportions. Very slightly playful silhouette but correct traditional Chinese character structure. A few broad glossy tropical green leaves peek from behind outer corners without hiding any strokes. Beneath the three words, one small bright blue-and-cyan curling ocean swoosh underlines the group. No big base or plaque. No turtle face or character. No English, no tagline, no framing UI, no poster, no landscape, no sky, no background scene.
+
+Composition: center the full three-character title as one connected visual group, roughly 80 percent of canvas width and 70 percent of height with generous empty transparent margin on all edges. Entire letters and leaves fully visible. Must remain highly readable when displayed at about 500x190 on a game login screen. Background outside logo, and gaps between letter strokes, must have alpha exactly zero. Output actual RGBA PNG, not a painted representation of transparency.

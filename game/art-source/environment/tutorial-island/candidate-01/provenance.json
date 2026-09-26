@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-09-08",
+  "project": "哥喂龟",
+  "asset": "教学岛 · 初到龟岛",
+  "version": "tutorial-island-candidate-01",
+  "status": "first_candidate_geometry_and_round_trip_verified_pending_root_review",
+  "authorship": {
+    "method": "Original project procedural geometry and material modules from tidal-island v04, independently adapted and regenerated for live level 0 route",
+    "externalModels": [],
+    "externalTextures": [],
+    "rasterGenerationOrEditing": false,
+    "runtimeOrViewFilesModified": false
+  },
+  "sources": [
+    {
+      "path": "game/art-source/environment/build_tidal_island.py",
+      "role": "Existing original project module and material implementation",
+      "sha256": "54f28c4f29c4e4152b9e4727f4834f494e710200701b9215f8b68a48e4c16146"
+    },
+    {
+      "path": "game/assets/scripts/core/data.ts",
+      "role": "Actual level 0 route and shared five station positions",
+      "sha256": "b9d6e111d3a3787eb8a2237447eff988a46e2ce417e63951b1b5be16d897d8b5"
+    },
+    {
+      "path": "game/art-source/environment/render-battle-overview.png",
+      "role": "Visual style review of currently used tidal-island v04"
+    }
+  ],
+  "tools": {
+    "blender": "4.5.13 LTS",
+    "portableExecutable": "tmp/tools/blender-4.5.13-windows-x64/blender.exe",
+    "renderEngine": "CYCLES",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 32,
+    "resolution": [
+      1000,
+      700
+    ],
+    "pythonExitCode": 1,
+    "newSoftwareInstalled": false
+  },
+  "files": [
+    {
+      "path": "tutorial-island.fbx",
+      "sha256": "82220891750c69f8c00a88f99ca27efcb45b136fb8dbcfd02066591b994ce843",
+      "bytes": 4644652
+    },
+    {
+      "path": "tutorial-island.blend",
+      "sha256": "2902d225137d6512c63f60b98d3c35658be41a32968171c3af6465e4b7db622a",
+      "bytes": 15036457
+    },
+    {
+      "path": "tutorial-island-review-scene.blend",
+      "sha256": "c13864c3dc1fc0ef9a786e0ace308092b20dbf0609e0598b0644f351a645e3ba",
+      "bytes": 6953279
+    },
+    {
+      "path": "island-colour.png",
+      "sha256": "f7b85a470c42c58a29bb778d8dc73408f06e4f323074faf7d3507b3f1e5e4881",
+      "sameHashAsV04": true
+    },
+    {
+      "path": "island-roughness.png",
+      "sha256": "2447da099d262a3afdbf84673ea4d3b66101d31071d00fa7b27abcd75116a480",
+      "sameHashAsV04": true
+    }
+  ],
+  "verification": {
+    "roundTripReport": "environment-round-trip.json",
+    "sourceCheck": "source-check.json",
+    "renderReport": "render-report.json",
+    "actualViewImageReviewed": [
+      "render-battle-overview.png",
+      "render-top-down.png",
+      "render-sanctuary-detail.png"
+    ],
+    "triangles": 66670,
+    "materials": 2,
+    "meshes": 3,
+    "routeSamples": 94,
+    "routeProblems": 0,
+    "routeCenterObstacles": 0,
+    "stationSurfaceY": 0.292,
+    "routeSurfaceY": 0.064,
+    "runtimeImportPerformed": false
+  },
+  "limits": [
+    "Nominal gameplay footprint is 22x12, matching the reused v04 module convention; actual coastal overhang bounds span about25.51x12.73 and are fully reported.",
+    "Welcome garland is subtle in the front battle view; root art review may strengthen it.",
+    "Thin leaf backface culling, actual Cocos lighting/shadows and mobile performance remain unverified.",
+    "Preview ocean is excluded from FBX and does not represent completed runtime ocean art."
+  ],
+  "rightsRecord": "Project source and asset provenance record only; no guarantee against all legal or copyright disputes."
+}

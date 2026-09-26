@@ -1,0 +1,9 @@
+{
+  "original_source": "game\\art-source\\stone-turtle\\candidate-12\\c12b\\stone-turtle.blend",
+  "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+  "reuse": "Self-authored c12b head/eyes/short limbs/rig. Frozen c01 flower mesh snapshot, face feature code and six actions are preserved; leaf shell and its pigment tiles are refined in c02.",
+  "leaf_c01_snapshot": "game\\art-source\\leaf-turtle\\candidate-02\\inputs\\authored-leaf-c01.blend",
+  "leaf_c01_sha256": "0cab7fb8eecf6719ae07792e84c96739bf3ae7fc2c7515e269cfb3760ce0d9df",
+  "rights": "Original project-authored mesh; no external asset extraction.",
+  "raster_inputs": []
+}

@@ -1,0 +1,43 @@
+{
+  "key": "fauna-26",
+  "name": "风翼斥候 · 战斗形态",
+  "kind": "ink",
+  "height": 1.45,
+  "flying": true,
+  "sourceName": "Pigeon",
+  "group": "monsters",
+  "path": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\output\\free-assets-20260916\\monsters\\pigeon-bee89c\\source.glb",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/d9765199b521d00d906ec18017e03bdd83b73119b9958ba63e5d6c862fd63ffb_Pigeon.glb",
+  "license": "CC0 (public domain)",
+  "author": [
+    "Quaternius"
+  ],
+  "sha256": "38b0868b40ca88f3f6f5f23a96e83d50faa4faebf34e0d6ff96e37f885e09fc4",
+  "bytes": 334320,
+  "animations": 8,
+  "displayName": "风翼斥候 · 战斗形态",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 23548,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-26",
+  "triangles": 14167,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 4.3
+}

@@ -1,0 +1,142 @@
+{
+  "status": "candidate-frozen-awaiting-parent-review",
+  "scope": "This independent portrait directory only; role source/runtime hashes are separately recorded in render-report.json.",
+  "files": [
+    {
+      "path": "bubble-input.json",
+      "bytes": 485,
+      "sha256": "5b4369121fc9ec348f3f7e0595dc87818aded886e0af3effbcd070ce1c8a69a7"
+    },
+    {
+      "path": "bubble-portrait-scene.blend",
+      "bytes": 5214875,
+      "sha256": "b40df4ba54aa8fc0cd9441725aec695cca00382289364f77faa56babbe8b28ed"
+    },
+    {
+      "path": "crystal-portrait-scene.blend",
+      "bytes": 4605098,
+      "sha256": "19d28c662ca01916895bab2c9c273e028e41b4b4ef7c7506127b923f2209c38c"
+    },
+    {
+      "path": "inspect_portraits.py",
+      "bytes": 3932,
+      "sha256": "017ea081d7dc5c39dc19cc01cab5551a50611e8cf0e749735dc71195a87aff1d"
+    },
+    {
+      "path": "leaf-portrait-scene.blend",
+      "bytes": 5212681,
+      "sha256": "a723c85f6b5379bb5331627930922714eace596df69a642b6ad5603ee047f5d0"
+    },
+    {
+      "path": "png-check.json",
+      "bytes": 3290,
+      "sha256": "469daaf6531c3734b868bded8dc2cf3a18e54a2af99e038d022de42c2b77d936"
+    },
+    {
+      "path": "portrait-bubble.png",
+      "bytes": 133637,
+      "sha256": "7c8b13d1ba19f61b59d61d4ac81ad322f4c8afdb3a49b33b9eba1757ea1a0411"
+    },
+    {
+      "path": "portrait-crystal.png",
+      "bytes": 152627,
+      "sha256": "76814eb2a64a9089073501846a0a09f92d4117c378184ed3cf2ccef8f17ec54b"
+    },
+    {
+      "path": "portrait-leaf.png",
+      "bytes": 147421,
+      "sha256": "778298aad923ad795ec70e05d606f45fb27149ac3926991368b09864b11d261e"
+    },
+    {
+      "path": "portrait-plan.json",
+      "bytes": 13022,
+      "sha256": "f2a71a596b431ebd5a41b94dfdfea0ec8666409a0f3efc344cc94e02930991da"
+    },
+    {
+      "path": "portrait-spike.png",
+      "bytes": 160876,
+      "sha256": "05b5ae9ecfca4c8d94a3a4a31fcab04fe35f8b32df08f72e4bc8061ce39d5792"
+    },
+    {
+      "path": "portrait-stone.png",
+      "bytes": 136544,
+      "sha256": "4fc832d4852a2864da1e1ddf0f99cd77bf4a3a24b6d264ae6e690944761999f4"
+    },
+    {
+      "path": "prepare_sources.py",
+      "bytes": 4839,
+      "sha256": "45674f600d0a8e1a592bd6e7bd30df1a08b24894312ac7b18b3ff4805da5ab15"
+    },
+    {
+      "path": "preview-bubble-64.png",
+      "bytes": 7013,
+      "sha256": "94f0f32a82031d8af635c5077f079dc99309a0d4347cd732808d76fa64ebe7a3"
+    },
+    {
+      "path": "preview-crystal-64.png",
+      "bytes": 7822,
+      "sha256": "602384852114cf9b5ffac1979c2f01e8258ab5adb1a64208dd976449443b75eb"
+    },
+    {
+      "path": "preview-leaf-64.png",
+      "bytes": 7379,
+      "sha256": "84ffd03a1fbe5bed71898213627999609af5510c7a26e97171a9dfd672c26083"
+    },
+    {
+      "path": "preview-spike-64.png",
+      "bytes": 7881,
+      "sha256": "f34b538a4311c2c38075d041363a1742a04f94a7579e3a1544c2e69fb3a36ecf"
+    },
+    {
+      "path": "preview-stone-64.png",
+      "bytes": 6866,
+      "sha256": "3eb265d555ac6969a9b739fd8fc58e08d24fa0caa2e983f88d21b9b1b7afa8bb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4226,
+      "sha256": "f750f94be97f25f0dd884451508facfefaa0ce92d2fe7901eb9b726b084f1216"
+    },
+    {
+      "path": "record_review.py",
+      "bytes": 2875,
+      "sha256": "2bd65146216ff1d3ca1ad701c8fd658ea9af9b75fbdefcfe47b8d08e57c475e2"
+    },
+    {
+      "path": "render-report.json",
+      "bytes": 10955,
+      "sha256": "4e6324fbc8f0dd183ae1be512a8f9b4749caccc9d095fa34602c3a592683c2cf"
+    },
+    {
+      "path": "render.log",
+      "bytes": 60819,
+      "sha256": "166a2e017929863bf95b43e9af9294b22021ac1b0d4c0f4110af1c6c192d6d95"
+    },
+    {
+      "path": "render_portraits.py",
+      "bytes": 8474,
+      "sha256": "5604053fbf3f3d0ee9496c6fb0542285233b4342019881fb40ea0ff3853351fa"
+    },
+    {
+      "path": "review.html",
+      "bytes": 4457,
+      "sha256": "83cf6724d11d1dcfa042f787674579503df879520cbe06d2244d2ffcc8b549e0"
+    },
+    {
+      "path": "spike-portrait-scene.blend",
+      "bytes": 4485036,
+      "sha256": "3bda7efc931f1b52d651f006e96b2c0eaa7430a4014afc9ca3873202ea031003"
+    },
+    {
+      "path": "stone-portrait-scene.blend",
+      "bytes": 4875991,
+      "sha256": "204d9ffafc815aec968a98ca00b0ad97863d52c626d31d604b034b8fdefc2632"
+    },
+    {
+      "path": "visual-review.json",
+      "bytes": 2838,
+      "sha256": "0a7093d30b98426e9c3b2776d0bae804ac153a65a28a2b28342d9829bdc48574"
+    }
+  ],
+  "runtime_assets_written": false
+}

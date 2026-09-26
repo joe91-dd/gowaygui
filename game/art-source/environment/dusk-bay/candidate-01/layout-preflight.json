@@ -1,0 +1,184 @@
+{
+  "status": "pass-with-existing-melee-coverage-limits",
+  "levelId": 3,
+  "dataSourceSha256": "aaeaf0026cb3e27ef2c63ce558b14df9229ed455f9a4f4718d27b3e00eb90e73",
+  "coordinateConvention": "Cocos x/y-up/z; route/plinth analysis in XZ",
+  "sourceStoneAudit": "game\\art-source\\environment\\dusk-bay\\candidate-01\\stone-footprint-audit.json",
+  "sourceStoneAuditSha256": "351d80eddca85f25131953423a955ff13b6c585c10516ecfd9c061f1e6192506",
+  "sourceStoneFbxSha256": "fd2dee9cf539ac5e9b73cfb21cdcac1fede7f25ff60934f68e078d288357ac3c",
+  "fullAllYawFootRadius": 0.9746471943161487,
+  "platformTopRadius": 0.995,
+  "platformTopInradius": 0.9928696286224105,
+  "analyticFootSupportMargin": 0.018222434306261803,
+  "route": [
+    {
+      "x": -9.0,
+      "z": -1.0
+    },
+    {
+      "x": -5.0,
+      "z": 0.0
+    },
+    {
+      "x": -2.0,
+      "z": -2.0
+    },
+    {
+      "x": 2.0,
+      "z": -2.0
+    },
+    {
+      "x": 4.0,
+      "z": 0.0
+    },
+    {
+      "x": 7.0,
+      "z": 0.0
+    },
+    {
+      "x": 9.0,
+      "z": 1.0
+    }
+  ],
+  "slots": [
+    {
+      "slot": 0,
+      "position": {
+        "x": -5.0,
+        "z": 1.0
+      },
+      "routeDistance": 1.0,
+      "nearestSegment": 0,
+      "nearestRoutePoint": {
+        "x": -5.0,
+        "z": 0.0
+      },
+      "fullSoleToRouteCenterClearance": 0.025352805683851343,
+      "platformToRouteCenterClearance": 0.0050000000000000044,
+      "blockingRadius": 1.2,
+      "withinStoneBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "coveredRouteIntervals": [
+        {
+          "segment": 0,
+          "startRouteDistance": 3.6593668497220584,
+          "endRouteDistance": 4.123105625617661,
+          "length": 0.4637387758956022
+        },
+        {
+          "segment": 1,
+          "startRouteDistance": 4.123105625617661,
+          "endRouteDistance": 4.433097459939902,
+          "length": 0.3099918343222413
+        }
+      ],
+      "totalCoveredRouteLength": 0.7737306102178435,
+      "positionMoved": false
+    },
+    {
+      "slot": 1,
+      "position": {
+        "x": -1.0,
+        "z": 1.0
+      },
+      "routeDistance": 3.0,
+      "nearestSegment": 2,
+      "nearestRoutePoint": {
+        "x": -1.0,
+        "z": -2.0
+      },
+      "fullSoleToRouteCenterClearance": 2.0253528056838515,
+      "platformToRouteCenterClearance": 2.005,
+      "blockingRadius": 1.2,
+      "withinStoneBlockingRadius": false,
+      "blockingMargin": -1.8,
+      "coveredRouteIntervals": [],
+      "totalCoveredRouteLength": 0,
+      "positionMoved": false
+    },
+    {
+      "slot": 2,
+      "position": {
+        "x": 3.0,
+        "z": 1.0
+      },
+      "routeDistance": 1.4142135623730951,
+      "nearestSegment": 3,
+      "nearestRoutePoint": {
+        "x": 4.0,
+        "z": 0.0
+      },
+      "fullSoleToRouteCenterClearance": 0.4395663680569465,
+      "platformToRouteCenterClearance": 0.41921356237309515,
+      "blockingRadius": 1.2,
+      "withinStoneBlockingRadius": false,
+      "blockingMargin": -0.2142135623730952,
+      "coveredRouteIntervals": [],
+      "totalCoveredRouteLength": 0,
+      "positionMoved": false
+    },
+    {
+      "slot": 3,
+      "position": {
+        "x": 1.0,
+        "z": -3.0
+      },
+      "routeDistance": 1.0,
+      "nearestSegment": 2,
+      "nearestRoutePoint": {
+        "x": 1.0,
+        "z": -2.0
+      },
+      "fullSoleToRouteCenterClearance": 0.025352805683851343,
+      "platformToRouteCenterClearance": 0.0050000000000000044,
+      "blockingRadius": 1.2,
+      "withinStoneBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "coveredRouteIntervals": [
+        {
+          "segment": 2,
+          "startRouteDistance": 10.06533194301057,
+          "endRouteDistance": 11.391981859152729,
+          "length": 1.32664991614216
+        }
+      ],
+      "totalCoveredRouteLength": 1.32664991614216,
+      "positionMoved": false
+    },
+    {
+      "slot": 4,
+      "position": {
+        "x": 6.0,
+        "z": -1.0
+      },
+      "routeDistance": 1.0,
+      "nearestSegment": 4,
+      "nearestRoutePoint": {
+        "x": 6.0,
+        "z": 0.0
+      },
+      "fullSoleToRouteCenterClearance": 0.025352805683851343,
+      "platformToRouteCenterClearance": 0.0050000000000000044,
+      "blockingRadius": 1.2,
+      "withinStoneBlockingRadius": true,
+      "blockingMargin": 0.19999999999999996,
+      "coveredRouteIntervals": [
+        {
+          "segment": 4,
+          "startRouteDistance": 15.89375906775676,
+          "endRouteDistance": 17.22040898389892,
+          "length": 1.32664991614216
+        }
+      ],
+      "totalCoveredRouteLength": 1.32664991614216,
+      "positionMoved": false
+    }
+  ],
+  "notes": [
+    "Original layout preserved. No minimum move proposal is necessary to clear route centers or support the full static all-yaw sole.",
+    "Station indices 1 and 2 do not intersect stone base blocking circle1.2; this is existing gameplay coverage, not a reason to silently alter coordinates.",
+    "Blocking uses base ROLES.stone.range, distinct from optional basic-attack range modifiers.",
+    "Exact route center is the navigation constraint; the visual sand band may pass under raised platform edges. No full-road-width exclusion is claimed.",
+    "This analytic preflight is not a substitute for actual FBX raycasts or animation/contact runtime tests."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tide-emperor",
+  "name": "永潮龙皇",
+  "tier": 5,
+  "index": 5,
+  "base": 30,
+  "key": "boss-05",
+  "ability": "rally",
+  "artVersion": 4,
+  "style": "A — 海雾灵焰",
+  "runtimeOptimized": true,
+  "tangentsExported": true,
+  "masterTriangles": 51464,
+  "surfaceMaps": [
+    "normal",
+    "surface"
+  ],
+  "sourceKey": "fauna-30",
+  "source": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/bce94ce6169957acf211bd02b94e11134cc4d21e5a788daecddb9a8cb647c66e_Dragon Evolved.glb",
+  "license": "CC0 (public domain)",
+  "height": 1.45,
+  "triangles": 24787,
+  "drawMaterials": 2,
+  "clips": [
+    "idle",
+    "walk",
+    "attack",
+    "attack2",
+    "skill",
+    "hit",
+    "exit",
+    "rest",
+    "greeting"
+  ],
+  "seconds": 8.5
+}

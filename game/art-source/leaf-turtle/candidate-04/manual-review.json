@@ -1,0 +1,21 @@
+{
+  "status": "preview submitted for parent review; no runtime approval claimed",
+  "actually_viewed": ["render-three-quarter.png", "../candidate-03/render-three-quarter.png"],
+  "render_sha256": "526b72c479dd37ee7d1a62998dd940d27335e1511629c3b716a2a17dccb43687",
+  "observed_improvements": [
+    "Middle horizontal dark gaps are narrower than c03.",
+    "Upper tips sit closer to the next layer while rounded tip direction and shallow midrib remain readable."
+  ],
+  "remaining_aesthetic_questions": [
+    "A mild tiered-ring rhythm remains near the crown; parent review still required."
+  ],
+  "scope_check_passed": true,
+  "blender_generation_exit_code": 0,
+  "blender_scope_check_exit_code": 0,
+  "blender_processes_exited": true,
+  "threads": 2,
+  "samples": 32,
+  "runtime_export_or_promotion": false,
+  "full_animation_reimport_or_half_frame_qa": false,
+  "cocos_validation": false
+}

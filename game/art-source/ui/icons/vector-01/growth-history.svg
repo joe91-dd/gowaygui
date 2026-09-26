@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="growth-history-title growth-history-desc">
+<title id="growth-history-title">成长历史</title><desc id="growth-history-desc">带回转箭头与龟壳印记的历史册；从零绘制的哥喂龟原创矢量图标，左上柔光。</desc>
+<defs><linearGradient id="growth-history-ivory" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#fff3d7"/><stop offset=".52" stop-color="#e8cda0"/><stop offset="1" stop-color="#b79667"/></linearGradient><linearGradient id="growth-history-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffe291"/><stop offset=".52" stop-color="#efb348"/><stop offset="1" stop-color="#b9742e"/></linearGradient><linearGradient id="growth-history-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#91d5c4"/><stop offset=".52" stop-color="#3d9d99"/><stop offset="1" stop-color="#255e62"/></linearGradient><linearGradient id="growth-history-attack" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#ffd086"/><stop offset=".52" stop-color="#e5a24b"/><stop offset="1" stop-color="#ad6d34"/></linearGradient><linearGradient id="growth-history-health" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#f7b6a9"/><stop offset=".52" stop-color="#df7d73"/><stop offset="1" stop-color="#a95753"/></linearGradient><linearGradient id="growth-history-defense" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#a1d9e3"/><stop offset=".52" stop-color="#58afc4"/><stop offset="1" stop-color="#397887"/></linearGradient><linearGradient id="growth-history-growth" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d4df97"/><stop offset=".52" stop-color="#92b65e"/><stop offset="1" stop-color="#587c43"/></linearGradient><linearGradient id="growth-history-dark-gold" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#d9a356"/><stop offset=".52" stop-color="#b9772b"/><stop offset="1" stop-color="#815327"/></linearGradient><linearGradient id="growth-history-deep-teal" x1="15%" y1="0%" x2="80%" y2="100%"><stop stop-color="#438f89"/><stop offset=".52" stop-color="#2b726f"/><stop offset="1" stop-color="#204f56"/></linearGradient><radialGradient id="growth-history-soft-glow" cx="28%" cy="20%" r="75%"><stop stop-color="#fff9e9" stop-opacity=".65"/><stop offset=".65" stop-color="#fff9e9" stop-opacity="0"/></radialGradient></defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M63 44q-19 4-19 27v132q0 23 28 25h124q17 0 17-17V53q0-15-15-15z" fill="url(#growth-history-deep-teal)" stroke="#3c6158" stroke-width="6"/>
+    <path d="M61 197h135v25H72q-20-1-20-12 0-9 9-13z" fill="url(#growth-history-ivory)" stroke="#9d8964" stroke-width="4"/>
+    <path d="M69 207h123m-119 8h116" fill="none" stroke="#c8b590" stroke-width="3"/>
+    <path d="M67 29h127q15 0 15 16v142q0 16-16 16H65q-17 0-17-14V48q0-17 19-19z" fill="url(#growth-history-teal)" stroke="#46685a" stroke-width="6"/>
+    <path d="M66 34v163q-14 0-14-13V51q0-15 14-17z" fill="url(#growth-history-deep-teal)"/>
+    <path d="M78 43h112q6 0 6 9v132" fill="none" stroke="#c7e5c3" stroke-opacity=".8" stroke-width="4"/>
+    <path d="M90 56h81q13 0 13 12v104q0 13-13 13H89q-12 0-12-12V68q0-12 13-12z" fill="url(#growth-history-ivory)" stroke="#927b53" stroke-width="4"/>
+    <path d="M88 70v95" fill="none" stroke="#fff7dc" stroke-width="4"/>
+    <path d="M157 102c-5-16-25-22-38-12-16 11-14 34 4 42" fill="none" stroke="#a57638" stroke-width="12"/>
+    <path d="M157 100c-5-16-25-22-38-12-16 11-14 34 4 42" fill="none" stroke="#e4b564" stroke-width="7"/>
+    <path d="M144 102l15 13 12-17" fill="url(#growth-history-gold)" stroke="#a57638" stroke-width="4"/>
+    <path d="M121 154c-8-4-14-1-14 4s8 7 14 4m26-8c8-4 13-1 13 4s-7 7-13 4m-24 9-7 5m28-5 7 5" fill="none" stroke="#5f9381" stroke-width="5"/>
+    <path d="M134 138v-3" fill="none" stroke="#5f9381" stroke-width="8"/>
+    <ellipse cx="134" cy="158" rx="17" ry="20" fill="#79a78b" stroke="#547f6a" stroke-width="3"/>
+    <path d="M134 145l10 8-4 13h-13l-4-13z" fill="#e8d6a9" stroke="#547f6a" stroke-width="2"/>
+    <path d="M171 202v26l-11-8-11 8v-26" fill="#d3906f" stroke="#8e644d" stroke-width="4"/>
+    <path d="M58 70h10m-10 94h10" fill="none" stroke="#e5c887" stroke-width="7"/>
+  </g>
+</svg>

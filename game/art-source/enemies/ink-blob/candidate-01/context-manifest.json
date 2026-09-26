@@ -1,0 +1,17 @@
+{
+  "status": "Offline Blender context, not Cocos gameplay screenshot",
+  "level_id": 1,
+  "enemy_scale": 0.68,
+  "turtle_scale": 0.65,
+  "camera_ortho_scale": 18.5,
+  "render_resolution": [
+    1280,
+    720
+  ],
+  "assets": [
+    "current frozen stone v10",
+    "tidal island v04",
+    "ink candidate01"
+  ],
+  "only_written_under": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\ink-blob\\candidate-01"
+}

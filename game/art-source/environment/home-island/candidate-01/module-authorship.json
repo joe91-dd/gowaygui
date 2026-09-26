@@ -1,0 +1,15 @@
+{
+  "status": "generator-authored-not-executed",
+  "frozenProjectModule": "game/art-source/environment/boss-bay/candidate-01/build_boss_bay.py",
+  "sourceSha256": "026c916eb9be590a42a68a353a19fece0871f06a73b220be231aae113843f2ec",
+  "copiedOriginalRoutines": [
+    "authored atlas/material/UV",
+    "mesh/tube/rock/oval/disc/anchor",
+    "leaf/palm/bush"
+  ],
+  "newGeometry": "Home-only coastline, flat paved forecourt, cream masonry shell house with teal arched doors/windows, rooftop shell/pearl, left plank pier and sparse ropes. No route/slot gameplay code copied.",
+  "compositionSha256": "def70038829a4efdfee8a3eba2f53a3c4b0764872850789784f95d0e1ea11c8d",
+  "generatedScriptSha256": "e7e523f35c7d7a79a02518a4cd661af899c46f2901f17f5476a799aefece24ef",
+  "blenderStarted": false,
+  "externalAssetsUsed": false
+}

@@ -1,0 +1,136 @@
+{
+  "status": "pass",
+  "fbx_sha256": "63a94cd6d61c0caf313ae799363fb749f3fec068c10a14bc0e99fb0bd78a4ee0",
+  "triangles": 21208,
+  "vertices": 10674,
+  "bones": [
+    "root",
+    "body",
+    "claw_R",
+    "jaw_R",
+    "claw_L",
+    "jaw_L",
+    "eye_L",
+    "eye_R",
+    "leg_L1",
+    "leg_L2",
+    "leg_L3",
+    "leg_L4",
+    "leg_R1",
+    "leg_R2",
+    "leg_R3",
+    "leg_R4"
+  ],
+  "materials": [
+    "GiantClaw_Toy_Atlas"
+  ],
+  "channels": {
+    "fbx_version": 7400,
+    "material_name": "GiantClaw_Toy_Atlas",
+    "actual_texture_properties": [
+      {
+        "property": "DiffuseColor",
+        "texture": "base_color_texture",
+        "file_properties": {
+          "FileName": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\giant-claw\\rigged\\runtime-candidate\\export\\giant-claw.fbm\\giant-colour.png",
+          "RelativeFilename": "giant-claw.fbm\\giant-colour.png"
+        }
+      },
+      {
+        "property": "ShininessExponent",
+        "texture": "roughness_texture",
+        "file_properties": {
+          "FileName": "C:\\Users\\Administrator\\Documents\\ChatGPT\\gowaygui\\game\\art-source\\enemies\\giant-claw\\rigged\\runtime-candidate\\export\\giant-claw.fbm\\giant-roughness.png",
+          "RelativeFilename": "giant-claw.fbm\\giant-roughness.png"
+        }
+      }
+    ],
+    "embedded_pngs": {
+      "giant-colour.png": {
+        "sha256": "76fb1a0053562e37d4197c34ba07c4431d400fe809982c33d1185ad0d722cf3d",
+        "bytes": 68454,
+        "exact_png_byte_offset": 489021
+      },
+      "giant-roughness.png": {
+        "sha256": "8355d3e4e53cca0ec1b951ca0c6c98a870d1ceae564ec5684db109d886b99ba1",
+        "bytes": 6039,
+        "exact_png_byte_offset": 558124
+      }
+    }
+  },
+  "clips": {
+    "idle": {
+      "imported_action_name": "GiantClaw_Rig|GiantClaw_Rig|idle",
+      "first": 1.0,
+      "last": 85.0,
+      "seconds": 2.8,
+      "samples": 169,
+      "maximum_vertex_motion_m": 0.0085328152055665,
+      "minimum_z_m": -7.458613282551596e-09,
+      "maximum_z_m": 1.2810032367706299,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "walk": {
+      "imported_action_name": "GiantClaw_Rig|GiantClaw_Rig|walk",
+      "first": 1.0,
+      "last": 37.0,
+      "seconds": 1.2,
+      "samples": 73,
+      "maximum_vertex_motion_m": 0.08863362476162466,
+      "minimum_z_m": -6.176393981149886e-06,
+      "maximum_z_m": 1.2840032577514648,
+      "first_last_seam_m": 0.0,
+      "loop": true
+    },
+    "attack": {
+      "imported_action_name": "GiantClaw_Rig|GiantClaw_Rig|attack",
+      "first": 1.0,
+      "last": 16.0,
+      "seconds": 0.5,
+      "samples": 31,
+      "maximum_vertex_motion_m": 0.2317759711074719,
+      "minimum_z_m": -7.458613282551596e-09,
+      "maximum_z_m": 1.3317025899887085,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "hit": {
+      "imported_action_name": "GiantClaw_Rig|GiantClaw_Rig|hit",
+      "first": 1.0,
+      "last": 16.0,
+      "seconds": 0.5,
+      "samples": 31,
+      "maximum_vertex_motion_m": 0.05001741119597982,
+      "minimum_z_m": -7.458613282551596e-09,
+      "maximum_z_m": 1.2829508781433105,
+      "first_last_seam_m": 0.0,
+      "loop": false
+    },
+    "exit": {
+      "imported_action_name": "GiantClaw_Rig|GiantClaw_Rig|exit",
+      "first": 1.0,
+      "last": 37.0,
+      "seconds": 1.2,
+      "samples": 73,
+      "maximum_vertex_motion_m": 1.7739430181798295,
+      "minimum_z_m": -1.1562701729417313e-07,
+      "maximum_z_m": 1.2910032272338867,
+      "first_last_seam_m": 1.7739430181798295,
+      "loop": false
+    }
+  },
+  "method": "Actual FBX import; explicit Blender action slot; every half-frame evaluated after skinning.",
+  "rest_bounds": {
+    "min": [
+      -1.0748372077941895,
+      -0.7677403092384338,
+      -7.458613282551596e-09
+    ],
+    "max": [
+      1.3688597679138184,
+      0.5897020101547241,
+      1.2760032415390015
+    ]
+  }
+}

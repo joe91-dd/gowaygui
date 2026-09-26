@@ -1,0 +1,134 @@
+{
+  "version": "home-island-candidate-01",
+  "status": "offline-model-generated-runtime-not-promoted",
+  "coordinateConvention": "Cocos x/y-up/z; Blender x/-z/y",
+  "nominalFootprintXZ": [
+    12,
+    8
+  ],
+  "displayAnchors": [
+    {
+      "name": "Display_stone",
+      "role": "stone",
+      "x": -0.8,
+      "y": 0.16,
+      "z": 2.7,
+      "yawDegrees": 8
+    },
+    {
+      "name": "Display_spike",
+      "role": "spike",
+      "x": -2.4,
+      "y": 0.16,
+      "z": -0.25,
+      "yawDegrees": 12
+    },
+    {
+      "name": "Display_crystal",
+      "role": "crystal",
+      "x": -3.15,
+      "y": 0.16,
+      "z": 2.15,
+      "yawDegrees": 15
+    },
+    {
+      "name": "Display_leaf",
+      "role": "leaf",
+      "x": 1.55,
+      "y": 0.16,
+      "z": 2.3,
+      "yawDegrees": -8
+    },
+    {
+      "name": "Display_bubble",
+      "role": "bubble",
+      "x": 2.05,
+      "y": 0.16,
+      "z": -0.3,
+      "yawDegrees": -12
+    }
+  ],
+  "displaySurfaceY": 0.16,
+  "waterY": -0.72,
+  "houseDoor": [
+    0.05,
+    0.24,
+    -1.18
+  ],
+  "pearl": [
+    0.05,
+    3.11,
+    -2.37
+  ],
+  "editableMeshes": 757,
+  "cameraCandidate": {
+    "position": [
+      1.8,
+      8.2,
+      12.8
+    ],
+    "target": [
+      -0.45,
+      0.9,
+      0
+    ],
+    "baseVerticalFovDegrees": 38
+  },
+  "characterReferences": {
+    "stone": {
+      "path": "game/art-source/stone-turtle/candidate-12/c12b/stone-turtle.blend",
+      "sha256": "53f828584edcc3d93c1b28a01883fe768db106a1fd44f27b5f95d729482a4ac3",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "spike": {
+      "path": "game/art-source/spike-turtle/candidate-02/spike-turtle.blend",
+      "sha256": "9193078d649856f18c8ef3244c731480e00b86bc9ae000847cabb46fa38109ca",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "crystal": {
+      "path": "game/art-source/crystal-turtle/candidate-02/crystal-turtle.blend",
+      "sha256": "694e5496e9e44040259f3f4ea525b42a51e13acb52c4c685b134fb2fb152a51e",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    },
+    "leaf": {
+      "path": "game/art-source/leaf-turtle/candidate-04/runtime-candidate/leaf-turtle-runtime.blend",
+      "sha256": "61741063560a54ceda7ec90c13fede445f200191616d79c7b23094d36197bbce",
+      "use": "Offline scale reference only; never append to exported environment collection"
+    }
+  },
+  "charactersExported": false,
+  "noGameplayRoute": true,
+  "authorship": "New home-only geometry, original own-project modules/UV/pigment atlas; no imported stock/game assets",
+  "runtimeMeshes": [
+    {
+      "name": "Ground",
+      "vertices": 2577,
+      "triangles": 4059
+    },
+    {
+      "name": "Landmarks_and_nature",
+      "vertices": 16710,
+      "triangles": 28502
+    },
+    {
+      "name": "Pearl_and_lamps",
+      "vertices": 532,
+      "triangles": 1008
+    }
+  ],
+  "totalTriangles": 33569,
+  "materials": 2,
+  "fbxSha256": "0c73b77cefa52a26da9b3c4fd751bb42573eff431859bea02342164b07a5b6af",
+  "geometryBoundsCocos": {
+    "min": [
+      -7.505000114440918,
+      -1.064998984336853,
+      -4.322445392608643
+    ],
+    "max": [
+      6.586040019989014,
+      4.285477638244629,
+      4.419971466064453
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Offline assets pipeline only. These packages are not shipped in the game.
+numpy==2.3.5
+soundfile==0.14.0
+scipy==1.18.1
+pyloudnorm==0.2.0
+cffi==2.1.1
+pycparser==3.0

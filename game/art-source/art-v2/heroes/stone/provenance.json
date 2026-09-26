@@ -1,0 +1,28 @@
+{
+  "asset": "hero-stone.png",
+  "generatedAtDate": "2026-09-10",
+  "generator": "OpenAI built-in image_gen",
+  "mode": "fresh generation with text description of inspected approved reference",
+  "reference": "C:/Users/Administrator/Desktop/龟/04_五角色正式设定.png.png",
+  "referenceRegion": "second column, stone tank hero 岩盾",
+  "originalGeneratedFile": "C:/Users/Administrator/.codex/generated_images/01a086f7-59cf-74f0-bb28-c163e75eb53d/exec-68dc50c9-4468-434e-bd5f-7f7236058378.png",
+  "sourceCopy": "game/art-source/art-v2/heroes/stone/hero-stone-rgba-source.png",
+  "runtimeCopy": "game/assets/resources/art-v2/hero-stone.png",
+  "prompt": "final-prompt.txt",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 1765382,
+  "sha256": "50cbdbc3c60c337cd79eca2275186ca2453cbd27ea654199bb5ecd35a5364b04",
+  "postProcessing": "none; byte-identical copies",
+  "visualQA": "Full-body standing stone turtle tank, broad ochre face and blue eyes, heavy rock armor and turquoise crystals. Both hands and feet visible; no pedestal, text, scene or cut-off extremities. Fresh generation slightly varies face/rock shapes relative to reference edit while preserving approved archetype.",
+  "alphaQA": {
+    "passed": true,
+    "pixelFormat": "Format32bppArgb",
+    "sampleAlphaMinimum": 0,
+    "sampleAlphaMaximum": 255,
+    "transparentSampleFraction": 0.5287841291735973
+  },
+  "iterations": "Original reference edit and two targeted alpha edits produced opaque checkerboard. An intermediate dark navy portrait was generated and archived. Those candidates are not runtime assets. Final fresh generation succeeded with real native alpha and replaces opaque candidate at runtime path.",
+  "status": "production UI full-body cutout; not a 3D model",
+  "rightsNote": "Generated from user-supplied approved direction; provenance records source and generation, not an independent legal clearance."
+}

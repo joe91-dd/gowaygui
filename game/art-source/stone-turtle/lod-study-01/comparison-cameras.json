@@ -1,0 +1,48 @@
+{
+  "close": {
+    "resolution": [
+      800,
+      680
+    ],
+    "location": [
+      3.6,
+      -5.4,
+      3
+    ],
+    "target": [
+      0,
+      -0.12,
+      0.91
+    ],
+    "orthographic_scale": 3.6
+  },
+  "home": {
+    "virtual_viewport": [
+      693,
+      390
+    ],
+    "crop": [
+      192,
+      160
+    ],
+    "source": "Current HomeWorld HOME_CAMERA and stone display, transformed to Blender local coordinates; studio material/light remains fixed",
+    "vertical_fov_degrees": 38,
+    "camera_local": [
+      1.798537254333496,
+      -15.94393539428711,
+      12.369231224060059
+    ],
+    "target_local": [
+      1.111324667930603,
+      4.038482189178467,
+      1.1384615898132324
+    ],
+    "projected_character_px": [
+      66.5612622499466,
+      61.86930254101753
+    ]
+  },
+  "threads": 4,
+  "cycles_samples": 32,
+  "warning": "Offline geometry comparison only; not a Cocos screenshot or FPS measurement."
+}
