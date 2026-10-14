@@ -10,10 +10,10 @@ export const ROLES: Record<Role, RoleDefinition> = {
   stone: { id: 'stone', name: '石头龟', job: '肉盾', gender: 'male', color: '#8b8874', health: 640, attack: 24, interval: 1.2, armor: 40, resist: 20, range: 1.2, starters: ['strong', 'armor'] },
   // Ranged attacks stay just two body lengths beyond the melee baseline (1.2 + 2.0).
   // Keeping the same base range across ranged roles also makes placement previews match combat.
-  spike: { id: 'spike', name: '刺刺龟', job: '射手', gender: 'male', color: '#d9942c', health: 300, attack: 54, interval: .9, armor: 10, resist: 10, range: 3.2, starters: ['swift', 'critical'] },
-  crystal: { id: 'crystal', name: '水晶龟', job: '法师', gender: 'female', color: '#38afdd', health: 270, attack: 45, interval: 1.5, armor: 5, resist: 20, range: 3.2, starters: ['resist', 'bounce'] },
-  leaf: { id: 'leaf', name: '叶子龟', job: '治疗', gender: 'female', color: '#8bac46', health: 360, attack: 40, interval: 1.5, armor: 10, resist: 20, range: 3.2, starters: ['reach', 'doubleHeal'] },
-  bubble: { id: 'bubble', name: '泡泡龟', job: '控制', gender: 'male', color: '#83bdcc', health: 280, attack: 28, interval: 1.4, armor: 10, resist: 15, range: 3.2, starters: ['steady', 'shredArmor'] },
+  spike: { id: 'spike', name: '刺刺龟', job: '射手', gender: 'male', color: '#d9942c', health: 300, attack: 54, interval: .9, armor: 10, resist: 10, range: 2.4, starters: ['swift', 'critical'] },
+  crystal: { id: 'crystal', name: '水晶龟', job: '法师', gender: 'female', color: '#38afdd', health: 270, attack: 45, interval: 1.5, armor: 5, resist: 20, range: 2.4, starters: ['resist', 'bounce'] },
+  leaf: { id: 'leaf', name: '叶子龟', job: '治疗', gender: 'female', color: '#8bac46', health: 360, attack: 40, interval: 1.5, armor: 10, resist: 20, range: 2.4, starters: ['reach', 'doubleHeal'] },
+  bubble: { id: 'bubble', name: '泡泡龟', job: '控制', gender: 'male', color: '#83bdcc', health: 280, attack: 28, interval: 1.4, armor: 10, resist: 15, range: 2.4, starters: ['steady', 'shredArmor'] },
 };
 export const ROLE_IDS = Object.keys(ROLES) as Role[];
 export const SKILLS: SkillDefinition[] = [

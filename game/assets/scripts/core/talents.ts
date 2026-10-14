@@ -1,5 +1,6 @@
 import type {Material,Role,SkillId,Traits,Turtle} from './types';
 import {SKILLS} from './data';
+import {skillUnlocked} from './soloProgress';
 import {random,weighted} from './random';
 import type {RandomState} from './random';
 
@@ -20,7 +21,7 @@ export function initialTalents(s:RandomState,role:Role):Traits{
 }
 /** Role preference affects birth only; all passive books/inheritance stay universal. */
 export function initialSkills(s:RandomState,role:Role,count:number):SkillId[]{
-  const pool=SKILLS.filter(x=>(!x.role||x.role===role)&&((s as RandomState&{rulesVersion?:string}).rulesVersion==='0.6'||!['fervor','caprice','polymorph','giant'].includes(x.id)));
+  const pool=SKILLS.filter(x=>skillUnlocked(s as import("./types").GameSave,x.id)&&(!x.role||x.role===role)&&((s as RandomState&{rulesVersion?:string}).rulesVersion==='0.6'||!['fervor','caprice','polymorph','giant'].includes(x.id)));
   const picked:SkillId[]=[];
   while(picked.length<count&&picked.length<pool.length){
     const options=pool.filter(x=>!picked.includes(x.id)&&(!x.requires||picked.includes(x.requires))).map(x=>({value:x.id,probability:x.specialization?.15:x.precious?.15:x.role===role?5:!x.role?2:1}));

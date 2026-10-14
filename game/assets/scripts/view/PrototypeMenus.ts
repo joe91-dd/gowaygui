@@ -46,7 +46,53 @@ export class PrototypeMenus {
     this.ui.card(t.role,this.petName(t),`${ROLES[t.role].job} · ${t.skills.length}技能`,`${q.name}${t.locked?' · 锁定':''}`,x,y,()=>this.action(action),{parent:p,selected,turtle:t});
   }
   workshop():void{this.parents=[];this.chooseParents();}
+  private soloParents(page=0):void{
+    const ui=this.ui,all=this.ordered(),count=Math.max(1,Math.ceil(all.length/5));page=Math.max(0,Math.min(count-1,page));
+    this.parents=this.parents.map(id=>all.some(t=>t.id===id)?id:'');ui.clear();const p=ui.soloPage('合成',this.home);
+    ui.panel(0,68,1160,341,p,'#FFF9EC',228,22);ui.panel(0,-211,1160,198,p,'#FFF9EC',243,22);
+    const pick=(t:Turtle)=>this.action(()=>{if(t.locked)throw Error('请先解除锁定');if(this.parents.includes(t.id)){this.parents[this.parents.indexOf(t.id)]='';}else{this.parents[this.parentSlot]=t.id;this.parentSlot=this.parents[1-this.parentSlot]?this.parentSlot:1-this.parentSlot;}this.soloParents(page);});
+    [0,1].forEach(i=>{const t=this.service.snapshot.collection[this.parents[i]],x=-395+i*372,n=ui.button('',x,77,286,284,()=>{this.parentSlot=i;this.soloParents(page);},{parent:p,selected:this.parentSlot===i});
+      if(t){ui.portrait(t.role,0,31,197,n,true);ui.text(this.petName(t),-44,-86,25,UI_COLORS.ink,n,158,36);ui.text(t.skills.length+'技能',88,-86,20,UI_COLORS.sand,n,81,30);t.skills.slice(0,6).forEach((id,j)=>ui.bookIcon(id,(j-(Math.min(6,t.skills.length)-1)/2)*35,-119,30,n));}
+      else{ui.modernIcon(1,0,35,78,n);ui.text(i?'选择副龟':'选择主龟',0,-77,24,UI_COLORS.sand,n,251,38);}
+    });ui.text('+',-209,74,52,'#6EAEB1',p,75,75);
+    const preview=ui.panel(389,80,302,282,p,'#EDF5F1',255,20);ui.text('结果预览',0,110,25,UI_COLORS.ink,preview,275,37);ui.modernIcon(1,0,27,101,preview);ui.text('可能的新伙伴',0,-64,26,UI_COLORS.ink,preview,275,39);ui.text('查看合成方案后确认',0,-106,19,UI_COLORS.sand,preview,280,31);
+    ui.text('选择合成伙伴',-429,-136,24,UI_COLORS.ink,p,269,38);
+    all.slice(page*5,page*5+5).forEach((t,i)=>{const n=ui.button('',-443+i*188,-222,174,123,()=>pick(t),{parent:p,selected:this.parents.includes(t.id),disabled:t.locked});ui.pet(t,0,14,74,n);ui.text(this.petName(t)+' · '+t.skills.length+'技能',0,-45,18,UI_COLORS.ink,n,166,30);});
+    ui.button('‹',-551,-294,45,35,()=>this.soloParents(page-1),{parent:p,disabled:page===0,size:26});ui.text((page+1)+'/'+count,-479,-294,17,UI_COLORS.sand,p,82,27);ui.button('›',-408,-294,45,35,()=>this.soloParents(page+1),{parent:p,disabled:page+1>=count,size:26});
+    ui.button('下一步 ›',453,-274,206,58,()=>this.action(()=>this.confirmParents()),{parent:p,primary:true,disabled:!this.parents[0]||!this.parents[1],size:28});
+
+  }
+  private soloFusionPlan(a:Turtle,b:Turtle):void{
+    const ui=this.ui;ui.clear();const p=ui.soloPage('合成方案',()=>this.soloParents(),true),branches=previewFusion(a,b);
+    [a,b].forEach((t,i)=>{const n=ui.panel(-391,116-i*223,340,209,p,'#F5F8F0',255,16);ui.text(i?'副龟 · 造型概率40%':'主龟 · 造型概率60%',0,84,22,UI_COLORS.ink,n,317,35);ui.portrait(t.role,-93,-1,144,n,true);ui.text(this.petName(t),68,33,28,UI_COLORS.ink,n,165,39);ui.text(t.skills.length+'个技能',68,-6,22,UI_COLORS.sand,n,166,32);t.skills.slice(0,6).forEach((id,j)=>ui.bookIcon(id,7+j%3*43,-48-Math.floor(j/3)*37,32,n));});
+    ui.text('造型继承',-26,206,26,UI_COLORS.ink,p,270,39);ui.progress(-21,155,280,23,.6,'#E0B459',p);ui.text('60%     /     40%',-21,117,23,UI_COLORS.ink,p,299,36);
+    ui.text('可能继承的技能',-26,66,24,UI_COLORS.ink,p,303,37);const skills=Array.from(new Set(branches.flatMap(x=>x.pool)));skills.slice(0,12).forEach((id,i)=>{const n=ui.button('',-126+i%3*105,2-Math.floor(i/3)*62,94,56,()=>ui.skillDetail(id),{parent:p,surface:'bare'});ui.bookIcon(id,0,2,39,n);});
+    ui.text('天赋范围',367,206,26,UI_COLORS.ink,p,296,39);TALENT_KEYS.forEach((key,i)=>{const d=talentDistribution(a,b,key),y=136-i*75;ui.text(TALENT_NAMES[key],287,y,22,UI_COLORS.ink,p,110,34);ui.text(d[0].value+' — '+d[d.length-1].value,426,y,23,'#159DA5',p,181,34);});
+    ui.button('主副互换',-452,-269,189,51,()=>{this.parents.reverse();this.confirmParents();},{parent:p,size:22});ui.button('查看完整概率',-213,-269,242,51,()=>this.fusionDetails(a,b,()=>this.soloFusionPlan(a,b)),{parent:p,size:22});
+    ui.text('揭晓后保留一只，其余两只会消耗',94,-263,18,UI_COLORS.sand,p,308,53,true);
+    ui.button('确认合成 ›',421,-270,271,62,()=>this.action(()=>{this.service.startOutsideFusion(this.command('outsideFusion'),a.id,b.id);this.sound('fusionStart');this.resume();}),{parent:p,primary:true,size:28});
+  }
+  private soloSkillInventory(category=0,page=0,selected?:SkillId,petId?:string,petPage=0):void{
+    const ui=this.ui,s=this.service.snapshot,owned=SKILLS.filter(x=>(s.skillBooks?.[x.id]??0)>0&&!x.specialization),list=owned.filter(x=>!category||category===1&&x.active||category===3&&x.precious||category===4&&!x.active&&!x.precious),pages=Math.max(1,Math.ceil(list.length/6));page=Math.max(0,Math.min(page,pages-1));
+    const book=list.find(x=>x.id===selected)??list[page*6],pets=this.ordered(),eligible=pets.filter(t=>book&&!skillBookIssue(t,book.id)),pet=pets.find(t=>t.id===petId)??eligible[0]??pets[0];
+    this.inventoryReturn=()=>this.soloSkillInventory(category,page,book?.id,pet?.id,petPage);ui.clear();const p=ui.soloPage('技能',this.home);
+    ui.panel(-210,-12,704,578,p,'#FFF9EC',245,23);ui.panel(370,-12,424,578,p,'#FFF9EC',245,23);
+    [[0,'全部'],[1,'主动'],[4,'被动'],[3,'珍贵']].forEach(([id,name],i)=>ui.button(String(name),-471+i*174,235,164,44,()=>this.soloSkillInventory(Number(id)),{parent:p,primary:category===id,size:23}));
+    list.slice(page*6,page*6+6).forEach((skill,i)=>{const n=ui.button('',-441+i%3*230,113-Math.floor(i/3)*196,210,181,()=>this.soloSkillInventory(category,page,skill.id,pet?.id,petPage),{parent:p,selected:book?.id===skill.id});ui.bookIcon(skill.id,0,26,111,n);ui.text(skill.name+' ×'+s.skillBooks![skill.id],0,-56,22,UI_COLORS.ink,n,197,39);});
+    ui.button('‹',-494,-254,65,42,()=>this.soloSkillInventory(category,page-1),{parent:p,disabled:page===0,size:29});ui.text((page+1)+' / '+pages,-210,-254,22,UI_COLORS.sand,p,175,34);ui.button('›',68,-254,65,42,()=>this.soloSkillInventory(category,page+1),{parent:p,disabled:page+1>=pages,size:29});
+    if(!book){ui.bookIcon('calm',-214,53,117,p);ui.text('还没有技能书',-214,-60,27,UI_COLORS.ink,p,425,43);ui.text('从主线、无尽与商城获得',370,4,22,UI_COLORS.sand,p,371,72,true);return;}
+    ui.bookIcon(book.id,275,168,133,p);ui.text(book.name,456,204,28,UI_COLORS.ink,p,204,43);ui.text(skillCategory(book),454,158,20,UI_COLORS.sand,p,207,35);ui.text(book.description,373,61,22,UI_COLORS.ink,p,372,126,true);ui.line(189,-18,551,-18,p);ui.text('学习对象',269,-48,23,UI_COLORS.ink,p,152,37);
+    petPage=Math.max(0,Math.min(petPage,Math.max(0,Math.ceil(pets.length/3)-1)));pets.slice(petPage*3,petPage*3+3).forEach((t,i)=>{const issue=skillBookIssue(t,book.id),n=ui.button('',242+i*127,-113,105,101,()=>this.soloSkillInventory(category,page,book.id,t.id,petPage),{parent:p,selected:t.id===pet?.id});ui.pet(t,0,9,69,n);ui.text(issue?'不可学习':this.petName(t),0,-38,17,issue?UI_COLORS.muted:UI_COLORS.ink,n,100,26);});
+    if(pets.length>3)ui.button('换一组',493,-47,112,36,()=>this.soloSkillInventory(category,page,book.id,pet?.id,(petPage+1)%Math.ceil(pets.length/3)),{parent:p,size:18});
+    const issue=pet?skillBookIssue(pet,book.id):'暂无伙伴';ui.text(issue??'随机覆盖一项已有技能',370,-192,18,UI_COLORS.sand,p,379,39);
+    ui.button('学习技能',371,-250,366,60,()=>this.soloLearnConfirm(pet!,book.id,()=>this.soloSkillInventory(category,page,book.id,pet!.id,petPage)),{parent:p,primary:true,disabled:!!issue,size:28});
+  }
+  private soloLearnConfirm(t:Turtle,id:SkillId,back:()=>void):void{
+    const ui=this.ui,d=ui.dialog('确认学习','将随机覆盖一项已有技能',()=>d.parent?.destroy(),692,437);ui.portrait(t.role,-139,5,162,d,true);ui.bookIcon(id,136,11,116,d);ui.text(SKILL_BY_ID[id].name+' ×1',136,-71,23,UI_COLORS.ink,d,248,40);ui.text(this.petName(t),-139,-94,24,UI_COLORS.ink,d,251,40);
+    ui.button('取消',-144,-154,238,54,()=>d.parent?.destroy(),{parent:d,size:25});ui.button('确认学习',144,-154,238,54,()=>this.action(()=>{this.service.learnSkillBook(this.command('skillBook'),t.id,id);this.sound('learn');d.parent?.destroy();const receipt=this.service.snapshot.bookReveal!;const q=ui.dialog('学习完成','技能总数不变',undefined,730,424);ui.bookIcon(receipt.receipt.replacedSkillId,-148,15,103,q);ui.text('→',0,15,38,UI_COLORS.sand,q,67,56);ui.bookIcon(id,148,15,103,q);ui.text(SKILL_BY_ID[receipt.receipt.replacedSkillId].name,-148,-67,24,UI_COLORS.ink,q,269,39);ui.text(SKILL_BY_ID[id].name,148,-67,24,UI_COLORS.ink,q,269,39);ui.button('完成',0,-144,334,55,()=>this.action(()=>{this.service.finishBookReveal('bookReveal:'+receipt.commandId);this.sound('learnComplete');q.parent?.destroy();back();}),{parent:q,primary:true,size:27});}),{parent:d,primary:true,size:25});
+  }
   chooseParents(page=0):void{
+    if(this.ui.soloStyle){this.soloParents(page);return;}
     const all=this.ordered(),pages=Math.max(1,Math.ceil(all.length/6)),current=Math.max(0,Math.min(page,pages-1));this.parents=this.parents.map(id=>all.some(t=>t.id===id)?id:'');this.ui.clear();const p=this.ui.sceneSheet('合成工坊',this.home,'fusion-background');
     const targets:PetDropTarget[]=[];
     const pick=(t:Turtle,slot:number)=>this.action(()=>{if(t.locked)throw new Error('请先解除这只龟龟的锁定，再选择为亲本');const other=slot===0?1:0;if(this.parents[other]===t.id)this.parents[other]=this.parents[slot]??'';this.parents[slot]=t.id;this.parentSlot=this.parents[other]?slot:other;this.ui.feedback?.('equip');this.chooseParents(current);});
@@ -116,7 +162,7 @@ export class PrototypeMenus {
   }
   private shopPacksV2():void{
     const s=this.service.snapshot;this.ui.clear();const p=this.ui.sceneSheet('商城',this.home,'market-pavilion');
-    this.ui.icon('gold',-480,284,34,p);this.ui.text(displayGold(s.gold),-348,284,26,UI_COLORS.gold,p,210,40);
+    if(!this.ui.soloStyle){this.ui.icon('gold',-480,284,34,p);this.ui.text(displayGold(s.gold),-348,284,26,UI_COLORS.gold,p,210,40);}
     this.ui.button('推荐礼包',-486,128,174,78,()=>this.shop('pack'),{parent:p,selected:true,size:27});
     this.ui.button('龟龟招募',-486,28,174,78,()=>this.shop('turtle'),{parent:p,size:27});
     this.ui.button('技能书祈愿',-486,-72,174,78,()=>this.shop('book'),{parent:p,size:25});
@@ -130,12 +176,12 @@ export class PrototypeMenus {
   }
   private packDetail(id:ShopPackId):void{
     const pack=SHOP_PACKS.find(p=>p.id===id)!,s=this.service.snapshot,remaining=packRemaining(s,Math.max(Date.now(),s.clockHighWater),id),cost=goldAmount(s,pack.price),p=this.open(pack.name,`今日剩余 ${remaining}/20 · 不计入招募保底`,()=>this.shop('pack'));
-    this.ui.text(pack.description,0,40,32,UI_COLORS.cream,p,1060,240,true);
+    if(this.ui.soloStyle){const i=SHOP_PACKS.findIndex(x=>x.id===id),pic=this.ui.group('礼包内容插画',-344,38,p,172,172);if(i===2||i===3)this.ui.bookIcon(i===2?'strong':'combo',0,0,162,pic);else this.ui.art?.attach(pic,`shop-${i}` as ArtV2Slice,172,172);this.ui.text(pack.description.replace('专精与珍贵技能从高级活动获得。','珍贵技能随主线和无尽进度解锁，进阶主动通过局内合成获得。'),141,38,26,UI_COLORS.ink,p,646,225,true);}else this.ui.text(pack.description,0,40,32,UI_COLORS.cream,p,1060,240,true);
     if(id==='bookRandom'||id==='bookAttack')this.button('查看完整概率',0,-152,520,p,()=>this.packOdds(id));
     this.button(`购买并打开 · ${displayGold(cost)} 金币`,0,-276,760,p,()=>{this.service.purchaseShopPack(this.command('shopPack'),id);this.sound('purchase');this.shop('pack');},remaining<=0||s.gold<cost||(id==='turtleBasic'||id==='turtleAdvanced')&&Object.keys(s.collection).length>=s.capacity,true);
   }
   private packOdds(id:ShopPackId,page=0):void{
-    const rows=packBookOdds(id),pages=Math.ceil(rows.length/20),index=Math.max(0,Math.min(page,pages-1)),p=this.open('技能包概率',`第 ${index+1}/${pages} 页 · 显示四舍五入，按完整权重抽取`,()=>this.packDetail(id));
+    const rows=packBookOdds(id,this.service.snapshot),pages=Math.ceil(rows.length/20),index=Math.max(0,Math.min(page,pages-1)),p=this.open('技能包概率',`第 ${index+1}/${pages} 页 · 显示四舍五入，按完整权重抽取`,()=>this.packDetail(id));
     rows.slice(index*20,index*20+20).forEach((row,i)=>this.ui.text(`${SKILL_BY_ID[row.skillId].name}  ${(row.chance*100).toFixed(3)}%`,-278+(i%2)*556,174-Math.floor(i/2)*40,26,UI_COLORS.cream,p,526,38));
     this.button('上一页',-326,-276,280,p,()=>this.packOdds(id,index-1),index===0);this.button('返回礼包',0,-276,300,p,()=>this.packDetail(id));this.button('下一页',326,-276,280,p,()=>this.packOdds(id,index+1),index===pages-1);
   }
@@ -143,7 +189,7 @@ export class PrototypeMenus {
   private shopRules(pool:ShopPool):void{
     const p=this.open('招募规则','金币招募，不设额外币种。',()=>this.shop(pool));
     const text=pool==='turtle'?'普通次数：1技能54%、2技能30%、3技能13%、4技能3%。\n十次购买内自然出现4技能或以上时，不额外增加伙伴。\n累计第100、200…次：该次替换为随机6技能龟。\n六技能不保证高天赋、满成长或完美搭配。':'普通次数：通用90%、职业主动10%，同类别内随机。\n商城不产出珍贵与专精；请通过副本、竞技场或世界挑战获取。\n十次至少一本攻击类书；累计第100、200…次必出一本主动书。\n两种保底可以在同一十次中生效，不额外扣费。';
-    this.ui.text(text,0,30,29,UI_COLORS.cream,p,1100,330,true);this.button('知道了',0,-276,540,p,()=>this.shop(pool),false,true);
+    this.ui.text(this.ui.soloStyle?text.replace('商城不产出珍贵与专精；请通过副本、竞技场或世界挑战获取。','珍贵技能随主线和无尽进度解锁；进阶主动仅在局内合成后获得。'):text,0,30,29,UI_COLORS.cream,p,1100,330,true);this.button('知道了',0,-276,540,p,()=>this.shop(pool),false,true);
   }
   private confirmParents(page=0):void{
     const s=this.service.snapshot,[a,b]=this.parents.map(id=>s.collection[id]);if(!a||!b){this.chooseParents();return;}
@@ -172,6 +218,7 @@ export class PrototypeMenus {
     const command=this.command('outsideFusion');this.button('确认合成',232,-276,620,p,()=>{this.service.startOutsideFusion(command,a.id,b.id);this.sound('fusionStart');this.resume();},false,true);
   }
   private confirmParentsModern(a:Turtle,b:Turtle):void{
+    if(this.ui.soloStyle){this.soloFusionPlan(a,b);return;}
     this.ui.clear();const p=this.ui.sceneSheet('合成工坊',()=>this.chooseParents(),'fusion-background'),branches=previewFusion(a,b);
     this.ui.atmosphere(p,'fusion',0,0,560,390);this.ui.panel(-378,1,332,450,p,'#FFF9EC',205,24);this.ui.panel(378,1,332,450,p,'#FFF9EC',205,24);this.ui.decoration('decor-seascape',-378,35,318,290,p);this.ui.decoration('decor-seascape',378,35,318,290,p);this.ui.panel(0,-26,360,204,p,'#FFF9EC',235,22);
     [a,b].forEach((t,i)=>{const x=i?378:-378,n=this.ui.group('合成亲本:'+t.id,x,23,p,294,330);this.ui.text(i?'副龟 · 40%造型':'主龟 · 60%造型',0,158,25,'#008B99',n,284,38);this.ui.portrait(t.role,0,27,238,n,true,t.skills.length>=10);this.ui.text(this.petName(t),0,-89,29,UI_COLORS.ink,n,278,40);this.ui.text('Lv.'+levelInfo(t).level+' · '+turtleQuality(t).name+' · '+t.skills.length+' 技能',0,-126,21,UI_COLORS.sand,n,286,34);this.ui.hover(n);n.on(Node.EventType.TOUCH_END,()=>new PetDetails(this.ui,this.service,this.command,this.error).show(t));this.ui.button(i?'替换副龟':'替换主龟',x,-179,258,44,()=>{this.parentSlot=i;this.chooseParents();},{parent:p,size:22});});
@@ -196,13 +243,14 @@ export class PrototypeMenus {
     if(pages>1){this.ui.button('‹',-354,-292,94,47,()=>this.fusionDetails(a,b,back,current-1),{parent:p,disabled:current===0,size:24});this.ui.button('›',354,-292,94,47,()=>this.fusionDetails(a,b,back,current+1),{parent:p,disabled:current===pages-1,size:24});this.ui.text((current+1)+' / '+pages,493,-292,19,UI_COLORS.sand,p,120,30);}
   }
   skillInventory(category=0,page=0):void{
+    if(this.ui.soloStyle){this.soloSkillInventory(category,page);return;}
     this.inventoryReturn=()=>this.skillInventory(category,page);
     const s=this.service.snapshot,owned=SKILLS.filter(x=>(s.skillBooks?.[x.id]??0)>0),list=owned.filter(x=>category===0||category===1&&x.active||category===2&&x.specialization||category===3&&x.precious||category===4&&!x.active&&!x.specialization&&!x.precious);
     const pages=Math.max(1,Math.ceil(list.length/10));page=Math.max(0,Math.min(page,pages-1));
     const p=this.open('技能背包',`持有 ${owned.reduce((n,x)=>n+(s.skillBooks?.[x.id]??0),0)} 枚技能 · 点击图标查看与学习`,this.home);
     this.ui.button('礼包 '+Object.values(s.bookPacks??{}).reduce((n,v)=>n+(v??0),0),460,-279,160,48,()=>new RewardMenus(this.ui,this.service,this.command,this.error).packs(()=>this.skillInventory(category,page)),{parent:p,size:22});
-    ['全部','职业主动','职业专精','珍贵技能','通用技能'].forEach((name,i)=>this.ui.button(name,-432+i*216,180,196,44,()=>this.skillInventory(i),{parent:p,primary:i===category,size:22}));
-    if(!list.length){this.ui.bookIcon(category===2?'stoneMastery':'calm',0,30,112,p);this.ui.text('这里还没有技能，可从市场招募或冒险宝箱获得。',0,-86,24,UI_COLORS.sand,p,940,68,true);}
+    (this.ui.soloStyle?[[0,'全部'],[1,'职业主动'],[3,'珍贵技能'],[4,'通用技能']]:[[0,'全部'],[1,'职业主动'],[2,'职业专精'],[3,'珍贵技能'],[4,'通用技能']]).forEach(([id,name],i,items)=>this.ui.button(String(name),(i-(items.length-1)/2)*216,180,196,44,()=>this.skillInventory(Number(id)),{parent:p,primary:Number(id)===category,size:22}));
+    if(!list.length){this.ui.bookIcon(category===2?'stoneMastery':'calm',0,30,112,p);this.ui.text('还没有技能书，主线、无尽与商城都能获得。',0,-86,24,UI_COLORS.sand,p,940,68,true);}
     list.slice(page*10,page*10+10).forEach((skill,i)=>{const n=this.ui.button('',-436+i%5*218,57-Math.floor(i/5)*183,200,166,()=>this.inventorySkill(skill.id,category,page),{parent:p});this.ui.bookIcon(skill.id,-24,23,86,n);this.ui.text('×'+s.skillBooks![skill.id],64,26,22,UI_COLORS.ink,n,57,37);this.ui.text(skill.name,0,-40,23,UI_COLORS.ink,n,190,33);this.ui.text(skillCategory(skill),0,-66,17,UI_COLORS.sand,n,185,25);});
     this.ui.button('上一页',-222,-279,180,48,()=>this.skillInventory(category,page-1),{parent:p,disabled:page===0,size:22});this.ui.text(`${page+1} / ${pages}`,0,-279,22,UI_COLORS.ink,p,146,34);this.ui.button('下一页',222,-279,180,48,()=>this.skillInventory(category,page+1),{parent:p,disabled:page+1>=pages,size:22});
   }
@@ -228,7 +276,7 @@ export class PrototypeMenus {
     }
     const p=this.open(`${this.petName(t)} · 学习技能书`,pending?'擦开泡泡查看技能变化；本次结果已经保存。':this.lastBook?.turtleId===id?`${SKILL_BY_ID[this.lastBook.replacedSkillId].name} → ${SKILL_BY_ID[this.lastBook.bookSkillId].name}，技能总数不变`:this.selectedBook&&SKILL_BY_ID[this.selectedBook].specialization?'专精占一个技能位；学习保留职业主动，随机覆盖其他一项。':'确认学习将随机覆盖一项；覆盖职业主动会使对应专精暂时失效。',pending?undefined:this.inventoryReturn??(()=>this.detail(id)));
     t.skills.forEach((skill,i)=>this.ui.skillTile(skill,-490+(i%6)*196,138-Math.floor(i/6)*126,p,78,178));
-    this.ui.text(books.length?`技能书库存 · 第 ${current+1}/${pages} 页`:'还没有技能书，可从无尽宝藏和交易行获得',0,-82,28,UI_COLORS.sand,p,1100,40);
+    this.ui.text(books.length?`技能书库存 · 第 ${current+1}/${pages} 页`:this.ui.soloStyle?'还没有技能书，可从主线、无尽和商城获得':'还没有技能书，可从无尽宝藏和交易行获得',0,-82,28,UI_COLORS.sand,p,1100,40);
     books.slice(current*3,current*3+3).forEach((skill,i)=>{
       const issue=skillBookIssue(t,skill.id),n=this.ui.button('',-384+i*384,-169,360,104,()=>{this.selectedBook=skill.id;this.skillBooks(id,current);},{parent:p,disabled:!!pending||!!issue,selected:this.selectedBook===skill.id});
       this.ui.bookIcon(skill.id,-130,0,82,n);this.ui.text(`${skill.name} ×${s.skillBooks![skill.id]}`,45,22,25,UI_COLORS.cream,n,244,38);this.ui.text(issue??skillCategory(skill),45,-24,20,UI_COLORS.sand,n,244,36,true);
@@ -253,7 +301,7 @@ export class PrototypeMenus {
       let p:Node;
       if(this.ui.art?.ready){this.ui.clear();p=this.ui.sceneSheet('揭晓伙伴',undefined,'fusion-background');
         this.ui.fusionCard(e.candidate,p);e.parents.forEach((t,i)=>{const n=this.ui.panel(i===0?-469:469,0,228,364,p);this.ui.pet(t,0,34,146,n);this.ui.text(i===0?'主龟':'副龟',0,152,22,UI_COLORS.gold,n,238,38);this.ui.text(this.petName(t),0,-55,27,UI_COLORS.cream,n,238,42);this.ui.text(`${t.skills.length}技能`,0,-100,25,UI_COLORS.sand,n,238,36);});
-      }else{p=this.open('泡泡里藏着新伙伴','结果已保存。揭晓后，从 A / B / C 中留下一个。');this.ui.fusionCard(e.candidate,p);}
+      }else{p=this.open('泡泡里藏着新伙伴','候选结果已暂存。揭晓后，从 A / B / C 中留下一个。');this.ui.fusionCard(e.candidate,p);}
       new BubbleReveal(this.ui,p,e.id,()=>this.action(()=>{this.service.revealOutsideFusion(`outsideReveal:${e.id}`);this.sound('fusionComplete');this.chooseSurvivor();}),this.available,()=>this.sound('rub'));
       if(this.ui.art?.ready)this.parentsEnterBubble(p,e.parents);return true;
     }
@@ -287,10 +335,20 @@ export class PrototypeMenus {
       this.ui.portrait(t.role,0,54,112,n,true,t.skills.length>=10);
       this.ui.text(`${t.skills.length} 技能 · ${q.name}`,0,-28,30,UI_COLORS.ink,n,330,40);
       if(this.service.snapshot.livingVersion){this.ui.text('成长',-125,-68,22,UI_COLORS.ink,n,66,33);talentStars(this.ui,t,'growth',-14,-68,n,18);}else this.ui.text(`成长 ${((t.innate.growth+t.training.growth)/100).toFixed(2)}`,0,-68,28,UI_COLORS.ink,n,330,36);
-      this.button('查看完整资料',0,-124,320,n,()=>this.inspect(t,()=>this.chooseSurvivor()));
+      this.button(i===2&&this.ui.soloStyle?'对比技能变化':'查看完整资料',0,-124,320,n,()=>i===2&&this.ui.soloStyle?this.fusionSkillComparison():this.inspect(t,()=>this.chooseSurvivor()));
       this.button('留下',x,-276,336,p,()=>this.confirmSurvivor(letters[i]),false,i===2);
     });
-    if(this.ui.art?.ready)this.ui.panel(0,-198,940,54,p);this.ui.text('确认后仅保留一位，其余两位消耗。',0,-198,28,UI_COLORS.cream,p,1080,36);
+    if(this.ui.art?.ready)this.ui.panel(0,-198,940,54,p);this.ui.text('候选已暂存 · 确认后仅保留一位，其余两位消耗。',0,-198,28,UI_COLORS.cream,p,1080,36);
+  }
+  private fusionSkillComparison():void{
+    const e=this.service.snapshot.outsideFusion;if(!e)return;
+    const inherited=e.candidate.skills.filter(id=>e.parents.some(t=>t.skills.includes(id))),lost=Array.from(new Set(e.parents.flatMap(t=>t.skills))).filter(id=>!e.candidate.skills.includes(id));
+    const p=this.ui.dialog('技能差异','以真实合成结果为准 · 还未消耗亲本',()=>p.parent?.destroy(),970,554);
+    this.ui.text('新伙伴保留 '+inherited.length+' 项',0,149,27,'#008D95',p,830,42);
+    inherited.forEach((id,i)=>this.ui.bookIcon(id,-365+i%8*104,79-Math.floor(i/8)*84,64,p));
+    this.ui.text('未继承 '+lost.length+' 项',0,-72,24,UI_COLORS.sand,p,830,38);
+    this.ui.text(lost.map(id=>SKILL_BY_ID[id].name).join(' · ')||'亲本技能全部保留',0,-134,21,UI_COLORS.ink,p,852,86,true);
+    this.ui.button('返回比较',0,-224,295,49,()=>p.parent?.destroy(),{parent:p,primary:true,size:24});
   }
   private confirmSurvivor(choice:'A'|'B'|'C'):void{
     const e=this.service.snapshot.outsideFusion;if(!e)return;const kept=choice==='C'?e.candidate:e.parents[choice==='A'?0:1];
@@ -326,12 +384,12 @@ export class PrototypeMenus {
     const t=this.service.snapshot.collection[id];if(!t){back();return;}
     const p=this.open('给伙伴改名','最多6个汉字或12个英文字符；改名不改变属性和概率。',back);
     this.ui.text(`原名：${this.petName(t)}`,0,120,32,UI_COLORS.cream,p,1060,90,true);
-    const n=this.ui.panel(0,-2,1000,100,p),edit=n.addComponent(EditBox);
+    const surface=this.ui.panel(0,-2,1000,100,p),n=this.ui.group('伙伴改名输入',0,0,surface,1000,100);n.active=false;const edit=n.addComponent(EditBox);
     const automaticLabels=[edit.textLabel?.node,edit.placeholderLabel?.node];
     edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;
     edit.textLabel=this.ui.text('',0,0,34,UI_COLORS.cream,n,940,80);edit.placeholderLabel=this.ui.text('输入新名字',0,0,34,UI_COLORS.muted,n,940,80);
     for(const label of automaticLabels)if(label){label.removeFromParent();label.destroy();}
-    edit.maxLength=12;edit.string=t.name;edit.placeholder='输入新名字';this.ui.anchorInput?.(edit);
+    edit.maxLength=12;edit.string=t.name;edit.placeholder='输入新名字';this.ui.anchorInput?.(edit);n.active=true;
     const command=this.command('rename');this.button('保存名字',0,-250,480,p,()=>{this.service.rename(command,id,edit.string);back();},false,true);
   }
   private confirmRelease(id:string,back:()=>void):void{

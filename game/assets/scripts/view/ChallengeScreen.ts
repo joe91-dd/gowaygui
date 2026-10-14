@@ -1,4 +1,6 @@
-import {ExpeditionHUD,drawFixedStations} from './ExpeditionHUD';
+import {BattleFeedback} from './BattleFeedback';
+import {pearlBattleHeader} from './BattleHudHeader';
+import {ExpeditionHUD} from './ExpeditionHUD';
 import {petRange} from '../core/development';
 import {PACK_NAMES} from '../core/rewardPacks';
 import {exchangePlacementIssue,placementIssue,normalizedPoint} from '../core/placement';
@@ -20,6 +22,7 @@ import {ActiveSkillControls} from './ActiveSkillControls';
 
 /** Local party and arena battles keep their own checkpoint, sharing the finished turtle assets and combat world. */
 export class ChallengeScreen {
+ private approvedFeedback?:BattleFeedback;
   private expeditionHUD?:ExpeditionHUD;
   private raid?:RaidSession;private arena?:ArenaSession;private destroyed=false;private hidden=false;private paused=false;private epoch=0;private lastCheckpoint=0;private speed:1|2=1;private heading?:Label;private clock?:Label;private rosterView='';
   private skills?:ActiveSkillControls;private choosingTarget=false;private moving=false;private moveCancel?:Node;private rosterOpen=false;private feedbackNodes:Node[]=[];private feedbackTimes=new Map<string,number>();
@@ -53,7 +56,7 @@ export class ChallengeScreen {
     this.stationOverlay?.();
     try{
       const delta=Math.min(Math.max(dt,0),.5)*this.speed;
-      if(this.battle)this.battle.autoSkills=this.service.snapshot.settings.autoSkills??false;
+      if(this.battle)this.battle.autoSkills=this.service.settingsSnapshot.autoSkills??false;
       if(this.raid?.phase==='combat')stepRaid(this.raid,delta);
       else if(this.arena?.phase==='combat')stepArena(this.arena,delta);else{this.world.updatePresentation(delta);return;}
       const b=this.battle!;const events=getBattleEvents(b);this.world.setPlaybackSpeed(this.speed);this.world.update(b,events,delta);for(const event of events)this.buildFeedback(b,event);
@@ -72,18 +75,8 @@ export class ChallengeScreen {
     }catch(e){this.paused=true;this.world.setPaused(true);this.onError(e);}
   }
   private buildFeedback(battle:BattleState,event:import('../core/battle').BattleEvent):void{
-    if(this.paused||this.hidden)return;const amount=Math.round(event.amount??0);
-    const numeric=amount>0&&['damage','heal','shield'].includes(event.type)?(event.type==='damage'?`-${amount.toLocaleString()}`:`+${amount.toLocaleString()}`):undefined;
-    const skill=event.skillId?SKILL_BY_ID[event.skillId]:undefined;const word=event.critical?'暴击':event.type==='control'?`控制 · ${skill?.name??'眩晕'}`:event.type==='skill'&&skill?`${skill.active?'技能':'被动'} · ${skill.name}`:undefined;
-    const label=numeric?(word?`${word} ${numeric}`:numeric):word;if(!label)return;
-    const key=`${event.sourceId}:${event.skillId??event.effect??event.type}`;if(!numeric&&battle.tick-(this.feedbackTimes.get(key)??-100)<20)return;
-    this.feedbackNodes=this.feedbackNodes.filter(n=>isValid(n,true));if(this.feedbackNodes.length>=14)return;
-    const casterText=!numeric,actorId=casterText?event.sourceId:(event.targetId??event.sourceId);
-    const actor=battle.units.find(u=>u.id===actorId)??battle.enemies.find(e=>e.id===actorId);if(!actor&&(casterText||event.x===undefined))return;
-    const size=displayScreen.windowSize,scale=Math.min(size.width/1280,size.height/720),screen=this.camera.worldToScreen(new Vec3(actor?.x??event.x??0,2.15,actor?.z??event.z??0)),p=new Vec3((screen.x-size.width/2)/scale,(screen.y-size.height/2)/scale,0);if(!numeric)this.feedbackTimes.set(key,battle.tick);
-    if(casterText)p.y+=12;
-    const drift=casterText?(p.x>0?-1:1)*(56+(event.id%3)*10):0;
-    const critical=event.critical===true,positive=event.type==='heal'||event.type==='shield',text=this.ui.text(label,p.x,p.y,critical?23:numeric?20:18,critical?'#FF7777':positive?'#9AFFC9':numeric?'#FFFFFF':'#FFF2A8',this.ui.root,260,32,true);const outline=text.node.addComponent(LabelOutline);outline.width=1.5;outline.color=new Color('#263449');this.feedbackNodes.push(text.node);tween(text.node).to(casterText?.86:.72,{position:new Vec3(p.x+drift,p.y+(casterText?48:34),0),scale:new Vec3(1.06,1.06,1)}).call(()=>{if(isValid(text.node,true))text.node.destroy();}).start();
+    if(this.hidden)return;
+    (this.approvedFeedback??=new BattleFeedback(this.ui,this.camera)).show(battle,event);
   }
   render():void{
     if(this.destroyed)return;this.expeditionHUD?.dispose();this.expeditionHUD=undefined;this.skills?.dispose();this.setMoving(false);this.epoch++;this.stationOverlay=undefined;this.rosterView=this.rosterState();this.skills=undefined;this.stationLabels=[];this.choosingTarget=false;this.ui.clear();this.heading=undefined;this.clock=undefined;this.world.showRange(null);this.world.setPaused(this.paused||this.finished);
@@ -101,7 +94,7 @@ export class ChallengeScreen {
     this.ui.pinBattleFrom?.(controls,1,0,0,'top',1);
   }
   private renderExpeditionRaid():void{
-    const r=this.raid!,b=r.battle!;this.world.update(b,[],0);const top=this.ui.root.children.length;this.ui.panel(-328,326,610,42);this.ui.text(RAIDS[r.tier].name+' · 双人协防',-440,326,20,UI_COLORS.ink,this.ui.root,340,32);this.ui.button(`${this.speed}X`,-170,326,76,42,()=>{this.speed=this.speed===1?2:1;this.render();},{size:22});this.ui.button('菜单',-76,326,104,42,()=>{this.paused=true;this.checkpoint();this.render();},{size:20});this.ui.pinBattleFrom(top,1,0,0,'top');
+    const r=this.raid!,b=r.battle!;this.world.update(b,[],0);pearlBattleHeader(this.ui,RAIDS[r.tier].name,this.speed,()=>{this.speed=this.speed===1?2:1;this.render();},()=>{this.paused=true;this.checkpoint();this.render();},'菜单');
     this.expeditionHUD=new ExpeditionHUD(this.ui,this.camera,this.world,()=>this.raid!.battle!,r.members[0].ownerId,(action,args)=>{try{this.service.raidExpeditionCommand(this.command(action),action,args,r.phase==='combat'?this.raid:undefined);this.raid=this.service.snapshot.community!.raid;this.render();}catch(e){this.onError(e);}},()=>this.render(),v=>this.setMoving(v),r.phase==='prep',()=>{this.service.beginRaidWave(this.command('raidBegin'));this.raid=this.service.snapshot.community!.raid;this.render();},undefined,enabled=>this.service.updateSettings(this.command('auto'),{autoSkills:enabled,manualSkillTurtles:[]}));
   }
   private renderRaid():void{
@@ -153,7 +146,7 @@ export class ChallengeScreen {
   }
   private stationPage():void{this.render();this.ui.toast('长按自己的伙伴，拖到空地换位，拖到队友落点互换');}
   private renderArena():void{
-    const a=this.arena!;if(a.battle.formationVersion===2)drawFixedStations(this.ui,this.camera,54);this.hud(a.defending?'竞技场·防守演练':'竞技场·进攻');this.heading!.string=a.defending?`对手突破 ${a.passed}/5 · 守住三只`:`已突破 ${a.passed}/5 · 三只获胜`;this.clock!.string=`${Math.floor(a.seconds)} 秒`;this.world.update(a.battle,[],0);
+    const a=this.arena!;this.hud(a.defending?'竞技场·防守演练':'竞技场·进攻');this.heading!.string=a.defending?`对手突破 ${a.passed}/5 · 守住三只`:`已突破 ${a.passed}/5 · 三只获胜`;this.clock!.string=`${Math.floor(a.seconds)} 秒`;this.world.update(a.battle,[],0);
     this.ui.panel(0,-280,1120,122,this.ui.root,'#F5FCFC',246,17);this.renderDeployDock();this.renderSkills();
   }
   private deployRoster():{id:string;turtle:import('../core/types').Turtle;active:boolean;alive:boolean}[]{

@@ -1,25 +1,46 @@
-# 战斗 HUD 图片还原验收
+# Design QA — Pearl battle HUD
 
-Source: F:/Codex/Projects/gowaygui/output/hud-reference-20260920/reference.png
-Viewport: 1664 × 941 CSS px; reference 1664 × 941 pixels. Cocos uses a 1280 × 720 design canvas with physical edge anchoring.
-Scope: combat HUD. Existing 3D actors, maps, portraits, skill illustrations and actual battle statistics are retained, as requested. The preparation/bench management screen is a different state from the combat reference.
+Status: passed
 
-## Comparison history
-- Previous build: P1 horizontal miniature portrait cards, square spell frames, oversized top bar, missing status icons and rectangular automatic button.
-- First reference build, in-app browser tab 3 at http://127.0.0.1:7626/?preview=all-maps&map=0&v=hud-reference-20260920 : full screenshot at wave 1, 0:01. Top status band and bottom roster/spell/switch proportions now align with the reference. P2: avatar lower edge overlaps names; cyan canvas bands visible behind top/bottom HUD.
-- Revision 2: isolated rectangular portrait crop leaves a dedicated name row. Extended scenery behind HUD leaves the playable map, route UVs, actors and camera unchanged. Final capture: in-app browser tab 3, http://127.0.0.1:7617/?preview=all-maps&map=0&v=hud-reference-r2-20260920, 1664 × 941, wave 1 at 0:00 and 0:32. Avatar/name separation and scenery behind both HUD bands visibly verified.
+Date: 2026-09-27
 
-## Fidelity checks
-- Fonts: Microsoft YaHei; deep navy text; bold top status, names and numeric counters. Corrected speed/pause weight.
-- Spacing: reference 800 × 54 px status band; implementation 793 × 55. Bottom tray approximately 1398 × 153 px, 5 portrait columns then 5 circular spells, thin dividers, switch.
-- Colors: white/pearl surface, navy text, green/blue HP, cyan count dots; existing illustration colors retained.
-- Assets: existing character/skill assets; Lucide status/badge icons from upstream SVG with ISC license in game/art-source/hud-reference. No rasterized HUD screenshot used.
-- Content: names and health reflect actual companions; spell count is the actual learned count, not fabricated level values. HP and cooldown update in combat.
+## Reference and scope
 
-## Interaction checks
-- Eight HUD/gesture/placement tests: passed. TypeScript check and Cocos built-core regression passed.
-- Browser: new build enters chapter 1 and begins wave 1; round icons, automatic switch and status display observed.
-- Console: existing enableRetina deprecation and browser autoplay timeout; no new HUD exception observed.
+Approved first concept: output/hud-review-20260927/01-pearl.png. Compare its top battle viewport against the implemented game, not the bottom presentation sheet. Scope is the ivory/pearl/gold HUD, ground pads, reward cards and approved recruitment economy. Existing map, turtle assets, routes and standing coordinates remain authoritative.
 
-final result: passed
-Final browser interactions: automatic switch changed from on to off, round cooldown countdown displayed, pause opened battle menu. Console error query returned []. Focused review of top icons/status text, portrait/name/HP rows and spell/switch regions found no remaining overlap or clipped controls. P3: library status icons have slightly different strokes from the illustration; existing portrait/skill artwork intentionally retained. Full-screen scenery and 3D models remain the existing game assets; this is HUD fidelity, not a replacement of world art. Browser screenshots are retained in the task tool results at the above URL.
+## Visual verification
+
+Reference and final implementation were displayed together for comparison. Final evidence:
+
+- output/pearl-hud-20260927/prep-final.png (1280×720)
+- output/pearl-hud-20260927/mobile-final.png (844×390)
+- output/pearl-hud-20260927/blessings-final.png
+
+Matched visual hierarchy: short top plaques, illustrated bottom dock, prominent gold recruit and orange start, five original circular skill illustrations, separate manual/auto and one-click controls. Ground pads have no numerals and render below characters. Three blessing cards use large distinct art with concise readable effects and details buttons. Mobile preserves aspect ratio with side margins.
+
+## Fixed during QA
+
+- Atlas sprites initially used source sizes: explicit custom dimensions restored.
+- Ground station material rendered white: textured shader mode corrected.
+- Pads were too upright: flattened into ground perspective.
+- Reward effects and world boss damage text clipped: layout/text corrected.
+- Toast contrast insufficient: dark text on cream corrected.
+- Skill illustrations undersized: increased final diameter to 90.
+
+No remaining P0/P1/P2 issue observed in the tested views. P3/intended differences: existing game font and real actor assets retained; skill rims are simpler than concept art; no ornamental full-screen frame. Real ledger displays 0 after the initial two recruits rather than the concept's illustrative 90.
+
+## Functional evidence and limits
+
+Typecheck and script build passed. Focused economy tests passed, including old save compatibility, independent cooperative ledgers, recruitment limits and atomic failures. All 57 map/slot configurations compare unchanged with the prior build. Browser verified recruitment, start, 2X, first-boss rewards, manual targeting, raid preparation and world boss battle. Arena reached successful results, but its active HUD was not separately captured. These are representative UI checks, not an exhaustive full campaign playthrough. Final browser error log was empty.
+
+Playable build: http://127.0.0.1:7662/?preview=all-maps&all-modes=1&balance=coast&map=0&cache=20260927pearl-final
+
+## Approved VFX integration — 2026-09-27
+
+Status: passed for the tested views and event paths. Detailed scope, assets, tests and limits: output/approved-vfx-20260927/README.md.
+
+Compared the approved frost, healer and enemy atlas pages with runtime rendering. Increased open-center area volumes after the first pass looked too small. Added curved per-ally healing links, corrected bounce origins, retained actual 2/3/4 projectiles under particle pressure, and fixed arena opponents using generic enemy attacks. Native warning geometry has consistent red fill and edge. Short floating values remain readable over the battlefield. Existing pearl HUD/map composition retained.
+
+Proof: multi4-final.png, frost-final.png, heal-final.png and warning-runtime.png under output/approved-vfx-20260927. All images are actual Cocos-rendered captures; the VFX acceptance view exposes the same production renderer. Representative chapter and arena combat observed, with focused compiled-simulation tests for skills/world boss. Not an exhaustive all-enemy/all-level manual walkthrough or mobile-device performance certification.
+
+Final cross-mode checks: endless recruited and started; local raid completed wave 1 and opened blessing choices; world boss started and displayed actual damage and skill effects. Healer hostile pending attacks now pass both direct and JSON-restored snapshot validation. No new console error in the final world-boss run; earlier intentional server restart interrupted loading and was recovered by reload. Live two-device co-op was not retested.

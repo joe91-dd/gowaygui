@@ -2,8 +2,14 @@ import {KeyValueStorage} from './storage';
 import {requireRule} from '../core/save';
 
 export interface LocalSession { storage:KeyValueStorage; close():void }
+let nativeWriter=false;
 /** A Web Lock is held for the entire writable local session, not just a storage read. */
-export async function acquireLocalSession(storage:KeyValueStorage):Promise<LocalSession>{
+export async function acquireLocalSession(storage:KeyValueStorage,singleNativeProcess=false):Promise<LocalSession>{
+  // Native Cocos has one JS game process and no Web Locks / browser tabs.
+  if(singleNativeProcess){
+    requireRule(!nativeWriter,'游戏存档会话已开启','LOCAL_SESSION');nativeWriter=true;let live=true;
+    return {storage:{getItem:key=>{requireRule(live,'游戏会话已经关闭','LOCAL_SESSION');return storage.getItem(key);},setItem:(key,value)=>{requireRule(live,'游戏会话已经关闭','LOCAL_SESSION');storage.setItem(key,value);}},close:()=>{if(live){live=false;nativeWriter=false;}}};
+  }
   const manager=typeof navigator==='undefined'?undefined:navigator.locks;
   requireRule(manager,'当前浏览器不能安全地协调本地存档，请用较新的 Chrome 或 Edge 打开本地版本。','LOCAL_SESSION');
   let finish:(()=>void)|undefined,live=false;

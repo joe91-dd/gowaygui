@@ -1,3 +1,4 @@
+import {runtimeQuery} from '../platform/runtimeQuery';
 import {bookAllowed,bookChestReward,policyBook} from './bookPolicy';
 import {random} from './random';
 import type {GameSave,SkillId,RewardGrant} from './types';
@@ -20,7 +21,7 @@ export const arenaTier=(rating:number)=>ARENA_TIERS.reduce((n,t,i)=>rating>=t.mi
 export const arenaSettlementAt=(now:number)=>(arenaWeek(now)+6)*DAY-OFFSET+22*3600000;
 export const arenaWeeklyGrants=(s:GameSave,tier:number):RewardGrant[]=>[{kind:'gold',amount:goldAmount(s,180+tier*130)},{kind:'material',material:'growth',amount:1+tier},...(s.livingVersion?[{kind:'bookPack' as const,grade:tier>=5?'precious' as const:tier>=4?'mastery' as const:tier>=2?'active' as const:'common' as const,amount:1}]:[])];
 export const arenaLocked=(now:number)=>{
- if(typeof location!=='undefined'&&new URLSearchParams(location.search).get('all-modes')==='1')return false;
+ if(typeof location!=='undefined'&&runtimeQuery().get('all-modes')==='1')return false;
  return arenaDay(now)-arenaWeek(now)===6&&(now+OFFSET)%DAY>=22*3600000;
 };
 export function progression(s:GameSave):ProgressionState{

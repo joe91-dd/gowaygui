@@ -1,5 +1,6 @@
 const {loadBuiltCore}=require('./test-built-core.cjs'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const build=path.resolve(process.argv[2]),loader=loadBuiltCore(build,{'chunks:///_virtual/IslandUI.ts':{UI_COLORS:{},color:x=>x}});
+// This headless test exercises command persistence; the Cocos animation component is checked in-browser.
+const build=path.resolve(process.argv[2]),loader=loadBuiltCore(build,{'chunks:///_virtual/IslandUI.ts':{UI_COLORS:{},color:x=>x},'chunks:///_virtual/BattleHudMotion.ts':{BattleHudMotion:{}}});
 const {ActiveSkillControls}=loader.load('ActiveSkillControls'),{GameService}=loader.load('game'),{SaveRepository}=loader.load('save'),{MemoryStorage}=loader.load('storage');
 const service=new GameService(new SaveRepository(new MemoryStorage()),{now:()=>1788830000000},731),t=Object.values(service.snapshot.collection)[0],battle={manualSkillTurtles:[]};let seq=0;
 const controls=new ActiveSkillControls({toast(){}},{},service,()=>`built-skill:${++seq}`,fn=>fn(battle),()=>{},()=>{},()=>true);

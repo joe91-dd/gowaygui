@@ -1,3 +1,4 @@
+import {runtimeQuery} from '../platform/runtimeQuery';
 import {AnimationClip,Camera,Color,instantiate,Material,Mesh,MeshRenderer,Node,Prefab,primitives,Quat,resources,SkeletalAnimation,utils,Vec3} from 'cc';
 import {ENEMY_G1,ENEMY_G1_GRADES} from '../core/enemyG1Catalog';
 import {RAID_BOSSES} from '../core/bossCatalog';
@@ -24,7 +25,7 @@ export class EnemyG1ReviewScreen {
   if(typeof document!=='undefined'){this.status=document.createElement('div');this.status.setAttribute('role','status');this.status.style.cssText='position:fixed;bottom:4px;right:8px;background:#203d42;color:white;font:12px sans-serif;padding:5px;pointer-events:none;max-width:80vw';document.body.appendChild(this.status);}
   this.createControls();this.resize();
  }
- async initialize():Promise<void>{const id=new URLSearchParams(location.search).get('enemy');this.index=Math.max(0,ENEMY_G1.findIndex(x=>x.id===id));await this.select(this.index);}
+ async initialize():Promise<void>{const id=runtimeQuery().get('enemy');this.index=Math.max(0,ENEMY_G1.findIndex(x=>x.id===id));await this.select(this.index);}
  private async select(index:number):Promise<void>{
   const generation=++this.generation;this.index=index;const def=ENEMY_G1[index];this.ui.clear();this.ui.text('正在载入 '+def.name,0,170,26,'#214750');
   if(this.model){this.model.active=false;this.materialAdapter.release(this.model);this.model.destroy();}this.model=undefined;this.animations=[];this.radiance.destroy();this.radiance=new FaunaRadiance();this.prefab?.decRef();this.prefab=undefined;

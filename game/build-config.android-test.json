@@ -1,0 +1,34 @@
+{
+  "name": "gowaygui",
+  "platform": "android",
+  "buildPath": "project://build",
+  "outputName": "android-test-20260928",
+  "startScene": "f5b8b6b2-c8cc-41f8-afd7-f6ce7b5f6401",
+  "scenes": [{"url":"db://assets/scenes/Main.scene","uuid":"f5b8b6b2-c8cc-41f8-afd7-f6ce7b5f6401"}],
+  "debug": true,
+  "sourceMaps": false,
+  "md5Cache": false,
+  "mainBundleCompressionType": "merge_dep",
+  "packages": {
+    "native": {"template":"default","runAfterMake":false,"encrypted":false,"compressZip":false,"JobSystem":"none","serverMode":false,"hotModuleReload":false},
+    "android": {
+      "__version__":"1.0.1",
+      "packageName":"com.gowaygui.androidtest",
+      "apiLevel":36,
+      "appABIs":["arm64-v8a"],
+      "useDebugKeystore":true,
+      "orientation":{"landscapeLeft":true,"landscapeRight":true,"portrait":false,"upsideDown":false},
+      "resizeableActivity":false,
+      "maxAspectRatio":"2.4",
+      "appBundle":false,
+      "androidInstant":false,
+      "inputSDK":false,
+      "isSoFileCompressed":true,
+      "swappy":false,
+      "renderBackEnd":{"gles3":true,"gles2":false,"vulkan":false},
+      "sdkPath":"F:/Codex/Projects/gowaygui/game/temp/android-tools/sdk",
+      "ndkPath":"F:/Codex/Projects/gowaygui/game/temp/android-tools/sdk/ndk/27.2.12479018",
+      "javaHome":"F:/Codex/Projects/gowaygui/game/temp/android-tools/java/jdk-17.0.20.1+1"
+    }
+  }
+}

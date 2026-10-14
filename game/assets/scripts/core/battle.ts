@@ -1,3 +1,5 @@
+import {expeditionRecruitCost} from './expeditionEconomy';
+import {ensureExpeditionCadence,scheduleExpeditionWave} from './expeditionRules';
 import {ExpeditionState,BuffId,expeditionSlots,expeditionSpawns,expeditionKill,expeditionWaveCleared,expeditionPaused,tickExpeditionBuffs,applyExpeditionStats,chooseExpeditionBuff,buffCount,ADVANCED_ACTIVE,isCoastTrial,combatScale,trialFronts} from './expeditionRules';
 import {migrateSceneBattle} from './sceneMigration';
 import {developmentBonus,petRange,levelInfo} from './development';
@@ -22,12 +24,14 @@ export const BATTLE_RULES = {
 
 export type BattleStatusKind = 'web' | 'stun' | 'root' | 'slow' | 'weaken' | 'armorDown' | 'resistDown' | 'hold' | 'taunt' | 'fervor' | 'giant' | 'sheep';
 export interface BattleStatus { kind: BattleStatusKind; amount: number; untilTick: number; sourceId: string }
-export interface BattleShield { amount: number; untilTick: number; sourceId: string; skillId: SkillId }
+export interface BattleShield { amount: number; untilTick: number; sourceId: string; skillId?: SkillId; buffId?: 'healingTide' }
 export interface BattleEvent {
   id: number; tick: number;
   type: 'attack' | 'heal' | 'skill' | 'damage' | 'spawn' | 'defeat' | 'leak' | 'waveEnd' | 'shield' | 'control';
   sourceId?: string; targetId?: string; skillId?: SkillId; amount?: number;
   x?: number; z?: number; critical?: boolean; secondary?: boolean; effect?: string;
+  /** Presentation metadata: authoritative impact point, flight origin and warning timing. */
+  fromX?: number; fromZ?: number; radius?: number; duration?: number;
 }
 export interface BattleUnit {
   trialControlReadyTick?:number;
@@ -53,7 +57,8 @@ export interface BattleUnit {
   duelControlCount?:number;duelControlWindow?:number;
 }
 export interface BattleEnemy {
-  expeditionBounty?:boolean;
+  originWave?:number;
+  expeditionBounty?:boolean; rations?:number;
   mechanismOwner?:string;tacticCount?:number;
   worldBossIndex?:number;
   bossId?:string;abilityReadyTick?:number;
@@ -65,6 +70,7 @@ export interface BattleEnemy {
   attack: number; armor: number; resist: number; speed: number; range: number; interval: number;
   leak: number; alive: boolean; statuses: BattleStatus[]; nextAttackTick: number; actionUntilTick: number; attackCount: number;
   turtleRole?:Role;
+  turtleSkills?:SkillId[];
   blockedBy?: string; blockUntilTick?: number; blockOwnerId?: string; controlWindowUntilTick: number; controlCount: number; summoned: boolean;
 }
 export interface BattleCommand { type: 'cast'; unitId: string; skillId: SkillId; targetId?:string; point?:Point }
@@ -162,9 +168,8 @@ export function createBattle(levelId: number, wave: number, inputs: BattleInput[
       attack: role.attack * aptitude('attack') * progression * bonus.attack,
       armor: bonus.armor + role.armor * aptitude('defense') + (skills.includes('armor') ? 15 : 0),
       resist: bonus.resist + role.resist * aptitude('defense') + (skills.includes('resist') ? 15 : 0),
-      // Placement-map scaling must not silently change combat reach: ranged roles
-      // are intentionally two body lengths beyond the 1.2 melee baseline.
-      range: (turtle.development?petRange(turtle):(definition.stationVersion??0)>=4&&turtle.role==='stone'?2.2:role.range) + (skills.includes('reach') ? .3 : 0),
+      // One role baseline across cultivation, recruitment and every battle mode.
+      range: petRange(turtle) + (skills.includes('reach') ? .3 : 0),
       interval: role.interval / (1 + Math.min(BATTLE_RULES.attackSpeedCap, skills.includes('swift') ? .12 : 0)),
       alive: true, statuses: [], nextAttackTick: 1, actionUntilTick: 0, attackCount: 0,
       cooldowns: {}, skillActivations: {}, lastDamageTick: 0, nextRegenTick: tickTime(5),
@@ -186,7 +191,7 @@ export function createBattle(levelId: number, wave: number, inputs: BattleInput[
   if(options.rulesVersion==='0.6'){if(levelId>=14&&levelId<50)state.tacticsVersion=1;state.faunaVersion=1;state.rulesVersion='0.6';state.mode=options.mode??'chapter';state.retiredUnits=[];}
   if(options.rulesVersion==='0.6'&&levelId>0&&levelId!==54)state.encounterVersion=1;
   if(definition.routes){state.routes=definition.routes.map(r=>r.map(p=>({...p})));state.routeLengths=state.routes.map(pathLength);state.spawns=(definition.stationVersion??0)>=5||levelId<50?chapterFronts(state.spawns,definition,wave):assignFronts(state.spawns,levelId,wave);}
-  if(state.expedition){state.spawns=trialFronts(state,chapterFronts(expeditionSpawns(state),definition,wave));applyExpeditionStats(state);}
+  if(state.expedition){state.spawns=trialFronts(state,chapterFronts(expeditionSpawns(state),definition,wave));ensureExpeditionCadence(state);scheduleExpeditionWave(state);applyExpeditionStats(state);}
   for (const unit of units) if (unit.alive && has(unit, 'openingShield')) addShield(state, unit, unit.maxHp * .1, 6, unit.id, 'openingShield');
   return state;
 }
@@ -259,6 +264,13 @@ export function legalSkillTargets(state:BattleState,unit:BattleUnit,skill:SkillI
   return state.enemies.filter(e=>e.alive&&distance(e,unit)<=skillCastRange(state,unit)).sort((a,b)=>remainingRoute(state,a)-remainingRoute(state,b)||compareId(a,b));
 }
 function validSkillTarget(state:BattleState,unit:BattleUnit,command:BattleCommand):boolean{
+  // Availability checks run for every skill button and auto-cast tick. They only
+  // need existence, not a sorted target list. Explicit aiming keeps its validation.
+  if(command.targetId===undefined&&command.point===undefined){
+    const range=skillCastRange(state,unit);
+    if(command.skillId==='greatHeal')return state.units.some(u=>(u.alive?u.hp<u.maxHp-1e-8||cleansePriority(u,state.tick)>=0:canRevive(state,unit))&&((state.stationVersion??0)<4||distance(u,unit)<=range));
+    return state.enemies.some(e=>e.alive&&distance(e,unit)<=(command.skillId==='hold'?2.3:range));
+  }
   const mode=skillTargetMode(command.skillId),targets=legalSkillTargets(state,unit,command.skillId);
   if(command.targetId!==undefined&&!targets.some(t=>t.id===command.targetId))return false;
   if(command.point!==undefined){
@@ -307,6 +319,7 @@ const automaticSkillAllowed=(state:BattleState,unit:BattleUnit):boolean=>!!state
 
 export function stepBattle(state: BattleState, dt: number): BattleState {
   migrateSceneBattle(state);
+  ensureExpeditionCadence(state);
   if (!Number.isFinite(dt) || dt < 0 || dt > 3600) throw new Error('战斗推进时间不合法');
   if (state.status !== 'fighting'||expeditionPaused(state)) return state;
   state.pendingSeconds = Math.round((state.pendingSeconds + dt) * 1e12) / 1e12;
@@ -370,19 +383,21 @@ function stepTick(state: BattleState): void {
     }
     if (enemy.kind === 'boss' && !enemy.summoned && enemy.hp <= enemy.maxHp * .5 && (!isCoastTrial(state)||state.wave>=4)) {
       enemy.summoned = true;
-      for (let i = 0; i < 2; i++) spawnEnemy(state, { kind: 'runner', time: state.elapsed, hpScale: 1.2, attackScale: 1, ...(enemy.routeId!==undefined?{routeId:enemy.routeId}:{}) }, Math.max(0, enemy.distance - .5 - i * .4));
+      for (let i = 0; i < 2; i++) spawnEnemy(state, { kind: 'runner', time: state.elapsed, hpScale: 1.2, attackScale: 1, ...(enemy.routeId!==undefined?{routeId:enemy.routeId}:{}) }, Math.max(0, enemy.distance - .5 - i * .4),enemy.originWave);
       emit(state, { type: 'skill', sourceId: enemy.id, effect: 'crabSummon', x: enemy.x, z: enemy.z });
     }
     if (!enemy.cast && state.tick >= enemy.nextAttackTick && statusAmount(enemy, 'stun') <= 0 && statusAmount(enemy,'sheep')<=0) enemyAttack(state, enemy);
   }
   if (state.coreHealth <= 0) state.status = 'lost';
   else if(state.expedition){
-    if(state.spawnCursor>=state.spawns.length&&state.enemies.every(e=>!e.alive)){
-      expeditionWaveCleared(state);
-      if(!expeditionPaused(state)&&state.tick>=(state.expedition.nextWaveTick??0)){
-        if(state.expedition.limit&&state.wave>=state.expedition.limit)state.status='won';
-        else {state.wave++;for(const u of state.units)if(!u.alive&&u.sleepUntilWave!==undefined&&u.sleepUntilWave<=state.wave){u.alive=true;u.hp=u.maxHp;delete u.sleepUntilWave;u.statuses=[];u.shields=[];u.shield=0;u.nextAttackTick=state.tick+20;}state.spawns=trialFronts(state,chapterFronts(expeditionSpawns(state),battleMap(state),state.wave));state.spawnCursor=0;delete state.expedition.nextWaveTick;}
-      }
+    const e=state.expedition,spawned=state.spawnCursor>=state.spawns.length;
+    const living=new Set(state.enemies.filter(v=>v.alive).map(v=>v.originWave??state.wave));
+    for(let wave=1;wave<=state.wave;wave++)if((wave<state.wave||spawned)&&!living.has(wave))expeditionWaveCleared(state,wave);
+    if(e.limit&&state.wave>=e.limit&&spawned&&living.size===0&&!expeditionPaused(state))state.status='won';
+    else if((!e.limit||state.wave<e.limit)&&spawned&&state.tick>=e.nextWaveTick!&&!expeditionPaused(state)){
+      state.wave++;
+      for(const u of state.units)if(!u.alive&&u.sleepUntilWave!==undefined&&u.sleepUntilWave<=state.wave){u.alive=true;u.hp=u.maxHp;delete u.sleepUntilWave;u.statuses=[];u.shields=[];u.shield=0;u.nextAttackTick=state.tick+20;}
+      state.spawns=trialFronts(state,chapterFronts(expeditionSpawns(state),battleMap(state),state.wave));state.spawnCursor=0;scheduleExpeditionWave(state);
     }
   }
   else if(state.levelId===56){if(state.tick>=1800)state.status='won';}
@@ -402,11 +417,12 @@ export function positionOnRoute(state: BattleState, progress: number,routeId?:nu
   return { ...route[route.length - 1] };
 }
 
-function spawnEnemy(state: BattleState, spawn: Spawn, progress = 0): BattleEnemy {
+function spawnEnemy(state: BattleState, spawn: Spawn, progress = 0,originWave=state.wave): BattleEnemy {
   const definition = ENEMIES[spawn.kind];
   const enemy: BattleEnemy = {
+    ...(state.expedition?{originWave}:{}),
     id: `enemy-${state.wave}-${state.nextEnemyId++}`, kind: spawn.kind, ...positionOnRoute(state, progress,spawn.routeId), distance: progress,...(spawn.routeId!==undefined?{routeId:spawn.routeId}:{}),
-    ...(spawn.bounty?{expeditionBounty:true}:{}),hp: definition.health * spawn.hpScale, maxHp: definition.health * spawn.hpScale,
+    ...(spawn.bounty?{expeditionBounty:true,...(spawn.rations!==undefined?{rations:spawn.rations}:{})}:{}),hp: definition.health * spawn.hpScale, maxHp: definition.health * spawn.hpScale,
     attack: definition.attack * spawn.attackScale, armor: definition.armor+((state.stationVersion??0)>=4?12:0), resist: definition.resist+((state.stationVersion??0)>=4?8:0),
     speed: definition.speed*((state.stationVersion??0)>=4&&spawn.kind==='boss'?1.55:1)*(state.layoutVersion===2?(state.levelId===0?((state.stationVersion??0)>=4?1.23:1.03):state.levelId<50?(state.encounterVersion===1?1.10:1.38):1.12):1), range: definition.range, interval: definition.interval, leak: definition.leak,
     alive: true, statuses: [], nextAttackTick: state.tick, actionUntilTick: 0, attackCount: 0,
@@ -429,10 +445,15 @@ function spawnEnemy(state: BattleState, spawn: Spawn, progress = 0): BattleEnemy
   }
   if(isCoastTrial(state)){
     // Slow readable packs. Elites carry the durability; trash remains clearable.
-    enemy.speed*=enemy.kind==='runner'?.65:.48;enemy.interval*=2.3;enemy.attack*=state.wave<=2?1.25:enemy.kind==='boss'?1.2:1.7;
-    if(enemy.kind==='boss'){enemy.leak=5;enemy.hp=enemy.maxHp=definition.health*spawn.hpScale*1.2;}
+    enemy.speed*=enemy.kind==='runner'?.65:.48;enemy.interval*=state.wave<=2?2.3:1.7;enemy.attack*=state.wave<=2?1.25:enemy.kind==='boss'?1.2:1.7;
+    if(state.wave>=3)enemy.range=Math.max(enemy.range,1.3);
+    if(state.levelId===0&&state.wave>=4&&enemy.kind==='snail')enemy.range=4.5;
+    if(state.levelId===0&&state.wave>=5&&enemy.kind==='elite')enemy.range=3.2;
+    if(state.levelId===0&&state.wave>=5&&enemy.kind==='boss')enemy.range=4.5;
+    if(state.levelId===0&&state.wave>=7&&['boss','elite'].includes(enemy.kind))enemy.attack*=1+(state.wave-6)*.1;
+    if(enemy.kind==='boss'){enemy.leak=state.levelId===0&&state.wave>=9?10:5;enemy.hp=enemy.maxHp=definition.health*spawn.hpScale*1.2;enemy.speed=(state.routeLengths?.[spawn.routeId??0]??state.routeLength)/48;}
     enemy.nextAttackTick=state.tick+tickTime(1.2);delete enemy.trait;delete enemy.traitReadyTick;
-    enemy.abilityReadyTick=(state.levelId>=2&&state.wave>=3&&['boss','elite'].includes(enemy.kind)||state.levelId>=3&&state.wave>=4&&enemy.kind==='mist')?state.tick+tickTime(3):undefined;
+    enemy.abilityReadyTick=((state.levelId>=2&&state.wave>=3||state.levelId===0&&state.wave>=5)&&['boss','elite'].includes(enemy.kind)||state.levelId>=3&&state.wave>=4&&enemy.kind==='mist')?state.tick+tickTime(3):undefined;
     for(const key of ['hp','maxHp','attack','armor','resist'] as const)enemy[key]*=10;
   }
   state.enemies.push(enemy);
@@ -443,25 +464,26 @@ function spawnEnemy(state: BattleState, spawn: Spawn, progress = 0): BattleEnemy
 function tickEnemyAbility(state:BattleState,e:BattleEnemy):void{
   if(state.faunaVersion!==1)return;
   if(e.cast){
-    if(statusAmount(e,'stun')>0||statusAmount(e,'sheep')>0){delete e.cast;emit(state,{type:'control',sourceId:e.id,targetId:e.id,amount:0,effect:'castInterrupted',x:e.x,z:e.z});return;}
+    if(statusAmount(e,'stun')>0||statusAmount(e,'sheep')>0){delete e.cast;if(isCoastTrial(state)){setStatus(state,e,'armorDown',25,3,e.id);setStatus(state,e,'resistDown',25,3,e.id);}emit(state,{type:'control',sourceId:e.id,targetId:e.id,amount:0,effect:'castInterrupted',x:e.x,z:e.z});return;}
     if(state.tick<e.cast.landTick)return;
     const c=e.cast;delete e.cast;
     for(const p of c.points??[c])emit(state,{type:'skill',sourceId:e.id,effect:'boss-'+c.kind,x:p.x,z:p.z});
     if(c.kind==='rally'){
-      if(state.enemies.filter(v=>v.alive).length<50)for(let i=0;i<2;i++)spawnEnemy(state,{kind:i?'runner':'armored',time:state.elapsed,hpScale:Math.max(1,e.maxHp/2400*.1),attackScale:.8,...(e.routeId!==undefined?{routeId:e.routeId}:{})},Math.max(0,e.distance-.4-i*.45));
+      if(state.enemies.filter(v=>v.alive).length<50)for(let i=0;i<2;i++)spawnEnemy(state,{kind:i?'runner':'armored',time:state.elapsed,hpScale:Math.max(1,e.maxHp/2400*.1),attackScale:.8,...(e.routeId!==undefined?{routeId:e.routeId}:{})},Math.max(0,e.distance-.4-i*.45),e.originWave);
       return;
     }
     if(c.kind==='beacon'){
       if(!state.enemies.some(v=>v.alive&&v.mechanismOwner===e.id)){
-        const beacon=spawnEnemy(state,{kind:'snail',time:state.elapsed,hpScale:1,attackScale:0,...(e.routeId!==undefined?{routeId:e.routeId}:{})},Math.min(e.distance+1,state.routeLengths?.[e.routeId??0]??state.routeLength));
+        const beacon=spawnEnemy(state,{kind:'snail',time:state.elapsed,hpScale:1,attackScale:0,...(e.routeId!==undefined?{routeId:e.routeId}:{})},Math.min(e.distance+1,state.routeLengths?.[e.routeId??0]??state.routeLength),e.originWave);
         beacon.mechanismOwner=e.id;beacon.hp=beacon.maxHp=130+state.levelId*5;beacon.speed=0;beacon.attack=0;beacon.range=0;beacon.trait=undefined;beacon.abilityReadyTick=undefined;beacon.leak=0;
       }return;
     }
     if(c.kind==='web'||c.kind==='fireRain'){
       const points=c.points??[c];
       for(const u of state.units.filter(u=>u.alive&&points.some(p=>distance(u,p)<=1.2))){
-        const trial=isCoastTrial(state),hit=trial?(c.kind==='fireRain'?e.attack*10:e.attack*.5):c.kind==='fireRain'?u.maxHp*1.05+e.attack*2:e.attack;
-        damageUnit(state,e,u,hit,trial?false:true,false);
+        const trial=isCoastTrial(state),hit=trial?(c.kind==='fireRain'?e.attack*3:e.attack*.5):c.kind==='fireRain'?u.maxHp*1.05+e.attack*2:e.attack;
+        // A healthy turtle can be rescued; an already injured one still needs a dodge or shield.
+        damageUnit(state,e,u,hit,trial?false:true,false,true,trial&&c.kind==='fireRain'?u.maxHp*.65:Infinity);
         if(u.alive&&c.kind==='web'&&(!trial||(u.trialControlReadyTick??0)<=state.tick)){const duration=trial?2.5:6;setStatus(state,u,'web',1,duration,e.id);if(trial)u.trialControlReadyTick=state.tick+tickTime(8);else setStatus(state,u,'resistDown',20,6,e.id);emit(state,{type:'control',sourceId:e.id,targetId:u.id,amount:duration,effect:'web',x:u.x,z:u.z});}
       }return;
     }
@@ -469,7 +491,7 @@ function tickEnemyAbility(state:BattleState,e:BattleEnemy):void{
     for(const u of state.units.filter(u=>u.alive&&distance(u,c)<=radius)){
       if(c.kind==='shock'){for(const shield of u.shields)shield.amount*=.5;u.shield=u.shields.reduce((n,a)=>n+a.amount,0);}
       const dealt=damageUnit(state,e,u,e.attack*(c.kind==='mortar'?1.2:c.kind==='drain'?.55:.8),c.kind==='frost'||c.kind==='drain'||c.kind==='mortar',false);
-      if(c.kind==='drain')e.hp=Math.min(e.maxHp,e.hp+dealt*.8);
+      if(c.kind==='drain'){const healed=Math.min(e.maxHp-e.hp,dealt*.8);e.hp+=healed;if(healed>0)emit(state,{type:'heal',sourceId:u.id,targetId:e.id,amount:healed,effect:'siphon',x:e.x,z:e.z});}
       if(u.alive&&c.kind==='shock')setStatus(state,u,'weaken',.15,3,e.id);
       if(u.alive&&c.kind==='frost')controlUnit(state,u,.85,e.id);
       if(u.alive&&c.kind==='breakwater')setStatus(state,u,'armorDown',15,3,e.id);
@@ -485,7 +507,7 @@ function tickEnemyAbility(state:BattleState,e:BattleEnemy):void{
     const target=nearby.find(u=>kind!=='web'||(u.trialControlReadyTick??0)<=state.tick);if(!target)return;
     e.tacticCount=(e.tacticCount??0)+1;e.cast={kind,x:target.x,z:target.z,landTick:state.tick+tickTime(2)};
     e.abilityReadyTick=state.tick+tickTime(12);e.actionUntilTick=e.cast.landTick+tickTime(.4);
-    emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:target.x,z:target.z});return;
+    emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:target.x,z:target.z,radius:1.2,duration:2});return;
   }
   const boss=BOSSES.find(b=>b.id===e.bossId);
   if(state.tacticsVersion===1&&e.kind==='boss'&&state.wave>=3){
@@ -493,7 +515,7 @@ function tickEnemyAbility(state:BattleState,e:BattleEnemy):void{
     const count=e.tacticCount??0,kind=choices[count%choices.length],nearby=state.units.filter(u=>u.alive&&distance(u,e)<5).sort((a,b)=>distance(a,e)-distance(b,e));if(!nearby.length)return;
     e.tacticCount=count+1;const targets=kind==='beacon'?[e]:kind==='fireRain'?nearby.slice(0,state.levelId>=44?3:2):nearby.slice(0,state.levelId>=29?2:1),points=targets.map(u=>({x:u.x,z:u.z}));
     e.cast={kind,...points[0],points,landTick:state.tick+tickTime(2)};e.abilityReadyTick=state.tick+tickTime(kind==='web'&&choices.length>1?5:10);e.actionUntilTick=e.cast.landTick+tickTime(.25);
-    for(const p of points)emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:p.x,z:p.z});return;
+    for(const p of points)emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:p.x,z:p.z,radius:kind==='drain'?2.6:kind==='web'||kind==='fireRain'?1.2:1.5,duration:2});return;
   }
   const kind=boss?.ability??(e.kind==='mist'?'frost':'breakwater');
   const nearby=state.units.filter(u=>u.alive&&distance(u,e)<(kind==='mortar'?5:3.3));
@@ -501,7 +523,7 @@ function tickEnemyAbility(state:BattleState,e:BattleEnemy):void{
   if(!target)return;
   const p=kind==='rally'||kind==='drain'?e:target;
   e.cast={kind,x:p.x,z:p.z,landTick:state.tick+tickTime(1.35)};e.abilityReadyTick=state.tick+tickTime(boss?11:13);e.actionUntilTick=e.cast.landTick+tickTime(.25);
-  emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:p.x,z:p.z});
+  emit(state,{type:'skill',sourceId:e.id,effect:'bossTell-'+kind,x:p.x,z:p.z,radius:kind==='drain'?2.6:kind==='web'||kind==='fireRain'?1.2:1.5,duration:1.35});
 }
 function updateAuras(state: BattleState): void {
   for (const unit of state.units) delete unit.encouragedBy;
@@ -552,10 +574,14 @@ function updateMovement(state: BattleState): void {
 function targetEnemy(state: BattleState, unit: BattleUnit): BattleEnemy | undefined {
   const taunt=unit.statuses.find(s=>s.kind==='taunt'&&s.untilTick>state.tick),forced=taunt&&state.enemies.find(e=>e.id===taunt.sourceId&&e.alive&&distance(e,unit)<=unit.range);if(forced)return forced;
   const focus=state.enemies.find(e=>e.id===state.focusTargets?.[unit.id]&&e.alive&&distance(e,unit)<=unit.range);if(focus)return focus;
-  return state.enemies.filter(e => e.alive && distance(e, unit) <= unit.range).sort((a, b) => remainingRoute(state,a)-remainingRoute(state,b) || compareId(a,b))[0];
+  let target:BattleEnemy|undefined,remaining=Infinity;
+  for(const e of state.enemies){if(!e.alive||distance(e,unit)>unit.range)continue;const route=remainingRoute(state,e);if(!target||route<remaining||route===remaining&&compareId(e,target)<0){target=e;remaining=route;}}
+  return target;
 }
 function targetPatient(state: BattleState, unit: BattleUnit, excludedId?: string): BattleUnit | undefined {
-  return state.units.filter(u => u.alive && u.id !== excludedId && distance(u, unit) <= unit.range && (u.hp < u.maxHp - 1e-8 || (has(unit, 'cleanse') && u.statuses.some(s => s.kind !== 'hold')))).sort((a, b) => a.hp / a.maxHp - b.hp / b.maxHp || compareId(a,b))[0];
+  let target:BattleUnit|undefined,ratio=Infinity;
+  for(const u of state.units){if(!u.alive||u.id===excludedId||distance(u,unit)>unit.range||!(u.hp<u.maxHp-1e-8||has(unit,'cleanse')&&u.statuses.some(s=>s.kind!=='hold')))continue;const health=u.hp/u.maxHp;if(!target||health<ratio||health===ratio&&compareId(u,target)<0){target=u;ratio=health;}}
+  return target;
 }
 function power(unit: BattleUnit): number { return unit.attack * (unit.encouragedBy ? 1.08 : 1) * (1 - statusAmount(unit, 'weaken')) * (1+statusAmount(unit,'giant')); }
 function attackInterval(unit:BattleUnit):number{return unit.interval/(1+statusAmount(unit,'fervor'))/(statusAmount(unit,'giant')>0?.55:1);}
@@ -577,8 +603,10 @@ function basicAttack(state: BattleState, unit: BattleUnit): void {
     }
   }
   const pending=unit.pendingAttack;
-  const patient = unit.role === 'leaf' ? pending?state.units.find(u=>u.id===pending.targetId&&u.alive):targetPatient(state, unit) : undefined;
-  const target = unit.role === 'leaf' ? undefined : pending?state.enemies.find(e=>e.id===pending.targetId&&e.alive):targetEnemy(state, unit);
+  // Healing keeps priority, but a healthy party no longer leaves the healer idle.
+  // A committed projectile retains its original healing/damage kind until impact.
+  const patient = unit.role === 'leaf' ? pending?(pending.healing?state.units.find(u=>u.id===pending.targetId&&u.alive):undefined):targetPatient(state, unit) : undefined;
+  const target = pending?(pending.healing?undefined:state.enemies.find(e=>e.id===pending.targetId&&e.alive)):patient?undefined:targetEnemy(state, unit);
   if(!patient&&!target){delete unit.pendingAttack;return;}
   const aim=patient??target!;
   if(state.layoutVersion===2){
@@ -598,16 +626,16 @@ function basicAttack(state: BattleState, unit: BattleUnit): void {
     if(!pending)emit(state, { type: 'attack', sourceId: unit.id, targetId: patient.id, effect: 'heal', x: patient.x, z: patient.z });
     healDirect(state, unit, patient, power(unit), undefined, true);
     const healedIds=new Set([patient.id]);
-    if (has(unit, 'doubleHeal')) {
+    if (has(unit, 'doubleHeal') || isCoastTrial(state)&&(unit.fusionRank??1)>=2) {
       const second = targetPatient(state, unit, patient.id);
-      if (second) { healedIds.add(second.id);activate(unit, 'doubleHeal'); healDirect(state, unit, second, power(unit) * .35, 'doubleHeal', true); }
+      if (second) { healedIds.add(second.id);if(has(unit,'doubleHeal'))activate(unit, 'doubleHeal'); healDirect(state, unit, second, power(unit) * (isCoastTrial(state)&&(unit.fusionRank??1)>=2?.5:.35), has(unit,'doubleHeal')?'doubleHeal':undefined, true); }
     }
     if(has(unit,'extraTarget')){const extra=state.units.filter(u=>u.alive&&!healedIds.has(u.id)&&u.hp<u.maxHp&&distance(u,unit)<=unit.range).sort((a,b)=>a.hp/a.maxHp-b.hp/b.maxHp||compareId(a,b))[0];if(extra){activate(unit,'extraTarget');healDirect(state,unit,extra,power(unit),'extraTarget',true);}}
     return;
   }
   if (!target) return;
   if(!pending)emit(state, { type: 'attack', sourceId: unit.id, targetId: target.id, x: target.x, z: target.z, effect: unit.role });
-  const magic = unit.role === 'crystal' || unit.role === 'bubble';
+  const magic = unit.role === 'crystal' || unit.role === 'bubble' || unit.role === 'leaf';
   const amount = power(unit);
   const impact = { x: target.x, z: target.z };
   const hitIds=new Set<string>([target.id]);
@@ -626,19 +654,30 @@ function basicAttack(state: BattleState, unit: BattleUnit): void {
     unit.cooldowns.polymorph=state.tick+tickTime(6);activate(unit,'polymorph');controlEnemy(state,target,2,unit.id,'polymorph','sheep');
     const transformed=target.statuses.find(s=>s.kind==='sheep');if(transformed)setStatus(state,target,'slow',.4,(transformed.untilTick-state.tick)*BATTLE_RULES.tickSeconds,unit.id);
   }
-  if (unit.role === 'crystal') {
-    const nearby = state.enemies.filter(e => e.alive && e.id !== target.id && distance(e, impact) <= BATTLE_RULES.splashRadius).sort((a, b) => distance(a, impact) - distance(b, impact));
-    for (const enemy of nearby.slice(0, 2)){hitIds.add(enemy.id);damageEnemy(state, unit, enemy, amount * .4, true, 'secondary');}
+  const trial=isCoastTrial(state),rank=trial?(unit.fusionRank??1):1;
+  if(trial&&unit.role==='spike'){
+    const layers=buffCount(state,unit,'tidePierce'),count=rank-1+(layers?2:0),dx=impact.x-unit.x,dz=impact.z-unit.z,len=Math.hypot(dx,dz)||1;
+    const line=state.enemies.filter(e=>e.alive&&e.id!==target.id&&distance(e,unit)<=unit.range+.8&&(e.x-impact.x)*dx+(e.z-impact.z)*dz>=0&&Math.abs((e.x-impact.x)*dz-(e.z-impact.z)*dx)/len<=.65).sort((a,b)=>distance(a,impact)-distance(b,impact));
+    const pierced=line.slice(0,count);
+    if(pierced.length){const end=pierced[pierced.length-1];emit(state,{type:'attack',sourceId:unit.id,targetId:end.id,fromX:impact.x,fromZ:impact.z,x:end.x,z:end.z,effect:'pierce',secondary:true});}
+    for(const enemy of pierced){hitIds.add(enemy.id);damageEnemy(state,unit,enemy,amount*((rank>=2?.55:.35)+Math.max(0,layers-1)*.15),false,'secondary');}
   }
+  if (unit.role === 'crystal') {
+    const layers=trial?buffCount(state,unit,'crystalBurst'):0;
+    const nearby = state.enemies.filter(e => e.alive && e.id !== target.id && distance(e, impact) <= BATTLE_RULES.splashRadius+(rank>=2?.25:0)+(layers?.25:0)).sort((a, b) => distance(a, impact) - distance(b, impact));
+    if(nearby.length)emit(state,{type:'skill',sourceId:unit.id,effect:'splash',x:impact.x,z:impact.z,radius:BATTLE_RULES.splashRadius+(rank>=2?.25:0)+(layers?.25:0)});
+    for (const enemy of nearby.slice(0, 1+rank+(layers?1:0))){hitIds.add(enemy.id);damageEnemy(state, unit, enemy, amount * (.4+.15*layers), true, 'secondary');}
+  }
+  if(trial&&rank>=2&&unit.role==='stone')for(const enemy of state.enemies.filter(e=>e.alive&&distance(e,impact)<=1.3))setStatus(state,enemy,'slow',.3,1.5,unit.id);
   if (has(unit, 'bounce')) {
       const bounce = state.enemies.filter(e => e.alive && e.id !== target.id && distance(e, impact) <= unit.range).sort((a, b) => distance(a, impact) - distance(b, impact))[0];
-      if (bounce) { hitIds.add(bounce.id);activate(unit, 'bounce'); damageEnemy(state, unit, bounce, amount * .3, magic, 'secondary', 'bounce'); }
+      if (bounce) { hitIds.add(bounce.id);activate(unit, 'bounce');emit(state,{type:'attack',sourceId:unit.id,targetId:bounce.id,skillId:'bounce',effect:unit.role,secondary:true,fromX:impact.x,fromZ:impact.z,x:bounce.x,z:bounce.z}); damageEnemy(state, unit, bounce, amount * .3, magic, 'secondary', 'bounce'); }
   }
-  if(has(unit,'scatter')){activate(unit,'scatter');for(const e of state.enemies.filter(e=>e.alive&&!hitIds.has(e.id)&&distance(e,unit)<=unit.range).sort((a,b)=>remainingRoute(state,a)-remainingRoute(state,b)).slice(0,2)){hitIds.add(e.id);damageEnemy(state,unit,e,amount*.7,magic,'secondary','scatter');}}
-  if(has(unit,'extraTarget')){const extra=state.enemies.filter(e=>e.alive&&!hitIds.has(e.id)&&distance(e,unit)<=unit.range).sort((a,b)=>b.distance-a.distance||compareId(a,b))[0];if(extra){activate(unit,'extraTarget');damageEnemy(state,unit,extra,amount,magic,'secondary','extraTarget');}}
-  if (has(unit, 'combo') && unit.attackCount % 5 === 0 && target.alive) { activate(unit, 'combo'); damageEnemy(state, unit, target, amount * .6, magic, 'secondary', 'combo'); }
+  if(has(unit,'scatter')){activate(unit,'scatter');for(const e of state.enemies.filter(e=>e.alive&&!hitIds.has(e.id)&&distance(e,unit)<=unit.range).sort((a,b)=>remainingRoute(state,a)-remainingRoute(state,b)).slice(0,2)){hitIds.add(e.id);emit(state,{type:'attack',sourceId:unit.id,targetId:e.id,skillId:'scatter',effect:unit.role,secondary:true,x:e.x,z:e.z});damageEnemy(state,unit,e,amount*.7,magic,'secondary','scatter');}}
+  if(has(unit,'extraTarget')){const extra=state.enemies.filter(e=>e.alive&&!hitIds.has(e.id)&&distance(e,unit)<=unit.range).sort((a,b)=>b.distance-a.distance||compareId(a,b))[0];if(extra){activate(unit,'extraTarget');emit(state,{type:'attack',sourceId:unit.id,targetId:extra.id,skillId:'extraTarget',effect:unit.role,secondary:true,x:extra.x,z:extra.z});damageEnemy(state,unit,extra,amount,magic,'secondary','extraTarget');}}
+  if (has(unit, 'combo') && unit.attackCount % 5 === 0 && target.alive) { activate(unit, 'combo');emit(state,{type:'attack',sourceId:unit.id,targetId:target.id,skillId:'combo',effect:unit.role,secondary:true,x:target.x,z:target.z}); damageEnemy(state, unit, target, amount * .6, magic, 'secondary', 'combo'); }
   if (target.alive) {
-    if (unit.role === 'bubble' && unit.attackCount % 3 === 0) setStatus(state, target, 'slow', .25, 2, unit.id);
+    if (unit.role === 'bubble' && unit.attackCount % (rank>=2?2:3) === 0) {setStatus(state, target, 'slow', .25, 2, unit.id);if(rank>=2){const next=state.enemies.find(e=>e.alive&&e!==target&&distance(e,target)<=1.5);if(next)setStatus(state,next,'slow',.25,2,unit.id);}}
     if (has(unit, 'shredArmor')) { activate(unit, 'shredArmor'); setStatus(state, target, 'armorDown', 8, 3, unit.id); }
     if (has(unit, 'weaken')) { activate(unit, 'weaken'); setStatus(state, target, 'weaken', .08, 3, unit.id); }
     if (has(unit, 'root') && unit.attackCount % 6 === 0) { activate(unit, 'root'); controlEnemy(state, target, .6, unit.id, 'root'); }
@@ -713,8 +752,9 @@ function damageEnemy(state: BattleState, source: BattleUnit, target: BattleEnemy
   const effectiveResistance=!magic&&statusAmount(target,'sheep')>0?resistance*.6:resistance;
   const defenseBase=100*combatScale(state);
   const rawCapped=skillId==='caprice'?Math.min(raw,target.hp*.5*(defenseBase+effectiveResistance)/defenseBase):raw;
+  const eventStart=state.events.length;
   const damage=duelTarget?duelDamage(state,source,duelTarget,rawCapped*critFactor,magic,tag,penetration,skillId):Math.min(target.hp,tag==='reflect'?raw:rawCapped*defenseBase/(defenseBase+effectiveResistance)*critFactor);
-  if(duelTarget){target.hp=duelTarget.hp;target.alive=duelTarget.alive;}
+  if(duelTarget){target.hp=duelTarget.hp;target.alive=duelTarget.alive;for(const event of state.events.slice(eventStart))if(event.type==='damage'&&event.sourceId===source.id&&event.targetId===target.id){event.critical=critical;event.skillId=skillId;event.secondary=tag!=='direct';}}
   else{target.hp=Math.max(0,target.hp-damage);emit(state,{type:'damage',sourceId:source.id,targetId:target.id,skillId,amount:damage,critical,secondary:tag!=='direct',...(pursuit?{effect:'pursuit'}:{}),x:target.x,z:target.z});}
   if (tag === 'direct') {
     const drain = magic ? 'spellDrain' : 'lifesteal';
@@ -728,7 +768,14 @@ function damageEnemy(state: BattleState, source: BattleUnit, target: BattleEnemy
     }
     if (magic && has(source, 'shredResist')) { activate(source, 'shredResist'); setStatus(state, target, 'resistDown', 5, 3, source.id); }
   }
-  if(state.expedition&&tag!=='reflect'&&source.alive&&damage>0){const desperate=(source.desperateUntil??0)>state.tick?(.05+.02*Math.max(0,buffCount(state,source,'desperate')-1)):0;healDirect(state,source,source,damage*Math.min(.2,buffCount(state,source,'drain')*.02+desperate),undefined,false);}
+  if(state.expedition&&tag!=='reflect'&&source.alive&&damage>0){
+    const desperate=(source.desperateUntil??0)>state.tick?(.05+.02*Math.max(0,buffCount(state,source,'desperate')-1)):0;
+    let requested=damage*Math.min(.2,buffCount(state,source,'drain')*.02+desperate);
+    const bounded=isCoastTrial(state)&&state.levelId===0;
+    if(bounded){source.drainHistory=source.drainHistory.filter(v=>v.tick>state.tick-tickTime(1));requested=Math.min(requested,Math.max(0,source.maxHp*.02-source.drainHistory.reduce((n,v)=>n+v.amount,0)));}
+    const recovered=healDirect(state,source,source,requested,undefined,false);
+    if(bounded&&recovered>0)source.drainHistory.push({tick:state.tick,amount:recovered});
+  }
   if (!duelTarget && target.hp <= 0) {
     const taunt=target.statuses.find(v=>v.kind==='taunt'&&v.untilTick>state.tick),protector=taunt&&state.units.find(u=>u.id===taunt.sourceId&&u.alive);
     if(protector&&buffCount(state,protector,'tauntGuard'))addShield(state,protector,protector.maxHp*Math.min(.08,.02*buffCount(state,protector,'tauntGuard')),4,protector.id,has(protector,'taunt')?'taunt':'hold');
@@ -848,6 +895,11 @@ function healDirect(state: BattleState, source: BattleUnit, target: BattleUnit, 
   }
   if(state.expedition&&(source.desperateUntil??0)>state.tick)requested*=1.25+.1*Math.max(0,buffCount(state,source,'desperate')-1);
   const amount = Math.max(0, Math.min(requested, target.maxHp - target.hp));
+  const tide=isCoastTrial(state)&&source.role==='leaf'&&triggerHealSkills?buffCount(state,source,'healingTide'):0;
+  if(tide){
+    const shield=Math.max(0,Math.min(target.maxHp*.06,Math.max(0,requested-amount)*(.35+.15*(tide-1)),target.maxHp*BATTLE_RULES.shieldCap-target.shield));
+    if(shield){target.shields.push({amount:shield,untilTick:state.tick+tickTime(3),sourceId:source.id,buffId:'healingTide'});target.shield+=shield;emit(state,{type:'shield',sourceId:source.id,targetId:target.id,amount:shield,effect:'盈潮护佑',x:target.x,z:target.z});}
+  }
   if (amount <= 0) return 0;
   target.hp += amount;
   receiveHolyLight(state,target);
@@ -907,7 +959,7 @@ function controlUnit(state: BattleState, target: BattleUnit, seconds: number, so
 
 /** PvP uses the same skill implementations and HP/shield sinks as normal combat. */
 export function turtleEnemy(unit:BattleUnit,distanceAlong=0):BattleEnemy{
-  return {id:unit.id,kind:'ink',turtleRole:unit.role,x:unit.x,z:unit.z,distance:distanceAlong,hp:unit.hp,maxHp:unit.maxHp,attack:unit.attack,
+  return {id:unit.id,kind:'ink',turtleRole:unit.role,turtleSkills:[...unit.skills],x:unit.x,z:unit.z,distance:distanceAlong,hp:unit.hp,maxHp:unit.maxHp,attack:unit.attack,
     armor:unit.armor,resist:unit.resist,speed:.9,range:unit.range,interval:unit.interval,leak:1,alive:unit.alive,statuses:unit.statuses,
     nextAttackTick:unit.nextAttackTick,actionUntilTick:unit.actionUntilTick,attackCount:unit.attackCount,
     controlWindowUntilTick:unit.duelControlWindow??0,controlCount:unit.duelControlCount??0,summoned:false};
@@ -940,7 +992,8 @@ export function duelActions(state:BattleState,teamA:BattleUnit[],teamB:BattleUni
         const command=commands.find(c=>c.unitId===u.id);
         const active=command?.skillId??(automaticSkillAllowed(state,u)?u.skills.find(id=>SKILL_BY_ID[id].active):undefined);
         if(active==='hold'&&state.enemies.some(e=>e.alive&&distance(e,u)<=u.range))state.enemies.find(e=>e.alive&&distance(e,u)<=u.range)!.blockedBy=u.id;
-        if(!(active&&castSkill(state,u,active,!!command,command))&&state.tick>=u.nextAttackTick)basicAttack(state,u);
+        if(active&&castSkill(state,u,active,!!command,command))delete u.pendingAttack;
+        else if(u.pendingAttack||state.tick>=u.nextAttackTick)basicAttack(state,u);
         for(const enemy of state.enemies){const actual=opponents.find(t=>t.id===enemy.id)!;actual.duelControlCount=enemy.controlCount;actual.duelControlWindow=enemy.controlWindowUntilTick;}
       }
     }
@@ -1017,7 +1070,7 @@ function tickSummons(state:BattleState):void{
 export function expeditionAction(s:BattleState,owner:string,action:'recruit'|'merge'|'move'|'buff',args:{a?:string;b?:string;slot?:number;buff?:BuffId}={}):void{
  if(!['recruit','merge','move','buff'].includes(action))throw Error('未知的局内操作');
  const e=s.expedition,p=e?.players.find(p=>p.id===owner);if(!e||!p||s.status!=='fighting')throw Error('当前不能操作');
- if(action==='buff'){chooseExpeditionBuff(s,owner,args.buff!);return;}
+ if(action==='buff'){chooseExpeditionBuff(s,owner,args.buff!);for(const u of s.units.filter(u=>u.alive&&u.ownerId===owner))emit(s,{type:'skill',sourceId:u.id,effect:'blessing',x:u.x,z:u.z});return;}
  if(expeditionPaused(s))throw Error('请先选择首领祝福');
  const own=(id:string|undefined)=>{const u=s.units.find(u=>u.id===id&&u.ownerId===owner);if(!u)throw Error('只能操作自己的已出战伙伴');return u;};
  const add=(template:Turtle,slot:number,rank:1|2|3,hpRatio=1)=>{
@@ -1025,9 +1078,10 @@ export function expeditionAction(s:BattleState,owner:string,action:'recruit'|'me
   fresh.hp=fresh.maxHp*hpRatio;fresh.nextAttackTick=s.tick+12;fresh.nextRegenTick=s.tick+20;fresh.actionUntilTick=s.tick+12;s.units.push(fresh);if(s.controlledUnitIds&&(owner===e.players[0].id||s.units.some(u=>u.ownerId===owner&&s.controlledUnitIds!.includes(u.id))))s.controlledUnitIds.push(fresh.id);return fresh;
  };
  if(action==='recruit'){
-  if(e.cap&&p.recruited>=e.cap)throw Error('本局已征召20只');if(p.coins<e.cost)throw Error('干粮不足');
+  const cost=expeditionRecruitCost(e,p);if(e.cap&&p.recruited>=e.cap)throw Error('本局已征召20只');if(p.coins<cost)throw Error('干粮不足');
   const slots=p.slots.filter(slot=>!s.units.some(u=>u.slot===slot));if(!slots.length)throw Error('站位已满，请先合成');
-  const slot=slots[Math.floor(random(s)*slots.length)],pool=isCoastTrial(s)&&p.recruited===1&&s.units.every(u=>u.role==='leaf')&&p.templates.some(t=>t.role!=='leaf')?p.templates.filter(t=>t.role!=='leaf'):p.templates,template=pool[Math.floor(random(s)*pool.length)];add(template,slot,1);p.coins-=e.cost;p.spent+=e.cost;p.recruited++;applyExpeditionStats(s);return;
+  const damageRoles=['spike','crystal'],needsDamage=isCoastTrial(s)&&p.recruited===1&&!s.units.some(u=>damageRoles.includes(u.role)),damagePool=p.templates.filter(t=>damageRoles.includes(t.role));
+  const slot=slots[Math.floor(random(s)*slots.length)],pool=needsDamage&&damagePool.length?damagePool:p.templates,template=pool[Math.floor(random(s)*pool.length)];const recruited=add(template,slot,1);emit(s,{type:'skill',sourceId:recruited.id,effect:'recruit',x:recruited.x,z:recruited.z});p.coins-=cost;p.spent+=cost;p.recruited++;applyExpeditionStats(s);return;
  }
  const a=own(args.a);if(action==='move'){
   if(!p.slots.includes(args.slot!))throw Error('只能放到自己一侧的固定站位');
@@ -1043,7 +1097,7 @@ export function expeditionAction(s:BattleState,owner:string,action:'recruit'|'me
  const selected=random(s)<.5?a:b,template=p.templates.find(t=>t.id===selected.turtleId);if(!template)throw Error('合成培养来源丢失');
  const ratio=(a.hp/a.maxHp+b.hp/b.maxHp)/2,slot=b.slot;s.units=s.units.filter(u=>u!==a&&u!==b);s.retiredUnits??=[];for(const u of [a,b])s.retiredUnits.push({id:u.id,skills:[...u.skills]});
  s.commands=s.commands.filter(c=>c.unitId!==a.id&&c.unitId!==b.id);for(const enemy of s.enemies)if([a.id,b.id].includes(enemy.blockedBy??'')){delete enemy.blockedBy;delete enemy.blockOwnerId;}
- const controlled=!!s.controlledUnitIds?.some(id=>id===a.id||id===b.id);const child=add(template,slot,(a.fusionRank===2?3:2),ratio);if(controlled&&!s.controlledUnitIds!.includes(child.id))s.controlledUnitIds!.push(child.id);if(s.controlledUnitIds)s.controlledUnitIds=s.controlledUnitIds.filter(id=>id!==a.id&&id!==b.id);for(const id of child.skills)child.cooldowns[id]=Math.max(a.cooldowns[id]??0,b.cooldowns[id]??0);applyExpeditionStats(s);if(isCoastTrial(s))emit(s,{type:'skill',sourceId:child.id,effect:'fusion'+child.fusionRank,x:child.x,z:child.z});
+ const controlled=!!s.controlledUnitIds?.some(id=>id===a.id||id===b.id);const child=add(template,slot,(a.fusionRank===2?3:2),ratio);if(controlled&&!s.controlledUnitIds!.includes(child.id))s.controlledUnitIds!.push(child.id);if(s.controlledUnitIds)s.controlledUnitIds=s.controlledUnitIds.filter(id=>id!==a.id&&id!==b.id);for(const id of child.skills)child.cooldowns[id]=Math.max(a.cooldowns[id]??0,b.cooldowns[id]??0);applyExpeditionStats(s);emit(s,{type:'skill',sourceId:child.id,effect:'fusion'+child.fusionRank,x:child.x,z:child.z});
 }
 
 

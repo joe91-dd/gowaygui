@@ -33,9 +33,9 @@ export class PatrolView {
   constructor(private ui:IslandUI,private service:GameService,private command:(kind:string)=>string,private back:()=>void,private error:(error:unknown)=>void,private saved:()=>void){}
   open():void{
     try{this.service.refreshClock(this.command('clock'));}catch(error){this.error(error);return;}
-    const ui=this.ui;ui.clear();this.root=ui.group('巡海全景',0,0,ui.root,1280,720);ui.secondaryPage(this.root);
+    const ui=this.ui;ui.clear();this.root=ui.group('巡海全景',0,0,ui.root,ui.pageWidth,ui.pageHeight);ui.secondaryPage(this.root);
     const motion=this.root.addComponent(SeaChartMotion);motion.reduced=ui.reducedMotion;
-    const background=ui.art?.attach(this.root,'patrol-ocean',1280,720);if(background)motion.surface(background);
+    const background=ui.screenScenery(this.root,'patrol-ocean');if(background)motion.surface(background);
     const ship=ui.group('巡海伙伴航船',22,124,this.root,476,476),sprite=ui.art?.attach(ship,'patrol-boat',476,476);motion.drift(ship,'ship');if(sprite)motion.surface(sprite,4);
     ui.text('巡海',-492,288,68,UI_COLORS.ink,this.root,230,92);
     const status=ui.panel(-492,223,210,39,this.root,'#FFF9EC',242,19);this.status=ui.text('自动巡航中',0,0,22,'#087F9E',status,200,32);

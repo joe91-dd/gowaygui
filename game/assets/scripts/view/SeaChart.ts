@@ -1,4 +1,4 @@
-import {Component,EffectAsset,Graphics,ImageAsset,Material,Node,Rect,resources,Size,Sprite,SpriteFrame,Texture2D,Vec4,isValid} from 'cc';
+import {Component,EffectAsset,Graphics,Material,Node,resources,Sprite,Vec4,isValid} from 'cc';
 import {IslandUI,color} from './IslandUI';
 import type {ArtV2Image} from './ArtV2Assets';
 
@@ -7,11 +7,12 @@ export class SeaChartMotion extends Component {
   reduced:()=>boolean=()=>false;
   private elapsed=0;private step=0;private disposed=false;
   private drifts:Drift[]=[];private materials:Material[]=[];private effects:EffectAsset[]=[];
-  private owned:{image:ImageAsset;texture:Texture2D;frame:SpriteFrame}[]=[];
   drift(node:Node,kind:Drift['kind'],glow?:Graphics):void{this.drifts.push({node,x:node.position.x,y:node.position.y,kind,phase:this.drifts.length*1.7,glow});}
   surface(sprite:Sprite,kind=0):void{
+    // Page artwork now loads on demand. The effect may arrive before its image.
+    if(!sprite.spriteFrame){sprite.node.once(Sprite.EventType.SPRITE_FRAME_CHANGED,()=>{if(!this.disposed&&isValid(sprite.node,true))this.surface(sprite,kind);});return;}
     resources.load('art-modern/sea-chart',EffectAsset,(error,effect)=>{
-      if(error||!effect||this.disposed||!isValid(this.node,true)||!isValid(sprite.node,true))return;
+      if(error||!effect||this.disposed||!isValid(this.node,true)||!isValid(sprite.node,true)||!sprite.spriteFrame)return;
       effect.addRef();this.effects.push(effect);const material=new Material();material.initialize({effectAsset:effect});
       material.setProperty('sceneTexture',sprite.spriteFrame!.texture);material.setProperty('chartMotion',new Vec4(0,kind,0,0));sprite.customMaterial=material;
       this.materials.push(material);const instance=sprite.getMaterialInstance(0);if(instance)this.surfaces.push({material:instance,kind});
@@ -19,14 +20,11 @@ export class SeaChartMotion extends Component {
   }
   private surfaces:{material:Material;kind:number}[]=[];
   fullBoss(sprite:Sprite,key:ArtV2Image,ready:(loaded:boolean)=>void=()=>{}):void{
-    sprite.enabled=false;
-    resources.load('art-modern/'+key,ImageAsset,(error,image)=>{
-      if(this.disposed||!isValid(this.node,true)||!isValid(sprite.node,true))return;
-      if(error||!image){ready(false);return;}
-      image.addRef();const texture=new Texture2D();texture.image=image;texture.setFilters(Texture2D.Filter.LINEAR,Texture2D.Filter.LINEAR);texture.setMipFilter(Texture2D.Filter.NONE);
-      const frame=new SpriteFrame();frame.texture=texture;frame.packable=false;frame.rect=new Rect(0,0,image.width,image.height);frame.originalSize=new Size(image.width,image.height);
-      this.owned.push({image,texture,frame});sprite.spriteFrame=frame;sprite.enabled=true;ready(true);this.surface(sprite,2);
-    });
+    // ArtV2Assets resolves world-boss-* to the current enemy-g1 portrait. The
+    // retired art-modern/world-boss-* files are intentionally absent from APKs.
+    // Reuse the attached frame; never disable it while loading a second image.
+    const show=()=>{if(this.disposed||!isValid(this.node,true)||!isValid(sprite.node,true)||!sprite.spriteFrame)return;sprite.enabled=true;ready(true);this.surface(sprite,2);};
+    if(sprite.spriteFrame)show();else sprite.node.once(Sprite.EventType.SPRITE_FRAME_CHANGED,show);
   }
   update(delta:number):void{
     if(typeof document!=='undefined'&&document.hidden)return;
@@ -40,15 +38,15 @@ export class SeaChartMotion extends Component {
       if(item.glow){const graphics=item.glow;graphics.clear();graphics.fillColor=color('#FFD971',enabled?31+Math.round((wave+1)*13):36);graphics.ellipse(0,-15,37,17);graphics.fill();graphics.fillColor=color('#FFF4B7',enabled?60+Math.round((wave+1)*25):70);graphics.circle(25,12,2);graphics.fill();}
     }
   }
-  onDestroy():void{this.disposed=true;this.surfaces=[];this.drifts=[];for(const material of this.materials)material.destroy();for(const effect of this.effects)effect.decRef();for(const item of this.owned){item.frame.destroy();item.texture.destroy();item.image.decRef();}}
+  onDestroy():void{this.disposed=true;this.surfaces=[];this.drifts=[];for(const material of this.materials)material.destroy();for(const effect of this.effects)effect.decRef();}
 }
 
 export class SeaChart {
   readonly root:Node;readonly motion:SeaChartMotion;
   constructor(readonly ui:IslandUI,key:ArtV2Image,title:string,subtitle:string,back:()=>void,reduced:()=>boolean){
-    this.root=ui.group('海图:'+key,0,0,ui.root,1280,720);this.motion=this.root.addComponent(SeaChartMotion);this.motion.reduced=reduced;
+    this.root=ui.group('海图:'+key,0,0,ui.root,ui.pageWidth,ui.pageHeight);this.motion=this.root.addComponent(SeaChartMotion);this.motion.reduced=reduced;
     ui.secondaryPage(this.root);
-    const sprite=ui.art?.attach(this.root,key,1280,720);if(sprite)this.motion.surface(sprite);
+    const sprite=ui.screenScenery(this.root,key);if(sprite)this.motion.surface(sprite);
     ui.text(title,-348,254,43,'#153B55',this.root,450,65).isBold=true;
     ui.text(subtitle,-347,205,19,'#527889',this.root,450,38);
     this.button('返回海岛',515,301,164,44,back);

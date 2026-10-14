@@ -1,3 +1,4 @@
+import {enableSolo,SOLO_MILESTONES,milestoneValue,difficultyUnlocked} from './soloProgress';
 import {syncExpeditionRun,settleExpeditionRun} from './expeditionRun';
 import {expeditionAction} from './battle';
 import type {BuffId} from './expeditionRules';
@@ -122,6 +123,13 @@ export class GameService {
     this.state=repository.open(()=>makeInitialSave(Math.floor(clock.now()),seed));
   }
   get snapshot():GameSave{return copy(this.state);}
+  /** Narrow defensive reads for frame-driven presentation; never expose the persisted state. */
+  get settingsSnapshot():GameSave['settings']{return copy(this.state.settings);}
+  get runSnapshot():RunState|undefined{return this.state.run?copy(this.state.run):undefined;}
+  get revision():number{return this.state.revision;}
+  enableSolo(commandId:string):void{if(!this.state.solo)this.transact(commandId,'solo',s=>enableSolo(s));}
+  selectSoloDifficulty(commandId:string,d:1|2|3):void{this.transact(commandId,'soloDifficulty',s=>{requireRule(s.solo&&[1,2,3].includes(d)&&difficultyUnlocked(s,d),'尚未达成无尽解锁条件');s.solo.difficulty=d;});}
+  claimSoloMilestone(commandId:string,id:string):number{return this.transact(commandId,'soloAchievement',s=>{const m=SOLO_MILESTONES.find(x=>x.id===id);requireRule(s.solo&&m,'成就不存在');requireRule(milestoneValue(s,m.kind)>=m.target,'成就尚未完成');requireRule(!s.solo.claims.includes(id),'奖励已领取');s.solo.claims.push(id);s.gold+=m.gold;return m.gold;});}
   enablePatrol(commandId:string):void{if(!this.state.patrol)this.transact(commandId,'enablePatrol',(save,now)=>enablePatrol(save,now));}
   claimPatrol(commandId:string):PatrolRewards{return this.transact(commandId,'claimPatrol',save=>claimPatrol(save));}
   enableIncrement(commandId:string):void{if(!this.state.economyVersion)this.transact(commandId,'economyV2',s=>migrateEconomy(s));}

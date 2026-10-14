@@ -2,6 +2,7 @@ import {Component,EventTouch,EventMouse,Graphics,Mask,Node,UIOpacity,Vec3,tween,
 import {IslandUI,UI_COLORS,color} from './IslandUI';
 import {SeaChartMotion} from './SeaChart';
 import type {Turtle} from '../core/types';
+import {reserveVerticalScroll} from './SwipePaging';
 
 export interface HonorEntry {id:string;rank:number;name:string;metric:string;subject?:string;detail?:string;pets:Turtle[];rotate?:boolean;inspect:(pet?:Turtle)=>void}
 
@@ -36,8 +37,8 @@ export class HonorMotion extends Component {
 export class HonorBoard {
  readonly root:Node;readonly motion:HonorMotion;
  constructor(readonly ui:IslandUI,title:string,subtitle:string,back:()=>void,private petMode=false){
-  this.root=ui.group('荣耀榜:'+title,0,0,ui.root,1280,720);ui.secondaryPage(this.root);
-  const sprite=ui.art?.attach(this.root,petMode?'honor-pet-terrace':'honor-terrace',1280,720);
+  this.root=ui.group('荣耀榜:'+title,0,0,ui.root,ui.pageWidth,ui.pageHeight);ui.secondaryPage(this.root);
+  const sprite=ui.screenScenery(this.root,petMode?'honor-pet-terrace':'honor-terrace');
   if(sprite){const ambient=this.root.addComponent(SeaChartMotion);ambient.reduced=ui.reducedMotion;ambient.surface(sprite,petMode?6:5);}
   // Honor art uses its own ocean/gold mask; the battle map mask would move stone.
   const effects=ui.group('冠冕月桂流光',petMode?178:0,petMode?70:0,this.root);this.motion=effects.addComponent(HonorMotion);this.motion.reduced=ui.reducedMotion;
@@ -67,7 +68,7 @@ export class HonorBoard {
   const viewport=this.ui.group('荣耀排名滚动区',0,-20,p,341,354),mask=viewport.addComponent(Mask);mask.type=Mask.Type.GRAPHICS_RECT;
   const content=this.ui.group('荣耀排名列表',0,0,viewport,341,Math.max(354,rows.length*68));let offset=0,origin=0,before=0;
   const max=Math.max(0,rows.length*68-350),scroll=(n:number)=>{offset=Math.max(0,Math.min(max,n));content.setPosition(0,offset);};
-  viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.45));
+  reserveVerticalScroll(viewport);viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.45));
   rows.forEach((r,i)=>{
    const y=142-i*68,n=this.ui.button('',0,y,336,63,()=>{if(Math.abs(offset-before)<12)r.inspect(r.pets[0]);},{parent:content});n.getComponent(Graphics)?.clear();
    // Keep one continuous list surface; native button skin is hidden, hit target retained.
@@ -88,7 +89,7 @@ export class HonorBoard {
   const viewport=this.ui.group('宠物榜滚动区',0,-13,p,1136,92);viewport.addComponent(Mask).type=Mask.Type.GRAPHICS_RECT;
   const content=this.ui.group('宠物榜列表',0,0,viewport,1136,Math.max(92,rows.length*46));let offset=0,origin=0,before=0;
   const scroll=(n:number)=>{offset=Math.max(0,Math.min(Math.max(0,rows.length*46-92),n));content.setPosition(0,offset);};
-  viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.4));
+  reserveVerticalScroll(viewport);viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.4));
   rows.forEach((r,i)=>{const n=this.ui.button('',0,23-i*46,1126,45,()=>{if(Math.abs(offset-before)<12)r.inspect(r.pets[0]);},{parent:content});n.getComponent(Graphics)?.clear();for(const c of n.children)c.active=false;this.ui.text(String(r.rank),-505,0,23,UI_COLORS.ink,n,90,33);if(r.pets[0])this.ui.pet(r.pets[0],-393,0,37,n);this.ui.text((r.subject?r.subject+' · ':'')+r.name,-41,0,21,UI_COLORS.ink,n,500,33);this.ui.text(r.metric,426,0,21,UI_COLORS.gold,n,231,33);this.ui.line(-530,-22,530,-22,n,'#D8D2BF');});
   if(!rows.length)this.ui.text('暂无其他排名',0,0,22,UI_COLORS.sand,viewport,880,50);
  }

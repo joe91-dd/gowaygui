@@ -62,7 +62,7 @@ function startLegacyPrototypeRun(s:GameSave,now:number,levelId:number,selected:s
   requireRule(selected.length<=5&&new Set(selected).size===selected.length&&selected.every(id=>!!s.collection[id]||s.community?.loans.some(l=>l.id===id)),'最多选择五只不同的收藏伙伴');
   requireRule(mode==='chapter'||selected.length>0,'无尽至少需要一只收藏伙伴');
   if(mode==='chapter'){
-    const free=levelId===0&&!s.tutorialStarted;requireRule(free||s.stamina>=ECONOMY.staminaCost,'体力不足，休息片刻再来吧');
+    const free=!!s.solo||levelId===0&&!s.tutorialStarted;requireRule(free||s.stamina>=ECONOMY.staminaCost,'体力不足，休息片刻再来吧');
     if(!free)s.stamina-=ECONOMY.staminaCost;if(levelId===0)s.tutorialStarted=true;
   }
   const r:RunState={id:allocate(s,'run'),rulesVersion:'0.6',mapVersion:6,sceneRevision:SCENE_REVISION,mode,speed:1,levelId,phase:'prep',wave:0,coreHealth:20,...(mode==='chapter'?{waveLimit:5,bossRescuedWaves:[]}:{}),

@@ -1,3 +1,5 @@
+import {BattleFeedback} from './BattleFeedback';
+import {pearlBattleHeader} from './BattleHudHeader';
 import {ExpeditionHUD} from './ExpeditionHUD';
 import {petRange} from '../core/development';
 import {visualName} from './VisualIdentity';
@@ -19,6 +21,7 @@ import type {Point} from '../core/types';
 
 /** Server owns combat and rewards; local prediction is disposable presentation only. */
 export class LiveRaidScreen {
+ private approvedFeedback?:BattleFeedback;
  private expeditionHUD?:ExpeditionHUD;
  private moving=false;private moveCancel?:Node;private operations:Promise<void>=Promise.resolve();private pauseHeartbeat=0;private acceptedRevision=0;
  private resultSound=false;private musicWave=-1;private raid:RaidSession;private destroyed=false;private hidden=false;private paused=false;private polling=false;private pollClock=0;private lastEvent=0;private lastWave=-1;private notice?:Label;private skills?:ActiveSkillControls;private epoch=0;private rosterOpen=true;private targeting=false;private overlay?:()=>void;
@@ -32,7 +35,7 @@ export class LiveRaidScreen {
  hide():void{this.cancelOperation();this.hidden=true;}
  show():void{this.hidden=false;void this.sync();}
  destroy():void{this.cancelOperation();this.destroyed=true;this.world.destroy();}
- private async settings(){const s=this.service.snapshot.settings;await this.send('settings',{auto:!!s.autoSkills,held:s.manualSkillTurtles??[]},false);}
+ private async settings(){const s=this.service.settingsSnapshot;await this.send('settings',{auto:!!s.autoSkills,held:s.manualSkillTurtles??[]},false);}
  private send(action:string,body:Record<string,unknown>={},render=true):Promise<void>{this.operations=this.operations.then(async()=>{try{const room=await this.client.action(action,body);if(this.destroyed)return;if(room?.raid&&room.revision>=this.acceptedRevision){this.acceptedRevision=room.revision;this.raid=JSON.parse(JSON.stringify(room.raid));}if(render)this.render();}catch(e){if(!this.destroyed)this.ui.toast(e instanceof Error?e.message:'操作未成功，请重试');}});return this.operations;}
  private operation(kind:'target'|'move',value:boolean):void{
   const before=this.targeting||this.moving;if(kind==='target')this.targeting=value;else this.moving=value;const active=this.targeting||this.moving;
@@ -51,7 +54,7 @@ export class LiveRaidScreen {
    // Extrapolate only the last short interval, then reconcile with the next server snapshot.
    const frozen=this.targeting||this.moving||!!r.operationOwners?.length;this.world.setPaused(frozen);if(!frozen&&r.battle.status==='fighting')stepRaid(r,Math.min(.05,dt)*(this.client.room?.speed??1));
    this.expeditionHUD?.update();
-   const events=getBattleEvents(r.battle).filter(e=>e.id>this.lastEvent);if(events.length)this.lastEvent=Math.max(...events.map(e=>e.id));this.world.update(r.battle,events,frozen?0:dt);this.audio.battleEvents(r.battle,events);this.skills?.update();
+   const events=getBattleEvents(r.battle).filter(e=>e.id>this.lastEvent);if(events.length)this.lastEvent=Math.max(...events.map(e=>e.id));this.world.update(r.battle,events,frozen?0:dt);this.audio.battleEvents(r.battle,events);for(const event of events)(this.approvedFeedback??=new BattleFeedback(this.ui,this.camera)).show(r.battle,event);this.skills?.update();
   }else this.world.updatePresentation(dt);this.overlay?.();
   if(this.notice&&(this.targeting||this.moving||r.operationOwners?.length)){this.notice.string=this.targeting||this.moving?'正在选择操作目标':'队友正在选择操作目标';return;}
   if(this.notice)this.notice.string=r.tier===3?`双环潮狱 · ${Math.max(0,180-Math.floor(r.battle?.elapsed??0))} 秒 · 剩余 ${r.battle?.enemies.filter(e=>e.alive).length??0}/15`:`守护 ${r.battle?.coreHealth??r.coreHealth}/20　 第 ${Math.min(r.wave+1,RAIDS[r.tier].waves)}/${RAIDS[r.tier].waves} 波　${Math.floor((r.seconds+(r.battle?.elapsed??0))/60)}:${String(Math.floor(r.seconds+(r.battle?.elapsed??0))%60).padStart(2,'0')}`;
@@ -73,8 +76,8 @@ export class LiveRaidScreen {
   else {const from=root.children.length;this.ui.button(this.host?(r.wave?'开始下一波':'队伍出发'):'等待队长出发',282,-280,460,70,()=>{this.rosterOpen=false;void this.send('next');},{primary:true,disabled:!this.host,size:25});this.ui.pinBattleFrom(from,1,0,0,'bottom',1);}
  }
  private renderExpeditionRaid():void{
-  const r=this.raid,b=r.battle!;this.world.update(b,[],0);const top=this.ui.root.children.length;this.ui.panel(-328,326,610,42);this.ui.text(RAIDS[r.tier].name+' · 双人协防',-445,326,20,UI_COLORS.ink,this.ui.root,340,32);this.ui.button(`${this.client.room?.speed??1}X`,-170,326,76,42,()=>{if(this.host)void this.send('speed',{speed:this.client.room?.speed===2?1:2});else this.ui.toast('由队长统一调整战斗倍速');},{size:22});this.ui.button('菜单',-76,326,104,42,()=>this.pause(),{size:20});this.ui.pinBattleFrom(top,1,0,0,'top');
-  this.expeditionHUD=new ExpeditionHUD(this.ui,this.camera,this.world,()=>this.raid.battle!,this.client.id,(command,args)=>void this.send('expedition',{command,args}),()=>this.render(),v=>this.operation('move',v),r.phase==='prep',()=>{if(this.host)void this.send('next');else this.ui.toast('等待队长开始战斗');},(unitId,skillId,targetId,point)=>void this.send('cast',{unitId,skillId,targetId,point},false),enabled=>void this.send('settings',{auto:enabled,held:[]},false),()=>!!this.client.room?.members.find(m=>m.clientId===this.client.id)?.auto);
+  const r=this.raid,b=r.battle!;this.world.update(b,[],0);pearlBattleHeader(this.ui,RAIDS[r.tier].name,this.client.room?.speed??1,()=>{if(this.host)void this.send('speed',{speed:this.client.room?.speed===2?1:2});else this.ui.toast('由队长调整倍速');},()=>this.pause(),'菜单');
+    this.expeditionHUD=new ExpeditionHUD(this.ui,this.camera,this.world,()=>this.raid.battle!,this.client.id,(command,args)=>void this.send('expedition',{command,args}),()=>this.render(),v=>this.operation('move',v),r.phase==='prep',()=>{if(this.host)void this.send('next');else this.ui.toast('等待队长开始战斗');},(unitId,skillId,targetId,point)=>void this.send('cast',{unitId,skillId,targetId,point},false),enabled=>void this.send('settings',{auto:enabled,held:[]},false),()=>!!this.client.room?.members.find(m=>m.clientId===this.client.id)?.auto);
  }
  private drag():void{
   const mine=this.mine,map=BATTLE_MAPS[raidMapId(this.raid.tier)],t=mine.roster.find(p=>p.id===mine.activeId)!,epoch=this.epoch;

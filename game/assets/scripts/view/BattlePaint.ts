@@ -1,4 +1,6 @@
 import {CoastalTerrain} from './CoastalTerrain';
+import {PearlBattleArt} from './PearlBattleArt';
+import {illustratedBattleEffect} from './BattleArtDirection';
 import {ThemedBattleTerrain} from './ThemedBattleTerrain';
 import {mapProps} from '../core/placement';
 import {BOSSES} from '../core/bossCatalog';
@@ -31,10 +33,11 @@ export class BattlePaint {
   private pearlMotion:{node:Node;phase:number;kind:'body'|'mote';x:number;y:number;z:number}[]=[];
   constructor(private root:Node,private camera:Camera,private art:ArtV2Assets){}
   private node(name:string,parent:Node,mesh:Mesh,material:Material):Node{
+    if(!material.passes.length)throw new Error('战场材质未生成渲染通道：'+name);
     const n=new Node(name);n.layer=Layers.Enum.DEFAULT;n.setParent(parent);const r=n.addComponent(MeshRenderer);r.mesh=mesh;r.setSharedMaterial(material,0);return n;
   }
   private material(key:string,frame:SpriteFrame,mode:number):Material{
-    let m=this.materials.get(key);if(!m){m=new Material();m.initialize({effectAsset:this.art.battleEffect!,states:{priority:mode===0||mode===4||mode===-1?100:[2,3,5,6].includes(mode)?190:130,depthStencilState:{depthTest:true,depthWrite:![2,3,5,6].includes(mode)}}});m.setProperty('mainTexture',frame.texture);m.setProperty('mainColor',Color.WHITE);m.setProperty('keyParams',new Vec4(mode,0,0,0));this.materials.set(key,m);}return m;
+    let m=this.materials.get(key);if(!m){m=new Material();m.initialize({effectAsset:mode===0?illustratedBattleEffect(this.art.battleEffect!):this.art.battleEffect!,states:{priority:mode===0||mode===4||mode===-1?100:[2,3,5,6].includes(mode)?190:130,depthStencilState:{depthTest:true,depthWrite:![2,3,5,6].includes(mode)}}});m.setProperty('mainTexture',frame.texture);m.setProperty('mainColor',Color.WHITE);m.setProperty('keyParams',new Vec4(mode,0,0,0));this.materials.set(key,m);}return m;
   }
   private quad(key:string,frame:SpriteFrame,height:number,centered=false):Mesh{
     let mesh=this.meshes.get(key);if(mesh)return mesh;
@@ -85,6 +88,12 @@ export class BattlePaint {
       n.setRotationFromEuler(-90,0,0);n.setPosition(x,-.002,z);n.setScale(friendly?1:.84,.40,1);
     }
   }
+  station(parent:Node,x:number,z:number,mine=true):void{
+    const f=PearlBattleArt.frame('station');if(!f)return;
+    const n=this.node('贴地珍珠石座',parent,this.quad('pearl-station',f,.88,true),this.material(mine?'pearl-station':'pearl-station-ally',f,1));
+    if(!mine)n.getComponent(MeshRenderer)!.getSharedMaterial(0)!.setProperty('mainColor',new Color('#9BBED8'));
+    n.setRotationFromEuler(-90,0,0);n.setScale(1,.60,1);n.setPosition(x,-.025,z);
+  }
   face(node:Node):void{const q=this.camera.node.worldRotation;node.setWorldRotation(q.x,q.y,q.z,q.w);}
   emitter(node:Node,role:Role):Vec3{const p=poseRow(role)!,[sx,sy,w,h,ax,ay]=(p.atlas==='main'?MAIN_POSES:SUPPORT_POSES)[p.row][0],gear=BATTLE_RIG[role].gear;return Vec3.transformMat4(new Vec3(),new Vec3((sx+w*gear[0]-ax)*p.scale,(ay-sy-h*gear[1])*p.scale,.025),node.worldMatrix);}
   private poseMesh(kind:string,index:number,padded=false):Mesh{
@@ -113,6 +122,11 @@ export class BattlePaint {
   }
   themedGround(parent:Node,level:LevelDefinition,threeDScenery=false,wave=1,bossIndex=0):void{
     if(level.sceneArt?.startsWith('map-coast-stage-')||isModeStage(level)){
+      // Authored maps stay registered to their routes. Extend actual ocean under
+      // them on wide phones instead of stretching the map or exposing clearColor.
+      const ocean=this.art.battleFrame('water-surface')!,seaMat=this.material('authored-ocean',ocean,0);
+      const sea=this.node('宽屏远海延伸',parent,this.quad('authored-ocean',ocean,48,true),seaMat);
+      sea.setRotationFromEuler(-90,0,0);sea.setPosition(0,-.12,0);this.waterMaterials.set(seaMat,1);
       const key=level.sceneArt!;const f=this.art.battleFrame(key)!;let mesh=this.meshes.get(key);
       // Undo the camera's ground foreshortening. The orthographic camera stays
       // at the 1280x720 design scale shared by the HUD, actors and touch input.

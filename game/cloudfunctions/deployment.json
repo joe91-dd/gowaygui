@@ -1,0 +1,12 @@
+{
+  "appid": "wx7280ece46f88b00b",
+  "env": "cloudbase-d7gaq30iobf65f41a",
+  "functionName": "gowayguiAccount",
+  "collection": "gowaygui_players_v1",
+  "runtime": "Nodejs18.15",
+  "timeoutSeconds": 20,
+  "memoryMB": 256,
+  "publicHTTP": false,
+  "automaticAccountMigration": false,
+  "status": "local-candidate-not-deployed"
+}

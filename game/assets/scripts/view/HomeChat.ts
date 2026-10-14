@@ -32,11 +32,12 @@ export function homeChat(ui:IslandUI,service:GameService,state:HomeChatState,red
   else ui.text('本地AI频道',0,51,16,UI_COLORS.sand,p,314,27);
   const visible=lines.length?lines.slice(-2):['聊聊阵容、合宠或下一关吧。'];
   visible.forEach((line,i)=>{const label=ui.text(line,0,11-i*45,16,UI_COLORS.ink,p,316,40,true);label.overflow=Label.Overflow.CLAMP;});
-  const input=ui.panel(-40,-84,230,36,p,'#EAF1ED'),edit=input.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];
+  const surface=ui.panel(-40,-84,230,36,p,'#EAF1ED'),input=ui.group('聊天输入',0,0,surface,230,36);input.active=false;
+  const edit=input.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];
   edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;edit.maxLength=120;
   edit.textLabel=ui.text('',0,0,17,UI_COLORS.ink,input,214,30);edit.placeholderLabel=ui.text('',0,0,16,UI_COLORS.muted,input,214,30);
   for(const label of old)if(label){label.removeFromParent();label.destroy();}
-  edit.placeholder='输入消息…';edit.string=state.draft;ui.anchorInput(edit);input.on(EditBox.EventType.TEXT_CHANGED,()=>state.draft=edit.string);
+  edit.placeholder='输入消息…';edit.string=state.draft;ui.anchorInput(edit);input.on(EditBox.EventType.TEXT_CHANGED,()=>state.draft=edit.string);input.active=true;
   ui.button('发送',122,-84,76,36,()=>{try{
     service.communityAction(command('homeChat'),{kind:'chat',to:state.channel==='world'?'world':state.recipient,text:edit.string});state.draft='';redraw();
   }catch(e){error(e);}},{parent:p,primary:true,disabled:state.channel==='private'&&!state.recipient,size:18});

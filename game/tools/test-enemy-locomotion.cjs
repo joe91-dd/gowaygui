@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const ts=require('typescript');
 // Minimal math/track adapter: tests emitted curve values, not a second animation implementation.
 class Vec3{constructor(x=0,y=0,z=0){Object.assign(this,{x,y,z});}length(){return Math.hypot(this.x,this.y,this.z);}static add(o,a,b){Object.assign(o,{x:a.x+b.x,y:a.y+b.y,z:a.z+b.z});return o;}static subtract(o,a,b){return this.add(o,a,new Vec3(-b.x,-b.y,-b.z));}static multiplyScalar(o,a,s){Object.assign(o,{x:a.x*s,y:a.y*s,z:a.z*s});return o;}static scaleAndAdd(o,a,b,s){return this.add(o,a,new Vec3(b.x*s,b.y*s,b.z*s));}}
-class Quat{constructor(x=0,y=0,z=0,w=1){Object.assign(this,{x,y,z,w});}static dot(a,b){return a.x*b.x+a.y*b.y+a.z*b.z+a.w*b.w;}static normalize(o,a){const n=Math.hypot(a.x,a.y,a.z,a.w);Object.assign(o,{x:a.x/n,y:a.y/n,z:a.z/n,w:a.w/n});return o;}static slerp(o,a,b,t){let d=this.dot(a,b),sgn=d<0?-1:1;d=Math.min(1,Math.abs(d));const angle=Math.acos(d),sin=Math.sin(angle),u=sin>.00001?Math.sin((1-t)*angle)/sin:1-t,v=(sin>.00001?Math.sin(t*angle)/sin:t)*sgn;Object.assign(o,{x:a.x*u+b.x*v,y:a.y*u+b.y*v,z:a.z*u+b.z*v,w:a.w*u+b.w*v});return o;}}
+class Quat{constructor(x=0,y=0,z=0,w=1){Object.assign(this,{x,y,z,w});}static dot(a,b){return a.x*b.x+a.y*b.y+a.z*b.z+a.w*b.w;}static normalize(o,a){const n=Math.hypot(a.x,a.y,a.z,a.w);Object.assign(o,{x:a.x/n,y:a.y/n,z:a.z/n,w:a.w/n});return o;}static fromEuler(o,x,y,z){const k=Math.PI/360,cx=Math.cos(x*k),sx=Math.sin(x*k),cy=Math.cos(y*k),sy=Math.sin(y*k),cz=Math.cos(z*k),sz=Math.sin(z*k);Object.assign(o,{x:sx*cy*cz+cx*sy*sz,y:cx*sy*cz-sx*cy*sz,z:cx*cy*sz+sx*sy*cz,w:cx*cy*cz-sx*sy*sz});return o;}static multiply(o,a,b){const x=a.w*b.x+a.x*b.w+a.y*b.z-a.z*b.y,y=a.w*b.y-a.x*b.z+a.y*b.w+a.z*b.x,z=a.w*b.z+a.x*b.y-a.y*b.x+a.z*b.w,w=a.w*b.w-a.x*b.x-a.y*b.y-a.z*b.z;Object.assign(o,{x,y,z,w});return o;}static slerp(o,a,b,t){let d=this.dot(a,b),sgn=d<0?-1:1;d=Math.min(1,Math.abs(d));const angle=Math.acos(d),sin=Math.sin(angle),u=sin>.00001?Math.sin((1-t)*angle)/sin:1-t,v=(sin>.00001?Math.sin(t*angle)/sin:t)*sgn;Object.assign(o,{x:a.x*u+b.x*v,y:a.y*u+b.y*v,z:a.z*u+b.z*v,w:a.w*u+b.w*v});return o;}}
 class TrackPath{toHierarchy(path){this.node=path;return this;}toProperty(property){this.property=property;return this;}}
 class Track{constructor(n){this.c=Array.from({length:n},()=>({curve:{assignSorted(v){this.keys=Array.from(v);}}}));}channels(){return this.c;}}
 class VectorTrack extends Track{constructor(){super(4);}}
@@ -30,3 +30,21 @@ const source2=Object.assign(new AnimationClip(),source,{_hash:34677}),walk2=read
 const rig={clips:[source],defaultClip:source};prepareEnemyLocomotion([rig]);assert.equal(rig.clips.length,1);assert.equal(rig.defaultClip,walk);assert.equal(rig.clips[0],walk);
 assert.ok(enemyWalkRate(.25,1)<enemyWalkRate(1,1));assert.ok(enemyWalkRate(.5,2)<enemyWalkRate(.5,1));assert.ok(Number.isFinite(enemyWalkRate(0,0)));
 console.log('PASS immutable source clips, alternating planted gait, normalized/looping rotations, unchanged torso, separate species bake keys, shared clip cache, slow/big cadence');
+
+// Feature joints that were previously omitted must animate, including stationary flight.
+const identity=Array.from({length:5},()=>new Quat());
+for(const [family,flying,names] of [
+ ['crab',false,['claw.L.0','claw.R.0']],['quadruped',false,['head','tail.0']],
+ ['ray',true,['fin.L.0','fin.R.0','tail.1']],['serpent',false,['spine.0','spine.3','head']],
+ ['octopus',false,['tentacle0.0','tentacle3.1']],['snail',false,['eye.L.0','eye.R.0']],
+ ['biped',false,['head','arm.L.0','arm.R.0']]
+]){
+ const src=new AnimationClip();src.name='idle';src._hash=family.length*517;src._exoticAnimation={_nodeAnimations:names.map(name=>({_path:'Rig/body/'+name,_rotation:curve(identity)}))};
+ const before=JSON.stringify(src._exoticAnimation),clip=readableEnemyWalk(src,family,flying,true);
+ assert.notEqual(clip,src,family+' idle must have animated feature joints');
+ for(const tr of clip.tracks){const values=tr.c[0].curve.keys.map(k=>k[1].value);assert.ok(values.some(v=>Math.abs(v.x)+Math.abs(v.y)+Math.abs(v.z)>.015),tr.path.node+' must move');for(const q of values)assert.ok(Math.abs(Quat.dot(q,q)-1)<1e-7);assert.ok(1-Math.abs(Quat.dot(values[0],values.at(-1)))<1e-7,'loop');}
+ assert.equal(JSON.stringify(src._exoticAnimation),before,'imported assets immutable');
+ assert.notEqual(clip.hash,readableEnemyWalk(src,family,flying,false).hash,'idle and walking bake keys differ');
+}
+console.log('PASS head/claws/fins/tail/spine/eyes/tentacles/arms, idle flight, normalized feature tracks, immutable assets, mode-specific bake keys');
+

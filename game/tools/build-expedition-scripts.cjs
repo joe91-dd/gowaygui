@@ -29,10 +29,29 @@ if(!out.startsWith(path.join(game,'build')+path.sep)||out===base)throw Error('Un
 console.log('Compiled',report.length,'source modules; sharing unchanged exported runtime/resources');
 fs.mkdirSync(out,{recursive:true});
 function shared(from,to){if(!fs.existsSync(to))fs.symlinkSync(from,to,'junction');else if(fs.realpathSync(to)!==fs.realpathSync(from))throw Error('Resource link mismatch '+to);}
-for(const e of fs.readdirSync(base,{withFileTypes:true})){const from=path.join(base,e.name),to=path.join(out,e.name);if(e.name==='assets')continue;if(e.isDirectory())shared(from,to);else fs.copyFileSync(from,to);}
+for(const e of fs.readdirSync(base,{withFileTypes:true})){const from=path.join(base,e.name),to=path.join(out,e.name);if(e.name==='assets')continue;if(fs.statSync(from).isDirectory())shared(from,to);else fs.copyFileSync(from,to);}
 fs.mkdirSync(path.join(out,'assets/main'),{recursive:true});
-for(const e of fs.readdirSync(path.join(base,'assets'),{withFileTypes:true})){if(e.name==='main')continue;const from=path.join(base,'assets',e.name),to=path.join(out,'assets',e.name);if(e.isDirectory())shared(from,to);else fs.copyFileSync(from,to);}
-for(const e of fs.readdirSync(path.join(base,'assets/main'),{withFileTypes:true})){const from=path.join(base,'assets/main',e.name),to=path.join(out,'assets/main',e.name);if(e.isDirectory())shared(from,to);else if(e.name!=='index.js')fs.copyFileSync(from,to);}
+for(const e of fs.readdirSync(path.join(base,'assets'),{withFileTypes:true})){if(e.name==='main')continue;const from=path.join(base,'assets',e.name),to=path.join(out,'assets',e.name);if(fs.statSync(from).isDirectory())shared(from,to);else fs.copyFileSync(from,to);}
+for(const e of fs.readdirSync(path.join(base,'assets/main'),{withFileTypes:true})){const from=path.join(base,'assets/main',e.name),to=path.join(out,'assets/main',e.name);if(fs.statSync(from).isDirectory())shared(from,to);else if(e.name!=='index.js')fs.copyFileSync(from,to);}
 fs.writeFileSync(path.join(out,'assets/main/index.js'),built);
+if(path.basename(out).startsWith('solo-ui-')){
+ const entry=path.join(out,'index.html'),html=fs.readFileSync(entry,'utf8').replace(/<title>.*?<\/title>/s,'<title>哥喂龟 · 单机版</title>').replace('<head>',`<head><script>const soloURL=new URL(location.href);if(!soloURL.searchParams.has('edition')){soloURL.searchParams.set('edition','solo');history.replaceState(null,'',soloURL);}</script>`).replace('cc_exact_fit_screen="true"','cc_exact_fit_screen="false"').replace('</head>',`<style>
+ body { background:#142e37; overflow:hidden; }
+ #GameDiv { position:absolute; left:0; top:50%; transform:translateY(-50%); width:100vw; height:min(100vh,56.25vw); overflow:hidden; }
+ </style></head>`);
+ fs.writeFileSync(entry,html);
+ // Keep Cocos screen size, all scene cameras and loading/UI canvases on the same
+ // landscape surface, including when the desktop preview panel is tall/narrow.
+ const appFile=path.join(out,'application.js');
+ fs.writeFileSync(appFile,fs.readFileSync(appFile,'utf8').replace('overrideSettings: {','overrideSettings: { screen: { exactFitScreen: false },'));
+}
 const manifest={method:'TypeScript System.register script rebuild; unchanged Cocos 3.8.8 exported runtime/resources',base,output:out,at:new Date().toISOString(),modules:report,bundleSha256:crypto.createHash('sha256').update(built).digest('hex')};
 fs.writeFileSync(path.join(out,'script-build-manifest.json'),JSON.stringify(manifest,null,2));console.log(out);
+
+const pearl=path.join(game,'assets/resources/battle-pearl');
+const solo=path.join(game,'assets/resources/solo-ui');
+if(fs.existsSync(solo)){const dest=path.join(out,'presentation/solo-ui');fs.mkdirSync(dest,{recursive:true});for(const file of ['endless.png','gold.png','chapter.png'])fs.copyFileSync(path.join(solo,file),path.join(dest,file));}
+if(fs.existsSync(pearl)){const dest=path.join(out,'presentation/battle-pearl');fs.mkdirSync(dest,{recursive:true});for(const file of ['ui.png','blessings.png'])fs.copyFileSync(path.join(pearl,file),path.join(dest,file));}
+
+const approved=path.join(game,'assets/resources/vfx-approved');
+if(fs.existsSync(approved)){const dest=path.join(out,'presentation/vfx-approved');fs.mkdirSync(dest,{recursive:true});for(const file of ['impacts.png','projectiles.png','volumes.png'])fs.copyFileSync(path.join(approved,file),path.join(dest,file));}

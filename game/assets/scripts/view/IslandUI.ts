@@ -1,7 +1,10 @@
+import {PearlBattleArt} from './PearlBattleArt';
 import {GoldFlow} from './GoldFlow';
 import {CompanionDisplay} from './CompanionDisplay';
 import {MenuMotion} from './MenuMotion';
-import {Color, Graphics, Mask, isValid, Label, Layers, Node, UITransform, Vec3, EventTouch, tween,screen as displayScreen,Canvas,EditBox} from 'cc';
+import {Color, Graphics, Mask, isValid, Label, Layers, Node, UITransform, Vec3, EventTouch, tween,screen as displayScreen,Canvas,EditBox,view,Sprite} from 'cc';
+import {sceneryCoverScale} from './DisplayLayout';
+import {registerPageButton} from './SwipePaging';
 import {IslandIcons, IslandIconId} from './IslandIcons';
 import {IslandPanels} from './IslandPanels';
 import type {TurtlePortraits} from './TurtlePortraits';
@@ -15,6 +18,7 @@ import {hudPlacementIssue,HudRect} from '../core/hudPlacement';
 export const UI_COLORS={ink:'#153B55',cream:'#153B55',sand:'#527889',gold:'#007F97',edge:'#BDDADF',green:'#00AABB',dark:'#FFF9EC',muted:'#76939A',red:'#C95243'};
 export const color=(hex:string,alpha=255):Color=>{const c=new Color();Color.fromHEX(c,hex);c.a=alpha;return c;};
 export class IslandUI {
+  soloStyle=false;soloGold?:()=>number;
   reducedMotion:()=>boolean=()=>false;
   // Only secondary-page trees receive the approved pearl skin. Home stays untouched.
   private pearlSurfaces=new WeakSet<Node>();
@@ -43,6 +47,13 @@ export class IslandUI {
   }
   onActionError?:(error:unknown)=>void;
   battleFrameLocked=false;
+  /** Only combat uses the selected pearl/ivory/gold palette; menus keep their existing skin. */
+  battleStyle=false;
+  private battleInk(hex:string,parent:Node):string{
+    if(!this.battleStyle||this.pearlSurface(parent))return hex;
+    if(['#F4EBD6','#A9E2CF','#D2CEBE'].includes(hex))return '#34526A';
+    return hex;
+  }
   private battleAnchors:{node:Node;x:number;y:number;edge:'top'|'bottom';side:number}[]=[];
   pinBattleFrom(index:number,scale:number,x:number,y:number,edge:'top'|'bottom',side=0):void{
     if(!this.art?.ready)return;
@@ -78,9 +89,25 @@ export class IslandUI {
   group(name:string,x=0,y=0,parent=this.root,w=0,h=0):Node{
     const n=new Node(name);n.layer=Layers.Enum.UI_2D;n.setParent(parent);n.setPosition(x,y);n.addComponent(UITransform).setContentSize(w,h);return n;
   }
+  /** Full-screen surfaces use the current design viewport, never stretch controls. */
+  get pageWidth():number{const size=displayScreen.windowSize;return this.soloStyle?Math.max(1280,720*size.width/Math.max(1,size.height)):Math.max(1280,view.getVisibleSize().width);}
+  get pageHeight():number{return Math.max(720,view.getVisibleSize().height);}
+  screenVeil(name:string,hex:string,opacity:number,parent=this.root):Node{
+    const n=this.group(name,0,0,parent,this.pageWidth,this.pageHeight),g=n.addComponent(Graphics);
+    const resize=()=>{const w=this.pageWidth,h=this.pageHeight;n.getComponent(UITransform)!.setContentSize(w,h);g.clear();g.fillColor=color(hex,opacity);g.rect(-w/2,-h/2,w,h);g.fill();};
+    view.on('canvas-resize',resize);view.on('design-resolution-changed',resize);resize();
+    n.once(Node.EventType.NODE_DESTROYED,()=>{view.off('canvas-resize',resize);view.off('design-resolution-changed',resize);});
+    n.on(Node.EventType.TOUCH_START,(event:EventTouch)=>event.propagationStopped=true);return n;
+  }
+  screenScenery(parent:Node,key:ArtV2Image):Sprite|undefined{
+    const image=this.group('自适应场景背景',0,0,parent,1280,720),sprite=this.art?.attach(image,key,1280,720);
+    const resize=()=>{const s=sceneryCoverScale(this.pageWidth,this.pageHeight);image.setScale(s,s,1);};
+    view.on('canvas-resize',resize);view.on('design-resolution-changed',resize);resize();
+    image.once(Node.EventType.NODE_DESTROYED,()=>{view.off('canvas-resize',resize);view.off('design-resolution-changed',resize);});return sprite;
+  }
   label(text:string,x:number,y:number,size=24,hex=UI_COLORS.cream,parent=this.root,width=400,height=48):Label{
     const n=this.group('文字:'+text.slice(0,18),x,y,parent,width,height),l=n.addComponent(Label);
-    l.string=text;l.fontSize=size;l.lineHeight=Math.round(size*1.35);l.color=color(hex);l.fontFamily='Microsoft YaHei';l.isBold=size>=24;
+    l.string=text;l.fontSize=size;l.lineHeight=Math.round(size*1.35);l.color=color(this.battleInk(hex,parent));l.fontFamily='Microsoft YaHei';l.isBold=size>=24;
     l.horizontalAlign=Label.HorizontalAlign.CENTER;l.verticalAlign=Label.VerticalAlign.CENTER;l.overflow=Label.Overflow.SHRINK;l.enableWrapText=true;return l;
   }
   /** Explicit phone typography. Layout must provide room instead of shrinking key information. */
@@ -117,11 +144,12 @@ export class IslandUI {
   /** The reference battle dock uses round spell medallions, never book frames. */
   battleSkillIcon(id:SkillId,x:number,y:number,side:number,parent=this.root):Node{
     const n=this.group('战斗圆形技能:'+id,x,y,parent,side,side),g=n.addComponent(Graphics);
-    g.fillColor=color('#00AEE5',25);g.circle(0,0,side/2+5);g.fill();
-    g.fillColor=color('#FFFFFF');g.circle(0,0,side/2+2);g.fill();
-    const inside=this.group('圆形技能裁切',0,0,n,side,side);this.clip(inside,side,side/2);
-    this.art?.attach(inside,`book-${id}`,side*1.1,side*1.1);
-    const ring=this.group('技能银边',0,0,n).addComponent(Graphics);ring.strokeColor=color('#64A6BB');ring.lineWidth=1.5;ring.circle(0,0,side/2);ring.stroke();return n;
+    const r=side/2;
+    g.fillColor=color('#775127',120);g.circle(0,-2,r+5);g.fill();
+    g.fillColor=color('#FFF4D5');g.circle(0,0,r+4);g.fill();
+    const inside=this.group('原版技能画面',0,0,n,side,side);this.clip(inside,side,r);this.art?.attach(inside,`book-${id}`,side*1.06,side*1.06);
+    const ring=this.group('技能金镶边',0,0,n).addComponent(Graphics);ring.strokeColor=color('#B57A23');ring.lineWidth=2;ring.circle(0,0,r+3);ring.stroke();ring.strokeColor=color('#FFE7A1');ring.lineWidth=2;ring.circle(0,0,r+1);ring.stroke();
+    return n;
   }
   hudSymbol(index:number,x:number,y:number,side:number,parent=this.root):Node{
     const n=this.group('HUD标记:'+index,x,y,parent,side,side);this.art?.attach(n,`hud-symbol-${index}` as any,side,side);return n;
@@ -140,7 +168,7 @@ export class IslandUI {
     this.bookIcon(id,-238,-10,132,p);this.text(skill.description,86,-12,23,UI_COLORS.ink,p,458,188,true);
   }
   dialog(title:string,subtitle='',close?:()=>void,width=760,height=440):Node{
-    const veil=this.group('紧凑弹窗遮罩',0,0,this.root,1280,720),g=veil.addComponent(Graphics);g.fillColor=color('#102F43',145);g.rect(-640,-360,1280,720);g.fill();veil.on(Node.EventType.TOUCH_START,(e:EventTouch)=>e.propagationStopped=true);
+    const veil=this.screenVeil('紧凑弹窗遮罩','#102F43',145);
     this.secondaryPage(veil);
     const p=this.panel(0,0,width,height,veil,UI_COLORS.dark,252,22);this.text(title,-30,height/2-44,30,UI_COLORS.ink,p,width-140,42);
     if(subtitle)this.text(subtitle,0,height/2-88,20,UI_COLORS.sand,p,width-60,34,true);
@@ -159,17 +187,38 @@ export class IslandUI {
     return node;
   }
   sheet(title:string,subtitle='',close?:()=>void,closeText='返回'):Node{
-    const veil=this.group('页面遮罩',0,0,this.root,1280,720),graphics=veil.addComponent(Graphics);
+    const veil=this.screenVeil('页面遮罩','#143C50',this.art?.ready?12:150);
     this.pearlSurfaces.add(veil);
-    if(this.art?.ready){const scenery=this.group('页面海岛背景',0,0,veil,1280,720);this.art.attach(scenery,'home-background',1280,720);this.atmosphere(scenery);}
-    graphics.fillColor=color('#143C50',this.art?.ready?12:150);graphics.rect(-640,-360,1280,720);graphics.fill();
-    veil.on(Node.EventType.TOUCH_START,(event:EventTouch)=>event.propagationStopped=true);
-    const panel=this.panel(0,0,1200,660,veil,UI_COLORS.dark,235,22);
-    if(this.art?.ready){this.decoration('decor-title',-Math.min(330,title.length*17)-61,284,94,36,panel);this.line(-548,248,548,248,panel);}
+    if(this.art?.ready){this.screenScenery(veil,'home-background');this.atmosphere(veil);}
+    const width=this.pageWidth-80;
+    if(this.soloStyle){
+      const p=this.group('单机页面:'+title,0,0,veil,width,660);
+      this.panel(0,-29,Math.min(width,1230),557,p,'#FFF9EC',224,23);
+      this.soloHeader(p,title,close);
+      if(subtitle)this.text(subtitle,0,230,19,UI_COLORS.sand,p,1000,36);
+      return p;
+    }
+    const panel=this.panel(0,0,width,660,veil,UI_COLORS.dark,235,22);
+    if(this.art?.ready&&!this.soloStyle){this.decoration('decor-title',-Math.min(330,title.length*17)-61,284,94,36,panel);this.line(-width/2+52,248,width/2-52,248,panel);}
     this.text(title,0,284,34,UI_COLORS.cream,panel,816,56);
     if(subtitle)this.text(subtitle,0,230,19,UI_COLORS.sand,panel,900,40);
-    if(close)this.button(closeText,504,284,144,54,close,{parent:panel,size:30,sound:'back'});
+    if(close)this.button(closeText,width/2-96,284,144,54,close,{parent:panel,size:30,sound:'back'});
     return panel;
+  }
+  /** Approved solo screens use a small back/title header and separate content
+   * surfaces, rather than an opaque full-page dialog around every flow. */
+  soloPage(title:string,close?:()=>void,body=false):Node{
+    const veil=this.screenVeil('单机场景:'+title,'#143C50',0);
+    this.pearlSurfaces.add(veil);this.screenScenery(veil,'home-background');
+    const p=this.group('单机页面:'+title,0,0,veil,this.pageWidth-80,660);
+    if(body)this.panel(0,-27,1160,573,p,'#FFF9EC',240,23);
+    this.soloHeader(p,title,close);return p;
+  }
+  soloHeader(p:Node,title:string,close?:()=>void):void{
+    const edge=this.pageWidth/2-42;
+    const back=this.button('‹',-edge+27,312,57,48,()=>close?.(),{parent:p,size:35,sound:'back'});
+    this.text(title,-edge+174,312,27,UI_COLORS.ink,p,220,42);
+    const money=this.panel(edge-103,312,207,44,p,'#07536C',250,22);this.icon('gold',-77,0,31,money);this.text((this.soloGold?.()??0).toLocaleString(),16,0,24,'#FFFFFF',money,162,35);
   }
   scenicCard(image:ArtV2Image,x:number,y:number,w:number,h:number,title:string,caption:string,action:()=>void,parent=this.root,disabled=false):Node{
     const n=this.button('',x,y,w,h,action,{parent,disabled});
@@ -181,21 +230,26 @@ export class IslandUI {
     return n;
   }
   sceneSheet(title:string,close?:()=>void,background:ArtV2Image='home-background'):Node{
-    if(!this.art?.ready)return this.sheet(title,'',close);
-    const scene=this.group('场景页面:'+title,0,0,this.root,1280,720);this.pearlSurfaces.add(scene);this.art.attach(scene,background,1280,720);this.atmosphere(scene);
+    if(!this.art?.ready||this.soloStyle)return this.sheet(title,'',close);
+    const scene=this.group('场景页面:'+title,0,0,this.root,this.pageWidth,this.pageHeight);this.pearlSurfaces.add(scene);this.screenScenery(scene,background);this.atmosphere(scene);
     scene.on(Node.EventType.TOUCH_START,(event:EventTouch)=>event.propagationStopped=true);
-    const p=this.group('页面内容',0,0,scene,1200,660);this.panel(0,285,1176,68,p,UI_COLORS.dark,223,22);
-    this.decoration('decor-title',-Math.min(330,title.length*17)-61,284,94,36,p);this.text(title,0,284,35,UI_COLORS.cream,p,680,50);if(close)this.button('返回',504,284,144,52,close,{parent:p,size:28,sound:'back'});return p;
+    const width=this.pageWidth-80,p=this.group('页面内容',0,0,scene,width,660);this.panel(0,285,width-24,68,p,UI_COLORS.dark,223,22);
+    this.decoration('decor-title',-Math.min(330,title.length*17)-61,284,94,36,p);this.text(title,0,284,35,UI_COLORS.cream,p,680,50);if(close)this.button('返回',width/2-96,284,144,52,close,{parent:p,size:28,sound:'back'});return p;
   }
   decoration(key:string,x:number,y:number,w:number,h:number,parent=this.root):Node{const n=this.group('界面装饰:'+key,x,y,parent,w,h);this.art?.attach(n,key as any,w,h);return n;}
   atmosphere(parent:Node,mode:'ambient'|'wish'|'fusion'='ambient',x=0,y=0,w=1120,h=490):Node{const n=this.group('海岛光尘:'+mode,x,y,parent,w,h),motion=n.addComponent(MenuMotion);motion.mode=mode;motion.width=w;motion.height=h;motion.reduced=this.reducedMotion;return n;}
   panel(x:number,y:number,w:number,h:number,parent=this.root,hex=UI_COLORS.dark,opacity=244,radius=24):Node{
     const n=this.group('海岛面板',x,y,parent,w,h);
+    if(this.battleStyle&&!this.soloStyle&&!this.pearlSurface(parent)&&radius>0){
+      if(PearlBattleArt.ready){PearlBattleArt.attach(n,w>750&&h>80?'dock':hex===UI_COLORS.gold||hex===UI_COLORS.green?'recruit':'secondary',w,h);return n;}
+      const g=n.addComponent(Graphics);g.fillColor=color('#FFF4D8');g.roundRect(-w/2,-h/2,w,h,Math.min(12,h/2));g.fill();
+      return n;
+    }
     if(this.art?.ready){
       const neutral=['#47645C','#725132','#395551','#395750','#436F79','#123A54','#FFF4DD'].includes(hex);
       if(neutral)hex=UI_COLORS.dark;
       const isTeal=hex===UI_COLORS.gold||hex===UI_COLORS.green,isPaper=hex===UI_COLORS.dark||['#FFF9EC','#FFF4DD','#E9F3F0','#F1F4EC','#F6F5E9','#F0F6F3'].includes(hex),isSelected=hex==='#DDF8F0',isDisabled=hex==='#D8E0DD';
-      if(this.pearlSurface(parent)&&w>=94&&h>=38&&radius>=10&&(isTeal||isPaper||isSelected||isDisabled)){
+      if(!this.soloStyle&&this.pearlSurface(parent)&&w>=94&&h>=38&&radius>=10&&(isTeal||isPaper||isSelected||isDisabled)){
         const key=isTeal?'pearl-primary':isSelected?'pearl-selected':isDisabled?'pearl-disabled':h>105?'pearl-panel':'pearl-secondary';
         this.art.attach(n,key,w,h,color(isTeal?'#DCF8FF':'#FFFFFF',opacity));return n;
       }
@@ -239,17 +293,19 @@ export class IslandUI {
   button(text:string,x:number,y:number,w:number,h:number,action:()=>void,options:{primary?:boolean;disabled?:boolean;parent?:Node;size?:number;selected?:boolean;icon?:IslandIconId;iconSize?:number;surface?:'paper'|'wood'|'bare'|'hud';sound?:'back'}={}):Node{
     const {primary=false,disabled=false,parent=this.root,selected=false}=options;
     // Slim action buttons, while keeping large portrait and mode cards intact.
-    if(this.art?.ready && text && h>=68 && h<=96&&options.surface!=='hud'&&options.surface!=='bare')h=54;
+    if(this.art?.ready && !(this.soloStyle&&primary) && text && h>=68 && h<=96&&options.surface!=='hud'&&options.surface!=='bare')h=54;
     const n=options.surface==='bare'?this.group('HUD点击区',x,y,parent,w,h):this.panel(x,y,w,h,parent,options.surface==='hud'?'#F7FCFC':disabled?'#D8E0DD':primary?UI_COLORS.gold:selected?'#DDF8F0':options.surface==='paper'?'#FFF4DD':options.surface==='wood'?'#725132':'#47645C',255,options.surface==='hud'?8:Math.min(14,h/2));
     if(selected&&!primary&&!this.pearlSurface(parent)){const border=this.group('选中描边',0,0,n,w,h),g=border.addComponent(Graphics);g.lineWidth=2.5;g.strokeColor=color('#00A4B2');g.roundRect(-w/2+1,-h/2+1,w-2,h-2,Math.min(13,h/2));g.stroke();}
     n.name='按钮:'+text;
+    if(this.battleStyle&&!this.soloStyle&&!this.pearlSurface(parent)&&text.startsWith('开始'))PearlBattleArt.attach(n,'start',w,h);
     const iconSize=options.icon?Math.min(options.iconSize??48,h-10):0;
     if(options.icon)this.icon(options.icon,-w/2+12+iconSize/2,1,iconSize,n);
-    const font=options.size??(h>=88?30:22),hex=disabled?'#748B91':primary?'#FFFFFF':UI_COLORS.ink;
+    const font=options.size??(h>=88?30:22),hex=disabled?'#748B91':primary?(this.battleStyle&&!this.soloStyle&&!this.pearlSurface(parent)?'#5E350F':'#FFFFFF'):UI_COLORS.ink;
     const textX=iconSize?(iconSize+8)/2:0,textWidth=iconSize?w-24-iconSize-8:w-18;
     if(h>=88)this.text(text,textX,1,font,hex,n,textWidth,h-10,true);
     else this.label(text,textX,1,font,hex,n,textWidth,h-10);
-    if(options.surface==='hud'){const label=n.getComponentInChildren(Label);if(label){label.isBold=true;label.color=color('#07385E');}}
+    if(options.surface==='hud'){const label=n.getComponentInChildren(Label);if(label){label.isBold=true;label.color=color(this.battleInk('#07385E',n));}}
+    registerPageButton(this,parent,n,text,action,disabled);
     if(!disabled){
       let touchStart:{x:number;y:number}|undefined,moved=false;
       IslandUI.prototype.hover.call(this,n);
@@ -277,14 +333,13 @@ export class IslandUI {
     if(value>0){g.fillColor=color(hex);g.roundRect(-w/2,-h/2,width,h,h/2);g.fill();}return n;
   }
   modal(title:string,subtitle=''):Node{
-    const veil=this.group('弹窗遮罩',0,0,this.root,1280,720),g=veil.addComponent(Graphics);
-    g.fillColor=color('#10292C',180);g.rect(-640,-360,1280,720);g.fill();veil.on(Node.EventType.TOUCH_START,(e:EventTouch)=>e.propagationStopped=true);
+    const veil=this.screenVeil('弹窗遮罩','#10292C',180);
     const p=this.panel(0,0,1060,596,veil);this.label(title,0,246,32,UI_COLORS.cream,p,920,56);
     if(subtitle)this.label(subtitle,0,200,18,UI_COLORS.sand,p,920,44);return p;
   }
   toast(message:string):void{
-    const n=this.panel(0,156,Math.min(620,Math.max(240,message.length*22)),52,this.root,'#07536C',244,24);n.name='简短操作提示';
-    this.text(message,0,0,22,'#FFFFFF',n,580,38);tween(n).delay(1.8).call(()=>n.destroy()).start();
+    const width=Math.min(840,Math.max(280,message.length*23+48)),n=this.panel(0,156,width,54,this.root,'#07536C',244,24);n.name='简短操作提示';
+    this.text(message,0,0,22,this.battleStyle?'#54391E':'#FFFFFF',n,width-30,42);tween(n).delay(1.8).call(()=>n.destroy()).start();
   }
   skillPill(name:string,x:number,y:number,parent:Node,active=false,width=144,description?:string):void{
     const p=this.panel(x,y,width,34,parent,active?'#436F79':'#395551',255,10);this.label(name,0,0,16,active?'#007D93':UI_COLORS.cream,p,width-8,30);

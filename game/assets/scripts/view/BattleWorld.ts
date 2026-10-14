@@ -1,3 +1,8 @@
+import {NativeResourceQueue} from './NativeResourceQueue';
+import {runtimeQuery} from '../platform/runtimeQuery';
+import {FusionRankVisuals,fusionModelScale} from './FusionRankVisuals';
+import {approvedVfxTextures} from './ApprovedVfxArt';
+import {expeditionSlots} from '../core/expeditionRules';
 import {battleThemeIndex} from '../core/battleThemes';
 import {FaunaAura} from './FaunaAura';
 import {faunaAuraGrade} from '../core/faunaAura';
@@ -8,16 +13,16 @@ import {FaunaRadiance} from './FaunaRadiance';
 import {WORLD_BOSSES} from '../core/worldBoss';
 import {softwareRendering} from './RenderBudget';
 import {prepareBattleRig,attachRigidWeapon} from './BattleRigAnimation';
-import {prepareEnemyLocomotion,enemyWalkRate} from './EnemyLocomotion';
+import {prepareEnemyLocomotion,prepareEnemyFeatureSockets,enemyWalkRate} from './EnemyLocomotion';
 import {bossVisualKey,worldVisualKey,faunaVisual,faunaBase} from '../core/faunaPresentation';
 import {FAUNA_MODELS,bossModelIndex,encounterModels,enemyModelFor} from '../core/faunaCatalog';
 import {BOSSES} from '../core/bossCatalog';
 import {QUALITY_COLORS,turtleQuality} from '../core/prototypeConfig';
-import {AnimationClip, Camera, Color, EffectAsset, instantiate, Label, LabelOutline, Layers, Material, Mesh, MeshRenderer, Node, Prefab, primitives, resources, SkeletalAnimation, UITransform, utils, Vec3,Vec4,Texture2D} from 'cc';
+import {AnimationClip, Camera, Color, EffectAsset, instantiate, Label, LabelOutline, Layers, Material, Mesh, MeshRenderer, Node, Prefab, primitives, resources, SkeletalAnimation, SkinnedMeshRenderer, UITransform, utils, Vec3,Vec4,Texture2D} from 'cc';
 import {ENEMIES, BATTLE_MAPS, LEGACY_PAINTED_MAPS, LEGACY_TACTICAL_MAPS, LEGACY_EXPANDED_MAPS, LEGACY_CLEAR_MAPS,LEGACY_BATTLE_MAPS, ROLES} from '../core/data';
 import type {BattleEnemy, BattleEvent, BattleState, BattleUnit} from '../core/battle';
 import type {EnemyKind, Role, RunTurtle} from '../core/types';
-import {receiveIslandShadows} from './WorldLighting';
+import {receiveIslandShadows,lightBattle} from './WorldLighting';
 import {modernIslandMesh} from './ModernIsland';
 import {BattlePaint} from './BattlePaint';
 import type {ArtV2Assets} from './ArtV2Assets';
@@ -33,8 +38,8 @@ type Action = 'idle' | 'walk' | 'attack' | 'skill' | 'hit' | 'rest' | 'exit' | '
 interface Actor {
   id: string; kind: Role | EnemyKind; friendly: boolean; node: Node; body: Node;
   bar: Node; fill: Node; shieldFill: Node; control: Node; shieldRing: Node; hpLabel: Label;
-  skills?:string[];fusionRank?:number;advancedPaint?:Node;paint?:Node;qualityRing?:Node;arrivalTime?:number;station?:number;
-  statusVisuals?:Set<string>;
+  skills?:string[];fusionRank?:number;rankBadge?:Node;rankPedestal?:Node;rankPop?:number;advancedPaint?:Node;paint?:Node;qualityRing?:Node;arrivalTime?:number;station?:number;
+  statusVisuals?:Set<string>;activationVisuals?:Record<string,number>;passiveFxAt?:number;
   model?:Node;summonKind?:'turtle'|'golem';attackIndex?:number;variant?:string;animationRates?:Map<string,number>;
   animations: SkeletalAnimation[]; realModel: boolean; alive: boolean; moving: boolean;
   motionX?:number;motionZ?:number;motionTick?:number;walkRate?:number;
@@ -82,10 +87,12 @@ export class BattleWorld {
   private readonly units = new Map<string, Actor>();
   private readonly enemies = new Map<string, Actor>();
   private readonly vfxActors:Actor[]=[];
+  private readonly rankVisuals=new FusionRankVisuals();
   private readonly retiringEnemies = new Set<Actor>();
   private readonly enemyPool = new Map<string,Actor[]>();
   private readonly effects: Effect[] = [];
-  private coastTrial=false;
+  private coastTrial=false;private fixedStations=false;private ownedStations?:Set<number>;
+  setStationOwnership(slots:readonly number[]):void{if(this.ownedStations&&slots.length===this.ownedStations.size&&slots.every(s=>this.ownedStations!.has(s)))return;this.ownedStations=new Set(slots);if(this.fixedStations)this.buildTemporaryEnvironment();}
   private readonly floatingNumbers: FloatingNumber[] = [];
   private readonly targetPoint = new Vec3();
   private environment?: Node;
@@ -111,10 +118,14 @@ export class BattleWorld {
       ?? maps[this.levelId]
       ?? BATTLE_MAPS[0];
   }
+  private enemyFrameState?:BattleState;
+  private enemyFrameTick=-1;private enemyFrameCount=-1;
+  private enemyFrameEntities:BattleState['enemies']=[];
   private waveKey = '';
   private lastTick = -1;
   private lastEvent = 0;
   private disposed = false;
+  private readonly resourceQueue=new NativeResourceQueue();
   private paused = false;
   private playbackSpeed = 1;
   private pendingModels = Object.keys(TURTLE_MODELS).length + Object.keys(ENEMY_MODELS).length;
@@ -125,6 +136,7 @@ export class BattleWorld {
   private ocean?:Material;
   private oceanNode?:Node;
   private painted?:BattlePaint;
+  private hudEffect?:EffectAsset;
   private previousCoast=false;
   private g1Effects?:G1BattleEffects;
   private vfxReview?:VfxReview;
@@ -133,8 +145,10 @@ export class BattleWorld {
   private propMotion:{node:Node;kind:string;phase:number}[]=[];
   private sceneTime=0;
   private restoreShadows?:()=>void;
+  private restoreLighting?:()=>void;
   setBattleArt(art?:ArtV2Assets):void{
     if(!art?.ready||!art.battleEffect||this.painted||this.disposed)return;
+    this.hudEffect=art.battleEffect;this.rankVisuals.setEffect(art.battleEffect);
     this.painted=new BattlePaint(this.effectRoot,this.camera,art);
     this.buildTemporaryEnvironment();
   }
@@ -165,19 +179,28 @@ export class BattleWorld {
   get loadedResourceCount():number{return this.turtlePrefabs.size+this.enemyPrefabs.size+this.faunaPrefabs.size+this.props.size+this.g1Assets.length;}
   setVisible(visible:boolean):void { if(!this.disposed)this.root.active=visible; }
 
+  sampleVfxPose(time:number,playing:boolean):void{
+    for(const a of this.vfxActors)if(a.node.active)for(const r of a.animations){
+      const clip=r.clips.find(c=>c&&c.name.endsWith(a.action)),state=clip?r.getState(clip.name):undefined;if(!state)continue;
+      if(playing)r.resume();else{state.time=time;state.sample();r.pause();}
+    }
+  }
+  vfxMotionReport():string{return this.vfxActors.filter(a=>a.node.active).map(a=>a.kind+' '+a.animations.map(r=>{const clip=r.clips.find(c=>c&&c.name.endsWith(a.action));const state=clip?r.getState(clip.name):undefined;const nodes:Node[]=[];const visit=(n:Node)=>{nodes.push(n);n.children.forEach(visit);};visit(r.node);const limb=nodes.find(n=>/^(leg0\.L\.0|fin\.L\.0|head)$/.test(n.name));return `${a.action} ${state?.time.toFixed(2)??'-'}s / ${clip?.tracksCount??0}轨 ${state?.isPlaying?'播放':'停止'} ${state?.isPaused?'暂停':''} 骨骼网格${a.model?.getComponentsInChildren(SkinnedMeshRenderer).length} ${limb?.name}:${limb?.eulerAngles.x.toFixed(1)},${limb?.eulerAngles.z.toFixed(1)}`;}).join(',')).join(' · ');}
+  beginVfxAcceptance():void{for(const actor of this.vfxActors)actor.node.active=false;}
+
   /** Stage the real source and target models beside the effect for visual acceptance. */
-  stageVfxAcceptance(source:import('./VfxReview').VfxReviewActor,target:import('./VfxReview').VfxReviewActor):{from:Vec3;to:Vec3;sourceModel?:Node;targetModel?:Node;sourceLabel:string;targetLabel:string}{
+  stageVfxAcceptance(source:import('./VfxReview').VfxReviewActor,target:import('./VfxReview').VfxReviewActor,offset=0):{from:Vec3;to:Vec3;sourceModel?:Node;targetModel?:Node;sourceLabel:string;targetLabel:string}{
     const actorFor=(spec:import('./VfxReview').VfxReviewActor):Actor=>{
       let actor=this.vfxActors.find(x=>x.id===spec.id);
       if(actor){actor.node.active=true;return actor;}
       if(spec.kind==='role'&&spec.role){
-        const id=spec.id;actor=this.createActor(id,spec.role,true);this.vfxActors.push(actor);this.attachTurtle(actor);return actor;
+        const id=spec.id;actor=this.createActor(id,spec.role,true);this.vfxActors.push(actor);this.setActorRank(actor,spec.rank??1);this.attachTurtle(actor);return actor;
       }
       const def=spec.variant?enemyG1(spec.variant):undefined,kind=def?.kind??'boss';actor=this.acquireEnemy('vfx-'+spec.id,kind,spec.variant);actor.variant=spec.variant;this.vfxActors.push(actor);if(spec.variant)this.loadLevelFauna(this.levelId,[spec.variant]);this.attachEnemy(actor);return actor;
     };
-    const a=actorFor(source),b=actorFor(target),from=new Vec3(-2.35,a.floor+.78,0),to=new Vec3(1.25,b.floor+.62,0);
-    a.x=from.x;a.z=from.z;a.node.active=true;a.node.setPosition(a.x,a.floor,a.z);a.targetYaw=90;this.play(a,source.kind==='role'?'skill':'attack',true);
-    b.x=to.x;b.z=to.z;b.node.active=true;b.node.setPosition(b.x,b.floor,b.z);b.targetYaw=-90;this.play(b,'idle',true);
+    const a=actorFor(source),b=actorFor(target),from=new Vec3(-2.35,a.floor+.78,0),to=new Vec3(1.25,b.floor+.62,offset);
+    a.x=from.x;a.z=from.z;a.node.active=true;a.node.setPosition(a.x,a.floor,a.z);a.targetYaw=90;this.play(a,source.pose??(source.kind==='role'?'skill':'attack'),true);
+    b.x=to.x;b.z=to.z;b.node.active=true;b.node.setPosition(b.x,b.floor,b.z);b.targetYaw=-90;this.play(b,target.pose??'idle',true);
     return{from,to,sourceModel:a.model,targetModel:b.model,sourceLabel:source.label,targetLabel:target.label};
   }
 
@@ -200,6 +223,7 @@ export class BattleWorld {
       this.effects.push({node, renderer: node.getComponent(MeshRenderer)!, kind: 'spark', start: new Vec3(), end: new Vec3(), age: 0, duration: 0, size: 1, priority: 0, active: false});
     }
     this.setLevel(initialLevel);
+    if(this.root.scene)this.restoreLighting=lightBattle(this.root.scene);
     // Keep the approved map plate, but load real skinned characters above its ground plane.
     if(art?.ready&&art.battleEffect)this.setBattleArt(art);
     const shadows=this.root.scene?.globals.shadows;
@@ -207,7 +231,7 @@ export class BattleWorld {
     this.loadG1Effects();
     for(const key of ['palm','rock','gem','guard-beacon','golem','demon','mako','shark','captain','armored']){
       this.pendingModels++;
-      resources.load(`models-cc0/${key}/${key}/${key}`,Prefab,(error,prefab)=>{
+      this.resourceQueue.load(`models-cc0/${key}/${key}/${key}`,Prefab,(error,prefab)=>{
         if(this.disposed)return;this.pendingModels--;
         if(error||!prefab){this.modelLoadError=error??new Error(key+'模型未导入');return;}
         prefab.addRef();this.props.set(key,prefab);this.buildTemporaryEnvironment();
@@ -215,7 +239,7 @@ export class BattleWorld {
     }
     for(const role of Object.keys(TURTLE_MODELS) as Role[]){
       const spec=TURTLE_MODELS[role]!;
-      resources.load(spec.path,Prefab,(error,prefab)=>{
+      this.resourceQueue.load(spec.path,Prefab,(error,prefab)=>{
         if(this.disposed||!this.root.isValid)return;
         this.pendingModels--;
         try{
@@ -229,10 +253,10 @@ export class BattleWorld {
     }
     for(const role of Object.keys(TURTLE_MODELS) as Role[])for(const weapon of [false,true]){
       this.pendingModels++;const path=`models-g1/${weapon?'advanced-weapons':'advanced'}/${role}/${role}/${role}`;
-      resources.load(path,Prefab,(error,prefab)=>{if(this.disposed)return;this.pendingModels--;if(error||!prefab){this.modelLoadError=error??new Error('进阶模型未导入 '+role);return;}prefab.addRef();(weapon?this.advancedWeapons:this.advancedPrefabs).set(role,prefab);for(const actor of this.units.values())if(actor.kind===role&&(actor.fusionRank??1)>=2){if(weapon&&actor.model)this.attachAdvancedWeapon(actor);else this.attachTurtle(actor);}});
+      this.resourceQueue.load(path,Prefab,(error,prefab)=>{if(this.disposed)return;this.pendingModels--;if(error||!prefab){this.modelLoadError=error??new Error('进阶模型未导入 '+role);return;}prefab.addRef();(weapon?this.advancedWeapons:this.advancedPrefabs).set(role,prefab);for(const actor of [...this.units.values(),...this.vfxActors])if(actor.kind===role&&(actor.fusionRank??1)>=2){if(weapon&&actor.model)this.attachAdvancedWeapon(actor);else this.attachTurtle(actor);}});
     }
     for(const [kind,id] of [['turtle','s01'],['golem','s02']] as const){
-      resources.load(`models-g1/summons/${id}/${id}/${id}`,Prefab,(error,prefab)=>{
+      this.resourceQueue.load(`models-g1/summons/${id}/${id}/${id}`,Prefab,(error,prefab)=>{
         if(this.disposed)return;
         if(error||!prefab){console.warn('[BATTLE_SUMMON_LOAD]',kind,error);return;}
         prefab.addRef();this.summonPrefabs.set(kind,prefab);
@@ -240,7 +264,7 @@ export class BattleWorld {
     }
     for(const kind of Object.keys(ENEMY_MODELS) as EnemyKind[]){
       const spec=ENEMY_MODELS[kind]!;
-      resources.load(spec.path,Prefab,(error,prefab)=>{
+      this.resourceQueue.load(spec.path,Prefab,(error,prefab)=>{
         if(this.disposed||!this.root.isValid)return;
         this.pendingModels--;
         try{
@@ -255,16 +279,27 @@ export class BattleWorld {
 
   private async loadG1Effects():Promise<void>{
     this.pendingModels++;
-    const load=<T extends EffectAsset|Texture2D>(path:string,type:new (...args:any[])=>T)=>new Promise<T>((resolve,reject)=>resources.load(path,type,(e,a)=>e?reject(e):resolve(a!)));
+    // Own every completed dependency immediately, including a partial batch.
+    // A failed/cancelled arrival can then release it through normal world teardown.
+    const load=<T extends EffectAsset|Texture2D>(path:string,type:new (...args:any[])=>T)=>new Promise<T>((resolve,reject)=>this.resourceQueue.load(path,type,(e,a)=>{
+      if(e||!a){reject(e??new Error(path));return;}a.addRef();this.g1Assets.push(a);resolve(a);
+    }));
+    const loadApproved=async()=>{const textures=await approvedVfxTextures();
+      if(this.disposed){for(const t of textures.values())t.destroy();throw new Error('World retired');}
+      for(const t of textures.values()){t.addRef();this.g1Assets.push(t);}return textures;
+    };
     try{
-      const energy=await load('models-approved/cast-energy',EffectAsset),particle=await load('models-g1/g1-particle',EffectAsset);
-      const textures=new Map<string,Texture2D>();
-      for(const name of ['light_02','flame_01','spark_04','star_04','trace_01','circle_05','cethiel-spells','spell-volumes-v1'])textures.set(name,await load('models-g1/fx/'+name+'/texture',Texture2D));
+      const names=['light_02','flame_01','spark_04','star_04','trace_01','circle_05','cethiel-spells'];
+      const [energy,particle,loaded,approved]=await Promise.all([
+        load('models-approved/cast-energy',EffectAsset),load('models-g1/g1-particle',EffectAsset),
+        Promise.all(names.map(name=>load('models-g1/fx/'+name+'/texture',Texture2D))),loadApproved()
+      ]);
+      const textures=new Map<string,Texture2D>(names.map((name,i)=>[name,loaded[i]]));
+      for(const [key,texture]of approved)textures.set(key,texture);
       if(this.disposed)return;
-      for(const a of [energy,particle,...Array.from(textures.values())]){a.addRef();this.g1Assets.push(a);}
       this.g1Effects=new G1BattleEffects(this.effectRoot,this.camera,energy,particle,textures,this.pipelineMaterial);
       this.vfxReview=VfxReview.create(this.g1Effects,this);
-      for(const actor of this.units.values())if(actor.model)this.g1Effects.attach(actor.model,actor.kind as Role);
+      for(const actor of this.units.values())if(actor.model)this.g1Effects.attach(actor.model,actor.kind as Role,actor.fusionRank??1);
       for(const actor of this.enemies.values())if(actor.model&&actor.variant)this.g1Effects.attachEnemy(actor.model,actor.variant);
       for(const prop of this.propMotion)if(prop.kind==='guard-beacon')this.g1Effects.attach(prop.node,'crystal');
     }catch(e){if(!this.disposed)this.modelLoadError=e instanceof Error?e:new Error(String(e));}
@@ -410,6 +445,7 @@ export class BattleWorld {
     this.coastTrial=battle.expedition?.coastTrial===1;
     if (this.disposed) return;
     if (battle.levelId !== this.levelId) this.setLevel(battle.levelId);
+    const fixed=battle.formationVersion===2;if(fixed!==this.fixedStations){this.fixedStations=fixed;this.buildTemporaryEnvironment();}
     const previousCoast=battle.levelId===0&&battle.stationVersion===2;if(previousCoast!==this.previousCoast){this.previousCoast=previousCoast;this.buildTemporaryEnvironment();}
     const expandedLegacy=battle.levelId!==0&&battle.stationVersion===4;if(expandedLegacy!==this.expandedLegacy){this.expandedLegacy=expandedLegacy;this.buildTemporaryEnvironment();}
     const oldStations=battle.layoutVersion===2&&battle.stationVersion!==2&&battle.stationVersion!==3&&battle.stationVersion!==4&&battle.stationVersion!==5&&battle.stationVersion!==6;if(oldStations!==this.legacyStations){this.legacyStations=oldStations;this.buildTemporaryEnvironment();}
@@ -419,7 +455,7 @@ export class BattleWorld {
     const oldPaint=battle.stationVersion===5;
     this.themeWave=battle.wave;this.themeBoss=battle.enemies.find(e=>e.worldBossIndex!==undefined)?.worldBossIndex??0;
     if(battle.levelId===50&&typeof location!=='undefined'&&['127.0.0.1','localhost'].includes(location.hostname)){
-      const query=new URLSearchParams(location.search),reviewWave=Number(query.get('themeWave'));
+      const query=runtimeQuery(),reviewWave=Number(query.get('themeWave'));
       if(query.get('preview')==='all-maps'&&[1,6,11,16,21].includes(reviewWave))this.themeWave=reviewWave;
     }
     const theme=battleThemeIndex(battle.levelId,this.themeWave,this.themeBoss);
@@ -476,7 +512,13 @@ export class BattleWorld {
       this.health(actor,pet.hp/pet.maxHp,pet.kind==='golem'?1:0,pet.hp,pet.maxHp);
     }
     for (const [id, actor] of this.units) if (!present.has(id)) { this.retireNode(actor.node); this.units.delete(id); }
-    for (const enemy of battle.enemies) {
+    // Keep checkpoint history intact, but render only living/retiring actors.
+    // A restored snapshot is a new object and invalidates this presentation cache.
+    if(this.enemyFrameState!==battle||this.enemyFrameTick!==battle.tick||this.enemyFrameCount!==battle.enemies.length){
+      this.enemyFrameState=battle;this.enemyFrameTick=battle.tick;this.enemyFrameCount=battle.enemies.length;
+      this.enemyFrameEntities=battle.enemies.filter(e=>e.alive||this.enemies.has(e.id));
+    }
+    for (const enemy of this.enemyFrameEntities) {
       let actor = this.enemies.get(enemy.id);
       if (!actor) {
         // Dead enemies in a restored snapshot need no model or repeated exit animation.
@@ -495,6 +537,7 @@ export class BattleWorld {
         }else this.attachEnemy(actor);
       }
       this.syncActor(actor, enemy, frame, tickChanged, elapsed);
+      if(enemy.turtleRole)actor.skills=enemy.turtleSkills??[];
       const grade=enemyG1Grade(battle.levelId,battle.wave),boss=BOSSES.find(b=>b.id===enemy.bossId);
       const world=enemy.worldBossIndex===undefined?undefined:WORLD_BOSSES[((enemy.worldBossIndex%4)+4)%4];
       if(actor.model&&!enemy.turtleRole){
@@ -534,10 +577,11 @@ export class BattleWorld {
     if (this.disposed) return;
     this.disposed = true;
     this.restoreShadows?.();this.restoreShadows=undefined;
+    this.restoreLighting?.();this.restoreLighting=undefined;
     this.vfxReview?.destroy();this.vfxReview=undefined;
-    this.g1Effects?.destroy();this.g1Effects=undefined;for(const a of this.g1Assets)a.decRef();this.g1Assets.length=0;
+    this.resourceQueue.destroy();this.g1Effects?.destroy();this.g1Effects=undefined;for(const a of this.g1Assets)a.decRef();this.g1Assets.length=0;
     this.painted?.destroy();this.painted=undefined;
-    this.faunaAura.destroy();this.faunaRadiance.destroy();this.turtleMaterials.destroy();
+    this.rankVisuals.destroy();this.faunaAura.destroy();this.faunaRadiance.destroy();this.turtleMaterials.destroy();
     for(const actor of this.vfxActors)this.retireNode(actor.node);this.vfxActors.length=0;
     this.retireNode(this.root);
     this.units.clear(); this.enemies.clear(); this.retiringEnemies.clear();this.enemyPool.clear(); this.effects.length = 0;
@@ -583,6 +627,7 @@ export class BattleWorld {
       const base=this.node('现代海岛 · 清爽战场',this.root);this.environment=base;
       if(this.painted&&!this.legacyStations){
         if(this.levelId===0&&!this.mapDefinition.sceneArt)this.painted.ground(base,!this.previousCoast);else this.painted.themedGround(base,this.mapDefinition,true,this.themeWave,this.themeBoss);
+        if(this.fixedStations)for(const [i,p] of expeditionSlots(this.levelId).entries())this.painted.station(base,p.x,p.z,!this.ownedStations||this.ownedStations.has(i));
         this.addG1Scenery(base);
         return;
       }
@@ -705,19 +750,21 @@ export class BattleWorld {
     for(const key of required){
       if(this.faunaPrefabs.has(key)||this.faunaLoading.has(key))continue;
       this.faunaLoading.add(key);this.pendingModels++;
-      resources.load(enemyG1(key)?.model??`models-fauna/${key}/${key}/${key}`,Prefab,async (error,prefab)=>{
+      this.resourceQueue.load(enemyG1(key)?.model??`models-fauna/${key}/${key}/${key}`,Prefab,async (error,prefab)=>{
         if(this.disposed)return;
         try{
           if(error||!prefab)throw error??new Error(key+'怪物资源未完成');
+          prefab.addRef();this.faunaPrefabs.set(key,prefab);
           // Surface detail maps are optional. Several authored bosses only ship their albedo atlas.
           const normalPath=`models-fauna/${key}/${key}_normal/texture`,surfacePath=`models-fauna/${key}/${key}_surface/texture`;
           if(resources.getInfoWithPath(normalPath,Texture2D)&&resources.getInfoWithPath(surfacePath,Texture2D)){
-            const loadSurface=(path:string)=>new Promise<Texture2D>((resolve,reject)=>resources.load(path,Texture2D,(e,t)=>e||!t?reject(e??new Error(path)):resolve(t)));
+            const loadSurface=(path:string)=>new Promise<Texture2D>((resolve,reject)=>this.resourceQueue.load(path,Texture2D,(e,t)=>{
+              if(e||!t){reject(e??new Error(path));return;}t.addRef();this.g1Assets.push(t);resolve(t);
+            }));
             const [normal,surface]=await Promise.all([loadSurface(normalPath),loadSurface(surfacePath)]);
             if(this.disposed)return;this.turtleMaterials.registerSurface(key,normal,surface);
           }
           if(this.disposed)return;
-          prefab.addRef();this.faunaPrefabs.set(key,prefab);
           for(const actor of [...this.enemies.values(),...this.vfxActors])if(actor.variant===key&&actor.alive)this.attachEnemy(actor);
           // World-boss keys have their own presentation records and do not
           // need the ordinary fauna warm-up actor.  Treat that warm-up as an
@@ -754,17 +801,39 @@ export class BattleWorld {
   private unitActor(id: string, role: Role,skillCount=0,rank=1): Actor {
     let actor = this.units.get(id);
     if (actor && actor.kind !== role) { this.retireNode(actor.node); this.units.delete(id); actor = undefined; }
-    if (!actor) { actor = this.createActor(id, role, true); this.units.set(id, actor);actor.fusionRank=rank;this.attachTurtle(actor);if(rank===3&&this.painted){actor.qualityRing=this.painted.soulRing(actor.node);this.painted.soulColor(actor.qualityRing,'#FFDE72');} }
+    if (!actor) { actor = this.createActor(id, role, true); this.units.set(id, actor); }
+    this.setActorRank(actor,rank);this.attachTurtle(actor);
     return actor;
+  }
+  private setActorRank(actor:Actor,rank:number):void{
+    rank=Math.max(1,Math.min(3,rank));if(actor.fusionRank===rank)return;
+    actor.fusionRank=rank;actor.realModel=false;actor.animations.forEach(a=>a.stop());actor.animations=[];
+    this.retireNode(actor.rankBadge);this.retireNode(actor.rankPedestal);
+    actor.rankBadge=this.rankVisuals.badge(actor.bar,rank);actor.rankPedestal=rank===3?this.rankVisuals.pedestal(actor.node,actor.kind as Role):undefined;
+  }
+  /** Same production models and rank furniture, side by side for local visual checks. */
+  stageRankAcceptance(role:Role):void{
+    this.beginVfxAcceptance();
+    for(const rank of [1,2,3]){
+      const id=`rank-review-${role}-${rank}`;let actor=this.vfxActors.find(a=>a.id===id);
+      if(!actor){actor=this.createActor(id,role,true);this.vfxActors.push(actor);this.setActorRank(actor,rank);this.attachTurtle(actor);}
+      actor.node.active=true;actor.x=-4+(rank-1)*3.4;actor.z=1;actor.node.setPosition(actor.x,actor.floor,actor.z);actor.body.setRotationFromEuler(0,0,0);this.play(actor,'idle',true);
+    }
   }
   private createActor(id: string, kind: Role | EnemyKind, friendly: boolean): Actor {
     const name = ROLES[kind as Role]?.name ?? ENEMIES[kind as EnemyKind].name;
     const node = this.node(`${name} · ${id}`, this.actorsRoot), body = this.node('朝向与动作', node);
     const large = kind === 'boss' ? 1.7 : kind === 'elite' ? 1.3 : 1;
     const bar = this.node('生命与护盾', node);
-    this.surface('血条背景', bar, 'box', '#263E40', 0, 0, 0, 1.12 * large, .10, .025);
-    const fill = this.surface('当前生命', bar, 'box', friendly ? '#A4D87E' : '#EF9479', 0, 0, .022, 1.04 * large, .06, .024);
+    this.surface('血条背景', bar, 'box', '#182E35', 0, 0, 0, 1.12 * large, .10, .025);
+    const fill = this.surface('当前生命', bar, 'box', friendly ? '#91D7A2' : '#F29376', 0, 0, .022, 1.04 * large, .06, .024);
     const shieldFill = this.surface('当前护盾', bar, 'box', SHIELD, 0, -.095, .022, 1.04 * large, .035, .024);
+    // Health is information, not a lit 3D surface: identical contrast on every map.
+    if(this.hudEffect)for(const [index,n]of bar.children.entries()){
+      const hex=index===0?'#182E35':index===1?(friendly?'#91D7A2':'#F29376'):'#93D9EF',key='hud-'+hex;
+      let material=this.materials.get(key);if(!material){material=new Material();material.initialize({effectAsset:this.hudEffect,states:{priority:205,depthStencilState:{depthTest:false,depthWrite:false}}});material.setProperty('keyParams',new Vec4(-1,0,0,0));material.setProperty('mainColor',new Color(hex));this.materials.set(key,material);}
+      n.getComponent(MeshRenderer)?.setSharedMaterial(material,0);
+    }
     const hpTextNode=this.node('当前生命数值',bar);const hpBox=hpTextNode.addComponent(UITransform);hpBox.setContentSize(170*large,26);
     hpTextNode.setPosition(0,.02,.05);const hpLabel=hpTextNode.addComponent(Label);hpLabel.string='';hpLabel.fontSize=11*large;hpLabel.lineHeight=13*large;hpLabel.isBold=true;hpLabel.color=new Color(255,248,224,255);hpLabel.horizontalAlign=Label.HorizontalAlign.CENTER;hpLabel.verticalAlign=Label.VerticalAlign.CENTER;hpLabel.overflow=Label.Overflow.SHRINK;
     const control = this.surface('控制状态标记', node, 'ring', CONTROL, 0, 1.02 * large, 0, .66 * large, 1, .66 * large);
@@ -818,17 +887,17 @@ export class BattleWorld {
     const role=actor.kind as Role,spec=TURTLE_MODELS[role],advanced=(actor.fusionRank??1)>=2,prefab=(advanced?this.advancedPrefabs:this.turtlePrefabs).get(role);
     if (!spec || !prefab || !actor.node.isValid || actor.realModel) return;
     for (const child of [...actor.body.children]) this.retireNode(child);
-    const model = instantiate(prefab); model.name = `${ROLES[role].name} · G1 骨骼角色`; model.setParent(actor.body);const modelScale=advanced?spec.height/2:spec.scale;model.setScale(modelScale,modelScale,modelScale);
+    const model = instantiate(prefab); model.name = `${ROLES[role].name} · G1 骨骼角色`; model.setParent(actor.body);const modelScale=(advanced?spec.height/2:spec.scale)*fusionModelScale(actor.fusionRank??1);model.setScale(modelScale,modelScale,modelScale);
     this.setWorldLayer(model);
     receiveIslandShadows(model,!softwareRendering());
     this.turtleMaterials.apply(model);
     actor.model=model;actor.animations = advanced?model.getComponentsInChildren(SkeletalAnimation):prepareBattleRig(model);if(advanced)for(const animation of actor.animations)animation.useBakedAnimation=false;
     if(advanced)this.attachAdvancedWeapon(actor);
-    actor.realModel = true; actor.height = spec.height; actor.bar.setPosition(0, actor.height, 0); actor.control.setPosition(0, spec.controlHeight, 0);
-    actor.floor=TURTLE_FLOOR;actor.bar.setScale(.66,.72,1);this.painted?.shadow(actor.node,true);this.g1Effects?.attach(model,role);
+    actor.realModel = true; actor.height = spec.height*fusionModelScale(actor.fusionRank??1)+.10; actor.bar.setPosition(0, actor.height, 0); actor.control.setPosition(0, spec.controlHeight*fusionModelScale(actor.fusionRank??1), 0);
+    actor.floor=TURTLE_FLOOR;actor.bar.setScale(.66,.72,1);this.painted?.shadow(actor.node,true);this.g1Effects?.attach(model,role,actor.fusionRank??1);
     this.play(actor, actor.alive ? 'greeting' : 'rest', true);
   }
-  private attachAdvancedWeapon(actor:Actor):void{const role=actor.kind as Role,prefab=this.advancedWeapons.get(role),model=actor.model;if(!prefab||!model||model.getChildByName('进阶武器已挂载'))return;const mark=new Node('进阶武器已挂载');mark.setParent(model);const weapon=instantiate(prefab);weapon.setParent(model);this.setWorldLayer(weapon);this.turtleMaterials.apply(weapon);attachRigidWeapon(model,weapon,role,false);}
+  private attachAdvancedWeapon(actor:Actor):void{const role=actor.kind as Role,prefab=this.advancedWeapons.get(role),model=actor.model;if(!prefab||!model||model.getChildByName('进阶武器已挂载'))return;const mark=new Node('进阶武器已挂载');mark.setParent(model);const weapon=instantiate(prefab);weapon.setParent(model);this.setWorldLayer(weapon);this.turtleMaterials.apply(weapon);attachRigidWeapon(model,weapon,role,false);this.g1Effects?.attach(model,role,actor.fusionRank??1);}
 
   private play(actor: Actor, action: Action, force = false): void {
     if (!force && actor.action === action && actor.actionTime > 0) return;
@@ -869,7 +938,7 @@ export class BattleWorld {
       model.setScale(scale,scale,scale);visualHeight=fauna.height*scale+.12;
     }
     this.setWorldLayer(model);receiveIslandShadows(model,kind==='boss'&&!softwareRendering());this.turtleMaterials.apply(model);
-    actor.model=model;actor.animations=prepareBattleRig(model);prepareEnemyLocomotion(actor.animations);
+    actor.model=model;prepareEnemyFeatureSockets(model);actor.animations=model.getComponentsInChildren(SkeletalAnimation);const species=enemyG1(actor.variant??'');prepareEnemyLocomotion(actor.animations,species?.rigFamily??'unknown',species?.flying??false);
     if(actor.variant)this.g1Effects?.attachEnemy(model,actor.variant);
     actor.realModel=true;actor.height=visualHeight;actor.floor=ENEMY_FLOOR;
     actor.bar.setPosition(0,actor.height,0);actor.control.setPosition(0,actor.height*.55,0);
@@ -889,7 +958,7 @@ export class BattleWorld {
       const mx=state.x-(actor.motionX??state.x),mz=state.z-(actor.motionZ??state.z);
       const seconds=actor.motionTick===undefined?0:Math.max(.05,(this.lastTick-actor.motionTick)*.05);
       actor.moving = mx*mx+mz*mz > .00000001;
-      if(!actor.friendly&&actor.moving&&seconds>0)actor.walkRate=enemyWalkRate(Math.hypot(mx,mz)/seconds,actor.height);
+      if(!actor.friendly&&actor.moving&&seconds>0)actor.walkRate=Math.max(enemyG1(actor.variant??'')?.flying?.85:0,enemyWalkRate(Math.hypot(mx,mz)/seconds,actor.height));
       actor.motionX=state.x;actor.motionZ=state.z;actor.motionTick=this.lastTick;
       if (actor.moving && actor.actionTime <= 0) actor.targetYaw = Math.atan2(mx, mz) * 180 / Math.PI;
     }
@@ -898,6 +967,16 @@ export class BattleWorld {
     if('sleepUntilWave' in state&&state.sleepUntilWave&&!state.alive)statusVisuals.add('sleep');
     for(const status of statusVisuals)if(['armorDown','resistDown','weaken','sleep'].includes(status)&&!actor.statusVisuals?.has(status))this.g1Effects?.status(status,this.point(actor),.8);
     actor.statusVisuals=statusVisuals;
+    if('skillActivations' in state){
+      const changes=Object.entries(state.skillActivations).filter(([id,n])=>n>(actor.activationVisuals?.[id]??0));
+      // Main spell/projectile events already carry feedback. Quiet stat passives flash only on arrival.
+      const quiet=['strong','armor','resist','swift','reach','steady'];
+      const distinct=changes.find(([id])=>['block','share','caprice','arcane','sleep','lastShield','counterStorm'].includes(id)||(!actor.activationVisuals&&quiet.includes(id)));
+      if(distinct&&this.lastTick-(actor.passiveFxAt??-100)>14){this.g1Effects?.status(['block','share','lastShield','armor','resist'].includes(distinct[0])?'shield':distinct[0]==='sleep'?'sleep':'encourage',this.point(actor),.55);actor.passiveFxAt=this.lastTick;}
+      actor.activationVisuals={...state.skillActivations};
+    }
+
+    if(!actor.friendly&&actor.model)this.g1Effects?.enemyState(actor.model,state.alive,controlled,actor.action==='skill'||actor.action==='castStart'||actor.action==='castLoop');
     const justDied = actor.alive && !state.alive;
     if (justDied) { actor.alive = false; actor.deathTime = 0; this.play(actor, 'death', true); }
     if (!actor.alive && state.alive) { actor.alive = true; actor.deathTime = 0; actor.node.active = true; this.play(actor, 'idle', true); }
@@ -959,7 +1038,7 @@ export class BattleWorld {
     actor.bar.active = actor.alive;
     actor.fill.active = value > 0; actor.fill.setScale(width * Math.max(.001, value), .06, .024); actor.fill.setPosition(-width * (1 - value) / 2, 0, .022);
     actor.shieldFill.active = shieldValue > 0; actor.shieldFill.setScale(width * Math.max(.001, shieldValue), .035, .024); actor.shieldFill.setPosition(-width * (1 - shieldValue) / 2, -.095, .022);
-    actor.hpLabel.string=currentHp>0&&maxHp>0?`${Math.max(0,Math.ceil(currentHp)).toLocaleString()} / ${Math.max(1,Math.ceil(maxHp)).toLocaleString()}`:'';
+    actor.hpLabel.string=currentHp>0&&maxHp>0&&(actor.friendly||actor.kind==='boss')?`${Math.max(0,Math.ceil(currentHp)).toLocaleString()} / ${Math.max(1,Math.ceil(maxHp)).toLocaleString()}`:'';
   }
   private tickFloating(dt:number):void{
     if(!this.floatingNumbers.length)return;
@@ -985,6 +1064,12 @@ export class BattleWorld {
   }
   private billboardBars(): void {
     const rotation = this.camera.node.worldRotation;
+    for(const actor of [...this.units.values(),...this.vfxActors]){
+      if(actor.rankPedestal){actor.rankPedestal.active=actor.alive;const pulse=1+Math.sin(this.sceneTime*1.8)*.012;actor.rankPedestal.setScale(pulse,1,pulse);}
+      if(actor.rankBadge){const pop=Math.min(.5,Math.max(0,(actor.rankPop??0)-this.sceneTime));const size=1+Math.sin(pop/.5*Math.PI)*.25;actor.rankBadge.setScale(size,size,size);}
+    }
+    for(const actor of this.vfxActors)if(actor.node.active)actor.bar.setWorldRotation(rotation);
+
     if(this.painted)for(const actors of [this.units,this.enemies,this.retiringEnemies])for(const actor of actors.values())if(actor.paint){
       this.painted.face(actor.paint);
       actor.bar.setPosition(Vec3.transformQuat(new Vec3(),new Vec3(0,actor.height+.11,0),rotation));
@@ -999,30 +1084,40 @@ export class BattleWorld {
   private face(source: Actor, point: Vec3): void { const dx = point.x - source.x, dz = point.z - source.z; if (dx * dx + dz * dz > .001) source.targetYaw = Math.atan2(dx, dz) * 180 / Math.PI; }
   private event(event: BattleEvent): void {
     const source = this.actor(event.sourceId), target = this.actor(event.targetId);
-    const destination = target ? this.point(target) : new Vec3(event.x ?? source?.x ?? 0, .7, event.z ?? source?.z ?? 0);
+    const destination = event.x!==undefined&&event.z!==undefined?new Vec3(event.x,target?this.point(target).y:.7,event.z):target?this.point(target):new Vec3(source?.x??0,.7,source?.z??0);
     const color = source?.friendly ? HERO_LOOK[source.kind as Role].accent : '#746588';
-    const continuing=['rockPulse','rockSplit','arrowRain','blizzardPulse','shatter','cooldown','burn','landing'].includes(event.effect??'');
+    const continuing=['rockPulse','rockSplit','arrowRain','blizzardPulse','shatter','cooldown','burn','landing','splash','blessing'].includes(event.effect??'');
     if(this.g1Effects){
       const role=source&&ROLES[source.kind as Role]?source.kind as Role:undefined;
-      if(event.effect?.startsWith('bossTell-')){this.g1Effects.telegraph(destination,event.effect==='bossTell-drain'?2.6:['bossTell-web','bossTell-fireRain'].includes(event.effect)?1.2:1.5,['bossTell-web','bossTell-fireRain','bossTell-beacon'].includes(event.effect)?2:1.35,this.coastTrial?(event.effect==='bossTell-web'?'#C66CFF':'#FF3E45'):undefined);if(source){source.actionTime=1.35;this.play(source,'castStart',true);}}
-      if(event.effect==='fusion2'||event.effect==='fusion3')this.g1Effects?.cast('summon',destination,event.effect==='fusion3'?2:1.4,1.1,true);
-      if(event.effect==='dashTell')this.effect('ring',new Vec3(destination.x,.09,destination.z),destination,'#E6AC58',.75,1.2,4);
-      if(event.effect==='slamTell')this.effect('ring',new Vec3(destination.x,.09,destination.z),destination,'#E97865',1.6,3.3,4);
-      if(event.type==='attack'&&source&&event.effect!=='windup'){if(source.friendly)this.g1Effects.attack(source.model,role,this.point(source,.8),destination,!!event.critical);else this.g1Effects.enemyAttack(this.point(source,.8),destination,['snail','mist'].includes(source.kind)||['B05','B09','B10','H02'].includes(enemyG1(source.variant??'')?.id??''),source.kind==='boss',source.variant,source.model);}
+      if(event.effect?.startsWith('bossTell-')){this.g1Effects.telegraph(destination,event.radius??1.5,event.duration??1.35,['bossTell-rally','bossTell-beacon'].includes(event.effect)?'#FFBD58':'#FF4C54',event.sourceId);if(source){source.actionTime=event.duration??1.35;this.play(source,'castStart',true);}}
+      if(event.effect==='castInterrupted'||event.type==='defeat')this.g1Effects.cancelWarnings(event.type==='defeat'?event.targetId:event.sourceId);
+      if(event.effect==='blessing')this.g1Effects.status('encourage',destination,.8);
+      if(event.effect==='recruit')this.g1Effects.spawn(destination,'turtle');
+      if(event.effect==='fusion2'||event.effect==='fusion3'){this.g1Effects.fusion(destination,event.effect==='fusion3');if(source)source.rankPop=this.sceneTime+.5;}
+      if(event.effect==='slamTell')this.g1Effects.telegraph(destination,1.65,1.6,'#FF4C54',event.sourceId);
+      if(event.effect==='dashTell')this.g1Effects.telegraph(destination,.7,.75,'#FF9B54',event.sourceId);
+      if(event.type==='attack'&&source&&event.effect!=='windup'&&event.effect!=='heal'){
+        const start=event.fromX!==undefined?new Vec3(event.fromX,.7,event.fromZ!):this.point(source,.8);
+        if(event.effect==='pierce')this.g1Effects.piercing(start,destination);
+        else if(role)this.g1Effects.attack(event.fromX!==undefined?undefined:source.model,role,start,destination,!!event.critical,event.skillId==='combo'?.12:0);
+        else this.g1Effects.enemyAttack(start,destination,['snail','mist'].includes(source.kind)||['B05','B09','B10','H02','M01','M07','M09','M11','M12','M13'].includes(enemyG1(source.variant??'')?.id??''),source.kind==='boss',source.variant,source.model);
+      }
       if(event.type==='damage'&&target&&(event.amount??0)>0)this.g1Effects.impact(destination,!!event.critical);
       if(event.type==='heal'){
-        if(event.effect==='enemyMend')this.g1Effects.status('enemyMend',destination,.85);
-        else this.g1Effects.cast('heal',destination,.55,.45);
+        if(source&&target&&source!==target)this.g1Effects.healLink(this.point(source,.8),destination,event.effect==='siphon');
+        this.g1Effects.status(event.effect==='enemyMend'?'enemyMend':'heal',destination,.55);
         if(['revive','rebirth'].includes(event.effect??event.skillId??''))this.g1Effects.status('revive',destination,1.05);
       }
-      if(event.type==='shield')this.g1Effects.status('shield',destination,1.05);
+      if(event.type==='shield')this.g1Effects.status(event.effect==='不灭珍珠'?'revive':'shield',destination,.85);
       if(event.type==='control')this.g1Effects.status(event.effect??event.skillId??'stun',destination,event.effect==='web'?1.2:.8);
       if(event.type==='spawn')this.g1Effects.spawn(destination,event.effect==='golem'?'golem':event.effect==='turtle'?'turtle':'enemy');
       if(event.type==='defeat')this.g1Effects.death(destination,target?.kind==='boss');
+      if(event.type==='leak')this.g1Effects.pearlHit(destination);
       if(event.type==='waveEnd')this.g1Effects.wave(event.effect==='won'?'victory':event.effect==='lost'?'defeat':'defeat',destination);
       if(event.type==='skill'){
         const id=event.skillId,effect=event.effect;
-        if(id==='hold'&&!continuing)this.g1Effects.cast('rock',source?this.point(source,0):destination,1.75,3.6,!!source?.skills?.includes('stoneMastery'));
+        if(effect==='splash')this.g1Effects.splash(destination,event.radius??1.5);
+        else if(id==='hold'&&!continuing)this.g1Effects.cast('rock',source?this.point(source,0):destination,1.75,3.6,!!source?.skills?.includes('stoneMastery'));
         else if(effect==='rockSplit')this.g1Effects.cast('rock',destination,.7,.75);
         else if(id==='crystalCannon'&&!continuing)this.g1Effects.cast('frost',destination,1.65,source?.skills?.includes('crystalMastery')?4.5:3,!!source?.skills?.includes('crystalMastery'));
         else if(effect==='blizzardPulse')this.g1Effects.cast('frost',destination,1.25,.45);
@@ -1036,11 +1131,11 @@ export class BattleWorld {
         else if(effect==='cooldown')this.g1Effects.cast('frost',source?this.point(source):destination,.40,.40);
         else if(['fervor','giant','taunt','cleanse','encourage'].includes(id??''))this.g1Effects.status(id!,target?destination:source?this.point(source):destination,id==='giant'?1.05:.72);
         else if(effect==='castInterrupted')this.g1Effects.status('castInterrupted',destination);
-        else if(effect==='burn')this.g1Effects.bossCast('fireRain',destination,destination);
+        else if(effect==='burn')this.g1Effects.impact(destination);
         else if(effect==='shellBrace')this.g1Effects.status('shield',destination);
         else if(effect==='crabSlam')this.g1Effects.cast('impact',destination,1.6,.8);
         else if(effect==='crabSummon')this.g1Effects.bossCast('rally',destination,destination,source?.variant);
-        else if(effect?.startsWith('boss-')){if(source)this.play(source,'castRelease',true);this.g1Effects.bossCast(effect.slice(5),destination,source?this.point(source,1.1):destination,source?.variant);}
+        else if(effect?.startsWith('boss-')){this.g1Effects.cancelWarnings(event.sourceId);if(source)this.play(source,'castRelease',true);this.g1Effects.bossCast(effect.slice(5),destination,source?this.point(source,1.1):destination,source?.variant);}
       }
     }
     if(this.painted&&!this.g1Effects){
@@ -1077,13 +1172,13 @@ export class BattleWorld {
       }
     }
     if (event.type === 'attack' && source) {
-      this.face(source, destination); if (source.alive&&(source.friendly||!source.moving)&&(event.effect==='windup'||source.action!=='attack')) this.play(source, 'attack', true);
+      this.face(source, destination); if (source.alive&&!event.secondary&&(source.friendly||!source.moving)&&(event.effect==='windup'||source.action!=='attack')) this.play(source, 'attack', true);
       if(event.effect==='windup')return;
       const start = this.point(source), healing = event.effect === 'heal';
       const melee = source.kind === 'stone' || (!source.friendly && !['snail', 'boss'].includes(source.kind));
       if(!this.painted)this.effect(melee ? 'beam' : 'bolt', start, destination, healing ? HEAL : color, .15, melee ? .12 : .17, 2);
     } else if (event.type === 'damage' && target && (event.amount ?? 0) > 0) {
-      if(source&&(event.effect==='pursuit'||['extraTarget','scatter','combo','bounce','reflect'].includes(event.skillId??''))){
+      if(source&&event.skillId==='reflect'){
         if(this.g1Effects)this.g1Effects.attack(source.model,source.friendly?source.kind as Role:undefined,this.point(source,.8),destination,!!event.critical);
         else this.effect('beam',this.point(source),destination,event.skillId==='reflect'?'#E8BA67':color,.14,.11,1);
       }
@@ -1093,9 +1188,9 @@ export class BattleWorld {
     } else if (event.type === 'heal') {
       if(!this.g1Effects)this.effect('ring', destination, destination, event.skillId==='rebirth'?'#FFD782':HEAL, .42, event.skillId === 'greatHeal'||event.skillId==='rebirth' ? 1.45 : .85, 1);
     } else if (event.type === 'shield') {
-      this.effect('ring', destination, destination, SHIELD, .4, 1.25, 2);
+      if(!this.g1Effects)this.effect('ring', destination, destination, SHIELD, .4, 1.25, 2);
     } else if (event.type === 'control') {
-      this.effect('ring', destination, destination, CONTROL, .35, .95, 1);
+      if(!this.g1Effects)this.effect('ring', destination, destination, CONTROL, .35, .95, 1);
     } else if (event.type === 'skill') {
       if (source?.alive&&!continuing&&!event.effect?.startsWith('bossTell-')&&!event.effect?.startsWith('boss-')&&!['encourage','cleanse','fervor'].includes(event.skillId??'')) { this.face(source, destination); this.play(source, 'skill', true); }
       if(source?.paint&&event.effect==='slamTell')source.actionTime=1.6;
@@ -1120,7 +1215,7 @@ export class BattleWorld {
         this.effect('ring', destination, destination, '#E3A08C', .65, event.effect === 'crabSlam' ? 3 : 2, 3);
       }
     } else if (event.type === 'spawn' && source?.alive) {
-      this.effect('ring', this.point(source), this.point(source), '#BEB0D0', .3, .85, 0);
+      if(!this.g1Effects)this.effect('ring', this.point(source), this.point(source), '#BEB0D0', .3, .85, 0);
     } else if (event.type === 'defeat') {
       this.effect('spark', destination, destination, '#DBCBB4', .4, .5, 1);
     } else if (event.type === 'leak' && source) {

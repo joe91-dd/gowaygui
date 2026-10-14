@@ -5,35 +5,53 @@ import type {Role} from '../core/types';
 import {SculptedEnergy} from './SculptedEnergy';
 
 type Trail={nodes:Node[];kind:'rock'|'frost'|'arrows'|'heal'|'summon'|'slash'|'impact'|'lightning';point:Vec3;end?:Vec3;age:number;life:number;size:number};
-type Mote={texture:string;sequence?:number;node:Node;material:Material;from:Vec3;to:Vec3;age:number;life:number;size:number;ground:boolean;spin:number;curve:number};
+type Mote={texture:string;sequence?:number;directional?:boolean;essential?:boolean;node:Node;material:Material;from:Vec3;to:Vec3;age:number;life:number;size:number;ground:boolean;spin:number;curve:number};
 type Fragment={node:Node;from:Vec3;to:Vec3;age:number;life:number;size:number;phase:number;kind:'rock'|'crystal'|'ice'|'arrow'|'debris';orbit:number;orbitCenter?:Vec3;orbitRadius?:number;orbitSpeed?:number;orbitHeight?:number};
-type Equipment={model:Node;role:Role;core?:Node;grip?:Node;arcs:Node[];glow?:Node;glowMaterial?:Material;vines:{node:Node;material:Material}[];phase:number};
-const ACCENT:Record<Role,string>={stone:'#70CDF5',spike:'#AADAA6',crystal:'#8ADFFF',leaf:'#FFCE80',bubble:'#BCA0F0'};
+type Equipment={model:Node;role:Role;rank:number;core?:Node;grip?:Node;arcs:Node[];glow?:Node;glowMaterial?:Material;vines:{node:Node;material:Material}[];phase:number};
+const ACCENT:Record<Role,string>={stone:'#FFD179',spike:'#8DF04D',crystal:'#69DCFF',leaf:'#FFE679',bubble:'#C889FF'};
 const find=(root:Node,name:string):Node|undefined=>root.name===name?root:root.children.map(n=>find(n,name)).find(Boolean);
 
 /** Mesh ribbons, short textured impacts and rigid equipment sockets share the real 3D depth buffer. */
 export class G1BattleEffects{
  private readonly compact=softwareRendering();
- private enemyLights:{model:Node;node:Node;material:Material;advanced:boolean;phase:number}[]=[];
+ private enemyLights:{model:Node;node:Node;material:Material;accents:{node:Node;material:Material}[];ribbons:Node[];advanced:boolean;boss:boolean;style:string;alive:boolean;controlled:boolean;casting:boolean;phase:number}[]=[];
+ private enemyLightByModel=new Map<Node,G1BattleEffects['enemyLights'][number]>();
  private enemyColour(key?:string):string{
-  const id=enemyG1(key??'')?.id;
-  return id==='H03'||id==='W03'?'#FFAA54':id==='H02'||id==='W02'||id==='B05'||id==='B10'?'#C79CEB':id==='B04'||id==='B02'?'#AADD8F':id==='H04'||id==='W04'||id==='M04'?'#A9E9FF':'#7DDAE8';
+  const def=enemyG1(key??'');if(!def)return '#7DDAE8';
+  if(/fire|mortar/i.test(def.effect)||/熔|焰|焚|火|赤怒/.test(def.name))return '#FF9A3F';
+  if(/drain|web/i.test(def.effect)||/墨|幽|毒|孢/.test(def.name))return '#BA82F5';
+  if(/rally|beacon|mend/i.test(def.effect)||/藤|苔|菌/.test(def.name))return '#92DE7B';
+  return '#65D6F5';
  }
  attachEnemy(model:Node,key:string):void{
-  if(this.enemyLights.some(e=>e.model===model))return;
+  if(this.enemyLightByModel.has(model))return;
   const asset=enemyG1(key);if(!asset||asset.kind!=='boss'&&asset.kind!=='elite'&&asset.id!=='M04')return;
-  if(asset.id==='M04'&&this.enemyLights.filter(e=>!e.advanced).length>12)return;
+  if(asset.id==='M04'&&this.enemyLights.filter(e=>!e.boss).length>16)return;
   const core=find(model,'FX_Enemy_Core');if(!core)return;
-  const glow=this.sprite(core,asset.id==='H03'?'flame_01':'light_02',this.enemyColour(key));
-  this.enemyLights.push({model,...glow,advanced:/^[HW]/.test(asset.id),phase:this.enemyLights.length*1.63});
+  const colour=this.enemyColour(key),boss=asset.kind==='boss',advanced=/^[HW]/.test(asset.id),style=colour==='#FF9A3F'?'fire':/drain|web/i.test(asset.effect)?'void':/rally|beacon|mend/i.test(asset.effect)?'nature':'tide';
+  const glow=this.sprite(core,style==='fire'?'flame_01':'light_02',colour,true),accents:{node:Node;material:Material}[]=[],ribbons:Node[]=[];
+  if(asset.id!=='M04')for(let i=0;i<(boss?3:2);i++){
+   const socket=find(model,'FX_Enemy_Accent'+i)??(i===0?find(model,'FX_Enemy_Mouth'):undefined);if(!socket)continue;
+   accents.push(this.sprite(socket,'star_04',colour,true));
+  }
+  // Short local energy strokes frame a boss's core, leaving the face and feet open.
+  if(boss)for(let i=0;i<(advanced?2:1);i++)ribbons.push(this.energy.arc(core,colour,'weapon'));
+  glow.node.active=false;accents.forEach(a=>a.node.active=false);ribbons.forEach(n=>n.active=false);
+  const entry={model,...glow,accents,ribbons,advanced,boss,style,alive:true,controlled:false,casting:false,phase:this.enemyLights.length*1.63};this.enemyLights.push(entry);this.enemyLightByModel.set(model,entry);
+ }
+ enemyState(model:Node,alive:boolean,controlled:boolean,casting:boolean):void{
+  const e=this.enemyLightByModel.get(model);if(!e)return;e.alive=alive;e.controlled=controlled;e.casting=casting;
+  e.node.active=alive;for(const a of e.accents)a.node.active=alive;for(const n of e.ribbons)n.active=alive;
  }
 
  private readonly energy:SculptedEnergy;private readonly quad:Mesh;private readonly equipment:Equipment[]=[];
  private fragments:Fragment[]=[];private fragmentPool=new Map<string,Node[]>();private fragmentMeshes=new Map<string,Mesh>();private fragmentMaterials=new Map<string,Material>();
  private spritePool=new Map<string,{node:Node;material:Material}[]>();
- private warnings:{nodes:Node[];point:Vec3;age:number;life:number;radius:number}[]=[];
+ private warnings:{nodes:Node[];point:Vec3;age:number;life:number;radius:number;owner?:string}[]=[];
+ private links:{node:Node;age:number;life:number}[]=[];
  private trails:Trail[]=[];private motes:Mote[]=[];private extraMeshes:Mesh[]=[];private time=0;
  clearTransient():void{
+  for(const link of this.links)this.energy.release(link.node);this.links=[];
   for(const e of this.motes)this.recycleMote(e);this.motes=[];
   for(const f of this.fragments)this.recycleFragment(f);this.fragments=[];
   for(const t of this.trails)t.nodes.forEach(n=>this.energy.release(n));this.trails=[];
@@ -43,16 +61,17 @@ export class G1BattleEffects{
   this.energy=new SculptedEnergy(energyEffect);
   this.quad=utils.createMesh({positions:[-.5,-.5,0,.5,-.5,0,-.5,.5,0,.5,.5,0],normals:[0,0,1,0,0,1,0,0,1,0,0,1],uvs:[0,1,1,1,0,0,1,0],indices:[0,1,2,2,1,3]});
  }
- private sprite(parent:Node,texture:string,colour:string):{node:Node;material:Material}{
+ private sprite(parent:Node,texture:string,colour:string,surfaceGlow=false):{node:Node;material:Material}{
   const node=new Node('G1 光粒子');node.layer=this.root.layer;node.setParent(parent);const renderer=node.addComponent(MeshRenderer);renderer.mesh=this.quad;
-  const material=new Material();material.initialize({effectAsset:this.particleEffect,states:{priority:210,...(texture==='spell-volumes-v1'?{blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE_MINUS_SRC_ALPHA,blendSrcAlpha:gfx.BlendFactor.ONE,blendDstAlpha:gfx.BlendFactor.ONE_MINUS_SRC_ALPHA}]}}:{})}});material.setProperty('mainTexture',this.textures.get(texture)??this.textures.get('light_02')!);material.setProperty('tint',new Color(colour));material.setProperty('motion',new Vec4(0,1,0,0));renderer.setSharedMaterial(material,0);return{node,material};
+  const material=new Material();material.initialize({effectAsset:this.particleEffect,states:{priority:210,...(surfaceGlow?{depthStencilState:{depthTest:false,depthWrite:false}}:{}),...(['spell-volumes-v1','approved-projectiles','approved-volumes'].includes(texture)?{blendState:{targets:[{blend:true,blendSrc:gfx.BlendFactor.SRC_ALPHA,blendDst:gfx.BlendFactor.ONE_MINUS_SRC_ALPHA,blendSrcAlpha:gfx.BlendFactor.ONE,blendDstAlpha:gfx.BlendFactor.ONE_MINUS_SRC_ALPHA}]}}:{})}});material.setProperty('mainTexture',this.textures.get(texture)??this.textures.get('light_02')!);material.setProperty('tint',new Color(colour));material.setProperty('motion',new Vec4(0,1,0,0));renderer.setSharedMaterial(material,0);return{node,material};
  }
- attach(model:Node,role:Role):void{
-  if(this.equipment.some(e=>e.model===model))return;
+ attach(model:Node,role:Role,rank=1):void{
+  const previous=this.equipment.find(e=>e.model===model);
+  if(previous){previous.rank=rank;if(previous.core||!find(model,'FX_Weapon_Core'))return;previous.arcs.forEach(n=>this.energy.release(n));previous.vines.forEach(v=>{v.node.destroy();v.material.destroy();});this.equipment.splice(this.equipment.indexOf(previous),1);}
   const core=find(model,'FX_Weapon_Core'),grip=find(model,'FX_Weapon_Grip');
-  const e:Equipment={model,role,core,grip,arcs:[],vines:[],phase:this.equipment.length*1.71};
+  const e:Equipment={model,role,rank,core,grip,arcs:[],vines:[],phase:this.equipment.length*1.71};
   if(core){
-   if(role!=='spike')for(let i=0;i<(role==='stone'?2:3);i++)e.arcs.push(this.energy.arc(core,ACCENT[role],'weapon'));
+   if(role!=='spike'||rank===3)for(let i=0;i<(rank===3?2:role==='stone'?2:3);i++)e.arcs.push(this.energy.arc(core,ACCENT[role],'weapon'));
    const glow=this.sprite(core,role==='leaf'?'flame_01':'light_02',ACCENT[role]);e.glow=glow.node;e.glowMaterial=glow.material;
   }
   if(role==='stone')for(const side of ['L','R'])for(const part of ['Wrist','Foot']){
@@ -77,46 +96,40 @@ export class G1BattleEffects{
   }
   this.equipment.push(e);
  }
- telegraph(at:Vec3,radius:number,life=1.35,tint?:string):void{
-  if(this.warnings.length>=8){const old=this.warnings.shift()!;old.nodes.forEach(n=>this.energy.release(n));}
-  const nodes=[this.energy.arc(this.root,tint??'#ED8852','ground'),this.energy.arc(this.root,tint??'#FFE1A0','ground')];
-  this.warnings.push({nodes,point:at.clone(),age:0,life,radius});
+ telegraph(at:Vec3,radius:number,life=1.35,tint='#FF4C54',owner?:string):void{
+  // Each danger disc is tied to the authoritative caster, radius and landing delay.
+  const nodes=[this.energy.arc(this.root,tint,'warning'),this.energy.arc(this.root,tint,'disc')];
+  this.warnings.push({nodes,point:at.clone(),age:0,life,radius,owner});
  }
- /** Shared status language from the 特效大师 sheet.  Keeping it here means
-  * every enemy and summon uses the same readable ground/overhead feedback. */
-  status(kind:string,at:Vec3,radius=.8):void{
-  const key=kind.replace(/^(bossTell-|boss-)/,'');
-  if(key==='web'){this.art(5,new Vec3(at.x,.09,at.z),radius*3,1.4,true);this.art(5,new Vec3(at.x,.48,at.z),radius*1.6,.7);return;}
-  if(key==='shield'||key==='openingShield'){this.art(6,new Vec3(at.x,.85,at.z),radius*2.2,1.2);this.art(10,at,radius,.35);return;}
-  if(key==='root'){this.art(11,new Vec3(at.x,.48,at.z),radius*2,1.25);return;}
-  if(key==='fervor'||key==='giant'||key==='taunt')this.art(key==='fervor'?1:key==='giant'?7:10,new Vec3(at.x,.55,at.z),radius*1.8,.7);
-  if(key==='polymorph'||key==='sheep'){
-   this.art(4,new Vec3(at.x,.82,at.z),radius*1.55,.9);
-   for(let i=0;i<(this.compact?3:5);i++){const a=i*2.399,p=new Vec3(at.x+Math.cos(a)*radius*.85,.92,at.z+Math.sin(a)*radius*.85);this.art(9,p,radius*.34,.52,false,i*.07,new Vec3(at.x,.92,at.z));}
-  }
-  if(key==='sleep')this.art(4,new Vec3(at.x,1.05,at.z),radius*1.35,1.0);
-  if(key==='silence'){
-   this.art(9,new Vec3(at.x,1.0,at.z),radius*1.35,.8);
-   for(let i=0;i<(this.compact?3:5);i++){const a=i*2.399,p=new Vec3(at.x+Math.cos(a)*radius*.72,1.18,at.z+Math.sin(a)*radius*.72);this.art(4,p,radius*.28,.46,false,i*.08,new Vec3(at.x,1.18,at.z));}
-  }
-  if(key==='armorBreak'||key==='armorDown'||key==='resistDown'||key==='weaken')this.art(10,at,radius*1.6,.5);
-  if(key==='stun'||key==='hold'||key==='crystalMastery')this.art(0,at,radius*1.6,.65);
-  if(key==='fervor'){this.cast('impact',at,radius,.58);this.mote(new Vec3(at.x,1.05,at.z),new Vec3(at.x,1.35,at.z),'#FF8B5C',.34,.72,'flame_01');return;}
-  if(key==='giant'){this.cast('rock',at,radius*1.12,.82);this.mote(new Vec3(at.x,1.05,at.z),new Vec3(at.x,1.65,at.z),'#FFD27A',.42,.78,'star_04');return;}
-  if(key==='taunt'){this.cast('impact',at,radius*.9,.56);this.mote(new Vec3(at.x,1.15,at.z),new Vec3(at.x,1.15,at.z),'#FF766C',.38,.66,'star_04');return;}
-  if(key==='encourage'){this.cast('heal',at,radius*.75,.55);return;}
-  if(key==='castInterrupted'){this.cast('impact',at,radius,.46);this.mote(new Vec3(at.x,1.2,at.z),new Vec3(at.x,1.2,at.z),'#FFE8A8',.34,.34,'spark_04');return;}
-  if(key==='polymorph'||key==='sheep'){this.cast('summon',at,radius*.8,.8);this.mote(new Vec3(at.x,1.18,at.z),new Vec3(at.x,1.18,at.z),'#E6C8FF',.38,.68,'star_04');return;}
-  if(key==='sleep'){this.cast('summon',at,radius*.75,1.05);this.mote(new Vec3(at.x,1.35,at.z),new Vec3(at.x,1.35,at.z),'#A995D4',.30,.9,'light_02');return;}
-  if(key==='silence'){this.art(9,new Vec3(at.x,.72,at.z),radius*1.05,.72,false,.08);this.mote(new Vec3(at.x,1.2,at.z),new Vec3(at.x,1.2,at.z),'#765A9C',.42,.6,'star_04');return;}
-  if(key==='slow'||key==='frost'||key==='root'||key==='anchor'){this.cast('frost',at,radius,.65);return;}
-  if(key==='armorBreak'||key==='resistDown'||key==='weaken'){this.cast('impact',at,radius*.75,.52);return;}
-  if(key==='stun'||key==='hold'){this.cast('impact',at,radius*.8,.48);return;}
-  if(key==='cleanse'||key==='revive'||key==='rebirth'){this.cast('heal',at,radius,1.1);return;}
-  if(key==='enemyMend'){this.art(3,new Vec3(at.x,.72,at.z),radius*1.35,.8);this.art(11,new Vec3(at.x,.12,at.z),radius*1.1,.72,true,.16);return;}
-  if(key==='spawn'||key==='bubbleRing'||key==='spirit'){this.cast('summon',at,radius,1.05);return;}
-  this.cast('impact',at,radius*.7,.42);
+ cancelWarnings(owner?:string):void{
+  if(!owner)return;
+  this.warnings=this.warnings.filter(w=>{if(w.owner!==owner)return true;w.nodes.forEach(n=>this.energy.release(n));return false;});
  }
+ status(kind:string,at:Vec3,radius=.8):void{
+  const p=new Vec3(at.x,.65,at.z),head=new Vec3(at.x,1.35,at.z);
+  const cell=kind==='web'?5:kind==='root'?11:['shield','openingShield','hold','lastShield'].includes(kind)?6:['armorDown','armorBreak','resistDown','weaken','silence'].includes(kind)?9:['frost','slow','stun','crystalMastery'].includes(kind)?0:['sleep','sheep','polymorph'].includes(kind)?4:['heal','enemyMend','cleanse','encourage','revive','rebirth'].includes(kind)?3:10;
+  if(kind==='web'){this.art(5,new Vec3(at.x,.075,at.z),radius*2.1,.85,true);return;}
+  if(kind==='root'){this.art(11,new Vec3(at.x,.30,at.z),radius*1.35,.70);return;}
+  if(['shield','openingShield','lastShield'].includes(kind)){this.volume(6,p,radius*2.1,.70);return;}
+  if(['revive','rebirth'].includes(kind))this.volume(8,p,radius*1.9,.95);
+  if(kind==='crystalMastery'||kind==='stun')this.volume(5,p,radius*1.7,.55);
+  this.art(cell,['fervor','taunt','giant','encourage','castInterrupted','cooldown'].includes(kind)?head:p,radius*(cell===6?1.5:1.2),kind==='revive'?1.0:.48);
+  if(['revive','rebirth','cleanse'].includes(kind))for(let i=0;i<4;i++){const a=i*1.57,from=new Vec3(at.x+Math.cos(a)*.4,.2,at.z+Math.sin(a)*.4);this.mote(from,new Vec3(from.x,1.4,from.z),'#FFE6A2',.16,.65,'spark_04',false,i*.05);}
+ }
+ healLink(from:Vec3,to:Vec3,siphon=false):void{
+  const direction=Vec3.subtract(new Vec3(),to,from),length=direction.length();
+  if(length>.01){const node=this.energy.arc(this.root,siphon?'#D995FF':'#FFE888','link');node.setPosition(from);node.setScale(length,1,1);node.setRotation(Quat.rotationTo(new Quat(),new Vec3(1,0,0),direction.normalize()));this.links.push({node,age:0,life:.48});}
+  this.projectile(siphon?4:3,from,to,.8,.28,0,.22,true);
+  this.art(siphon?4:3,to,.68,.3,false,.23);
+ }
+ splash(at:Vec3,radius:number):void{
+  for(let i=0;i<(this.compact?4:6);i++){const a=i*Math.PI*2/(this.compact?4:6),end=new Vec3(at.x+Math.cos(a)*radius*.65,.35,at.z+Math.sin(a)*radius*.65);this.projectile(0,at,end,.52,.22);}
+ }
+ fusion(at:Vec3,advanced:boolean):void{
+  this.art(6,new Vec3(at.x,.7,at.z),advanced?2:1.5,.6);this.art(10,new Vec3(at.x,.08,at.z),advanced?2.2:1.6,.65,true);
+  for(let i=0;i<(advanced?6:4);i++){const a=i*2.4,p=new Vec3(at.x+Math.cos(a)*.6,.1,at.z+Math.sin(a)*.6);this.mote(p,new Vec3(p.x,1.6,p.z),advanced?'#FFE284':'#83EDFF',.19,.7,'star_04',false,i*.04);}
+ }
+ pearlHit(at:Vec3):void{this.volume(10,at,1.6,.3);this.art(10,at,1.1,.18);}
  death(at:Vec3,boss=false):void{
   this.cast('impact',at,boss?1.55:.82,boss?.9:.58);
   const count=this.compact?4:boss?12:7;
@@ -132,20 +145,11 @@ export class G1BattleEffects{
   }
  enemyAttack(from:Vec3,to:Vec3,ranged:boolean,boss:boolean,key?:string,model?:Node):void{
   const mouth=model?find(model,'FX_Enemy_Mouth'):undefined;if(mouth?.isValid)from=mouth.worldPosition.clone();
-  const id=enemyG1(key??'')?.id;
-  if(ranged){
-   const cell=id==='B09'||id==='H04'||id==='M04'?0:id==='B05'||id==='H02'?9:id==='B10'||id==='B03'||id==='M05'||id==='M07'?1:id==='M09'?8:10;
-   this.art(cell,from,boss?.62:.42,.34,false,0,to);
-   this.mote(from,to,this.enemyColour(key),boss?.34:.22,.28,'light_02',false,0,.38);
-   this.art(10,new Vec3(to.x,.48,to.z),boss?.72:.38,.24,false,.25);
-   return;
-  }
-  const at=new Vec3((from.x+to.x)*.5,.62,(from.z+to.z)*.5);
-  this.trail('slash',at,.21,boss?.72:.36,to);
-  const cell=id==='B01'||id==='B07'||id==='H01'?2:id==='B02'||id==='B06'||id==='E01'?7:id==='H03'?1:id==='B05'||id==='H02'?9:id==='M06'||id==='E02'?5:10;
-  this.art(cell,from,boss?.58:.34,.28,false,0,to);
-  this.art(10,new Vec3(to.x,.44,to.z),boss?.68:.34,.22,false,.20);
-  this.mote(to,to,'#FFDA9E',boss?.48:.26,.16,'spark_04');
+  const asset=enemyG1(key??''),id=asset?.id??'',effect=asset?.effect??'';
+  ranged=ranged||['ink','mortar','ranged','focusFire','web','magic','slow','silence','heal','shield'].includes(effect);
+  const cell=effect==='web'?5:effect==='focusFire'?10:effect==='ranged'?11:effect==='ink'||effect==='silence'?9:effect==='heal'?3:effect==='frost'||effect==='slow'?0:['M06','B05','H02'].includes(id)?5:['M04','M05','B09','H04','W04'].includes(id)?0:['M13','E08'].includes(id)?10:['M12','E07'].includes(id)?11:['H03','W03','B10'].includes(id)?1:ranged?9:6;
+  this.projectile(cell,from,to,boss?1.1:.70,ranged?.28:.16,0,cell===9?.38:0,true);
+  if(!ranged)this.art(10,to,boss?.8:.46,.20,false,.12);
  }
   bossCast(kind:string,at:Vec3,source:Vec3,key?:string):void{
   if(enemyG1(key??'')?.id==='H03'){
@@ -153,7 +157,7 @@ export class G1BattleEffects{
   }
 
   if(kind==='web'){this.art(5,source,1,.32,false,0,at);this.art(5,new Vec3(at.x,.09,at.z),3.1,1.5,true,.3);return;}
-  if(kind==='fireRain'){for(let i=0;i<(this.compact?4:7);i++){const a=i*2.399,r=.35+(i%4)*.33,p=new Vec3(at.x+Math.cos(a)*r,3+(i%3)*.25,at.z+Math.sin(a)*r),end=new Vec3(p.x,.3,p.z);this.art(1,p,.8,.4,false,i*.09,end);this.art(1,end,1.65,.65,false,.38+i*.09);}return;}
+  if(kind==='fireRain'){for(let i=0;i<(this.compact?4:7);i++){const a=i*2.399,r=.35+(i%4)*.33,p=new Vec3(at.x+Math.cos(a)*r,3+(i%3)*.25,at.z+Math.sin(a)*r),end=new Vec3(p.x,.3,p.z);this.art(1,p,.8,.4,false,i*.09,end);this.volume(11,end,1.5,.48,false,.38+i*.09);}return;}
   if(kind==='beacon'){
    this.cast('heal',at,1.15,1.2);
    this.art(3,new Vec3(at.x,.15,at.z),.82,1.0,false,.08,new Vec3(at.x,2.25,at.z));
@@ -167,17 +171,10 @@ export class G1BattleEffects{
    }
    this.art(10,new Vec3(at.x,.12,at.z+1.25),1.15,.32,true,.48);return;
   }
-  if(kind==='shock'){this.cast('impact',at,1.65,.62);for(let i=0;i<4;i++){const a=i*Math.PI/2,p=new Vec3(at.x+Math.cos(a)*.7,.65,at.z+Math.sin(a)*.7);this.mote(p,p,'#B9F2FF',.28,.38,'star_04',false,i*.06);}return;}
+  if(kind==='shock'){this.cast('impact',at,1.65,.62);if(['H03','W03'].includes(enemyG1(key??'')?.id??''))this.art(1,new Vec3(at.x,.4,at.z),1.6,.45);for(let i=0;i<4;i++){const a=i*Math.PI/2,p=new Vec3(at.x+Math.cos(a)*.7,.65,at.z+Math.sin(a)*.7);this.mote(p,p,'#B9F2FF',.28,.38,'star_04',false,i*.06);}return;}
   if(kind==='frost'){this.cast('frost',at,1.5,.85);return;}
-  if(kind==='drain'){
-   this.art(9,new Vec3(at.x,.6,at.z),2.8,1.1);
-   this.art(4,new Vec3(at.x,.68,at.z),1.15,.72,false,.12,source);
-   for(let i=0;i<(this.compact?4:7);i++){const a=i*2.399,p=new Vec3(at.x+Math.cos(a)*2.2,.38,at.z+Math.sin(a)*2.2);this.mote(p,source,'#BA89C9',.22,.7,'trace_01',false,i*.035,.4);this.art(9,p,.28,.58,false,i*.045,source);}
-   return;
-  }
-  if(kind==='rally'){
-   for(const x of [-.65,.65]){const p=new Vec3(at.x+x,.1,at.z);this.trail('summon',p,.8,.55);this.mote(p,new Vec3(p.x,1.35,p.z),'#89D9D0',.32,.65,'spark_04');}return;
-  }
+  if(kind==='drain'){this.volume(9,new Vec3(at.x,.085,at.z),3.5,.55,true);return;}
+  if(kind==='rally'){this.volume(4,new Vec3(source.x,.3,source.z),1.2,.45);return;}
   if(kind==='mortar'){
    this.art(1,new Vec3(at.x,.5,at.z),2.5,.7,false,.16);
    this.mote(new Vec3(at.x,3.4,at.z),new Vec3(at.x,.08,at.z),'#FFC58D',.44,.18,'flame_01');
@@ -209,136 +206,54 @@ export class G1BattleEffects{
   this.mote(at,to??at,'#FFFFFF',size,life,'spell-volumes-v1',ground,delay,0,-cell-2);
  }
  piercing(from:Vec3,to:Vec3):void{
-  this.art(8,from,1.6,.28,false,0,to);this.fragment('arrow',from,to,.95,.28,this.time);
-  for(let i=0;i<5;i++){const p=Vec3.lerp(new Vec3(),from,to,i/5);this.art(8,p,.8,.3,false,i*.035);}
-  this.art(10,to,1.1,.35,false,.23);
+  this.projectile(8,from,to,1.3,.26,0,0,true);
+  for(let i=1;i<=4;i++){const p=Vec3.lerp(new Vec3(),from,to,i/4);this.art(10,p,.38,.17,false,i*.05);}
  }
- private mote(from:Vec3,to:Vec3,colour:string,size:number,life:number,texture='spark_04',ground=false,delay=0,curve=0,sequence?:number):void{
+ private volume(cell:number,at:Vec3,size:number,life:number,ground=false,delay=0):void{this.mote(at,at,'#FFFFFF',size,life,'approved-volumes',ground,delay,0,-cell-2);}
+ private projectile(cell:number,from:Vec3,to:Vec3,size:number,life=.28,delay=0,curve=0,essential=false):void{
+  this.mote(from,to,'#FFFFFF',size,life,'approved-projectiles',false,delay,curve,-cell-2,true,essential);
+ }
+ private mote(from:Vec3,to:Vec3,colour:string,size:number,life:number,texture='spark_04',ground=false,delay=0,curve=0,sequence?:number,directional=false,essential=false):void{
   // Software rendering is the lowest common denominator for the preview and
   // older laptops. Keep the live sprite budget tight so weather volleys do not
   // turn into a queue of translucent quads.
-  if(this.motes.length>=(this.compact?22:56)){
-   const decorative=this.motes.findIndex(m=>m.sequence===undefined);
-   // Decorative sparks must not evict the painted spell body or later volleys.
-   if(sequence===undefined&&decorative<0)return;
-   const [old]=this.motes.splice(decorative<0?0:decorative,1);this.recycleMote(old);
+  if(this.motes.length>=(this.compact?64:112)){
+   const decorative=this.motes.findIndex(m=>!m.directional&&m.sequence===undefined);
+   const impact=decorative>=0?decorative:this.motes.findIndex(m=>!m.essential);
+   // Never evict a live projectile: every valid multi-shot must remain visible.
+   if(impact>=0){const [old]=this.motes.splice(impact,1);this.recycleMote(old);}
+   else if(!essential)return;
   }
-  const p=this.spritePool.get(texture)?.pop()??this.sprite(this.root,texture,colour);p.material.setProperty('tint',new Color(colour));p.material.setProperty('motion',new Vec4(0,0,0,0));p.node.active=delay<=0;this.motes.push({...p,texture,sequence,from:from.clone(),to:to.clone(),age:-delay,life,size,ground,spin:this.time*17+this.motes.length*31,curve});
+  const p=this.spritePool.get(texture)?.pop()??this.sprite(this.root,texture,colour);p.material.setProperty('tint',new Color(colour));p.material.setProperty('motion',new Vec4(0,0,0,0));p.node.active=delay<=0;this.motes.push({...p,texture,sequence,directional,essential,from:from.clone(),to:to.clone(),age:-delay,life,size,ground,spin:this.time*17+this.motes.length*31,curve});
  }
- attack(model:Node|undefined,role:Role|undefined,from:Vec3,to:Vec3,critical=false):void{
-  const colour=role?ACCENT[role]:'#FFBDA1';const start=model&&role?this.emitter(model,role)??from:from;
-  if(role==='stone'){
-   this.trail('slash',new Vec3((start.x+to.x)/2,.78,(start.z+to.z)/2),.25,.72,to);
-   this.art(7,new Vec3(to.x,.48,to.z),critical?1.05:.72,.34,false,.11);
-   this.art(10,new Vec3(to.x,.12,to.z),critical?.78:.48,.24,true,.22);
-   this.mote(to,to,'#FFDFAC',critical?.85:.47,.22,'star_04');return;
-  }
-  if(role==='spike'){
-   this.fragment('arrow',start,to,.62,.30,this.time);
-   this.art(8,start,.72,.30,false,0,to);
-   this.art(10,new Vec3(to.x,.42,to.z),critical?.82:.54,.28,false,.18);
-  }else if(role==='crystal'){
-   this.art(0,new Vec3(to.x,.58,to.z),critical?1.02:.76,.44,false,.08);
-   this.art(10,new Vec3(to.x,.12,to.z),critical?.72:.46,.24,true,.24);
-  }else if(role==='leaf'){
-   this.art(3,new Vec3(to.x,.72,to.z),critical?.88:.64,.44,false,.08);
-   this.art(10,new Vec3(to.x,.12,to.z),critical?.66:.42,.24,true,.24);
-  }else if(role==='bubble'){
-   this.art(4,new Vec3(to.x,.82,to.z),critical?.90:.68,.46,false,.08);
-   this.art(10,new Vec3(to.x,.12,to.z),critical?.66:.44,.24,true,.24);
-  }else{
-   this.art(10,new Vec3(to.x,.45,to.z),critical?.88:.58,.30,false,.12);
-  }
-  this.mote(start,to,colour,role==='spike'?.20:.27,.30,role==='spike'?'trace_01':'light_02',false,0,role==='leaf'?.25:.08);
-  for(let i=0;i<(this.compact?1:3);i++)this.mote(start,to,colour,.10,.28,'spark_04',false,i*.045,.05);
+ attack(model:Node|undefined,role:Role|undefined,from:Vec3,to:Vec3,critical=false,delay=0):void{
+  const start=model&&role?this.emitter(model,role)??from:from;
+  const cell=role==='stone'?7:role==='spike'?8:role==='crystal'?0:role==='leaf'?3:role==='bubble'?4:6;
+  if(role==='stone')this.volume(1,new Vec3(to.x,.6,to.z),1.25,.22);
+  this.projectile(role==='stone'?6:cell,start,to,role==='stone'?1.05:.94,role==='stone'?.18:.28,delay,role==='leaf'?.18:0,true);
+  this.art(role==='spike'?10:cell,to,critical?1.1:.66,.22,false,delay+.20);
  }
- impact(at:Vec3,critical=false):void{this.art(10,at,critical?1.1:.5,.22);}
+ impact(at:Vec3,critical=false):void{this.art(10,at,critical?.92:.44,.18);}
  cast(kind:'rock'|'frost'|'arrows'|'heal'|'summon'|'impact',at:Vec3,size=1,life=1,mastery=false):void{
-  // Summoning uses roots/leaf light. The old purple vortex was visually close
-  // to several control effects and made the summon family hard to identify.
-  const cell={rock:7,frost:0,arrows:8,heal:3,summon:11,impact:10}[kind];
-  const body=new Vec3(at.x,kind==='summon'?.10:kind==='heal'?.85:.5,at.z);
-  // A small charge beat followed by the larger painted volume makes the cast
-  // read as a finished in-game action instead of a static marker.
-  this.art(cell,new Vec3(at.x,.12,at.z),size*(kind==='heal'?1.0:.72),.24,true);
-  const bodyScale=kind==='rock'?(mastery?1.18:.96):kind==='heal'?2.1:2.4;
-  this.art(cell,body,size*bodyScale,Math.min(life,kind==='rock'?.82:1.2),false,kind==='summon'?.16:.10);
-  if(mastery)this.art(cell,new Vec3(at.x,kind==='heal'?1.05:.68,at.z),size*(kind==='heal'?1.35:1.05),.52,false,.18);
-  if(kind==='impact'||kind==='rock'||kind==='frost')this.art(10,new Vec3(at.x,.12,at.z),size*(kind==='impact'?1.05:.72),.28,true,.22);
-  if(kind==='frost')for(let i=1;i<Math.ceil(life);i++)this.art(cell,body,size*2,1.05,false,i*.8);
-  if(kind==='rock'&&mastery)this.art(cell,body,size*1.30,.66,false,.46);
-  if(kind==='heal')this.art(10,new Vec3(at.x,.12,at.z),size*1.6,.65,true);
-  this.trail(kind,at,life,size);
-  const row=kind==='rock'||kind==='impact'?1:kind==='heal'||kind==='arrows'||kind==='summon'?2:0;
-  const anchor=new Vec3(at.x,.085,at.z);
-  if(!this.compact)this.mote(anchor,anchor,kind==='heal'?'#FFF1B8':kind==='rock'?'#E1CCA7':'#FFFFFF',size*(kind==='frost'?2.7:2.2),Math.max(.55,Math.min(1.35,life)),'cethiel-spells',true,0,0,row);
-
+  if(kind==='heal'){this.volume(3,new Vec3(at.x,.65,at.z),size*2.2,.85);if(mastery)this.status('revive',at,size);return;}
+  if(kind==='summon'){this.volume(4,new Vec3(at.x,.12,at.z),size*1.7,.75,true);for(let i=0;i<3;i++){const p=new Vec3(at.x+(i-1)*.24,.1,at.z);this.mote(p,new Vec3(p.x,1.1,p.z),'#C795FF',.16,.55,'spark_04',false,i*.08);}return;}
+  if(kind==='impact'){this.art(7,new Vec3(at.x,.4,at.z),size*1.25,.38);for(let i=0;i<4;i++){const a=i*2.4;this.fragment('debris',at,new Vec3(at.x+Math.cos(a)*size,.05,at.z+Math.sin(a)*size),.14,.4,a);}return;}
   if(kind==='rock'){
-   // Keep the tank readable. The storm body is carried by the orbit layers
-   // below instead of a pile of overlapping center fragments.
-   const coreCount=this.compact?(mastery?1:0):mastery?2:1;
-   for(let i=0;i<coreCount;i++)this.fragment('rock',new Vec3(at.x,.30,at.z),new Vec3(at.x,.30,at.z),.20+i*.04,.72,i*2.4);
+   this.volume(7,new Vec3(at.x,.35,at.z),size*2.3,Math.min(life,2.8));
+   const count=this.compact?5:8;
+   for(let i=0;i<count;i++){const a=i/count*Math.PI*2,r=size*.80,p=new Vec3(at.x+Math.cos(a)*r,.25,at.z+Math.sin(a)*r);this.fragment(i%3?'rock':'crystal',p,p,.23,Math.min(life,3),a,0,at,2.8,.22);}
+   this.trail('rock',at,Math.min(life,2.8),size*.83);return;
   }
-  if(kind==='frost'||kind==='arrows')for(let i=0;i<(this.compact?4:8);i++){const a=i*2.399,r=size*(.22+(i%4)*.21),to=new Vec3(at.x+Math.cos(a)*r,.10,at.z+Math.sin(a)*r);this.fragment(kind==='frost'?'ice':'arrow',new Vec3(to.x+.35,2.2+(i%3)*.3,to.z),to,kind==='frost'?.24:.66,.44+i*.04,i);}
-  if(kind==='impact')for(let i=0;i<(this.compact?4:8);i++){const a=i*2.399;this.fragment('debris',new Vec3(at.x,.12,at.z),new Vec3(at.x+Math.cos(a)*size,.06,at.z+Math.sin(a)*size),.16,.64,i);}
-  if(kind==='rock'){
-   // A storm core: painted stones travel on staggered spiral arcs while the
-   // physical debris keeps a second, lower orbit around the tank.
-   const rings=mastery?3:2;
-   const stones=this.compact?(mastery?8:6):(mastery?14:10);
-   for(let i=0;i<stones;i++){
-    const ring=i%rings,perRing=Math.ceil(stones/rings),slot=Math.floor(i/rings),a=slot*2.399+ring*.82,r=size*(.82+ring*.25),p=new Vec3(at.x+Math.cos(a)*r,.34+ring*.15,at.z+Math.sin(a)*r);
-    const crystal=i%2===1;
-    this.fragment(crystal?'crystal':'rock',p,p,crystal?.34:.38,mastery?3.35:2.65,a+(ring%2)*.7,0,at,mastery?(ring%2?2.8:-2.45):(ring%2?2.1:-1.8),.34+ring*.14);
-   }
-   // Both versions throw material outward from the tank. Mastery reaches
-   // farther, then punctuates the outer ring with lightning arcs.
-   const bursts=this.compact?(mastery?4:3):(mastery?9:6);
-   for(let i=0;i<bursts;i++){
-    const a=i*2.399+.35,r=size*(mastery?1.42:1.22)*(1+(i%3)*.16),end=new Vec3(at.x+Math.cos(a)*r,.18+(i%2)*.16,at.z+Math.sin(a)*r);
-    this.fragment(i%2?'crystal':'rock',new Vec3(at.x,.25,at.z),end,mastery?.24:.20,mastery?.94:.80,i*1.71);
-    if(mastery)this.art(i%2?7:10,end,.20+(i%3)*.04,.34,false,i*.045);
-   }
-   // The reference has a readable ground silhouette around the tank. Keep
-   // these as two low-cost painted rings instead of a single bright center.
-   this.mote(new Vec3(at.x,.075,at.z),new Vec3(at.x,.075,at.z),mastery?'#B9F0FF':'#C9E5E3',size*(mastery?1.48:1.24),2.25,'circle_05',true,0,0,-1);
-   if(mastery)this.mote(new Vec3(at.x,.082,at.z),new Vec3(at.x,.082,at.z), '#D9F8FF',size*1.88,2.05,'circle_05',true,.08,0,-1);
-   if(mastery){
-    const arcs=this.compact?2:4;
-    for(let i=0;i<arcs;i++){
-     const a=i*Math.PI*2/arcs+.4,r=size*(.62+(i%2)*.18),p=new Vec3(at.x+Math.cos(a)*r,.46+(i%2)*.22,at.z+Math.sin(a)*r);
-     this.trail('lightning',p,.62+i*.06,.22+(i%2)*.05);
-     this.mote(p,new Vec3(at.x+Math.cos(a+1.0)*r*.35,1.05,at.z+Math.sin(a+1.0)*r*.35),'#D7F6FF',.17,.38,'trace_01',false,i*.06,.12);
-    }
-   }
+  if(kind==='arrows')this.volume(2,new Vec3(at.x,1.0,at.z),size*1.6,.35);
+  if(kind==='frost')this.volume(0,new Vec3(at.x,1.25,at.z),size*2.3,Math.min(life,2.8));
+  // Area skills: discrete falling volleys, open centers, no opaque weather card.
+  const volleys=Math.max(1,Math.min(4,Math.ceil(life/.65))),drops=this.compact?4:6;
+  for(let v=0;v<volleys;v++)for(let i=0;i<drops;i++){
+   const a=i*2.399+v*.7,r=size*(.22+(i%3)*.26),to=new Vec3(at.x+Math.cos(a)*r,.12,at.z+Math.sin(a)*r),from=new Vec3(to.x+.25,2.2,to.z),delay=v*.6+i*.045;
+   this.projectile(kind==='arrows'?8:0,from,to,kind==='arrows'?.9:1.08,.26,delay);
+   this.art(kind==='arrows'?10:0,to,kind==='arrows'?.50:.82,.26,false,delay+.23);
   }
-  if(kind==='arrows'||kind==='frost'){
-   // Weather skills fall in readable volleys instead of appearing as one
-   // centered card. Each volley has its own drop spacing and impact beat.
-   const volleys=kind==='arrows'?(this.compact?(mastery?3:2):(mastery?5:3)):(this.compact?(mastery?3:2):(mastery?5:3)),drops=kind==='arrows'?(this.compact?3:(mastery?6:5)):(this.compact?3:(mastery?5:4));
-   for(let volley=0;volley<volleys;volley++)for(let drop=0;drop<drops;drop++){
-    const spread=(drop-(drops-1)*.5)*.55+(volley%2? .22:-.18),a=volley*1.71+drop*.73;
-    const x=at.x+Math.cos(a)*size*(.25+Math.abs(spread)*.55),z=at.z+Math.sin(a)*size*(.25+Math.abs(spread)*.55);
-    const from=new Vec3(x+.18,2.65+(drop%2)*.22,z),to=new Vec3(x,.10,z),delay=volley*.34+drop*.035;
-    this.art(kind==='arrows'?8:0,from,size*(kind==='arrows'?.30:.42),kind==='arrows'?.34:.48,false,delay,to);
-    this.art(10,to,size*(kind==='arrows'?.24:.32),.20,false,delay+(kind==='arrows'?.24:.34));
-   }
-  }
-  if(mastery&&kind==='heal'){
-   for(let i=0;i<(this.compact?3:5);i++){
-    const a=i*2.399,r=size*(.35+(i%2)*.28),p=new Vec3(at.x+Math.cos(a)*r,.18,at.z+Math.sin(a)*r);
-    this.art(3,p,size*.34,.72,false,i*.07,new Vec3(p.x,1.45,p.z));
-   }
-  }
-  const colour=kind==='rock'?'#BAE2EE':kind==='arrows'?'#C4DFB1':kind==='heal'?'#FFE0A3':kind==='summon'?'#9EEA9B':'#A7ECFF';
-  const count=this.compact?2:kind==='frost'?8:kind==='arrows'?7:9;
-  for(let i=0;i<count;i++){
-   const a=i*2.399,r=(.25+(i%5)/6)*size,end=new Vec3(at.x+Math.cos(a)*r,.10,at.z+Math.sin(a)*r);
-   const from=new Vec3(end.x+(kind==='arrows'?.45:0),kind==='arrows'||kind==='frost'?2.0+i%3*.32:.15,end.z);
-   if(kind==='heal'||kind==='summon'){this.mote(end,new Vec3(end.x,.7+(i%4)*.25,end.z),colour,.18+(i%3)*.04,.65,'spark_04',false,i*.05);}
-   else this.mote(from,end,colour,kind==='arrows'?.23:.16,.42,kind==='arrows'?'trace_01':'star_04',false,i*.055);
-  }
-  if(!this.compact)this.mote(new Vec3(at.x,.07,at.z),new Vec3(at.x,.07,at.z),colour,size*2,.46,'circle_05',true);
+  this.trail(kind,at,Math.min(life,2.5),size);
  }
 
  private fragment(kind:Fragment['kind'],from:Vec3,to:Vec3,size:number,life:number,phase:number,orbit=0,orbitCenter?:Vec3,orbitSpeed=5.5,orbitHeight=.25):void{
@@ -360,21 +275,26 @@ export class G1BattleEffects{
  }
  update(dt:number):void{
   this.time+=dt;
+  for(let i=this.links.length-1;i>=0;i--){const e=this.links[i];e.age+=dt;if(e.age>=e.life){this.energy.release(e.node);this.links.splice(i,1);}else this.energy.animate(e.node,e.age,Math.min(1,e.age*15,(e.life-e.age)*8));}
   for(let i=this.enemyLights.length-1;i>=0;i--){
    const e=this.enemyLights[i];
-   if(!e.model.isValid||!e.node.isValid){e.material.destroy();this.enemyLights.splice(i,1);continue;}
-   if(!e.model.activeInHierarchy)continue;
-   const pulse=.5+.5*Math.sin(this.time*1.8+e.phase),size=(e.advanced?.26:.14)*(1+pulse*.22);
-   e.node.setWorldScale(size,size,size);e.node.setWorldRotation(this.camera.node.worldRotation);
-   e.material.setProperty('motion',new Vec4(this.time,(e.advanced?.24:.12)+pulse*.09,0,0));
+   if(!e.model.isValid||!e.node.isValid){e.material.destroy();e.accents.forEach(a=>a.material.destroy());e.ribbons.forEach(n=>this.energy.release(n));this.enemyLightByModel.delete(e.model);this.enemyLights.splice(i,1);continue;}
+   if(!e.model.activeInHierarchy||!e.alive)continue;
+   e.node.active=true;e.accents.forEach(a=>a.node.active=true);e.ribbons.forEach(n=>n.active=true);
+   const t=this.time+e.phase,pulse=.5+.5*Math.sin(t*(e.style==='fire'?3.8:e.style==='nature'?1.4:2)),charge=e.casting?1.35:1,fade=e.controlled?.50:1;
+   const size=(e.advanced?.62:e.boss?.48:.32)*(1+pulse*.18)*charge;
+   e.node.setWorldScale(size,e.style==='fire'?size*1.3:size,size);e.node.setWorldRotation(this.camera.node.worldRotation);
+   e.material.setProperty('motion',new Vec4(t,((e.boss?.23:.20)+pulse*.10)*fade,0,0));
+   e.accents.forEach((a,j)=>{const sparkle=.5+.5*Math.sin(t*2.5-j*1.3),s=(e.boss?.22:.16)*(1+sparkle*.3)*charge;a.node.setWorldScale(s,s,s);a.node.setWorldRotation(this.camera.node.worldRotation);a.material.setProperty('motion',new Vec4(t,(.20+sparkle*.16)*fade,0,0));});
+   e.ribbons.forEach((n,j)=>{const size=(e.advanced?1.2:.85)*charge;n.setWorldScale(size,size,size);n.setRotationFromEuler(35+j*60,t*22+j*130,20);this.energy.animate(n,t,(.35+pulse*.15)*fade);});
   }
 
-  for(let i=this.warnings.length-1;i>=0;i--){const w=this.warnings[i];w.age+=dt;if(w.age>=w.life){w.nodes.forEach(n=>this.energy.release(n));this.warnings.splice(i,1);continue;}const t=w.age/w.life;w.nodes.forEach((n,j)=>{const r=w.radius*(j===0?1:Math.max(.03,t));n.setPosition(w.point.x,.065+j*.008,w.point.z);n.setScale(r,1,r);n.setRotationFromEuler(0,j*180,0);this.energy.animate(n,w.age,j===0?.74:.32);});}
+  for(let i=this.warnings.length-1;i>=0;i--){const w=this.warnings[i];w.age+=dt;if(w.age>=w.life){w.nodes.forEach(n=>this.energy.release(n));this.warnings.splice(i,1);continue;}const t=w.age/w.life;w.nodes.forEach((n,j)=>{const r=w.radius*(j===0?1:Math.max(.03,Math.sqrt(t)));n.setPosition(w.point.x,.065+j*.008,w.point.z);n.setScale(r,1,r);n.setRotationFromEuler(0,j*180,0);this.energy.animate(n,w.age,j===0?.95:.38);});}
   for(let i=this.equipment.length-1;i>=0;i--){
    const e=this.equipment[i];if(!e.model.isValid){e.arcs.forEach(n=>this.energy.release(n));e.glowMaterial?.destroy();e.vines.forEach(v=>v.material.destroy());this.equipment.splice(i,1);continue;}
    const t=this.time+e.phase,pulse=.5+.5*Math.sin(t*1.65),burst=Math.pow(Math.max(0,Math.sin(t*.82)),8);
-   e.arcs.forEach((n,j)=>{const size=e.role==='stone'?(j<2?1.65:.70):e.role==='crystal'?1.20+burst*1.7:e.role==='bubble'?1.05+burst*1.6:.75+pulse*.65;n.setWorldScale(size,size,size);n.setRotationFromEuler(e.role==='crystal'?75:25+j*36,t*(e.role==='bubble'?-46:54)+j*120,15);this.energy.animate(n,t,.25+pulse*.25+burst*.3);});
-   if(e.glow?.isValid){const s=e.role==='leaf'?.32+pulse*.18:e.role==='spike'?.18+pulse*.08:.28+burst*.38;e.glow.setWorldScale(s,e.role==='leaf'?s*1.45:s,s);e.glow.setWorldRotation(this.camera.node.worldRotation);e.glowMaterial?.setProperty('motion',new Vec4(t,e.role==='leaf'?.48+pulse*.24:.20+pulse*.2+burst*.4,0,0));}
+   e.arcs.forEach((n,j)=>{const size=e.rank===3?.65+pulse*.16:e.role==='stone'?(j<2?1.65:.70):e.role==='crystal'?1.20+burst*1.7:e.role==='bubble'?1.05+burst*1.6:.75+pulse*.65;n.setWorldScale(size,size,size);n.setRotationFromEuler(e.role==='crystal'?75:25+j*36,t*(e.role==='bubble'?-46:54)+j*120,15);this.energy.animate(n,t,e.rank===3?.55+pulse*.22:.25+pulse*.25+burst*.3);});
+   if(e.glow?.isValid){const s=e.rank===3?.40+pulse*.12:e.role==='leaf'?.32+pulse*.18:e.role==='spike'?.18+pulse*.08:.28+burst*.38;e.glow.setWorldScale(s,e.role==='leaf'?s*1.45:s,s);e.glow.setWorldRotation(this.camera.node.worldRotation);e.glowMaterial?.setProperty('motion',new Vec4(t,e.rank===3?.62+pulse*.18:e.role==='leaf'?.48+pulse*.24:.20+pulse*.2+burst*.4,0,0));}
    const cycle=(t%6.5)/6.5,grow=Math.max(.004,Math.min(1,cycle/.62));e.vines.forEach((v,j)=>v.material.setProperty('motion',new Vec4(t,.52+.20*Math.sin(t*2-j),grow,0)));
   }
   for(let i=this.trails.length-1;i>=0;i--){
@@ -401,14 +321,15 @@ export class G1BattleEffects{
    const e=this.motes[i];e.age+=dt;if(e.age<0)continue;e.node.active=true;
    if(e.age>=e.life){this.recycleMote(e);this.motes.splice(i,1);continue;}
    const t=e.age/e.life,p=Vec3.lerp(new Vec3(),e.from,e.to,t);p.y+=Math.sin(t*Math.PI)*e.curve;e.node.setPosition(p);
-   const s=e.size*(.72+Math.sin(t*Math.PI)*.4);e.node.setScale(s,s,s);
-   if(e.ground)e.node.setRotationFromEuler(-90,0,e.sequence!==undefined&&e.sequence<0?t*18:e.spin+t*14);else e.node.setWorldRotation(this.camera.node.worldRotation);
-   const layerAlpha=e.sequence===undefined?.70:e.sequence<0?.84:.80;
+   const s=e.size*(e.directional?1:.65+Math.sin(t*Math.PI)*.40);e.node.setScale(s,s,s);
+   if(e.directional){const a=this.camera.worldToScreen(e.from),b=this.camera.worldToScreen(e.to),q=Quat.fromEuler(new Quat(),0,0,Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI);e.node.setWorldRotation(Quat.multiply(new Quat(),this.camera.node.worldRotation,q));}
+   else if(e.ground)e.node.setRotationFromEuler(-90,0,e.sequence!==undefined&&e.sequence<0?t*18:e.spin+t*14);else e.node.setWorldRotation(this.camera.node.worldRotation);
+   const layerAlpha=e.texture==='approved-volumes'?.78:e.directional?1:e.sequence===undefined?.65:e.sequence<0?.94:.80;
    e.material.setProperty('motion',new Vec4(this.time,Math.min(1,t*10,(1-t)*4)*layerAlpha,e.sequence===undefined?0:e.sequence+1,t));
   }
  }
  destroy():void{
-  for(const e of this.enemyLights){if(e.node.isValid)e.node.destroy();e.material.destroy();}this.enemyLights=[];
+  for(const e of this.enemyLights){if(e.node.isValid)e.node.destroy();e.material.destroy();for(const a of e.accents){if(a.node.isValid)a.node.destroy();a.material.destroy();}e.ribbons.forEach(n=>this.energy.release(n));}this.enemyLights=[];this.enemyLightByModel.clear();
   for(const f of this.fragments)f.node.destroy();this.fragments=[];for(const pool of this.fragmentPool.values())for(const n of pool)n.destroy();this.fragmentPool.clear();for(const m of this.fragmentMeshes.values())m.destroy();for(const m of this.fragmentMaterials.values())m.destroy();
   for(const pool of this.spritePool.values())for(const p of pool){p.node.destroy();p.material.destroy();}this.spritePool.clear();
   this.energy.destroy();for(const e of this.equipment){e.glowMaterial?.destroy();e.vines.forEach(v=>v.material.destroy());}

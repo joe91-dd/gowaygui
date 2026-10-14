@@ -14,6 +14,7 @@ import {filterMarket} from '../core/marketView';
 import type {Role} from '../core/types';
 import {displayGold,goldAmount} from '../core/economy';
 import {EditBox,Node,Mask,Graphics,EventTouch,EventMouse} from 'cc';
+import {reserveVerticalScroll} from './SwipePaging';
 import {IslandUI,UI_COLORS} from './IslandUI';
 import {GameService,displayName} from '../core/game';
 import {LOCAL_PLAYER,availablePets,petRanking,progressRanking,playerName,taxFor,usableLoans} from '../core/community';
@@ -46,9 +47,9 @@ export class CommunityMenus {
     return result;
   }
   private input(p:Node,text:string,y:number,placeholder:string,max=16):EditBox{
-    const n=this.ui.panel(0,y,1024,88,p),edit=n.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;
+    const surface=this.ui.panel(0,y,1024,88,p),n=this.ui.group('文字输入',0,0,surface,1024,88);n.active=false;const edit=n.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;
     edit.textLabel=this.ui.text('',0,0,32,UI_COLORS.cream,n,976,68);edit.placeholderLabel=this.ui.text('',0,0,30,UI_COLORS.muted,n,976,68);
-    for(const label of old)if(label){label.removeFromParent();label.destroy();}edit.maxLength=max;edit.string=text;edit.placeholder=placeholder;this.ui.anchorInput?.(edit);return edit;
+    for(const label of old)if(label){label.removeFromParent();label.destroy();}edit.maxLength=max;edit.string=text;edit.placeholder=placeholder;this.ui.anchorInput?.(edit);n.active=true;return edit;
   }
   private pager(p:Node,page:number,pages:number,go:(n:number)=>void,y=-276):void{
     this.button('上一页',-468,y,176,p,()=>go(page-1),page===0);this.button('下一页',-260,y,176,p,()=>go(page+1),page>=pages-1);
@@ -99,9 +100,9 @@ export class CommunityMenus {
     if(kind==='trade')(['all','pet','book'] as const).forEach((asset,i)=>this.button(['全部','龟龟','技能书'][i],-460+i*184,170,172,p,()=>{this.marketAsset=asset;this.market(kind,0,mine);},false,this.marketAsset===asset,56));
     else{const roles:('all'|Role)[]=['all','stone','spike','crystal','leaf','bubble'];this.button(`造型：${this.marketRole==='all'?'全部':ROLES[this.marketRole].name} · 点击切换`,-276,170,536,p,()=>{this.marketRole=roles[(roles.indexOf(this.marketRole)+1)%roles.length];this.market(kind,0,mine);},false,false,56);}
     this.button(this.marketSort==='asc'?'价格 ↑ 由低到高':'价格 ↓ 由高到低',322,170,450,p,()=>{this.marketSort=this.marketSort==='asc'?'desc':'asc';this.market(kind,0,mine);},false,false,56);
-    const input=this.ui.panel(-182,104,744,56,p),edit=input.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;
+    const surface=this.ui.panel(-182,104,744,56,p),input=this.ui.group('市场搜索输入',0,0,surface,744,56);input.active=false;const edit=input.addComponent(EditBox),old=[edit.textLabel?.node,edit.placeholderLabel?.node];edit.inputMode=EditBox.InputMode.SINGLE_LINE;edit.inputFlag=EditBox.InputFlag.DEFAULT;
     edit.textLabel=this.ui.text('',0,0,26,UI_COLORS.cream,input,704,44);edit.placeholderLabel=this.ui.text('',0,0,26,UI_COLORS.muted,input,704,44);for(const label of old)if(label){label.removeFromParent();label.destroy();}
-    edit.maxLength=32;edit.string=this.marketSearch;edit.placeholder='搜索名称或职业';this.ui.anchorInput?.(edit);
+    edit.maxLength=32;edit.string=this.marketSearch;edit.placeholder='搜索名称或职业';this.ui.anchorInput?.(edit);input.active=true;
     this.button('搜索',306,104,200,p,()=>{this.marketSearch=edit.string;this.market(kind,0,mine);},false,true,56);this.button('清空',480,104,136,p,()=>{this.marketSearch='';this.market(kind,0,mine);},false,false,56);
     all.slice(current*4,current*4+4).forEach((l,i)=>{const n=this.button('',-280+(i%2)*560,-14-Math.floor(i/2)*148,540,p,()=>this.listing(l.id,kind,mine),false,false,132);
       if(l.pet)this.ui.pet(l.pet,-208,0,92,n);else this.ui.bookIcon(l.skillId!,-208,0,86,n);
@@ -222,7 +223,7 @@ export class CommunityMenus {
     const right=this.ui.panel(214,-4,698,442,p,'#FFF9EC',246,22);this.ui.text('海岛排行',-179,186,27,UI_COLORS.ink,right,270,39);this.ui.text('上下滑动 · 点击查看阵容与战斗',133,186,18,UI_COLORS.sand,right,387,30);
     const viewport=this.ui.group('竞技排行滚动区',0,-20,right,654,349),mask=viewport.addComponent(Mask);mask.type=Mask.Type.GRAPHICS_RECT;const content=this.ui.group('排行列表',0,0,viewport,654,Math.max(349,c.arenaOrder.length*66));let offset=0,origin=0,before=0;
     const scroll=(value:number)=>{offset=Math.max(0,Math.min(Math.max(0,c.arenaOrder.length*66-339),value));content.setPosition(0,offset);};
-    viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.4));
+    reserveVerticalScroll(viewport);viewport.on(Node.EventType.TOUCH_START,(e:EventTouch)=>{origin=e.getLocation().y;before=offset;});viewport.on(Node.EventType.TOUCH_MOVE,(e:EventTouch)=>scroll(before+e.getLocation().y-origin));viewport.on(Node.EventType.MOUSE_WHEEL,(e:EventMouse)=>scroll(offset-e.getScrollY()*.4));
     c.arenaOrder.forEach((id,i)=>{const ours=id===LOCAL_PLAYER,n=this.ui.button('',0,139-i*66,638,59,()=>{if(Math.abs(offset-before)>12)return;if(ours)this.defensePreview();else this.arenaOpponent(id);},{parent:content,selected:ours});this.ui.text(String(i+1),-283,0,25,UI_COLORS.ink,n,49,36);const t=ours?s.collection[c.arenaDefense[0]]:Object.values(c.aiPlayers[id]?.pets??{})[0];if(t)this.ui.pet(t,-227,0,43,n);this.ui.text(playerName(s,id)+(ours?' · 你':' · AI'),-27,0,23,UI_COLORS.ink,n,320,37);this.ui.text('查看 ›',252,0,20,UI_COLORS.sand,n,102,34);});
     const countdown=this.ui.text('',0,-249,20,UI_COLORS.ink,p,1090,34),tick=()=>{const left=Math.max(0,arenaSettlementAt(Date.now())-Date.now()),h=Math.floor(left/3600000),m=Math.floor(left/60000)%60;countdown.string=locked?'本周已结算，奖励已投递邮箱；周一重新开启':'本周结算倒计时 '+Math.floor(h/24)+'天 '+h%24+'时 '+m+'分 · 周日22:00投递邮箱';};p.addComponent(MenuTicker).step=tick;tick();
     this.ui.button('进攻阵容',-441,-303,222,51,()=>this.pick('进攻阵容',c.arenaAttack.length===5?[...c.arenaAttack]:Object.keys(s.collection).slice(0,5),5,false,ids=>{this.dispatch({kind:'arenaAttack',ids});this.arenaV2(tier);},()=>this.arenaV2(tier),0,true),{parent:p,size:23});

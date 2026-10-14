@@ -1,4 +1,5 @@
-import {BUFFS,chapterWaves,recruitCost,legacyRecruitCost} from './expeditionRules';
+import {recruitmentSpent} from './expeditionEconomy';
+import {BUFFS,chapterWaves,recruitCost,legacyRecruitCost,isCoastTrial} from './expeditionRules';
 import {groundIssue,placementIssue,fieldIssue} from './placement';
 import {BOSSES} from './bossCatalog';
 import type { BattleState } from './battle';
@@ -288,7 +289,7 @@ function validateBattleState(state: unknown, allowLegacyLayoutSlots: boolean): a
     number(unit.interval, `${name}.interval`, Number.MIN_VALUE);
     for (const field of ['nextAttackTick', 'actionUntilTick', 'attackCount', 'nextRegenTick', 'cleanseReadyTick']) integer(unit[field], `${name}.${field}`);
     integer(unit.lastDamageTick, `${name}.lastDamageTick`, 0, tick);
-    if(unit.pendingAttack!==undefined){const shot=object(unit.pendingAttack,`${name}.pendingAttack`);check(s.layoutVersion===2,name,'旧布局不能带延迟攻击');reference(shot.targetId,`${name}.pendingAttack.targetId`,refs.entities);bool(shot.healing,`${name}.pendingAttack.healing`);check(shot.healing===(unit.role==='leaf'),name,'治疗攻击职业不一致');integer(shot.launchTick,`${name}.pendingAttack.launchTick`,Math.max(0,tick-3),tick+3);integer(shot.landTick,`${name}.pendingAttack.landTick`,tick,tick+6);check((shot.landTick as number)-(shot.launchTick as number)===3,name,'普攻前摇时间损坏');bool(shot.launched,`${name}.pendingAttack.launched`);}
+    if(unit.pendingAttack!==undefined){const shot=object(unit.pendingAttack,`${name}.pendingAttack`);check(s.layoutVersion===2,name,'旧布局不能带延迟攻击');reference(shot.targetId,`${name}.pendingAttack.targetId`,refs.entities);bool(shot.healing,`${name}.pendingAttack.healing`);check(!shot.healing||unit.role==='leaf',name,'治疗攻击职业不一致');integer(shot.launchTick,`${name}.pendingAttack.launchTick`,Math.max(0,tick-3),tick+3);integer(shot.landTick,`${name}.pendingAttack.landTick`,tick,tick+6);check((shot.landTick as number)-(shot.launchTick as number)===3,name,'普攻前摇时间损坏');bool(shot.launched,`${name}.pendingAttack.launched`);}
     for(const key of ['holyUntilTick','holyReadyTick'])if(unit[key]!==undefined){integer(unit[key],`${name}.${key}`);check(owned.has('holyLight'),name,'未拥有圣光');}
     if(unit.rebirthUsed!==undefined){bool(unit.rebirthUsed,`${name}.rebirthUsed`);check(owned.has('rebirth'),name,'未拥有重生');}
     if(unit.tauntUntilTick!==undefined){integer(unit.tauntUntilTick,`${name}.tauntUntilTick`);check(owned.has('taunt'),name,'未拥有挑衅');}
@@ -304,8 +305,14 @@ function validateBattleState(state: unknown, allowLegacyLayoutSlots: boolean): a
       shieldSum += number(entry.amount, `${label}.amount`, 0, hp.maxHp * .4 + tolerance(hp.maxHp));
       integer(entry.untilTick, `${label}.untilTick`);
       const source = reference(entry.sourceId, `${label}.sourceId`, new Set(refs.units.keys()));
-      const sourceSkill = skill(entry.skillId, `${label}.skillId`);
-      check(refs.unitSkills.get(source)!.has(sourceSkill), label, '护盾来源未拥有对应技能');
+      if(entry.buffId!==undefined){
+        const battle=s as unknown as BattleState;
+        check(entry.buffId==='healingTide'&&entry.skillId===undefined&&isCoastTrial(battle)&&!!battle.expedition?.players.some(p=>(p.buffs.healingTide??0)>0),label,'护盾祝福来源不合法');
+        check((entry.untilTick as number)<=tick+60,label,'盈潮护盾持续时间超出上限');
+      }else{
+        const sourceSkill = skill(entry.skillId, `${label}.skillId`);
+        check(refs.unitSkills.get(source)!.has(sourceSkill), label, '护盾来源未拥有对应技能');
+      }
     }
     close(shield, shieldSum, `${name}.shield`);
     for (const [enemyId, at] of Object.entries(object(unit.reflectTicks, `${name}.reflectTicks`))) {
@@ -332,6 +339,9 @@ function validateBattleState(state: unknown, allowLegacyLayoutSlots: boolean): a
     if(enemy.bossId!==undefined)check(kind==='boss'&&BOSSES.some(b=>b.id===enemy.bossId),name,'首领资料无效');
     if(enemy.mechanismOwner!==undefined){reference(enemy.mechanismOwner,name+'.mechanismOwner',refs.entities);check(s.tacticsVersion===1,name,'机关版本无效');}if(enemy.tacticCount!==undefined)integer(enemy.tacticCount,name+'.tacticCount');
     if(enemy.trait!==undefined){check((s.encounterVersion===1||s.faunaVersion===1)&&['mender','sprinter','bulwark'].includes(String(enemy.trait)),name,'敌人特性未知');integer(enemy.traitReadyTick,`${name}.traitReadyTick`);}
+    if(enemy.rations!==undefined)integer(enemy.rations,name+'.rations',0,10000000);
+    if(enemy.originWave!==undefined)integer(enemy.originWave,name+'.originWave',1,s.wave as number);
+    if((s.expedition as RecordValue|undefined)?.cadenceVersion===1)check(enemy.originWave!==undefined,name,'缺少所属波次');
     if(enemy.abilityReadyTick!==undefined)integer(enemy.abilityReadyTick,name+'.abilityReadyTick');
     if(enemy.cast!==undefined){const c=object(enemy.cast,name+'.cast');check(s.faunaVersion===1&&['web','fireRain','beacon','breakwater','frost','mortar','drain','rally','shock'].includes(String(c.kind)),name,'敌人蓄力不合法');point(c,name+'.cast');integer(c.landTick,name+'.cast.landTick');if(c.points!==undefined)for(const [i,p] of array(c.points,name+'.cast.points',3).entries())point(p,name+'.cast.points.'+i);}
     if(enemy.slam!==undefined){const slam=object(enemy.slam,`${name}.slam`);check(s.encounterVersion===1&&kind==='boss',name,'无效重击');point(slam,`${name}.slam`);integer(slam.landTick,`${name}.slam.landTick`);}
@@ -343,7 +353,7 @@ function validateBattleState(state: unknown, allowLegacyLayoutSlots: boolean): a
   for (const [i, raw] of Array.from(spawns.entries())) {
     const name = `出怪计划[${i}]`, spawn = object(raw, name), kind = text(spawn.kind, `${name}.kind`);
     check(own(ENEMIES, kind), name, '敌人类型未知');
-    checkRouteId(spawn,name);
+    checkRouteId(spawn,name);if(spawn.rations!==undefined)integer(spawn.rations,name+'.rations',0,10000000);
     number(spawn.time, `${name}.time`);
     number(spawn.hpScale, `${name}.hpScale`, Number.MIN_VALUE); number(spawn.attackScale, `${name}.attackScale`, 0);
   }
@@ -383,6 +393,8 @@ function validateBattleState(state: unknown, allowLegacyLayoutSlots: boolean): a
     if (event.amount !== undefined) number(event.amount, `${name}.amount`);
     if (event.x !== undefined || event.z !== undefined) point(event, name);
     for (const field of ['critical', 'secondary']) if (event[field] !== undefined) bool(event[field], `${name}.${field}`);
+    for(const field of ['fromX','fromZ'])if(event[field]!==undefined)number(event[field],`${name}.${field}`,-MAX,MAX);
+    for(const field of ['radius','duration'])if(event[field]!==undefined)number(event[field],`${name}.${field}`);
     if (event.effect !== undefined) text(event.effect, `${name}.effect`, true);
     if (type !== 'waveEnd') check(event.sourceId !== undefined, name, '缺少来源个体');
     if (['attack', 'heal', 'damage', 'defeat', 'shield', 'control'].includes(type)) check(event.targetId !== undefined, name, '缺少目标个体');
@@ -399,15 +411,17 @@ function validateExpeditionState(s:RecordValue,slots:Point[]):void{
  if(e.heldRoles!==undefined){const held=array(e.heldRoles,'手动保留职业',5);check(e.coastTrial===1&&new Set(held).size===held.length&&held.every(v=>typeof v==='string'&&own(ROLES,v)),'手动保留职业','不合法');}
  check(kind===(id<50?'chapter':id===50?'endless':'raid'),'局内模式','与地图不符');
  const limit=kind==='endless'?0:kind==='chapter'?chapterWaves(id):[10,15,20,20][id===55?3:id-51];
- check(e.limit===limit&&e.cost===(limit?(e.version===2?recruitCost(limit):legacyRecruitCost(limit)):50)&&e.cap===(limit?20:0),'征召配置','与波次不符');
- const completed=integer(e.completed,'已完成波次',0,limit||MAX);check(completed<=(s.wave as number)&&(s.wave as number)<=completed+1,'波次进度','不同步');
+ check(e.limit===limit&&e.cost===(e.economyVersion===1?40:limit?(e.version===2?recruitCost(limit):legacyRecruitCost(limit)):50)&&e.cap===(limit?20:0),'征召配置','与波次不符');
+ if(e.economyVersion!==undefined)check(e.economyVersion===1&&e.version===2,'干粮经济','未知版本');
+ const completed=integer(e.completed,'已完成波次',0,limit||MAX);check(completed<=(s.wave as number)&&(e.cadenceVersion===1||(s.wave as number)<=completed+1),'波次进度','不同步');
+ if(e.cadenceVersion!==undefined){check(e.cadenceVersion===1,'波次时钟','未知版本');const cleared=array(e.clearedWaves,'已结算波次').map(v=>integer(v,'已结算波次',1,s.wave as number));check(cleared.length===completed&&new Set(cleared).size===cleared.length,'已结算波次','重复或数量不符');integer(e.nextWaveTick,'下波时间');}
  integer(e.serial,'征召编号');if(e.nextWaveTick!==undefined)integer(e.nextWaveTick,'下波时间');
  const awards=array(e.bossAwards,'首领奖励波次').map(v=>integer(v,'首领奖励波次',1,s.wave as number));check(new Set(awards).size===awards.length,'首领奖励','重复');
  const players=array(e.players,'局内玩家',2);check(players.length===(kind==='raid'?2:1),'局内玩家','数量错误');const owners=new Set<string>();
  players.forEach((raw,i)=>{const p=object(raw,'局内玩家'),owner=text(p.id,'玩家编号');check(!owners.has(owner),'玩家编号','重复');owners.add(owner);
   const templates=array(p.templates,'培养模板',5);check(templates.length>0,'培养模板','为空');const ids=templates.map(raw=>text(object(raw,'培养模板').id,'培养来源'));check(new Set(ids).size===ids.length,'培养模板','重复');
   const expected=Array.from({length:slots.length/players.length},(_,j)=>i*slots.length/players.length+j),actual=array(p.slots,'站位归属');check(JSON.stringify(actual)===JSON.stringify(expected),'站位归属','与地图不符');
-  const coins=integer(p.coins,'局内干粮'),earned=integer(p.earned,'获得干粮'),spent=integer(p.spent,'支出干粮'),recruited=integer(p.recruited,'征召数量',0,limit?20:MAX);check(coins===earned-spent+(e.version===2?2*(e.cost as number):0)&&spent===recruited*(e.cost as number),'局内干粮','账目不一致');
+  const coins=integer(p.coins,'局内干粮'),earned=integer(p.earned,'获得干粮'),spent=integer(p.spent,'支出干粮'),recruited=integer(p.recruited,'征召数量',0,limit?20:MAX);check(coins===earned-spent+(e.economyVersion===1?90:e.version===2?2*(e.cost as number):0)&&spent===(e.economyVersion===1?recruitmentSpent(recruited):recruited*(e.cost as number)),'局内干粮','账目不一致');
   const buffs=object(p.buffs,'局内祝福');for(const [key,value]of Object.entries(buffs)){check(own(BUFFS,key),'祝福','未知');integer(value,'祝福层数',1,BUFFS[key as keyof typeof BUFFS].cap??MAX);}
   const choices=array(p.choices,'祝福选项',3);check(choices.length===0||choices.length===3,'祝福选项','数量错误');check(new Set(choices).size===choices.length&&choices.every(v=>typeof v==='string'&&own(BUFFS,v)),'祝福选项','重复或未知');
   const pending=integer(p.pending,'待领祝福',0,awards.length);check((choices.length>0)===(pending>0),'待领祝福','不同步');check(Object.values(buffs).reduce<number>((n,v)=>n+(v as number),0)+pending===awards.length,'已领祝福','与首领记录不符');

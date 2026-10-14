@@ -121,6 +121,7 @@ export interface RunResult {
 export interface Settings { music: number; effects: number; quality: 'high' | 'low'; reducedMotion: boolean; autoSkills?:boolean;manualSkillTurtles?:string[] }
 export type AdKind = 'stamina' | 'doubleGold' | 'refresh';
 export interface GameSave {
+  solo?:import("./soloProgress").SoloProgress;
   patrol?:import('./patrol').PatrolState;
   taskJournal?:import('./taskPolicy').TaskJournal;
   livingVersion?:1;
@@ -176,7 +177,7 @@ export interface EnemyDefinition {
   id: EnemyKind; name: string; health: number; armor: number; resist: number;
   speed: number; attack: number; interval: number; range: number; leak: number;
 }
-export interface Spawn { bounty?:boolean; kind: EnemyKind; time: number; hpScale: number; attackScale: number; routeId?:number }
+export interface Spawn { rations?:number; bounty?:boolean; kind: EnemyKind; time: number; hpScale: number; attackScale: number; routeId?:number }
 export interface LevelDefinition {
   sceneRevision?:number;
   stationVersion?:2|3|4|5|6; sceneArt?:string;sceneMirror?:boolean;

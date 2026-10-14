@@ -6,7 +6,7 @@ import {RELEASE_BALANCE} from './releaseBalance';
 
 export const PET_LEVEL_CAP=50;
 /** New ranges apply to migrated pets; historical battle snapshots keep their own values. */
-export const petRange=(t:Turtle)=>t.development?(t.role==='stone'?2.8:ROLES[t.role].range):ROLES[t.role].range;
+export const petRange=(t:Turtle)=>ROLES[t.role].range;
 export const levelCost=(level:number)=>60+12*level+2*level*level;
 export function levelInfo(t:Turtle):{level:number;current:number;needed:number;available:number}{
  let xp=t.development?.xp??0,level=1;

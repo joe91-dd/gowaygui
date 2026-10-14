@@ -15,6 +15,18 @@ for(let i=16;i<=50;i++)IMAGES.push((`map-coast-stage-${i}`) as ArtV2Image);
 for(let i=50;i<=56;i++)IMAGES.push((`map-mode-scene-${i}`) as ArtV2Image);
 IMAGES.push(...THEME_ATLASES.map(x=>(`map-atlas-${x}` as ArtV2Image)));
 IMAGES.push('patrol-ocean','patrol-entry','patrol-boat','patrol-rewards',...ENEMY_G1.map(x=>('enemy-g1-'+x.id.toLowerCase()) as ArtV2Image));
+// Only shared slice atlases and the visible home are startup dependencies. Whole
+// page illustrations, unused advanced portraits and boss galleries load on demand.
+const STARTUP_IMAGES:ArtV2Image[]=[
+  'ui-skins','skill-icons','shop-icons','quality-frames','hero-lineup-keyed','ui-decoration','pearl-skins','portraits-clean',
+  'terrain-biomes','island-props','biome-landscapes','companion-signatures','enemy-guard-props','fauna-roster',
+  'battle-enemies-painted','battle-vfx-painted','home-stone-keyed','hud-symbols','functional-icons','skill-books-release',
+  'skill-books-common','home-controls-keyed','skill-icons-release','chart-chests','patrol-rewards','reward-chests',
+  'shop-packs-release','combat-main-poses','combat-support-poses','enemy-motion-poses','skill-symbols-common',
+  'skill-symbols-special','skill-mastery-symbols','water-surface','terrain-material-atlas','battle-terrain-atlas',
+  'approved-coast','battle-island-painted','home-background','game-logo',
+  ...IMAGES.filter(key=>key.startsWith('map-')&&!/^map-(coast-stage|mode-scene)-/.test(key)),
+];
 /** Decode artwork once; upload full-page textures only when a screen uses them. */
 class Owned {
   private uploaded?:Texture2D;
@@ -39,6 +51,10 @@ export class ArtV2Assets {
   private sliced=new Set<ArtV2Slice>();
   private bindings=new Set<Sprite>();
   private generation=0;
+  private pendingImages=new Map<ArtV2Image,Promise<void>>();
+  private cancelImageRequests=new Set<()=>void>();
+  private imagePaths:Partial<Record<ArtV2Image,string>>={};
+  private recentBattleScenes:string[]=[];
   battleEffect?:EffectAsset; terrainEffect?:EffectAsset;
   private companionEffect?:EffectAsset;private companionWorldEffect?:EffectAsset;
   companionMaterial(world=false):Material{const m=new Material();m.initialize({effectAsset:(world?this.companionWorldEffect:this.companionEffect)!,defines:world?{}:{USE_TEXTURE:true}});return m;}
@@ -72,22 +88,58 @@ export class ArtV2Assets {
     });
     const modern:Partial<Record<ArtV2Image,string>>={'hud-symbols':'hud-symbols','honor-pet-terrace':'honor-pet-terrace','honor-terrace':'honor-terrace','pet-detail-shell':'pet-detail-shell','pet-display-sanctuary':'pet-display-sanctuary','ui-decoration':'ui-decoration','pearl-skins':'pearl-skins','boss-finished-roster':'boss-finished-roster','world-finished-roster':'world-finished-roster','terrain-material-atlas':'terrain-material-atlas','fauna-roster':'fauna-roster','reward-chests':'reward-chests',"boss-green-roster":"boss-green-roster","boss-blue-roster":"boss-blue-roster","boss-purple-roster":"boss-purple-roster","boss-yellow-roster":"boss-yellow-roster","boss-red-roster":"boss-red-roster","boss-gold-roster":"boss-gold-roster","skill-mastery-symbols":"skill-mastery-symbols","enemy-guard-props":"enemy-guard-props","companion-signatures":"companion-signatures-refined","abyss-bosses":"abyss-bosses","enemy-motion-poses":"enemy-motion-poses","biome-landscapes":"biome-landscapes","portraits-clean":"portraits-clean-refined","terrain-biomes":"terrain-biomes","island-props":"island-props","approved-coast":"approved-coast","skill-symbols-common":"skill-symbols-common","skill-symbols-special":"skill-symbols-special","combat-main-poses":"combat-main-poses-refined","combat-support-poses":"combat-support-poses-refined",'battle-island-painted':'battle-island-painted','battle-enemies-painted':'battle-enemies-painted','battle-vfx-painted':'battle-vfx-painted','battle-terrain-atlas':'battle-terrain-atlas','shop-packs-release':'shop-packs-release','skill-icons-release':'skill-icons-release','skill-books-common':'skill-books-common','skill-books-release':'skill-books-release','water-surface':'water-surface','home-background':'home-environment-full','login-background':'home-environment-full','arena-background':'home-environment-full','fusion-background':'fusion-environment','hero-lineup-keyed':'hero-lineup-keyed','functional-icons':'functional-icons','home-stone-keyed':'home-stone-keyed','home-controls-keyed':'home-controls-keyed'};
     for(const role of ['stone','spike','crystal','leaf','bubble'])modern[('home-advanced-'+role) as ArtV2Image]='home-advanced-'+role;
-    for(const key of IMAGES){if(key.startsWith('patrol-')||key.startsWith('chart-')||key.startsWith('chapter-')||key.startsWith('world-boss-')||key.startsWith('map-')||key==='market-pavilion')modern[key]=key;if(this.state!=='loading')break;let settled=false;try{const path=key.startsWith('enemy-g1-')?`enemy-g1/icons/${key.slice(9)}`:modern[key]?`art-modern/${modern[key]}`:`art-v2/${key}`;resources.load(path,ImageAsset,(error,image)=>{
-      if(settled||this.state!=='loading'||generation!==this.generation)return;settled=true;
-      if(error||!image||!isValid(image)){this.error=error?.message||`${key} unavailable`;this.state='failed';return;}
-      try{
-        let owned=this.ownedImages.get(image);if(!owned){owned=new Owned(image);this.ownedImages.set(image,owned);}this.images.set(key,owned);
-        this.finishLoading();
-      }catch(reason){this.error=String(reason);this.state='failed';}
-    });}catch(reason){this.error=String(reason);this.state='failed';}}
+    for(const key of IMAGES)if(key.startsWith('patrol-')||key.startsWith('chart-')||key.startsWith('chapter-')||key.startsWith('world-boss-')||key.startsWith('map-')||key==='market-pavilion')modern[key]=key;
+    this.imagePaths=modern;
+    void this.ensure(STARTUP_IMAGES).then(()=>this.finishLoading()).catch(reason=>{if(generation===this.generation&&this.state==='loading'){this.error=String(reason);this.state='failed';}});
     for(const [key,world] of [['companion-surface',false],['companion-world',true]] as const)resources.load('art-modern/'+key,EffectAsset,(error,effect)=>{
       if(generation!==this.generation||this.state!=='loading')return;
       if(error||!effect){this.error=error?.message||'伙伴动态材质未载入';this.state='failed';return;}
       effect.addRef();if(world)this.companionWorldEffect=effect;else this.companionEffect=effect;this.finishLoading();
     });
   }
+  /** Deduplicate requests across UI bindings and battle arrival, including aliases. */
+  ensure(keys:readonly string[]):Promise<void>{
+    if(this.state==='destroyed'||this.state==='idle')return Promise.reject(new Error('Artwork is not initialized'));
+    return Promise.all(keys.map(key=>{
+      if(this.frames.has(key as ArtV2Slice))return Promise.resolve();
+      const imageKey=this.iconAliases.get(key)??key as ArtV2Image;
+      if(this.images.has(imageKey))return Promise.resolve();
+      if(!IMAGES.includes(imageKey))return Promise.reject(new Error('Unknown artwork: '+key));
+      const current=this.pendingImages.get(imageKey);if(current)return current;
+      const generation=this.generation;
+      const request=new Promise<void>((resolve,reject)=>{
+        const path=imageKey.startsWith('enemy-g1-')?`enemy-g1/icons/${imageKey.slice(9)}`:this.imagePaths[imageKey]?`art-modern/${this.imagePaths[imageKey]}`:`art-v2/${imageKey}`;
+        let settled=false;
+        const finish=(failure?:unknown)=>{if(settled)return;settled=true;clearTimeout(timer);this.cancelImageRequests.delete(cancel);if(failure)reject(failure);else resolve();};
+        const cancel=()=>finish(new Error('Artwork request retired'));
+        const timer=setTimeout(()=>finish(new Error('图片加载超时，请重试：'+imageKey)),90000);
+        this.cancelImageRequests.add(cancel);
+        try{
+        resources.load(path,ImageAsset,(error,image)=>{
+          if(settled)return;
+          if(generation!==this.generation||this.state==='destroyed'){cancel();return;}
+          if(error||!image||!isValid(image)){finish(error??new Error(imageKey+' unavailable'));return;}
+          try{let owned=this.ownedImages.get(image);if(!owned){owned=new Owned(image);this.ownedImages.set(image,owned);}this.images.set(imageKey,owned);finish();}catch(reason){finish(reason);}
+        });
+        }catch(reason){finish(reason);}
+      });
+      this.pendingImages.set(imageKey,request);
+      void request.then(()=>{if(this.pendingImages.get(imageKey)===request)this.pendingImages.delete(imageKey);},()=>{if(this.pendingImages.get(imageKey)===request)this.pendingImages.delete(imageKey);});
+      return request;
+    })).then(()=>undefined);
+  }
   retry():void{if(this.state!=='failed')return;this.release();this.state='idle';this.preload();}
-  private finishLoading():void{if(this.images.size===IMAGES.length&&this.keyMaterial&&this.battleEffect&&this.terrainEffect&&this.companionEffect&&this.companionWorldEffect&&this.state==='loading'){this.makeSkins();this.state='ready';}}
+  /** Call after retiring the previous world; keep two maps, not a whole chapter in GPU memory. */
+  retainBattleScene(key?:string):void{
+    if(!key)return;this.recentBattleScenes=[key,...this.recentBattleScenes.filter(k=>k!==key)].slice(0,2);
+    for(const [old,owned] of this.images){
+      if(!/^map-(coast-stage|mode-scene)-/.test(old)||this.recentBattleScenes.includes(old))continue;
+      if([...this.bindings].some(s=>isValid(s)&&s.node.name==='ArtV2:'+old))continue;
+      this.images.delete(old);
+      if(![...this.images.values()].includes(owned)){this.ownedImages.delete(owned.image);owned.destroy();}
+    }
+  }
+  private finishLoading():void{if(STARTUP_IMAGES.every(key=>this.images.has(key))&&this.keyMaterial&&this.battleEffect&&this.terrainEffect&&this.companionEffect&&this.companionWorldEffect&&this.state==='loading'){this.makeSkins();this.state='ready';}}
   private makeSkins():void{
     const source=this.images.get('ui-skins')!;
     const specs:[ArtV2Skin,number,number,number,number,number,number][]=[['gold',24,158,448,206,64,56],['blue',521,158,480,205,68,54],['navy',1048,159,467,204,64,54],['wood',26,535,462,255,64,64],['paper',535,463,463,384,68,68],['resource',1050,464,464,380,64,64]];
@@ -174,20 +226,27 @@ export class ArtV2Assets {
 
   attach(parent:Node,key:ArtV2Image|ArtV2Slice,w:number,h:number,tint=Color.WHITE):Sprite|undefined{
     if(!this.ready||!isValid(parent,true))return;
-    const frame=this.battleFrame(key);if(!frame)return;
+    const frame=this.battleFrame(key);
     const sliced=this.sliced.has(key as ArtV2Slice),n=new Node(`ArtV2:${key}`);n.layer=parent.layer;n.setParent(parent);n.addComponent(UITransform).setContentSize(w*(sliced?2:1),h*(sliced?2:1));if(sliced)n.setScale(.5,.5,1);
-    const sprite=n.addComponent(Sprite);sprite.spriteFrame=frame;sprite.sizeMode=Sprite.SizeMode.CUSTOM;sprite.type=sliced?Sprite.Type.SLICED:Sprite.Type.SIMPLE;sprite.trim=false;sprite.color=tint;
+    const sprite=n.addComponent(Sprite);sprite.spriteFrame=frame??null;sprite.sizeMode=Sprite.SizeMode.CUSTOM;sprite.type=sliced?Sprite.Type.SLICED:Sprite.Type.SIMPLE;sprite.trim=false;sprite.color=tint;
     const hero=key.startsWith('hero-')||key.startsWith('portrait-');
     if(key.startsWith('hero-')||key.startsWith('pose-')||key.startsWith('signature-')||key.startsWith('enemy-prop-')||key.startsWith('island-props-')||key.startsWith('control-'))sprite.customMaterial=this.keyMaterial!;
     else if(key.startsWith('modern-'))sprite.customMaterial=this.iconMaterial!;
     // Assigning a frame in Sprite's default TRIMMED mode resets UITransform.
     // Set the final target dimensions after selecting CUSTOM mode.
-    if(hero&&key.startsWith('hero-')){const ratio=frame.rect.width/frame.rect.height;if(w/h>ratio)w=h*ratio;else h=w/ratio;}
+    if(frame&&hero&&key.startsWith('hero-')){const ratio=frame.rect.width/frame.rect.height;if(w/h>ratio)w=h*ratio;else h=w/ratio;}
     n.getComponent(UITransform)!.setContentSize(w*(sliced?2:1),h*(sliced?2:1));
+    if(!frame){const generation=this.generation;void this.ensure([key]).then(()=>{
+      if(generation!==this.generation||!isValid(n,true)||!isValid(sprite))return;
+      sprite.spriteFrame=this.battleFrame(key)??null;n.getComponent(UITransform)!.setContentSize(w,h);
+    }).catch(error=>{if(generation===this.generation&&isValid(n,true))console.warn('[ART_ON_DEMAND]',key,error);});}
     this.bindings.add(sprite);n.once(Node.EventType.NODE_DESTROYED,()=>{if(isValid(sprite))sprite.spriteFrame=null;this.bindings.delete(sprite);});return sprite;
   }
   destroy():void{if(this.state==='destroyed')return;this.generation++;this.state='destroyed';this.release();}
   private release():void{
+    for(const cancel of this.cancelImageRequests)cancel();this.cancelImageRequests.clear();
+    this.pendingImages.clear();
+    this.recentBattleScenes=[];
     for(const sprite of this.bindings)if(isValid(sprite)){sprite.spriteFrame=null;sprite.enabled=false;}this.bindings.clear();
     this.companionEffect?.decRef();this.companionWorldEffect?.decRef();this.companionEffect=undefined;this.companionWorldEffect=undefined;
     this.terrainEffect?.decRef();this.terrainEffect=undefined;this.battleEffect?.decRef();this.battleEffect=undefined;

@@ -1,4 +1,5 @@
 import {policyBook} from './bookPolicy';
+import {skillUnlocked} from './soloProgress';
 import {bookAllowed} from './bookPolicy';
 import type {GameSave,SkillId,Turtle,Material} from './types';
 import {SKILLS} from './data';
@@ -27,8 +28,8 @@ export function packRemaining(s:GameSave,now:number,id:ShopPackId):number{const 
 export const SHOP_CONFIG={turtlePrice:80,bookPrice:35,tenDiscount:.9,hundredEvery:100,turtleSkillWeights:[54,30,13,3],
   activeWeights:{hold:1,greatHeal:1.5,bubbleRing:1.5,piercingShot:.3,crystalCannon:.3} as Partial<Record<SkillId,number>>};
 export const ATTACK_BOOKS:SkillId[]=['fervor','caprice','polymorph','giant','scatter','arcane','counterStorm','calm','swift','reach','critical','combo','lifesteal','bounce','shredResist','spellDrain','shredArmor','extraTarget','piercingShot','crystalCannon'];
-export function packBookOdds(id:ShopPackId):{skillId:SkillId;chance:number}[]{
-  const skills=SKILLS.filter(s=>bookAllowed(s.id,'shop')&&(id==='bookRandom'||ATTACK_BOOKS.includes(s.id)));
+export function packBookOdds(id:ShopPackId,save?:GameSave):{skillId:SkillId;chance:number}[]{
+  const skills=SKILLS.filter(s=>(!save||skillUnlocked(save,s.id))&&bookAllowed(s.id,'shop')&&(id==='bookRandom'||ATTACK_BOOKS.includes(s.id)));
   if(id==='bookRandom'){const common=skills.filter(s=>!s.active).length,active=skills.filter(s=>s.active).length;return skills.map(s=>({skillId:s.id,chance:s.active?.1/active:.9/common}));}
   const total=skills.filter(s=>!s.active).reduce((sum,s)=>sum+BOOK_WEIGHTS[s.id].normal,0);
   return skills.map(s=>({skillId:s.id,chance:s.active?.01:BOOK_WEIGHTS[s.id].normal/total*.98}));
@@ -52,14 +53,14 @@ export function purchaseShop(s:GameSave,now:number,commandId:string,pool:ShopPoo
       if(i===9&&!draws.some(d=>d.turtle!.skills.length>=4)&&skills<4){skills=4;guarantee='ten';}
       const turtle=generate(s,now);turtle.skills=initialSkills(s,turtle.role,skills);s.collection[turtle.id]=turtle;draws.push({turtle,guarantee});
     }else{
-      let ids=SKILLS.filter(skill=>bookAllowed(skill.id,'shop')&&(!hundred||skill.active)).map(skill=>skill.id);
+      let ids=SKILLS.filter(skill=>skillUnlocked(s,skill.id)&&bookAllowed(skill.id,'shop')&&(!hundred||skill.active)).map(skill=>skill.id);
       const attackGuarantee=i===9&&!draws.some(d=>ATTACK_BOOKS.includes(d.skillId!));
       // If the hundredth book is defensive, an earlier draw carries the ten-draw attack guarantee.
       if(attackGuarantee&&!hundred){ids=ids.filter(id=>ATTACK_BOOKS.includes(id));guarantee='ten';}
       const skillId=hundred||attackGuarantee?weighted(s,ids.map(id=>({value:id,weight:1}))):policyBook(s,'activity');
       s.skillBooks??={};s.skillBooks[skillId]=(s.skillBooks[skillId]??0)+1;draws.push({skillId,guarantee});
       if(attackGuarantee&&hundred&&!ATTACK_BOOKS.includes(skillId)){
-        const prior=draws[0],old=prior.skillId!,replacement=weighted(s,ATTACK_BOOKS.filter(id=>bookAllowed(id,'shop')&&!SKILLS.find(x=>x.id===id)!.active).map(id=>({value:id,weight:BOOK_WEIGHTS[id].normal})));
+        const prior=draws[0],old=prior.skillId!,replacement=weighted(s,ATTACK_BOOKS.filter(id=>skillUnlocked(s,id)&&bookAllowed(id,'shop')&&!SKILLS.find(x=>x.id===id)!.active).map(id=>({value:id,weight:BOOK_WEIGHTS[id].normal})));
         s.skillBooks[old]!--;s.skillBooks[replacement]=(s.skillBooks[replacement]??0)+1;prior.skillId=replacement;prior.guarantee='ten';
       }
     }
@@ -77,7 +78,7 @@ export function purchaseShopPack(s:GameSave,now:number,commandId:string,id:ShopP
   }else if(id==='bookRandom'||id==='bookAttack'){
     let skillId:SkillId;
     if(id==='bookRandom')skillId=policyBook(s,'activity');
-    else{const roll=random(s);skillId=roll<.01?'piercingShot':roll<.02?'crystalCannon':weighted(s,ATTACK_BOOKS.filter(id=>bookAllowed(id,'shop')&&!SKILLS.find(s=>s.id===id)!.active).map(id=>({value:id,weight:BOOK_WEIGHTS[id].normal})));}
+    else{const roll=random(s);skillId=roll<.01?'piercingShot':roll<.02?'crystalCannon':weighted(s,ATTACK_BOOKS.filter(id=>skillUnlocked(s,id)&&bookAllowed(id,'shop')&&!SKILLS.find(s=>s.id===id)!.active).map(id=>({value:id,weight:BOOK_WEIGHTS[id].normal})));}
     s.skillBooks??={};s.skillBooks[skillId]=(s.skillBooks[skillId]??0)+1;draws.push({skillId,guarantee:'normal'});
   }else{
     const materials:Material[]=['attack','health','defense','growth'],amounts:Partial<Record<Material,number>>={};

@@ -15,10 +15,12 @@ const code=ts.transpileModule(fs.readFileSync(path.join(__dirname,'../assets/scr
 
 const deadlineModule={exports:{}};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(__dirname,'../assets/scripts/view/ResourceLoadDeadline.ts'),'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,{module:deadlineModule,exports:deadlineModule.exports});
+const queryModule={exports:{}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(__dirname,'../assets/scripts/platform/runtimeQuery.ts'),'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText,{module:queryModule,exports:queryModule.exports,location:{href:'game.js',search:'',protocol:''}});
 
 // Actual GameEntry navigation/update logic; GPU, model importer and battle rules
 // have their own checks. Resource completion is controlled, never wall-clock based.
-function fixture(){
+function fixture({native=false,debug=true,os='Android'}={}){
   const loads=[],worlds=[],homes=[],controllers=[],buttons=new Map(),titles=[],errors=[];
   const calls={now:100000,clock:0,beginRun:0,homeRender:0,pause:0,resume:0};
   const run={id:'already-entered-run',levelId:2,phase:'combat',wave:7,combatSeconds:238,
@@ -57,9 +59,13 @@ function fixture(){
     isValid:value=>!!value?.isValid,view:{off(){}},game:{off(){}},Game:{EVENT_HIDE:'hide',EVENT_SHOW:'show'},
   };
   const module={exports:{}};
-  vm.runInNewContext(code,{module,exports:module.exports,Date:class extends Date{static now(){return calls.now;}},console:{info(){},error(...args){errors.push(args);}},require(name){
+  vm.runInNewContext(code,{module,exports:module.exports,...(native?{location:{href:'game.js',search:'',protocol:''}}:{}),Date:class extends Date{static now(){return calls.now;}},console:{info(){},error(...args){errors.push(args);}},require(name){
+    if(name==='../platform/runtimeQuery')return queryModule.exports;
+    if(name==='../platform/nativeBattleTrace')return {recordNativeBattleStage(){},nativeBattleTraceText(){return '';}};
+    if(name==='./PearlBattleArt')return {PearlBattleArt:{ready:true}};
     if(name==='./ResourceLoadDeadline')return deadlineModule.exports;
-    if(name==='./ActiveSkillControls')return {ActiveSkillControls:class{render(){}update(){}}};if(name==='cc')return cc;
+    if(name==='./ActiveSkillControls')return {ActiveSkillControls:class{render(){}update(){}}};if(name==='cc')return {...cc,sys:{isNative:native,os,OS:{ANDROID:'Android'}}};if(name==='cc/env')return {DEBUG:debug};
+    if(name==='../core/arena')return {matchArena:()=> 'local-ai-opponent'};
     if(name==='./HomeWorld')return{HomeWorld:Home,HOME_CAMERA:{position:[1.8,8.2,12.8],target:[-.45,.9,0],baseVerticalFovDegrees:38}};
     if(name==='./BattleWorld')return{BattleWorld:World};
     if(name==='./BattleScreen')return{BattleScreen:Screen};
@@ -76,7 +82,7 @@ function fixture(){
   entry.interfaceReady=true; // This fixture begins after all homepage/UI preload gates.
   entry.node=new Node();entry.pipelineMaterial={};entry.mainCamera={node:new Node()};entry.homeWorld=new Home();entry.homeWorld.ready=true;entry.homeWorld.visible=true;entry.homeWorld.paused=false;
   entry.icons={ready:true,state:'ready',destroy(){}};entry.panels={state:'ready',destroy(){}};entry.portraits={ready:true,state:'ready',destroy(){}};
-  entry.service={snapshot,refreshClock(){calls.clock++;},beginRun(){calls.beginRun++;throw new Error('entry must not repeat beginRun');}};
+  entry.service={snapshot,get settingsSnapshot(){return {...snapshot.settings};},refreshClock(){calls.clock++;},beginRun(){calls.beginRun++;throw new Error('entry must not repeat beginRun');}};
   entry.ui={root:new Node(),clear(){buttons.clear();},modal(title){titles.push(title);return new Node();},sheet(title){return this.modal(title);},dialog(title){return this.modal(title);},portrait(){},icon(){},label(){},text(){},button(text,x,y,w,h,callback){buttons.set(text,callback);}};
   entry.audio={effect(){},update(){},pause(){calls.pause++;},resume(){calls.resume++;},playMusic(){return Promise.resolve();},destroy(){}};
   entry.arrivalView={active:false,setBattleProgress(){},show(failed=false,retry,back){this.active=true;titles.push(failed?'暂未抵达，再试一次':'即将抵达…');buttons.clear();if(back)buttons.set('返回海岛',back);if(failed&&retry)buttons.set('重新加载',retry);},hide(){this.active=false;},update(){},destroy(){}};
@@ -94,6 +100,43 @@ function fixture(){
   };
   return f;
 }
+
+test('Android trial unlocks require a Cocos debug export on native Android',()=>{
+  assert.equal(fixture({native:true}).entry.allMapsReview,true);
+  for(const options of [{native:true,debug:false},{native:true,os:'iOS'},{native:false}]){
+    assert.equal(fixture(options).entry.allMapsReview,false);
+  }
+});
+
+test('Illustrated home waits for its artwork without loading the unused legacy 3D island',()=>{
+  const f=fixture({native:true});f.entry.homeWorld.destroy();f.entry.homeWorld=undefined;
+  f.entry.art={ready:false,state:'loading'};f.entry.screen='home';f.entry.entered=true;
+  f.entry.syncHomePresentation=()=>{};f.entry.render=()=>{};
+  f.entry.beginHomeArrival();assert.equal(f.homes.length,1);assert.equal(f.entry.homeArrival.world,undefined);
+  f.entry.finishHomeArrival();assert.ok(f.entry.homeArrival);
+  f.entry.art.ready=true;f.entry.art.state='ready';f.entry.finishHomeArrival();
+  assert.equal(f.entry.homeArrival,undefined);assert.equal(f.entry.homeWorld,undefined);assert.equal(f.homes.length,1);
+});
+
+test('Android map selection reaches chapter, endless, four raids, arena and world boss without browser location',()=>{
+  const f=fixture({native:true}),calls=[],opened=[];
+  f.snapshot.collection={a:{},b:{},c:{},d:{},e:{}};
+  f.entry.command=k=>k;f.entry.roomClient={};
+  f.entry.openBattle=async mode=>{opened.push(mode??'chapter');};
+  f.entry.service.beginPrototypeRun=(...args)=>calls.push(['run',...args]);
+  f.entry.service.beginRaid=(...args)=>calls.push(['raid',...args]);
+  f.entry.service.beginArena=(...args)=>calls.push(['arena',...args]);
+  for(const id of [0,49,50,51,52,53,54,55,56])f.entry.openNativeTrialMap(id);
+  assert.deepEqual(opened,['chapter','chapter','chapter','raid','raid','raid','arena','raid','world']);
+  assert.deepEqual(calls.filter(c=>c[0]==='run').map(c=>[c[2],c[4]]),[[0,'chapter'],[49,'chapter'],[50,'endless']]);
+  assert.deepEqual(calls.filter(c=>c[0]==='raid').map(c=>c[2]),[0,1,2,3]);
+  assert.equal(calls.find(c=>c[0]==='arena')[2],'local-ai-opponent');
+  assert.equal(f.entry.roomClient.worldSelection.length,5);
+  const count=opened.length;
+  for(const id of [-1,57,1.5])f.entry.openNativeTrialMap(id);
+  f.entry.appHidden=true;f.entry.openNativeTrialMap(0);
+  assert.equal(opened.length,count);
+});
 
 for(const first of ['models','island'])test(`加载顺序 ${first} 先到：两者就绪前不建控制器、不显示战场、不推进战斗`,()=>{
   const f=fixture(),world=f.open();
@@ -197,4 +240,18 @@ test('持续完成模型时超过90秒仍可进入战斗，加载时间不计为
  const f=fixture(),world=f.open();f.resolve();
  for(let n=1;n<=3;n++){f.calls.now+=60000;world.loadedResourceCount=n;f.frame();assert.ok(f.entry.battleArrival);assert.equal(world.disposed,false);assert.equal(f.controllers.length,0);}
  world.modelsReady=true;f.frame();assert.equal(f.controllers.length,1);assert.equal(f.controllers[0].steps,0);assert.equal(world.visible,true);f.unchanged();
+});
+
+
+test('按需地图加载完成前不建世界；退出后迟到图片不会重新打开战斗',async()=>{
+ const f=fixture();let finish;const ready=new Promise(resolve=>finish=resolve);
+ f.entry.art={ready:false,ensure:()=>ready,retainBattleScene(){}};
+ const pending=f.entry.openBattle();assert.equal(f.worlds.length,0);assert.equal(f.entry.arrivalView.active,true);
+ f.click('返回海岛');finish();await pending;assert.equal(f.worlds.length,0);assert.equal(f.entry.screen,'home');f.unchanged();
+});
+test('按需地图失败可重试；成功后才进入原有模型加载流程',async()=>{
+ const f=fixture();f.entry.art={ready:false,ensure:()=>Promise.reject(new Error('map offline')),retainBattleScene(){}};
+ await f.entry.openBattle();assert.equal(f.worlds.length,0);assert.ok(f.buttons.has('重新加载'));f.unchanged();
+ f.entry.art.ensure=()=>Promise.resolve();await f.entry.openBattle(undefined,true);assert.equal(f.worlds.length,1);
+ const w=f.worlds[0];assert.equal(w.visible,false);w.modelsReady=true;f.resolve();f.frame();assert.equal(f.controllers.length,1);assert.equal(w.visible,true);f.unchanged();
 });

@@ -54,6 +54,7 @@ export class LocalDiagnostics {
 
   constructor(private readonly owner:Node){
     this.enabled=localDiagnosticsEnabled();if(!this.enabled)return;
+    performance.setResourceTimingBufferSize?.(10000);
     this.startedAt=performance.now();this.lastSample=this.startedAt;this.startedISO=new Date().toISOString();
     if(document.hidden)this.hiddenAt=this.startedAt;
     document.addEventListener('visibilitychange',this.visibilityChanged);
@@ -111,6 +112,7 @@ export class LocalDiagnostics {
     if(!this.enabled||this.destroyed)return null;
     const now=performance.now(),hidden=this.hiddenMs+(this.hiddenAt===null?0:now-this.hiddenAt),canvas=game.canvas;
     return {
+      resources:this.resourceSummary(),
       schema:'gowaygui-local-qa-v1',startedAt:this.startedISO,exportedAt:new Date().toISOString(),
       durationMs:now-this.startedAt,foregroundDurationMs:Math.max(0,now-this.startedAt-hidden),hiddenDurationMs:hidden,
       navigationToReadyMs:this.readyAt,diagnosticsToReadyMs:this.readyAt===null?null:this.readyAt-this.startedAt,
@@ -126,6 +128,10 @@ export class LocalDiagnostics {
     };
   }
 
+  private resourceSummary():Record<string,unknown>{
+    const rows=performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    return {entries:rows.length,transferBytes:rows.reduce((n,r)=>n+r.transferSize,0),encodedBytes:rows.reduce((n,r)=>n+r.encodedBodySize,0),decodedBytes:rows.reduce((n,r)=>n+r.decodedBodySize,0),meaning:'Browser resource timing; decoded means HTTP decompression, not texture/GPU memory. Cached transfers may report zero.'};
+  }
   private createPanel():void{
     const panel=document.createElement('div');panel.dataset.gowayguiQa='1';
     panel.style.cssText='position:fixed;left:max(6px,env(safe-area-inset-left));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147483647;color:#fff2cf;font:12px/1.4 sans-serif;pointer-events:none;';
@@ -145,6 +151,8 @@ export class LocalDiagnostics {
     toggle.style.cssText='cursor:pointer;pointer-events:auto;width:44px;height:30px;padding:3px;border:1px solid #739b96;border-radius:6px;background:rgba(20,42,43,.82);color:#fff2cf;font:12px sans-serif;';
     toggle.setAttribute('aria-controls',actions.id);toggle.setAttribute('aria-expanded','false');panel.appendChild(actions);
     this.screenshotButton=button('保存当前截图',()=>this.saveScreenshot());button('导出性能记录',()=>this.exportPerformance());
+    const report=document.createElement('pre');report.hidden=true;report.style.cssText='max-height:45vh;overflow:auto;white-space:pre-wrap;font:10px monospace;user-select:text;';
+    button('查看性能数据',()=>{report.hidden=!report.hidden;if(!report.hidden)report.textContent=JSON.stringify(this.report(),null,2);});actions.appendChild(report);
     for(const event of ['pointerdown','pointerup','touchstart','touchend','mousedown','mouseup'])panel.addEventListener(event,e=>e.stopPropagation());
     this.status=document.createElement('div');this.status.setAttribute('role','status');actions.appendChild(this.status);
     this.downloadLink=document.createElement('a');this.downloadLink.style.cssText='display:none;color:#ffe49a;padding:4px;';actions.appendChild(this.downloadLink);

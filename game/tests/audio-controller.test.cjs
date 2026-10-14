@@ -77,6 +77,7 @@ function fixture({deferStart = false} = {}) {
   const resources = {load(name, Type, callback) { resourceLoads.push({name, callback, done: false}); }};
   const module = {exports: {}};
   vm.runInNewContext(compiled, {module, exports: module.exports, require(name) {
+    if(name==='../platform/runtimeQuery')return {runtimeQuery:()=>({get:()=>null,has:()=>false})};
     assert.equal(name, 'cc'); return {AudioClip, AudioSource, Node, resources};
   }, performance: {now: () => now}, console: {warn(...values) { warnings.push(values); }}});
   const parent = new Node('owner');
@@ -133,9 +134,9 @@ test('首领出现切换音乐；多目标同帧技能只发一次音且合成�
   f.audio.destroy();
 });
 
-test('预载三十九个音效；多次手势和同曲请求只播放一次，首帧静音淡入', async () => {
-  const f = fixture(); assert.equal(f.resourceLoads.length, 40);
-  assert.equal(f.resourceLoads.filter(load => load.name.includes('/sfx_')).length, 39);
+test('预载四十个音效；多次手势和同曲请求只播放一次，首帧静音淡入', async () => {
+  const f = fixture(); assert.equal(f.resourceLoads.length, 41);
+  assert.equal(f.resourceLoads.filter(load => load.name.includes('/sfx_')).length, 40);
   await f.preload(); assert.equal(f.playerLoads.length, 0);
   for (let i = 0; i < 5; i++) f.audio.unlock();
   await Promise.all([f.audio.playMusic('bgm_home'), f.audio.playMusic('bgm_home')]);
@@ -310,4 +311,13 @@ test('五职业与首领施法各自命中音效，过期事件不补播', () =>
   ]));
   assert.deepEqual(calls,roles.map(role=>'sfx_skill_'+role).concat(['sfx_boss_skill','sfx_boss_skill']));
   f.audio.destroy();
+});
+
+test('Running combat selects battle music even before spawn events; living bosses and world mode select boss music',()=>{
+  const f=fixture(),calls=[];f.audio.playMusic=async key=>{calls.push(key);f.audio.desired=key;};
+  const b={status:'fighting',levelId:0,tick:0,units:[],enemies:[]};
+  f.audio.battleEvents(b,[]);f.audio.battleEvents(b,[]);assert.deepEqual(calls,['bgm_battle']);
+  b.enemies=[{kind:'boss',alive:true}];f.audio.battleEvents(b,[]);assert.equal(calls.at(-1),'bgm_boss');
+  b.enemies[0].alive=false;f.audio.battleEvents(b,[]);assert.equal(calls.at(-1),'bgm_battle');
+  b.levelId=56;f.audio.battleEvents(b,[]);assert.equal(calls.at(-1),'bgm_boss');f.audio.destroy();
 });

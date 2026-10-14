@@ -23,7 +23,7 @@ export class WishSequence extends Component {
  private age=0;private ended=false;private complete:()=>void=()=>{};private art?:Node;private light?:Graphics;private reduced:()=>boolean=()=>false;
  private ui?:IslandUI;private orbit:Node[]=[];private rays:Node[]=[];private phase=0;private frame=0;
  static play(ui:IslandUI,parent:Node,pool:'turtle'|'book',done:()=>void):void{
-  const layer=ui.group('祈愿揭晓动画',0,0,parent,1280,720),g=layer.addComponent(Graphics);g.fillColor=new Color(8,35,58,236);g.rect(-640,-360,1280,720);g.fill();
+  const layer=ui.screenVeil('祈愿揭晓动画','#08233A',236,parent);
   layer.on(Node.EventType.TOUCH_START,(e:EventTouch)=>e.propagationStopped=true);layer.on(Node.EventType.TOUCH_END,(e:EventTouch)=>e.propagationStopped=true);
   const seq=layer.addComponent(WishSequence);seq.complete=done;seq.reduced=ui.reducedMotion;seq.ui=ui;
   const stage=ui.group('海心祈愿',0,0,layer,760,560);seq.light=stage.addComponent(Graphics);

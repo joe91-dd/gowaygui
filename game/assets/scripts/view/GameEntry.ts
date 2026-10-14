@@ -1,3 +1,10 @@
+import {SoloMenus} from './SoloMenus';
+import {SOLO_MILESTONES,milestoneValue,enableSolo} from '../core/soloProgress';
+import {runtimeQuery} from '../platform/runtimeQuery';
+import {recordNativeBattleStage,nativeBattleTraceText} from '../platform/nativeBattleTrace';
+import {CAMERA_ORDER,battleCoverHalfHeight,homeAdventureFold} from './DisplayLayout';
+import {PearlBattleArt} from './PearlBattleArt';
+import {DEBUG} from 'cc/env';
 import {chapterWaves} from '../core/expeditionRules';
 import {SeaChart} from './SeaChart';
 import {PatrolView,patrolEntry} from './PatrolView';
@@ -24,7 +31,7 @@ import {raidMapId} from '../core/raids';
 import {AchievementMenus} from './AchievementMenus';
 import {CompanionMotion} from './CompanionMotion';
 import {avatarPicker,paintAvatar} from './ProfileAvatar';
-import {_decorator,UIOpacity,Sprite,Color,Graphics,Mask, Camera, Canvas, Component, Game, game as engineGame, isValid, Label, Layers, Material, Node, Prefab, profiler, ResolutionPolicy, resources, screen as displayScreen, sys, UITransform, Vec3, view,tween} from 'cc';
+import {_decorator,EventTouch,UIOpacity,Sprite,Color,Graphics,Mask, Camera, Canvas, Component, Game, game as engineGame, isValid, Label, Layers, Material, Node, Prefab, profiler, ResolutionPolicy, resources, screen as displayScreen, sys, UITransform, Vec3, view,tween,assetManager} from 'cc';
 import {mapBounds} from '../core/mapPresentation';
 import {IslandUI, UI_COLORS,color} from './IslandUI';
 import {IslandIcons, IslandIconId} from './IslandIcons';
@@ -101,6 +108,9 @@ export class GameEntry extends Component {
   private collectionRole:Role|'all'='all';
   private collectionLocked=false;
   private commandNumber=0;
+  private readonly solo=runtimeQuery().get('edition')==='solo';
+  private readonly soloReview=this.solo&&runtimeQuery().get('review')==='1';
+  private soloMenus():SoloMenus{return new SoloMenus(this.ui,this.service!,k=>this.command(k),()=>this.go('home'),e=>this.error(e));}
   private sessionTag=Date.now().toString(36);
   private homeWorld?:HomeWorld;
   private homeArrival?:{world?:HomeWorld;error?:unknown;failed:boolean};
@@ -125,8 +135,10 @@ export class GameEntry extends Component {
   private disposed=false;
   private skeletalReview?:SkeletalReviewScreen|ApprovedCastReviewScreen|EnemyG1ReviewScreen;
   private appHidden=false;
-  private readonly g1Showcase=typeof location!=='undefined'&&new URLSearchParams(location.search).get('showcase')==='g1';
-  private readonly allMapsReview=typeof location!=='undefined'&&['127.0.0.1','localhost','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='all-maps';
+  private readonly g1Showcase=typeof location!=='undefined'&&runtimeQuery().get('showcase')==='g1';
+  // This APK is a debug-only, offline test build; release builds never get trial unlocks.
+  private readonly nativeTrial=DEBUG&&sys.isNative&&sys.os===sys.OS.ANDROID;
+  private readonly allMapsReview=this.nativeTrial||(typeof location!=='undefined'&&['127.0.0.1','localhost','[::1]'].includes(location.hostname)&&runtimeQuery().get('preview')==='all-maps');
   private get isolatedReview():boolean{return this.g1Showcase||this.allMapsReview;}
   private g1ShowcaseStarted=false;
   private g1ShowcaseWarmup=0;
@@ -139,50 +151,63 @@ export class GameEntry extends Component {
     this.diagnostics=new LocalDiagnostics(this.node);
     if(this.diagnostics.enabled)profiler.showStats();else profiler.hideStats();
     if(softwareRendering()){view.enableRetina(false);engineGame.frameRate=30;}
-    view.setDesignResolutionSize(1280,720,ResolutionPolicy.SHOW_ALL);
+    if(sys.isNative){
+      engineGame.frameRate=30;
+      assetManager.downloader.maxConcurrency=2;assetManager.downloader.maxRequestsPerFrame=2;
+      for(const preset of ['default','preload','scene'])Object.assign(assetManager.presets[preset],{maxConcurrency:2,maxRequestsPerFrame:2});
+    }
+    // Native phones fill their landscape viewport; gameplay and HUD retain a
+    // uniform 720-unit height instead of a fixed 16:9 letterboxed surface.
+    view.setDesignResolutionSize(1280,720,sys.isNative?ResolutionPolicy.FIXED_HEIGHT:ResolutionPolicy.SHOW_ALL);
     const canvasNode=new Node('海岛界面');this.uiCanvas=canvasNode;canvasNode.layer=Layers.Enum.UI_2D;canvasNode.setParent(this.node.scene);
     canvasNode.addComponent(UITransform).setContentSize(1280,720);
     const cameraNode=new Node('界面相机');this.uiCamera=cameraNode;cameraNode.setParent(this.node.scene);cameraNode.setPosition(0,0,1000);
     const camera=cameraNode.addComponent(Camera);camera.projection=Camera.ProjectionType.ORTHO;camera.orthoHeight=360;
-    camera.near=.1;camera.far=2000;camera.visibility=Layers.Enum.UI_2D;camera.clearFlags=Camera.ClearFlag.DEPTH_ONLY;camera.priority=10;
+    camera.near=.1;camera.far=2000;camera.visibility=Layers.Enum.UI_2D;camera.clearFlags=Camera.ClearFlag.DEPTH_ONLY;camera.priority=CAMERA_ORDER.ui;
     const canvas=canvasNode.addComponent(Canvas);canvas.alignCanvasWithScreen=true;canvas.cameraComponent=camera;
-    const reviewMode=typeof location!=='undefined'&&new URLSearchParams(location.search).get('review')==='3d';
+    const reviewMode=typeof location!=='undefined'&&runtimeQuery().get('review')==='3d';
     this.icons=new IslandIcons();if(!reviewMode)this.icons.preload();
     this.panels=new IslandPanels();if(!reviewMode)void this.panels.preload();
     this.portraits=new TurtlePortraits();if(!reviewMode)this.portraits.preload();
-    this.art=new ArtV2Assets();if(!reviewMode)this.art.preload();
+    void PearlBattleArt.preload();this.art=new ArtV2Assets();if(!reviewMode)this.art.preload();
     const contentNode=new Node('当前页面');contentNode.layer=Layers.Enum.UI_2D;contentNode.setParent(canvasNode);contentNode.addComponent(UITransform).setContentSize(1280,720);
     this.ui=new IslandUI(contentNode,kind=>{this.audio?.unlock();this.audio?.effect(kind==='back'?'sfx_ui_back':'sfx_ui_confirm');},this.icons);
+    this.ui.soloStyle=this.solo;
     this.bindUiAudio();
     if(!reviewMode){this.arrivalView=new IslandArrival(this.ui);this.arrivalView.show();}
     const mainCamera=this.node.scene.getChildByName('Main Camera');
     mainCamera?.setPosition(...HOME_CAMERA.position);mainCamera?.lookAt(new Vec3(...HOME_CAMERA.target));
-    const sceneCamera=mainCamera?.getComponent(Camera);if(sceneCamera){this.mainCamera=sceneCamera;sceneCamera.visibility=Layers.Enum.DEFAULT;sceneCamera.clearColor=new Color(83,159,169);}
+    const sceneCamera=mainCamera?.getComponent(Camera);if(sceneCamera){this.mainCamera=sceneCamera;sceneCamera.priority=CAMERA_ORDER.world;sceneCamera.visibility=Layers.Enum.DEFAULT;sceneCamera.clearColor=new Color(83,159,169);}
     view.on('canvas-resize',this.resizeViewport,this);view.on('design-resolution-changed',this.resizeViewport,this);this.resizeViewport();
     lightIsland(this.node.scene);
-    if(typeof location!=='undefined'&&new URLSearchParams(location.search).get('review')==='3d'){
+    if(typeof location!=='undefined'&&runtimeQuery().get('review')==='3d'){
       if(!this.mainCamera||!this.pipelineMaterial)throw Error('三维验收需要场景相机与材质');
       if(this.orientationGuide){this.orientationGuide.destroy();this.orientationGuide=undefined;}
-      const cast=new URLSearchParams(location.search).get('cast');
+      const cast=runtimeQuery().get('cast');
       this.skeletalReview=new (cast==='enemies'?EnemyG1ReviewScreen:cast==='v2'?ApprovedCastReviewScreen:SkeletalReviewScreen)(this.node,this.ui,this.mainCamera,this.pipelineMaterial);
       await this.skeletalReview.initialize();return;
     }
     engineGame.on(Game.EVENT_HIDE,this.onHide,this);engineGame.on(Game.EVENT_SHOW,this.onShow,this);
-    const session=await acquireLocalSession(accountStorage(sys.localStorage));
+    const baseStorage=accountStorage(sys.localStorage);
+    const nativeStorage={getItem:(key:string)=>baseStorage.getItem('android-trial:'+key),setItem:(key:string,value:string)=>baseStorage.setItem('android-trial:'+key,value)};
+    const soloStorage={getItem:(key:string)=>baseStorage.getItem('solo-v1:'+key),setItem:(key:string,value:string)=>baseStorage.setItem('solo-v1:'+key,value)};
+    const session=await acquireLocalSession(this.solo?soloStorage:this.nativeTrial?nativeStorage:baseStorage,sys.isNative);
     if(this.disposed){session.close();return;}this.session=session;
     const previewData=new Map<string,string>();
     // The preview stays on the approved base turtle presentation. The deferred
     // 10-skill visual package is intentionally not injected into game saves.
-    if(this.allMapsReview)previewData.set(SAVE_KEY,encodeSave(allMapsReviewSave(Date.now(),false,new URLSearchParams(location.search).get('balance')==='coast')));
+    if(this.nativeTrial){if(!session.storage.getItem(SAVE_KEY))session.storage.setItem(SAVE_KEY,encodeSave(allMapsReviewSave(Date.now(),false,true)));}
+    else if(this.allMapsReview)previewData.set(SAVE_KEY,encodeSave(allMapsReviewSave(Date.now(),false,runtimeQuery().get('balance')==='coast')));
+    if(this.soloReview){const seed=allMapsReviewSave(Date.now(),false,true);enableSolo(seed);seed.solo!.best=[30,30,30];previewData.set(SAVE_KEY,encodeSave(seed));}
     const previewStorage={getItem:(key:string)=>previewData.get(key)??null,setItem:(key:string,value:string)=>{previewData.set(key,value);},removeItem:(key:string)=>{previewData.delete(key);}};
-    this.service=new GameService(new SaveRepository(this.isolatedReview?previewStorage:this.session.storage));this.service.enablePrototype(this.command('v06'));this.service.enableIncrement(this.command('economyV2'));this.service.enableLiving(this.command('livingV1'));this.service.refreshClock(this.command('clock'));this.roomClient=new RoomClient(this.service);if(!this.isolatedReview)void this.roomClient.sync().catch(()=>{});
-    this.audio=new IslandAudio(this.node,this.service.snapshot.settings);
-    this.service.enablePatrol(this.command('enablePatrol'));
+    this.service=new GameService(new SaveRepository(this.soloReview||this.isolatedReview&&!this.nativeTrial&&!this.solo?previewStorage:this.session.storage));this.service.enablePrototype(this.command('v06'));this.service.enableIncrement(this.command('economyV2'));this.service.enableLiving(this.command('livingV1'));this.service.refreshClock(this.command('clock'));if(this.solo){this.service.enableSolo(this.command('solo'));this.ui.soloStyle=true;}this.roomClient=new RoomClient(this.service);if(!this.isolatedReview&&!this.solo)void this.roomClient.sync().catch(()=>{});
+    this.audio=new IslandAudio(this.node,this.service.settingsSnapshot);
+    if(!this.solo)this.service.enablePatrol(this.command('enablePatrol'));
     if(typeof document!=='undefined'){document.addEventListener('pointerdown',this.unlockAudio,true);document.addEventListener('keydown',this.unlockAudio,true);}
     this.audio.unlock();
     this.accountClient=new AccountClient(this.service);
     if(this.appHidden)this.audio.pause();
-    if(this.allMapsReview&&!(typeof location!=='undefined'&&new URLSearchParams(location.search).get('login')==='1')){this.entered=true;this.screen='home';}
+    if((this.allMapsReview||this.solo)&&!(typeof location!=='undefined'&&runtimeQuery().get('login')==='1')){this.entered=true;this.screen='home';}
     this.beginHomeArrival();this.render();
     console.info('[GOWAYGUI_BOOT]',JSON.stringify({engine:'Cocos Creator 3.8.8',scene:this.node.scene.name,stage:'five-turtle home + persistent UI',revision:this.service.snapshot.revision}));
   }
@@ -198,7 +223,10 @@ export class GameEntry extends Component {
     this.homeArrival=arrival;
     try{
       if(!this.pipelineMaterial)throw new Error('缺少海岛材质');
-      arrival.world=this.homeWorld??new HomeWorld(this.node,this.pipelineMaterial,{reducedMotion:this.service?.snapshot.settings.reducedMotion});
+      // The approved illustrated home does not display the old 3D island or its
+      // five legacy rigs. Do not decode them alongside the first battle roster.
+      if(this.art){this.syncHomePresentation();return;}
+      arrival.world=this.homeWorld??new HomeWorld(this.node,this.pipelineMaterial,{reducedMotion:this.service?.settingsSnapshot.reducedMotion});
       this.homeWorld=arrival.world;this.syncHomePresentation();
     }catch(error){arrival.error=error;}
   }
@@ -214,7 +242,7 @@ export class GameEntry extends Component {
     if(this.art?.ready){this.backdrop??=new ArtV2Backdrop(this.node.scene,this.art);const visible=!this.appHidden&&this.screen!=='battle'&&!this.homeArrival;this.backdrop.show(visible?this.screen==='login'?'login-background':'home-background':undefined);if(this.mainCamera)this.mainCamera.clearFlags=visible?Camera.ClearFlag.DEPTH_ONLY:Camera.ClearFlag.SOLID_COLOR;}
     const home=this.homeWorld;if(!home)return;
     const pending=this.service?.snapshot;const choosing=!!pending?.outsideFusion||!!pending?.bookReveal;
-    home.setReducedMotion(!!this.service?.snapshot.settings.reducedMotion);
+    home.setReducedMotion(!!this.service?.settingsSnapshot.reducedMotion);
     home.setPaused(this.appHidden||this.screen!=='home'||!!this.homeArrival||choosing);
     home.setVisible(!this.art?.ready&&!this.appHidden&&this.screen==='home'&&!this.homeArrival&&!choosing);
   }
@@ -230,9 +258,9 @@ export class GameEntry extends Component {
     const arrival=this.homeArrival;
     if(!arrival||this.disposed||this.appHidden||this.screen!=='home'||!this.service)return;
     let error=this.homeLoadingError();
-    const loaded=!!arrival.world?.ready&&this.panels?.state==='ready'&&!!this.portraits?.ready&&!!this.icons?.ready&&(!this.art||this.art.ready);
+    const loaded=(this.art?this.art.ready:!!arrival.world?.ready)&&this.panels?.state==='ready'&&!!this.portraits?.ready&&!!this.icons?.ready;
     let activationFailed=false;
-    if(!error&&loaded){
+    if(!error&&loaded&&arrival.world){
       // Activate the fully assembled world while the loading UI still owns the
       // gate. Cocos onLoad and first idle initialization finish synchronously;
       // keep skeletons paused until both activation and formal UI handoff succeed.
@@ -254,7 +282,7 @@ export class GameEntry extends Component {
     // Retain the healthy shared UI across world unload/reload cycles. Only the
     // first successful arrival replaces the small bootstrap fallback.
     if(!this.interfaceReady){
-      this.ui=new IslandUI(this.ui.root,this.ui.click,this.icons,this.panels,this.portraits,this.art);this.bindUiAudio();
+      this.ui=new IslandUI(this.ui.root,this.ui.click,this.icons,this.panels,this.portraits,this.art);this.ui.soloStyle=this.solo;this.ui.soloGold=()=>this.service!.snapshot.gold;this.bindUiAudio();
       this.ui.requestReward=(kind,context,done)=>this.tasks().ad(kind,context,done);
       this.ui.share=(title,text)=>this.tasks().share(title,text);
       this.interfaceReady=true;
@@ -266,10 +294,10 @@ export class GameEntry extends Component {
   update(dt:number):void{
     if(this.disposed)return;
     if(this.skeletalReview){this.skeletalReview.update(dt);return;}
-    if(this.allMapsReview&&!this.g1ShowcaseStarted&&this.interfaceReady&&!this.homeArrival&&this.service){
-      this.g1ShowcaseStarted=true;const raw=new URLSearchParams(location.search).get('map'),id=raw===null?-1:Number(raw);
+    if(this.allMapsReview&&!this.nativeTrial&&!this.g1ShowcaseStarted&&this.interfaceReady&&!this.homeArrival&&this.service){
+      this.g1ShowcaseStarted=true;const raw=runtimeQuery().get('map'),id=raw===null?-1:Number(raw);
       // Local art-review link keeps the actual loading component visible until Return.
-      if(new URLSearchParams(location.search).get('arrival')==='review')this.arrivalView?.show(false,undefined,()=>this.arrivalView?.hide());
+      if(runtimeQuery().get('arrival')==='review')this.arrivalView?.show(false,undefined,()=>this.arrivalView?.hide());
       if(Number.isInteger(id)&&id>=0&&id<=56){
        try{const pets=Object.keys(this.service.snapshot.collection).slice(0,5);
         if(id<=50){this.service.beginPrototypeRun(this.command('map-review'),id===50?50:id,pets,id===50?'endless':'chapter');this.openBattle();}
@@ -288,11 +316,11 @@ export class GameEntry extends Component {
       this.g1ShowcaseWarmup+=dt;if(this.g1ShowcaseWarmup>2)this.battleScreen.startG1Presentation();
     }
     this.audio?.update(dt);
-    if(!this.appHidden)this.arrivalView?.update(dt,!!this.service?.snapshot.settings.reducedMotion);
-    if(!this.appHidden)this.backdrop?.update(dt,!!this.service?.snapshot.settings.reducedMotion);
+    if(!this.appHidden)this.arrivalView?.update(dt,!!this.service?.settingsSnapshot.reducedMotion);
+    if(!this.appHidden)this.backdrop?.update(dt,!!this.service?.settingsSnapshot.reducedMotion);
     this.diagnostics?.recordFrame(dt,{screen:this.screen,...(this.screen==='battle'?this.battleScreen?.diagnosticContext:{})});
     if(this.screen==='battle'){if(this.battleArrival)this.finishBattleArrival();else this.battleScreen?.update(dt);}
-    else if(this.screen==='home'&&!this.appHidden){this.finishHomeArrival();this.homeWorld?.update(dt);this.companionMotion?.update(dt,!!this.service?.snapshot.settings.reducedMotion);}
+    else if(this.screen==='home'&&!this.appHidden){this.finishHomeArrival();this.homeWorld?.update(dt);this.companionMotion?.update(dt,!!this.service?.settingsSnapshot.reducedMotion);}
     this.roomPoll+=dt;if(!this.isolatedReview&&this.roomPoll>=8&&this.entered&&this.screen!=='battle'){this.roomPoll=0;void this.roomClient?.sync().catch(()=>{});}
     this.clockElapsed+=dt;if(this.clockElapsed>=30){this.clockElapsed=0;this.refreshResources();if(!this.isolatedReview)void this.accountClient?.save().catch(e=>this.ui.toast(e instanceof Error?e.message:'云端保存暂未完成'));}
   }
@@ -309,18 +337,19 @@ export class GameEntry extends Component {
       const bounds=mapBounds(BATTLE_MAPS[id]),aspect=size.width/size.height;
       if(this.ui)this.ui.battleFrameLocked=!!(BATTLE_MAPS[id].sceneArt?.startsWith('map-coast-stage-')||BATTLE_MAPS[id].sceneArt?.startsWith('map-mode-scene-'));
       // Oblique orthographic framing compresses long north/south terrain without scaling actors or changing routes.
-      this.mainCamera.orthoHeight=(id===0||BATTLE_MAPS[id].sceneArt)?5.0625*expand:Math.max((bounds.rz*Math.SQRT1_2+.85)/.88,(bounds.rx+(id===56?2.1:.65))/aspect);
+      this.mainCamera.orthoHeight=sys.isNative&&this.ui?.battleFrameLocked?battleCoverHalfHeight(size.width,size.height,id>=50):(id===0||BATTLE_MAPS[id].sceneArt)?5.0625*expand:Math.max((bounds.rz*Math.SQRT1_2+.85)/.88,(bounds.rx+(id===56?2.1:.65))/aspect);
     }
     this.mainCamera.clearColor=this.ui?.battleFrameLocked?new Color(18,36,42):new Color(83,159,169);
     this.mainCamera.fov=2*Math.atan(Math.tan(base*Math.PI/360)*expand)*180/Math.PI;
     this.ui?.layoutBattleEdges?.();
+    if(this.screen==='home'&&this.homeAdventureCollapsed){const fold=this.ui?.root.getChildByName('主页冒险区:收起展开');fold?.setPosition(homeAdventureFold(this.ui.pageWidth).tabX,-6,0);}
     if(isValid(this.orientationGuide,true)){this.orientationGuide.active=false;this.orientationGuide.removeFromParent();this.orientationGuide.destroy();}
     this.orientationGuide=undefined;
     const scale=view.getScaleY();
     if(size.width<size.height&&scale>0&&this.ui&&isValid(this.uiCanvas,true)){
       const width=Math.min(540,size.width-32)/scale,height=44/scale;
-      const guide=this.ui.panel(0,-360-36/scale,width,height,this.uiCanvas,UI_COLORS.dark,224,14/scale);this.orientationGuide=guide;
-      this.ui.label(sys.isMobile?'横屏游玩更舒服，转一下手机吧':'拉宽窗口，龟龟会看得更清楚',0,0,17/scale,UI_COLORS.cream,guide,width-24/scale,height-8/scale);
+      const guide=this.ui.group('横屏提示',0,-360-36/scale,this.uiCanvas,width,height);this.orientationGuide=guide;
+      this.ui.label(sys.isMobile?'请横屏游玩':'横屏 16:9 · 调宽窗口可放大战场',0,0,13/scale,'#B1C7C8',guide,width-24/scale,height-8/scale);
     }
   };
   private menuAvailable():boolean{return !this.disposed&&!this.appHidden&&this.interfaceReady&&!this.homeArrival&&this.screen!=='battle';}
@@ -331,7 +360,7 @@ export class GameEntry extends Component {
   }
   private getCommunityMenus():CommunityMenus{return this.communityMenus??=new CommunityMenus(this.ui,this.service!,kind=>this.command(kind),()=>this.menuAvailable(),()=>this.go('home'),(t,back)=>this.getPrototypeMenus().inspect(t,back),mode=>this.openBattle(mode),(e,start)=>this.error(e,start),id=>{this.watchOpponent=id;this.openBattle('watch');},this.allMapsReview?undefined:()=>this.rooms().open());}
   private bindUiAudio():void{
-    this.ui.reducedMotion=()=>!!this.service?.snapshot.settings.reducedMotion;
+    this.ui.reducedMotion=()=>!!this.service?.settingsSnapshot.reducedMotion;
     this.ui.onActionError=error=>this.error(error);
     this.ui.feedback=kind=>this.audio?.effect({reward:'sfx_collect',purchase:'sfx_purchase',upgrade:'sfx_upgrade',equip:'sfx_equip',chest:'sfx_chest',learnComplete:'sfx_learn_complete',error:'sfx_ui_error',wishStart:'sfx_wish_start',wishGather:'sfx_wish_gather',wishBurst:'sfx_wish_burst'}[kind]);
   }
@@ -351,11 +380,12 @@ export class GameEntry extends Component {
   }
   private render():void{
     if(this.disposed||!this.service)return;this.syncHomePresentation();
+    this.ui.battleStyle=this.screen==='battle';
     if(this.screen==='battle'){this.battleScreen?.render();return;}
     if(this.homeArrival){if(this.screen==='home')this.showHomeArrival(!!this.homeLoadingError());return;}
     if(!this.interfaceReady)return;
     if(!this.g1ShowcaseStarted){
-      const requested=this.allMapsReview?new URLSearchParams(location.search).get('map'):null;
+      const requested=this.allMapsReview&&!this.nativeTrial?runtimeQuery().get('map'):null;
       if(this.g1Showcase||(requested!==null&&Number.isInteger(Number(requested))&&Number(requested)>=0&&Number(requested)<=56))return;
     }
     this.ui.clear();this.goldLabel=undefined;this.staminaLabel=undefined;const s=this.service.snapshot;
@@ -382,6 +412,7 @@ export class GameEntry extends Component {
   }
   private loginInfo(title:string,text:string):void{const p=this.ui.sheet(title,'',()=>p.parent?.destroy());this.ui.text(text,0,0,30,UI_COLORS.cream,p,900,210,true);this.ui.button('返回',0,-276,320,88,()=>p.parent?.destroy(),{parent:p,size:28});}
   private home():void{
+    if(this.solo){this.soloHome();return;}
     if(!this.art?.ready){this.legacyHome();return;}
     const s=this.service!.snapshot,ongoing=s.run,pending=pendingTakeaways(s).length;
     if(this.allMapsReview)this.ui.button('全地图验收',15,319,164,42,()=>this.reviewMaps(),{size:20});
@@ -427,9 +458,11 @@ export class GameEntry extends Component {
     this.ui.progress(-516,-126,177,18,wave/waveLimit,UI_COLORS.green);left(`进度 ${wave}/${waveLimit}波`,-341,-126,20,123);
     const primary=this.ui.button(pending?'整理伙伴':ongoing&&ongoing.phase!=='result'?'继续冒险':'开始冒险',-448,-202,330,84,()=>pending?this.getPrototypeMenus().takeaways():ongoing&&ongoing.phase!=='result'?this.openBattle():this.go('levels',Math.floor(s.unlockedLevel/5)),{primary:true,size:38});primary.name='主页开始冒险';const arrow=this.ui.group('继续箭头',130,0,primary,37,37);this.art?.attach(arrow,'control-7',37,37);for(const child of primary.children){const label=child.getComponent(Label);if(label){child.setPosition(-16,0);child.getComponent(UITransform)?.setContentSize(258,65);}}
     const adventureNodes=this.ui.root.children.slice(adventureStart),adventure=this.ui.group('可收起冒险区');
-    adventureNodes.forEach(n=>n.setParent(adventure));const adventureX=this.homeAdventureCollapsed?-390:0;adventure.setPosition(animateCollapse?(this.homeAdventureCollapsed?0:-390):adventureX,0);
-    if(animateCollapse)tween(adventure).to(.22,{position:new Vec3(adventureX,0,0)},{easing:'quadOut'}).start();
-    const fold=this.ui.button(this.homeAdventureCollapsed?'›':'‹',this.homeAdventureCollapsed?-612:-258,-6,28,56,()=>{this.audio?.effect('sfx_panel_slide');this.homeAdventureCollapsed=!this.homeAdventureCollapsed;this.homeAnimateCollapse=true;this.render();},{primary:true,size:32});fold.name='主页冒险区:收起展开';const foldOpacity=fold.addComponent(UIOpacity);foldOpacity.opacity=150;fold.on(Node.EventType.MOUSE_ENTER,()=>foldOpacity.opacity=225);fold.on(Node.EventType.MOUSE_LEAVE,()=>foldOpacity.opacity=150);
+    const foldLayout=homeAdventureFold(this.ui.pageWidth);
+    adventureNodes.forEach(n=>n.setParent(adventure));const adventureX=this.homeAdventureCollapsed?foldLayout.hiddenX:0;adventure.setPosition(animateCollapse?(this.homeAdventureCollapsed?0:foldLayout.hiddenX):adventureX,0);
+    if(animateCollapse)tween(adventure).to(.22,{position:new Vec3(adventureX,0,0)},{easing:'quadOut'}).call(()=>{if(isValid(adventure,true)&&this.homeAdventureCollapsed)adventure.active=false;}).start();
+    else adventure.active=!this.homeAdventureCollapsed;
+    const fold=this.ui.button(this.homeAdventureCollapsed?'›':'‹',this.homeAdventureCollapsed?foldLayout.tabX:-258,-6,28,56,()=>{this.audio?.effect('sfx_panel_slide');this.homeAdventureCollapsed=!this.homeAdventureCollapsed;this.homeAnimateCollapse=true;this.render();},{primary:true,size:32});fold.name='主页冒险区:收起展开';const foldOpacity=fold.addComponent(UIOpacity);foldOpacity.opacity=150;fold.on(Node.EventType.MOUSE_ENTER,()=>foldOpacity.opacity=225);fold.on(Node.EventType.MOUSE_LEAVE,()=>foldOpacity.opacity=150);
     fold.on(Node.EventType.MOUSE_ENTER,()=>fold.setScale(1.08,1.08,1));fold.on(Node.EventType.MOUSE_LEAVE,()=>fold.setScale(1,1,1));
     const heroScale=role==='stone'?1:.89,heroHeight=423*heroScale;
     const image=this.ui.group('主页主角',this.homeAdventureCollapsed?0:68,106-(423-heroHeight)*.45,this.ui.root,490*heroScale,heroHeight);image.setSiblingIndex(0);
@@ -437,7 +470,7 @@ export class GameEntry extends Component {
     const info=this.ui.panel(this.homeAdventureCollapsed?268:330,this.homeChatState.expanded?-44:-6,154,98,this.ui.root,'#FFF9EC',222,20);
     this.ui.text(hero?visualName(hero):HERO_LOOK[role].name,-3,24,26,UI_COLORS.ink,info,136,34);
     const quality=hero?turtleQuality(hero):undefined;
-    this.ui.hover(info);info.on(Node.EventType.TOUCH_END,()=>{if(!hero||!this.ui.isInteractive(info))return;this.ui.click();new PetDetails(this.ui,this.service!,k=>this.command(k),e=>this.error(e)).show(hero,{owned:true,learn:()=>{this.selectedId=hero.id;this.skillBooksDialog();}});});
+    this.ui.hover(info);info.on(Node.EventType.TOUCH_END,()=>{if(!hero||!this.ui.isInteractive(info))return;this.ui.click();new PetDetails(this.ui,this.service!,k=>this.command(k),e=>this.error(e)).show(hero,{owned:true,learn:()=>{this.selectedId=hero.id;if(this.solo)this.getPrototypeMenus().skillBooks(hero.id);else this.skillBooksDialog();}});});
     this.ui.text(HERO_LOOK[role].job,-35,-6,18,UI_COLORS.ink,info,61,25);
     const badge=this.ui.panel(35,-6,54,24,info,quality?.color??'#119B68',255,12);this.ui.text(quality?.name??'良好',0,0,16,'#FFFFFF',badge,52,24);
     this.ui.text(`${hero?.skills.length??2}技能  ›`,0,-32,17,UI_COLORS.sand,info,128,24);
@@ -453,6 +486,36 @@ export class GameEntry extends Component {
     const entries:[string,number,()=>void][]=[['龟龟',0,()=>this.go('collection')],['技能',1,()=>this.getPrototypeMenus().skillInventory()],['合成',1,()=>this.go('workshop')],['市场',2,()=>this.marketHub()],['任务',6,()=>this.tasks().open()],['图鉴',6,()=>new AchievementMenus(this.ui,this.service!,k=>this.command(k),()=>this.go('home'),e=>this.error(e)).open()],['好友',5,()=>this.communityEntry('friends')],['排行',6,()=>this.communityEntry('rankings')],['世界挑战',7,()=>this.openWorldBoss()]];
     entries.forEach(([title,icon,go],i)=>{const x=(i-4)*128,n=this.ui.group('主页导航:'+title,x,0,nav,112,78);const mark=title==='任务'?this.ui.art?.attach(this.ui.group('任务宝箱',0,16,n,40,40),'chest-1',40,40):title==='技能'?this.ui.modernIcon(13,0,12,35,n):this.ui.modernIcon(icon,0,17,40,n);this.ui.text(title,0,-24,22,UI_COLORS.ink,n,112,30);this.ui.hover(n);n.on(Node.EventType.TOUCH_END,()=>{this.ui.click();go();});if(i<entries.length-1)this.ui.line(x+64,-25,x+64,25,nav,'#D6DEDA');});
     homeChat(this.ui,this.service!,this.homeChatState,()=>this.render(),kind=>this.command(kind),e=>this.error(e));
+  }
+  private soloHome():void{
+    const ui=this.ui,s=this.service!.snapshot,r=s.run,pending=pendingTakeaways(s).length;
+    const pets=Object.values(s.collection),team=(s.homeTeam??pets.slice(0,5).map(t=>t.id)).map(id=>s.collection[id]).filter(Boolean);
+    const hero=team.find(t=>t.id===this.homeHeroId)??team.find(t=>t.role===this.homeHeroRole)??pets[0],role=hero?.role??'stone';
+    const margin=Math.max(0,(ui.pageWidth-1280)/2),leftX=-430-margin*.59;
+    ui.pet(hero??pets[0],-577-margin*.55,310,64);ui.text(s.community?.name??'小岛主',-469-margin*.55,310,25,UI_COLORS.ink,ui.root,132,37);
+    if(this.soloReview)ui.text('验收试玩 · 全部解锁',90,314,20,'#07536C',ui.root,265,34);
+    const coins=ui.panel(423+margin*.55,313,239,52,ui.root,'#07536C',250,26);ui.icon('gold',-83,0,37,coins);this.goldLabel=ui.text(displayGold(s.gold),20,0,28,'#FFFFFF',coins,173,38);
+    const settings=ui.button('',592+margin*.55,313,62,59,()=>this.go('settings'),{primary:true});ui.art?.attach(settings,'control-4',37,37);
+    const box=ui.panel(leftX,-30,366+margin*.62,569,ui.root,'#FFF9EC',235,25);box.active=!this.homeAdventureCollapsed;ui.button(this.homeAdventureCollapsed?'›':'‹',this.homeAdventureCollapsed?-ui.pageWidth/2+29:leftX+183+margin*.31,-15,38,62,()=>{this.homeAdventureCollapsed=!this.homeAdventureCollapsed;this.render();},{primary:true,size:31});
+    ui.text('冒险',-86,242,32,UI_COLORS.ink,box,170,44);
+    [['关卡',0,()=>this.go('levels',Math.floor(s.unlockedLevel/5))],['无尽',1,()=>this.go('endless')]].forEach((item,i)=>{
+      const n=ui.button('',-85-margin*.16+i*(170+margin*.32),159,157+margin*.29,111,item[2] as ()=>void,{parent:box,primary:i===0});ui.art?.attach(ui.group('冒险图标',0,16,n),`control-${i}`,62,57);ui.text(item[0] as string,0,-33,27,i===0?'#FFFFFF':UI_COLORS.ink,n,138,37);
+    });
+    const level=LEVELS[r&&r.phase!=='result'&&r.mode==='chapter'?r.levelId:s.unlockedLevel]??LEVELS[0],wave=r?.phase!=='result'&&r?.levelId===level.id?r.wave:0,limit=chapterWaves(level.id);
+    ui.text('当前挑战',-65,65,23,UI_COLORS.sand,box,219,34);ui.text(`第${level.id+1}关 · ${level.name}`,0,23,27,UI_COLORS.ink,box,331,43);
+    ui.progress(-57,-20,197,12,wave/limit,UI_COLORS.green,box);ui.text(wave+'/'+limit+' 波',108,-20,19,UI_COLORS.sand,box,100,28);ui.line(-157,-55,157,-55,box,'#CEDFD9');
+    const next=SOLO_MILESTONES.find(m=>milestoneValue(s,m.kind)<m.target),value=next?milestoneValue(s,next.kind):1;
+    ui.modernIcon(6,-133,-92,40,box);ui.text(next?'下一目标：'+next.name:'全部里程碑已达成',26,-87,22,UI_COLORS.ink,box,275,34);ui.text(next?.detail??'继续探索新的技能搭配',25,-119,19,UI_COLORS.sand,box,278,28);
+    ui.progress(-19,-156,270,12,next?value/next.target:1,UI_COLORS.green,box);ui.text(next?Math.min(value,next.target)+'/'+next.target:'完成',136,-156,18,UI_COLORS.sand,box,65,28);
+    ui.button(pending?'整理伙伴':r&&r.phase!=='result'?'继续冒险':'开始冒险',0,-227,326+margin*.62,80,()=>pending?this.getPrototypeMenus().takeaways():r&&r.phase!=='result'?this.openBattle():this.go('levels',Math.floor(s.unlockedLevel/5)),{parent:box,primary:true,size:36});
+    const scale=role==='stone'?1:.89,image=ui.group('单机主页主角',120,95,ui.root,485*scale,416*scale);image.setSiblingIndex(0);const sprite=this.art?.attach(image,`hero-${role}`,485*scale,416*scale);if(sprite)this.companionMotion=new CompanionMotion(sprite,role,image,this.art!);
+    const info=ui.button('',416,9,164,101,()=>{if(hero)new PetDetails(ui,this.service!,k=>this.command(k),e=>this.error(e)).show(hero,{owned:true,learn:()=>{this.selectedId=hero.id;if(this.solo)this.getPrototypeMenus().skillBooks(hero.id);else this.skillBooksDialog();}});});
+    ui.text(hero?visualName(hero):'岩盾',0,27,27,UI_COLORS.ink,info,151,38);ui.text(HERO_LOOK[role].job+' · '+(hero?turtleQuality(hero).name:''),0,-7,19,UI_COLORS.sand,info,155,28);ui.text((hero?.skills.length??4)+'技能 ›',0,-34,18,'#008F96',info,151,28);
+    ui.text('出战小队 '+team.length+'/5',-82,-113,23,UI_COLORS.ink,ui.root,223,35);ui.button('换阵容',515,-113,111,38,()=>this.chooseTeam(level.id,false,'chapter',true),{size:20});
+    team.forEach((t,i)=>{const x=-125-margin*.2+i*(143+margin*.14),n=ui.group('单机出战头像',x,-199,ui.root,108,108),mask=n.addComponent(Mask);mask.type=Mask.Type.GRAPHICS_ELLIPSE;ui.art?.attach(n,`portrait-${t.role}`,108,108);n.on(Node.EventType.TOUCH_END,()=>{ui.click();this.homeHeroId=t.id;this.homeHeroRole=t.role;this.render();});ui.hover(n);if(t.id===hero?.id)ui.panel(x,-259,82,7,ui.root,'#FF9866',255,3);});
+    const nav=ui.panel(164+margin*.43,-313,740,78,ui.root,'#FFF9EC',250,23);
+    const entries:[string,number,()=>void][]=[['龟龟',0,()=>this.go('collection')],['技能',13,()=>this.getPrototypeMenus().skillInventory()],['合成',1,()=>this.go('workshop')],['商城',2,()=>this.openShop()],['成就',6,()=>this.soloMenus().achievements()]];
+    entries.forEach(([name,icon,go],i)=>{const n=ui.button('',(i-2)*139,0,131,74,go,{parent:nav,surface:'bare'});ui.modernIcon(icon,0,15,36,n);ui.text(name,0,-23,23,UI_COLORS.ink,n,126,32);});
   }
   private openWorldBoss():void{new WorldBossMenus(this.ui,this.service!,this.roomClient??=new RoomClient(this.service!,this.accountClient??=new AccountClient(this.service!)),k=>this.command(k),()=>this.go('home'),()=>this.openBattle('world'),e=>this.error(e),this.allMapsReview).open();}
   private marketHub():void{
@@ -484,6 +547,7 @@ export class GameEntry extends Component {
     if(this.homeChatOpen)this.ui.button('聊天',-450,-236,180,46,()=>this.communityEntry('chat'),{size:21});
   }
   private endless():void{
+    if(this.solo){this.soloMenus().endless(()=>this.chooseTeam(PROTOTYPE.endless.map,false,'endless'));return;}
     if(this.art?.ready){this.endlessV2();return;}
     const s=this.service!.snapshot,locked=!s.cleared.includes(PROTOTYPE.endless.unlockAfter),p=this.ui.sheet('无尽模式','',()=>this.go('home'));
     this.ui.text('最高波次',-408,151,28,UI_COLORS.sand,p,320,40);this.ui.text(String(s.endlessBest?.waves??0),-408,72,78,UI_COLORS.gold,p,320,112);
@@ -493,7 +557,7 @@ export class GameEntry extends Component {
     this.ui.button(locked?'通关第2关开启':'开始挑战',152,-278,650,88,()=>this.chooseTeam(PROTOTYPE.endless.map,false,'endless'),{parent:p,primary:true,disabled:locked,size:34});
   }
   private endlessV2():void{
-    const s=this.service!.snapshot,locked=!s.cleared.includes(PROTOTYPE.endless.unlockAfter),chart=new SeaChart(this.ui,'chart-endless','无尽之海','乘风破浪 · 挑战百波',()=>this.go('home'),()=>!!this.service!.snapshot.settings.reducedMotion),p=chart.root;
+    const s=this.service!.snapshot,locked=!s.cleared.includes(PROTOTYPE.endless.unlockAfter),chart=new SeaChart(this.ui,'chart-endless','无尽之海','乘风破浪 · 挑战百波',()=>this.go('home'),()=>!!this.service!.settingsSnapshot.reducedMotion),p=chart.root;
     p.getChildByName('按钮:返回海岛')?.setPosition(-491,312);
     this.ui.text('最高抵达',-459,131,23,UI_COLORS.sand,p,310,36);
     this.ui.text((s.endlessBest?.waves??0)+' 波',-459,76,47,UI_COLORS.ink,p,310,64);
@@ -512,10 +576,10 @@ export class GameEntry extends Component {
   private communityEntry(entry:'friends'|'rankings'|'trade'|'rental'|'raids'|'arena'|'chat'|'rename'):void{
     this.go('community');
     // 副本始终进入完整的海图、备战、匹配和邀请流程；试玩环境也保留这层界面。
-    if(entry==='raids'){this.rooms().open();return;}
+    if(entry==='raids'&&!this.nativeTrial){this.rooms().open();return;}
     this.getCommunityMenus().entry(entry);
   }
-  private openShop():void{this.getPrototypeMenus().shop(this.art?.ready?'pack':'turtle');}
+  private openShop():void{if(this.solo){this.soloMenus().shop(pool=>this.getPrototypeMenus().shop(pool));return;}this.getPrototypeMenus().shop(this.art?.ready?'pack':'turtle');}
   private adventure():void{
     const s=this.service!.snapshot,p=this.heading('选择冒险','普通关卡、无尽、副本与竞技场分别挑战。');
     const entries:[string,string,()=>void,boolean][]=[
@@ -530,10 +594,20 @@ export class GameEntry extends Component {
   }
   private reviewMaps(page=0):void{
     this.ui.clear();const maps=BATTLE_MAPS,pages=Math.ceil(maps.length/12),p=this.ui.sheet('全地图验收','独立试玩进度 · 关卡、无尽、副本、竞技场全部可进入',()=>this.go('home'));
-    maps.slice(page*12,page*12+12).forEach((map,i)=>this.ui.button((map.id<50?'第'+(map.id+1)+'关 · ':'')+map.name,-410+i%3*410,155-Math.floor(i/3)*100,390,80,()=>{location.href='?preview=all-maps&all-modes=1'+(new URLSearchParams(location.search).get('balance')==='coast'?'&balance=coast':'')+'&map='+map.id+(this.diagnostics?.enabled?'&qa=1':'');},{parent:p,size:21}));
+    maps.slice(page*12,page*12+12).forEach((map,i)=>this.ui.button((map.id<50?'第'+(map.id+1)+'关 · ':'')+map.name,-410+i%3*410,155-Math.floor(i/3)*100,390,80,()=>{if(this.nativeTrial){this.openNativeTrialMap(map.id);return;}location.href='?preview=all-maps&all-modes=1'+(runtimeQuery().get('balance')==='coast'?'&balance=coast':'')+'&map='+map.id+(this.diagnostics?.enabled?'&qa=1':'');},{parent:p,size:21}));
     this.ui.button('上一页',-300,-277,220,48,()=>this.reviewMaps(page-1),{parent:p,disabled:page===0,size:22});this.ui.text((page+1)+' / '+pages,0,-277,22,UI_COLORS.ink,p,160,35);this.ui.button('下一页',300,-277,220,48,()=>this.reviewMaps(page+1),{parent:p,disabled:page+1===pages,size:22});
   }
+  private openNativeTrialMap(id:number,replace=false):void{
+    if(!this.nativeTrial||!this.menuAvailable()||!Number.isInteger(id)||id<0||id>56)return;
+    try{const s=this.service!,pets=Object.keys(s.snapshot.collection).slice(0,5);
+      if(id<=50){s.beginPrototypeRun(this.command('native-map'),id,pets,id===50?'endless':'chapter',replace);void this.openBattle();}
+      else if(id===56){this.roomClient!.worldSelection=pets;void this.openBattle('world');}
+      else if(id===54){s.beginArena(this.command('native-arena'),matchArena(s.snapshot),pets,replace);void this.openBattle('arena');}
+      else{s.beginRaid(this.command('native-raid'),id===55?3:id-51,pets,replace);void this.openBattle('raid');}
+    }catch(error){this.error(error,()=>this.openNativeTrialMap(id,true));}
+  }
   private levels():void{
+    if(this.solo){this.soloMenus().levels(this.page,id=>this.chooseTeam(id),page=>{this.page=page;this.render();});return;}
     const s=this.service!.snapshot,pages=Math.ceil(LEVELS.length/5);this.page=Math.max(0,Math.min(this.page,pages-1));
     const regions=['初晴海湾','珊瑚潮汐','翠竹长湾','日光遗迹','远洋回声','翡翠林岸','双庭圣殿','白沙环礁','深海回廊','终焉海庭'];
     if(this.art?.ready){renderChapterMap(this.ui,LEVELS,this.page,regions[this.page],s,id=>this.chooseTeam(id),page=>{this.page=page;this.render();},()=>this.go('home'));return;}
@@ -549,7 +623,7 @@ export class GameEntry extends Component {
     this.ui.button('下一海域 ›',383,-278,255,52,()=>{this.page++;this.render();},{parent:p,disabled:this.page===pages-1,size:23});
   }
   private chooseTeam(levelId:number,keep=false,mode:RunMode='chapter',homeEdit=false):void{
-    if(!this.menuAvailable()||!(homeEdit?this.screen==='home':['levels','adventure','endless'].includes(this.screen)))return;
+    if(!this.menuAvailable()||!(homeEdit?['home','collection'].includes(this.screen):['levels','adventure','endless'].includes(this.screen)))return;
     const s=this.service!.snapshot,available=homeEdit?Object.values(s.collection):availablePets(s).map(p=>({...p.turtle,id:p.id}));
     const modern=s.rulesVersion==='0.6',order=modern?['stone','spike','crystal','leaf','bubble']:available.some(t=>t.role==='spike')?['spike','stone','crystal','leaf','bubble']:['crystal','stone','bubble','leaf','spike'];
     const all=available.sort((a,b)=>order.indexOf(a.role)-order.indexOf(b.role));
@@ -574,7 +648,7 @@ export class GameEntry extends Component {
     this.ui.button('下一页',-286,-276,164,88,()=>{this.page=Math.min(pages-1,this.page+1);p.parent?.destroy();this.chooseTeam(levelId,true,mode,homeEdit);},{parent:p,size:28,disabled:this.page===pages-1});
     this.ui.text(`第 ${this.page+1}/${pages} 页\n已选 ${this.teamSelection.length}/5 只`,-60,-276,28,UI_COLORS.sand,p,240,76,true);
     const free=levelId===0&&!s.tutorialStarted;
-    this.ui.button(homeEdit?'保存首发阵容':mode==='endless'?'开始挑战':free?'首次出发':'出发 · 5 体力',360,-276,400,88,()=>{
+    this.ui.button(homeEdit?'保存首发阵容':mode==='endless'?'开始挑战':this.solo?'开始冒险':free?'首次出发':'出发 · 5 体力',360,-276,400,88,()=>{
       if(homeEdit){try{this.service!.setHomeTeam(this.command('homeTeam'),this.teamSelection);this.ui.feedback?.('equip');this.go('home');}catch(error){this.error(error);}return;}
       if(!this.menuAvailable()||!['levels','adventure','endless'].includes(this.screen)||!isValid(p,true)||!isValid(p.parent,true))return;
       const selected=[...this.teamSelection],command=this.command('adventure');
@@ -582,7 +656,8 @@ export class GameEntry extends Component {
       try{start();}catch(error){this.error(error,()=>start(true));}
     },{parent:p,primary:true,disabled:homeEdit?this.teamSelection.length<Math.min(5,all.length):this.teamSelection.length===0,size:32});
   }
-  private openBattle(challengeMode?:'raid'|'arena'|'online'|'watch'|'world',restart=false):void{
+  private async openBattle(challengeMode?:'raid'|'arena'|'online'|'watch'|'world',restart=false):Promise<void>{
+    let requestPage:number|undefined;
     try{
       if(this.disposed||this.appHidden||this.homeArrival||!this.interfaceReady||!this.service||!this.mainCamera||!this.pipelineMaterial||!this.audio)return;
       if(this.screen==='battle'&&(this.battleScreen||this.battleArrival)&&!restart){
@@ -595,11 +670,21 @@ export class GameEntry extends Component {
       if(challengeMode==='online'&&!this.roomClient?.room?.raid)throw new Error('副本尚未开始，请先返回队伍房间');
       if(challengeMode==='world'&&!this.allMapsReview&&!this.roomClient?.world)throw new Error('请先连接世界首领');
       this.challengeMode=challengeMode;const levelId=challengeMode==='world'?56:challengeMode==='watch'?54:challengeMode==='online'?raidMapId(this.roomClient?.room?.tier??0):challengeMode==='raid'?(this.service.snapshot.community?.raid?.battle?.levelId??raidMapId(this.service.snapshot.community?.raid?.tier??0)):challengeMode==='arena'?(this.service.snapshot.community?.arena?.battle.levelId??54):this.service.snapshot.run?.levelId;if(levelId===undefined)throw new Error('没有进行中的冒险');
-      this.battleScreen?.destroy();this.battleScreen=undefined;this.cancelBattleArrival();this.screen='battle';this.syncHomePresentation();
+      this.battleScreen?.destroy();this.battleScreen=undefined;this.cancelBattleArrival();this.screen='battle';this.ui.battleStyle=true;this.syncHomePresentation();
+      // Decode only this battle's scene before constructing meshes that use it.
+      // Page tokens prevent a slow load from reopening a battle after Back/retry.
+      this.showBattleArrival();requestPage=this.battleArrivalPage;
+      recordNativeBattleStage('准备地图图片',levelId);
+      try{if(this.art&&BATTLE_MAPS[levelId].sceneArt)await this.art.ensure([BATTLE_MAPS[levelId].sceneArt!]);}
+      catch(error){if(this.disposed||requestPage!==this.battleArrivalPage)return;throw error;}
+      if(this.disposed||this.screen!=='battle'||requestPage!==this.battleArrivalPage)return;
+      this.art?.retainBattleScene(BATTLE_MAPS[levelId].sceneArt);
+      recordNativeBattleStage('创建战场',levelId);
       const map=BATTLE_MAPS[levelId],points=(map.routes??[map.route]).flat().concat(map.slots);
       this.battleFov=Math.min(44,Math.max(28,Math.max(...points.map(p=>Math.abs(p.x)))*3.35,Math.max(...points.map(p=>Math.abs(p.z)))*6.3))*.84;
       if(this.art?.ready){if(levelId===0||BATTLE_MAPS[levelId].sceneArt){this.mainCamera.node.setPosition(0,20,12);this.mainCamera.node.lookAt(new Vec3(0,0,0));}else{this.mainCamera.node.setPosition(0,20,20);this.mainCamera.node.lookAt(new Vec3(0,0,0));}}else{this.mainCamera.node.setPosition(0,20,17);this.mainCamera.node.lookAt(new Vec3(0,0,1.25));}this.resizeViewport();
       const world=new BattleWorld(this.node,this.mainCamera,this.pipelineMaterial,this.art,levelId);world.setOceanTexture(this.art?.oceanTexture);world.setTerrainTexture?.(this.art?.battleTerrainTexture);world.setBattleArt?.(this.art);
+      recordNativeBattleStage('载入伙伴与怪物模型',levelId);
       const islands:Record<number,string>={0:'tutorial-island',1:'tidal-island',2:'coral-bend',3:'dusk-bay',4:'boss-bay'};
       const snapshot=challengeMode===undefined?this.service.snapshot.run?.battle:undefined;const island=snapshot&&!snapshot.layoutVersion?islands[levelId]:undefined;
       const islandPath=island?`environment/${island}/${island}/${island}`:undefined;
@@ -630,12 +715,12 @@ export class GameEntry extends Component {
   }
   private finishBattleArrival():void{
     const arrival=this.battleArrival;if(!arrival||this.disposed||this.appHidden||this.screen!=='battle')return;
-    const ready=!arrival.islandPending&&arrival.world.modelsReady;
+    const ready=!arrival.islandPending&&arrival.world.modelsReady&&PearlBattleArt.ready;
     this.arrivalView?.setBattleProgress(arrival.world.loadedResourceCount);
     const expired=arrival.deadline.expired(Date.now(),arrival.world.loadedResourceCount+(arrival.islandPending?0:1),ready);
-    const error=arrival.error||arrival.world.loadingError||(expired?new Error('战斗资源加载超时，请重试'):undefined);
+    const error=arrival.error||arrival.world.loadingError||(PearlBattleArt.error?new Error(PearlBattleArt.error):undefined)||(expired?new Error('战斗资源加载超时，请重试'):undefined);
     if(error){this.failBattleArrival(error);return;}
-    if(arrival.islandPending||!arrival.world.modelsReady)return;
+    if(arrival.islandPending||!arrival.world.modelsReady||!PearlBattleArt.ready)return;
     try{
       const alreadyPrepared=arrival.controllerReady;
       if(!arrival.controllerReady){
@@ -644,7 +729,7 @@ export class GameEntry extends Component {
       let initializationError:unknown,initializationFailed=false;
       const home=()=>{if(controller&&!this.disposed&&this.screen==='battle'&&this.battleScreen===controller)this.go('home');};
       const failure=(error:unknown)=>{if(!controller){initializationError=error;initializationFailed=true;return;}if(!this.disposed&&this.screen==='battle'&&this.battleScreen===controller){if(this.battleArrival===arrival)arrival.error=error;else this.error(error);}};
-      controller=this.challengeMode==='world'?new WorldBossScreen(this.service!,this.roomClient!,this.ui,arrival.world,this.mainCamera!,this.audio!,k=>this.command(k),()=>{home();if(!this.allMapsReview)this.openWorldBoss();},failure,this.allMapsReview):this.challengeMode==='watch'?new ArenaWatchScreen(this.service!,this.watchOpponent,this.ui,arrival.world,()=>{home();this.communityEntry('arena');},this.audio!):this.challengeMode==='online'?new LiveRaidScreen(this.service!,this.roomClient!,this.ui,arrival.world,this.mainCamera!,this.audio!,k=>this.command(k),home,failure):this.challengeMode?new ChallengeScreen(this.challengeMode,this.service!,this.ui,arrival.world,this.mainCamera!,this.audio!,kind=>this.command(kind),home,failure):
+      controller=this.challengeMode==='world'?new WorldBossScreen(this.service!,this.roomClient!,this.ui,arrival.world,this.mainCamera!,this.audio!,k=>this.command(k),()=>{home();if(!this.allMapsReview)this.openWorldBoss();},failure,this.allMapsReview):this.challengeMode==='watch'?new ArenaWatchScreen(this.service!,this.watchOpponent,this.ui,arrival.world,()=>{home();this.communityEntry('arena');},this.audio!,this.mainCamera!):this.challengeMode==='online'?new LiveRaidScreen(this.service!,this.roomClient!,this.ui,arrival.world,this.mainCamera!,this.audio!,k=>this.command(k),home,failure):this.challengeMode?new ChallengeScreen(this.challengeMode,this.service!,this.ui,arrival.world,this.mainCamera!,this.audio!,kind=>this.command(kind),home,failure):
         new BattleScreen(this,this.service!,this.ui,arrival.world,this.mainCamera!,this.audio!,kind=>this.command(kind),home,failure);
       this.battleScreen=controller;
       if(initializationFailed)throw initializationError;
@@ -653,19 +738,24 @@ export class GameEntry extends Component {
       if(arrival.world.loadingError)throw arrival.world.loadingError;
       if(!arrival.world.modelsReady){this.showBattleArrival();return;}
       if(alreadyPrepared)this.battleScreen?.render();
+      recordNativeBattleStage('显示战场');
       arrival.world.setVisible(true);
+      this.diagnostics?.markReady();
       this.battleArrival=undefined;this.battleArrivalPage++;
       this.arrivalView?.hide();
+      recordNativeBattleStage('战斗就绪');
       // Battle now owns its own references. Retire only our home instance; shared
       // turtle assets remain owned by BattleWorld and the resource cache.
       const oldHome=this.homeWorld;this.homeWorld=undefined;oldHome?.destroy();
     }catch(error){this.failBattleArrival(error);}
   }
   private failBattleArrival(error:unknown):void{
+    recordNativeBattleStage('加载失败：'+(error instanceof Error?error.message:String(error)).slice(0,100));
     console.error('[BATTLE_ARRIVAL]',error);
     this.battleScreen?.destroy();this.battleScreen=undefined;this.cancelBattleArrival();this.showBattleArrival(true);
   }
   private collection():void{
+    if(this.solo&&this.screen==='collection'){const inspect=(t:Turtle)=>new PetDetails(this.ui,this.service!,k=>this.command(k),e=>this.error(e)).show(t,{owned:true,learn:()=>{this.selectedId=t.id;if(this.solo)this.getPrototypeMenus().skillBooks(t.id);else this.skillBooksDialog();},manage:()=>this.getPrototypeMenus().manage(t.id,()=>this.go('collection')),rename:()=>this.getPrototypeMenus().rename(t.id,()=>this.go('collection'))});this.soloMenus().collection(inspect,()=>this.chooseTeam(0,false,'chapter',true));return;}
     if(this.art?.ready&&this.screen!=='history'){this.collectionV2();return;}
     const s=this.service!.snapshot,history=this.screen==='history',all=history?Object.values(s.history).map(h=>h.turtle):Object.values(s.collection),p=this.heading(history?'成长历史':'我的龟龟',history?'每一次成长，都留下一段故事':'技能、天赋与成长，共同组成独一无二的伙伴');
     if(s.rulesVersion==='0.6'&&!history)all.sort((a,b)=>turtleQuality(b).tier-turtleQuality(a).tier||turtleQuality(b).score-turtleQuality(a).score||a.id.localeCompare(b.id));
@@ -789,9 +879,27 @@ export class GameEntry extends Component {
       }catch(error){this.error(error);}
     },{parent:p,primary:true,size:32});
   }
+  private soloSettings(tab=0):void{
+    const ui=this.ui;ui.clear();const p=ui.soloPage('设置',()=>this.go('home'),true),settings=this.service!.settingsSnapshot;
+    ['声音','画面','操作'].forEach((name,i)=>ui.button(name,-417+i*260,230,243,45,()=>this.soloSettings(i),{parent:p,primary:tab===i,size:25}));
+    ui.portrait('stone',415,-123,247,p,true);
+    if(tab===0){
+      (['music','effects'] as const).forEach((key,i)=>{const y=130-i*107;ui.text(key==='music'?'音乐':'音效',-464,y,26,UI_COLORS.ink,p,132,40);const hit=ui.group('声音滑块:'+key,-95,y,p,540,62),label=ui.text(Math.round(settings[key]*100)+'%',226,y,23,UI_COLORS.ink,p,91,34);let value=settings[key],track:Node|undefined;
+        const draw=()=>{if(track){track.removeFromParent();track.destroy();}track=ui.group('滑块显示',0,0,hit);ui.progress(0,0,520,13,value,'#11B5BE',track);ui.panel(-260+520*value,0,24,24,track,'#FFFFFF',255,12);label.string=Math.round(value*100)+'%';};draw();
+        const update=(event:EventTouch)=>{const point=event.getUILocation(),local=hit.getComponent(UITransform)!.convertToNodeSpaceAR(new Vec3(point.x,point.y,0));value=Math.max(0,Math.min(1,(local.x+260)/520));draw();event.propagationStopped=true;};
+        hit.on(Node.EventType.TOUCH_START,update);hit.on(Node.EventType.TOUCH_MOVE,update);hit.on(Node.EventType.TOUCH_END,(event:EventTouch)=>{update(event);const next=this.service!.updateSettings(this.command('volume'),{[key]:Math.round(value*100)/100});this.audio?.apply(next);if(key==='effects')this.audio?.effect('sfx_collect',0);});
+      });ui.line(-537,-40,247,-40,p);ui.text('当前音乐：海岛时光',-287,-83,23,UI_COLORS.sand,p,462,39);ui.button('试听',148,-83,153,44,()=>{this.audio?.unlock();void this.audio?.playMusic('bgm_home');},{parent:p,size:22});
+      ui.text('单机存档',-451,-165,24,UI_COLORS.ink,p,177,37);ui.text('冒险进度自动保存在本机',-241,-208,21,UI_COLORS.sand,p,600,37);
+    }else if(tab===1){ui.text('动态效果',-373,111,28,UI_COLORS.ink,p,307,43);ui.button(settings.reducedMotion?'减少动态：开':'减少动态：关',-57,36,438,64,()=>{this.service!.updateSettings(this.command('motion'),{reducedMotion:!settings.reducedMotion});this.soloSettings(tab);},{parent:p,primary:settings.reducedMotion,size:25});ui.text('减少非必要摆动与装饰动画，保留战斗提示。',-134,-61,23,UI_COLORS.sand,p,726,83,true);}
+    else{[['拖动伙伴','长按龟龟后拖动；同阶合成，异阶换位'],['手动施法','点击技能切换施法者，再选择目标释放'],['页面翻动','在列表区域左右滑动或使用翻页按钮']].forEach(([title,body],i)=>{ui.text(title,-378,130-i*111,26,UI_COLORS.ink,p,321,40);ui.text(body,-143,83-i*111,21,UI_COLORS.sand,p,742,52,true);});}
+    ui.button('完成 ›',431,-270,255,58,()=>this.go('home'),{parent:p,primary:true,size:28});
+
+  }
   private settings():void{
-    const s=this.service!.snapshot,p=this.heading('设置','声音、画面与账号服务');
-    this.ui.button('账号与服务  ›',0,181,600,43,()=>this.tasks().account(),{parent:p,primary:true,size:25});
+    if(this.solo){this.soloSettings();return;}
+    const s=this.service!.snapshot,p=this.heading('设置',this.solo?'声音、画面与操作':'声音、画面与账号服务');
+    if(!this.solo)this.ui.button('账号与服务  ›',0,181,600,43,()=>this.tasks().account(),{parent:p,primary:true,size:25});
+    if(this.solo)this.ui.button('操作说明',0,181,600,43,()=>this.loginInfo('操作说明','长按龟龟拖动换位；拖到同阶龟龟上合成。\n不同阶或满阶互换；点击技能切换施法者，再点击目标释放。\n左右滑动翻页；局外金币与局内干粮互不通用。'),{parent:p,size:25});
     (['music','effects'] as const).forEach((key,i)=>{
       const y=88-i*127;this.ui.text(key==='music'?'背景音乐':'游戏音效',-424,y,28,UI_COLORS.cream,p,224,50);
       this.ui.button('－',-244,y,88,88,()=>this.changeVolume(key,-.1),{parent:p,size:36});
@@ -801,9 +909,10 @@ export class GameEntry extends Component {
       this.ui.button(s.settings[key]===0?'恢复':'静音',428,y,216,88,()=>this.act(()=>{const settings=this.service!.updateSettings(this.command('volume'),{[key]:s.settings[key]===0?.65:0});this.audio?.apply(settings);}),{parent:p,size:30});
     });
     this.ui.button(s.settings.reducedMotion?'减少动态：开':'减少动态：关',0,-184,424,64,()=>this.act(()=>this.service!.updateSettings(this.command('motion'),{reducedMotion:!s.settings.reducedMotion})),{parent:p,size:25});
-    this.ui.text(this.accountClient?.session?'账号进度自动同步至当前配套服务；游客进度独立保留':'当前为本机游客；可在“账号与服务”中注册保存进度',0,-281,23,UI_COLORS.sand,p,1040,40);
+    if(this.nativeTrial)this.ui.button('加载诊断',410,-184,168,54,()=>{const d=this.ui.dialog('战斗加载记录','如再次退出，可将本页记录发给开发者',()=>d.parent?.destroy(),880,480);this.ui.text(nativeBattleTraceText(),0,-20,22,UI_COLORS.ink,d,800,310,true);},{parent:p,size:23});
+    this.ui.text(this.solo?'单机进度自动保存在本机；清除应用数据会删除本地存档':this.accountClient?.session?'账号进度自动同步至当前配套服务；游客进度独立保留':'当前为本机游客；可在“账号与服务”中注册保存进度',0,-281,23,UI_COLORS.sand,p,1040,40);
   }
-  private changeVolume(key:'music'|'effects',delta:number):void{this.act(()=>{const s=this.service!.snapshot.settings,settings=this.service!.updateSettings(this.command('volume'),{[key]:Math.min(1,Math.max(0,Math.round((s[key]+delta)*100)/100))});this.audio?.apply(settings);if(key==='effects')this.audio?.effect('sfx_collect',0);});}
+  private changeVolume(key:'music'|'effects',delta:number):void{this.act(()=>{const s=this.service!.settingsSnapshot,settings=this.service!.updateSettings(this.command('volume'),{[key]:Math.min(1,Math.max(0,Math.round((s[key]+delta)*100)/100))});this.audio?.apply(settings);if(key==='effects')this.audio?.effect('sfx_collect',0);});}
   private energyDialog():void{
     if(!this.menuAvailable())return;
     this.refreshResources();

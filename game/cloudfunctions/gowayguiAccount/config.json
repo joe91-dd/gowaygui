@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "triggers": [
+    {
+      "name": "marketSettlementMinute",
+      "type": "timer",
+      "config": "0 * * * * * *"
+    }
+  ]
+}

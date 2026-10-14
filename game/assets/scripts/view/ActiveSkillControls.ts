@@ -1,3 +1,4 @@
+import {BattleHudMotion} from './BattleHudMotion';
 import {Camera,Canvas,EventTouch,Graphics,Label,Node,UITransform,Vec3} from 'cc';
 import {BattleCommand,BattleState,BattleUnit,canCommandBattle,commandAllSkills,commandBattle,legalSkillTargets,skillTargetMode,skillCastRange,focusBattle} from '../core/battle';
 import {GameService} from '../core/game';
@@ -8,7 +9,7 @@ import {IslandUI,UI_COLORS,color} from './IslandUI';
 export class ActiveSkillControls {
   private aim?:{overlay:Node;unitId:string;skill:SkillId;hover:Graphics;point?:{x:number;z:number};targetId?:string;valid:boolean;done:()=>void};
   private focusDone?:()=>void;
-  private items:{id:string;skill?:SkillId;label:Label;mask:Graphics;round?:boolean}[]=[];
+  private items:{id:string;skill?:SkillId;label:Label;mask:Graphics;round?:boolean;motion?:BattleHudMotion}[]=[];
   constructor(private ui:IslandUI,private camera:Camera,private service:GameService,private command:(kind:string)=>string,
     private context:<T>(action:(battle:BattleState)=>T)=>T,private targeting:(value:boolean)=>void,private repaint:()=>void,private available:()=>boolean,private remote?:{focus?:(targetId?:string)=>boolean;cast:(command:BattleCommand)=>boolean;changed:()=>void;key:(unit:BattleUnit)=>string}){}
   dispose():void{const aim=this.aim;this.aim=undefined;this.focusDone?.();this.focusDone=undefined;if(aim){aim.overlay.destroy();this.targeting(false);}}
@@ -41,63 +42,59 @@ export class ActiveSkillControls {
       const mask=this.ui.group('技能冷却遮罩',0,0,n,104,108).addComponent(Graphics);
       const label=this.ui.text(skill?SKILL_BY_ID[skill].name:u?'未学主动':'空位',0,-39,18,UI_COLORS.cream,n,94,24);
       if(u){this.items.push({id:u.id,skill,label,mask});
-        const held=this.service.snapshot.settings.manualSkillTurtles?.includes(this.key(u))??false;
+        const held=this.service.settingsSnapshot.manualSkillTurtles?.includes(this.key(u))??false;
         this.ui.button(held?'手动保留':'跟随自动',10+(i+5-count)*112,-205,104,30,()=>{
-          if(!this.available())return;const ids=new Set(this.service.snapshot.settings.manualSkillTurtles??[]);if(ids.has(this.key(u)))ids.delete(this.key(u));else ids.add(this.key(u));
+          if(!this.available())return;const ids=new Set(this.service.settingsSnapshot.manualSkillTurtles??[]);if(ids.has(this.key(u)))ids.delete(this.key(u));else ids.add(this.key(u));
           const value=Array.from(ids);this.service.updateSettings(this.command('holdSkill'),{manualSkillTurtles:value});this.context(b=>{if(!this.remote)b.manualSkillTurtles=value;});this.remote?.changed();this.repaint();
         },{selected:held,size:16,disabled:!skill});
       }
     }
     if(!this.remote||this.remote.focus)this.ui.button('指定集火',-102,-274,104,108,()=>this.selectFocus(),{size:21});
-    const auto=this.service.snapshot.settings.autoSkills??false;
+    const auto=this.service.settingsSnapshot.autoSkills??false;
     const toggle=this.ui.button(`一键释放\n${auto?'已开启':'已关闭'}`,564,-274,88,108,()=>{
       if(!this.available())return;
-      const value=!(this.service.snapshot.settings.autoSkills??false);
+      const value=!(this.service.settingsSnapshot.autoSkills??false);
       this.service.updateSettings(this.command('autoSkills'),{autoSkills:value});
       this.context(b=>{if(!this.remote)b.autoSkills=value;});this.remote?.changed();this.repaint();
     },{primary:auto,selected:auto,size:17});toggle.name='一键释放开关';if(this.ui.pinBattleFrom)this.ui.pinBattleFrom(start,.72,188,-103,'bottom',1);else this.ui.compactFrom(start,.72,188,-103);this.update();
   }
   private renderBattleDock(roster:BattleUnit[]):void{
     const count=Math.max(1,Math.min(5,roster.length));this.items=[];
-    const auto=this.service.snapshot.settings.autoSkills??false;
+    const auto=this.service.settingsSnapshot.autoSkills??false;
     for(let i=0;i<count;i++){
       const u=roster[i],skill=u?.skills.find(id=>SKILL_BY_ID[id].active),x=count===1?252:70+i*81;
       const n=this.ui.button('',x,-281,76,92,()=>{if(u&&skill){if(this.isAutomatic(u))this.hold(u);else this.select(u.id,skill);}},{surface:'bare',disabled:!u});
       n.name='战斗技能:'+i;if(u&&skill)this.bindPress(n,u,skill);
       const displaySkill=u&&skill?(u.skills.find(id=>SKILL_BY_ID[id].requires===skill)??skill):skill;
       if(displaySkill&&this.ui.art?.ready)this.ui.battleSkillIcon(displaySkill,0,12,64,n);else if(u)this.ui.portrait(u.role,0,12,62,n);
-      const mastery=Math.min(5,u?.skills.length??0),dots=this.ui.group('技能数量标记',0,-34,n,76,14).addComponent(Graphics);
-      for(let j=0;j<5;j++){dots.fillColor=color(j<mastery?'#19C6F3':'#A5CCD9');dots.circle(-26+j*10,0,4);dots.fill();dots.strokeColor=color('#168BC5');dots.lineWidth=.7;dots.circle(-26+j*10,0,4);dots.stroke();}
-      this.ui.text(String(u?.skills.length??0),27,-34,15,'#07385E',n,22,20).isBold=true;
       const mask=this.ui.group('圆形技能冷却遮罩',0,12,n,64,64).addComponent(Graphics);
       const label=this.ui.text(skill?'':u?'未学主动':'空位',0,12,16,'#FFFFFF',n,64,26);
-      if(u)this.items.push({id:u.id,skill,label,mask,round:true});
+      if(u)this.items.push({id:u.id,skill,label,mask,round:true,motion:BattleHudMotion.on(this.ui.group('技能状态光',0,12,n),this.ui.reducedMotion)});
     }
     if(count===1&&(!this.remote||this.remote.focus))this.ui.button('指定集火',111,-280,106,57,()=>this.selectFocus(),{size:20});
-    this.ui.line(446,-306,446,-243,this.ui.root,'#82B8C2');
-    this.ui.text('自动释放',488,-262,13,'#07385E',this.ui.root,80,24).isBold=true;
-    const toggle=this.ui.button('',488,-291,68,34,()=>{
-      if(!this.available())return;const value=!(this.service.snapshot.settings.autoSkills??false);
+    this.ui.button(auto?'自动施法':'手动施法',491,-259,119,38,()=>{
+      if(!this.available())return;const value=!(this.service.settingsSnapshot.autoSkills??false);
       this.service.updateSettings(this.command('autoSkills'),{autoSkills:value});this.context(b=>{if(!this.remote)b.autoSkills=value;});this.remote?.changed();this.repaint();
-    },{surface:'bare'});toggle.name='自动释放开关';
-    const track=toggle.addComponent(Graphics);track.fillColor=color(auto?'#0DBBB7':'#567F97');track.roundRect(-33,-15,66,30,15);track.fill();track.strokeColor=color('#BCDDE5');track.lineWidth=2;track.roundRect(-33,-15,66,30,15);track.stroke();
-    track.fillColor=color('#FFFFFF');track.circle(auto?18:-18,0,12);track.fill();this.ui.text(auto?'开':'关',auto?-14:14,0,19,'#FFFFFF',toggle,26,28).isBold=true;this.update();
+    },{surface:'hud',size:19});
+    this.ui.button('一键释放',491,-305,119,38,()=>{
+      if(!this.available())return;let count=0;this.context(b=>{for(const u of roster){const skill=u.skills.find(id=>SKILL_BY_ID[id].active);if(!skill)continue;const cmd={type:'cast' as const,unitId:u.id,skillId:skill};if(canCommandBattle(b,cmd)&&this.cast(cmd))count++;}});if(!count)this.ui.toast('技能冷却中或暂无有效目标');
+    },{surface:'hud',size:19});this.update();
   }
   update():void{
     this.context(b=>{
-      if(!this.remote)b.manualSkillTurtles=[...(this.service.snapshot.settings.manualSkillTurtles??[])];
+      if(!this.remote)b.manualSkillTurtles=[...(this.service.settingsSnapshot.manualSkillTurtles??[])];
       for(const item of this.items){
         const u=b.units.find(x=>x.id===item.id),s=item.skill,g=item.mask;g.clear();
-        if(!u){item.label.string='等待上场';continue;}if(!s)continue;
+        if(!u){item.label.string='等待上场';if(item.motion){item.motion.ready=false;item.motion.selected=false;}continue;}if(!s)continue;
         const left=Math.max(0,((u.cooldowns[s]??0)-b.tick)*.05),ready=canCommandBattle(b,{type:'cast',unitId:u.id,skillId:s});
         if(item.round){
           item.label.string=!u.alive?'倒下':left>0?left.toFixed(1):'';item.label.color=color('#FFFFFF');
           if(!u.alive||left>0){const fraction=!u.alive?1:Math.min(1,left/SKILL_BY_ID[s].cooldown!);g.fillColor=color('#092E4C',165);g.moveTo(0,0);g.lineTo(0,31);for(let j=0;j<=48;j++){const a=Math.PI/2+fraction*Math.PI*2*j/48;g.lineTo(Math.cos(a)*31,Math.sin(a)*31);}g.close();g.fill();}
           if(ready){g.strokeColor=color('#8DEBFF',200);g.lineWidth=2;g.circle(0,0,33);g.stroke();}
-          if(u.alive&&this.isAutomatic(u)){const a=b.tick*.08;g.strokeColor=color('#23DDF0');g.lineWidth=3;g.arc(0,0,34,a,a+1,false);g.stroke();}
+          if(item.motion){item.motion.radius=34;item.motion.ready=ready;item.motion.selected=this.aim?.unitId===u.id;}
           continue;
         }
-        item.label.string=!u.alive?'已倒下':left>0?`${left.toFixed(1)}秒`:SKILL_BY_ID[s].name;item.label.color=color(ready?UI_COLORS.gold:UI_COLORS.sand);
+        item.label.string=!u.alive?'已倒下':left>0?`${left.toFixed(1)}秒`:SKILL_BY_ID[s].name;item.label.color=color(this.ui.battleStyle?(ready?'#147B7E':'#5C6C70'):(ready?UI_COLORS.gold:UI_COLORS.sand));
         if(left>0){const h=106*Math.min(1,left/SKILL_BY_ID[s].cooldown!);g.fillColor=color('#0B1E2B',180);g.rect(-51,54-h,102,h);g.fill();}
         if(ready){g.strokeColor=color('#75DCDD');g.lineWidth=2;g.roundRect(-50,-52,100,104,16);g.stroke();}
         if(u.alive&&this.isAutomatic(u)){
@@ -116,9 +113,9 @@ export class ActiveSkillControls {
     const g=this.ui.group('技能作用范围',0,0,parent).addComponent(Graphics);g.strokeColor=color('#73F0EB');g.fillColor=color('#53D9D0',30);g.lineWidth=3;
     for(let i=0;i<=48;i++){const a=i/48*Math.PI*2,p=this.project(x+Math.cos(a)*radius,.2,z+Math.sin(a)*radius);if(!p)continue;if(i===0)g.moveTo(p.x,p.y);else g.lineTo(p.x,p.y);}g.close();g.fill();g.stroke();
   }
-  private isAutomatic(u:BattleUnit):boolean{return !!this.service.snapshot.settings.autoSkills&&!this.service.snapshot.settings.manualSkillTurtles?.includes(this.key(u));}
+  private isAutomatic(u:BattleUnit):boolean{return !!this.service.settingsSnapshot.autoSkills&&!this.service.settingsSnapshot.manualSkillTurtles?.includes(this.key(u));}
   private hold(u:BattleUnit):void{
-    const ids=Array.from(new Set([...(this.service.snapshot.settings.manualSkillTurtles??[]),u.turtleId]));this.service.updateSettings(this.command('holdSkill'),{manualSkillTurtles:ids});this.context(b=>{if(!this.remote)b.manualSkillTurtles=ids;});this.remote?.changed();this.repaint();this.ui.toast('已保留此技能，点击或长按手动释放');
+    const ids=Array.from(new Set([...(this.service.settingsSnapshot.manualSkillTurtles??[]),u.turtleId]));this.service.updateSettings(this.command('holdSkill'),{manualSkillTurtles:ids});this.context(b=>{if(!this.remote)b.manualSkillTurtles=ids;});this.remote?.changed();this.repaint();this.ui.toast('已保留此技能，点击或长按手动释放');
   }
   private bindPress(n:Node,u:BattleUnit,skill:SkillId):void{
     let timer:ReturnType<typeof setTimeout>|undefined,holding=false,start:{x:number;y:number}|undefined;

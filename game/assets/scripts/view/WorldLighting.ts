@@ -32,3 +32,15 @@ export function receiveIslandShadows(root:Node,cast=true):void{
     mesh.receiveShadow=cast?1:0;mesh.shadowCastingMode=cast?MeshRenderer.ShadowCastingMode.ON:MeshRenderer.ShadowCastingMode.OFF;
   }
 }
+
+/** A softer fill keeps pale armour from clipping against the illustrated terrain. */
+export function lightBattle(scene:Scene):()=>void{
+  const ambient=scene.globals.ambient,sun=scene.getComponentInChildren(DirectionalLight);
+  const previous={illum:ambient.skyIllum,sky:ambient.skyLightingColor.clone(),ground:ambient.groundLightingColor.clone(),sun:sun?.illuminance};
+  const hdr=director?.root?.pipeline?.pipelineSceneData?.isHDR===true;
+  ambient.skyIllum=hdr?22000:.78;
+  ambient.skyLightingColor=new Color(222,230,219,255);
+  ambient.groundLightingColor=new Color(119,143,132,255);
+  if(sun)sun.illuminance=hdr?65000:1.12;
+  return()=>{ambient.skyIllum=previous.illum;ambient.skyLightingColor=previous.sky;ambient.groundLightingColor=previous.ground;if(sun?.isValid&&previous.sun!==undefined)sun.illuminance=previous.sun;};
+}

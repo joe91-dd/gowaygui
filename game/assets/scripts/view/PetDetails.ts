@@ -37,35 +37,35 @@ export class PetDetails {
   const edge=this.ui.group('浅金细边',0,0,n,w,h),g=edge.addComponent(Graphics);g.lineWidth=1.3;g.strokeColor=color(hex,210);g.roundRect(-w/2+1,-h/2+1,w-2,h-2,radius);g.stroke();
  }
  private action(label:string,x:number,y:number,w:number,h:number,fn:()=>void,parent:Node,primary=false,disabled=false,size=23):Node{
-  const n=this.ui.button(label,x,y,w,h,fn,{parent,primary,disabled,size});this.outline(n,w,h,disabled?'#D9E2E4':'#D8B879');return n;
+  const n=this.ui.button(label,x,y,w,h,fn,{parent,primary,disabled,size});this.outline(n,w,h,disabled?'#D9E2E4':this.ui.soloStyle?'#BBDDD7':'#D8B879');return n;
  }
  show(turtle:Turtle,options:PetDetailOptions={}):void{
   const s=this.service.snapshot,t=options.readOnly?turtle:accessiblePet(s,turtle.id)??turtle,canAllocate=!options.readOnly&&!!editablePet(s,t.id),loan=options.readOnly?'':loanLabel(s,t.id),info=levelInfo(t),q=turtleQuality(t),stats=petPanel(t),identity=(options.readOnly?'external:':'')+t.id+':'+t.role;
   if(this.petId!==identity||!this.pane||!isValid(this.pane,true)){
    this.retire(this.pane?.parent??undefined);this.petId=identity;this.draft={attack:0,health:0,defense:0};this.tab='panel';
-   const veil=this.ui.group('伙伴培养遮罩',0,0,this.ui.root,1280,720),g=veil.addComponent(Graphics);g.fillColor=color('#102F43',152);g.rect(-640,-360,1280,720);g.fill();veil.on(Node.EventType.TOUCH_START,(e:EventTouch)=>e.propagationStopped=true);
+   const veil=this.ui.screenVeil('伙伴培养遮罩','#102F43',152);
+   if(this.ui.soloStyle)this.ui.screenScenery(veil,'home-background');
    this.ui.secondaryPage(veil);this.pane=this.ui.group('伙伴培养详情',0,0,veil,1240,698);
-   this.ui.art?.attach(this.pane,'pet-detail-shell',1240,698);
-   const backdrop=this.ui.group('伙伴海湾展示台',-393,22,this.pane,368,434);this.ui.art?.attach(backdrop,'pet-display-sanctuary',368,434);
+   if(this.ui.soloStyle){this.ui.panel(195,-24,774,599,this.pane,'#FFF9EC',247,24);this.ui.soloHeader(this.pane,'我的龟龟',()=>{this.retire(this.pane?.parent??undefined);this.pane=undefined;options.back?.();});}else{this.ui.art?.attach(this.pane,'pet-detail-shell',1240,698);const backdrop=this.ui.group('伙伴海湾展示台',-393,22,this.pane,368,434);this.ui.art?.attach(backdrop,'pet-display-sanctuary',368,434);}
    // Feet sit on the stone top, at 70% of the display art's height.
    const shadow=this.ui.group('伙伴接触阴影',-393,-65,this.pane),sg=shadow.addComponent(Graphics);sg.fillColor=color('#635642',42);sg.ellipse(0,0,90,13);sg.fill();
    this.ui.portrait(t.role,-393,86,t.role==='stone'?306:324,this.pane,true,t.skills.length>=10);
-   this.ui.line(-199,244,-199,-264,this.pane,'#D3C7A5');
+   if(!this.ui.soloStyle)this.ui.line(-199,244,-199,-264,this.pane,'#D3C7A5');
   }
   const p=this.pane!;
   // Rebuild controls only. The living portrait and its rig survive tab changes.
   this.retire(this.content);const c=this.content=this.ui.group('培养内容:'+this.tab,0,0,p,1240,698);
   const close=()=>{this.retire(this.pane?.parent??undefined);this.pane=undefined;this.content=undefined;this.draft={attack:0,health:0,defense:0};options.back?.();};
   const act=(fn:()=>void)=>{try{fn();this.show(t,options);}catch(e){this.error(e);}};
-  this.ui.text(visualName(t),-393,282,40,UI_COLORS.ink,c,330,52);
-  this.ui.panel(-393,239,229,32,c,'#E8F1EF',255,12);this.ui.text(`${HERO_LOOK[t.role].job} · ${q.name}`,-393,239,22,UI_COLORS.ink,c,229,30);
+  this.ui.text(visualName(t),-393,this.ui.soloStyle?231:282,36,UI_COLORS.ink,c,330,48);
+  this.ui.panel(-393,this.ui.soloStyle?192:239,229,32,c,'#E8F1EF',255,12);this.ui.text(`${HERO_LOOK[t.role].job} · ${q.name}`,-393,this.ui.soloStyle?192:239,22,UI_COLORS.ink,c,229,30);
   this.ui.text('Lv.'+info.level+' / 50',-393,-148,30,UI_COLORS.ink,c,320,42);
   this.ui.progress(-393,-181,282,12,info.needed?info.current/info.needed:1,'#26C3C5',c);
   this.ui.text(info.needed?`${info.current} / ${info.needed} 经验`:'已经满级',-393,-211,21,UI_COLORS.sand,c,320,32);
   this.ui.text(loan?loan:'每级 3 点 · 战斗获得经验',-393,-247,19,UI_COLORS.sand,c,332,30);
   if(options.owned&&options.rename)this.action('改名',-393,-293,254,50,()=>{close();options.rename!();},c);
-  else if(this.ui.share)this.action('分享伙伴',-393,-293,254,50,()=>this.ui.share?.('我的海岛伙伴 · '+visualName(t),`${q.name} ${t.skills.length} 技能 · Lv.${info.level}，一起来守护龟岛！`),c);
-  this.action('×',583,302,46,46,()=>{this.ui.click('back');close();},c,false,false,29);
+  else if(this.ui.share&&!this.ui.soloStyle)this.action('分享伙伴',-393,-293,254,50,()=>this.ui.share?.('我的海岛伙伴 · '+visualName(t),`${q.name} ${t.skills.length} 技能 · Lv.${info.level}，一起来守护龟岛！`),c);
+  if(!this.ui.soloStyle)this.action('×',583,302,46,46,()=>{this.ui.click('back');close();},c,false,false,29);
   (['panel','talents','skills'] as const).forEach((tab,i)=>this.action(['属性加点','星级天赋',`技能 ${t.skills.length}`][i],-61+i*240,273,230,54,()=>{this.tab=tab;this.show(t,options);},c,this.tab===tab,false,26));
   const heading=(title:string,note:string)=>{
    this.ui.text(title,8,190,29,UI_COLORS.ink,c,302,46);this.ui.text(note,390,190,19,UI_COLORS.sand,c,320,38);this.ui.line(-164,156,552,156,c,'#C7BA99');

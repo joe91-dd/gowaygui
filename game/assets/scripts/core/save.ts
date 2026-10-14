@@ -135,6 +135,7 @@ export function validateSave(s:GameSave):void{
   validateSaveState(s,false);
 }
 function validateSaveState(s:GameSave,allowLegacyLayoutSlots:boolean):void{
+  if(s.solo){const v=s.solo;requireRule(v.version===1&&[1,2,3].includes(v.difficulty)&&Array.isArray(v.best)&&v.best.length===3&&v.best.every(n=>integer(n,0))&&Array.isArray(v.claims)&&new Set(v.claims).size===v.claims.length&&v.claims.every(x=>typeof x==='string')&&Array.isArray(v.testPackClaims),'单机进度损坏','SAVE');}
   if(s.collectionOrder!==undefined)requireRule(Array.isArray(s.collectionOrder)&&s.collectionOrder.length<=10000&&new Set(s.collectionOrder).size===s.collectionOrder.length&&s.collectionOrder.every(id=>typeof id==='string'&&id.length>0&&id.length<200),'伙伴排序资料损坏','SAVE');
   if(s.homeTeam!==undefined)requireRule(Array.isArray(s.homeTeam)&&s.homeTeam.length>0&&s.homeTeam.length<=5&&new Set(s.homeTeam).size===s.homeTeam.length&&s.homeTeam.every(id=>typeof id==='string'&&id.length>0&&id.length<200),'首发阵容资料损坏','SAVE');
   if(s.avatar)requireRule(!!ROLES[s.avatar.role]&&(s.avatar.image===undefined||typeof s.avatar.image==='string'&&s.avatar.image.length<=360000&&/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/.test(s.avatar.image)),'头像资料损坏','SAVE');

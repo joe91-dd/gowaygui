@@ -1,3 +1,6 @@
+import {runtimeQuery} from '../platform/runtimeQuery';
+import {BattleFeedback} from './BattleFeedback';
+import {pearlBattleHeader} from './BattleHudHeader';
 import {ExpeditionHUD} from './ExpeditionHUD';
 import {petRange} from '../core/development';
 import {PACK_NAMES} from '../core/rewardPacks';
@@ -23,6 +26,7 @@ import {ActiveSkillControls} from './ActiveSkillControls';
 
 /** Presentation controller: all changes to permanent game state are delegated to GameService. */
 export class BattleScreen {
+ private approvedFeedback?:BattleFeedback;
   private battle?:BattleState;
   private expeditionHUD?:ExpeditionHUD;
   private worldHits=new Map<string,Node>();
@@ -59,13 +63,18 @@ export class BattleScreen {
   private moving=false;private moveCancel?:Node;
   private sharedSkills?:ActiveSkillControls;
   private hudHealth:{id:string;bar:Graphics;label:Label}[]=[];
-  get diagnosticContext():Readonly<{levelId:number;wave:number}>{return this.diagnosticState;}
+  get diagnosticContext():Readonly<{levelId:number;wave:number}>{return this.battle?{levelId:this.battle.levelId,wave:this.battle.wave}:this.diagnosticState;}
   constructor(private readonly owner:Component,private readonly service:GameService,private readonly ui:IslandUI,private readonly world:BattleWorld,private readonly camera:Camera,private readonly audio:IslandAudio,private readonly command:(kind:string)=>string,private readonly onHome:()=>void,private readonly onError:(error:unknown)=>void){
     const r=this.run;this.baseSeconds=r.combatSeconds;this.world.setLevel(r.levelId);this.world.syncRunUnits(this.units);
     if((r.phase==='combat'||r.phase==='reveal'&&r.resumeAfterReveal==='combat')&&r.battle){this.battle=r.battle;if(r.phase==='combat')this.setPauseState(false);this.lastCheckpointTick=this.battle.tick;this.lastSoundEvent=this.battle.nextEventId-1;this.world.update(this.battle,[],0);}
     this.render();if(this.paused)this.showPause();
   }
-  private get run():RunState{const r=this.service.snapshot.run;if(!r)throw new Error('没有进行中的冒险');return r;}
+  private runRevision=-1;
+  private cachedRun?:RunState;
+  private get run():RunState{
+    if(this.runRevision!==this.service.revision){this.cachedRun=this.service.runSnapshot;this.runRevision=this.service.revision;}
+    if(!this.cachedRun)throw new Error('没有进行中的冒险');return this.cachedRun;
+  }
   private get units():RunTurtle[]{return currentUnits(this.run);}
   /** All buttons belong to this controller, including callbacks held across a page exit. */
   private button(...args:Parameters<IslandUI['button']>):Node{
@@ -137,7 +146,7 @@ export class BattleScreen {
     }
     try{
       const simulationDt=this.battle.rulesVersion==='0.6'?Math.min(1,dt)*this.playbackSpeed:Math.min(.15,dt);
-      this.battle.autoSkills=this.service.snapshot.settings.autoSkills??false;this.battle.manualSkillTurtles=[...(this.service.snapshot.settings.manualSkillTurtles??[])];
+      this.battle.autoSkills=this.service.settingsSnapshot.autoSkills??false;this.battle.manualSkillTurtles=[...(this.service.settingsSnapshot.manualSkillTurtles??[])];
       if(this.battle.rulesVersion==='0.6')this.world.setPlaybackSpeed(dt>0?simulationDt/dt:this.playbackSpeed);
       stepBattle(this.battle,simulationDt);const events=getBattleEvents(this.battle);this.world.update(this.battle,events,this.battle.rulesVersion==='0.6'?simulationDt:dt);this.playBattleSounds(this.battle,events);
       if(this.lifeLabel)this.lifeLabel.string=`守护 ${this.battle.coreHealth}/20`;
@@ -168,36 +177,8 @@ export class BattleScreen {
   }
 
   private buildFeedback(battle:BattleState,event:BattleEvent):void{
-    if(this.modal||this.hidden)return;
-    const amount=Math.round(event.amount??0);
-    const numeric=amount>0&&['damage','heal','shield'].includes(event.type)?(event.type==='damage'?`-${amount.toLocaleString()}`:`+${amount.toLocaleString()}`):undefined;
-    const word=event.effect==='fusion2'?'二阶合成':event.effect==='fusion3'?'三阶觉醒':event.skillId==='rebirth'&&event.type==='heal'?'重生':event.type!=='damage'?undefined:event.skillId==='combo'?'连击':event.skillId==='extraTarget'?'多重攻击':event.skillId==='reflect'?'反伤':event.effect==='pursuit'?'追击':event.critical?'暴击':undefined;
-    const skill=event.skillId?SKILL_BY_ID[event.skillId]:undefined;
-    const continuing=['cooldown','landing','burn','rockPulse','rockSplit','arrowRain','blizzardPulse','shatter'].includes(event.effect??'');
-    const skillText=event.type==='skill'&&skill&&!continuing?`${skill.active?'技能':'被动'} · ${skill.name}`:undefined;
-    const controlText=event.type==='control'?`控制 · ${skill?.name??(event.effect==='web'?'束缚':'眩晕')}`:undefined;
-    const label=numeric?(word?`${word} ${numeric}`:numeric):word??skillText??controlText;if(!label)return;
-    const key=`${battle.levelId}:${battle.wave}:${event.sourceId}:${event.skillId??event.effect??word}`;
-    // Actual damage is never throttled by value: equal consecutive hits matter.
-    // Only repeated status announcements share a cooldown.
-    if(!numeric&&battle.tick-(this.feedbackTimes.get(key)??-100)<20)return;
-    this.feedbackNodes=this.feedbackNodes.filter(n=>n.isValid&&n.parent);
-    if(this.feedbackNodes.length>=12)return;
-    const casterText=!numeric,actorId=casterText?event.sourceId:event.targetId;
-    const actor=battle.units.find(u=>u.id===actorId)||battle.enemies.find(e=>e.id===actorId)||battle.units.find(u=>u.id===event.sourceId)||battle.enemies.find(e=>e.id===event.sourceId);if(!actor)return;
-    const p=this.screenPoint(this.camera.worldToScreen(new Vec3(actor.x,2.15,actor.z)));if(!p)return;
-    if(!numeric)this.feedbackTimes.set(key,battle.tick);
-    if(casterText)p.y+=12;
-    const drift=casterText?(p.x>0?-1:1)*(56+(event.id%3)*10):0;
-    const critical=event.critical===true,positive=event.type==='heal'||event.type==='shield';
-    // Keep combat feedback legible and light: one short label, no stacked
-    // plates or extra badges. Critical hits are the only saturated accent.
-    const tint=critical?'#FF7777':positive?'#9AFFC9':numeric?'#FFFFFF':word==='重生'?'#FFE899':'#FFF2A8';
-    const size=skillText||controlText?18:critical?23:20;
-    const text=this.ui.text(label,p.x,p.y,size,tint,this.ui.root,260,32,true);
-    const outline=text.node.addComponent(LabelOutline);outline.width=1.5;outline.color=new Color('#263449');
-    this.feedbackNodes.push(text.node);
-    tween(text.node).to(casterText?.86:.72,{position:new Vec3(p.x+drift,p.y+(casterText?48:34),0),scale:new Vec3(1.06,1.06,1)}).call(()=>{if(text.node.isValid)text.node.destroy();}).start();
+    if(this.hidden)return;
+    (this.approvedFeedback??=new BattleFeedback(this.ui,this.camera)).show(battle,event);
   }
   checkpoint():void{if(!this.destroyed&&this.battle&&this.run.phase==='combat')this.service.checkpointBattle(this.command('checkpoint'),this.run.id,this.battle);}
   hide():void{if(this.destroyed)return;this.hidden=true;this.world.setPaused(true);this.audio.pause();try{this.checkpoint();}catch(error){this.onError(error);}}
@@ -206,10 +187,10 @@ export class BattleScreen {
   render():void{
     if(this.destroyed)return;this.setPauseState(this.paused,false);this.clearPage();
     const r=this.run,s=this.service.snapshot,level=BATTLE_MAPS[r.levelId],units=this.units,active=r.phase==='combat';
+    void this.audio.playMusic(!active?'bgm_home':this.battle?.enemies.some(e=>e.kind==='boss'&&e.alive)||r.wave+1===level.waves?'bgm_boss':'bgm_battle');
     if(this.service.snapshot.livingVersion&&r.mode==='endless'&&r.phase==='between'&&!this.paused&&!r.rewardNodes?.some(hasPendingReward)){this.startWave();return;}
     if(r.expedition&&r.phase!=='result'){this.renderExpedition();return;}
     this.world.showRange(null);this.diagnosticState={levelId:r.levelId,wave:r.wave+(active?1:0)};
-    void this.audio.playMusic(!active?'bgm_home':this.battle?.enemies.some(e=>e.kind==='boss'&&e.alive)||r.wave+1===level.waves?'bgm_boss':'bgm_battle');
     if((active||r.resumeAfterReveal==='combat')&&this.battle)this.world.update(this.battle,[],0);else this.world.syncRunUnits(units);
     if(r.rulesVersion==='0.6'){this.playbackSpeed=r.speed??1;this.world.setPlaybackSpeed(this.playbackSpeed);this.renderPrototype();return;}
     if(r.phase==='result'){
@@ -264,18 +245,19 @@ export class BattleScreen {
   }
   /** An explicit developer preview URL owns isolated in-memory progress. */
   startG1Presentation():void{
-    if(typeof location==='undefined'||new URLSearchParams(location.search).get('showcase')!=='g1'||new URLSearchParams(location.search).get('inspection')==='prep')return;
+    if(typeof location==='undefined'||runtimeQuery().get('showcase')!=='g1'||runtimeQuery().get('inspection')==='prep')return;
     if(!this.destroyed&&this.run.wave===0&&this.run.phase==='prep')this.startWave();
   }
   private renderExpedition():void{
     const r=this.run,b=this.battle??r.battle!;if(r.phase==='combat')this.battle=b;this.playbackSpeed=r.speed??1;this.world.setPlaybackSpeed(this.playbackSpeed);this.world.update(b,[],0);
-    const top=this.ui.root.children.length;this.ui.panel(-328,326,610,42,this.ui.root,'#F7FCFC',250,9);this.ui.text(BATTLE_MAPS[r.levelId].name,-528,326,20,UI_COLORS.ink,this.ui.root,190,32);this.lifeLabel=this.ui.text('守护 '+b.coreHealth+'/20',-357,326,21,UI_COLORS.ink,this.ui.root,146,32);this.timeLabel=this.ui.text(this.time(b.elapsed),-248,326,20,UI_COLORS.ink,this.ui.root,70,32);this.button(`${r.speed??1}X`,-170,326,76,42,()=>this.act(()=>this.service.setBattleSpeed(this.command('speed'),r.speed===2?1:2)),{size:22,surface:'hud'});this.button('暂停',-74,326,104,42,()=>this.showPause(),{size:20});this.ui.pinBattleFrom(top,1,0,0,'top');
+    this.lifeLabel=undefined;this.timeLabel=undefined;
+    pearlBattleHeader(this.ui,BATTLE_MAPS[r.levelId].name+(r.expedition?.solo&&r.mode==='endless'?' · '+['I','II','III'][(r.expedition.difficulty??1)-1]:''),r.speed??1,()=>this.act(()=>this.service.setBattleSpeed(this.command('speed'),r.speed===2?1:2)),()=>this.showPause());
     this.expeditionHUD=new ExpeditionHUD(this.ui,this.camera,this.world,()=>this.battle??this.run.battle!,'local-player',(action,args)=>this.act(()=>{this.service.expeditionCommand(this.command(action),action,args,this.battle);if(this.run.phase==='combat')this.battle=this.run.battle;}),()=>this.render(),v=>this.setMoving(v),r.phase==='prep',()=>this.startWave(),undefined,enabled=>this.service.updateSettings(this.command('auto'),{autoSkills:enabled,manualSkillTurtles:[]}));
   }
   private startWave():void{
     this.act(()=>{
       const r=this.run,next=r.expedition?r.battle!:createBattle(r.levelId,r.wave+1,this.units.filter(u=>u.slot!==null).map(u=>({id:u.id,turtle:u.turtle,level:u.level,slot:u.slot!,placement:u.placement,sleepUntilWave:u.sleepUntilWave,fallen:u.fallen})),{coreHealth:r.coreHealth,waveLimit:r.waveLimit,...(r.rulesVersion==='0.6'?{rulesVersion:'0.6' as const,mode:r.mode}:{})});
-      next.autoSkills=(typeof location!=='undefined'&&new URLSearchParams(location.search).get('showcase')==='g1')||(this.service.snapshot.settings.autoSkills??false);next.manualSkillTurtles=[...(this.service.snapshot.settings.manualSkillTurtles??[])];
+      next.autoSkills=(typeof location!=='undefined'&&runtimeQuery().get('showcase')==='g1')||(this.service.settingsSnapshot.autoSkills??false);next.manualSkillTurtles=[...(this.service.settingsSnapshot.manualSkillTurtles??[])];
       this.service.beginWave(`begin:${r.id}:${r.wave+1}`,r.id,next);this.battle=next;this.audio.effect('sfx_wave_start');this.lastCheckpointTick=0;this.lastSoundEvent=0;this.setPauseState(false,false);
     });
   }
@@ -387,9 +369,9 @@ export class BattleScreen {
       const label=this.ui.text(skill?SKILL_BY_ID[skill].name:u?'未学主动':'空位',0,-27,18,UI_COLORS.cream,n,94,26);
       if(u){
         this.skillButtons.push({unitId:u.id,skill,label,mask});
-        const held=this.service.snapshot.settings.manualSkillTurtles?.includes(u.turtleId)??false;
+        const held=this.service.settingsSnapshot.manualSkillTurtles?.includes(u.turtleId)??false;
         this.button(held?'手动保留':'跟随自动',x,-205,104,30,()=>{
-          const ids=new Set(this.service.snapshot.settings.manualSkillTurtles??[]);if(ids.has(u.turtleId))ids.delete(u.turtleId);else ids.add(u.turtleId);
+          const ids=new Set(this.service.settingsSnapshot.manualSkillTurtles??[]);if(ids.has(u.turtleId))ids.delete(u.turtleId);else ids.add(u.turtleId);
           const value=Array.from(ids);this.service.updateSettings(this.command('holdSkill'),{manualSkillTurtles:value});b.manualSkillTurtles=value;this.render();
         },{selected:held,size:16,disabled:!skill});
       }
@@ -399,9 +381,9 @@ export class BattleScreen {
     this.updateSkillBar();
   }
   private autoSkillToggle(x:number,y:number,w:number,h:number):void{
-    const b=this.battle;if(!b)return;const auto=this.service.snapshot.settings.autoSkills??false;
+    const b=this.battle;if(!b)return;const auto=this.service.settingsSnapshot.autoSkills??false;
     const toggle=this.button(`一键释放\n${auto?'已开启':'已关闭'}`,x,y,w,h,()=>{
-      const next=!(this.service.snapshot.settings.autoSkills??false);this.service.updateSettings(this.command('autoSkills'),{autoSkills:next});b.autoSkills=next;
+      const next=!(this.service.settingsSnapshot.autoSkills??false);this.service.updateSettings(this.command('autoSkills'),{autoSkills:next});b.autoSkills=next;
       this.render();
     },{primary:auto,selected:auto,size:w<110?17:20});toggle.name='一键释放开关';
   }
@@ -617,8 +599,9 @@ export class BattleScreen {
       this.ui.text(`新伙伴 ${result.broughtIds?.length??0} · 技能 ${Object.values(result.skillBooks??{}).reduce((n,v)=>n+(v??0),0)}`,218,-30,22,UI_COLORS.sand,rewards,380,38);
       [['伙伴资料',()=>this.team()],['战斗表现',()=>this.contributionDetails()],['全部奖励',()=>this.rewardDetails()]].forEach(([name,action],i)=>this.button(String(name),-308+i*308,-110,288,54,action as ()=>void,{parent:p,size:25}));
       this.ui.text(pending?`${pending} 位伙伴等待整理，回海岛后收录。`:'奖励已保存；培养伙伴后再来挑战。',-112,-170,21,UI_COLORS.sand,p,695,36);
-      if(this.ui.share)this.button('分享战绩',350,-169,212,40,()=>this.ui.share?.('海岛战绩 · '+BATTLE_MAPS[r.levelId].name,`完成 ${result.waves} 波，守护 ${r.coreHealth}/20，一起来挑战！`),{parent:p,size:21});
-      if(result.chestId){const id=result.chestId,claimed=s.progression?.chests.find(c=>c.id===id)?.claimed;this.button(claimed?'层数宝箱已领取':'打开 '+result.waves+' 层宝箱',-199,-230,504,54,()=>this.act(()=>this.service.claimChest(this.command('endlessChest'),id)),{parent:p,primary:true,size:25,disabled:!!claimed});}else this.button('自愿看广告 · 基础金币翻倍',-199,-230,504,54,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:23,disabled:result.doubled||result.baseGold<=0});
+      if(this.ui.share&&!s.solo)this.button('分享战绩',350,-169,212,40,()=>this.ui.share?.('海岛战绩 · '+BATTLE_MAPS[r.levelId].name,`完成 ${result.waves} 波，守护 ${r.coreHealth}/20，一起来挑战！`),{parent:p,size:21});
+      if(result.chestId){const id=result.chestId,claimed=s.progression?.chests.find(c=>c.id===id)?.claimed;this.button(claimed?'层数宝箱已领取':'打开 '+result.waves+' 层宝箱',-199,-230,504,54,()=>this.act(()=>this.service.claimChest(this.command('endlessChest'),id)),{parent:p,primary:true,size:25,disabled:!!claimed});}else if(!s.solo)this.button('自愿看广告 · 基础金币翻倍',-199,-230,504,54,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:23,disabled:result.doubled||result.baseGold<=0});
+      if(s.solo)this.ui.text(endless?'本档最高 '+(s.solo.best[(r.expedition?.difficulty??1)-1]??0)+' 波':'成就进度已同步',-205,-230,23,UI_COLORS.sand,p,440,40);
       this.button('回到海岛',302,-230,308,54,()=>this.onHome(),{parent:p,primary:true,size:27});return;
     }
     const p=this.sheet(result.victory?'伙伴们回家啦！':endless?'这次闯到了这里':'休息一下，再来挑战',`${endless?'无尽海湾':BATTLE_MAPS[r.levelId].name} · 完成 ${result.waves} 波 · 战斗 ${this.time(result.combatSeconds)}`);
@@ -631,7 +614,7 @@ export class BattleScreen {
     this.button('战斗表现',0,-122,320,88,()=>this.contributionDetails(),{parent:p});
     this.button('全部奖励',370,-122,320,88,()=>this.rewardDetails(),{parent:p});
     this.ui.text(pending?'收藏已满，新伙伴仍在行囊中；回海岛整理后决定带走哪些。':endless?'资源已经保存。回去培养伙伴，再来挑战更高波次。':result.victory?'最终有效的新伙伴已进入收藏，原有伙伴不会被复制。':'未参与合成的收藏保留；未通关的新伙伴不能带回。',0,-202,28,UI_COLORS.sand,p,1100,36);
-    this.button('自愿看广告 · 基础金币翻倍',-228,-276,584,88,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:30,disabled:result.doubled||result.baseGold<=0});
+    if(!this.service.snapshot.solo)this.button('自愿看广告 · 基础金币翻倍',-228,-276,584,88,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:30,disabled:result.doubled||result.baseGold<=0});
     this.button('回到海岛',374,-276,352,88,()=>this.onHome(),{parent:p,primary:true,size:32});
   }
   private rewardDetails(page=0):void{
@@ -858,7 +841,7 @@ export class BattleScreen {
     this.ui.text(materials?`首通奖励：${materials}`:result.materials===undefined?'旧版结算未记录材料明细':'奖励已存入背包',0,-4,28,UI_COLORS.gold,p,1060,92,true);
     this.button(`比较伙伴 · ${this.units.length} 位`,0,-124,576,88,()=>this.team(),{parent:p});
     this.ui.text('离开前可比较全部本局伙伴，满意后再收录。',0,-202,28,UI_COLORS.cream,p,1100,36);
-    this.button('自愿看广告 · 基础金币翻倍',-228,-276,584,88,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:30,disabled:result.doubled||result.baseGold<=0});
+    if(!this.service.snapshot.solo)this.button('自愿看广告 · 基础金币翻倍',-228,-276,584,88,()=>this.ui.requestReward?.('doubleGold',r.id,()=>this.render()),{parent:p,size:30,disabled:result.doubled||result.baseGold<=0});
     this.button('回到海岛',374,-276,352,88,()=>this.onHome(),{parent:p,primary:true,size:32});
   }
   private showPause():void{

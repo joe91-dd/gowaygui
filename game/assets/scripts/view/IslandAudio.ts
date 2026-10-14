@@ -1,3 +1,4 @@
+import {runtimeQuery} from '../platform/runtimeQuery';
 import {AudioClip, AudioSource, Node, resources} from 'cc';
 import type {Settings} from '../core/types';
 import type {BattleEvent, BattleState} from '../core/battle';
@@ -182,6 +183,10 @@ export class IslandAudio {
   /** All combat screens consume the same event cues, including automatic casts.
    * Call only with newly consumed events; stale network history stays silent. */
   battleEvents(battle: BattleState, events: BattleEvent[]): void {
+    if(battle.status==='fighting'){
+      const key=battle.levelId===56||battle.enemies.some(e=>e.alive&&e.kind==='boss')?'bgm_boss':'bgm_battle';
+      if(this.desired!==key)void this.playMusic(key);
+    }
     const casts: Record<string, string> = {hold:'stone', piercingShot:'spike', crystalCannon:'crystal', greatHeal:'leaf', bubbleRing:'bubble'};
     for (const e of events) {
       if (e.tick < battle.tick - 8) continue;
@@ -250,7 +255,7 @@ export class IslandAudio {
     if (this.root.isValid) { this.root.active = false; this.root.removeFromParent(); this.root.destroy(); }
   }
 
-  private trace(key:string):void{if(typeof location!=='undefined'&&new URLSearchParams(location.search).get('qa')==='1')console.info('[AUDIO_STARTED]',key);}
+  private trace(key:string):void{if(typeof location!=='undefined'&&runtimeQuery().get('qa')==='1')console.info('[AUDIO_STARTED]',key);}
   private canPlay(): boolean { return !this.disposed && !this.stopped && !this.paused && this.unlocked && this.root.isValid; }
   private clock(): number {
     const current = typeof performance !== 'undefined' ? performance.now() : Date.now();
